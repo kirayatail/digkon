@@ -1,0 +1,6 @@
+-- halfadd.do
+-- 121102 wmax
+restart -f
+force x 0 0, 1 100 -repeat 200
+force y 0 0, 1 200 -repeat 400
+run 400

@@ -1,0 +1,61 @@
+C:/Temp/wmax/count4b.vhd {1 {vcom -work work -2002 -explicit C:/Temp/wmax/count4b.vhd
+Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity count4b
+-- Compiling architecture behavior of count4b
+
+} {} {}} C:/Temp/wmax/fde1.vhd {1 {vcom -work work -2002 -explicit C:/Temp/wmax/fde1.vhd
+Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity fde1
+-- Compiling architecture behavior of fde1
+
+} {} {}} C:/Temp/wmax/fulladd.vhd {1 {vcom -work work -2002 -explicit C:/Temp/wmax/fulladd.vhd
+Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fulladd
+-- Compiling architecture comb of fulladd
+
+} {} {}} C:/Temp/wmax/halfadd.vhd {1 {vcom -work work -2002 -explicit C:/Temp/wmax/halfadd.vhd
+Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity halfadd
+-- Compiling architecture comb of halfadd
+
+} {} {}} C:/Temp/wmax/adder4b.vhd {1 {vcom -work work -2002 -explicit C:/Temp/wmax/adder4b.vhd
+Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity adder4b
+-- Compiling architecture behavior of adder4b
+
+} {} {}} C:/Temp/wmax/comb1.vhd {1 {vcom -work work -2002 -explicit C:/Temp/wmax/comb1.vhd
+Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity comp1
+-- Compiling architecture comb of comp1
+
+} {} {}} C:/Temp/wmax/encoder42.vhd {1 {vcom -work work -2002 -explicit C:/Temp/wmax/encoder42.vhd
+Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity encoder42
+-- Compiling architecture comb of encoder42
+
+} {} {}}
