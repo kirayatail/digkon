@@ -5,5 +5,23 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="old" >Unit <arg fmt="%s" index="1">work/sync/BEHAVIORAL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Temp/wmax/digkon/lab3/sync.vhf</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="old" >Unit <arg fmt="%s" index="1">work/sync</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Temp/wmax/digkon/lab3/sync.vhf</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="old" >Unit <arg fmt="%s" index="1">work/sync/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Temp/wmax/digkon/lab3/sync.vhf</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd</arg>&quot;.
+</msg>
+
+<msg type="error" file="Xst" num="2585" delta="old" >Port &lt;<arg fmt="%s" index="1">input</arg>&gt; of instance &lt;<arg fmt="%s" index="2">x1</arg>&gt; does not exist in definition &lt;<arg fmt="%s" index="3">sync</arg>&gt;. Please compare the definition of block &lt;<arg fmt="%s" index="4">sync</arg>&gt; to its component declaration to detect the mismatch.
+</msg>
+
+<msg type="error" file="Xst" num="2585" delta="old" >Port &lt;<arg fmt="%s" index="1">reset</arg>&gt; of instance &lt;<arg fmt="%s" index="2">x1</arg>&gt; does not exist in definition &lt;<arg fmt="%s" index="3">sync</arg>&gt;. Please compare the definition of block &lt;<arg fmt="%s" index="4">sync</arg>&gt; to its component declaration to detect the mismatch.
+</msg>
+
+<msg type="error" file="Xst" num="2585" delta="old" >Port &lt;<arg fmt="%s" index="1">sync</arg>&gt; of instance &lt;<arg fmt="%s" index="2">x1</arg>&gt; does not exist in definition &lt;<arg fmt="%s" index="3">sync</arg>&gt;. Please compare the definition of block &lt;<arg fmt="%s" index="4">sync</arg>&gt; to its component declaration to detect the mismatch.
+</msg>
+
 </messages>
 

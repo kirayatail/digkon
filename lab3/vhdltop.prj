@@ -1,0 +1,7 @@
+vhdl work "vhdl/sync.vhd"
+vhdl work "vhdl/puls2lev.vhd"
+vhdl work "vhdl/lev2puls.vhd"
+vhdl work "vhdl/decoder38e.vhd"
+vhdl work "vhdl/vhdltop.vhd"
+vhdl work "sync.vhf"
+vhdl work "top.vhf"

@@ -1,1 +1,3 @@
+vhdl work "vhdl/sync.vhd"
 vhdl work "sync.vhf"
+vhdl work "top.vhf"

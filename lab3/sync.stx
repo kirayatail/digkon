@@ -1,0 +1,42 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Temp/wmax/digkon/lab3/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Parameter xsthdpdir set to C:/Temp/wmax/digkon/lab3/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/sync/BEHAVIORAL is now defined in a different file.  It was defined in "C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd", and is now defined in "C:/Temp/wmax/digkon/lab3/sync.vhf".
+WARNING:HDLParsers:3607 - Unit work/sync is now defined in a different file.  It was defined in "C:/Temp/wmax/digkon/lab3/sync.vhf", and is now defined in "C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd".
+WARNING:HDLParsers:3607 - Unit work/sync/Behavioral is now defined in a different file.  It was defined in "C:/Temp/wmax/digkon/lab3/sync.vhf", and is now defined in "C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd".
+Compiling vhdl file "C:/Temp/wmax/digkon/lab3/top.vhf" in Library work.
+Architecture behavioral of Entity top is up to date.
+Compiling vhdl file "C:/Temp/wmax/digkon/lab3/sync.vhf" in Library work.
+Architecture behavioral of Entity fd_mxilinx_sync is up to date.
+Architecture behavioral of Entity sync is up to date.
+Compiling vhdl file "C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd" in Library work.
+Architecture behavioral of Entity sync is up to date.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.52 secs
+ 
+--> 
+
+Total memory usage is 220104 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
