@@ -10,7 +10,7 @@ entity lev2puls is
 end lev2puls;
 
 architecture behavioral of lev2puls is
-  type state_type is (s0, s1, s2, s3);
+  type state_type is (s0, s1, s2);
   signal state : state_type;
   
 begin
@@ -25,23 +25,17 @@ begin
       when s0 =>
         pulson <= '0';
         if levin ='1' then
+          pulson <= '1';
           state <= s1;
         end if;
       when s1 =>
-        pulson <= '1';
+        pulson <= '0';
         state <= s2;
         
       when s2 =>
-        pulson <= '0';
-        
         if levin ='0' then
-          state <= s3;
+          state <= s0;
         end if;
-        
-      when s3 =>
-        pulson <= '0';
-        state <= s0;
-        
       end case;
     end if;
   end process;

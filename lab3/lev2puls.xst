@@ -1,0 +1,5 @@
+set -tmpdir "W:/digkon/lab3/xst/projnav.tmp"
+set -xsthdpdir "W:/digkon/lab3/xst"
+elaborate
+-ifn lev2puls.prj
+-ifmt mixed

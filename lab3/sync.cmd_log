@@ -1,1 +1,7 @@
 sch2hdl -intstyle ise -family xc9500xl -flat -suppress -vhdl sync_drc.vhf -w C:/Temp/digkon/lab3/sync.sch 
+sch2sym -intstyle ise -family xc9500xl -refsym sync W:/digkon/lab3/sync.sch W:/digkon/lab3/sync.sym 
+xst -intstyle ise -ifn "W:/digkon/lab3/sync.xst" -ofn "W:/digkon/lab3/sync.syr" 
+vhdtdtfi -lib work vhdl/sync.vhd -prj lab3 -o sync.spl -module sync -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl sync.spl W:/digkon/lab3/sync.sym 
+vhdtdtfi -lib work vhdl/sync.vhd -prj lab3 -o sync.spl -module sync -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl sync.spl W:/digkon/lab3/sync.sym 
