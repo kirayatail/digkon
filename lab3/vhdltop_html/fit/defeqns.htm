@@ -1,0 +1,55 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FTCPE_borrmotor: FTCPE port map (borrmotor,borrmotor_T,clk,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borrmotor_T <= ((NOT resin AND borrmotor)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (puls AND borrmotor AND din(0) AND NOT din(2) AND NOT din(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (resin AND puls AND NOT borrmotor AND NOT din(0) AND NOT din(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT din(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+d1 <= NOT dav;
+</td></tr><tr><td>
+</td></tr><tr><td>
+d2 <= NOT ((puls AND NOT din(0) AND NOT din(2) AND NOT din(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+d3 <= NOT ((puls AND din(0) AND NOT din(2) AND NOT din(1)));
+</td></tr><tr><td>
+FDCPE_levin: FDCPE port map (levin,q,clk,'0','0');
+</td></tr><tr><td>
+FDCPE_puls: FDCPE port map (puls,puls_D,clk,NOT resin,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;puls_D <= ((puls AND x2/state_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT x2/state_FSM_FFd1 AND NOT x2/state_FSM_FFd2 AND levin));
+</td></tr><tr><td>
+FDCPE_q: FDCPE port map (q,dav,clk,'0','0');
+</td></tr><tr><td>
+FTCPE_solenoid: FTCPE port map (solenoid,solenoid_T,clk,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;solenoid_T <= ((NOT resin AND solenoid)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (puls AND solenoid AND din(0) AND NOT din(2) AND din(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (resin AND puls AND NOT solenoid AND NOT din(0) AND NOT din(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	din(1)));
+</td></tr><tr><td>
+FDCPE_x2/state_FSM_FFd1: FDCPE port map (x2/state_FSM_FFd1,x2/state_FSM_FFd1_D,clk,NOT resin,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2/state_FSM_FFd1_D <= ((x2/state_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (x2/state_FSM_FFd1 AND levin));
+</td></tr><tr><td>
+FDCPE_x2/state_FSM_FFd2: FDCPE port map (x2/state_FSM_FFd2,x2/state_FSM_FFd2_D,clk,NOT resin,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2/state_FSM_FFd2_D <= (NOT x2/state_FSM_FFd1 AND NOT x2/state_FSM_FFd2 AND levin);
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

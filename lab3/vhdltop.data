@@ -1,0 +1,111 @@
+MODELDATA
+MODELDATA_VERSION "v1998.8"
+DESIGN "vhdltop";
+
+/* port drive, load, max capacitance and max transition in data file */
+PORTDATA
+din<2>: MAXTRANS(0.0);
+din<1>: MAXTRANS(0.0);
+din<0>: MAXTRANS(0.0);
+clk: MAXTRANS(0.0);
+resin: MAXTRANS(0.0);
+dav: MAXTRANS(0.0);
+borrmotor: MAXTRANS(0.0);
+solenoid: MAXTRANS(0.0);
+ENDPORTDATA
+
+/* timing arc data */
+TIMINGDATA
+
+ARCDATA
+clk_borrmotor_delay:
+CELL_RISE(scalar) {
+  VALUES("3.5");
+}
+CELL_FALL(scalar) {
+  VALUES("3.5");
+}
+ENDARCDATA
+
+ARCDATA
+clk_solenoid_delay:
+CELL_RISE(scalar) {
+  VALUES("3.5");
+}
+CELL_FALL(scalar) {
+  VALUES("3.5");
+}
+ENDARCDATA
+
+ARCDATA
+dav_clk_setup:
+CONSTRAINT(scalar) {
+  VALUES("6");
+}
+ENDARCDATA
+
+ARCDATA
+din<0>_clk_setup:
+CONSTRAINT(scalar) {
+  VALUES("6");
+}
+ENDARCDATA
+
+ARCDATA
+din<1>_clk_setup:
+CONSTRAINT(scalar) {
+  VALUES("6");
+}
+ENDARCDATA
+
+ARCDATA
+din<2>_clk_setup:
+CONSTRAINT(scalar) {
+  VALUES("6");
+}
+ENDARCDATA
+
+ARCDATA
+resin_clk_setup:
+CONSTRAINT(scalar) {
+  VALUES("6");
+}
+ENDARCDATA
+
+ARCDATA
+dav_clk_hold:
+CONSTRAINT(scalar) {
+  VALUES("-2.3");
+}
+ENDARCDATA
+
+ARCDATA
+din<0>_clk_hold:
+CONSTRAINT(scalar) {
+  VALUES("-2.3");
+}
+ENDARCDATA
+
+ARCDATA
+din<1>_clk_hold:
+CONSTRAINT(scalar) {
+  VALUES("-2.3");
+}
+ENDARCDATA
+
+ARCDATA
+din<2>_clk_hold:
+CONSTRAINT(scalar) {
+  VALUES("-2.3");
+}
+ENDARCDATA
+
+ARCDATA
+resin_clk_hold:
+CONSTRAINT(scalar) {
+  VALUES("-2.3");
+}
+ENDARCDATA
+
+ENDTIMINGDATA
+ENDMODELDATA

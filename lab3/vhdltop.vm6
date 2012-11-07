@@ -1,0 +1,379 @@
+NDS Database:  version P.28xd
+
+NDS_INFO | xc9500xl | 9572XL44PC | XC9572XL-5-PC44
+
+DEVICE | 9572XL | 9572XL44PC | 
+
+NETWORK | vhdltop | 0 | 0 | 16391
+
+INPUT_INSTANCE | 0 | 0 | NULL | din_2_IBUF | vhdltop_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | din<2> | 678 | PI | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | din_2_IBUF | 660 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_2_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | din_1_IBUF | vhdltop_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | din<1> | 679 | PI | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | din_1_IBUF | 661 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_1_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | din_0_IBUF | vhdltop_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | din<0> | 680 | PI | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | din_0_IBUF | 662 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_0_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | clk_IBUF | vhdltop_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | clk | 681 | PI | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 3 | 5 | II_FCLK
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+
+INPUT_INSTANCE | 0 | 0 | NULL | resin_IBUF | vhdltop_COPY_0_COPY_0 | 16 | 1 | 2
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | resin | 682 | PI | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | resin_IBUF | 664 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 9 | 5 | II_FSRINV
+NODE | FSR-IO_1 | 665 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 9 | 5 | II_FSRINV
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | puls | vhdltop_COPY_0_COPY_0 | 2155873280 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | puls | 666 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | puls.Q | puls | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd1 | 667 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd1.Q | x2/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd2 | 668 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd2.Q | x2/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | levin | 673 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | levin.Q | levin | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FSR-IO_1 | 665 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | puls | 666 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | puls.Q | puls | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | puls.SI | puls | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | puls | 666 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | puls.Q | puls | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd1 | 667 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd1.Q | x2/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd2 | 668 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd2.Q | x2/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | levin | 673 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | levin.Q | levin | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | puls.D1 | 685 | ? | 0 | 4096 | puls | NULL | NULL | puls.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | puls.D2 | 686 | ? | 0 | 4096 | puls | NULL | NULL | puls.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | puls | IV_TRUE | x2/state_FSM_FFd1
+SPPTERM | 3 | IV_FALSE | x2/state_FSM_FFd1 | IV_FALSE | x2/state_FSM_FFd2 | IV_TRUE | levin
+
+SRFF_INSTANCE | puls.REG | puls | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | puls.D | 684 | ? | 0 | 0 | puls | NULL | NULL | puls.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+NODE | FSR-IO_1 | 665 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | puls.Q | 687 | ? | 0 | 0 | puls | NULL | NULL | puls.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | x2/state_FSM_FFd1 | vhdltop_COPY_0_COPY_0 | 2155873280 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd2 | 668 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd2.Q | x2/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd1 | 667 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd1.Q | x2/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | levin | 673 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | levin.Q | levin | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FSR-IO_1 | 665 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | x2/state_FSM_FFd1 | 667 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd1.Q | x2/state_FSM_FFd1 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | x2/state_FSM_FFd1.SI | x2/state_FSM_FFd1 | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd2 | 668 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd2.Q | x2/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd1 | 667 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd1.Q | x2/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | levin | 673 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | levin.Q | levin | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | x2/state_FSM_FFd1.D1 | 689 | ? | 0 | 4096 | x2/state_FSM_FFd1 | NULL | NULL | x2/state_FSM_FFd1.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | x2/state_FSM_FFd1.D2 | 690 | ? | 0 | 4096 | x2/state_FSM_FFd1 | NULL | NULL | x2/state_FSM_FFd1.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | x2/state_FSM_FFd2
+SPPTERM | 2 | IV_TRUE | x2/state_FSM_FFd1 | IV_TRUE | levin
+
+SRFF_INSTANCE | x2/state_FSM_FFd1.REG | x2/state_FSM_FFd1 | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | x2/state_FSM_FFd1.D | 688 | ? | 0 | 0 | x2/state_FSM_FFd1 | NULL | NULL | x2/state_FSM_FFd1.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+NODE | FSR-IO_1 | 665 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | x2/state_FSM_FFd1.Q | 691 | ? | 0 | 0 | x2/state_FSM_FFd1 | NULL | NULL | x2/state_FSM_FFd1.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | x2/state_FSM_FFd2 | vhdltop_COPY_0_COPY_0 | 2155873280 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd1 | 667 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd1.Q | x2/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd2 | 668 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd2.Q | x2/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | levin | 673 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | levin.Q | levin | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FSR-IO_1 | 665 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | x2/state_FSM_FFd2 | 668 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd2.Q | x2/state_FSM_FFd2 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | x2/state_FSM_FFd2.SI | x2/state_FSM_FFd2 | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd1 | 667 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd1.Q | x2/state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | x2/state_FSM_FFd2 | 668 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | x2/state_FSM_FFd2.Q | x2/state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | levin | 673 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | levin.Q | levin | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | x2/state_FSM_FFd2.D1 | 693 | ? | 0 | 4096 | x2/state_FSM_FFd2 | NULL | NULL | x2/state_FSM_FFd2.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | x2/state_FSM_FFd2.D2 | 694 | ? | 0 | 4096 | x2/state_FSM_FFd2 | NULL | NULL | x2/state_FSM_FFd2.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | x2/state_FSM_FFd1 | IV_FALSE | x2/state_FSM_FFd2 | IV_TRUE | levin
+
+SRFF_INSTANCE | x2/state_FSM_FFd2.REG | x2/state_FSM_FFd2 | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | x2/state_FSM_FFd2.D | 692 | ? | 0 | 0 | x2/state_FSM_FFd2 | NULL | NULL | x2/state_FSM_FFd2.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+NODE | FSR-IO_1 | 665 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | x2/state_FSM_FFd2.Q | 695 | ? | 0 | 0 | x2/state_FSM_FFd2 | NULL | NULL | x2/state_FSM_FFd2.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | borrmotor_OBUF | vhdltop_COPY_0_COPY_0 | 2155877376 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | resin_IBUF | 664 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | borrmotor_OBUF.UIM | 670 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | borrmotor_OBUF.Q | borrmotor_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_2_IBUF | 660 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_1_IBUF | 661 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_0_IBUF | 662 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | puls | 666 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | puls.Q | puls | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | borrmotor_OBUF | 669 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | borrmotor_OBUF.Q | borrmotor_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | borrmotor_OBUF.UIM | 670 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | borrmotor_OBUF.Q | borrmotor_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | borrmotor_OBUF.SI | borrmotor_OBUF | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | resin_IBUF | 664 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | borrmotor_OBUF.UIM | 670 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | borrmotor_OBUF.Q | borrmotor_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_2_IBUF | 660 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_1_IBUF | 661 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_0_IBUF | 662 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | puls | 666 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | puls.Q | puls | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | borrmotor_OBUF.D1 | 697 | ? | 0 | 4096 | borrmotor_OBUF | NULL | NULL | borrmotor_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | borrmotor_OBUF.D2 | 698 | ? | 0 | 4096 | borrmotor_OBUF | NULL | NULL | borrmotor_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | resin_IBUF | IV_TRUE | borrmotor_OBUF.UIM
+SPPTERM | 5 | IV_FALSE | din_2_IBUF | IV_FALSE | din_1_IBUF | IV_TRUE | din_0_IBUF | IV_TRUE | puls | IV_TRUE | borrmotor_OBUF.UIM
+SPPTERM | 6 | IV_FALSE | din_2_IBUF | IV_FALSE | din_1_IBUF | IV_FALSE | din_0_IBUF | IV_TRUE | resin_IBUF | IV_TRUE | puls | IV_FALSE | borrmotor_OBUF.UIM
+
+SRFF_INSTANCE | borrmotor_OBUF.REG | borrmotor_OBUF | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | borrmotor_OBUF.D | 696 | ? | 0 | 0 | borrmotor_OBUF | NULL | NULL | borrmotor_OBUF.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | borrmotor_OBUF.Q | 699 | ? | 0 | 0 | borrmotor_OBUF | NULL | NULL | borrmotor_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | solenoid_OBUF | vhdltop_COPY_0_COPY_0 | 2155877376 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | resin_IBUF | 664 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | solenoid_OBUF.UIM | 672 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | solenoid_OBUF.Q | solenoid_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_2_IBUF | 660 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_1_IBUF | 661 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_0_IBUF | 662 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | puls | 666 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | puls.Q | puls | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | solenoid_OBUF | 671 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | solenoid_OBUF.Q | solenoid_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | solenoid_OBUF.UIM | 672 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | solenoid_OBUF.Q | solenoid_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | solenoid_OBUF.SI | solenoid_OBUF | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | resin_IBUF | 664 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | resin_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | solenoid_OBUF.UIM | 672 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | solenoid_OBUF.Q | solenoid_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_2_IBUF | 660 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_1_IBUF | 661 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | din_0_IBUF | 662 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | din_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | puls | 666 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | puls.Q | puls | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | solenoid_OBUF.D1 | 701 | ? | 0 | 4096 | solenoid_OBUF | NULL | NULL | solenoid_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | solenoid_OBUF.D2 | 702 | ? | 0 | 4096 | solenoid_OBUF | NULL | NULL | solenoid_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | resin_IBUF | IV_TRUE | solenoid_OBUF.UIM
+SPPTERM | 5 | IV_FALSE | din_2_IBUF | IV_TRUE | din_1_IBUF | IV_TRUE | din_0_IBUF | IV_TRUE | puls | IV_TRUE | solenoid_OBUF.UIM
+SPPTERM | 6 | IV_FALSE | din_2_IBUF | IV_TRUE | din_1_IBUF | IV_FALSE | din_0_IBUF | IV_TRUE | resin_IBUF | IV_TRUE | puls | IV_FALSE | solenoid_OBUF.UIM
+
+SRFF_INSTANCE | solenoid_OBUF.REG | solenoid_OBUF | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | solenoid_OBUF.D | 700 | ? | 0 | 0 | solenoid_OBUF | NULL | NULL | solenoid_OBUF.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | solenoid_OBUF.Q | 703 | ? | 0 | 0 | solenoid_OBUF | NULL | NULL | solenoid_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | levin | vhdltop_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | q | 675 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | q.Q | q | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | levin | 673 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | levin.Q | levin | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | levin.SI | levin | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | q | 675 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | q.Q | q | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | levin.D1 | 705 | ? | 0 | 4096 | levin | NULL | NULL | levin.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | levin.D2 | 706 | ? | 0 | 4096 | levin | NULL | NULL | levin.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | q
+
+SRFF_INSTANCE | levin.REG | levin | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | levin.D | 704 | ? | 0 | 0 | levin | NULL | NULL | levin.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | levin.Q | 707 | ? | 0 | 0 | levin | NULL | NULL | levin.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | dav_IBUF | vhdltop_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | dav | 683 | PI | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | dav_IBUF | 674 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | dav_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | q | vhdltop_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | dav_IBUF | 674 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | dav_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | q | 675 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | q.Q | q | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | q.SI | q | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | dav_IBUF | 674 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | dav_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | q.D1 | 709 | ? | 0 | 4096 | q | NULL | NULL | q.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | q.D2 | 710 | ? | 0 | 4096 | q | NULL | NULL | q.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | dav_IBUF
+
+SRFF_INSTANCE | q.REG | q | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | q.D | 708 | ? | 0 | 0 | q | NULL | NULL | q.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 663 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | q.Q | 711 | ? | 0 | 0 | q | NULL | NULL | q.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | borrmotor | vhdltop_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | borrmotor_OBUF | 669 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | borrmotor_OBUF.Q | borrmotor_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | borrmotor | 676 | PO | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | borrmotor | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | solenoid | vhdltop_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | solenoid_OBUF | 671 | ? | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | solenoid_OBUF.Q | solenoid_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | solenoid | 677 | PO | 0 | 0 | vhdltop_COPY_0_COPY_0 | NULL | NULL | solenoid | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | vhdltop_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | borrmotor_OBUF | 1 | NULL | 0 | borrmotor | 1 | 1 | 49152
+FBPIN | 9 | NULL | 0 | clk_IBUF | 1 | NULL | 0 | 5 | 57344
+
+FB_INSTANCE | FOOBAR2_ | vhdltop_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 6 | NULL | 0 | din_0_IBUF | 1 | NULL | 0 | 37 | 49152
+FBPIN | 9 | NULL | 0 | resin_IBUF | 1 | NULL | 0 | 39 | 51200
+FBPIN | 16 | x2/state_FSM_FFd2 | 1 | NULL | 0 | NULL | 0
+FBPIN | 17 | x2/state_FSM_FFd1 | 1 | NULL | 0 | NULL | 0 | 44 | 49152
+FBPIN | 18 | puls | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR3_ | vhdltop_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | solenoid_OBUF | 1 | NULL | 0 | solenoid | 1 | 11 | 49152
+
+FB_INSTANCE | FOOBAR4_ | vhdltop_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | NULL | 0 | din_2_IBUF | 1 | NULL | 0 | 25 | 49152
+FBPIN | 8 | NULL | 0 | din_1_IBUF | 1 | NULL | 0 | 27 | 49152
+FBPIN | 17 | q | 1 | dav_IBUF | 1 | NULL | 0 | 34 | 49152
+FBPIN | 18 | levin | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | vhdltop_COPY_0_COPY_0 | 0 | 0 | 0
+
+BUSINFO | DIN<2:0> | 3 | 0 | 0 | din<0> | 2 | din<1> | 1 | din<2> | 0
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 1 | borrmotor_OBUF.UIM | NULL | 10 | din<0> | 37 | 34 | din<2> | 25 | 41 | din<1> | 27 | 49 | puls | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 52 | resin | 39
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | 1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 82 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 105 | -1 | -1 | -1 | -1 | -1 | -1 | 101 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 35 | -1 | -1 | 86 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 16 | x2/state_FSM_FFd1 | NULL | 44 | x2/state_FSM_FFd2 | NULL | 49 | puls | NULL | 53 | levin | NULL
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 34 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 33 | -1 | -1 | -1 | -1 | 35 | -1 | -1 | -1 | 71
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 1 | solenoid_OBUF.UIM | NULL | 10 | din<0> | 37 | 34 | din<2> | 25 | 41 | din<1> | 27 | 49 | puls | NULL
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 52 | resin | 39
+
+FB_IMUX_INDEX | FOOBAR3_ | -1 | 37 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 82 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 105 | -1 | -1 | -1 | -1 | -1 | -1 | 101 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 35 | -1 | -1 | 86 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 1 | dav | 34 | 16 | q | NULL
+
+FB_IMUX_INDEX | FOOBAR4_ | -1 | 73 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 70 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+GLOBAL_FCLK | clk | 0 | 0
+
+GLOBAL_FSR | resin | 0 | 0

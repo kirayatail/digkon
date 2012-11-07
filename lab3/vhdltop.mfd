@@ -1,0 +1,93 @@
+MDF Database:  version 1.0
+MDF_INFO | vhdltop | XC9572XL-5-PC44
+MACROCELL | 1 | 17 | puls
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 3 | 1 | 17 | 0 | 1 | 2 | 1
+INPUTS | 4 | puls  | x2/state_FSM_FFd1  | x2/state_FSM_FFd2  | levin
+INPUTMC | 4 | 1 | 17 | 1 | 16 | 1 | 15 | 3 | 17
+EQ | 4 | 
+   puls.D = puls & x2/state_FSM_FFd1
+	# !x2/state_FSM_FFd1 & !x2/state_FSM_FFd2 & levin;
+   puls.CLK = clk;	// GCK
+   !puls.AR = resin;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | resin
+
+MACROCELL | 1 | 16 | x2/state_FSM_FFd1
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 3 | 1 | 17 | 1 | 16 | 1 | 15
+INPUTS | 3 | x2/state_FSM_FFd2  | x2/state_FSM_FFd1  | levin
+INPUTMC | 3 | 1 | 15 | 1 | 16 | 3 | 17
+EQ | 4 | 
+   x2/state_FSM_FFd1.D = x2/state_FSM_FFd2
+	# x2/state_FSM_FFd1 & levin;
+   x2/state_FSM_FFd1.CLK = clk;	// GCK
+   !x2/state_FSM_FFd1.AR = resin;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | resin
+
+MACROCELL | 1 | 15 | x2/state_FSM_FFd2
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 3 | 1 | 17 | 1 | 16 | 1 | 15
+INPUTS | 3 | x2/state_FSM_FFd1  | x2/state_FSM_FFd2  | levin
+INPUTMC | 3 | 1 | 16 | 1 | 15 | 3 | 17
+EQ | 3 | 
+   x2/state_FSM_FFd2.D = !x2/state_FSM_FFd1 & !x2/state_FSM_FFd2 & levin;
+   x2/state_FSM_FFd2.CLK = clk;	// GCK
+   !x2/state_FSM_FFd2.AR = resin;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | resin
+
+MACROCELL | 0 | 1 | borrmotor_OBUF
+ATTRIBUTES | 4621058 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 6 | resin  | borrmotor  | din<2>  | din<1>  | din<0>  | puls
+INPUTMC | 2 | 0 | 1 | 1 | 17
+INPUTP | 4 | 92 | 62 | 65 | 89
+EQ | 5 | 
+   borrmotor.T = !resin & borrmotor
+	# !din<2> & !din<1> & din<0> & puls & borrmotor
+	# !din<2> & !din<1> & !din<0> & resin & puls & 
+	!borrmotor;
+   borrmotor.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 2 | 1 | solenoid_OBUF
+ATTRIBUTES | 4621058 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 6 | resin  | solenoid  | din<2>  | din<1>  | din<0>  | puls
+INPUTMC | 2 | 2 | 1 | 1 | 17
+INPUTP | 4 | 92 | 62 | 65 | 89
+EQ | 5 | 
+   solenoid.T = !resin & solenoid
+	# !din<2> & din<1> & din<0> & puls & solenoid
+	# !din<2> & din<1> & !din<0> & resin & puls & 
+	!solenoid;
+   solenoid.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 3 | 17 | levin
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 3 | 1 | 17 | 1 | 16 | 1 | 15
+INPUTS | 1 | q
+INPUTMC | 1 | 3 | 16
+EQ | 2 | 
+   levin.D = q;
+   levin.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 3 | 16 | q
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 1 | 3 | 17
+INPUTS | 1 | dav
+INPUTP | 1 | 83
+EQ | 2 | 
+   q.D = dav;
+   q.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+PIN | din<2> | 64 | 0 | N/A | 62 | 2 | 0 | 1 | 2 | 1
+PIN | din<1> | 64 | 0 | N/A | 65 | 2 | 0 | 1 | 2 | 1
+PIN | din<0> | 64 | 0 | N/A | 89 | 2 | 0 | 1 | 2 | 1
+PIN | clk | 4096 | 0 | N/A | 20 | 7 | 1 | 17 | 1 | 16 | 1 | 15 | 0 | 1 | 2 | 1 | 3 | 17 | 3 | 16
+PIN | resin | 65600 | 0 | N/A | 92 | 5 | 0 | 1 | 2 | 1 | 1 | 17 | 1 | 16 | 1 | 15
+PIN | dav | 64 | 0 | N/A | 83 | 1 | 3 | 16
+PIN | borrmotor | 536871040 | 0 | N/A | 11
+PIN | solenoid | 536871040 | 0 | N/A | 29

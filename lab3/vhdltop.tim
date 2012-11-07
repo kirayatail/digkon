@@ -1,0 +1,129 @@
+                           Performance Summary Report
+                           --------------------------
+
+Design:     vhdltop
+Device:     XC9572XL-5-PC44
+Speed File: Version 3.0
+Program:    Timing Report Generator:  version P.28xd
+Date:       Wed Nov 07 14:59:38 2012
+
+Performance Summary:
+
+Clock net 'clk' path delays:
+
+Clock Pad to Output Pad (tCO)             :          3.5ns (1 macrocell levels)
+Clock Pad 'clk' to Output Pad 'borrmotor'                                 (GCK)
+
+Clock to Setup (tCYC)                     :          5.6ns (1 macrocell levels)
+Clock to Q, net 'puls.Q' to DFF Setup(D) at 'puls.D'                      (GCK)
+Target FF drives output net 'puls'
+
+Setup to Clock at the Pad (tSU)           :          3.7ns (0 macrocell levels)
+Data signal 'din<2>' to TFF D input Pin at 'borrmotor.D'
+Clock pad 'clk'                                                           (GCK)
+
+                          Minimum Clock Period: 5.6ns
+                     Maximum Internal Clock Speed: 178.5Mhz
+                         (Limited by Clock Pulse Width)
+
+--------------------------------------------------------------------------------
+                      Clock Pad to Output Pad (tCO) (nsec)
+
+\ From        c
+ \            l
+  \           k
+   \           
+    \          
+     \         
+      \        
+       \       
+        \      
+  To     \------
+
+borrmotor   3.5
+solenoid    3.5
+
+--------------------------------------------------------------------------------
+                   Setup to Clock at Pad (tSU or tSUF) (nsec)
+
+\ From      c
+ \          l
+  \         k
+   \         
+    \        
+     \       
+      \      
+  To   \------
+
+dav       3.7
+din<0>    3.7
+din<1>    3.7
+din<2>    3.7
+resin     3.7
+
+--------------------------------------------------------------------------------
+                          Clock to Setup (tCYC) (nsec)
+                                  (Clock: clk)
+
+\ From                  b     l     p     q     s     x     x
+ \                      o     e     u     .     o     2     2
+  \                     r     v     l     Q     l     /     /
+   \                    r     i     s           e     s     s
+    \                   m     n     .           n     t     t
+     \                  o     .     Q           o     a     a
+      \                 t     Q                 i     t     t
+       \                o                       d     e     e
+        \               r                       .     _     _
+         \              .                       Q     F     F
+          \             Q                             S     S
+           \                                          M     M
+            \                                         _     _
+             \                                        F     F
+              \                                       F     F
+               \                                      d     d
+                \                                     1     2
+                 \                                    .     .
+                  \                                   Q     Q
+  To               \------------------------------------------
+
+borrmotor.D           5.6         5.6                        
+levin.D                                 5.6                  
+puls.D                      5.6   5.6               5.6   5.6
+solenoid.D                        5.6         5.6            
+x2/state_FSM_FFd1.D         5.6                     5.6   5.6
+x2/state_FSM_FFd2.D         5.6                     5.6   5.6
+
+Path Type Definition: 
+
+Pad to Pad (tPD) -                        Reports pad to pad paths that start 
+                                          at input pads and end at output pads. 
+                                          Paths are not traced through 
+                                          registers. 
+
+Clock Pad to Output Pad (tCO) -           Reports paths that start at input 
+                                          pads trace through clock inputs of 
+                                          registers and end at output pads. 
+                                          Paths are not traced through PRE/CLR 
+                                          inputs of registers. 
+
+Setup to Clock at Pad (tSU or tSUF) -     Reports external setup time of data 
+                                          to clock at pad. Data path starts at 
+                                          an input pad and ends at register 
+                                          (Fast Input Register for tSUF) D/T 
+                                          input. Clock path starts at input pad 
+                                          and ends at the register clock input. 
+                                          Paths are not traced through 
+                                          registers. Pin-to-pin setup 
+                                          requirement is not reported or 
+                                          guaranteed for product-term clocks 
+                                          derived from macrocell feedback 
+                                          signals. 
+
+Clock to Setup (tCYC) -                   Register to register cycle time. 
+                                          Include source register tCO and 
+                                          destination register tSU. Note that 
+                                          when the computed Maximum Clock Speed 
+                                          is limited by tCYC it is computed 
+                                          assuming that all registers are 
+                                          rising-edge sensitive. 
+

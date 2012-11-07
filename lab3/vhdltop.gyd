@@ -1,0 +1,23 @@
+Pin Freeze File:  version P.28xd
+
+9572XL44PC XC9572XL-5-PC44
+clk S:PIN5
+dav S:PIN34
+din<0> S:PIN37
+din<1> S:PIN27
+din<2> S:PIN25
+resin S:PIN39
+borrmotor S:PIN1
+solenoid S:PIN11
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_2 borrmotor_OBUF
+
+PARTITION FB2_16 x2/state_FSM_FFd2 x2/state_FSM_FFd1 puls
+PARTITION FB3_2 solenoid_OBUF
+
+PARTITION FB4_17 q levin
+
