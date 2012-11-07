@@ -78,12 +78,31 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="top_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="top_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="top_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="vhdltop.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="vhdltop.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="vhdltop.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="vhdltop.jed"/>
+    <file xil_pn:fileType="FILE_LFP" xil_pn:name="vhdltop.lfp"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="vhdltop.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="vhdltop.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="vhdltop.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="vhdltop.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="vhdltop.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="vhdltop.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="vhdltop.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="vhdltop.pnx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vhdltop.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="vhdltop.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="vhdltop.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="vhdltop.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="vhdltop.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="vhdltop.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="vhdltop.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="vhdltop_build.xml"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="vhdltop_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="vhdltop_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="vhdltop_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="vhdltop_pad.csv"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="vhdltop_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vhdltop_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="vhdltop_xst.xrpt"/>
@@ -106,16 +125,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1352291931" xil_pn:in_ck="-8532243721704061197" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="6189256395701275195" xil_pn:start_ts="1352291925">
-      <status xil_pn:value="FailedRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
+    <transform xil_pn:end_ts="1352296753" xil_pn:in_ck="-8532243721704061197" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="6189256395701275195" xil_pn:start_ts="1352296732">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="sync.ngr"/>
       <outfile xil_pn:name="top.ngr"/>
       <outfile xil_pn:name="vhdltop.lso"/>
+      <outfile xil_pn:name="vhdltop.ngc"/>
+      <outfile xil_pn:name="vhdltop.ngr"/>
       <outfile xil_pn:name="vhdltop.prj"/>
+      <outfile xil_pn:name="vhdltop.stx"/>
       <outfile xil_pn:name="vhdltop.syr"/>
       <outfile xil_pn:name="vhdltop.xst"/>
       <outfile xil_pn:name="vhdltop_vhdl.prj"/>
@@ -123,11 +144,34 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1352291708" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5345674280621234041" xil_pn:start_ts="1352291708">
+    <transform xil_pn:end_ts="1352296960" xil_pn:in_ck="185698512581593773" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5345674280621234041" xil_pn:start_ts="1352296959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1352281275" xil_pn:in_ck="-8098481368969482820" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1352281269">
+    <transform xil_pn:end_ts="1352296978" xil_pn:in_ck="-3934261462220526480" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1352296960">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1352296780" xil_pn:in_ck="-8656893630524736030" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-598928486619483128" xil_pn:start_ts="1352296769">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1352296783" xil_pn:in_ck="-3373519261879460062" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1352296780">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -136,20 +180,27 @@
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1352281286" xil_pn:in_ck="154288912570" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-4106760086726187668" xil_pn:start_ts="1352281275">
-      <status xil_pn:value="AbortedRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+    <transform xil_pn:end_ts="1352296791" xil_pn:in_ck="185698512581581858" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1352296790">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1352281286" xil_pn:in_ck="154288921434" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1352281284">
+    <transform xil_pn:end_ts="1352296780" xil_pn:in_ck="-3373519261879460062" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1352296776">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputRemoved"/>
+    </transform>
+    <transform xil_pn:name="TRAN_createTimingConstraints">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputRemoved"/>
     </transform>
   </transforms>

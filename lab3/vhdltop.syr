@@ -75,13 +75,8 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/sync/BEHAVIORAL is now defined in a different file.  It was defined in "C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd", and is now defined in "C:/Temp/wmax/digkon/lab3/sync.vhf".
-WARNING:HDLParsers:3607 - Unit work/sync is now defined in a different file.  It was defined in "C:/Temp/wmax/digkon/lab3/sync.vhf", and is now defined in "C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd".
-WARNING:HDLParsers:3607 - Unit work/sync/Behavioral is now defined in a different file.  It was defined in "C:/Temp/wmax/digkon/lab3/sync.vhf", and is now defined in "C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd".
 Compiling vhdl file "C:/Temp/wmax/digkon/lab3/vhdl/decoder38e.vhd" in Library work.
 Architecture behavior of Entity decoder38e is up to date.
-Compiling vhdl file "C:/Temp/wmax/digkon/lab3/vhdl/sync.vhd" in Library work.
-Architecture behavioral of Entity sync is up to date.
 Compiling vhdl file "C:/Temp/wmax/digkon/lab3/vhdl/lev2puls.vhd" in Library work.
 Architecture behavioral of Entity lev2puls is up to date.
 Compiling vhdl file "C:/Temp/wmax/digkon/lab3/vhdl/puls2lev.vhd" in Library work.
@@ -99,15 +94,200 @@ Entity <vhdltop> (Architecture <behavioral>) compiled.
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <vhdltop> in library <work> (architecture <behavioral>).
-"C:/Temp/wmax/digkon/lab3/vhdl/vhdltop.vhd" line 52: In entity <vhdltop>
-ERROR:Xst:2585 - Port <input> of instance <x1> does not exist in definition <sync>. Please compare the definition of block <sync> to its component declaration to detect the mismatch.
-ERROR:Xst:2585 - Port <reset> of instance <x1> does not exist in definition <sync>. Please compare the definition of block <sync> to its component declaration to detect the mismatch.
-ERROR:Xst:2585 - Port <sync> of instance <x1> does not exist in definition <sync>. Please compare the definition of block <sync> to its component declaration to detect the mismatch.
+
+Analyzing hierarchy for entity <decoder38e> in library <work> (architecture <behavior>).
+
+Analyzing hierarchy for entity <lev2puls> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <puls2lev> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <vhdltop> in library <work> (Architecture <behavioral>).
+Entity <vhdltop> analyzed. Unit <vhdltop> generated.
+
+Analyzing Entity <decoder38e> in library <work> (Architecture <behavior>).
+Entity <decoder38e> analyzed. Unit <decoder38e> generated.
+
+Analyzing Entity <lev2puls> in library <work> (Architecture <behavioral>).
+Entity <lev2puls> analyzed. Unit <lev2puls> generated.
+
+Analyzing Entity <puls2lev> in library <work> (Architecture <behavioral>).
+Entity <puls2lev> analyzed. Unit <puls2lev> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <decoder38e>.
+    Related source file is "C:/Temp/wmax/digkon/lab3/vhdl/decoder38e.vhd".
+    Found 1-of-8 decoder for signal <temp>.
+    Summary:
+	inferred   1 Decoder(s).
+Unit <decoder38e> synthesized.
+
+
+Synthesizing Unit <lev2puls>.
+    Related source file is "C:/Temp/wmax/digkon/lab3/vhdl/lev2puls.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <pulson>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+Unit <lev2puls> synthesized.
+
+
+Synthesizing Unit <puls2lev>.
+    Related source file is "C:/Temp/wmax/digkon/lab3/vhdl/puls2lev.vhd".
+    Found 1-bit register for signal <levout>.
+Unit <puls2lev> synthesized.
+
+
+Synthesizing Unit <vhdltop>.
+    Related source file is "C:/Temp/wmax/digkon/lab3/vhdl/vhdltop.vhd".
+WARNING:Xst:1306 - Output <d1> is never assigned.
+WARNING:Xst:1306 - Output <d2> is never assigned.
+WARNING:Xst:1306 - Output <d3> is never assigned.
+WARNING:Xst:647 - Input <borruppe> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1306 - Output <larm> is never assigned.
+WARNING:Xst:1306 - Output <framback> is never assigned.
+WARNING:Xst:647 - Input <borrnere> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <refpos> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1306 - Output <oe> is never assigned.
+WARNING:Xst:1306 - Output <steg> is never assigned.
+WARNING:Xst:646 - Signal <dut<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <levin>.
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <vhdltop> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 5
+ 1-bit register                                        : 5
+# Decoders                                             : 1
+ 1-of-8 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <x2/state/FSM> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 00
+ s1    | 01
+ s2    | 10
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+# Decoders                                             : 1
+ 1-of-8 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <vhdltop> ...
+
+Optimizing unit <lev2puls> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+
+Optimizing unit <puls2lev> ...
+
+Optimizing unit <decoder38e> ...
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : vhdltop.ngr
+Top Level Output File Name         : vhdltop
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 37
+#      AND2                        : 13
+#      AND3                        : 2
+#      AND4                        : 1
+#      GND                         : 2
+#      INV                         : 15
+#      OR2                         : 2
+#      OR3                         : 2
+# FlipFlops/Latches                : 7
+#      FD                          : 2
+#      FDC                         : 3
+#      FDCE                        : 2
+# IO Buffers                       : 8
+#      IBUF                        : 6
+#      OBUF                        : 2
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 16.49 secs
+ 
 --> 
 
-Total memory usage is 246192 kilobytes
+Total memory usage is 256944 kilobytes
 
-Number of errors   :    3 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -43,14 +43,23 @@ component decoder38e is
           e: in STD_LOGIC;
           sout: out STD_LOGIC_VECTOR (7 downto 0));
 end component;
-signal levin,puls,reset: std_logic;
+signal levin,puls,reset,q: std_logic;
 signal dut: std_LOGIC_VECTOR(7 downto 0);
 begin
 reset <= not resin;
 x3: decoder38e port map(din,puls,dut);
-
-x1: sync port map (clk,reset,dav,levin);
 x2: lev2puls port map(clk,reset,levin,puls);
 x4: puls2lev port map(clk,reset,dut(0),dut(1),borrmotor);
 x5: puls2lev port map(clk,reset,dut(2),dut(3),solenoid);
+
+process (clk)
+begin
+	if clk'event and clk = '1' then
+		q <= dav;
+		levin <= q;
+	end if;
+end process;
+
+
+
 end Behavioral;

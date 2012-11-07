@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-11-07T13:38:06</DateModified>
+  <DateModified>2012-11-07T14:59:36</DateModified>
   <ModuleName>vhdltop</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Temp/wmax/digkon/lab3/iseconfig/vhdltop.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Temp/wmax/digkon/lab3</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Temp/wmax/digkon/lab3\</ImplementationReportsDirectory>
   <DateInitialized>2012-11-07T13:38:06</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

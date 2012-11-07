@@ -6,3 +6,13 @@ xst -intstyle ise -ifn "C:/Temp/wmax/digkon/lab3/vhdltop.xst" -ofn "C:/Temp/wmax
 xst -intstyle ise -ifn "C:/Temp/wmax/digkon/lab3/vhdltop.xst" -ofn "C:/Temp/wmax/digkon/lab3/vhdltop.syr" 
 xst -intstyle ise -ifn "C:/Temp/wmax/digkon/lab3/vhdltop.xst" -ofn "C:/Temp/wmax/digkon/lab3/vhdltop.syr" 
 xst -intstyle ise -ifn "C:/Temp/wmax/digkon/lab3/vhdltop.xst" -ofn "C:/Temp/wmax/digkon/lab3/vhdltop.syr" 
+xst -intstyle ise -ifn "C:/Temp/wmax/digkon/lab3/vhdltop.xst" -ofn "C:/Temp/wmax/digkon/lab3/vhdltop.syr" 
+xst -intstyle ise -ifn "C:/Temp/wmax/digkon/lab3/vhdltop.xst" -ofn "C:/Temp/wmax/digkon/lab3/vhdltop.syr" 
+xst -intstyle ise -ifn "C:/Temp/wmax/digkon/lab3/vhdltop.xst" -ofn "C:/Temp/wmax/digkon/lab3/vhdltop.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 vhdltop.ngc vhdltop.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper vhdltop.ngd 
+tsim -intstyle ise vhdltop vhdltop.nga 
+taengine -intstyle ise -f vhdltop -l vhdltop.tim -e {C:\Temp\wmax\digkon\lab3\taengine.err} 
+hprep6 -s IEEE1149 -n vhdltop -i vhdltop 
+ngdbuild -intstyle ise -dd _ngo -uc vhdltop.ucf -p xc9572xl-PC44-5 vhdltop.ngc vhdltop.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc vhdltop.ucf -p xc9572xl-PC44-5 vhdltop.ngc vhdltop.ngd  
