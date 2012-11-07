@@ -1,0 +1,4 @@
+vhdtdtfi -lib work puls2lev.vhd -prj lab3 -o puls2lev.spl -module puls2lev -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl puls2lev.spl W:/digkon/lab3/puls2lev.sym 
+vhdtdtfi -lib work puls2lev.vhd -prj lab3 -o puls2lev.spl -module puls2lev -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl puls2lev.spl W:/digkon/lab3/puls2lev.sym 

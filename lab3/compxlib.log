@@ -1,0 +1,48 @@
+    ____  ____
+   /   /\/   /
+  /___/  \  /    VENDOR      : Xilinx Inc.
+  \   \   \/     VERSION     : 14.3 (P.40xd)
+   \   \         APPLICATION : C:\Xilinx\14.3\ISE_DS\ISE\bin\nt\unwrapped\compxlib.exe
+   /   /         CONTENTS    : Compilation Log
+  /___/   /\     FILENAME    : compxlib.log
+  \   \  /  \    
+   \___\/\___\
+
+Release 14.3 - C:\Xilinx\14.3\ISE_DS\ISE\bin\nt\unwrapped\compxlib.exe 14.3 (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Processing command line ...
+Library Source Paths => 'C:/Xilinx/14.3/ISE_DS/ISE'
+Current Working Directory => 'W:\digkon\lab3'
+Compilation Mode = FAST
+Execute Mode = ON
+Scheduling library installation & compilation for architectures: acr2 xa9500xl xbr xc9500 xc9500xl xpla3
+
+Scheduling library installation & compilation for libraries: coolrunner
+
+Signature:-
+------------------------------------------------------------------------------
+C:\Xilinx\14.3\ISE_DS\ISE\bin\nt\unwrapped\compxlib.exe -s mti_pe -l vhdl -arch cpld -lib unisim -lib simprim -lib coolrunner -intstyle ise 
+------------------------------------------------------------------------------
+ERROR:Compxlib - COMPXLIB[sim]: Unable to automatically find executables for simulator 'mti_pe' from the following paths:
+    C:\Xilinx\14.3\ISE_DS\ISE\\lib\nt
+   C:\Xilinx\14.3\ISE_DS\ISE\\bin\nt
+   C:\Xilinx\Vivado_HLS\2012.3\bin
+   C:\Xilinx\14.3\ISE_DS\ISE\bin\nt
+   C:\Xilinx\14.3\ISE_DS\ISE\lib\nt
+   C:\Xilinx\14.3\ISE_DS\ISE\..\..\..\DocNav
+   C:\Xilinx\Vivado\2012.3\bin
+   C:\Xilinx\14.3\ISE_DS\PlanAhead\bin
+   C:\Xilinx\14.3\ISE_DS\EDK\bin\nt
+   C:\Xilinx\14.3\ISE_DS\EDK\lib\nt
+   C:\Xilinx\14.3\ISE_DS\EDK\gnu\microblaze\nt\bin
+   C:\Xilinx\14.3\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin
+   C:\Xilinx\14.3\ISE_DS\EDK\gnuwin\bin
+   C:\Xilinx\14.3\ISE_DS\EDK\gnu\arm\nt\bin
+   C:\Xilinx\14.3\ISE_DS\common\bin\nt
+   C:\Xilinx\14.3\ISE_DS\common\lib\nt
+   C:\WINDOWS\system32
+   C:\WINDOWS
+   C:\WINDOWS\System32\Wbem
+   C:\WINDOWS\system32\WindowsPowerShell\v1.0.
+Simulator 'mti_pe' is ignored.

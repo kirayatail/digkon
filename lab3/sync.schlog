@@ -1,8 +1,0 @@
-select figure at 2020 870 8 -branches -sn=1
-select figure at 947 1230 8 -branches -sn=1
-select all in 947 1230 1060 1743 -branches -enclosed -sn=1
-select figure at 569 232 8 -branches -sn=1
-select all in 569 232 2407 1748 -branches -enclosed -sn=1
-move selection by -800 -576 -keepConn -sn=1
-select figure at 1220 592 8 -branches -sn=1
-select figure at 1220 592 8 -branches -sn=1

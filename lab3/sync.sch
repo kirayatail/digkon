@@ -9,7 +9,6 @@
         <signal name="XLXN_1" />
         <signal name="asynk" />
         <signal name="clk" />
-        <signal name="XLXN_4" />
         <signal name="synksig" />
         <port polarity="Input" name="asynk" />
         <port polarity="Input" name="clk" />
@@ -35,27 +34,27 @@
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
-        <instance x="976" y="960" name="XLXI_1" orien="R0" />
+        <instance x="176" y="384" name="XLXI_1" orien="R0" />
         <branch name="XLXN_1">
-            <wire x2="1392" y1="704" y2="704" x1="1360" />
+            <wire x2="592" y1="128" y2="128" x1="560" />
         </branch>
         <branch name="asynk">
-            <wire x2="976" y1="704" y2="704" x1="960" />
+            <wire x2="176" y1="128" y2="128" x1="160" />
         </branch>
         <branch name="clk">
-            <wire x2="960" y1="832" y2="832" x1="928" />
-            <wire x2="976" y1="832" y2="832" x1="960" />
-            <wire x2="960" y1="832" y2="976" x1="960" />
-            <wire x2="1376" y1="976" y2="976" x1="960" />
-            <wire x2="1376" y1="832" y2="976" x1="1376" />
-            <wire x2="1392" y1="832" y2="832" x1="1376" />
+            <wire x2="160" y1="256" y2="256" x1="128" />
+            <wire x2="176" y1="256" y2="256" x1="160" />
+            <wire x2="160" y1="256" y2="400" x1="160" />
+            <wire x2="576" y1="400" y2="400" x1="160" />
+            <wire x2="576" y1="256" y2="400" x1="576" />
+            <wire x2="592" y1="256" y2="256" x1="576" />
         </branch>
-        <instance x="1392" y="960" name="XLXI_2" orien="R0" />
-        <iomarker fontsize="28" x="928" y="832" name="clk" orien="R180" />
-        <iomarker fontsize="28" x="960" y="704" name="asynk" orien="R180" />
+        <instance x="592" y="384" name="XLXI_2" orien="R0" />
         <branch name="synksig">
-            <wire x2="1808" y1="704" y2="704" x1="1776" />
+            <wire x2="1008" y1="128" y2="128" x1="976" />
         </branch>
-        <iomarker fontsize="28" x="1808" y="704" name="synksig" orien="R0" />
+        <iomarker fontsize="28" x="128" y="256" name="clk" orien="R180" />
+        <iomarker fontsize="28" x="160" y="128" name="asynk" orien="R180" />
+        <iomarker fontsize="28" x="1008" y="128" name="synksig" orien="R0" />
     </sheet>
 </drawing>

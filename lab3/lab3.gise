@@ -22,9 +22,18 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="lab3.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="compxlib.log"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="puls2lev.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="puls2lev.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="sync_drc.vhf"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1352278496" xil_pn:name="TRANEXT_compLibraries_CPLD" xil_pn:prop_ck="6140572866076271936" xil_pn:start_ts="1352278494">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="compxlib.log"/>
+    </transform>
+  </transforms>
 
 </generated_project>
