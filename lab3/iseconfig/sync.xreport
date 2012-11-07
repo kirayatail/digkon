@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-11-05T11:26:51</DateModified>
+  <DateModified>2012-11-07T08:54:57</DateModified>
   <ModuleName>sync</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Temp/digkon/lab3/iseconfig/sync.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Temp/digkon/lab3</ImplementationReportsDirectory>
+  <SavedFilePath>W:/digkon/lab3/iseconfig/sync.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>W:/digkon/lab3\</ImplementationReportsDirectory>
   <DateInitialized>2012-11-05T11:26:51</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,2 +1,5 @@
 # compile directory
 /work
+
+# Mac specifics
+.DS_Store
