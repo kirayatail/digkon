@@ -1,0 +1,554 @@
+NDS Database:  version P.28xd
+
+NDS_INFO | xc9500xl | 9572XL44PC | XC9572XL-5-PC44
+
+DEVICE | 9572XL | 9572XL44PC | 
+
+NETWORK | recieve_one_bit | 0 | 0 | 16391
+
+INPUT_INSTANCE | 0 | 0 | NULL | reciever_IBUF | recieve_one_bit_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | reciever | 674 | PI | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | clk_IBUF | recieve_one_bit_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | clk | 675 | PI | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 3 | 5 | II_FCLK
+NODE | clk_IBUF/FCLK | 659 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | state<0> | recieve_one_bit_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<0> | 663 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<0>.Q | nstate<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF/FCLK | 659 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | state<0>.SI | state<0> | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<0> | 663 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<0>.Q | nstate<0> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | state<0>.D1 | 677 | ? | 0 | 4096 | state<0> | NULL | NULL | state<0>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | state<0>.D2 | 678 | ? | 0 | 4096 | state<0> | NULL | NULL | state<0>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | nstate<0>
+
+SRFF_INSTANCE | state<0>.REG | state<0> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | state<0>.D | 676 | ? | 0 | 0 | state<0> | NULL | NULL | state<0>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_IBUF/FCLK | 659 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | state<0>.Q | 679 | ? | 0 | 0 | state<0> | NULL | NULL | state<0>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | state<1> | recieve_one_bit_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<1> | 664 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<1>.Q | nstate<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF/FCLK | 659 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | state<1>.SI | state<1> | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<1> | 664 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<1>.Q | nstate<1> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | state<1>.D1 | 681 | ? | 0 | 4096 | state<1> | NULL | NULL | state<1>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | state<1>.D2 | 682 | ? | 0 | 4096 | state<1> | NULL | NULL | state<1>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | nstate<1>
+
+SRFF_INSTANCE | state<1>.REG | state<1> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | state<1>.D | 680 | ? | 0 | 0 | state<1> | NULL | NULL | state<1>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_IBUF/FCLK | 659 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | state<1>.Q | 683 | ? | 0 | 0 | state<1> | NULL | NULL | state<1>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | state<2> | recieve_one_bit_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<2> | 665 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<2>.Q | nstate<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_IBUF/FCLK | 659 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | state<2>.SI | state<2> | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<2> | 665 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<2>.Q | nstate<2> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | state<2>.D1 | 685 | ? | 0 | 4096 | state<2> | NULL | NULL | state<2>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | state<2>.D2 | 686 | ? | 0 | 4096 | state<2> | NULL | NULL | state<2>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | nstate<2>
+
+SRFF_INSTANCE | state<2>.REG | state<2> | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | state<2>.D | 684 | ? | 0 | 0 | state<2> | NULL | NULL | state<2>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk_IBUF/FCLK | 659 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | state<2>.Q | 687 | ? | 0 | 0 | state<2> | NULL | NULL | state<2>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | nstate<0> | recieve_one_bit_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<0>/nstate<0>_SETF.UIM | 668 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<0>/nstate<0>_SETF.Q | nstate<0>/nstate<0>_SETF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<0>/nstate<0>_RSTF__$INT.UIM | 669 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<0>/nstate<0>_RSTF__$INT.Q | nstate<0>/nstate<0>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | nstate<0> | 663 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<0>.Q | nstate<0> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | nstate<0>.SI | nstate<0> | 0 | 2 | 5
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<0>/nstate<0>_SETF.UIM | 668 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<0>/nstate<0>_SETF.Q | nstate<0>/nstate<0>_SETF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<0>/nstate<0>_RSTF__$INT.UIM | 669 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<0>/nstate<0>_RSTF__$INT.Q | nstate<0>/nstate<0>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nstate<0>.D1 | 689 | ? | 0 | 4096 | nstate<0> | NULL | NULL | nstate<0>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nstate<0>.D2 | 690 | ? | 0 | 6144 | nstate<0> | NULL | NULL | nstate<0>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | nstate<0>.CLKF | 691 | ? | 0 | 6144 | nstate<0> | NULL | NULL | nstate<0>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 5 | 9 | MC_SI_SETF
+SIGNAL | NODE | nstate<0>.SETF | 692 | ? | 0 | 4096 | nstate<0> | NULL | NULL | nstate<0>.SI | 5 | 9 | MC_SI_SETF
+SPPTERM | 1 | IV_TRUE | nstate<0>/nstate<0>_SETF.UIM
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | nstate<0>.RSTF | 693 | ? | 0 | 4096 | nstate<0> | NULL | NULL | nstate<0>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | nstate<0>/nstate<0>_RSTF__$INT.UIM
+
+SRFF_INSTANCE | nstate<0>.REG | nstate<0> | 0 | 4 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nstate<0>.D | 688 | ? | 0 | 0 | nstate<0> | NULL | NULL | nstate<0>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | nstate<0>.CLKF | 691 | ? | 0 | 6144 | nstate<0> | NULL | NULL | nstate<0>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 0 | IV_ZERO
+INPUT_NODE_TYPE | 2 | 8 | SRFF_S
+SIGNAL | NODE | nstate<0>.SETF | 692 | ? | 0 | 4096 | nstate<0> | NULL | NULL | nstate<0>.SI | 5 | 9 | MC_SI_SETF
+SPPTERM | 1 | IV_TRUE | nstate<0>/nstate<0>_SETF.UIM
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | nstate<0>.RSTF | 693 | ? | 0 | 4096 | nstate<0> | NULL | NULL | nstate<0>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | nstate<0>/nstate<0>_RSTF__$INT.UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nstate<0>.Q | 694 | ? | 0 | 0 | nstate<0> | NULL | NULL | nstate<0>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | nstate<1> | recieve_one_bit_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<1>/nstate<1>_SETF.UIM | 670 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<1>/nstate<1>_SETF.Q | nstate<1>/nstate<1>_SETF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<1>/nstate<1>_RSTF__$INT.UIM | 671 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<1>/nstate<1>_RSTF__$INT.Q | nstate<1>/nstate<1>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | nstate<1> | 664 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<1>.Q | nstate<1> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | nstate<1>.SI | nstate<1> | 0 | 2 | 5
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<1>/nstate<1>_SETF.UIM | 670 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<1>/nstate<1>_SETF.Q | nstate<1>/nstate<1>_SETF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<1>/nstate<1>_RSTF__$INT.UIM | 671 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<1>/nstate<1>_RSTF__$INT.Q | nstate<1>/nstate<1>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nstate<1>.D1 | 696 | ? | 0 | 4096 | nstate<1> | NULL | NULL | nstate<1>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nstate<1>.D2 | 697 | ? | 0 | 6144 | nstate<1> | NULL | NULL | nstate<1>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | nstate<1>.CLKF | 698 | ? | 0 | 6144 | nstate<1> | NULL | NULL | nstate<1>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 5 | 9 | MC_SI_SETF
+SIGNAL | NODE | nstate<1>.SETF | 699 | ? | 0 | 4096 | nstate<1> | NULL | NULL | nstate<1>.SI | 5 | 9 | MC_SI_SETF
+SPPTERM | 1 | IV_TRUE | nstate<1>/nstate<1>_SETF.UIM
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | nstate<1>.RSTF | 700 | ? | 0 | 4096 | nstate<1> | NULL | NULL | nstate<1>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | nstate<1>/nstate<1>_RSTF__$INT.UIM
+
+SRFF_INSTANCE | nstate<1>.REG | nstate<1> | 0 | 4 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nstate<1>.D | 695 | ? | 0 | 0 | nstate<1> | NULL | NULL | nstate<1>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | nstate<1>.CLKF | 698 | ? | 0 | 6144 | nstate<1> | NULL | NULL | nstate<1>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 0 | IV_ZERO
+INPUT_NODE_TYPE | 2 | 8 | SRFF_S
+SIGNAL | NODE | nstate<1>.SETF | 699 | ? | 0 | 4096 | nstate<1> | NULL | NULL | nstate<1>.SI | 5 | 9 | MC_SI_SETF
+SPPTERM | 1 | IV_TRUE | nstate<1>/nstate<1>_SETF.UIM
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | nstate<1>.RSTF | 700 | ? | 0 | 4096 | nstate<1> | NULL | NULL | nstate<1>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | nstate<1>/nstate<1>_RSTF__$INT.UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nstate<1>.Q | 701 | ? | 0 | 0 | nstate<1> | NULL | NULL | nstate<1>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | nstate<2> | recieve_one_bit_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<2>/nstate<2>_SETF.UIM | 672 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<2>/nstate<2>_SETF.Q | nstate<2>/nstate<2>_SETF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<2>/nstate<2>_RSTF__$INT.UIM | 673 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<2>/nstate<2>_RSTF__$INT.Q | nstate<2>/nstate<2>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | nstate<2> | 665 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<2>.Q | nstate<2> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | nstate<2>.SI | nstate<2> | 0 | 2 | 5
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<2>/nstate<2>_SETF.UIM | 672 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<2>/nstate<2>_SETF.Q | nstate<2>/nstate<2>_SETF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nstate<2>/nstate<2>_RSTF__$INT.UIM | 673 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<2>/nstate<2>_RSTF__$INT.Q | nstate<2>/nstate<2>_RSTF__$INT | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nstate<2>.D1 | 703 | ? | 0 | 4096 | nstate<2> | NULL | NULL | nstate<2>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nstate<2>.D2 | 704 | ? | 0 | 6144 | nstate<2> | NULL | NULL | nstate<2>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | nstate<2>.CLKF | 705 | ? | 0 | 6144 | nstate<2> | NULL | NULL | nstate<2>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 5 | 9 | MC_SI_SETF
+SIGNAL | NODE | nstate<2>.SETF | 706 | ? | 0 | 4096 | nstate<2> | NULL | NULL | nstate<2>.SI | 5 | 9 | MC_SI_SETF
+SPPTERM | 1 | IV_TRUE | nstate<2>/nstate<2>_SETF.UIM
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | nstate<2>.RSTF | 707 | ? | 0 | 4096 | nstate<2> | NULL | NULL | nstate<2>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | nstate<2>/nstate<2>_RSTF__$INT.UIM
+
+SRFF_INSTANCE | nstate<2>.REG | nstate<2> | 0 | 4 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nstate<2>.D | 702 | ? | 0 | 0 | nstate<2> | NULL | NULL | nstate<2>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | nstate<2>.CLKF | 705 | ? | 0 | 6144 | nstate<2> | NULL | NULL | nstate<2>.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 0 | IV_ZERO
+INPUT_NODE_TYPE | 2 | 8 | SRFF_S
+SIGNAL | NODE | nstate<2>.SETF | 706 | ? | 0 | 4096 | nstate<2> | NULL | NULL | nstate<2>.SI | 5 | 9 | MC_SI_SETF
+SPPTERM | 1 | IV_TRUE | nstate<2>/nstate<2>_SETF.UIM
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | nstate<2>.RSTF | 707 | ? | 0 | 4096 | nstate<2> | NULL | NULL | nstate<2>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_FALSE | nstate<2>/nstate<2>_RSTF__$INT.UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nstate<2>.Q | 708 | ? | 0 | 0 | nstate<2> | NULL | NULL | nstate<2>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | lmp_OBUF | recieve_one_bit_COPY_0_COPY_0 | 2155873280 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | lmp_OBUF | 666 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | lmp_OBUF.Q | lmp_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | lmp_OBUF.SI | lmp_OBUF | 0 | 4 | 5
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lmp_OBUF.D1 | 710 | ? | 0 | 4096 | lmp_OBUF | NULL | NULL | lmp_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lmp_OBUF.D2 | 711 | ? | 0 | 6144 | lmp_OBUF | NULL | NULL | lmp_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | lmp_OBUF.CLKF | 712 | ? | 0 | 6144 | lmp_OBUF | NULL | NULL | lmp_OBUF.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 5 | 9 | MC_SI_SETF
+SIGNAL | NODE | lmp_OBUF.SETF | 713 | ? | 0 | 4096 | lmp_OBUF | NULL | NULL | lmp_OBUF.SI | 5 | 9 | MC_SI_SETF
+SPPTERM | 4 | IV_FALSE | reciever_IBUF | IV_FALSE | state<0> | IV_TRUE | state<1> | IV_TRUE | state<2>
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | lmp_OBUF.RSTF | 714 | ? | 0 | 4096 | lmp_OBUF | NULL | NULL | lmp_OBUF.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 4 | IV_TRUE | reciever_IBUF | IV_FALSE | state<0> | IV_TRUE | state<1> | IV_TRUE | state<2>
+
+SRFF_INSTANCE | lmp_OBUF.REG | lmp_OBUF | 0 | 4 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lmp_OBUF.D | 709 | ? | 0 | 0 | lmp_OBUF | NULL | NULL | lmp_OBUF.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | lmp_OBUF.CLKF | 712 | ? | 0 | 6144 | lmp_OBUF | NULL | NULL | lmp_OBUF.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 0 | IV_ZERO
+INPUT_NODE_TYPE | 2 | 8 | SRFF_S
+SIGNAL | NODE | lmp_OBUF.SETF | 713 | ? | 0 | 4096 | lmp_OBUF | NULL | NULL | lmp_OBUF.SI | 5 | 9 | MC_SI_SETF
+SPPTERM | 4 | IV_FALSE | reciever_IBUF | IV_FALSE | state<0> | IV_TRUE | state<1> | IV_TRUE | state<2>
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | lmp_OBUF.RSTF | 714 | ? | 0 | 4096 | lmp_OBUF | NULL | NULL | lmp_OBUF.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 4 | IV_TRUE | reciever_IBUF | IV_FALSE | state<0> | IV_TRUE | state<1> | IV_TRUE | state<2>
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lmp_OBUF.Q | 715 | ? | 0 | 0 | lmp_OBUF | NULL | NULL | lmp_OBUF.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | lmp | recieve_one_bit_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | lmp_OBUF | 666 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | lmp_OBUF.Q | lmp_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | lmp | 667 | PO | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | lmp | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | SoftPfbk | nstate<0>/nstate<0>_SETF | recieve_one_bit_COPY_0_COPY_0 | 2181038080 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | nstate<0>/nstate<0>_SETF.UIM | 668 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<0>/nstate<0>_SETF.Q | nstate<0>/nstate<0>_SETF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | nstate<0>/nstate<0>_SETF.SI | nstate<0>/nstate<0>_SETF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nstate<0>/nstate<0>_SETF.D1 | 717 | ? | 0 | 4096 | nstate<0>/nstate<0>_SETF | NULL | NULL | nstate<0>/nstate<0>_SETF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nstate<0>/nstate<0>_SETF.D2 | 718 | ? | 0 | 4096 | nstate<0>/nstate<0>_SETF | NULL | NULL | nstate<0>/nstate<0>_SETF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | reciever_IBUF | IV_FALSE | state<0>
+SPPTERM | 3 | IV_FALSE | state<0> | IV_TRUE | state<1> | IV_TRUE | state<2>
+
+SRFF_INSTANCE | nstate<0>/nstate<0>_SETF.REG | nstate<0>/nstate<0>_SETF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nstate<0>/nstate<0>_SETF.D | 716 | ? | 0 | 0 | nstate<0>/nstate<0>_SETF | NULL | NULL | nstate<0>/nstate<0>_SETF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nstate<0>/nstate<0>_SETF.Q | 719 | ? | 0 | 0 | nstate<0>/nstate<0>_SETF | NULL | NULL | nstate<0>/nstate<0>_SETF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | SoftPfbk | nstate<0>/nstate<0>_RSTF__$INT | recieve_one_bit_COPY_0_COPY_0 | 2181038080 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | nstate<0>/nstate<0>_RSTF__$INT.UIM | 669 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<0>/nstate<0>_RSTF__$INT.Q | nstate<0>/nstate<0>_RSTF__$INT | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | nstate<0>/nstate<0>_RSTF__$INT.SI | nstate<0>/nstate<0>_RSTF__$INT | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nstate<0>/nstate<0>_RSTF__$INT.D1 | 721 | ? | 0 | 4096 | nstate<0>/nstate<0>_RSTF__$INT | NULL | NULL | nstate<0>/nstate<0>_RSTF__$INT.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nstate<0>/nstate<0>_RSTF__$INT.D2 | 722 | ? | 0 | 4096 | nstate<0>/nstate<0>_RSTF__$INT | NULL | NULL | nstate<0>/nstate<0>_RSTF__$INT.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | reciever_IBUF | IV_FALSE | state<0>
+SPPTERM | 3 | IV_TRUE | reciever_IBUF | IV_TRUE | state<1> | IV_TRUE | state<2>
+SPPTERM | 3 | IV_FALSE | state<0> | IV_TRUE | state<1> | IV_TRUE | state<2>
+
+SRFF_INSTANCE | nstate<0>/nstate<0>_RSTF__$INT.REG | nstate<0>/nstate<0>_RSTF__$INT | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nstate<0>/nstate<0>_RSTF__$INT.D | 720 | ? | 0 | 0 | nstate<0>/nstate<0>_RSTF__$INT | NULL | NULL | nstate<0>/nstate<0>_RSTF__$INT.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nstate<0>/nstate<0>_RSTF__$INT.Q | 723 | ? | 0 | 0 | nstate<0>/nstate<0>_RSTF__$INT | NULL | NULL | nstate<0>/nstate<0>_RSTF__$INT.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | SoftPfbk | nstate<1>/nstate<1>_SETF | recieve_one_bit_COPY_0_COPY_0 | 2181038080 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | nstate<1>/nstate<1>_SETF.UIM | 670 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<1>/nstate<1>_SETF.Q | nstate<1>/nstate<1>_SETF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | nstate<1>/nstate<1>_SETF.SI | nstate<1>/nstate<1>_SETF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nstate<1>/nstate<1>_SETF.D1 | 725 | ? | 0 | 4096 | nstate<1>/nstate<1>_SETF | NULL | NULL | nstate<1>/nstate<1>_SETF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nstate<1>/nstate<1>_SETF.D2 | 726 | ? | 0 | 4096 | nstate<1>/nstate<1>_SETF | NULL | NULL | nstate<1>/nstate<1>_SETF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | reciever_IBUF | IV_FALSE | state<0> | IV_TRUE | state<1>
+SPPTERM | 3 | IV_FALSE | reciever_IBUF | IV_TRUE | state<0> | IV_FALSE | state<1>
+SPPTERM | 3 | IV_FALSE | state<0> | IV_TRUE | state<1> | IV_TRUE | state<2>
+
+SRFF_INSTANCE | nstate<1>/nstate<1>_SETF.REG | nstate<1>/nstate<1>_SETF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nstate<1>/nstate<1>_SETF.D | 724 | ? | 0 | 0 | nstate<1>/nstate<1>_SETF | NULL | NULL | nstate<1>/nstate<1>_SETF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nstate<1>/nstate<1>_SETF.Q | 727 | ? | 0 | 0 | nstate<1>/nstate<1>_SETF | NULL | NULL | nstate<1>/nstate<1>_SETF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | SoftPfbk | nstate<1>/nstate<1>_RSTF__$INT | recieve_one_bit_COPY_0_COPY_0 | 2181038080 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | nstate<1>/nstate<1>_RSTF__$INT.UIM | 671 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<1>/nstate<1>_RSTF__$INT.Q | nstate<1>/nstate<1>_RSTF__$INT | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | nstate<1>/nstate<1>_RSTF__$INT.SI | nstate<1>/nstate<1>_RSTF__$INT | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nstate<1>/nstate<1>_RSTF__$INT.D1 | 729 | ? | 0 | 4096 | nstate<1>/nstate<1>_RSTF__$INT | NULL | NULL | nstate<1>/nstate<1>_RSTF__$INT.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nstate<1>/nstate<1>_RSTF__$INT.D2 | 730 | ? | 0 | 4096 | nstate<1>/nstate<1>_RSTF__$INT | NULL | NULL | nstate<1>/nstate<1>_RSTF__$INT.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | reciever_IBUF | IV_FALSE | state<0> | IV_TRUE | state<1>
+SPPTERM | 3 | IV_TRUE | reciever_IBUF | IV_TRUE | state<1> | IV_TRUE | state<2>
+SPPTERM | 3 | IV_FALSE | reciever_IBUF | IV_TRUE | state<0> | IV_FALSE | state<1>
+SPPTERM | 3 | IV_FALSE | state<0> | IV_TRUE | state<1> | IV_TRUE | state<2>
+
+SRFF_INSTANCE | nstate<1>/nstate<1>_RSTF__$INT.REG | nstate<1>/nstate<1>_RSTF__$INT | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nstate<1>/nstate<1>_RSTF__$INT.D | 728 | ? | 0 | 0 | nstate<1>/nstate<1>_RSTF__$INT | NULL | NULL | nstate<1>/nstate<1>_RSTF__$INT.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nstate<1>/nstate<1>_RSTF__$INT.Q | 731 | ? | 0 | 0 | nstate<1>/nstate<1>_RSTF__$INT | NULL | NULL | nstate<1>/nstate<1>_RSTF__$INT.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | SoftPfbk | nstate<2>/nstate<2>_SETF | recieve_one_bit_COPY_0_COPY_0 | 2181038080 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | nstate<2>/nstate<2>_SETF.UIM | 672 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<2>/nstate<2>_SETF.Q | nstate<2>/nstate<2>_SETF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | nstate<2>/nstate<2>_SETF.SI | nstate<2>/nstate<2>_SETF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nstate<2>/nstate<2>_SETF.D1 | 733 | ? | 0 | 4096 | nstate<2>/nstate<2>_SETF | NULL | NULL | nstate<2>/nstate<2>_SETF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nstate<2>/nstate<2>_SETF.D2 | 734 | ? | 0 | 4096 | nstate<2>/nstate<2>_SETF | NULL | NULL | nstate<2>/nstate<2>_SETF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | reciever_IBUF | IV_FALSE | state<0> | IV_TRUE | state<2>
+SPPTERM | 3 | IV_FALSE | state<0> | IV_TRUE | state<1> | IV_TRUE | state<2>
+SPPTERM | 4 | IV_FALSE | reciever_IBUF | IV_TRUE | state<0> | IV_TRUE | state<1> | IV_FALSE | state<2>
+SPPTERM | 4 | IV_FALSE | reciever_IBUF | IV_TRUE | state<0> | IV_FALSE | state<1> | IV_TRUE | state<2>
+
+SRFF_INSTANCE | nstate<2>/nstate<2>_SETF.REG | nstate<2>/nstate<2>_SETF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nstate<2>/nstate<2>_SETF.D | 732 | ? | 0 | 0 | nstate<2>/nstate<2>_SETF | NULL | NULL | nstate<2>/nstate<2>_SETF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nstate<2>/nstate<2>_SETF.Q | 735 | ? | 0 | 0 | nstate<2>/nstate<2>_SETF | NULL | NULL | nstate<2>/nstate<2>_SETF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | SoftPfbk | nstate<2>/nstate<2>_RSTF__$INT | recieve_one_bit_COPY_0_COPY_0 | 2181038080 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | nstate<2>/nstate<2>_RSTF__$INT.UIM | 673 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | nstate<2>/nstate<2>_RSTF__$INT.Q | nstate<2>/nstate<2>_RSTF__$INT | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | nstate<2>/nstate<2>_RSTF__$INT.SI | nstate<2>/nstate<2>_RSTF__$INT | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<0> | 660 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<0>.Q | state<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<1> | 661 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<1>.Q | state<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state<2> | 662 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | state<2>.Q | state<2> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reciever_IBUF | 658 | ? | 0 | 0 | recieve_one_bit_COPY_0_COPY_0 | NULL | NULL | reciever_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nstate<2>/nstate<2>_RSTF__$INT.D1 | 737 | ? | 0 | 4096 | nstate<2>/nstate<2>_RSTF__$INT | NULL | NULL | nstate<2>/nstate<2>_RSTF__$INT.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nstate<2>/nstate<2>_RSTF__$INT.D2 | 738 | ? | 0 | 4096 | nstate<2>/nstate<2>_RSTF__$INT | NULL | NULL | nstate<2>/nstate<2>_RSTF__$INT.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | reciever_IBUF | IV_FALSE | state<0> | IV_TRUE | state<2>
+SPPTERM | 3 | IV_TRUE | reciever_IBUF | IV_TRUE | state<1> | IV_TRUE | state<2>
+SPPTERM | 3 | IV_FALSE | state<0> | IV_TRUE | state<1> | IV_TRUE | state<2>
+SPPTERM | 4 | IV_FALSE | reciever_IBUF | IV_TRUE | state<0> | IV_TRUE | state<1> | IV_FALSE | state<2>
+SPPTERM | 4 | IV_FALSE | reciever_IBUF | IV_TRUE | state<0> | IV_FALSE | state<1> | IV_TRUE | state<2>
+
+SRFF_INSTANCE | nstate<2>/nstate<2>_RSTF__$INT.REG | nstate<2>/nstate<2>_RSTF__$INT | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nstate<2>/nstate<2>_RSTF__$INT.D | 736 | ? | 0 | 0 | nstate<2>/nstate<2>_RSTF__$INT | NULL | NULL | nstate<2>/nstate<2>_RSTF__$INT.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nstate<2>/nstate<2>_RSTF__$INT.Q | 739 | ? | 0 | 0 | nstate<2>/nstate<2>_RSTF__$INT | NULL | NULL | nstate<2>/nstate<2>_RSTF__$INT.REG | 0 | 8 | SRFF_Q
+
+FB_INSTANCE | FOOBAR1_ | recieve_one_bit_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | lmp_OBUF | 1 | NULL | 0 | lmp | 1 | 1 | 49152
+FBPIN | 9 | NULL | 0 | clk_IBUF | 0 | NULL | 0 | 5 | 57344
+FBPIN | 13 | nstate<0>/nstate<0>_SETF | 1 | NULL | 0 | NULL | 0
+FBPIN | 14 | nstate<1>/nstate<1>_SETF | 1 | NULL | 0 | NULL | 0 | 7 | 57344
+FBPIN | 15 | nstate<0>/nstate<0>_RSTF__$INT | 1 | NULL | 0 | NULL | 0 | 8 | 49152
+FBPIN | 16 | nstate<2>/nstate<2>_SETF | 1 | NULL | 0 | NULL | 0
+FBPIN | 17 | nstate<1>/nstate<1>_RSTF__$INT | 1 | NULL | 0 | NULL | 0 | 9 | 49152
+FBPIN | 18 | nstate<2>/nstate<2>_RSTF__$INT | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR2_ | recieve_one_bit_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 16 | state<2> | 1 | NULL | 0 | NULL | 0
+FBPIN | 17 | state<1> | 1 | NULL | 0 | NULL | 0 | 44 | 49152
+FBPIN | 18 | state<0> | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR3_ | recieve_one_bit_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 9 | NULL | 0 | reciever_IBUF | 1 | NULL | 0 | 14 | 49152
+FBPIN | 17 | nstate<1> | 1 | NULL | 0 | NULL | 0 | 22 | 49152
+FBPIN | 18 | nstate<0> | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR4_ | recieve_one_bit_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 18 | nstate<2> | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | recieve_one_bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 16 | state<1> | NULL | 44 | state<2> | NULL | 49 | state<0> | NULL | 51 | reciever | 14
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 34 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 33 | -1 | -1 | -1 | -1 | 35 | -1 | 137 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 16 | nstate<1> | NULL | 52 | nstate<0> | NULL | 53 | nstate<2> | NULL
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 52 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 53 | 71
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 13 | nstate<1>/nstate<1>_SETF.UIM | NULL | 14 | nstate<0>/nstate<0>_RSTF__$INT.UIM | NULL | 16 | nstate<1>/nstate<1>_RSTF__$INT.UIM | NULL | 26 | nstate<0>/nstate<0>_SETF.UIM | NULL
+
+FB_IMUX_INDEX | FOOBAR3_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 13 | 14 | -1 | 16 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 12 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 17 | nstate<2>/nstate<2>_RSTF__$INT.UIM | NULL | 52 | nstate<2>/nstate<2>_SETF.UIM | NULL
+
+FB_IMUX_INDEX | FOOBAR4_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 17 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 15 | -1
+
+
+GLOBAL_FCLK | clk | 0 | 0

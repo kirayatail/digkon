@@ -1,0 +1,13 @@
+AUTO_TS_P2P:FROM:clk:TO:lmp<0>:1
+AUTO_TS_F2P:FROM:lmp_0.Q:TO:lmp<0>:1
+AUTO_TS_P2P:FROM:clk:TO:lmp<1>:1
+AUTO_TS_F2P:FROM:lmp_1.Q:TO:lmp<1>:1
+AUTO_TS_P2P:FROM:clk:TO:lmp<2>:1
+AUTO_TS_F2P:FROM:lmp_2.Q:TO:lmp<2>:1
+AUTO_TS_P2P:FROM:clk:TO:lmp<3>:1
+AUTO_TS_F2P:FROM:lmp_3.Q:TO:lmp<3>:1
+AUTO_TS_P2F:FROM:input<0>:TO:lmp_0.D:1
+AUTO_TS_P2F:FROM:clk:TO:FCLKIO_0:1
+AUTO_TS_P2F:FROM:input<1>:TO:lmp_1.D:1
+AUTO_TS_P2F:FROM:input<2>:TO:lmp_2.D:1
+AUTO_TS_P2F:FROM:input<3>:TO:lmp_3.D:1

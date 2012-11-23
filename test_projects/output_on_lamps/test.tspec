@@ -1,0 +1,4 @@
+AUTO_TS_P2P:FROM:input<0>:TO:lmp<0>:1
+AUTO_TS_P2P:FROM:input<1>:TO:lmp<1>:1
+AUTO_TS_P2P:FROM:input<2>:TO:lmp<2>:1
+AUTO_TS_P2P:FROM:input<3>:TO:lmp<3>:1

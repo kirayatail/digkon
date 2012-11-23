@@ -1,0 +1,38 @@
+MDF Database:  version 1.0
+MDF_INFO | test | XC9572XL-5-PC44
+MACROCELL | 0 | 1 | lmp_0_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | input<0>
+INPUTP | 1 | 46
+EQ | 1 | 
+   lmp<0> = !input<0>;
+
+MACROCELL | 0 | 4 | lmp_1_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | input<1>
+INPUTP | 1 | 49
+EQ | 1 | 
+   lmp<1> = !input<1>;
+
+MACROCELL | 0 | 5 | lmp_2_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | input<2>
+INPUTP | 1 | 50
+EQ | 1 | 
+   lmp<2> = !input<2>;
+
+MACROCELL | 0 | 7 | lmp_3_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | input<3>
+INPUTP | 1 | 52
+EQ | 1 | 
+   lmp<3> = !input<3>;
+
+PIN | input<0> | 64 | 0 | N/A | 46 | 1 | 0 | 1
+PIN | input<1> | 64 | 0 | N/A | 49 | 1 | 0 | 4
+PIN | input<2> | 64 | 0 | N/A | 50 | 1 | 0 | 5
+PIN | input<3> | 64 | 0 | N/A | 52 | 1 | 0 | 7
+PIN | lmp<0> | 536871040 | 0 | N/A | 11
+PIN | lmp<1> | 536871040 | 0 | N/A | 12
+PIN | lmp<2> | 536871040 | 0 | N/A | 13
+PIN | lmp<3> | 536871040 | 0 | N/A | 15

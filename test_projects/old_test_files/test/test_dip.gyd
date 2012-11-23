@@ -1,0 +1,24 @@
+Pin Freeze File:  version P.28xd
+
+9572XL44PC XC9572XL-5-PC44
+dip<0> S:PIN1
+dip<1> S:PIN2
+dip<2> S:PIN3
+dip<3> S:PIN4
+out_signal<0> S:PIN40
+out_signal<1> S:PIN42
+out_signal<2> S:PIN43
+out_signal<3> S:PIN44
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+
+PARTITION FB2_11 out_signal_0_OBUF$BUF0
+PARTITION FB2_14 out_signal_1_OBUF$BUF0 out_signal_2_OBUF$BUF0
+PARTITION FB2_17 out_signal_3_OBUF$BUF0
+
+
+
+

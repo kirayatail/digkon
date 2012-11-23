@@ -1,0 +1,68 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_lmp: FDCPE port map (lmp,'0','0',lmp_CLR,lmp_PRE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lmp_CLR <= (reciever AND NOT state(0) AND state(1) AND state(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lmp_PRE <= (NOT reciever AND NOT state(0) AND state(1) AND state(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+nstate(0)/nstate(0)_SETF <= ((reciever AND NOT state(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(0) AND state(1) AND state(2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+nstate(0)/nstate(0)_RSTF__$INT <= ((reciever AND NOT state(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (reciever AND state(1) AND state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(0) AND state(1) AND state(2)));
+</td></tr><tr><td>
+FDCPE_nstate0: FDCPE port map (nstate(0),'0','0',NOT nstate(0)/nstate(0)_RSTF__$INT,nstate(0)/nstate(0)_SETF);
+</td></tr><tr><td>
+</td></tr><tr><td>
+nstate(1)/nstate(1)_RSTF__$INT <= ((reciever AND NOT state(0) AND state(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (reciever AND state(1) AND state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reciever AND state(0) AND NOT state(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(0) AND state(1) AND state(2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+nstate(1)/nstate(1)_SETF <= ((reciever AND NOT state(0) AND state(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reciever AND state(0) AND NOT state(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(0) AND state(1) AND state(2)));
+</td></tr><tr><td>
+FDCPE_nstate1: FDCPE port map (nstate(1),'0','0',NOT nstate(1)/nstate(1)_RSTF__$INT,nstate(1)/nstate(1)_SETF);
+</td></tr><tr><td>
+FDCPE_nstate2: FDCPE port map (nstate(2),'0','0',NOT nstate(2)/nstate(2)_RSTF__$INT,nstate(2)/nstate(2)_SETF);
+</td></tr><tr><td>
+</td></tr><tr><td>
+nstate(2)/nstate(2)_RSTF__$INT <= ((reciever AND NOT state(0) AND state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (reciever AND state(1) AND state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(0) AND state(1) AND state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reciever AND state(0) AND state(1) AND NOT state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reciever AND state(0) AND NOT state(1) AND state(2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+nstate(2)/nstate(2)_SETF <= ((reciever AND NOT state(0) AND state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(0) AND state(1) AND state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reciever AND state(0) AND state(1) AND NOT state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reciever AND state(0) AND NOT state(1) AND state(2)));
+</td></tr><tr><td>
+FDCPE_state0: FDCPE port map (state(0),nstate(0),clk,'0','0');
+</td></tr><tr><td>
+FDCPE_state1: FDCPE port map (state(1),nstate(1),clk,'0','0');
+</td></tr><tr><td>
+FDCPE_state2: FDCPE port map (state(2),nstate(2),clk,'0','0');
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

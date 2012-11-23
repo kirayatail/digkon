@@ -1,0 +1,115 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "test";
+      var device = "XC9572XL";
+      signals = new Array("lmp0_SPECSIG","lmp1_SPECSIG","lmp2_SPECSIG","lmp3_SPECSIG");
+      sigNegs = new Array("OFF","OFF","OFF","OFF");
+      sigTypes = new Array("","","","");
+
+      
+        specSig["input0_SPECSIG"]=new Array("input<0>");
+      
+        specSig["input1_SPECSIG"]=new Array("input<1>");
+      
+        specSig["input2_SPECSIG"]=new Array("input<2>");
+      
+        specSig["input3_SPECSIG"]=new Array("input<3>");
+      
+        specSig["lmp0_SPECSIG"]=new Array("lmp<0>");
+      
+        specSig["lmp1_SPECSIG"]=new Array("lmp<1>");
+      
+        specSig["lmp2_SPECSIG"]=new Array("lmp<2>");
+      
+        specSig["lmp3_SPECSIG"]=new Array("lmp<3>");
+      
+            pterms["FB1_2_1"]=new Array("/input0_SPECSIG");
+          
+            pterms["FB1_5_1"]=new Array("/input1_SPECSIG");
+          
+            pterms["FB1_6_1"]=new Array("/input2_SPECSIG");
+          
+            pterms["FB1_8_1"]=new Array("/input3_SPECSIG");
+          
+          d2["lmp0_SPECSIG"]=new Array("FB1_2_1");
+          
+            d2imp["lmp0_SPECSIG"]=new Array("1");
+          
+          d2["lmp1_SPECSIG"]=new Array("FB1_5_1");
+          
+            d2imp["lmp1_SPECSIG"]=new Array("1");
+          
+          d2["lmp2_SPECSIG"]=new Array("FB1_6_1");
+          
+            d2imp["lmp2_SPECSIG"]=new Array("1");
+          
+          d2["lmp3_SPECSIG"]=new Array("FB1_8_1");
+          
+            d2imp["lmp3_SPECSIG"]=new Array("1");
+          
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

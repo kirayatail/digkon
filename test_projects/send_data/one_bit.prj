@@ -1,0 +1,3 @@
+vhdl work "sync.vhd"
+vhdl work "lev2pulse.vhd"
+vhdl work "from_dip_to_tranciever.vhd"

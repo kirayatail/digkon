@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=Z:\DigKon\test\impact.xsl
+OUTFILE=Z:\DigKon\test\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=Z:\DigKon\test
+LICENSE=iMPACT
+USER_INFO=iMPACT

@@ -1,0 +1,5 @@
+# begin LFP file Z:\DigKon\test_projects\test_button\button.lfp
+designfile button.vhd
+parttype xc9572xl-pc44-5
+bus_delimiter 0;
+set_busdelim_onsave 1;

@@ -1,0 +1,18 @@
+Pin Freeze File:  version P.28xd
+
+9572XL44PC XC9572XL-5-PC44
+clk S:PIN5
+reciever S:PIN14
+lmp S:PIN1
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_2 lmp_OBUF
+PARTITION FB1_13 nstate<0>/nstate<0>_SETF nstate<1>/nstate<1>_SETF nstate<0>/nstate<0>_RSTF__$INT nstate<2>/nstate<2>_SETF
+		 nstate<1>/nstate<1>_RSTF__$INT nstate<2>/nstate<2>_RSTF__$INT
+PARTITION FB2_16 state<2> state<1> state<0>
+PARTITION FB3_17 nstate<1> nstate<0>
+PARTITION FB4_18 nstate<2>
+
