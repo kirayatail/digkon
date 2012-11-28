@@ -1,9 +1,9 @@
 Pin Freeze File:  version P.28xd
 
 9572XL44PC XC9572XL-5-PC44
-dip<0> S:PIN1
-dip<1> S:PIN2
-dip<2> S:PIN3
+dip<0> S:PIN2
+dip<1> S:PIN3
+dip<2> S:PIN1
 dip<3> S:PIN4
 out_signal<0> S:PIN40
 out_signal<1> S:PIN42

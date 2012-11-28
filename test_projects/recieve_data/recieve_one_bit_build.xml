@@ -5,7 +5,7 @@
 <design name='recieve_one_bit'/>
 <rptdir name='recieve_one_bit'/>
 <xilinx path='C:/Xilinx/14.2/ISE_DS/ISE;'/>
-<projDir path='Z:\DigKon\test_projects\recieve_data'/>
+<projDir path='Z:\DigKon\project\digkon\test_projects\recieve_data'/>
 <xslDir path='chipviewer/data/xsl'/>
 <fileDir path='/chipviewer/data/html'/>
 <dataFile file='index.htm'/>

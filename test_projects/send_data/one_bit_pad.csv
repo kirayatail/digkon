@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.28xd
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
-11-23-2012  2:37PM
+11-27-2012  5:54PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The comma ','
@@ -18,10 +18,10 @@ Pinout by Pin Number:
 
 -----,-----,-----,-----,-----,-----,-----,-----,-----,-----,
 Pin Number,Signal Name,Pin Usage,Pin Name,Direction,IO Standard,IO Bank Number,{blank},Slew Rate,Termination,{blank},Voltage,Constraint,
-P1,TIE,,I/O,,,,,,,,,,
-P2,TIE,,I/O,,,,,,,,,,
-P3,TIE,,I/O,,,,,,,,,,
-P4,enable_lamp,O,I/O,OUTPUT,,,,,,,,,
+P1,lmp<0>,O,I/O,OUTPUT,,,,,,,,,
+P2,lmp<1>,O,I/O,OUTPUT,,,,,,,,,
+P3,lmp<2>,O,I/O,OUTPUT,,,,,,,,,
+P4,lmp<3>,O,I/O,OUTPUT,,,,,,,,,
 P5,clk,GCK,I/O/GCK1,,,,,,,,,,
 P6,enable,I,I/O/GCK2,INPUT,,,,,,,,,
 P7,TIE,,I/O/GCK3,,,,,,,,,,
@@ -35,11 +35,11 @@ P14,TIE,,I/O,,,,,,,,,,
 P15,TDI,,TDI,,,,,,,,,,
 P16,TMS,,TMS,,,,,,,,,,
 P17,TCK,,TCK,,,,,,,,,,
-P18,in_signal,I,I/O,INPUT,,,,,,,,,
-P19,TIE,,I/O,,,,,,,,,,
-P20,TIE,,I/O,,,,,,,,,,
+P18,in_signal<1>,I,I/O,INPUT,,,,,,,,,
+P19,in_signal<2>,I,I/O,INPUT,,,,,,,,,
+P20,in_signal<0>,I,I/O,INPUT,,,,,,,,,
 P21,VCC,,VCCINT,,,,,,,,,,
-P22,TIE,,I/O,,,,,,,,,,
+P22,in_signal<3>,I,I/O,INPUT,,,,,,,,,
 P23,GND,,GND,,,,,,,,,,
 P24,TIE,,I/O,,,,,,,,,,
 P25,TIE,,I/O,,,,,,,,,,

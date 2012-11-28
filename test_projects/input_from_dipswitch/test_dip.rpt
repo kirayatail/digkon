@@ -1,7 +1,7 @@
  
 cpldfit:  version P.28xd                            Xilinx Inc.
                                   Fitter Report
-Design Name: test_dip                            Date: 11-16-2012, 10:33AM
+Design Name: test_dip                            Date: 11-27-2012,  6:10PM
 Device Used: XC9572XL-5-PC44
 Fitting Status: Successful
 
@@ -67,9 +67,9 @@ out_signal<3>       1     1     FB2_17  44   I/O     O       STD  FAST
 
 Signal              Loc     Pin  Pin     Pin     
 Name                        No.  Type    Use     
-dip<0>              FB1_2   1    I/O     I
-dip<1>              FB1_5   2    I/O     I
-dip<2>              FB1_6   3    I/O     I
+dip<2>              FB1_2   1    I/O     I
+dip<0>              FB1_5   2    I/O     I
+dip<1>              FB1_6   3    I/O     I
 dip<3>              FB1_8   4    I/O     I
 
 Legend:
@@ -237,9 +237,9 @@ Device : XC9572XL-5-PC44
 
 Pin Signal                         Pin Signal                        
 No. Name                           No. Name                          
-  1 dip<0>                           23 GND                           
-  2 dip<1>                           24 KPR                           
-  3 dip<2>                           25 KPR                           
+  1 dip<2>                           23 GND                           
+  2 dip<0>                           24 KPR                           
+  3 dip<1>                           25 KPR                           
   4 dip<3>                           26 KPR                           
   5 KPR                              27 KPR                           
   6 KPR                              28 KPR                           

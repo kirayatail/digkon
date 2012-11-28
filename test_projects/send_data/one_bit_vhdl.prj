@@ -1,3 +1,3 @@
-vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\test_projects\send_data\sync.vhd"
-vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\test_projects\send_data\lev2pulse.vhd"
-vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\test_projects\send_data\from_dip_to_tranciever.vhd"
+vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\test_projects\send_data\sync.vhd"
+vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\test_projects\send_data\lev2pulse.vhd"
+vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\test_projects\send_data\from_dip_to_tranciever.vhd"

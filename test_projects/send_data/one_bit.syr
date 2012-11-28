@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.28 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.29 secs
  
 --> Reading design: one_bit.prj
 
@@ -77,12 +77,11 @@ Setting FSM Encoding Algorithm to : Gray
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/test_projects/send_data/sync.vhd" in Library work.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/sync.vhd" in Library work.
 Architecture behavioral of Entity sync is up to date.
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/test_projects/send_data/lev2pulse.vhd" in Library work.
-Entity <lev2pulse> compiled.
-Entity <lev2pulse> (Architecture <arch>) compiled.
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/test_projects/send_data/from_dip_to_tranciever.vhd" in Library work.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/lev2pulse.vhd" in Library work.
+Architecture arch of Entity lev2pulse is up to date.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/from_dip_to_tranciever.vhd" in Library work.
 Entity <one_bit> compiled.
 Entity <one_bit> (Architecture <behavioral>) compiled.
 
@@ -100,16 +99,18 @@ Analyzing hierarchy for entity <lev2pulse> in library <work> (architecture <arch
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <one_bit> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "//file00.chalmers.se/home/lsofia/DigKon/test_projects/send_data/from_dip_to_tranciever.vhd" line 78: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/from_dip_to_tranciever.vhd" line 65: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <state>
+WARNING:Xst:819 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/from_dip_to_tranciever.vhd" line 81: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <in_signal>
-WARNING:Xst:753 - "//file00.chalmers.se/home/lsofia/DigKon/test_projects/send_data/from_dip_to_tranciever.vhd" line 115: Unconnected output port 'test_lamp' of component 'lev2pulse'.
+WARNING:Xst:753 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/from_dip_to_tranciever.vhd" line 139: Unconnected output port 'test_lamp' of component 'lev2pulse'.
 Entity <one_bit> analyzed. Unit <one_bit> generated.
 
 Analyzing Entity <sync> in library <work> (Architecture <behavioral>).
 Entity <sync> analyzed. Unit <sync> generated.
 
 Analyzing Entity <lev2pulse> in library <work> (Architecture <arch>).
-WARNING:Xst:819 - "//file00.chalmers.se/home/lsofia/DigKon/test_projects/send_data/lev2pulse.vhd" line 15: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/lev2pulse.vhd" line 15: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <reset>
 Entity <lev2pulse> analyzed. Unit <lev2pulse> generated.
 
@@ -121,7 +122,7 @@ Entity <lev2pulse> analyzed. Unit <lev2pulse> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <sync>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/test_projects/send_data/sync.vhd".
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/sync.vhd".
 WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <sync>.
     Found 1-bit register for signal <q>.
@@ -131,7 +132,7 @@ Unit <sync> synthesized.
 
 
 Synthesizing Unit <lev2pulse>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/test_projects/send_data/lev2pulse.vhd".
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/lev2pulse.vhd".
 WARNING:Xst:1305 - Output <test_lamp> is never assigned. Tied to value 0.
 WARNING:Xst:737 - Found 1-bit latch for signal <pulson>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
@@ -144,19 +145,20 @@ Unit <lev2pulse> synthesized.
 
 
 Synthesizing Unit <one_bit>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/test_projects/send_data/from_dip_to_tranciever.vhd".
-WARNING:Xst:1306 - Output <test_lamp> is never assigned.
-WARNING:Xst:1306 - Output <on_lamp> is never assigned.
-WARNING:Xst:737 - Found 1-bit latch for signal <enable_lamp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <en>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/from_dip_to_tranciever.vhd".
 WARNING:Xst:737 - Found 1-bit latch for signal <transmitter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lmp_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lmp_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lmp_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lmp_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <nstate>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 4-bit latch for signal <nstate>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 10-bit adder for signal <count$addsub0000> created at line 105.
-    Found 4-bit register for signal <state>.
+    Found 10-bit up counter for signal <count>.
+    Found 1-bit register for signal <en>.
+    Found 5-bit register for signal <state>.
     Summary:
-	inferred   1 Adder/Subtractor(s).
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
 Unit <one_bit> synthesized.
 
 
@@ -164,16 +166,16 @@ Unit <one_bit> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
- 10-bit adder                                          : 1
-# Registers                                            : 4
- 1-bit register                                        : 2
+# Counters                                             : 1
+ 10-bit up counter                                     : 1
+# Registers                                            : 5
+ 1-bit register                                        : 3
  2-bit register                                        : 1
- 4-bit register                                        : 1
-# Latches                                              : 7
- 1-bit latch                                           : 5
+ 5-bit register                                        : 1
+# Latches                                              : 9
+ 1-bit latch                                           : 7
  2-bit latch                                           : 1
- 4-bit latch                                           : 1
+ 5-bit latch                                           : 1
 
 =========================================================================
 
@@ -186,43 +188,33 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
- 10-bit adder                                          : 1
-# Registers                                            : 2
- Flip-Flops                                            : 2
-# Latches                                              : 7
- 1-bit latch                                           : 5
+# Counters                                             : 1
+ 10-bit up counter                                     : 1
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+# Latches                                              : 9
+ 1-bit latch                                           : 7
  2-bit latch                                           : 1
- 4-bit latch                                           : 1
+ 5-bit latch                                           : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2170 - Unit one_bit : the following signal(s) form a combinatorial loop: count<0>, en_cmp_eq0000, count<9>.
-WARNING:Xst:2170 - Unit one_bit : the following signal(s) form a combinatorial loop: count<0>.
 
 Optimizing unit <one_bit> ...
+  implementation constraint: INIT=r	 : state_4
+  implementation constraint: INIT=r	 : state_0
+  implementation constraint: INIT=r	 : state_1
   implementation constraint: INIT=r	 : state_2
   implementation constraint: INIT=r	 : state_3
-  implementation constraint: INIT=r	 : state_1
-  implementation constraint: INIT=r	 : state_0
 
 Optimizing unit <sync> ...
 
 Optimizing unit <lev2pulse> ...
   implementation constraint: INIT=r	 : state_1
   implementation constraint: INIT=r	 : state_0
-WARNING:Xst:2170 - Unit Madd_count_addsub0000_Mxor_Result<1> : the following signal(s) form a combinatorial loop: one_bit/count<1>, one_bit/count_addsub0000<1>, Result, Data<1>.
-WARNING:Xst:2170 - Unit Madd_count_addsub0000_Mxor_Result<2> : the following signal(s) form a combinatorial loop: Result, Data<1>, one_bit/count_addsub0000<2>, one_bit/count<2>.
-WARNING:Xst:2170 - Unit Madd_count_addsub0000_Mxor_Result<3> : the following signal(s) form a combinatorial loop: one_bit/count_addsub0000<3>, Data<1>, Result, one_bit/count<3>.
-WARNING:Xst:2170 - Unit Madd_count_addsub0000_Mxor_Result<4> : the following signal(s) form a combinatorial loop: Result, Data<1>, one_bit/count_addsub0000<4>, one_bit/count<4>.
-WARNING:Xst:2170 - Unit Madd_count_addsub0000_Mxor_Result<5> : the following signal(s) form a combinatorial loop: one_bit/count_addsub0000<5>, Data<1>, Result, one_bit/count<5>.
-WARNING:Xst:2170 - Unit Madd_count_addsub0000_Mxor_Result<6> : the following signal(s) form a combinatorial loop: one_bit/count_addsub0000<6>, one_bit/count<6>, Data<1>, Result.
-WARNING:Xst:2170 - Unit Madd_count_addsub0000_Mxor_Result<7> : the following signal(s) form a combinatorial loop: Result, one_bit/count_addsub0000<7>, Data<1>, one_bit/count<7>.
-WARNING:Xst:2170 - Unit Madd_count_addsub0000_Mxor_Result<8> : the following signal(s) form a combinatorial loop: one_bit/count<8>, Result, Data<1>, one_bit/count_addsub0000<8>.
-WARNING:Xst:2170 - Unit Madd_count_addsub0000_Mxor_Result<9> : the following signal(s) form a combinatorial loop: one_bit/count<9>, Data<1>, one_bit/count_addsub0000<9>, Result.
 
 =========================================================================
 *                           Partition Report                            *
@@ -251,40 +243,41 @@ Clock Enable                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 8
+# IOs                              : 12
 
 Cell Usage :
-# BELS                             : 134
-#      AND2                        : 45
-#      AND3                        : 3
-#      AND4                        : 1
+# BELS                             : 200
+#      AND2                        : 65
+#      AND3                        : 7
+#      AND4                        : 4
 #      AND5                        : 2
+#      AND6                        : 1
 #      AND8                        : 2
-#      GND                         : 1
-#      INV                         : 55
-#      OR2                         : 11
-#      OR3                         : 4
-#      XOR2                        : 10
-# FlipFlops/Latches                : 19
+#      INV                         : 81
+#      OR2                         : 25
+#      OR3                         : 3
+#      OR4                         : 1
+#      XOR2                        : 9
+# FlipFlops/Latches                : 34
 #      FD                          : 4
-#      FDCE                        : 4
-#      LD                          : 9
-#      LDCP                        : 1
-#      LDP                         : 1
-# IO Buffers                       : 6
-#      IBUF                        : 4
-#      OBUF                        : 2
+#      FDC                         : 10
+#      FDCE                        : 5
+#      FDP                         : 1
+#      LD                          : 14
+# IO Buffers                       : 12
+#      IBUF                        : 7
+#      OBUF                        : 5
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 20.19 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 23.53 secs
  
 --> 
 
-Total memory usage is 248276 kilobytes
+Total memory usage is 248724 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   25 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

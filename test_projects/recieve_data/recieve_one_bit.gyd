@@ -3,16 +3,25 @@ Pin Freeze File:  version P.28xd
 9572XL44PC XC9572XL-5-PC44
 clk S:PIN5
 reciever S:PIN14
-lmp S:PIN1
+reset S:PIN39
+lmp<0> S:PIN1
+lmp<1> S:PIN2
+lmp<2> S:PIN3
+lmp<3> S:PIN4
 
 
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_2 lmp_OBUF
-PARTITION FB1_13 nstate<0>/nstate<0>_SETF nstate<1>/nstate<1>_SETF nstate<0>/nstate<0>_RSTF__$INT nstate<2>/nstate<2>_SETF
-		 nstate<1>/nstate<1>_RSTF__$INT nstate<2>/nstate<2>_RSTF__$INT
-PARTITION FB2_16 state<2> state<1> state<0>
-PARTITION FB3_17 nstate<1> nstate<0>
-PARTITION FB4_18 nstate<2>
+PARTITION FB1_1 EXP6_ lmp_0
+PARTITION FB1_5 lmp_1 lmp_2
+PARTITION FB1_8 lmp_3 state<0> nstate<0>/nstate<0>_RSTF $OpTx$FX_DC$5
+		 nstate<4> nstate<0> nstate<1>/nstate<1>_SETF nstate<4>/nstate<4>_RSTF
+		 nstate<3>/nstate<3>_SETF nstate<2>/nstate<2>_SETF nstate<3>/nstate<3>_RSTF
+PARTITION FB2_8 en count<9> count<8> count<7>
+		 count<6> count<5> count<4> count<3>
+		 count<2> count<1> count<0>
+PARTITION FB3_15 state<4> state<3> state<2> state<1>
+		
+PARTITION FB4_16 nstate<3> nstate<2> nstate<1>
 

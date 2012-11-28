@@ -5,7 +5,7 @@
 <design name='test_dip'/>
 <rptdir name='test_dip'/>
 <xilinx path='C:/Xilinx/14.2/ISE_DS/ISE;'/>
-<projDir path='Z:\DigKon\test_projects\input_from_dipswitch'/>
+<projDir path='Z:\DigKon\project\digkon\test_projects\input_from_dipswitch'/>
 <xslDir path='chipviewer/data/xsl'/>
 <fileDir path='/chipviewer/data/html'/>
 <dataFile file='index.htm'/>

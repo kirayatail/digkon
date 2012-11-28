@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.28xd
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
-11-23-2012  3:16PM
+11-27-2012  6:57PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -18,10 +18,10 @@ Pinout by Pin Number:
 
 -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
-P1|lmp|O|I/O|OUTPUT|||||||||
-P2|TIE||I/O||||||||||
-P3|TIE||I/O||||||||||
-P4|TIE||I/O||||||||||
+P1|lmp<0>|O|I/O|OUTPUT|||||||||
+P2|lmp<1>|O|I/O|OUTPUT|||||||||
+P3|lmp<2>|O|I/O|OUTPUT|||||||||
+P4|lmp<3>|O|I/O|OUTPUT|||||||||
 P5|clk|GCK|I/O/GCK1||||||||||
 P6|TIE||I/O/GCK2||||||||||
 P7|TIE||I/O/GCK3||||||||||
@@ -56,7 +56,7 @@ P35|TIE||I/O||||||||||
 P36|TIE||I/O||||||||||
 P37|TIE||I/O||||||||||
 P38|TIE||I/O||||||||||
-P39|TIE||I/O/GSR||||||||||
+P39|reset|GSR/I|I/O/GSR||||||||||
 P40|TIE||I/O/GTS2||||||||||
 P41|VCC||VCCINT||||||||||
 P42|TIE||I/O/GTS1||||||||||

@@ -1,0 +1,5 @@
+# begin LFP file Z:\DigKon\project\digkon\test_projects\send_data\one_bit.lfp
+designfile from_dip_to_tranciever.vhd
+parttype xc9572xl-pc44-5
+bus_delimiter 0;
+set_busdelim_onsave 1;

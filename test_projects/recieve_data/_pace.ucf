@@ -4,7 +4,7 @@
 NET "clk"  LOC = "P5"  ; 
 NET "lmp"  LOC = "p1"  ; 
 NET "reciever"  LOC = "p14"  ; 
-NET "reset"  LOC = "p39"  ; 
+NET "reset"  LOC = "p39"  ;
 
 #PACE: Start of PACE Area Constraints
 

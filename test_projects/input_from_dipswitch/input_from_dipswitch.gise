@@ -61,15 +61,15 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1353058355" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1353058355">
+    <transform xil_pn:end_ts="1354035753" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1354035753">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353058355" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-160765698477964209" xil_pn:start_ts="1353058355">
+    <transform xil_pn:end_ts="1354035753" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-160765698477964209" xil_pn:start_ts="1354035753">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353058381" xil_pn:in_ck="6023078479352664940" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="5515489162368174038" xil_pn:start_ts="1353058355">
+    <transform xil_pn:end_ts="1354035779" xil_pn:in_ck="6023078479352664940" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="5515489162368174038" xil_pn:start_ts="1354035753">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -86,11 +86,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1353058381" xil_pn:in_ck="6023078479352663688" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3784648931987374380" xil_pn:start_ts="1353058381">
+    <transform xil_pn:end_ts="1354036217" xil_pn:in_ck="6023078479352663688" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3784648931987374380" xil_pn:start_ts="1354036217">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353058399" xil_pn:in_ck="-7422545602842660150" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1353058381">
+    <transform xil_pn:end_ts="1354036237" xil_pn:in_ck="-7422545602842660150" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1354036217">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -99,11 +99,10 @@
       <outfile xil_pn:name="test_dip.ngd"/>
       <outfile xil_pn:name="test_dip_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1353058420" xil_pn:in_ck="6023078479352656195" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="5333992701611524350" xil_pn:start_ts="1353058399">
+    <transform xil_pn:end_ts="1354036255" xil_pn:in_ck="6023078479352656195" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="5333992701611524350" xil_pn:start_ts="1354036237">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="test_dip.gyd"/>
       <outfile xil_pn:name="test_dip.mfd"/>
       <outfile xil_pn:name="test_dip.nga"/>
@@ -118,15 +117,23 @@
       <outfile xil_pn:name="test_dip_html"/>
       <outfile xil_pn:name="test_dip_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1353058425" xil_pn:in_ck="6023078479352665059" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1353058420">
+    <transform xil_pn:end_ts="1354036259" xil_pn:in_ck="6023078479352665059" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1354036255">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="test_dip.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1353058420" xil_pn:in_ck="6023078479352665059" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1353058417">
+    <transform xil_pn:end_ts="1354035838" xil_pn:in_ck="6023078479352651773" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1354035836">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1353058420" xil_pn:in_ck="6023078479352665059" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1353058417">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
 

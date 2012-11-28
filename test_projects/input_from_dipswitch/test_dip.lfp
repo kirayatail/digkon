@@ -1,0 +1,5 @@
+# begin LFP file Z:\DigKon\project\digkon\test_projects\input_from_dipswitch\test_dip.lfp
+designfile test_dip.vhd
+parttype xc9572xl-pc44-5
+bus_delimiter 0;
+set_busdelim_onsave 1;

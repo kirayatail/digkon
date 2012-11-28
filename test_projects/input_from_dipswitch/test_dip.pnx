@@ -15,4 +15,4 @@
   sr     (SLOW|FAST|slow|fast) "SLOW"
   dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
 ]>
-<ibis><part arch="xc9500xl" device="XC9572XL" pkg="PC44" spg="-5"/><pin dir="input" nm="dip&lt;0&gt;" no="1"/><pin dir="input" nm="dip&lt;1&gt;" no="2"/><pin dir="input" nm="dip&lt;2&gt;" no="3"/><pin dir="input" nm="dip&lt;3&gt;" no="4"/><pin dir="output" nm="out_signal&lt;0&gt;" no="40" sr="fast"/><pin dir="output" nm="out_signal&lt;1&gt;" no="42" sr="fast"/><pin dir="output" nm="out_signal&lt;2&gt;" no="43" sr="fast"/><pin dir="output" nm="out_signal&lt;3&gt;" no="44" sr="fast"/></ibis>
+<ibis><part arch="xc9500xl" device="XC9572XL" pkg="PC44" spg="-5"/><pin dir="input" nm="dip&lt;0&gt;" no="2"/><pin dir="input" nm="dip&lt;1&gt;" no="3"/><pin dir="input" nm="dip&lt;2&gt;" no="1"/><pin dir="input" nm="dip&lt;3&gt;" no="4"/><pin dir="output" nm="out_signal&lt;0&gt;" no="40" sr="fast"/><pin dir="output" nm="out_signal&lt;1&gt;" no="42" sr="fast"/><pin dir="output" nm="out_signal&lt;2&gt;" no="43" sr="fast"/><pin dir="output" nm="out_signal&lt;3&gt;" no="44" sr="fast"/></ibis>

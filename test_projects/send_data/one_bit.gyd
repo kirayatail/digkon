@@ -3,27 +3,34 @@ Pin Freeze File:  version P.28xd
 9572XL44PC XC9572XL-5-PC44
 clk S:PIN5
 enable S:PIN6
-in_signal S:PIN18
+in_signal<0> S:PIN20
+in_signal<1> S:PIN18
+in_signal<2> S:PIN19
+in_signal<3> S:PIN22
 reset S:PIN39
-enable_lamp S:PIN4
+lmp<0> S:PIN1
+lmp<1> S:PIN2
+lmp<2> S:PIN3
+lmp<3> S:PIN4
 transmitter S:PIN13
 
 
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 nstate<1>/nstate<1>_SETF nstate<0>/nstate<0>_RSTF count_addsub0000<6> transmitter_OBUF/transmitter_OBUF_SETF
-		 nstate<3> nstate<2>/nstate<2>_SETF nstate<0>/nstate<0>_SETF__$INT enable_lamp_OBUF
-		 count<2> transmitter_OBUF/transmitter_OBUF_RSTF nstate<1>/nstate<1>_RSTF count<3>
-		 nstate<3>/nstate<3>_RSTF__$INT nstate<2>/nstate<2>_RSTF count<4> count<5>
-		 count<7> count<8>
-PARTITION FB2_10 x2/pulson_mux0001 en_cmp_eq0000 count<6> en
-		 count_addsub0000<9> count_addsub0000<1> count<0> nstate<0>
-		 count<0>1
-PARTITION FB3_4 x2/state<1> x2/state<0> x1/q levin
-		 transmitter_OBUF x2/nstate<1>/x2/nstate<1>_SETF x2/nstate<0>/x2/nstate<0>_SETF state<3>
-		 state<2> state<1> state<0> puls/puls_RSTF
-		 x2/nstate<1>/x2/nstate<1>_RSTF__$INT x2/nstate<0>/x2/nstate<0>_RSTF__$INT puls/puls_SETF__$INT
-PARTITION FB4_14 x2/nstate<1> x2/nstate<0> puls nstate<2>
-		 nstate<1>
+PARTITION FB1_1 $OpTx$BIN_STEP$73 lmp_0 nstate<4>/nstate<4>_SETF nstate<2>/nstate<2>_SETF
+		 lmp_1 lmp_2 nstate<1>/nstate<1>_SETF lmp_3
+		 nstate<0>/nstate<0>_RSTF x2/nstate<1>/x2/nstate<1>_RSTF__$INT x2/nstate<0>/x2/nstate<0>_RSTF__$INT nstate<3>/nstate<3>_SETF
+		 $OpTx$$OpTx$FX_DC$18_INV$262 puls/puls_SETF__$INT nstate<1>/nstate<1>_RSTF nstate<0>/nstate<0>_SETF__$INT
+		 nstate<3>/nstate<3>_RSTF__$INT transmitter_OBUF/transmitter_OBUF_SETF
+PARTITION FB2_9 x2/state<1> x2/state<0> x1/q levin
+		 state<4> state<3> state<2> state<1>
+		 puls nstate<3>
+PARTITION FB3_5 x2/pulson_mux0001 en count<9> transmitter_OBUF
+		 count<8> count<7> count<6> count<5>
+		 count<4> count<3> count<2> count<1>
+		 count<0> state<0>
+PARTITION FB4_10 x2/nstate<1>/x2/nstate<1>_SETF x2/nstate<0>/x2/nstate<0>_SETF x2/nstate<1> x2/nstate<0>
+		 puls/puls_RSTF nstate<4> nstate<2> nstate<1>
+		 nstate<0>
 

@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.33 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Reading design: test_dip.prj
 
@@ -75,9 +75,9 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/test_dip is now defined in a different file.  It was defined in "//file00.chalmers.se/home/lsofia/DigKon/test/test_dip.vhd", and is now defined in "//file00.chalmers.se/home/lsofia/DigKon/test_projects/input_from_dipswitch/test_dip.vhd".
-WARNING:HDLParsers:3607 - Unit work/test_dip/Behavioral is now defined in a different file.  It was defined in "//file00.chalmers.se/home/lsofia/DigKon/test/test_dip.vhd", and is now defined in "//file00.chalmers.se/home/lsofia/DigKon/test_projects/input_from_dipswitch/test_dip.vhd".
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/test_projects/input_from_dipswitch/test_dip.vhd" in Library work.
+WARNING:HDLParsers:3607 - Unit work/test_dip is now defined in a different file.  It was defined in "//file00.chalmers.se/home/lsofia/DigKon/test_projects/input_from_dipswitch/test_dip.vhd", and is now defined in "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/input_from_dipswitch/test_dip.vhd".
+WARNING:HDLParsers:3607 - Unit work/test_dip/Behavioral is now defined in a different file.  It was defined in "//file00.chalmers.se/home/lsofia/DigKon/test_projects/input_from_dipswitch/test_dip.vhd", and is now defined in "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/input_from_dipswitch/test_dip.vhd".
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/input_from_dipswitch/test_dip.vhd" in Library work.
 Architecture behavioral of Entity test_dip is up to date.
 
 =========================================================================
@@ -100,7 +100,7 @@ Entity <test_dip> analyzed. Unit <test_dip> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <test_dip>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/test_projects/input_from_dipswitch/test_dip.vhd".
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/input_from_dipswitch/test_dip.vhd".
 Unit <test_dip> synthesized.
 
 
@@ -163,12 +163,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 17.51 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.18 secs
  
 --> 
 
-Total memory usage is 244464 kilobytes
+Total memory usage is 244308 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

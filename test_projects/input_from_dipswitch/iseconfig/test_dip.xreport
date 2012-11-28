@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-11-16T12:58:03</DateModified>
+  <DateModified>2012-11-27T17:56:34</DateModified>
   <ModuleName>test_dip</ModuleName>
   <SummaryTimeStamp>2012-11-15T15:22:27</SummaryTimeStamp>
-  <SavedFilePath>Z:/DigKon/test_projects/input_from_dipswitch/iseconfig/test_dip.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/DigKon/test_projects/input_from_dipswitch\</ImplementationReportsDirectory>
+  <SavedFilePath>Z:/DigKon/project/digkon/test_projects/input_from_dipswitch/iseconfig/test_dip.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>Z:/DigKon/project/digkon/test_projects/input_from_dipswitch\</ImplementationReportsDirectory>
   <DateInitialized>2012-11-15T13:51:21</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

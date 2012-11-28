@@ -143,9 +143,9 @@ OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
 NODE | out_signal<3> | 87 | PO | 0 | 0 | test_dip_COPY_0_COPY_0 | NULL | NULL | out_signal<3> | 0 | 6 | OI_OUT
 
 FB_INSTANCE | FOOBAR1_ | test_dip_COPY_0_COPY_0 | 0 | 0 | 0
-FBPIN | 2 | NULL | 0 | out_signal_0_OBUF | 1 | NULL | 0 | 1 | 49152
-FBPIN | 5 | NULL | 0 | out_signal_1_OBUF | 1 | NULL | 0 | 2 | 49152
-FBPIN | 6 | NULL | 0 | out_signal_2_OBUF | 1 | NULL | 0 | 3 | 49152
+FBPIN | 2 | NULL | 0 | out_signal_2_OBUF | 1 | NULL | 0 | 1 | 49152
+FBPIN | 5 | NULL | 0 | out_signal_0_OBUF | 1 | NULL | 0 | 2 | 49152
+FBPIN | 6 | NULL | 0 | out_signal_1_OBUF | 1 | NULL | 0 | 3 | 49152
 FBPIN | 8 | NULL | 0 | out_signal_3_OBUF | 1 | NULL | 0 | 4 | 49152
 
 FB_INSTANCE | FOOBAR2_ | test_dip_COPY_0_COPY_0 | 0 | 0 | 0
@@ -163,7 +163,7 @@ FB_INSTANCE | INPUTPINS_FOOBAR5_ | test_dip_COPY_0_COPY_0 | 0 | 0 | 0
 BUSINFO | DIP<3:0> | 4 | 0 | 0 | dip<0> | 3 | dip<1> | 2 | dip<2> | 1 | dip<3> | 0
 BUSINFO | OUT_SIGNAL<3:0> | 4 | 0 | 1 | out_signal<0> | 3 | out_signal<1> | 2 | out_signal<2> | 1 | out_signal<3> | 0
 
-FB_ORDER_OF_INPUTS | FOOBAR2_ | 2 | dip<2> | 3 | 16 | dip<0> | 1 | 19 | dip<3> | 4 | 20 | dip<1> | 2
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 2 | dip<1> | 3 | 16 | dip<2> | 1 | 19 | dip<3> | 4 | 20 | dip<0> | 2
 
 FB_IMUX_INDEX | FOOBAR2_ | -1 | -1 | 110 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 106 | -1 | -1 | 114 | 108 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
 

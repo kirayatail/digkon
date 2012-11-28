@@ -31,17 +31,15 @@ USE ieee.std_logic_unsigned.all;
 --use UNISIM.VComponents.all;
 
 entity one_bit is
-    Port ( in_signal: in STD_LOGIC;
+    Port ( in_signal: in STD_LOGIC_VECTOR(3 downto 0);
 				reset: in STD_LOGIC;
 				clk: in STD_LOGIC;
 			  enable: in STD_LOGIC;
-			  on_lamp: out STD_LOGIC;
-			  enable_lamp: out STD_LOGIC;
-			  test_lamp: out STD_LOGIC;
-           transmitter : out  STD_LOGIC);
+			  lmp: out STD_LOGIC_VECTOR(3 downto 0);
+			  transmitter : out  STD_LOGIC);
 end one_bit;
 
-architecture Behavioral of one_bit is
+architecture Behavioral of one_bit is	
 
 component lev2pulse is
 	Port ( clk : in STD_LOGIC;
@@ -57,7 +55,7 @@ levin : in STD_LOGIC;
 sync : out STD_LOGIC);
 end component;
 
-type state_type is (start,s0,s1,s2,s3,s4,s5,s6,s7);
+type state_type is (start,s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17);
 signal state, nstate: state_type;
 signal count: STD_LOGIC_VECTOR(9 downto 0);
 signal en: STD_LOGIC;
@@ -66,6 +64,11 @@ begin
 
 p0: process(clk, reset)
 begin
+	
+	
+	if state = start then 
+	
+	end if ;
 if reset = '0' then
 	state <= start;
 elsif clk'event and clk = '1' then
@@ -78,11 +81,10 @@ end process p0;
 p1: process(state, puls,en)
 begin
 if puls = '0' and state = start then
-	enable_lamp <= puls;
+
 	nstate <= s0;
-elsif puls = '1' then 
-	enable_lamp <= puls;
-end if;
+
+else
 case state is
 	when s0 => nstate <= s1; transmitter <= '1';
 	when s1 => nstate <= s2; transmitter <= '0';
@@ -90,10 +92,27 @@ case state is
 	when s3 => nstate <= s4; transmitter <= '0';
 	when s4 => nstate <= s5; transmitter <= '1';
 	when s5 => nstate <= s6; transmitter <= '0';
-	when s6 => nstate <= s7; transmitter <= in_signal;
-	when s7 => nstate <= start; transmitter <= '0';
-	when others =>
+	when s6 => nstate <= s7; transmitter <= '1';
+	when s7 => nstate <= s8; transmitter <= '0';
+	when s8 => nstate <= s9; transmitter <= '1';
+	when s9 => nstate <= s10; transmitter <= '0';
+	when s10 => nstate <= s11; transmitter <= '1';
+	when s11 => nstate <= s12; transmitter <= '0';
+	when s12 => nstate <= s13; transmitter <= '1';
+	
+	
+	when s13 => nstate <= s14; lmp(0) <= in_signal(0); transmitter <= in_signal(0);
+	when s14 => nstate <= s15; lmp(1) <= in_signal(1); transmitter <= in_signal(1);
+	when s15 => nstate <= s16; lmp(2) <= in_signal(2); transmitter <= in_signal(2);
+	when s16 => nstate <= s17; lmp(3) <= in_signal(3); transmitter <= in_signal(3);--in_signal;
+	
+	
+	when s17 => nstate <= start; transmitter <= '0';
+	when others => 
+	
 end case;
+end if;
+
 end process p1;
 
 p2: process(clk, reset)
@@ -101,15 +120,20 @@ begin
 if reset = '0' then
 	count <= "0000000001";
    en <= '0';
-end if;
+
+
+elsif clk'event and clk = '1' then
+en <= '0';
 count <= count +1;
 
 if count = "1111111111" then
 count <= "0000000001";
 en <= '1';
 end if;
+end if;
 
 end process p2;
+
 
 x1: sync port map (clk,reset, enable, levin);
 x2: lev2pulse port map(clk,reset,levin,puls);
