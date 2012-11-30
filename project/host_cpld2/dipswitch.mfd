@@ -1,0 +1,38 @@
+MDF Database:  version 1.0
+MDF_INFO | dipswitch | XC9572XL-5-PC44
+MACROCELL | 1 | 10 | out_signal_0_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | dip<0>
+INPUTP | 1 | 12
+EQ | 1 | 
+   out_signal<0> = dip<0>;
+
+MACROCELL | 1 | 13 | out_signal_1_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | dip<1>
+INPUTP | 1 | 13
+EQ | 1 | 
+   out_signal<1> = dip<1>;
+
+MACROCELL | 1 | 14 | out_signal_2_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | dip<2>
+INPUTP | 1 | 11
+EQ | 1 | 
+   out_signal<2> = dip<2>;
+
+MACROCELL | 1 | 16 | out_signal_3_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | dip<3>
+INPUTP | 1 | 15
+EQ | 1 | 
+   out_signal<3> = dip<3>;
+
+PIN | dip<0> | 64 | 0 | N/A | 12 | 1 | 1 | 10
+PIN | dip<1> | 64 | 0 | N/A | 13 | 1 | 1 | 13
+PIN | dip<2> | 64 | 0 | N/A | 11 | 1 | 1 | 14
+PIN | dip<3> | 64 | 0 | N/A | 15 | 1 | 1 | 16
+PIN | out_signal<0> | 536871040 | 0 | N/A | 3
+PIN | out_signal<1> | 536871040 | 0 | N/A | 7
+PIN | out_signal<2> | 536871040 | 0 | N/A | 9
+PIN | out_signal<3> | 536871040 | 0 | N/A | 10

@@ -1,0 +1,4 @@
+vhdl work "sync.vhd"
+vhdl work "lev_to_pulse.vhd"
+vhdl work "counter.vhd"
+vhdl work "send.vhd"

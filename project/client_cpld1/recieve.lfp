@@ -1,0 +1,5 @@
+# begin LFP file Z:\DigKon\project\digkon\project\client_cpld1\recieve.lfp
+designfile recieve.vhd
+parttype xc9572xl-pc44-5
+bus_delimiter 0;
+set_busdelim_onsave 1;

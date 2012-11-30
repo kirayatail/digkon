@@ -1,0 +1,905 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "send";
+      var device = "XC9572XL";
+      signals = new Array("OpTxBIN_STEP139_SPECSIG","OpTxOpTxFX_DC34_INV346_SPECSIG","en","levin","lmp0_SPECSIG","lmp1_SPECSIG","lmp2_SPECSIG","lmp3_SPECSIG","nstate0_SPECSIG","nstate0nstate<0>_RSTF_SPECSIG","nstate0nstate<0>_SETF__INT_SPECSIG","nstate1_SPECSIG","nstate1nstate<1>_SETF_SPECSIG","nstate2_SPECSIG","nstate2nstate<2>_RSTF__INT_SPECSIG","nstate2nstate<2>_SETF_SPECSIG","nstate3_SPECSIG","nstate3nstate<3>_RSTF__INT_SPECSIG","nstate3nstate<3>_SETF_SPECSIG","nstate4_SPECSIG","nstate4nstate<4>_RSTF__INT_SPECSIG","nstate4nstate<4>_SETF_SPECSIG","pulse","pulsepulse_RSTF_SPECSIG","pulsepulse_SETF__INT_SPECSIG","state0_SPECSIG","state1_SPECSIG","state2_SPECSIG","state3_SPECSIG","state4_SPECSIG","transmitter","transmitter_OBUFtransmitter_OBUF_RSTF_SPECSIG","x1q_SPECSIG","x2nstate0_SPECSIG","x2nstate0x2nstate<0>_RSTF__INT_SPECSIG","x2nstate0x2nstate<0>_SETF_SPECSIG","x2nstate1_SPECSIG","x2nstate1x2nstate<1>_RSTF__INT_SPECSIG","x2nstate1x2nstate<1>_SETF_SPECSIG","x2pulson_mux0001_SPECSIG","x2state0_SPECSIG","x2state1_SPECSIG","x3count0_SPECSIG","x3count1_SPECSIG","x3count2_SPECSIG","x3count3_SPECSIG","x3count4_SPECSIG","x3count5_SPECSIG","x3count6_SPECSIG","x3count7_SPECSIG");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("","","D","D","D","D","D","D","D","","","D","","D","","","D","","","D","","","D","","","D","D","D","D","D","D","","D","D","","","D","","","D","D","D","T","T","T","T","T","T","T","T");
+
+      
+        specSig["in_signal0_SPECSIG"]=new Array("in_signal<0>");
+      
+        specSig["in_signal1_SPECSIG"]=new Array("in_signal<1>");
+      
+        specSig["in_signal2_SPECSIG"]=new Array("in_signal<2>");
+      
+        specSig["in_signal3_SPECSIG"]=new Array("in_signal<3>");
+      
+        specSig["lmp0_SPECSIG"]=new Array("lmp<0>");
+      
+        specSig["lmp1_SPECSIG"]=new Array("lmp<1>");
+      
+        specSig["lmp2_SPECSIG"]=new Array("lmp<2>");
+      
+        specSig["lmp3_SPECSIG"]=new Array("lmp<3>");
+      
+        specSig["GCKI_SPECSIG"]=new Array("GCK/I");
+      
+        specSig["b_SPECSIG"]=new Array("(b)");
+      
+        specSig["nstate3nstate<3>_RSTF__INT_SPECSIG"]=new Array("nstate<3>/nstate<3>_RSTF__$INT");
+      
+        specSig["OpTxBIN_STEP139_SPECSIG"]=new Array("$OpTx$BIN_STEP$139");
+      
+        specSig["transmitter_OBUFtransmitter_OBUF_RSTF_SPECSIG"]=new Array("transmitter_OBUF/transmitter_OBUF_RSTF");
+      
+        specSig["x2state0_SPECSIG"]=new Array("x2/state<0>");
+      
+        specSig["GSRI_SPECSIG"]=new Array("GSR/I");
+      
+        specSig["x2nstate1x2nstate<1>_SETF_SPECSIG"]=new Array("x2/nstate<1>/x2/nstate<1>_SETF");
+      
+        specSig["pulsepulse_RSTF_SPECSIG"]=new Array("pulse/pulse_RSTF");
+      
+        specSig["nstate2nstate<2>_SETF_SPECSIG"]=new Array("nstate<2>/nstate<2>_SETF");
+      
+        specSig["x2nstate0x2nstate<0>_RSTF__INT_SPECSIG"]=new Array("x2/nstate<0>/x2/nstate<0>_RSTF__$INT");
+      
+        specSig["x3count6_SPECSIG"]=new Array("x3/count<6>");
+      
+        specSig["x3count3_SPECSIG"]=new Array("x3/count<3>");
+      
+        specSig["state2_SPECSIG"]=new Array("state<2>");
+      
+        specSig["x2nstate1_SPECSIG"]=new Array("x2/nstate<1>");
+      
+        specSig["nstate4_SPECSIG"]=new Array("nstate<4>");
+      
+        specSig["nstate3_SPECSIG"]=new Array("nstate<3>");
+      
+        specSig["nstate1_SPECSIG"]=new Array("nstate<1>");
+      
+        specSig["nstate4nstate<4>_SETF_SPECSIG"]=new Array("nstate<4>/nstate<4>_SETF");
+      
+        specSig["nstate3nstate<3>_SETF_SPECSIG"]=new Array("nstate<3>/nstate<3>_SETF");
+      
+        specSig["nstate1nstate<1>_SETF_SPECSIG"]=new Array("nstate<1>/nstate<1>_SETF");
+      
+        specSig["nstate0nstate<0>_RSTF_SPECSIG"]=new Array("nstate<0>/nstate<0>_RSTF");
+      
+        specSig["OpTxOpTxFX_DC34_INV346_SPECSIG"]=new Array("$OpTx$$OpTx$FX_DC$34_INV$346");
+      
+        specSig["nstate0nstate<0>_SETF__INT_SPECSIG"]=new Array("nstate<0>/nstate<0>_SETF__$INT");
+      
+        specSig["nstate4nstate<4>_RSTF__INT_SPECSIG"]=new Array("nstate<4>/nstate<4>_RSTF__$INT");
+      
+        specSig["nstate2nstate<2>_RSTF__INT_SPECSIG"]=new Array("nstate<2>/nstate<2>_RSTF__$INT");
+      
+        specSig["state0_SPECSIG"]=new Array("state<0>");
+      
+        specSig["state1_SPECSIG"]=new Array("state<1>");
+      
+        specSig["state3_SPECSIG"]=new Array("state<3>");
+      
+        specSig["state4_SPECSIG"]=new Array("state<4>");
+      
+        specSig["x2state1_SPECSIG"]=new Array("x2/state<1>");
+      
+        specSig["x1q_SPECSIG"]=new Array("x1/q");
+      
+        specSig["x2nstate0x2nstate<0>_SETF_SPECSIG"]=new Array("x2/nstate<0>/x2/nstate<0>_SETF");
+      
+        specSig["x2nstate1x2nstate<1>_RSTF__INT_SPECSIG"]=new Array("x2/nstate<1>/x2/nstate<1>_RSTF__$INT");
+      
+        specSig["pulsepulse_SETF__INT_SPECSIG"]=new Array("pulse/pulse_SETF__$INT");
+      
+        specSig["x2nstate0_SPECSIG"]=new Array("x2/nstate<0>");
+      
+        specSig["x2pulson_mux0001_SPECSIG"]=new Array("x2/pulson_mux0001");
+      
+        specSig["x3count7_SPECSIG"]=new Array("x3/count<7>");
+      
+        specSig["x3count5_SPECSIG"]=new Array("x3/count<5>");
+      
+        specSig["x3count4_SPECSIG"]=new Array("x3/count<4>");
+      
+        specSig["x3count2_SPECSIG"]=new Array("x3/count<2>");
+      
+        specSig["x3count1_SPECSIG"]=new Array("x3/count<1>");
+      
+        specSig["x3count0_SPECSIG"]=new Array("x3/count<0>");
+      
+        specSig["nstate0_SPECSIG"]=new Array("nstate<0>");
+      
+        specSig["nstate2_SPECSIG"]=new Array("nstate<2>");
+      
+            pterms["FB1_1_1"]=new Array("/clk","state1_SPECSIG","/state2_SPECSIG","/nstate2nstate<2>_SETF_SPECSIG","nstate0nstate<0>_RSTF_SPECSIG");
+          
+            pterms["FB1_1_2"]=new Array("/clk","/state4_SPECSIG","state3_SPECSIG","/nstate2nstate<2>_SETF_SPECSIG","/nstate4nstate<4>_SETF_SPECSIG","/nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+            pterms["FB1_1_3"]=new Array("clk","/state4_SPECSIG","state3_SPECSIG","in_signal0_SPECSIG","nstate1nstate<1>_SETF_SPECSIG","nstate2nstate<2>_SETF_SPECSIG","/nstate4nstate<4>_SETF_SPECSIG");
+          
+            pterms["FB1_1_4"]=new Array("/clk","/state0_SPECSIG","state1_SPECSIG","/state2_SPECSIG","/state4_SPECSIG","state3_SPECSIG","/nstate2nstate<2>_SETF_SPECSIG");
+          
+            pterms["FB1_1_5"]=new Array("/clk","/state0_SPECSIG","state1_SPECSIG","/state2_SPECSIG","/state4_SPECSIG","/pulse","/nstate2nstate<2>_SETF_SPECSIG");
+          
+            pterms["FB1_2_1"]=new Array("/state0_SPECSIG","state1_SPECSIG","state2_SPECSIG","/state4_SPECSIG","state3_SPECSIG","/in_signal0_SPECSIG");
+          
+            pterms["FB1_2_2"]=new Array("/state0_SPECSIG","state1_SPECSIG","state2_SPECSIG","/state4_SPECSIG","state3_SPECSIG","in_signal0_SPECSIG");
+          
+            pterms["FB1_2_3"]=new Array("/state1_SPECSIG","/state2_SPECSIG","state4_SPECSIG","/state3_SPECSIG");
+          
+            pterms["FB1_2_4"]=new Array("state0_SPECSIG","state1_SPECSIG","state2_SPECSIG","/state4_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_3_1"]=new Array("/state0_SPECSIG","/state4_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_3_2"]=new Array("/state1_SPECSIG","/state4_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_3_3"]=new Array("/state2_SPECSIG","/state4_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_3_4"]=new Array("state0_SPECSIG","state1_SPECSIG","state2_SPECSIG","/state4_SPECSIG","/state3_SPECSIG");
+          
+            pterms["FB1_4_1"]=new Array("state0_SPECSIG","/state1_SPECSIG","/state4_SPECSIG");
+          
+            pterms["FB1_4_2"]=new Array("/state0_SPECSIG","state1_SPECSIG","/state4_SPECSIG");
+          
+            pterms["FB1_4_3"]=new Array("state0_SPECSIG","/state1_SPECSIG","/state2_SPECSIG","/state3_SPECSIG");
+          
+            pterms["FB1_5_1"]=new Array("state0_SPECSIG","state1_SPECSIG","state2_SPECSIG","/state4_SPECSIG","state3_SPECSIG","/in_signal1_SPECSIG");
+          
+            pterms["FB1_5_2"]=new Array("state0_SPECSIG","state1_SPECSIG","state2_SPECSIG","/state4_SPECSIG","state3_SPECSIG","in_signal1_SPECSIG");
+          
+            pterms["FB1_6_1"]=new Array("/state0_SPECSIG","/state1_SPECSIG","/state2_SPECSIG","state4_SPECSIG","/state3_SPECSIG","/in_signal2_SPECSIG");
+          
+            pterms["FB1_6_2"]=new Array("/state0_SPECSIG","/state1_SPECSIG","/state2_SPECSIG","state4_SPECSIG","/state3_SPECSIG","in_signal2_SPECSIG");
+          
+            pterms["FB1_7_1"]=new Array("state0_SPECSIG","/state4_SPECSIG");
+          
+            pterms["FB1_7_2"]=new Array("state0_SPECSIG","/state1_SPECSIG","/state2_SPECSIG","/state3_SPECSIG");
+          
+            pterms["FB1_7_3"]=new Array("/state0_SPECSIG","state1_SPECSIG","/state2_SPECSIG","state4_SPECSIG","/state3_SPECSIG");
+          
+            pterms["FB1_8_1"]=new Array("state0_SPECSIG","/state1_SPECSIG","/state2_SPECSIG","state4_SPECSIG","/state3_SPECSIG","/in_signal3_SPECSIG");
+          
+            pterms["FB1_8_2"]=new Array("state0_SPECSIG","/state1_SPECSIG","/state2_SPECSIG","state4_SPECSIG","/state3_SPECSIG","in_signal3_SPECSIG");
+          
+            pterms["FB1_9_1"]=new Array("state2_SPECSIG","state4_SPECSIG");
+          
+            pterms["FB1_9_2"]=new Array("state4_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_9_3"]=new Array("state0_SPECSIG","state1_SPECSIG","state4_SPECSIG");
+          
+            pterms["FB1_9_4"]=new Array("/state0_SPECSIG","/state1_SPECSIG","/state2_SPECSIG","/state4_SPECSIG","/state3_SPECSIG","pulse");
+          
+            pterms["FB1_9_5"]=new Array("state4_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_10_1"]=new Array("state0_SPECSIG");
+          
+            pterms["FB1_10_2"]=new Array("state1_SPECSIG","state4_SPECSIG");
+          
+            pterms["FB1_10_3"]=new Array("state2_SPECSIG","state4_SPECSIG");
+          
+            pterms["FB1_10_4"]=new Array("/state1_SPECSIG","/state2_SPECSIG","/state4_SPECSIG","/state3_SPECSIG","pulse");
+          
+            pterms["FB1_10_5"]=new Array("state2_SPECSIG","state4_SPECSIG");
+          
+            pterms["FB1_11_1"]=new Array("state0_SPECSIG","state4_SPECSIG");
+          
+            pterms["FB1_11_2"]=new Array("/state1_SPECSIG","state4_SPECSIG");
+          
+            pterms["FB1_11_3"]=new Array("state4_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_11_4"]=new Array("state0_SPECSIG","state1_SPECSIG","state2_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_11_5"]=new Array("/state0_SPECSIG","/state1_SPECSIG","/state2_SPECSIG","/state3_SPECSIG","pulse");
+          
+            pterms["FB1_12_1"]=new Array("/state1_SPECSIG","state2_SPECSIG");
+          
+            pterms["FB1_12_2"]=new Array("state2_SPECSIG","state4_SPECSIG");
+          
+            pterms["FB1_12_3"]=new Array("state4_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_12_4"]=new Array("state0_SPECSIG","state1_SPECSIG","/state2_SPECSIG");
+          
+            pterms["FB1_12_5"]=new Array("/state0_SPECSIG","/state1_SPECSIG","/state4_SPECSIG","/state3_SPECSIG","pulse");
+          
+            pterms["FB1_13_1"]=new Array("/state0_SPECSIG","state2_SPECSIG");
+          
+            pterms["FB1_13_2"]=new Array("/state0_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_13_3"]=new Array("state2_SPECSIG","state4_SPECSIG");
+          
+            pterms["FB1_13_4"]=new Array("state4_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_13_5"]=new Array("state0_SPECSIG","state1_SPECSIG","state4_SPECSIG");
+          
+            pterms["FB1_14_1"]=new Array("/state1_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_14_2"]=new Array("/state2_SPECSIG","state3_SPECSIG");
+          
+            pterms["FB1_14_3"]=new Array("state0_SPECSIG","state1_SPECSIG","state2_SPECSIG","/state3_SPECSIG");
+          
+            pterms["FB1_14_4"]=new Array("/state0_SPECSIG","/state1_SPECSIG","/state2_SPECSIG","/state4_SPECSIG","pulse");
+          
+            pterms["FB1_14_5"]=new Array("/state0_SPECSIG","/state1_SPECSIG","/state2_SPECSIG","/state4_SPECSIG","/state3_SPECSIG","/pulse");
+          
+            pterms["FB1_15_1"]=new Array("clk","state0_SPECSIG","nstate0nstate<0>_RSTF_SPECSIG","/nstate4nstate<4>_SETF_SPECSIG");
+          
+            pterms["FB1_15_2"]=new Array("/clk","state1_SPECSIG","/state2_SPECSIG","nstate4nstate<4>_SETF_SPECSIG");
+          
+            pterms["FB1_15_3"]=new Array("clk","state0_SPECSIG","state4_SPECSIG","nstate2nstate<2>_SETF_SPECSIG","/nstate4nstate<4>_SETF_SPECSIG");
+          
+            pterms["FB1_15_4"]=new Array("/clk","state1_SPECSIG","/state2_SPECSIG","nstate1nstate<1>_SETF_SPECSIG","/nstate2nstate<2>_SETF_SPECSIG");
+          
+            pterms["FB1_15_5"]=new Array("/clk","state4_SPECSIG","/in_signal2_SPECSIG","/nstate1nstate<1>_SETF_SPECSIG","nstate0nstate<0>_RSTF_SPECSIG");
+          
+            pterms["FB1_16_1"]=new Array("/transmitter","/nstate0nstate<0>_RSTF_SPECSIG","nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+            pterms["FB1_16_2"]=new Array("clk","/state4_SPECSIG","in_signal1_SPECSIG","nstate0nstate<0>_RSTF_SPECSIG");
+          
+            pterms["FB1_16_3"]=new Array("/clk","state4_SPECSIG","/in_signal3_SPECSIG","nstate1nstate<1>_SETF_SPECSIG");
+          
+            pterms["FB1_16_4"]=new Array("/clk","state4_SPECSIG","nstate2nstate<2>_SETF_SPECSIG","/nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+            pterms["FB1_16_5"]=new Array("/clk","/nstate1nstate<1>_SETF_SPECSIG","nstate2nstate<2>_SETF_SPECSIG","nstate0nstate<0>_RSTF_SPECSIG","/nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+            pterms["FB1_17_1"]=new Array("/clk","/state3_SPECSIG","nstate2nstate<2>_SETF_SPECSIG","/nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+            pterms["FB1_17_2"]=new Array("/clk","/in_signal0_SPECSIG","nstate2nstate<2>_SETF_SPECSIG","/nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+            pterms["FB1_17_3"]=new Array("/clk","/state0_SPECSIG","/nstate1nstate<1>_SETF_SPECSIG","nstate2nstate<2>_SETF_SPECSIG","/nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+            pterms["FB1_17_4"]=new Array("/clk","state4_SPECSIG","/in_signal2_SPECSIG","/nstate1nstate<1>_SETF_SPECSIG","nstate4nstate<4>_SETF_SPECSIG");
+          
+            pterms["FB1_17_5"]=new Array("/clk","state2_SPECSIG","/state3_SPECSIG","/nstate1nstate<1>_SETF_SPECSIG","nstate0nstate<0>_RSTF_SPECSIG","/nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+            pterms["FB1_18_1"]=new Array("clk","state0_SPECSIG","nstate1nstate<1>_SETF_SPECSIG","/nstate4nstate<4>_SETF_SPECSIG");
+          
+            pterms["FB1_18_2"]=new Array("clk","/state1_SPECSIG","in_signal3_SPECSIG","nstate0nstate<0>_RSTF_SPECSIG");
+          
+            pterms["FB1_18_3"]=new Array("clk","in_signal2_SPECSIG","nstate4nstate<4>_SETF_SPECSIG","/nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+            pterms["FB1_18_4"]=new Array("/clk","state3_SPECSIG","/in_signal1_SPECSIG","nstate4nstate<4>_SETF_SPECSIG");
+          
+            pterms["FB1_18_5"]=new Array("/clk","nstate2nstate<2>_SETF_SPECSIG","nstate4nstate<4>_SETF_SPECSIG","/nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+            pterms["FB2_7_1"]=new Array("x2nstate1_SPECSIG");
+          
+            pterms["FB2_8_1"]=new Array("x2nstate0_SPECSIG");
+          
+            pterms["FB2_9_1"]=new Array("enable");
+          
+            pterms["FB2_10_1"]=new Array("x1q_SPECSIG");
+          
+            pterms["FB2_11_1"]=new Array("x2state1_SPECSIG","/x2state0_SPECSIG","levin");
+          
+            pterms["FB2_11_2"]=new Array("/x2state1_SPECSIG","x2state0_SPECSIG","/levin");
+          
+            pterms["FB2_12_1"]=new Array("x2state1_SPECSIG","/x2state0_SPECSIG","levin");
+          
+            pterms["FB2_12_2"]=new Array("/x2state1_SPECSIG","/x2state0_SPECSIG","/levin");
+          
+            pterms["FB2_13_1"]=new Array("nstate4_SPECSIG");
+          
+            pterms["FB2_13_2"]=new Array("en");
+          
+            pterms["FB2_14_1"]=new Array("x2state1_SPECSIG","x2state0_SPECSIG","/x2pulson_mux0001_SPECSIG");
+          
+            pterms["FB2_14_2"]=new Array("/x2state1_SPECSIG","x2state0_SPECSIG","/levin");
+          
+            pterms["FB2_14_3"]=new Array("/x2state1_SPECSIG","/x2state0_SPECSIG","/x2pulson_mux0001_SPECSIG");
+          
+            pterms["FB2_15_1"]=new Array("/state0_SPECSIG","state2_SPECSIG","/state4_SPECSIG");
+          
+            pterms["FB2_15_2"]=new Array("/state1_SPECSIG","state2_SPECSIG","/state4_SPECSIG");
+          
+            pterms["FB2_15_3"]=new Array("state0_SPECSIG","state1_SPECSIG","/state2_SPECSIG","/state4_SPECSIG");
+          
+            pterms["FB2_16_1"]=new Array("reset","x2state1_SPECSIG","/x2state0_SPECSIG");
+          
+            pterms["FB2_16_2"]=new Array("reset","/x2state1_SPECSIG","x2state0_SPECSIG");
+          
+            pterms["FB2_16_3"]=new Array("x2state1_SPECSIG","/x2state0_SPECSIG","levin");
+          
+            pterms["FB2_16_4"]=new Array("/x2state1_SPECSIG","x2state0_SPECSIG","/levin");
+          
+            pterms["FB2_17_1"]=new Array("reset","x2state1_SPECSIG","/x2state0_SPECSIG");
+          
+            pterms["FB2_17_2"]=new Array("x2state1_SPECSIG","/x2state0_SPECSIG","levin");
+          
+            pterms["FB2_17_3"]=new Array("/x2state1_SPECSIG","/x2state0_SPECSIG","/levin");
+          
+            pterms["FB2_17_4"]=new Array("reset","/x2state1_SPECSIG","x2state0_SPECSIG","levin");
+          
+            pterms["FB2_18_1"]=new Array("reset","/x2state1_SPECSIG","x2state0_SPECSIG");
+          
+            pterms["FB2_18_2"]=new Array("x2state1_SPECSIG","x2state0_SPECSIG","/x2pulson_mux0001_SPECSIG");
+          
+            pterms["FB2_18_3"]=new Array("/x2state1_SPECSIG","x2state0_SPECSIG","/levin");
+          
+            pterms["FB2_18_4"]=new Array("/x2state1_SPECSIG","/x2state0_SPECSIG","/x2pulson_mux0001_SPECSIG");
+          
+            pterms["FB2_18_5"]=new Array("reset","x2state1_SPECSIG","/x2state0_SPECSIG","/levin");
+          
+            pterms["FB3_4_1"]=new Array("x3count0_SPECSIG","x3count1_SPECSIG","x3count2_SPECSIG","x3count3_SPECSIG","x3count4_SPECSIG","x3count5_SPECSIG","x3count6_SPECSIG");
+          
+            pterms["FB3_5_1"]=new Array("x3count0_SPECSIG","x3count1_SPECSIG","x3count2_SPECSIG","x3count3_SPECSIG","x3count4_SPECSIG","x3count5_SPECSIG");
+          
+            pterms["FB3_6_1"]=new Array("x3count0_SPECSIG","x3count1_SPECSIG","x3count2_SPECSIG","x3count3_SPECSIG","x3count4_SPECSIG");
+          
+            pterms["FB3_7_1"]=new Array("x3count0_SPECSIG","x3count1_SPECSIG","x3count2_SPECSIG","x3count3_SPECSIG");
+          
+            pterms["FB3_8_1"]=new Array("transmitter_OBUFtransmitter_OBUF_RSTF_SPECSIG");
+          
+            pterms["FB3_8_2"]=new Array("/transmitter_OBUFtransmitter_OBUF_RSTF_SPECSIG","/OpTxBIN_STEP139_SPECSIG");
+          
+            pterms["FB3_9_1"]=new Array("x3count0_SPECSIG","x3count1_SPECSIG","x3count2_SPECSIG");
+          
+            pterms["FB3_10_1"]=new Array("x3count0_SPECSIG","x3count1_SPECSIG");
+          
+            pterms["FB3_11_1"]=new Array("x3count0_SPECSIG");
+          
+            pterms["FB3_12_1"]=new Array("x3count0_SPECSIG","x3count1_SPECSIG","x3count2_SPECSIG","x3count3_SPECSIG","x3count4_SPECSIG","x3count5_SPECSIG","x3count6_SPECSIG","x3count7_SPECSIG");
+          
+            pterms["FB3_14_1"]=new Array("x3count0_SPECSIG","x3count1_SPECSIG","x3count2_SPECSIG","x3count3_SPECSIG","x3count4_SPECSIG","x3count5_SPECSIG","x3count6_SPECSIG","x3count7_SPECSIG");
+          
+            pterms["FB3_15_1"]=new Array("nstate3_SPECSIG");
+          
+            pterms["FB3_15_2"]=new Array("en");
+          
+            pterms["FB3_16_1"]=new Array("nstate2_SPECSIG");
+          
+            pterms["FB3_16_2"]=new Array("en");
+          
+            pterms["FB3_17_1"]=new Array("nstate1_SPECSIG");
+          
+            pterms["FB3_17_2"]=new Array("en");
+          
+            pterms["FB3_18_1"]=new Array("nstate0_SPECSIG");
+          
+            pterms["FB3_18_2"]=new Array("en");
+          
+            pterms["FB4_11_1"]=new Array("/x2nstate1x2nstate<1>_RSTF__INT_SPECSIG");
+          
+            pterms["FB4_11_2"]=new Array("x2nstate1x2nstate<1>_SETF_SPECSIG");
+          
+            pterms["FB4_12_1"]=new Array("/x2nstate0x2nstate<0>_RSTF__INT_SPECSIG");
+          
+            pterms["FB4_12_2"]=new Array("x2nstate0x2nstate<0>_SETF_SPECSIG");
+          
+            pterms["FB4_13_1"]=new Array("pulsepulse_RSTF_SPECSIG");
+          
+            pterms["FB4_13_2"]=new Array("/pulsepulse_SETF__INT_SPECSIG");
+          
+            pterms["FB4_14_1"]=new Array("/nstate4nstate<4>_RSTF__INT_SPECSIG");
+          
+            pterms["FB4_14_2"]=new Array("nstate4nstate<4>_SETF_SPECSIG");
+          
+            pterms["FB4_15_1"]=new Array("/nstate3nstate<3>_RSTF__INT_SPECSIG");
+          
+            pterms["FB4_15_2"]=new Array("nstate3nstate<3>_SETF_SPECSIG");
+          
+            pterms["FB4_16_1"]=new Array("/nstate2nstate<2>_RSTF__INT_SPECSIG");
+          
+            pterms["FB4_16_2"]=new Array("nstate2nstate<2>_SETF_SPECSIG");
+          
+            pterms["FB4_17_1"]=new Array("/nstate1nstate<1>_SETF_SPECSIG","/OpTxOpTxFX_DC34_INV346_SPECSIG");
+          
+            pterms["FB4_17_2"]=new Array("nstate1nstate<1>_SETF_SPECSIG");
+          
+            pterms["FB4_18_1"]=new Array("nstate0nstate<0>_RSTF_SPECSIG");
+          
+            pterms["FB4_18_2"]=new Array("/nstate0nstate<0>_SETF__INT_SPECSIG");
+          
+          d2["nstate4nstate<4>_SETF_SPECSIG"]=new Array("FB1_2_3","FB1_2_4");
+          
+            d2imp["nstate4nstate<4>_SETF_SPECSIG"]=new Array("1","1");
+          
+          d2["lmp0_SPECSIG"]=new Array("GND");
+          
+            d2imp["lmp0_SPECSIG"]=new Array("1");
+          
+              clk["lmp0_SPECSIG"]=new Array("GND");
+              
+                clkimp["lmp0_SPECSIG"]=new Array("1");
+              
+              set["lmp0_SPECSIG"]=new Array("FB1_2_2");
+              
+                setimp["lmp0_SPECSIG"]=new Array("1");
+              
+              rst["lmp0_SPECSIG"]=new Array("FB1_2_1");
+              
+                rstimp["lmp0_SPECSIG"]=new Array("1");
+              prld["lmp0_SPECSIG"]="GND";
+          d2["nstate3nstate<3>_SETF_SPECSIG"]=new Array("FB1_3_1","FB1_3_2","FB1_3_3","FB1_3_4");
+          
+            d2imp["nstate3nstate<3>_SETF_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["nstate1nstate<1>_SETF_SPECSIG"]=new Array("FB1_4_1","FB1_4_2","FB1_4_3");
+          
+            d2imp["nstate1nstate<1>_SETF_SPECSIG"]=new Array("1","1","1");
+          
+          d2["lmp1_SPECSIG"]=new Array("GND");
+          
+            d2imp["lmp1_SPECSIG"]=new Array("1");
+          
+              clk["lmp1_SPECSIG"]=new Array("GND");
+              
+                clkimp["lmp1_SPECSIG"]=new Array("1");
+              
+              set["lmp1_SPECSIG"]=new Array("FB1_5_2");
+              
+                setimp["lmp1_SPECSIG"]=new Array("1");
+              
+              rst["lmp1_SPECSIG"]=new Array("FB1_5_1");
+              
+                rstimp["lmp1_SPECSIG"]=new Array("1");
+              prld["lmp1_SPECSIG"]="GND";
+          d2["lmp2_SPECSIG"]=new Array("GND");
+          
+            d2imp["lmp2_SPECSIG"]=new Array("1");
+          
+              clk["lmp2_SPECSIG"]=new Array("GND");
+              
+                clkimp["lmp2_SPECSIG"]=new Array("1");
+              
+              set["lmp2_SPECSIG"]=new Array("FB1_6_2");
+              
+                setimp["lmp2_SPECSIG"]=new Array("1");
+              
+              rst["lmp2_SPECSIG"]=new Array("FB1_6_1");
+              
+                rstimp["lmp2_SPECSIG"]=new Array("1");
+              prld["lmp2_SPECSIG"]="GND";
+          d2["nstate0nstate<0>_RSTF_SPECSIG"]=new Array("FB1_7_1","FB1_7_2","FB1_7_3");
+          
+            d2imp["nstate0nstate<0>_RSTF_SPECSIG"]=new Array("1","1","1");
+          
+          d2["lmp3_SPECSIG"]=new Array("GND");
+          
+            d2imp["lmp3_SPECSIG"]=new Array("1");
+          
+              clk["lmp3_SPECSIG"]=new Array("GND");
+              
+                clkimp["lmp3_SPECSIG"]=new Array("1");
+              
+              set["lmp3_SPECSIG"]=new Array("FB1_8_2");
+              
+                setimp["lmp3_SPECSIG"]=new Array("1");
+              
+              rst["lmp3_SPECSIG"]=new Array("FB1_8_1");
+              
+                rstimp["lmp3_SPECSIG"]=new Array("1");
+              prld["lmp3_SPECSIG"]="GND";
+          d2["OpTxOpTxFX_DC34_INV346_SPECSIG"]=new Array("FB1_9_1","FB1_9_2","FB1_9_3","FB1_9_4");
+          
+            d2imp["OpTxOpTxFX_DC34_INV346_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["nstate0nstate<0>_SETF__INT_SPECSIG"]=new Array("FB1_10_1","FB1_10_2","FB1_10_3","FB1_10_4","FB1_9_2");
+          
+            d2imp["nstate0nstate<0>_SETF__INT_SPECSIG"]=new Array("1","1","1","1","1");
+          
+          d2["nstate4nstate<4>_RSTF__INT_SPECSIG"]=new Array("FB1_11_1","FB1_11_2","FB1_11_3","FB1_11_4","FB1_11_5","FB1_10_3");
+          
+            d2imp["nstate4nstate<4>_RSTF__INT_SPECSIG"]=new Array("1","1","1","1","1","1");
+          
+          d2["nstate2nstate<2>_RSTF__INT_SPECSIG"]=new Array("FB1_13_1","FB1_12_1","FB1_12_2","FB1_12_3","FB1_12_4","FB1_12_5");
+          
+            d2imp["nstate2nstate<2>_RSTF__INT_SPECSIG"]=new Array("1","1","1","1","1","1");
+          
+          d2["nstate3nstate<3>_RSTF__INT_SPECSIG"]=new Array("FB1_14_1","FB1_14_2","FB1_14_3","FB1_14_4","FB1_13_2","FB1_13_3","FB1_13_4","FB1_13_5");
+          
+            d2imp["nstate3nstate<3>_RSTF__INT_SPECSIG"]=new Array("1","1","1","1","1","1","1","1");
+          
+          d2["OpTxBIN_STEP139_SPECSIG"]=new Array("FB1_14_5");
+          
+            d2imp["OpTxBIN_STEP139_SPECSIG"]=new Array("1");
+          
+          d2["transmitter_OBUFtransmitter_OBUF_RSTF_SPECSIG"]=new Array("FB1_17_1","FB1_17_2","FB1_17_3","FB1_17_4","FB1_17_5","FB1_16_1","FB1_16_2","FB1_16_3","FB1_16_4","FB1_16_5","FB1_15_1","FB1_15_2","FB1_15_3","FB1_15_4","FB1_15_5","FB1_18_1","FB1_18_2","FB1_18_3","FB1_18_4","FB1_18_5","FB1_1_1","FB1_1_2","FB1_1_3","FB1_1_4","FB1_1_5");
+          
+            d2imp["transmitter_OBUFtransmitter_OBUF_RSTF_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d2["x2state1_SPECSIG"]=new Array("FB2_7_1");
+          
+            d2imp["x2state1_SPECSIG"]=new Array("1");
+          
+              gblclk["x2state1_SPECSIG"]=new Array("clk");
+            prld["x2state1_SPECSIG"]="GND";
+          d2["x2state0_SPECSIG"]=new Array("FB2_8_1");
+          
+            d2imp["x2state0_SPECSIG"]=new Array("1");
+          
+              gblclk["x2state0_SPECSIG"]=new Array("clk");
+            prld["x2state0_SPECSIG"]="GND";
+          d2["x1q_SPECSIG"]=new Array("FB2_9_1");
+          
+            d2imp["x1q_SPECSIG"]=new Array("1");
+          
+              gblclk["x1q_SPECSIG"]=new Array("clk");
+            prld["x1q_SPECSIG"]="GND";
+          d2["levin"]=new Array("FB2_10_1");
+          
+            d2imp["levin"]=new Array("1");
+          
+              gblclk["levin"]=new Array("clk");
+            prld["levin"]="GND";
+          d2["x2nstate1x2nstate<1>_SETF_SPECSIG"]=new Array("FB2_11_1","FB2_11_2");
+          
+            d2imp["x2nstate1x2nstate<1>_SETF_SPECSIG"]=new Array("1","1");
+          
+          d2["x2nstate0x2nstate<0>_SETF_SPECSIG"]=new Array("FB2_12_1","FB2_12_2");
+          
+            d2imp["x2nstate0x2nstate<0>_SETF_SPECSIG"]=new Array("1","1");
+          
+          d2["state4_SPECSIG"]=new Array("FB2_13_1");
+          
+            d2imp["state4_SPECSIG"]=new Array("1");
+          
+              gblclk["state4_SPECSIG"]=new Array("clk");
+            
+              gblrst["state4_SPECSIG"]=new Array("reset");
+            
+          ce["state4_SPECSIG"]=new Array("FB2_13_2");
+          
+            ceimp["state4_SPECSIG"]=new Array("1");
+          prld["state4_SPECSIG"]="GND";
+          d2["pulsepulse_RSTF_SPECSIG"]=new Array("FB2_14_1","FB2_14_2","FB2_14_3");
+          
+            d2imp["pulsepulse_RSTF_SPECSIG"]=new Array("1","1","1");
+          
+          d2["nstate2nstate<2>_SETF_SPECSIG"]=new Array("FB2_15_1","FB2_15_2","FB2_15_3");
+          
+            d2imp["nstate2nstate<2>_SETF_SPECSIG"]=new Array("1","1","1");
+          
+          d2["x2nstate1x2nstate<1>_RSTF__INT_SPECSIG"]=new Array("FB2_16_1","FB2_16_2","FB2_16_3","FB2_16_4");
+          
+            d2imp["x2nstate1x2nstate<1>_RSTF__INT_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["x2nstate0x2nstate<0>_RSTF__INT_SPECSIG"]=new Array("FB2_17_1","FB2_17_2","FB2_17_3","FB2_17_4");
+          
+            d2imp["x2nstate0x2nstate<0>_RSTF__INT_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["pulsepulse_SETF__INT_SPECSIG"]=new Array("FB2_18_1","FB2_18_2","FB2_18_3","FB2_18_4","FB2_18_5");
+          
+            d2imp["pulsepulse_SETF__INT_SPECSIG"]=new Array("1","1","1","1","1");
+          
+          d2["x3count7_SPECSIG"]=new Array("FB3_4_1");
+          
+            d2imp["x3count7_SPECSIG"]=new Array("1");
+          
+              gblclk["x3count7_SPECSIG"]=new Array("clk");
+            
+              gblrst["x3count7_SPECSIG"]=new Array("reset");
+            prld["x3count7_SPECSIG"]="GND";
+          d2["x3count6_SPECSIG"]=new Array("FB3_5_1");
+          
+            d2imp["x3count6_SPECSIG"]=new Array("1");
+          
+              gblclk["x3count6_SPECSIG"]=new Array("clk");
+            
+              gblrst["x3count6_SPECSIG"]=new Array("reset");
+            prld["x3count6_SPECSIG"]="GND";
+          d2["x3count5_SPECSIG"]=new Array("FB3_6_1");
+          
+            d2imp["x3count5_SPECSIG"]=new Array("1");
+          
+              gblclk["x3count5_SPECSIG"]=new Array("clk");
+            
+              gblrst["x3count5_SPECSIG"]=new Array("reset");
+            prld["x3count5_SPECSIG"]="GND";
+          d2["x3count4_SPECSIG"]=new Array("FB3_7_1");
+          
+            d2imp["x3count4_SPECSIG"]=new Array("1");
+          
+              gblclk["x3count4_SPECSIG"]=new Array("clk");
+            
+              gblrst["x3count4_SPECSIG"]=new Array("reset");
+            prld["x3count4_SPECSIG"]="GND";
+          d2["transmitter"]=new Array("GND");
+          
+            d2imp["transmitter"]=new Array("1");
+          
+              clk["transmitter"]=new Array("GND");
+              
+                clkimp["transmitter"]=new Array("1");
+              
+              set["transmitter"]=new Array("FB3_8_2");
+              
+                setimp["transmitter"]=new Array("1");
+              
+              rst["transmitter"]=new Array("FB3_8_1");
+              
+                rstimp["transmitter"]=new Array("1");
+              prld["transmitter"]="GND";
+          d2["x3count3_SPECSIG"]=new Array("FB3_9_1");
+          
+            d2imp["x3count3_SPECSIG"]=new Array("1");
+          
+              gblclk["x3count3_SPECSIG"]=new Array("clk");
+            
+              gblrst["x3count3_SPECSIG"]=new Array("reset");
+            prld["x3count3_SPECSIG"]="GND";
+          d2["x3count2_SPECSIG"]=new Array("FB3_10_1");
+          
+            d2imp["x3count2_SPECSIG"]=new Array("1");
+          
+              gblclk["x3count2_SPECSIG"]=new Array("clk");
+            
+              gblrst["x3count2_SPECSIG"]=new Array("reset");
+            prld["x3count2_SPECSIG"]="GND";
+          d2["x3count1_SPECSIG"]=new Array("FB3_11_1");
+          
+            d2imp["x3count1_SPECSIG"]=new Array("1");
+          
+              gblclk["x3count1_SPECSIG"]=new Array("clk");
+            
+              gblrst["x3count1_SPECSIG"]=new Array("reset");
+            prld["x3count1_SPECSIG"]="GND";
+          d2["x3count0_SPECSIG"]=new Array("FB3_12_1");
+          
+            d2imp["x3count0_SPECSIG"]=new Array("1");
+          
+              gblclk["x3count0_SPECSIG"]=new Array("clk");
+            
+              gblset["x3count0_SPECSIG"]=new Array("reset");
+            prld["x3count0_SPECSIG"]="GND";
+          d2["x2pulson_mux0001_SPECSIG"]=new Array("GND");
+          
+            d2imp["x2pulson_mux0001_SPECSIG"]=new Array("1");
+          
+              clk["x2pulson_mux0001_SPECSIG"]=new Array("GND");
+              
+                clkimp["x2pulson_mux0001_SPECSIG"]=new Array("1");
+              
+              gblset["x2pulson_mux0001_SPECSIG"]=new Array("reset");
+            prld["x2pulson_mux0001_SPECSIG"]="GND";
+          d2["en"]=new Array("FB3_14_1");
+          
+            d2imp["en"]=new Array("1");
+          
+              gblclk["en"]=new Array("clk");
+            
+              gblrst["en"]=new Array("reset");
+            prld["en"]="GND";
+          d2["state3_SPECSIG"]=new Array("FB3_15_1");
+          
+            d2imp["state3_SPECSIG"]=new Array("1");
+          
+              gblclk["state3_SPECSIG"]=new Array("clk");
+            
+              gblrst["state3_SPECSIG"]=new Array("reset");
+            
+          ce["state3_SPECSIG"]=new Array("FB3_15_2");
+          
+            ceimp["state3_SPECSIG"]=new Array("1");
+          prld["state3_SPECSIG"]="GND";
+          d2["state2_SPECSIG"]=new Array("FB3_16_1");
+          
+            d2imp["state2_SPECSIG"]=new Array("1");
+          
+              gblclk["state2_SPECSIG"]=new Array("clk");
+            
+              gblrst["state2_SPECSIG"]=new Array("reset");
+            
+          ce["state2_SPECSIG"]=new Array("FB3_16_2");
+          
+            ceimp["state2_SPECSIG"]=new Array("1");
+          prld["state2_SPECSIG"]="GND";
+          d2["state1_SPECSIG"]=new Array("FB3_17_1");
+          
+            d2imp["state1_SPECSIG"]=new Array("1");
+          
+              gblclk["state1_SPECSIG"]=new Array("clk");
+            
+              gblrst["state1_SPECSIG"]=new Array("reset");
+            
+          ce["state1_SPECSIG"]=new Array("FB3_17_2");
+          
+            ceimp["state1_SPECSIG"]=new Array("1");
+          prld["state1_SPECSIG"]="GND";
+          d2["state0_SPECSIG"]=new Array("FB3_18_1");
+          
+            d2imp["state0_SPECSIG"]=new Array("1");
+          
+              gblclk["state0_SPECSIG"]=new Array("clk");
+            
+              gblrst["state0_SPECSIG"]=new Array("reset");
+            
+          ce["state0_SPECSIG"]=new Array("FB3_18_2");
+          
+            ceimp["state0_SPECSIG"]=new Array("1");
+          prld["state0_SPECSIG"]="GND";
+          d2["x2nstate1_SPECSIG"]=new Array("GND");
+          
+            d2imp["x2nstate1_SPECSIG"]=new Array("1");
+          
+              clk["x2nstate1_SPECSIG"]=new Array("GND");
+              
+                clkimp["x2nstate1_SPECSIG"]=new Array("1");
+              
+              set["x2nstate1_SPECSIG"]=new Array("FB4_11_2");
+              
+                setimp["x2nstate1_SPECSIG"]=new Array("1");
+              
+              rst["x2nstate1_SPECSIG"]=new Array("FB4_11_1");
+              
+                rstimp["x2nstate1_SPECSIG"]=new Array("1");
+              prld["x2nstate1_SPECSIG"]="GND";
+          d2["x2nstate0_SPECSIG"]=new Array("GND");
+          
+            d2imp["x2nstate0_SPECSIG"]=new Array("1");
+          
+              clk["x2nstate0_SPECSIG"]=new Array("GND");
+              
+                clkimp["x2nstate0_SPECSIG"]=new Array("1");
+              
+              set["x2nstate0_SPECSIG"]=new Array("FB4_12_2");
+              
+                setimp["x2nstate0_SPECSIG"]=new Array("1");
+              
+              rst["x2nstate0_SPECSIG"]=new Array("FB4_12_1");
+              
+                rstimp["x2nstate0_SPECSIG"]=new Array("1");
+              prld["x2nstate0_SPECSIG"]="GND";
+          d2["pulse"]=new Array("GND");
+          
+            d2imp["pulse"]=new Array("1");
+          
+              clk["pulse"]=new Array("GND");
+              
+                clkimp["pulse"]=new Array("1");
+              
+              set["pulse"]=new Array("FB4_13_2");
+              
+                setimp["pulse"]=new Array("1");
+              
+              rst["pulse"]=new Array("FB4_13_1");
+              
+                rstimp["pulse"]=new Array("1");
+              prld["pulse"]="GND";
+          d2["nstate4_SPECSIG"]=new Array("GND");
+          
+            d2imp["nstate4_SPECSIG"]=new Array("1");
+          
+              clk["nstate4_SPECSIG"]=new Array("GND");
+              
+                clkimp["nstate4_SPECSIG"]=new Array("1");
+              
+              set["nstate4_SPECSIG"]=new Array("FB4_14_2");
+              
+                setimp["nstate4_SPECSIG"]=new Array("1");
+              
+              rst["nstate4_SPECSIG"]=new Array("FB4_14_1");
+              
+                rstimp["nstate4_SPECSIG"]=new Array("1");
+              prld["nstate4_SPECSIG"]="GND";
+          d2["nstate3_SPECSIG"]=new Array("GND");
+          
+            d2imp["nstate3_SPECSIG"]=new Array("1");
+          
+              clk["nstate3_SPECSIG"]=new Array("GND");
+              
+                clkimp["nstate3_SPECSIG"]=new Array("1");
+              
+              set["nstate3_SPECSIG"]=new Array("FB4_15_2");
+              
+                setimp["nstate3_SPECSIG"]=new Array("1");
+              
+              rst["nstate3_SPECSIG"]=new Array("FB4_15_1");
+              
+                rstimp["nstate3_SPECSIG"]=new Array("1");
+              prld["nstate3_SPECSIG"]="GND";
+          d2["nstate2_SPECSIG"]=new Array("GND");
+          
+            d2imp["nstate2_SPECSIG"]=new Array("1");
+          
+              clk["nstate2_SPECSIG"]=new Array("GND");
+              
+                clkimp["nstate2_SPECSIG"]=new Array("1");
+              
+              set["nstate2_SPECSIG"]=new Array("FB4_16_2");
+              
+                setimp["nstate2_SPECSIG"]=new Array("1");
+              
+              rst["nstate2_SPECSIG"]=new Array("FB4_16_1");
+              
+                rstimp["nstate2_SPECSIG"]=new Array("1");
+              prld["nstate2_SPECSIG"]="GND";
+          d2["nstate1_SPECSIG"]=new Array("GND");
+          
+            d2imp["nstate1_SPECSIG"]=new Array("1");
+          
+              clk["nstate1_SPECSIG"]=new Array("GND");
+              
+                clkimp["nstate1_SPECSIG"]=new Array("1");
+              
+              set["nstate1_SPECSIG"]=new Array("FB4_17_2");
+              
+                setimp["nstate1_SPECSIG"]=new Array("1");
+              
+              rst["nstate1_SPECSIG"]=new Array("FB4_17_1");
+              
+                rstimp["nstate1_SPECSIG"]=new Array("1");
+              prld["nstate1_SPECSIG"]="GND";
+          d2["nstate0_SPECSIG"]=new Array("GND");
+          
+            d2imp["nstate0_SPECSIG"]=new Array("1");
+          
+              clk["nstate0_SPECSIG"]=new Array("GND");
+              
+                clkimp["nstate0_SPECSIG"]=new Array("1");
+              
+              set["nstate0_SPECSIG"]=new Array("FB4_18_2");
+              
+                setimp["nstate0_SPECSIG"]=new Array("1");
+              
+              rst["nstate0_SPECSIG"]=new Array("FB4_18_1");
+              
+                rstimp["nstate0_SPECSIG"]=new Array("1");
+              prld["nstate0_SPECSIG"]="GND";
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>
