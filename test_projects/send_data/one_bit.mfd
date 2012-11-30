@@ -1,6 +1,6 @@
 MDF Database:  version 1.0
 MDF_INFO | one_bit | XC9572XL-5-PC44
-MACROCELL | 1 | 15 | state<1>
+MACROCELL | 2 | 16 | state<1>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 16 | 0 | 1 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 17 | 0 | 2 | 0 | 13 | 0 | 8 | 0 | 6 | 0 | 14 | 0 | 3 | 0 | 10 | 0 | 11 | 0 | 16 | 0 | 0 | 0 | 15
 INPUTS | 2 | nstate<1>  | en
@@ -12,7 +12,7 @@ EQ | 4 |
    state<1>.CE = en;
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 1 | 14 | state<2>
+MACROCELL | 2 | 15 | state<2>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 16 | 0 | 1 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 17 | 0 | 2 | 0 | 14 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 3 | 0 | 12 | 0 | 11 | 0 | 16 | 0 | 0 | 0 | 15
 INPUTS | 2 | nstate<2>  | en
@@ -36,11 +36,11 @@ EQ | 4 |
    state<0>.CE = en;
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 1 | 12 | state<4>
+MACROCELL | 1 | 15 | state<4>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 17 | 0 | 1 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 17 | 0 | 2 | 0 | 13 | 0 | 8 | 0 | 6 | 0 | 14 | 0 | 3 | 0 | 12 | 0 | 11 | 0 | 16 | 0 | 0 | 0 | 10 | 0 | 15
 INPUTS | 2 | nstate<4>  | en
-INPUTMC | 2 | 3 | 14 | 2 | 5
+INPUTMC | 2 | 3 | 13 | 2 | 5
 EQ | 4 | 
    state<4>.D = nstate<4>;
    state<4>.CLK = clk;	// GCK
@@ -48,11 +48,11 @@ EQ | 4 |
    state<4>.CE = en;
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 1 | 13 | state<3>
+MACROCELL | 1 | 16 | state<3>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 15 | 0 | 1 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 17 | 0 | 2 | 0 | 14 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 10 | 0 | 11 | 0 | 16 | 0 | 0 | 0 | 15
 INPUTS | 2 | nstate<3>  | en
-INPUTMC | 2 | 1 | 17 | 2 | 5
+INPUTMC | 2 | 3 | 14 | 2 | 5
 EQ | 4 | 
    state<3>.D = nstate<3>;
    state<3>.CLK = clk;	// GCK
@@ -62,79 +62,77 @@ GLOBALS | 2 | 2 | clk | 4 | reset
 
 MACROCELL | 2 | 5 | en
 ATTRIBUTES | 8561408 | 0
-OUTPUTMC | 5 | 1 | 15 | 1 | 14 | 2 | 17 | 1 | 12 | 1 | 13
-INPUTS | 10 | count<0>  | count<1>  | count<2>  | count<3>  | count<4>  | count<5>  | count<6>  | count<7>  | count<8>  | count<9>
-INPUTMC | 10 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
-EQ | 5 | 
+OUTPUTMC | 5 | 2 | 16 | 2 | 15 | 2 | 17 | 1 | 15 | 1 | 16
+INPUTS | 8 | count<0>  | count<1>  | count<2>  | count<3>  | count<4>  | count<5>  | count<6>  | count<7>
+INPUTMC | 8 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
+EQ | 4 | 
    en.D = count<0> & count<1> & count<2> & count<3> & 
-	count<4> & count<5> & count<6> & count<7> & count<8> & 
-	count<9>;
+	count<4> & count<5> & count<6> & count<7>;
    en.CLK = clk;	// GCK
    !en.AR = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 16 | count<0>
+MACROCELL | 2 | 14 | count<0>
 ATTRIBUTES | 4363008 | 0
-OUTPUTMC | 11 | 2 | 5 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
-INPUTS | 10 | count<0>  | count<1>  | count<2>  | count<3>  | count<4>  | count<5>  | count<6>  | count<7>  | count<8>  | count<9>
-INPUTMC | 10 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
-EQ | 5 | 
+OUTPUTMC | 9 | 2 | 5 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
+INPUTS | 8 | count<0>  | count<1>  | count<2>  | count<3>  | count<4>  | count<5>  | count<6>  | count<7>
+INPUTMC | 8 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
+EQ | 4 | 
    !count<0>.T = count<0> & count<1> & count<2> & count<3> & 
-	count<4> & count<5> & count<6> & count<7> & count<8> & 
-	count<9>;
+	count<4> & count<5> & count<6> & count<7>;
    count<0>.CLK = clk;	// GCK
    !count<0>.AP = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 2 | 15 | count<1>
+MACROCELL | 2 | 13 | count<1>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 10 | 2 | 5 | 2 | 16 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
+OUTPUTMC | 8 | 2 | 5 | 2 | 14 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
 INPUTS | 1 | count<0>
-INPUTMC | 1 | 2 | 16
+INPUTMC | 1 | 2 | 14
 EQ | 3 | 
    count<1>.T = count<0>;
    count<1>.CLK = clk;	// GCK
    !count<1>.AR = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 14 | count<2>
+MACROCELL | 2 | 12 | count<2>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 9 | 2 | 5 | 2 | 16 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
+OUTPUTMC | 7 | 2 | 5 | 2 | 14 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
 INPUTS | 2 | count<0>  | count<1>
-INPUTMC | 2 | 2 | 16 | 2 | 15
+INPUTMC | 2 | 2 | 14 | 2 | 13
 EQ | 3 | 
    count<2>.T = count<0> & count<1>;
    count<2>.CLK = clk;	// GCK
    !count<2>.AR = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 13 | count<3>
+MACROCELL | 2 | 11 | count<3>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 8 | 2 | 5 | 2 | 16 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
+OUTPUTMC | 6 | 2 | 5 | 2 | 14 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
 INPUTS | 3 | count<0>  | count<1>  | count<2>
-INPUTMC | 3 | 2 | 16 | 2 | 15 | 2 | 14
+INPUTMC | 3 | 2 | 14 | 2 | 13 | 2 | 12
 EQ | 3 | 
    count<3>.T = count<0> & count<1> & count<2>;
    count<3>.CLK = clk;	// GCK
    !count<3>.AR = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 12 | count<4>
+MACROCELL | 2 | 10 | count<4>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 7 | 2 | 5 | 2 | 16 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
+OUTPUTMC | 5 | 2 | 5 | 2 | 14 | 2 | 9 | 2 | 8 | 2 | 6
 INPUTS | 4 | count<0>  | count<1>  | count<2>  | count<3>
-INPUTMC | 4 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13
+INPUTMC | 4 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11
 EQ | 3 | 
    count<4>.T = count<0> & count<1> & count<2> & count<3>;
    count<4>.CLK = clk;	// GCK
    !count<4>.AR = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 11 | count<5>
+MACROCELL | 2 | 9 | count<5>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 6 | 2 | 5 | 2 | 16 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6
+OUTPUTMC | 4 | 2 | 5 | 2 | 14 | 2 | 8 | 2 | 6
 INPUTS | 5 | count<0>  | count<1>  | count<2>  | count<3>  | count<4>
-INPUTMC | 5 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12
+INPUTMC | 5 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10
 EQ | 4 | 
    count<5>.T = count<0> & count<1> & count<2> & count<3> & 
 	count<4>;
@@ -142,11 +140,11 @@ EQ | 4 |
    !count<5>.AR = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 10 | count<6>
+MACROCELL | 2 | 8 | count<6>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 5 | 2 | 5 | 2 | 16 | 2 | 9 | 2 | 8 | 2 | 6
+OUTPUTMC | 3 | 2 | 5 | 2 | 14 | 2 | 6
 INPUTS | 6 | count<0>  | count<1>  | count<2>  | count<3>  | count<4>  | count<5>
-INPUTMC | 6 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11
+INPUTMC | 6 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9
 EQ | 4 | 
    count<6>.T = count<0> & count<1> & count<2> & count<3> & 
 	count<4> & count<5>;
@@ -154,11 +152,11 @@ EQ | 4 |
    !count<6>.AR = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 9 | count<7>
+MACROCELL | 2 | 6 | count<7>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 4 | 2 | 5 | 2 | 16 | 2 | 8 | 2 | 6
+OUTPUTMC | 2 | 2 | 5 | 2 | 14
 INPUTS | 7 | count<0>  | count<1>  | count<2>  | count<3>  | count<4>  | count<5>  | count<6>
-INPUTMC | 7 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10
+INPUTMC | 7 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8
 EQ | 4 | 
    count<7>.T = count<0> & count<1> & count<2> & count<3> & 
 	count<4> & count<5> & count<6>;
@@ -166,35 +164,11 @@ EQ | 4 |
    !count<7>.AR = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 8 | count<8>
-ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 3 | 2 | 5 | 2 | 16 | 2 | 6
-INPUTS | 8 | count<0>  | count<1>  | count<2>  | count<3>  | count<4>  | count<5>  | count<6>  | count<7>
-INPUTMC | 8 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9
-EQ | 4 | 
-   count<8>.T = count<0> & count<1> & count<2> & count<3> & 
-	count<4> & count<5> & count<6> & count<7>;
-   count<8>.CLK = clk;	// GCK
-   !count<8>.AR = reset;	// GSR
-GLOBALS | 2 | 2 | clk | 4 | reset
-
-MACROCELL | 2 | 6 | count<9>
-ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 2 | 2 | 5 | 2 | 16
-INPUTS | 9 | count<0>  | count<1>  | count<2>  | count<3>  | count<4>  | count<5>  | count<6>  | count<7>  | count<8>
-INPUTMC | 9 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8
-EQ | 4 | 
-   count<9>.T = count<0> & count<1> & count<2> & count<3> & 
-	count<4> & count<5> & count<6> & count<7> & count<8>;
-   count<9>.CLK = clk;	// GCK
-   !count<9>.AR = reset;	// GSR
-GLOBALS | 2 | 2 | clk | 4 | reset
-
 MACROCELL | 0 | 1 | lmp_0
 ATTRIBUTES | 8651698 | 0
 OUTPUTMC | 1 | 0 | 0
 INPUTS | 7 | state<1>  | state<2>  | state<0>  | state<4>  | state<3>  | in_signal<0>  | puls
-INPUTMC | 6 | 1 | 15 | 1 | 14 | 2 | 17 | 1 | 12 | 1 | 13 | 1 | 16
+INPUTMC | 6 | 2 | 16 | 2 | 15 | 2 | 17 | 1 | 15 | 1 | 16 | 3 | 12
 INPUTP | 1 | 50
 EXPORTS | 1 | 0 | 0
 EQ | 8 | 
@@ -210,7 +184,7 @@ EQ | 8 |
 MACROCELL | 0 | 4 | lmp_1
 ATTRIBUTES | 8651698 | 0
 INPUTS | 6 | state<1>  | state<2>  | state<0>  | state<4>  | state<3>  | in_signal<1>
-INPUTMC | 5 | 1 | 15 | 1 | 14 | 2 | 17 | 1 | 12 | 1 | 13
+INPUTMC | 5 | 2 | 16 | 2 | 15 | 2 | 17 | 1 | 15 | 1 | 16
 INPUTP | 1 | 46
 EQ | 6 | 
    lmp<1>.D = Gnd;
@@ -223,7 +197,7 @@ EQ | 6 |
 MACROCELL | 0 | 5 | lmp_2
 ATTRIBUTES | 8651698 | 0
 INPUTS | 6 | state<1>  | state<2>  | state<0>  | state<4>  | state<3>  | in_signal<2>
-INPUTMC | 5 | 1 | 15 | 1 | 14 | 2 | 17 | 1 | 12 | 1 | 13
+INPUTMC | 5 | 2 | 16 | 2 | 15 | 2 | 17 | 1 | 15 | 1 | 16
 INPUTP | 1 | 49
 EQ | 6 | 
    lmp<2>.D = Gnd;
@@ -236,7 +210,7 @@ EQ | 6 |
 MACROCELL | 0 | 7 | lmp_3
 ATTRIBUTES | 8651698 | 0
 INPUTS | 6 | state<1>  | state<2>  | state<0>  | state<4>  | state<3>  | in_signal<3>
-INPUTMC | 5 | 1 | 15 | 1 | 14 | 2 | 17 | 1 | 12 | 1 | 13
+INPUTMC | 5 | 2 | 16 | 2 | 15 | 2 | 17 | 1 | 15 | 1 | 16
 INPUTP | 1 | 52
 EQ | 6 | 
    lmp<3>.D = Gnd;
@@ -258,41 +232,41 @@ EQ | 5 |
    transmitter.AR = !transmitter_OBUF/transmitter_OBUF_SETF & 
 	!$OpTx$BIN_STEP$73;
 
-MACROCELL | 1 | 8 | x2/state<1>
+MACROCELL | 1 | 9 | x2/state<1>
 ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 7 | 0 | 13 | 3 | 13 | 3 | 10 | 0 | 10 | 3 | 9 | 0 | 9 | 0 | 12
+OUTPUTMC | 7 | 0 | 13 | 1 | 17 | 1 | 14 | 0 | 10 | 1 | 13 | 0 | 9 | 0 | 12
 INPUTS | 1 | x2/nstate<1>
-INPUTMC | 1 | 3 | 11
+INPUTMC | 1 | 3 | 10
 EQ | 2 | 
    x2/state<1>.D = x2/nstate<1>;
    x2/state<1>.CLK = clk;	// GCK
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 1 | 9 | x2/state<0>
+MACROCELL | 1 | 10 | x2/state<0>
 ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 7 | 0 | 13 | 3 | 13 | 3 | 10 | 0 | 10 | 3 | 9 | 0 | 9 | 0 | 12
+OUTPUTMC | 7 | 0 | 13 | 1 | 17 | 1 | 14 | 0 | 10 | 1 | 13 | 0 | 9 | 0 | 12
 INPUTS | 1 | x2/nstate<0>
-INPUTMC | 1 | 3 | 12
+INPUTMC | 1 | 3 | 11
 EQ | 2 | 
    x2/state<0>.D = x2/nstate<0>;
    x2/state<0>.CLK = clk;	// GCK
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 1 | 11 | levin
+MACROCELL | 1 | 12 | levin
 ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 7 | 0 | 13 | 3 | 13 | 3 | 10 | 0 | 10 | 3 | 9 | 0 | 9 | 0 | 12
+OUTPUTMC | 7 | 0 | 13 | 1 | 17 | 1 | 14 | 0 | 10 | 1 | 13 | 0 | 9 | 0 | 12
 INPUTS | 1 | x1/q
-INPUTMC | 1 | 1 | 10
+INPUTMC | 1 | 1 | 11
 EQ | 2 | 
    levin.D = x1/q;
    levin.CLK = clk;	// GCK
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 1 | 16 | puls
+MACROCELL | 3 | 12 | puls
 ATTRIBUTES | 8520624 | 0
 OUTPUTMC | 6 | 0 | 1 | 0 | 16 | 0 | 14 | 0 | 13 | 0 | 11 | 0 | 0
 INPUTS | 2 | puls/puls_SETF__$INT  | puls/puls_RSTF
-INPUTMC | 2 | 0 | 13 | 3 | 13
+INPUTMC | 2 | 0 | 13 | 1 | 17
 EQ | 4 | 
    puls.D = Gnd;
    puls.CLK = Gnd;
@@ -312,7 +286,7 @@ EQ | 4 |
 
 MACROCELL | 3 | 16 | nstate<1>
 ATTRIBUTES | 8520624 | 0
-OUTPUTMC | 1 | 1 | 15
+OUTPUTMC | 1 | 2 | 16
 INPUTS | 2 | nstate<1>/nstate<1>_SETF  | nstate<1>/nstate<1>_RSTF
 INPUTMC | 2 | 0 | 6 | 0 | 14
 EQ | 4 | 
@@ -323,7 +297,7 @@ EQ | 4 |
 
 MACROCELL | 3 | 15 | nstate<2>
 ATTRIBUTES | 8520624 | 0
-OUTPUTMC | 1 | 1 | 14
+OUTPUTMC | 1 | 2 | 15
 INPUTS | 2 | nstate<2>/nstate<2>_SETF  | $OpTx$$OpTx$FX_DC$18_INV$262
 INPUTMC | 2 | 0 | 3 | 0 | 12
 EQ | 5 | 
@@ -333,9 +307,9 @@ EQ | 5 |
    nstate<2>.AR = !nstate<2>/nstate<2>_SETF & 
 	!$OpTx$$OpTx$FX_DC$18_INV$262;
 
-MACROCELL | 1 | 17 | nstate<3>
+MACROCELL | 3 | 14 | nstate<3>
 ATTRIBUTES | 8520624 | 0
-OUTPUTMC | 1 | 1 | 13
+OUTPUTMC | 1 | 1 | 16
 INPUTS | 2 | nstate<3>/nstate<3>_SETF  | nstate<3>/nstate<3>_RSTF__$INT
 INPUTMC | 2 | 0 | 11 | 0 | 16
 EQ | 4 | 
@@ -344,9 +318,9 @@ EQ | 4 |
    nstate<3>.AP = nstate<3>/nstate<3>_SETF;
    nstate<3>.AR = !nstate<3>/nstate<3>_RSTF__$INT;
 
-MACROCELL | 3 | 14 | nstate<4>
+MACROCELL | 3 | 13 | nstate<4>
 ATTRIBUTES | 8520624 | 0
-OUTPUTMC | 1 | 1 | 12
+OUTPUTMC | 1 | 1 | 15
 INPUTS | 2 | nstate<4>/nstate<4>_SETF  | $OpTx$$OpTx$FX_DC$18_INV$262
 INPUTMC | 2 | 0 | 2 | 0 | 12
 EQ | 5 | 
@@ -356,31 +330,31 @@ EQ | 5 |
    nstate<4>.AR = !$OpTx$$OpTx$FX_DC$18_INV$262 & 
 	!nstate<4>/nstate<4>_SETF;
 
-MACROCELL | 3 | 12 | x2/nstate<0>
+MACROCELL | 3 | 11 | x2/nstate<0>
 ATTRIBUTES | 8520624 | 0
-OUTPUTMC | 1 | 1 | 9
+OUTPUTMC | 1 | 1 | 10
 INPUTS | 2 | x2/nstate<0>/x2/nstate<0>_SETF  | x2/nstate<0>/x2/nstate<0>_RSTF__$INT
-INPUTMC | 2 | 3 | 10 | 0 | 10
+INPUTMC | 2 | 1 | 14 | 0 | 10
 EQ | 4 | 
    x2/nstate<0>.D = Gnd;
    x2/nstate<0>.CLK = Gnd;
    x2/nstate<0>.AP = x2/nstate<0>/x2/nstate<0>_SETF;
    x2/nstate<0>.AR = !x2/nstate<0>/x2/nstate<0>_RSTF__$INT;
 
-MACROCELL | 3 | 11 | x2/nstate<1>
+MACROCELL | 3 | 10 | x2/nstate<1>
 ATTRIBUTES | 8520624 | 0
-OUTPUTMC | 1 | 1 | 8
+OUTPUTMC | 1 | 1 | 9
 INPUTS | 2 | x2/nstate<1>/x2/nstate<1>_SETF  | x2/nstate<1>/x2/nstate<1>_RSTF__$INT
-INPUTMC | 2 | 3 | 9 | 0 | 9
+INPUTMC | 2 | 1 | 13 | 0 | 9
 EQ | 4 | 
    x2/nstate<1>.D = Gnd;
    x2/nstate<1>.CLK = Gnd;
    x2/nstate<1>.AP = x2/nstate<1>/x2/nstate<1>_SETF;
    x2/nstate<1>.AR = !x2/nstate<1>/x2/nstate<1>_RSTF__$INT;
 
-MACROCELL | 1 | 10 | x1/q
+MACROCELL | 1 | 11 | x1/q
 ATTRIBUTES | 8553216 | 0
-OUTPUTMC | 1 | 1 | 11
+OUTPUTMC | 1 | 1 | 12
 INPUTS | 1 | enable
 INPUTP | 1 | 21
 EQ | 2 | 
@@ -390,7 +364,7 @@ GLOBALS | 1 | 2 | clk
 
 MACROCELL | 2 | 4 | x2/pulson_mux0001
 ATTRIBUTES | 8524576 | 0
-OUTPUTMC | 2 | 0 | 12 | 3 | 13
+OUTPUTMC | 2 | 0 | 12 | 1 | 17
 INPUTS | 0
 EQ | 3 | 
    x2/pulson_mux0001.D = Gnd;
@@ -402,7 +376,7 @@ MACROCELL | 0 | 17 | transmitter_OBUF/transmitter_OBUF_SETF
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 2 | 7
 INPUTS | 9 | state<1>  | state<0>  | state<4>  | state<2>  | state<3>  | in_signal<1>  | transmitter  | $OpTx$BIN_STEP$73.EXP  | nstate<3>/nstate<3>_RSTF__$INT.EXP
-INPUTMC | 8 | 1 | 15 | 2 | 17 | 1 | 12 | 1 | 14 | 1 | 13 | 2 | 7 | 0 | 0 | 0 | 16
+INPUTMC | 8 | 2 | 16 | 2 | 17 | 1 | 15 | 2 | 15 | 1 | 16 | 2 | 7 | 0 | 0 | 0 | 16
 INPUTP | 1 | 46
 IMPORTS | 2 | 0 | 0 | 0 | 16
 EQ | 17 | 
@@ -428,7 +402,7 @@ MACROCELL | 0 | 0 | $OpTx$BIN_STEP$73
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 2 | 2 | 7 | 0 | 17
 INPUTS | 11 | state<1>  | state<2>  | state<0>  | transmitter  | state<3>  | in_signal<3>  | state<4>  | in_signal<0>  | in_signal<2>  | puls  | lmp_0.EXP
-INPUTMC | 8 | 1 | 15 | 1 | 14 | 2 | 17 | 2 | 7 | 1 | 13 | 1 | 12 | 1 | 16 | 0 | 1
+INPUTMC | 8 | 2 | 16 | 2 | 15 | 2 | 17 | 2 | 7 | 1 | 16 | 1 | 15 | 3 | 12 | 0 | 1
 INPUTP | 3 | 52 | 50 | 49
 EXPORTS | 1 | 0 | 17
 IMPORTS | 1 | 0 | 1
@@ -448,9 +422,9 @@ EQ | 12 |
 
 MACROCELL | 0 | 13 | puls/puls_SETF__$INT
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 1 | 16 | 0 | 14
+OUTPUTMC | 2 | 3 | 12 | 0 | 14
 INPUTS | 10 | x2/state<1>  | x2/state<0>  | levin  | state<1>  | state<2>  | state<0>  | state<4>  | state<3>  | puls  | $OpTx$$OpTx$FX_DC$18_INV$262.EXP
-INPUTMC | 10 | 1 | 8 | 1 | 9 | 1 | 11 | 1 | 15 | 1 | 14 | 2 | 17 | 1 | 12 | 1 | 13 | 1 | 16 | 0 | 12
+INPUTMC | 10 | 1 | 9 | 1 | 10 | 1 | 12 | 2 | 16 | 2 | 15 | 2 | 17 | 1 | 15 | 1 | 16 | 3 | 12 | 0 | 12
 EXPORTS | 1 | 0 | 14
 IMPORTS | 1 | 0 | 12
 EQ | 10 | 
@@ -465,11 +439,11 @@ EQ | 10 |
 	# !state<1> & !state<0> & !state<4> & !puls
 	# !state<2> & !state<0> & state<4> & !state<3>
 
-MACROCELL | 3 | 13 | puls/puls_RSTF
+MACROCELL | 1 | 17 | puls/puls_RSTF
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 1 | 16
+OUTPUTMC | 1 | 3 | 12
 INPUTS | 4 | x2/state<1>  | x2/state<0>  | levin  | x2/pulson_mux0001
-INPUTMC | 4 | 1 | 8 | 1 | 9 | 1 | 11 | 2 | 4
+INPUTMC | 4 | 1 | 9 | 1 | 10 | 1 | 12 | 2 | 4
 EQ | 3 | 
    puls/puls_RSTF = x2/state<1> & x2/state<0> & !x2/pulson_mux0001
 	# !x2/state<1> & x2/state<0> & !levin
@@ -479,7 +453,7 @@ MACROCELL | 0 | 15 | nstate<0>/nstate<0>_SETF__$INT
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 2 | 3 | 17 | 0 | 16
 INPUTS | 6 | state<0>  | state<2>  | state<4>  | state<3>  | state<1>  | nstate<1>/nstate<1>_RSTF.EXP
-INPUTMC | 6 | 2 | 17 | 1 | 14 | 1 | 12 | 1 | 13 | 1 | 15 | 0 | 14
+INPUTMC | 6 | 2 | 17 | 2 | 15 | 1 | 15 | 1 | 16 | 2 | 16 | 0 | 14
 EXPORTS | 1 | 0 | 16
 IMPORTS | 1 | 0 | 14
 EQ | 11 | 
@@ -499,7 +473,7 @@ MACROCELL | 0 | 8 | nstate<0>/nstate<0>_RSTF
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 3 | 17
 INPUTS | 5 | state<0>  | state<4>  | state<1>  | state<2>  | state<3>
-INPUTMC | 5 | 2 | 17 | 1 | 12 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTMC | 5 | 2 | 17 | 1 | 15 | 2 | 16 | 2 | 15 | 1 | 16
 EQ | 4 | 
    nstate<0>/nstate<0>_RSTF = state<0> & !state<4>
 	# !state<1> & !state<2> & state<0> & !state<3>
@@ -510,7 +484,7 @@ MACROCELL | 0 | 6 | nstate<1>/nstate<1>_SETF
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 3 | 16
 INPUTS | 5 | state<1>  | state<0>  | state<4>  | state<2>  | state<3>
-INPUTMC | 5 | 1 | 15 | 2 | 17 | 1 | 12 | 1 | 14 | 1 | 13
+INPUTMC | 5 | 2 | 16 | 2 | 17 | 1 | 15 | 2 | 15 | 1 | 16
 EQ | 3 | 
    nstate<1>/nstate<1>_SETF = state<1> & !state<0> & !state<4>
 	# !state<1> & state<0> & !state<4>
@@ -520,7 +494,7 @@ MACROCELL | 0 | 14 | nstate<1>/nstate<1>_RSTF
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 2 | 3 | 16 | 0 | 15
 INPUTS | 7 | state<1>  | state<0>  | state<4>  | state<2>  | state<3>  | puls  | puls/puls_SETF__$INT.EXP
-INPUTMC | 7 | 1 | 15 | 2 | 17 | 1 | 12 | 1 | 14 | 1 | 13 | 1 | 16 | 0 | 13
+INPUTMC | 7 | 2 | 16 | 2 | 17 | 1 | 15 | 2 | 15 | 1 | 16 | 3 | 12 | 0 | 13
 EXPORTS | 1 | 0 | 15
 IMPORTS | 1 | 0 | 13
 EQ | 11 | 
@@ -540,7 +514,7 @@ MACROCELL | 0 | 3 | nstate<2>/nstate<2>_SETF
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 3 | 15
 INPUTS | 4 | state<1>  | state<2>  | state<4>  | state<0>
-INPUTMC | 4 | 1 | 15 | 1 | 14 | 1 | 12 | 2 | 17
+INPUTMC | 4 | 2 | 16 | 2 | 15 | 1 | 15 | 2 | 17
 EQ | 3 | 
    nstate<2>/nstate<2>_SETF = !state<1> & state<2> & !state<4>
 	# state<2> & !state<0> & !state<4>
@@ -548,9 +522,9 @@ EQ | 3 |
 
 MACROCELL | 0 | 12 | $OpTx$$OpTx$FX_DC$18_INV$262
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 3 | 3 | 15 | 3 | 14 | 0 | 13
+OUTPUTMC | 3 | 3 | 15 | 3 | 13 | 0 | 13
 INPUTS | 8 | state<2>  | state<4>  | reset  | x2/state<1>  | x2/state<0>  | x2/pulson_mux0001  | levin  | nstate<3>/nstate<3>_SETF.EXP
-INPUTMC | 7 | 1 | 14 | 1 | 12 | 1 | 8 | 1 | 9 | 2 | 4 | 1 | 11 | 0 | 11
+INPUTMC | 7 | 2 | 15 | 1 | 15 | 1 | 9 | 1 | 10 | 2 | 4 | 1 | 12 | 0 | 11
 INPUTP | 1 | 92
 EXPORTS | 1 | 0 | 13
 IMPORTS | 1 | 0 | 11
@@ -568,9 +542,9 @@ EQ | 10 |
 
 MACROCELL | 0 | 11 | nstate<3>/nstate<3>_SETF
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 1 | 17 | 0 | 12
+OUTPUTMC | 2 | 3 | 14 | 0 | 12
 INPUTS | 7 | state<2>  | state<4>  | state<3>  | state<1>  | state<0>  | puls  | x2/nstate<0>/x2/nstate<0>_RSTF__$INT.EXP
-INPUTMC | 7 | 1 | 14 | 1 | 12 | 1 | 13 | 1 | 15 | 2 | 17 | 1 | 16 | 0 | 10
+INPUTMC | 7 | 2 | 15 | 1 | 15 | 1 | 16 | 2 | 16 | 2 | 17 | 3 | 12 | 0 | 10
 EXPORTS | 1 | 0 | 12
 IMPORTS | 1 | 0 | 10
 EQ | 10 | 
@@ -587,9 +561,9 @@ EQ | 10 |
 
 MACROCELL | 0 | 16 | nstate<3>/nstate<3>_RSTF__$INT
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 1 | 17 | 0 | 17
+OUTPUTMC | 2 | 3 | 14 | 0 | 17
 INPUTS | 8 | state<1>  | state<2>  | state<0>  | state<4>  | puls  | state<3>  | transmitter  | nstate<0>/nstate<0>_SETF__$INT.EXP
-INPUTMC | 8 | 1 | 15 | 1 | 14 | 2 | 17 | 1 | 12 | 1 | 16 | 1 | 13 | 2 | 7 | 0 | 15
+INPUTMC | 8 | 2 | 16 | 2 | 15 | 2 | 17 | 1 | 15 | 3 | 12 | 1 | 16 | 2 | 7 | 0 | 15
 EXPORTS | 1 | 0 | 17
 IMPORTS | 1 | 0 | 15
 EQ | 11 | 
@@ -607,28 +581,28 @@ EQ | 11 |
 
 MACROCELL | 0 | 2 | nstate<4>/nstate<4>_SETF
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 3 | 14
+OUTPUTMC | 1 | 3 | 13
 INPUTS | 5 | state<1>  | state<2>  | state<4>  | state<3>  | state<0>
-INPUTMC | 5 | 1 | 15 | 1 | 14 | 1 | 12 | 1 | 13 | 2 | 17
+INPUTMC | 5 | 2 | 16 | 2 | 15 | 1 | 15 | 1 | 16 | 2 | 17
 EQ | 3 | 
    nstate<4>/nstate<4>_SETF = !state<1> & !state<2> & state<4> & !state<3>
 	# state<1> & state<2> & state<0> & !state<4> & 
 	state<3>;
 
-MACROCELL | 3 | 10 | x2/nstate<0>/x2/nstate<0>_SETF
+MACROCELL | 1 | 14 | x2/nstate<0>/x2/nstate<0>_SETF
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 3 | 12
+OUTPUTMC | 1 | 3 | 11
 INPUTS | 3 | x2/state<1>  | x2/state<0>  | levin
-INPUTMC | 3 | 1 | 8 | 1 | 9 | 1 | 11
+INPUTMC | 3 | 1 | 9 | 1 | 10 | 1 | 12
 EQ | 2 | 
    x2/nstate<0>/x2/nstate<0>_SETF = x2/state<1> & !x2/state<0> & levin
 	# !x2/state<1> & !x2/state<0> & !levin;
 
 MACROCELL | 0 | 10 | x2/nstate<0>/x2/nstate<0>_RSTF__$INT
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 3 | 12 | 0 | 11
+OUTPUTMC | 2 | 3 | 11 | 0 | 11
 INPUTS | 9 | x2/state<1>  | x2/state<0>  | levin  | reset  | state<1>  | state<4>  | state<3>  | state<0>  | x2/nstate<1>/x2/nstate<1>_RSTF__$INT.EXP
-INPUTMC | 8 | 1 | 8 | 1 | 9 | 1 | 11 | 1 | 15 | 1 | 12 | 1 | 13 | 2 | 17 | 0 | 9
+INPUTMC | 8 | 1 | 9 | 1 | 10 | 1 | 12 | 2 | 16 | 1 | 15 | 1 | 16 | 2 | 17 | 0 | 9
 INPUTP | 1 | 92
 EXPORTS | 1 | 0 | 11
 IMPORTS | 1 | 0 | 9
@@ -641,20 +615,20 @@ EQ | 7 |
     x2/nstate<0>/x2/nstate<0>_RSTF__$INT.EXP  =  !state<1> & !state<4> & state<3>
 	# !state<0> & !state<4> & state<3>
 
-MACROCELL | 3 | 9 | x2/nstate<1>/x2/nstate<1>_SETF
+MACROCELL | 1 | 13 | x2/nstate<1>/x2/nstate<1>_SETF
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 3 | 11
+OUTPUTMC | 1 | 3 | 10
 INPUTS | 3 | x2/state<1>  | x2/state<0>  | levin
-INPUTMC | 3 | 1 | 8 | 1 | 9 | 1 | 11
+INPUTMC | 3 | 1 | 9 | 1 | 10 | 1 | 12
 EQ | 2 | 
    x2/nstate<1>/x2/nstate<1>_SETF = x2/state<1> & !x2/state<0> & levin
 	# !x2/state<1> & x2/state<0> & !levin;
 
 MACROCELL | 0 | 9 | x2/nstate<1>/x2/nstate<1>_RSTF__$INT
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 3 | 11 | 0 | 10
+OUTPUTMC | 2 | 3 | 10 | 0 | 10
 INPUTS | 4 | x2/state<1>  | x2/state<0>  | levin  | reset
-INPUTMC | 3 | 1 | 8 | 1 | 9 | 1 | 11
+INPUTMC | 3 | 1 | 9 | 1 | 10 | 1 | 12
 INPUTP | 1 | 92
 EXPORTS | 1 | 0 | 10
 EQ | 5 | 
@@ -664,13 +638,13 @@ EQ | 5 |
 	# !x2/state<1> & x2/state<0> & !levin;
     x2/nstate<1>/x2/nstate<1>_RSTF__$INT.EXP  =  reset & !x2/state<1> & x2/state<0> & levin
 
-PIN | clk | 4096 | 0 | N/A | 20 | 20 | 1 | 15 | 1 | 14 | 2 | 17 | 1 | 12 | 1 | 13 | 2 | 5 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6 | 1 | 8 | 1 | 9 | 1 | 11 | 1 | 10
-PIN | reset | 65600 | 0 | N/A | 92 | 20 | 0 | 12 | 0 | 10 | 0 | 9 | 1 | 15 | 1 | 14 | 2 | 17 | 1 | 12 | 1 | 13 | 2 | 5 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 4
+PIN | clk | 4096 | 0 | N/A | 20 | 18 | 2 | 16 | 2 | 15 | 2 | 17 | 1 | 15 | 1 | 16 | 2 | 5 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6 | 1 | 9 | 1 | 10 | 1 | 12 | 1 | 11
+PIN | reset | 65600 | 0 | N/A | 92 | 18 | 0 | 12 | 0 | 10 | 0 | 9 | 2 | 16 | 2 | 15 | 2 | 17 | 1 | 15 | 1 | 16 | 2 | 5 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 4
 PIN | in_signal<0> | 64 | 0 | N/A | 50 | 2 | 0 | 1 | 0 | 0
 PIN | in_signal<1> | 64 | 0 | N/A | 46 | 2 | 0 | 4 | 0 | 17
 PIN | in_signal<2> | 64 | 0 | N/A | 49 | 2 | 0 | 5 | 0 | 0
 PIN | in_signal<3> | 64 | 0 | N/A | 52 | 2 | 0 | 7 | 0 | 0
-PIN | enable | 64 | 0 | N/A | 21 | 1 | 1 | 10
+PIN | enable | 64 | 0 | N/A | 21 | 1 | 1 | 11
 PIN | lmp<0> | 536871040 | 0 | N/A | 11
 PIN | lmp<1> | 536871040 | 0 | N/A | 12
 PIN | lmp<2> | 536871040 | 0 | N/A | 13

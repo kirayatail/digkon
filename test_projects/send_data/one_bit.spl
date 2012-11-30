@@ -1,0 +1,11 @@
+[Inputs]
+in_signal
+reset
+clk
+enable
+[Outputs]
+on_lamp
+enable_lamp
+test_lamp
+transmitter
+[BiDir]

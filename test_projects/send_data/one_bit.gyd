@@ -23,14 +23,14 @@ PARTITION FB1_1 $OpTx$BIN_STEP$73 lmp_0 nstate<4>/nstate<4>_SETF nstate<2>/nstat
 		 nstate<0>/nstate<0>_RSTF x2/nstate<1>/x2/nstate<1>_RSTF__$INT x2/nstate<0>/x2/nstate<0>_RSTF__$INT nstate<3>/nstate<3>_SETF
 		 $OpTx$$OpTx$FX_DC$18_INV$262 puls/puls_SETF__$INT nstate<1>/nstate<1>_RSTF nstate<0>/nstate<0>_SETF__$INT
 		 nstate<3>/nstate<3>_RSTF__$INT transmitter_OBUF/transmitter_OBUF_SETF
-PARTITION FB2_9 x2/state<1> x2/state<0> x1/q levin
-		 state<4> state<3> state<2> state<1>
-		 puls nstate<3>
-PARTITION FB3_5 x2/pulson_mux0001 en count<9> transmitter_OBUF
-		 count<8> count<7> count<6> count<5>
-		 count<4> count<3> count<2> count<1>
-		 count<0> state<0>
-PARTITION FB4_10 x2/nstate<1>/x2/nstate<1>_SETF x2/nstate<0>/x2/nstate<0>_SETF x2/nstate<1> x2/nstate<0>
-		 puls/puls_RSTF nstate<4> nstate<2> nstate<1>
-		 nstate<0>
+PARTITION FB2_10 x2/state<1> x2/state<0> x1/q levin
+		 x2/nstate<1>/x2/nstate<1>_SETF x2/nstate<0>/x2/nstate<0>_SETF state<4> state<3>
+		 puls/puls_RSTF
+PARTITION FB3_5 x2/pulson_mux0001 en count<7> transmitter_OBUF
+		 count<6> count<5> count<4> count<3>
+		 count<2> count<1> count<0> state<2>
+		 state<1> state<0>
+PARTITION FB4_11 x2/nstate<1> x2/nstate<0> puls nstate<4>
+		 nstate<3> nstate<2> nstate<1> nstate<0>
+		
 

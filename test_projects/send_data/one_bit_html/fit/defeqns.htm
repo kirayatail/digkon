@@ -18,8 +18,7 @@ $OpTx$BIN_STEP$73 <= (NOT state(1) AND NOT state(2) AND NOT state(0) AND NOT sta
 </td></tr><tr><td>
 FTCPE_count0: FTCPE port map (count(0),count_T(0),clk,'0',NOT reset);
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count_T(0) <= (count(0) AND count(1) AND count(2) AND count(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(4) AND count(5) AND count(6) AND count(7) AND count(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(9));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(4) AND count(5) AND count(6) AND count(7));
 </td></tr><tr><td>
 FTCPE_count1: FTCPE port map (count(1),count(0),clk,NOT reset,'0');
 </td></tr><tr><td>
@@ -44,18 +43,9 @@ FTCPE_count7: FTCPE port map (count(7),count_T(7),clk,NOT reset,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count_T(7) <= (count(0) AND count(1) AND count(2) AND count(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(4) AND count(5) AND count(6));
 </td></tr><tr><td>
-FTCPE_count8: FTCPE port map (count(8),count_T(8),clk,NOT reset,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count_T(8) <= (count(0) AND count(1) AND count(2) AND count(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(4) AND count(5) AND count(6) AND count(7));
-</td></tr><tr><td>
-FTCPE_count9: FTCPE port map (count(9),count_T(9),clk,NOT reset,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count_T(9) <= (count(0) AND count(1) AND count(2) AND count(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(4) AND count(5) AND count(6) AND count(7) AND count(8));
-</td></tr><tr><td>
 FDCPE_en: FDCPE port map (en,en_D,clk,NOT reset,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;en_D <= (count(0) AND count(1) AND count(2) AND count(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(4) AND count(5) AND count(6) AND count(7) AND count(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(9));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(4) AND count(5) AND count(6) AND count(7));
 </td></tr><tr><td>
 FDCPE_levin: FDCPE port map (levin,x1/q,clk,'0','0');
 </td></tr><tr><td>
@@ -83,7 +73,11 @@ FDCPE_lmp3: FDCPE port map (lmp(3),'0','0',lmp_CLR(3),lmp_PRE(3));
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lmp_PRE(3) <= (NOT state(1) AND NOT state(2) AND state(0) AND state(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT state(3) AND in_signal(3));
 </td></tr><tr><td>
-FDCPE_nstate0: FDCPE port map (nstate(0),'0','0',nstate(0)/nstate(0)_RSTF,NOT nstate(0)/nstate(0)_SETF__$INT);
+</td></tr><tr><td>
+nstate(0)/nstate(0)_RSTF <= ((state(0) AND NOT state(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(1) AND NOT state(2) AND state(0) AND NOT state(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state(1) AND NOT state(2) AND NOT state(0) AND state(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT state(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
 nstate(0)/nstate(0)_SETF__$INT <= ((state(0))
@@ -93,11 +87,7 @@ nstate(0)/nstate(0)_SETF__$INT <= ((state(0))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(1) AND NOT state(2) AND NOT state(4) AND NOT state(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	puls));
 </td></tr><tr><td>
-</td></tr><tr><td>
-nstate(0)/nstate(0)_RSTF <= ((state(0) AND NOT state(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(1) AND NOT state(2) AND state(0) AND NOT state(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state(1) AND NOT state(2) AND NOT state(0) AND state(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT state(3)));
+FDCPE_nstate0: FDCPE port map (nstate(0),'0','0',nstate(0)/nstate(0)_RSTF,NOT nstate(0)/nstate(0)_SETF__$INT);
 </td></tr><tr><td>
 </td></tr><tr><td>
 nstate(1)/nstate(1)_SETF <= ((state(1) AND NOT state(0) AND NOT state(4))
@@ -122,6 +112,13 @@ nstate(2)/nstate(2)_SETF <= ((NOT state(1) AND state(2) AND NOT state(4))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state(2) AND NOT state(0) AND NOT state(4))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state(1) AND NOT state(2) AND state(0) AND NOT state(4)));
 </td></tr><tr><td>
+</td></tr><tr><td>
+nstate(3)/nstate(3)_SETF <= ((NOT state(1) AND NOT state(4) AND state(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(0) AND NOT state(4) AND state(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(2) AND NOT state(4) AND state(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state(1) AND state(2) AND state(0) AND NOT state(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT state(3)));
+</td></tr><tr><td>
 FDCPE_nstate3: FDCPE port map (nstate(3),'0','0',NOT nstate(3)/nstate(3)_RSTF__$INT,nstate(3)/nstate(3)_SETF);
 </td></tr><tr><td>
 </td></tr><tr><td>
@@ -134,13 +131,6 @@ nstate(3)/nstate(3)_RSTF__$INT <= ((state(2) AND state(4))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state(1) AND state(2) AND state(0) AND NOT state(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(1) AND NOT state(2) AND NOT state(0) AND NOT state(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	puls));
-</td></tr><tr><td>
-</td></tr><tr><td>
-nstate(3)/nstate(3)_SETF <= ((NOT state(1) AND NOT state(4) AND state(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(0) AND NOT state(4) AND state(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT state(2) AND NOT state(4) AND state(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state(1) AND state(2) AND state(0) AND NOT state(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT state(3)));
 </td></tr><tr><td>
 FDCPE_nstate4: FDCPE port map (nstate(4),'0','0',nstate_CLR(4),nstate(4)/nstate(4)_SETF);
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nstate_CLR(4) <= (NOT $OpTx$$OpTx$FX_DC$18_INV$262 AND 

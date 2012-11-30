@@ -13,15 +13,15 @@ lmp<3> S:PIN4
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 EXP6_ lmp_0
-PARTITION FB1_5 lmp_1 lmp_2
-PARTITION FB1_8 lmp_3 state<0> nstate<0>/nstate<0>_RSTF $OpTx$FX_DC$5
-		 nstate<4> nstate<0> nstate<1>/nstate<1>_SETF nstate<4>/nstate<4>_RSTF
-		 nstate<3>/nstate<3>_SETF nstate<2>/nstate<2>_SETF nstate<3>/nstate<3>_RSTF
-PARTITION FB2_8 en count<9> count<8> count<7>
-		 count<6> count<5> count<4> count<3>
-		 count<2> count<1> count<0>
-PARTITION FB3_15 state<4> state<3> state<2> state<1>
-		
-PARTITION FB4_16 nstate<3> nstate<2> nstate<1>
+PARTITION FB1_1 nstate<4>/nstate<4>_SETF lmp_0 state<2> state<1>
+		 lmp_1 lmp_2 state<0> lmp_3
+		 $OpTx$FX_DC$4 nstate<1>/nstate<1>_SETF nstate<3>/nstate<3>_SETF nstate<2>/nstate<2>_SETF
+		 nstate<0>/nstate<0>_SETF nstate<0>/nstate<0>_RSTF nstate<1>/nstate<1>_RSTF nstate<3>/nstate<3>_RSTF__$INT
+		 state<3> nstate<2>/nstate<2>_RSTF
+PARTITION FB2_9 en count<7> count<6> count<5>
+		 count<4> count<3> count<2> count<1>
+		 count<0> state<4>
+PARTITION FB3_14 nstate<4> nstate<3> nstate<2> nstate<1>
+		 nstate<0>
+
 

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-11-27T17:53:40</DateModified>
+  <DateModified>2012-11-29T15:02:16</DateModified>
   <ModuleName>one_bit</ModuleName>
-  <SummaryTimeStamp>2012-11-27T17:53:00</SummaryTimeStamp>
+  <SummaryTimeStamp>2012-11-29T14:27:50</SummaryTimeStamp>
   <SavedFilePath>Z:/DigKon/project/digkon/test_projects/send_data/iseconfig/one_bit.xreport</SavedFilePath>
   <ImplementationReportsDirectory>Z:/DigKon/project/digkon/test_projects/send_data\</ImplementationReportsDirectory>
   <DateInitialized>2012-11-16T10:46:26</DateInitialized>

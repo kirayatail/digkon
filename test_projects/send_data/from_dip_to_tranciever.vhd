@@ -57,7 +57,7 @@ end component;
 
 type state_type is (start,s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17);
 signal state, nstate: state_type;
-signal count: STD_LOGIC_VECTOR(9 downto 0);
+signal count: STD_LOGIC_VECTOR(7 downto 0);
 signal en: STD_LOGIC;
 signal levin,puls: std_logic;
 begin
@@ -104,7 +104,7 @@ case state is
 	when s13 => nstate <= s14; lmp(0) <= in_signal(0); transmitter <= in_signal(0);
 	when s14 => nstate <= s15; lmp(1) <= in_signal(1); transmitter <= in_signal(1);
 	when s15 => nstate <= s16; lmp(2) <= in_signal(2); transmitter <= in_signal(2);
-	when s16 => nstate <= s17; lmp(3) <= in_signal(3); transmitter <= in_signal(3);--in_signal;
+	when s16 => nstate <= s17; lmp(3) <= in_signal(3); transmitter <= in_signal(3);
 	
 	
 	when s17 => nstate <= start; transmitter <= '0';
@@ -118,7 +118,7 @@ end process p1;
 p2: process(clk, reset)
 begin
 if reset = '0' then
-	count <= "0000000001";
+	count <= "00000001";
    en <= '0';
 
 
@@ -126,8 +126,8 @@ elsif clk'event and clk = '1' then
 en <= '0';
 count <= count +1;
 
-if count = "1111111111" then
-count <= "0000000001";
+if count = "11111111" then
+count <= "00000001";
 en <= '1';
 end if;
 end if;

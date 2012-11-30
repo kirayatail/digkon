@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.26 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.26 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: recieve_one_bit.prj
 
@@ -108,9 +108,9 @@ WARNING:Xst:737 - Found 1-bit latch for signal <lmp_2>. Latches may be generated
 WARNING:Xst:737 - Found 1-bit latch for signal <lmp_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 5-bit latch for signal <nstate>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 10-bit up counter for signal <count>.
+    Found 8-bit up counter for signal <count>.
     Found 1-bit register for signal <en>.
-    Found 5-bit 17-to-1 multiplexer for signal <nstate$mux0000>.
+    Found 5-bit 18-to-1 multiplexer for signal <nstate$mux0001>.
     Found 5-bit register for signal <state>.
     Summary:
 	inferred   1 Counter(s).
@@ -123,7 +123,7 @@ HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 1
- 10-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
 # Registers                                            : 2
  1-bit register                                        : 1
  5-bit register                                        : 1
@@ -131,7 +131,7 @@ Macro Statistics
  1-bit latch                                           : 4
  5-bit latch                                           : 1
 # Multiplexers                                         : 1
- 5-bit 17-to-1 multiplexer                             : 1
+ 5-bit 18-to-1 multiplexer                             : 1
 
 =========================================================================
 
@@ -145,14 +145,14 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 1
- 10-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
 # Registers                                            : 1
  Flip-Flops                                            : 1
 # Latches                                              : 5
  1-bit latch                                           : 4
  5-bit latch                                           : 1
 # Multiplexers                                         : 1
- 5-bit 17-to-1 multiplexer                             : 1
+ 5-bit 18-to-1 multiplexer                             : 1
 
 =========================================================================
 
@@ -197,19 +197,20 @@ Design Statistics
 # IOs                              : 7
 
 Cell Usage :
-# BELS                             : 130
-#      AND2                        : 50
-#      AND3                        : 7
-#      AND4                        : 1
-#      AND5                        : 1
-#      AND8                        : 2
+# BELS                             : 147
+#      AND2                        : 48
+#      AND3                        : 8
+#      AND4                        : 3
+#      AND5                        : 2
+#      AND7                        : 1
+#      AND8                        : 1
 #      GND                         : 1
-#      INV                         : 46
-#      OR2                         : 12
+#      INV                         : 57
+#      OR2                         : 18
 #      OR3                         : 1
-#      XOR2                        : 9
-# FlipFlops/Latches                : 25
-#      FDC                         : 10
+#      XOR2                        : 7
+# FlipFlops/Latches                : 23
+#      FDC                         : 8
 #      FDCE                        : 5
 #      FDP                         : 1
 #      LD                          : 9
@@ -219,12 +220,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 23.21 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.28 secs
  
 --> 
 
-Total memory usage is 249108 kilobytes
+Total memory usage is 245300 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    5 (   0 filtered)

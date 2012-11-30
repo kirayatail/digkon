@@ -1,7 +1,7 @@
  
 cpldfit:  version P.28xd                            Xilinx Inc.
                                   Fitter Report
-Design Name: one_bit                             Date: 11-27-2012,  5:54PM
+Design Name: one_bit                             Date: 11-29-2012,  2:27PM
 Device Used: XC9572XL-5-PC44
 Fitting Status: Successful
 
@@ -9,18 +9,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-51 /72  ( 71%) 120 /360  ( 33%) 58 /216 ( 27%)   34 /72  ( 47%) 12 /34  ( 35%)
+49 /72  ( 68%) 118 /360  ( 33%) 56 /216 ( 26%)   32 /72  ( 44%) 12 /34  ( 35%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
 FB1          18/18*      16/54       70/90       6/ 9
-FB2          10/18       13/54       16/90       1/ 9
-FB3          14/18       14/54       15/90       5/ 9
-FB4           9/18       15/54       19/90       0/ 7
+FB2           9/18       11/54       15/90       1/ 9
+FB3          14/18       14/54       17/90       5/ 9
+FB4           8/18       15/54       16/90       0/ 7
              -----       -----       -----      -----    
-             51/72       58/216     120/360     12/34 
+             49/72       56/216     118/360     12/34 
 
 * - Resource is exhausted
 
@@ -45,7 +45,7 @@ GSR           :    1           1    |
 
 ** Power Data **
 
-There are 51 macrocells in high performance mode (MCHP).
+There are 49 macrocells in high performance mode (MCHP).
 There are 0 macrocells in low power mode (MCLP).
 End of Mapped Resource Summary
 **************************  Errors and Warnings  ***************************
@@ -79,7 +79,7 @@ lmp<2>                                  2     6     FB1_6   3    I/O     O      
 lmp<3>                                  2     6     FB1_8   4    I/O     O       STD  FAST RESET
 transmitter                             2     2     FB3_8   13   I/O     O       STD  FAST RESET
 
-** 46 Buried Nodes **
+** 44 Buried Nodes **
 
 Signal                                  Total Total Loc     Pwr  Reg Init
 Name                                    Pts   Inps          Mode State
@@ -97,38 +97,36 @@ nstate<1>/nstate<1>_RSTF                5     6     FB1_15  STD
 nstate<0>/nstate<0>_SETF__$INT          5     6     FB1_16  STD  
 nstate<3>/nstate<3>_RSTF__$INT          8     6     FB1_17  STD  
 transmitter_OBUF/transmitter_OBUF_SETF  11    11    FB1_18  STD  
-x2/state<1>                             1     1     FB2_9   STD  RESET
-x2/state<0>                             1     1     FB2_10  STD  RESET
-x1/q                                    1     1     FB2_11  STD  RESET
-levin                                   1     1     FB2_12  STD  RESET
-state<4>                                2     2     FB2_13  STD  RESET
-state<3>                                2     2     FB2_14  STD  RESET
-state<2>                                2     2     FB2_15  STD  RESET
-state<1>                                2     2     FB2_16  STD  RESET
-puls                                    2     2     FB2_17  STD  RESET
-nstate<3>                               2     2     FB2_18  STD  RESET
+x2/state<1>                             1     1     FB2_10  STD  RESET
+x2/state<0>                             1     1     FB2_11  STD  RESET
+x1/q                                    1     1     FB2_12  STD  RESET
+levin                                   1     1     FB2_13  STD  RESET
+x2/nstate<1>/x2/nstate<1>_SETF          2     3     FB2_14  STD  
+x2/nstate<0>/x2/nstate<0>_SETF          2     3     FB2_15  STD  
+state<4>                                2     2     FB2_16  STD  RESET
+state<3>                                2     2     FB2_17  STD  RESET
+puls/puls_RSTF                          3     4     FB2_18  STD  
 x2/pulson_mux0001                       0     0     FB3_5   STD  RESET
-en                                      1     10    FB3_6   STD  RESET
-count<9>                                1     9     FB3_7   STD  RESET
-count<8>                                1     8     FB3_9   STD  RESET
-count<7>                                1     7     FB3_10  STD  RESET
-count<6>                                1     6     FB3_11  STD  RESET
-count<5>                                1     5     FB3_12  STD  RESET
-count<4>                                1     4     FB3_13  STD  RESET
-count<3>                                1     3     FB3_14  STD  RESET
-count<2>                                1     2     FB3_15  STD  RESET
-count<1>                                1     1     FB3_16  STD  RESET
-count<0>                                1     10    FB3_17  STD  RESET
+en                                      1     8     FB3_6   STD  RESET
+count<7>                                1     7     FB3_7   STD  RESET
+count<6>                                1     6     FB3_9   STD  RESET
+count<5>                                1     5     FB3_10  STD  RESET
+count<4>                                1     4     FB3_11  STD  RESET
+count<3>                                1     3     FB3_12  STD  RESET
+count<2>                                1     2     FB3_13  STD  RESET
+count<1>                                1     1     FB3_14  STD  RESET
+count<0>                                1     8     FB3_15  STD  RESET
+state<2>                                2     2     FB3_16  STD  RESET
+state<1>                                2     2     FB3_17  STD  RESET
 state<0>                                2     2     FB3_18  STD  RESET
-x2/nstate<1>/x2/nstate<1>_SETF          2     3     FB4_10  STD  
-x2/nstate<0>/x2/nstate<0>_SETF          2     3     FB4_11  STD  
-x2/nstate<1>                            2     2     FB4_12  STD  RESET
+x2/nstate<1>                            2     2     FB4_11  STD  RESET
+x2/nstate<0>                            2     2     FB4_12  STD  RESET
+puls                                    2     2     FB4_13  STD  RESET
+nstate<4>                               2     2     FB4_14  STD  RESET
 
 Signal                                  Total Total Loc     Pwr  Reg Init
 Name                                    Pts   Inps          Mode State
-x2/nstate<0>                            2     2     FB4_13  STD  RESET
-puls/puls_RSTF                          3     4     FB4_14  STD  
-nstate<4>                               2     2     FB4_15  STD  RESET
+nstate<3>                               2     2     FB4_15  STD  RESET
 nstate<2>                               2     2     FB4_16  STD  RESET
 nstate<1>                               2     2     FB4_17  STD  RESET
 nstate<0>                               2     2     FB4_18  STD  RESET
@@ -241,8 +239,8 @@ transmitter_OBUF/transmitter_OBUF_SETF
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB2  ***********************************
-Number of function block inputs used/remaining:               13/41
-Number of signals used by logic mapping into function block:  13
+Number of function block inputs used/remaining:               11/43
+Number of signals used by logic mapping into function block:  11
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB2_1         (b)     
@@ -253,36 +251,38 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB2_6   37    I/O     
 (unused)              0       0     0   5     FB2_7         (b)     
 (unused)              0       0     0   5     FB2_8   38    I/O     
-x2/state<1>           1       0     0   4     FB2_9   39    GSR/I/O GSR/I
-x2/state<0>           1       0     0   4     FB2_10        (b)     (b)
-x1/q                  1       0     0   4     FB2_11  40    GTS/I/O (b)
-levin                 1       0     0   4     FB2_12        (b)     (b)
-state<4>              2       0     0   3     FB2_13        (b)     (b)
-state<3>              2       0     0   3     FB2_14  42    GTS/I/O (b)
-state<2>              2       0     0   3     FB2_15  43    I/O     (b)
-state<1>              2       0     0   3     FB2_16        (b)     (b)
-puls                  2       0     0   3     FB2_17  44    I/O     (b)
-nstate<3>             2       0     0   3     FB2_18        (b)     (b)
+(unused)              0       0     0   5     FB2_9   39    GSR/I/O GSR/I
+x2/state<1>           1       0     0   4     FB2_10        (b)     (b)
+x2/state<0>           1       0     0   4     FB2_11  40    GTS/I/O (b)
+x1/q                  1       0     0   4     FB2_12        (b)     (b)
+levin                 1       0     0   4     FB2_13        (b)     (b)
+x2/nstate<1>/x2/nstate<1>_SETF
+                      2       0     0   3     FB2_14  42    GTS/I/O (b)
+x2/nstate<0>/x2/nstate<0>_SETF
+                      2       0     0   3     FB2_15  43    I/O     (b)
+state<4>              2       0     0   3     FB2_16        (b)     (b)
+state<3>              2       0     0   3     FB2_17  44    I/O     (b)
+puls/puls_RSTF        3       0     0   2     FB2_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: en                 6: nstate<3>/nstate<3>_RSTF__$INT  10: puls/puls_SETF__$INT 
-  2: enable             7: nstate<3>/nstate<3>_SETF        11: x1/q 
-  3: nstate<1>          8: nstate<4>                       12: x2/nstate<0> 
-  4: nstate<2>          9: puls/puls_RSTF                  13: x2/nstate<1> 
-  5: nstate<3>        
+  1: en                 5: nstate<4>          9: x2/pulson_mux0001 
+  2: enable             6: x1/q              10: x2/state<0> 
+  3: levin              7: x2/nstate<0>      11: x2/state<1> 
+  4: nstate<3>          8: x2/nstate<1>     
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-x2/state<1>          ............X........................... 1
-x2/state<0>          ...........X............................ 1
+x2/state<1>          .......X................................ 1
+x2/state<0>          ......X................................. 1
 x1/q                 .X...................................... 1
-levin                ..........X............................. 1
-state<4>             X......X................................ 2
-state<3>             X...X................................... 2
-state<2>             X..X.................................... 2
-state<1>             X.X..................................... 2
-puls                 ........XX.............................. 2
-nstate<3>            .....XX................................. 2
+levin                .....X.................................. 1
+x2/nstate<1>/x2/nstate<1>_SETF 
+                     ..X......XX............................. 3
+x2/nstate<0>/x2/nstate<0>_SETF 
+                     ..X......XX............................. 3
+state<4>             X...X................................... 2
+state<3>             X..X.................................... 2
+puls/puls_RSTF       ..X.....XXX............................. 4
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB3  ***********************************
@@ -296,42 +296,42 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB3_4         (b)     
 x2/pulson_mux0001     0       0     0   5     FB3_5   12    I/O     (b)
 en                    1       0     0   4     FB3_6         (b)     (b)
-count<9>              1       0     0   4     FB3_7         (b)     (b)
+count<7>              1       0     0   4     FB3_7         (b)     (b)
 transmitter           2       0     0   3     FB3_8   13    I/O     O
-count<8>              1       0     0   4     FB3_9   14    I/O     (b)
-count<7>              1       0     0   4     FB3_10        (b)     (b)
-count<6>              1       0     0   4     FB3_11  18    I/O     I
-count<5>              1       0     0   4     FB3_12        (b)     (b)
-count<4>              1       0     0   4     FB3_13        (b)     (b)
-count<3>              1       0     0   4     FB3_14  19    I/O     I
-count<2>              1       0     0   4     FB3_15  20    I/O     I
-count<1>              1       0     0   4     FB3_16  24    I/O     (b)
-count<0>              1       0     0   4     FB3_17  22    I/O     I
+count<6>              1       0     0   4     FB3_9   14    I/O     (b)
+count<5>              1       0     0   4     FB3_10        (b)     (b)
+count<4>              1       0     0   4     FB3_11  18    I/O     I
+count<3>              1       0     0   4     FB3_12        (b)     (b)
+count<2>              1       0     0   4     FB3_13        (b)     (b)
+count<1>              1       0     0   4     FB3_14  19    I/O     I
+count<0>              1       0     0   4     FB3_15  20    I/O     I
+state<2>              2       0     0   3     FB3_16  24    I/O     (b)
+state<1>              2       0     0   3     FB3_17  22    I/O     I
 state<0>              2       0     0   3     FB3_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: $OpTx$BIN_STEP$73   6: count<4>          11: count<9> 
-  2: count<0>            7: count<5>          12: en 
-  3: count<1>            8: count<6>          13: nstate<0> 
+  1: $OpTx$BIN_STEP$73   6: count<4>          11: nstate<0> 
+  2: count<0>            7: count<5>          12: nstate<1> 
+  3: count<1>            8: count<6>          13: nstate<2> 
   4: count<2>            9: count<7>          14: transmitter_OBUF/transmitter_OBUF_SETF 
-  5: count<3>           10: count<8>         
+  5: count<3>           10: en               
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
 x2/pulson_mux0001    ........................................ 0
-en                   .XXXXXXXXXX............................. 10
-count<9>             .XXXXXXXXX.............................. 9
-transmitter          X............X.......................... 2
-count<8>             .XXXXXXXX............................... 8
+en                   .XXXXXXXX............................... 8
 count<7>             .XXXXXXX................................ 7
+transmitter          X............X.......................... 2
 count<6>             .XXXXXX................................. 6
 count<5>             .XXXXX.................................. 5
 count<4>             .XXXX................................... 4
 count<3>             .XXX.................................... 3
 count<2>             .XX..................................... 2
 count<1>             .X...................................... 1
-count<0>             .XXXXXXXXXX............................. 10
-state<0>             ...........XX........................... 2
+count<0>             .XXXXXXXX............................... 8
+state<2>             .........X..X........................... 2
+state<1>             .........X.X............................ 2
+state<0>             .........XX............................. 2
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB4  ***********************************
@@ -348,38 +348,33 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB4_7         (b)     
 (unused)              0       0     0   5     FB4_8   27    I/O     
 (unused)              0       0     0   5     FB4_9         (b)     
-x2/nstate<1>/x2/nstate<1>_SETF
-                      2       0     0   3     FB4_10        (b)     (b)
-x2/nstate<0>/x2/nstate<0>_SETF
-                      2       0     0   3     FB4_11  28    I/O     (b)
-x2/nstate<1>          2       0     0   3     FB4_12        (b)     (b)
-x2/nstate<0>          2       0     0   3     FB4_13        (b)     (b)
-puls/puls_RSTF        3       0     0   2     FB4_14  29    I/O     (b)
-nstate<4>             2       0     0   3     FB4_15  33    I/O     (b)
+(unused)              0       0     0   5     FB4_10        (b)     
+x2/nstate<1>          2       0     0   3     FB4_11  28    I/O     (b)
+x2/nstate<0>          2       0     0   3     FB4_12        (b)     (b)
+puls                  2       0     0   3     FB4_13        (b)     (b)
+nstate<4>             2       0     0   3     FB4_14  29    I/O     (b)
+nstate<3>             2       0     0   3     FB4_15  33    I/O     (b)
 nstate<2>             2       0     0   3     FB4_16        (b)     (b)
 nstate<1>             2       0     0   3     FB4_17  34    I/O     (b)
 nstate<0>             2       0     0   3     FB4_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: $OpTx$$OpTx$FX_DC$18_INV$262     6: nstate<1>/nstate<1>_SETF              11: x2/nstate<1>/x2/nstate<1>_RSTF__$INT 
-  2: levin                            7: nstate<2>/nstate<2>_SETF              12: x2/nstate<1>/x2/nstate<1>_SETF 
-  3: nstate<0>/nstate<0>_RSTF         8: nstate<4>/nstate<4>_SETF              13: x2/pulson_mux0001 
-  4: nstate<0>/nstate<0>_SETF__$INT   9: x2/nstate<0>/x2/nstate<0>_RSTF__$INT  14: x2/state<0> 
-  5: nstate<1>/nstate<1>_RSTF        10: x2/nstate<0>/x2/nstate<0>_SETF        15: x2/state<1> 
+  1: $OpTx$$OpTx$FX_DC$18_INV$262     6: nstate<2>/nstate<2>_SETF        11: puls/puls_SETF__$INT 
+  2: nstate<0>/nstate<0>_RSTF         7: nstate<3>/nstate<3>_RSTF__$INT  12: x2/nstate<0>/x2/nstate<0>_RSTF__$INT 
+  3: nstate<0>/nstate<0>_SETF__$INT   8: nstate<3>/nstate<3>_SETF        13: x2/nstate<0>/x2/nstate<0>_SETF 
+  4: nstate<1>/nstate<1>_RSTF         9: nstate<4>/nstate<4>_SETF        14: x2/nstate<1>/x2/nstate<1>_RSTF__$INT 
+  5: nstate<1>/nstate<1>_SETF        10: puls/puls_RSTF                  15: x2/nstate<1>/x2/nstate<1>_SETF 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-x2/nstate<1>/x2/nstate<1>_SETF 
-                     .X...........XX......................... 3
-x2/nstate<0>/x2/nstate<0>_SETF 
-                     .X...........XX......................... 3
-x2/nstate<1>         ..........XX............................ 2
-x2/nstate<0>         ........XX.............................. 2
-puls/puls_RSTF       .X..........XXX......................... 4
-nstate<4>            X......X................................ 2
-nstate<2>            X.....X................................. 2
-nstate<1>            ....XX.................................. 2
-nstate<0>            ..XX.................................... 2
+x2/nstate<1>         .............XX......................... 2
+x2/nstate<0>         ...........XX........................... 2
+puls                 .........XX............................. 2
+nstate<4>            X.......X............................... 2
+nstate<3>            ......XX................................ 2
+nstate<2>            X....X.................................. 2
+nstate<1>            ...XX................................... 2
+nstate<0>            .XX..................................... 2
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *******************************  Equations  ********************************
@@ -399,8 +394,7 @@ $OpTx$BIN_STEP$73 <= (NOT state(1) AND NOT state(2) AND NOT state(0) AND NOT sta
 
 FTCPE_count0: FTCPE port map (count(0),count_T(0),clk,'0',NOT reset);
 count_T(0) <= (count(0) AND count(1) AND count(2) AND count(3) AND 
-	count(4) AND count(5) AND count(6) AND count(7) AND count(8) AND 
-	count(9));
+	count(4) AND count(5) AND count(6) AND count(7));
 
 FTCPE_count1: FTCPE port map (count(1),count(0),clk,NOT reset,'0');
 
@@ -425,18 +419,9 @@ FTCPE_count7: FTCPE port map (count(7),count_T(7),clk,NOT reset,'0');
 count_T(7) <= (count(0) AND count(1) AND count(2) AND count(3) AND 
 	count(4) AND count(5) AND count(6));
 
-FTCPE_count8: FTCPE port map (count(8),count_T(8),clk,NOT reset,'0');
-count_T(8) <= (count(0) AND count(1) AND count(2) AND count(3) AND 
-	count(4) AND count(5) AND count(6) AND count(7));
-
-FTCPE_count9: FTCPE port map (count(9),count_T(9),clk,NOT reset,'0');
-count_T(9) <= (count(0) AND count(1) AND count(2) AND count(3) AND 
-	count(4) AND count(5) AND count(6) AND count(7) AND count(8));
-
 FDCPE_en: FDCPE port map (en,en_D,clk,NOT reset,'0');
 en_D <= (count(0) AND count(1) AND count(2) AND count(3) AND 
-	count(4) AND count(5) AND count(6) AND count(7) AND count(8) AND 
-	count(9));
+	count(4) AND count(5) AND count(6) AND count(7));
 
 FDCPE_levin: FDCPE port map (levin,x1/q,clk,'0','0');
 
@@ -464,7 +449,11 @@ lmp_CLR(3) <= (NOT state(1) AND NOT state(2) AND state(0) AND state(4) AND
 lmp_PRE(3) <= (NOT state(1) AND NOT state(2) AND state(0) AND state(4) AND 
 	NOT state(3) AND in_signal(3));
 
-FDCPE_nstate0: FDCPE port map (nstate(0),'0','0',nstate(0)/nstate(0)_RSTF,NOT nstate(0)/nstate(0)_SETF__$INT);
+
+nstate(0)/nstate(0)_RSTF <= ((state(0) AND NOT state(4))
+	OR (NOT state(1) AND NOT state(2) AND state(0) AND NOT state(3))
+	OR (state(1) AND NOT state(2) AND NOT state(0) AND state(4) AND 
+	NOT state(3)));
 
 
 nstate(0)/nstate(0)_SETF__$INT <= ((state(0))
@@ -474,11 +463,7 @@ nstate(0)/nstate(0)_SETF__$INT <= ((state(0))
 	OR (NOT state(1) AND NOT state(2) AND NOT state(4) AND NOT state(3) AND 
 	puls));
 
-
-nstate(0)/nstate(0)_RSTF <= ((state(0) AND NOT state(4))
-	OR (NOT state(1) AND NOT state(2) AND state(0) AND NOT state(3))
-	OR (state(1) AND NOT state(2) AND NOT state(0) AND state(4) AND 
-	NOT state(3)));
+FDCPE_nstate0: FDCPE port map (nstate(0),'0','0',nstate(0)/nstate(0)_RSTF,NOT nstate(0)/nstate(0)_SETF__$INT);
 
 
 nstate(1)/nstate(1)_SETF <= ((state(1) AND NOT state(0) AND NOT state(4))
@@ -503,6 +488,13 @@ nstate(2)/nstate(2)_SETF <= ((NOT state(1) AND state(2) AND NOT state(4))
 	OR (state(2) AND NOT state(0) AND NOT state(4))
 	OR (state(1) AND NOT state(2) AND state(0) AND NOT state(4)));
 
+
+nstate(3)/nstate(3)_SETF <= ((NOT state(1) AND NOT state(4) AND state(3))
+	OR (NOT state(0) AND NOT state(4) AND state(3))
+	OR (NOT state(2) AND NOT state(4) AND state(3))
+	OR (state(1) AND state(2) AND state(0) AND NOT state(4) AND 
+	NOT state(3)));
+
 FDCPE_nstate3: FDCPE port map (nstate(3),'0','0',NOT nstate(3)/nstate(3)_RSTF__$INT,nstate(3)/nstate(3)_SETF);
 
 
@@ -515,13 +507,6 @@ nstate(3)/nstate(3)_RSTF__$INT <= ((state(2) AND state(4))
 	OR (state(1) AND state(2) AND state(0) AND NOT state(3))
 	OR (NOT state(1) AND NOT state(2) AND NOT state(0) AND NOT state(4) AND 
 	puls));
-
-
-nstate(3)/nstate(3)_SETF <= ((NOT state(1) AND NOT state(4) AND state(3))
-	OR (NOT state(0) AND NOT state(4) AND state(3))
-	OR (NOT state(2) AND NOT state(4) AND state(3))
-	OR (state(1) AND state(2) AND state(0) AND NOT state(4) AND 
-	NOT state(3)));
 
 FDCPE_nstate4: FDCPE port map (nstate(4),'0','0',nstate_CLR(4),nstate(4)/nstate(4)_SETF);
 nstate_CLR(4) <= (NOT $OpTx$$OpTx$FX_DC$18_INV$262 AND 
