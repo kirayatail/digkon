@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-11-30T14:03:43</DateModified>
-  <ModuleName>dipswitch</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>Z:/DigKon/project/digkon/project/host_cpld2/iseconfig/dipswitch.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/DigKon/project/digkon/project/host_cpld2\</ImplementationReportsDirectory>
-  <DateInitialized>2012-11-30T13:58:31</DateInitialized>
+  <DateModified>2012-12-04T14:56:03</DateModified>
+  <ModuleName>ctrl</ModuleName>
+  <SummaryTimeStamp>2012-12-04T14:53:26</SummaryTimeStamp>
+  <SavedFilePath>C:/workspace/digkon/project/host_cpld2/iseconfig/dipswitch.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/workspace/digkon/project/host_cpld2\</ImplementationReportsDirectory>
+  <DateInitialized>2012-12-04T14:44:47</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

@@ -1,0 +1,29 @@
+Pin Freeze File:  version P.40xd
+
+9572XL44PC XC9572XL-5-PC44
+checkOK S:PIN37
+clk S:PIN5
+lastKey S:PIN29
+rcvDone S:PIN13
+reset S:PIN39
+sendDone S:PIN28
+timeout S:PIN34
+trig S:PIN36
+nextKey S:PIN35
+rand S:PIN11
+timerstart S:PIN19
+send S:PIN1
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_2 timerstart_OBUF$BUF0
+PARTITION FB1_16 state_FSM_FFd2 count<1> count<0>
+PARTITION FB2_2 nextKey_OBUF
+PARTITION FB2_17 nextSig state_FSM_FFd1
+PARTITION FB3_2 rand_OBUF
+PARTITION FB3_14 timerstart_OBUF
+PARTITION FB3_18 state_FSM_FFd3
+
+

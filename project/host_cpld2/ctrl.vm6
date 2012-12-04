@@ -1,0 +1,562 @@
+NDS Database:  version P.40xd
+
+NDS_INFO | xc9500xl | 9572XL44PC | XC9572XL-5-PC44
+
+DEVICE | 9572XL | 9572XL44PC | 
+
+NETWORK | ctrl | 0 | 0 | 16391
+
+INPUT_INSTANCE | 0 | 0 | NULL | trig_IBUF | ctrl_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | trig | 1086 | PI | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | trig_IBUF | 1063 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | trig_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | clk_IBUF | ctrl_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | clk | 1087 | PI | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 3 | 5 | II_FCLK
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+
+INPUT_INSTANCE | 0 | 0 | NULL | reset_IBUF | ctrl_COPY_0_COPY_0 | 16 | 1 | 2
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | reset | 1088 | PI | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | reset_IBUF | 1065 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 6 | 5 | II_FSR
+NODE | FSRIO_1 | 1066 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 6 | 5 | II_FSR
+
+INPUT_INSTANCE | 0 | 0 | NULL | sendDone_IBUF | ctrl_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | sendDone | 1093 | PI | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | sendDone_IBUF | 1078 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | sendDone_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | rcvDone_IBUF | ctrl_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | rcvDone | 1091 | PI | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | timeout_IBUF | ctrl_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | timeout | 1092 | PI | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | timeout_IBUF | 1076 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | timeout_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | state_FSM_FFd3 | ctrl_COPY_0_COPY_0 | 2155873280 | 9 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sendDone_IBUF | 1078 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | sendDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | timeout_IBUF | 1076 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | timeout_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trig_IBUF | 1063 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | trig_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FSRIO_1 | 1066 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 6 | 5 | II_FSR
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | state_FSM_FFd3.SI | state_FSM_FFd3 | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sendDone_IBUF | 1078 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | sendDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | timeout_IBUF | 1076 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | timeout_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trig_IBUF | 1063 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | trig_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | state_FSM_FFd3.D1 | 1095 | ? | 0 | 4096 | state_FSM_FFd3 | NULL | NULL | state_FSM_FFd3.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | state_FSM_FFd3.D2 | 1096 | ? | 0 | 4096 | state_FSM_FFd3 | NULL | NULL | state_FSM_FFd3.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | state_FSM_FFd3 | IV_TRUE | state_FSM_FFd2 | IV_TRUE | sendDone_IBUF
+SPPTERM | 4 | IV_TRUE | trig_IBUF | IV_FALSE | state_FSM_FFd3 | IV_FALSE | state_FSM_FFd2 | IV_FALSE | state_FSM_FFd1
+SPPTERM | 4 | IV_TRUE | state_FSM_FFd3 | IV_TRUE | state_FSM_FFd2 | IV_FALSE | rcvDone_IBUF | IV_FALSE | timeout_IBUF
+
+SRFF_INSTANCE | state_FSM_FFd3.REG | state_FSM_FFd3 | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | state_FSM_FFd3.D | 1094 | ? | 0 | 0 | state_FSM_FFd3 | NULL | NULL | state_FSM_FFd3.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+NODE | FSRIO_1 | 1066 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 6 | 5 | II_FSR
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | state_FSM_FFd3.Q | 1097 | ? | 0 | 0 | state_FSM_FFd3 | NULL | NULL | state_FSM_FFd3.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv+PrldLow+OptxMapped | state_FSM_FFd2 | ctrl_COPY_0_COPY_0 | 2155873536 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<0> | 1070 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<0>.Q | count<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<1> | 1071 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<1>.Q | count<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | timeout_IBUF | 1076 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | timeout_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FSRIO_1 | 1066 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 6 | 5 | II_FSR
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | state_FSM_FFd2.SI | state_FSM_FFd2 | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<0> | 1070 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<0>.Q | count<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<1> | 1071 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<1>.Q | count<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | timeout_IBUF | 1076 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | timeout_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | state_FSM_FFd2.D1 | 1099 | ? | 0 | 4096 | state_FSM_FFd2 | NULL | NULL | state_FSM_FFd2.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | state_FSM_FFd2.D2 | 1100 | ? | 0 | 4096 | state_FSM_FFd2 | NULL | NULL | state_FSM_FFd2.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | state_FSM_FFd3 | IV_FALSE | state_FSM_FFd2
+SPPTERM | 3 | IV_TRUE | state_FSM_FFd3 | IV_TRUE | state_FSM_FFd2 | IV_TRUE | rcvDone_IBUF
+SPPTERM | 5 | IV_TRUE | state_FSM_FFd3 | IV_TRUE | state_FSM_FFd2 | IV_TRUE | count<0> | IV_TRUE | count<1> | IV_TRUE | timeout_IBUF
+
+SRFF_INSTANCE | state_FSM_FFd2.REG | state_FSM_FFd2 | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | state_FSM_FFd2.D | 1098 | ? | 0 | 0 | state_FSM_FFd2 | NULL | NULL | state_FSM_FFd2.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+NODE | FSRIO_1 | 1066 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 6 | 5 | II_FSR
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | state_FSM_FFd2.Q | 1101 | ? | 0 | 0 | state_FSM_FFd2 | NULL | NULL | state_FSM_FFd2.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | checkOK_IBUF | ctrl_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | checkOK | 1090 | PI | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | checkOK_IBUF | 1074 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | checkOK_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | lastKey_IBUF | ctrl_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | lastKey | 1089 | PI | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | lastKey_IBUF | 1073 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | lastKey_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | state_FSM_FFd1 | ctrl_COPY_0_COPY_0 | 2155873280 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lastKey_IBUF | 1073 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | lastKey_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | checkOK_IBUF | 1074 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | checkOK_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FSRIO_1 | 1066 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 6 | 5 | II_FSR
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | state_FSM_FFd1.SI | state_FSM_FFd1 | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lastKey_IBUF | 1073 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | lastKey_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | checkOK_IBUF | 1074 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | checkOK_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | state_FSM_FFd1.D1 | 1103 | ? | 0 | 4096 | state_FSM_FFd1 | NULL | NULL | state_FSM_FFd1.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | state_FSM_FFd1.D2 | 1104 | ? | 0 | 4096 | state_FSM_FFd1 | NULL | NULL | state_FSM_FFd1.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | state_FSM_FFd3 | IV_TRUE | state_FSM_FFd2 | IV_TRUE | rcvDone_IBUF
+SPPTERM | 3 | IV_TRUE | state_FSM_FFd1 | IV_FALSE | lastKey_IBUF | IV_FALSE | checkOK_IBUF
+
+SRFF_INSTANCE | state_FSM_FFd1.REG | state_FSM_FFd1 | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | state_FSM_FFd1.D | 1102 | ? | 0 | 0 | state_FSM_FFd1 | NULL | NULL | state_FSM_FFd1.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+NODE | FSRIO_1 | 1066 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 6 | 5 | II_FSR
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | state_FSM_FFd1.Q | 1105 | ? | 0 | 0 | state_FSM_FFd1 | NULL | NULL | state_FSM_FFd1.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | count<0> | ctrl_COPY_0_COPY_0 | 2155877376 | 9 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<0> | 1070 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<0>.Q | count<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | timeout_IBUF | 1076 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | timeout_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<1> | 1071 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<1>.Q | count<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 1065 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | count<0> | 1070 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<0>.Q | count<0> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | count<0>.SI | count<0> | 0 | 8 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<0> | 1070 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<0>.Q | count<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | timeout_IBUF | 1076 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | timeout_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<1> | 1071 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<1>.Q | count<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 1065 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | count<0>.D1 | 1107 | ? | 0 | 4096 | count<0> | NULL | NULL | count<0>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | count<0>.D2 | 1108 | ? | 0 | 4096 | count<0> | NULL | NULL | count<0>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | state_FSM_FFd3 | IV_FALSE | state_FSM_FFd2 | IV_FALSE | state_FSM_FFd1 | IV_TRUE | count<0>
+SPPTERM | 5 | IV_TRUE | state_FSM_FFd3 | IV_TRUE | state_FSM_FFd2 | IV_FALSE | count<0> | IV_FALSE | rcvDone_IBUF | IV_TRUE | timeout_IBUF
+SPPTERM | 6 | IV_TRUE | state_FSM_FFd3 | IV_FALSE | state_FSM_FFd1 | IV_TRUE | count<0> | IV_FALSE | count<1> | IV_FALSE | rcvDone_IBUF | IV_TRUE | timeout_IBUF
+OUTPUT_NODE_TYPE | 10 | 9 | MC_SI_CE
+SIGNAL | NODE | count<0>.CE | 1109 | ? | 0 | 4096 | count<0> | NULL | NULL | count<0>.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 1 | IV_FALSE | reset_IBUF
+
+SRFF_INSTANCE | count<0>.REG | count<0> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | count<0>.D | 1106 | ? | 0 | 0 | count<0> | NULL | NULL | count<0>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 4 | 8 | SRFF_CE
+SIGNAL | NODE | count<0>.CE | 1109 | ? | 0 | 4096 | count<0> | NULL | NULL | count<0>.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 1 | IV_FALSE | reset_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | count<0>.Q | 1110 | ? | 0 | 0 | count<0> | NULL | NULL | count<0>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | count<1> | ctrl_COPY_0_COPY_0 | 2155877376 | 9 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<1> | 1071 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<1>.Q | count<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<0> | 1070 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<0>.Q | count<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | timeout_IBUF | 1076 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | timeout_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 1065 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | count<1> | 1071 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<1>.Q | count<1> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | count<1>.SI | count<1> | 0 | 8 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<1> | 1071 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<1>.Q | count<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | count<0> | 1070 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | count<0>.Q | count<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | rcvDone_IBUF | 1075 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rcvDone_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | timeout_IBUF | 1076 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | timeout_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 1065 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | count<1>.D1 | 1112 | ? | 0 | 4096 | count<1> | NULL | NULL | count<1>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | count<1>.D2 | 1113 | ? | 0 | 4096 | count<1> | NULL | NULL | count<1>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | state_FSM_FFd3 | IV_FALSE | state_FSM_FFd2 | IV_FALSE | state_FSM_FFd1 | IV_TRUE | count<1>
+SPPTERM | 6 | IV_TRUE | state_FSM_FFd3 | IV_TRUE | state_FSM_FFd2 | IV_TRUE | count<0> | IV_FALSE | count<1> | IV_FALSE | rcvDone_IBUF | IV_TRUE | timeout_IBUF
+OUTPUT_NODE_TYPE | 10 | 9 | MC_SI_CE
+SIGNAL | NODE | count<1>.CE | 1114 | ? | 0 | 4096 | count<1> | NULL | NULL | count<1>.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 1 | IV_FALSE | reset_IBUF
+
+SRFF_INSTANCE | count<1>.REG | count<1> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | count<1>.D | 1111 | ? | 0 | 0 | count<1> | NULL | NULL | count<1>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 4 | 8 | SRFF_CE
+SIGNAL | NODE | count<1>.CE | 1114 | ? | 0 | 4096 | count<1> | NULL | NULL | count<1>.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 1 | IV_FALSE | reset_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | count<1>.Q | 1115 | ? | 0 | 0 | count<1> | NULL | NULL | count<1>.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | nextSig | ctrl_COPY_0_COPY_0 | 2155877376 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 1065 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lastKey_IBUF | 1073 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | lastKey_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | checkOK_IBUF | 1074 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | checkOK_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | nextSig | 1072 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | nextSig.Q | nextSig | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | nextSig.SI | nextSig | 0 | 4 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 1065 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lastKey_IBUF | 1073 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | lastKey_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | checkOK_IBUF | 1074 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | checkOK_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nextSig.D1 | 1117 | ? | 0 | 4096 | nextSig | NULL | NULL | nextSig.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nextSig.D2 | 1118 | ? | 0 | 4096 | nextSig | NULL | NULL | nextSig.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_DC
+OUTPUT_NODE_TYPE | 10 | 9 | MC_SI_CE
+SIGNAL | NODE | nextSig.CE | 1119 | ? | 0 | 4096 | nextSig | NULL | NULL | nextSig.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 4 | IV_FALSE | reset_IBUF | IV_TRUE | state_FSM_FFd1 | IV_FALSE | lastKey_IBUF | IV_FALSE | checkOK_IBUF
+
+SRFF_INSTANCE | nextSig.REG | nextSig | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nextSig.D | 1116 | ? | 0 | 0 | nextSig | NULL | NULL | nextSig.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_0 | 1064 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | clk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 4 | 8 | SRFF_CE
+SIGNAL | NODE | nextSig.CE | 1119 | ? | 0 | 4096 | nextSig | NULL | NULL | nextSig.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 4 | IV_FALSE | reset_IBUF | IV_TRUE | state_FSM_FFd1 | IV_FALSE | lastKey_IBUF | IV_FALSE | checkOK_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nextSig.Q | 1120 | ? | 0 | 0 | nextSig | NULL | NULL | nextSig.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | timerstart_OBUF | ctrl_COPY_0_COPY_0 | 2155872256 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | timerstart_OBUF$Q | 1077 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | timerstart_OBUF.Q | timerstart_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | timerstart_OBUF.SI | timerstart_OBUF | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | timerstart_OBUF.D1 | 1122 | ? | 0 | 4096 | timerstart_OBUF | NULL | NULL | timerstart_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | timerstart_OBUF.D2 | 1123 | ? | 0 | 4096 | timerstart_OBUF | NULL | NULL | timerstart_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | state_FSM_FFd3 | IV_TRUE | state_FSM_FFd2
+
+SRFF_INSTANCE | timerstart_OBUF.REG | timerstart_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | timerstart_OBUF.D | 1121 | ? | 0 | 0 | timerstart_OBUF | NULL | NULL | timerstart_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | timerstart_OBUF.Q | 1124 | ? | 0 | 0 | timerstart_OBUF | NULL | NULL | timerstart_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | nextKey_OBUF | ctrl_COPY_0_COPY_0 | 2155872256 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nextSig | 1072 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | nextSig.Q | nextSig | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | nextKey_OBUF | 1079 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | nextKey_OBUF.Q | nextKey_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | nextKey_OBUF.SI | nextKey_OBUF | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd1 | 1069 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd1.Q | state_FSM_FFd1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | nextSig | 1072 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | nextSig.Q | nextSig | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | nextKey_OBUF.D1 | 1126 | ? | 0 | 4096 | nextKey_OBUF | NULL | NULL | nextKey_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | nextKey_OBUF.D2 | 1127 | ? | 0 | 4096 | nextKey_OBUF | NULL | NULL | nextKey_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | state_FSM_FFd1 | IV_TRUE | nextSig
+
+SRFF_INSTANCE | nextKey_OBUF.REG | nextKey_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | nextKey_OBUF.D | 1125 | ? | 0 | 0 | nextKey_OBUF | NULL | NULL | nextKey_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | nextKey_OBUF.Q | 1128 | ? | 0 | 0 | nextKey_OBUF | NULL | NULL | nextKey_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | rand_OBUF | ctrl_COPY_0_COPY_0 | 2155872256 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | rand_OBUF | 1080 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | rand_OBUF.Q | rand_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | rand_OBUF.SI | rand_OBUF | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | rand_OBUF.D1 | 1130 | ? | 0 | 4096 | rand_OBUF | NULL | NULL | rand_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | rand_OBUF.D2 | 1131 | ? | 0 | 4096 | rand_OBUF | NULL | NULL | rand_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | state_FSM_FFd3 | IV_FALSE | state_FSM_FFd2
+
+SRFF_INSTANCE | rand_OBUF.REG | rand_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | rand_OBUF.D | 1129 | ? | 0 | 0 | rand_OBUF | NULL | NULL | rand_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | rand_OBUF.Q | 1132 | ? | 0 | 0 | rand_OBUF | NULL | NULL | rand_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | timerstart_OBUF$BUF0 | ctrl_COPY_0_COPY_0 | 2155872256 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | timerstart_OBUF$BUF0 | 1081 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | timerstart_OBUF$BUF0.Q | timerstart_OBUF$BUF0 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | timerstart_OBUF$BUF0.SI | timerstart_OBUF$BUF0 | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd3 | 1067 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd3.Q | state_FSM_FFd3 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | state_FSM_FFd2 | 1068 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | state_FSM_FFd2.Q | state_FSM_FFd2 | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | timerstart_OBUF$BUF0.D1 | 1134 | ? | 0 | 4096 | timerstart_OBUF$BUF0 | NULL | NULL | timerstart_OBUF$BUF0.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | timerstart_OBUF$BUF0.D2 | 1135 | ? | 0 | 4096 | timerstart_OBUF$BUF0 | NULL | NULL | timerstart_OBUF$BUF0.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | state_FSM_FFd3 | IV_TRUE | state_FSM_FFd2
+
+SRFF_INSTANCE | timerstart_OBUF$BUF0.REG | timerstart_OBUF$BUF0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | timerstart_OBUF$BUF0.D | 1133 | ? | 0 | 0 | timerstart_OBUF$BUF0 | NULL | NULL | timerstart_OBUF$BUF0.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | timerstart_OBUF$BUF0.Q | 1136 | ? | 0 | 0 | timerstart_OBUF$BUF0 | NULL | NULL | timerstart_OBUF$BUF0.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | timerstart | ctrl_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | timerstart_OBUF$Q | 1077 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | timerstart_OBUF.Q | timerstart_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | timerstart | 1082 | PO | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | timerstart | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | nextKey | ctrl_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | nextKey_OBUF | 1079 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | nextKey_OBUF.Q | nextKey_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | nextKey | 1083 | PO | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | nextKey | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | rand | ctrl_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | rand_OBUF | 1080 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | rand_OBUF.Q | rand_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | rand | 1084 | PO | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | rand | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | send | ctrl_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | timerstart_OBUF$BUF0 | 1081 | ? | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | timerstart_OBUF$BUF0.Q | timerstart_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | send | 1085 | PO | 0 | 0 | ctrl_COPY_0_COPY_0 | NULL | NULL | send | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | ctrl_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | timerstart_OBUF$BUF0 | 1 | NULL | 0 | send | 1 | 1 | 49152
+FBPIN | 9 | NULL | 0 | clk_IBUF | 1 | NULL | 0 | 5 | 57344
+FBPIN | 16 | state_FSM_FFd2 | 1 | NULL | 0 | NULL | 0
+FBPIN | 17 | count<1> | 1 | NULL | 0 | NULL | 0 | 9 | 49152
+FBPIN | 18 | count<0> | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR2_ | ctrl_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | nextKey_OBUF | 1 | NULL | 0 | nextKey | 1 | 35 | 49152
+FBPIN | 5 | NULL | 0 | trig_IBUF | 1 | NULL | 0 | 36 | 49152
+FBPIN | 6 | NULL | 0 | checkOK_IBUF | 1 | NULL | 0 | 37 | 49152
+FBPIN | 9 | NULL | 0 | reset_IBUF | 1 | NULL | 0 | 39 | 51200
+FBPIN | 17 | nextSig | 1 | NULL | 0 | NULL | 0 | 44 | 49152
+FBPIN | 18 | state_FSM_FFd1 | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR3_ | ctrl_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | rand_OBUF | 1 | NULL | 0 | rand | 1 | 11 | 49152
+FBPIN | 8 | NULL | 0 | rcvDone_IBUF | 1 | NULL | 0 | 13 | 49152
+FBPIN | 14 | timerstart_OBUF | 1 | NULL | 0 | timerstart | 1 | 19 | 49152
+FBPIN | 18 | state_FSM_FFd3 | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR4_ | ctrl_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 11 | NULL | 0 | sendDone_IBUF | 1 | NULL | 0 | 28 | 49152
+FBPIN | 14 | NULL | 0 | lastKey_IBUF | 1 | NULL | 0 | 29 | 49152
+FBPIN | 17 | NULL | 0 | timeout_IBUF | 1 | NULL | 0 | 34 | 49152
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | ctrl_COPY_0_COPY_0 | 0 | 0 | 0
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 1 | timeout | 34 | 16 | count<1> | NULL | 17 | count<0> | NULL | 26 | rcvDone | 13 | 33 | state_FSM_FFd3 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 40 | reset | 39 | 49 | state_FSM_FFd1 | NULL | 52 | state_FSM_FFd2 | NULL
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | 73 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 16 | 17 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 142 | -1 | -1 | -1 | -1 | -1 | -1 | 53 | -1 | -1 | -1 | -1 | -1 | -1 | 86 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 35 | -1 | -1 | 15 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 10 | checkOK | 37 | 16 | nextSig | NULL | 17 | lastKey | 29 | 26 | rcvDone | 13 | 33 | state_FSM_FFd3 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 40 | reset | 39 | 49 | state_FSM_FFd1 | NULL | 52 | state_FSM_FFd2 | NULL
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 82 | -1 | -1 | -1 | -1 | -1 | 34 | 89 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 142 | -1 | -1 | -1 | -1 | -1 | -1 | 53 | -1 | -1 | -1 | -1 | -1 | -1 | 86 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 35 | -1 | -1 | 15 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 1 | timeout | 34 | 16 | rcvDone | 13 | 23 | trig | 36 | 33 | state_FSM_FFd3 | NULL | 38 | sendDone | 28
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 49 | state_FSM_FFd1 | NULL | 52 | state_FSM_FFd2 | NULL
+
+FB_IMUX_INDEX | FOOBAR3_ | -1 | 73 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 142 | -1 | -1 | -1 | -1 | -1 | -1 | 80 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 53 | -1 | -1 | -1 | -1 | 95 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 35 | -1 | -1 | 15 | -1
+
+
+GLOBAL_FCLK | clk | 0 | 0
+
+GLOBAL_FSR | reset | 0 | 0

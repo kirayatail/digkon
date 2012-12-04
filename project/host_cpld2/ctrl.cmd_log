@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "C:/workspace/digkon/project/host_cpld2/ctrl.xst" -ofn "C:/workspace/digkon/project/host_cpld2/ctrl.syr" 
+xst -intstyle ise -ifn "C:/workspace/digkon/project/host_cpld2/ctrl.xst" -ofn "C:/workspace/digkon/project/host_cpld2/ctrl.syr" 
+xst -intstyle ise -ifn "C:/workspace/digkon/project/host_cpld2/ctrl.xst" -ofn "C:/workspace/digkon/project/host_cpld2/ctrl.syr" 
+xst -intstyle ise -ifn "C:/workspace/digkon/project/host_cpld2/ctrl.xst" -ofn "C:/workspace/digkon/project/host_cpld2/ctrl.syr" 
+xst -intstyle ise -ifn "C:/workspace/digkon/project/host_cpld2/ctrl.xst" -ofn "C:/workspace/digkon/project/host_cpld2/ctrl.syr" 
+xst -intstyle ise -ifn "C:/workspace/digkon/project/host_cpld2/ctrl.xst" -ofn "C:/workspace/digkon/project/host_cpld2/ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 ctrl.ngc ctrl.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper ctrl.ngd 
+XSLTProcess ctrl_build.xml 
+tsim -intstyle ise ctrl ctrl.nga 
+taengine -intstyle ise -f ctrl -w --format html1 -l ctrl_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n ctrl -i ctrl 
