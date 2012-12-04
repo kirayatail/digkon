@@ -11,5 +11,11 @@
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/DigKon/project/digkon/test_projects/send_data/from_dip_to_tranciever.vhd&quot; into library work</arg>
 </msg>
 
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/DigKon/project/digkon/test_projects/send_data/lev2pulse.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/DigKon/project/digkon/test_projects/send_data/sync.vhd&quot; into library work</arg>
+</msg>
+
 </messages>
 

@@ -83,7 +83,6 @@ if reset = '0' then
 	count <= "00000001";
    en <= '0';
 
-
 elsif clk'event and clk = '1' then
 	en <= '0';
 	count <= count + 1;

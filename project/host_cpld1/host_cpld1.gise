@@ -69,16 +69,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1354284456" xil_pn:in_ck="-6630599067828085160" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="6830179341578115428" xil_pn:start_ts="1354284428">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
+    <transform xil_pn:end_ts="1354626116" xil_pn:in_ck="-6630599067828085160" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="6830179341578115428" xil_pn:start_ts="1354626108">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="send.lso"/>
       <outfile xil_pn:name="send.ngc"/>
       <outfile xil_pn:name="send.ngr"/>
       <outfile xil_pn:name="send.prj"/>
-      <outfile xil_pn:name="send.stx"/>
       <outfile xil_pn:name="send.syr"/>
       <outfile xil_pn:name="send.xst"/>
       <outfile xil_pn:name="send_vhdl.prj"/>
@@ -122,7 +120,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="send.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1354284769" xil_pn:in_ck="5035984464523" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1354284500">
+    <transform xil_pn:end_ts="1354622375" xil_pn:in_ck="5035984464523" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1354622373">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>

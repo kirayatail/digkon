@@ -118,6 +118,7 @@ end process p1;
 p2: process(clk, reset)
 begin
 if reset = '0' then
+--	count <= "00000001";
 	count <= "00000001";
    en <= '0';
 
@@ -126,8 +127,10 @@ elsif clk'event and clk = '1' then
 en <= '0';
 count <= count +1;
 
-if count = "11111111" then
-count <= "00000001";
+--if count = "11111111" then
+--count <= "00000001";
+	if count = "11111111" then
+	count <= "00000001";
 en <= '1';
 end if;
 end if;

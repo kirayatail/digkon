@@ -729,3 +729,51 @@ cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -lo
 XSLTProcess one_bit_build.xml 
 tsim -intstyle ise one_bit one_bit.nga 
 hprep6 -s IEEE1149 -n one_bit -i one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc one_bit.ucf -p xc9572xl-PC44-5 one_bit.ngc one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper one_bit.ngd 
+XSLTProcess one_bit_build.xml 
+tsim -intstyle ise one_bit one_bit.nga 
+hprep6 -s IEEE1149 -n one_bit -i one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.syr" 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc one_bit.ucf -p xc9572xl-PC44-5 one_bit.ngc one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper one_bit.ngd 
+hprep6 -s IEEE1149 -n one_bit -i one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc one_bit.ucf -p xc9572xl-PC44-5 one_bit.ngc one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper one_bit.ngd 
+XSLTProcess one_bit_build.xml 
+tsim -intstyle ise one_bit one_bit.nga 
+hprep6 -s IEEE1149 -n one_bit -i one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc one_bit.ucf -p xc9572xl-PC44-5 one_bit.ngc one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper one_bit.ngd 
+XSLTProcess one_bit_build.xml 
+tsim -intstyle ise one_bit one_bit.nga 
+hprep6 -s IEEE1149 -n one_bit -i one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc one_bit.ucf -p xc9572xl-PC44-5 one_bit.ngc one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper one_bit.ngd 
+XSLTProcess one_bit_build.xml 
+tsim -intstyle ise one_bit one_bit.nga 
+hprep6 -s IEEE1149 -n one_bit -i one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.syr" 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc one_bit.ucf -p xc9572xl-PC44-5 one_bit.ngc one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper one_bit.ngd 
+XSLTProcess one_bit_build.xml 
+tsim -intstyle ise one_bit one_bit.nga 
+hprep6 -s IEEE1149 -n one_bit -i one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc one_bit.ucf -p xc9572xl-PC44-5 one_bit.ngc one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper one_bit.ngd 
+XSLTProcess one_bit_build.xml 
+tsim -intstyle ise one_bit one_bit.nga 
+hprep6 -s IEEE1149 -n one_bit -i one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/send_data/one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc one_bit.ucf -p xc9572xl-PC44-5 one_bit.ngc one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper one_bit.ngd 
+XSLTProcess one_bit_build.xml 
+tsim -intstyle ise one_bit one_bit.nga 
+hprep6 -s IEEE1149 -n one_bit -i one_bit 

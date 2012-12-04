@@ -117,7 +117,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="recieve.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1354282759" xil_pn:in_ck="179431408812254116" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1354282758">
+    <transform xil_pn:end_ts="1354622300" xil_pn:in_ck="179431408812254116" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1354622298">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>

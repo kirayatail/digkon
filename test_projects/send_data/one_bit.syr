@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Reading design: one_bit.prj
 
@@ -82,8 +82,7 @@ Architecture behavioral of Entity sync is up to date.
 Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/lev2pulse.vhd" in Library work.
 Architecture arch of Entity lev2pulse is up to date.
 Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/from_dip_to_tranciever.vhd" in Library work.
-Entity <one_bit> compiled.
-Entity <one_bit> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity one_bit is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -103,7 +102,7 @@ WARNING:Xst:819 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_p
    <state>
 WARNING:Xst:819 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/from_dip_to_tranciever.vhd" line 81: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <in_signal>
-WARNING:Xst:753 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/from_dip_to_tranciever.vhd" line 139: Unconnected output port 'test_lamp' of component 'lev2pulse'.
+WARNING:Xst:753 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/test_projects/send_data/from_dip_to_tranciever.vhd" line 142: Unconnected output port 'test_lamp' of component 'lev2pulse'.
 Entity <one_bit> analyzed. Unit <one_bit> generated.
 
 Analyzing Entity <sync> in library <work> (Architecture <behavioral>).
@@ -271,12 +270,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 19.39 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.88 secs
  
 --> 
 
-Total memory usage is 245364 kilobytes
+Total memory usage is 249540 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   15 (   0 filtered)

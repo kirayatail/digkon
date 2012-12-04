@@ -305,3 +305,66 @@ cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -lo
 XSLTProcess recieve_one_bit_build.xml 
 tsim -intstyle ise recieve_one_bit recieve_one_bit.nga 
 hprep6 -s IEEE1149 -n recieve_one_bit -i recieve_one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+XSLTProcess recieve_one_bit_build.xml 
+tsim -intstyle ise recieve_one_bit recieve_one_bit.nga 
+hprep6 -s IEEE1149 -n recieve_one_bit -i recieve_one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+XSLTProcess recieve_one_bit_build.xml 
+tsim -intstyle ise recieve_one_bit recieve_one_bit.nga 
+taengine -intstyle ise -f recieve_one_bit -w --format html1 -l recieve_one_bit_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n recieve_one_bit -i recieve_one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+XSLTProcess recieve_one_bit_build.xml 
+tsim -intstyle ise recieve_one_bit recieve_one_bit.nga 
+hprep6 -s IEEE1149 -n recieve_one_bit -i recieve_one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+XSLTProcess recieve_one_bit_build.xml 
+tsim -intstyle ise recieve_one_bit recieve_one_bit.nga 
+taengine -intstyle ise -f recieve_one_bit -w --format html1 -l recieve_one_bit_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n recieve_one_bit -i recieve_one_bit 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.xst" -ofn "Z:/DigKon/project/digkon/test_projects/recieve_data/recieve_one_bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve_one_bit.ucf -p xc9572xl-PC44-5 recieve_one_bit.ngc recieve_one_bit.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve_one_bit.ngd 
+XSLTProcess recieve_one_bit_build.xml 
+tsim -intstyle ise recieve_one_bit recieve_one_bit.nga 
+hprep6 -s IEEE1149 -n recieve_one_bit -i recieve_one_bit 
