@@ -30,7 +30,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity checker is
-    Port ( word : in  STD_LOGIC_VECTOR (3 downto 0);
+    Port ( chall : in  STD_LOGIC_VECTOR (3 downto 0);
+			  resp : in STD_LOGIC_VECTOR (3 downto 0);
            nextKey : in  STD_LOGIC;
            reset : in  STD_LOGIC;
            lastKey : out  STD_LOGIC;
@@ -38,9 +39,30 @@ entity checker is
 end checker;
 
 architecture Behavioral of checker is
+component crypto is
+    Port ( plain : in  STD_LOGIC_VECTOR (3 downto 0);
+           key : in  STD_LOGIC_VECTOR (3 downto 0);
+           enc : out  STD_LOGIC_VECTOR (3 downto 0));
+end component;
+
+component keylookup is
+    Port ( getNext : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+           isLast : out  STD_LOGIC;
+           key : out  STD_LOGIC_VECTOR (3 downto 0));
+end component;
+signal currKey : STD_LOGIC_VECTOR (3 downto 0);
+signal answer : STD_LOGIC_VECTOR (3 downto 0);
 
 begin
-
+	-- Link crypto to keylookup and chall
+	-- Compare encode and resp
+	-- send OK if equals.
+	k1: keylookup port map (nextKey, reset, lastKey, currKey);
+	c1: crypto port map (chall, currKey, answer);
+	
+	found <= (resp = answer);
+	-- Don't forget to edit random to only use 4 bit data words!
 
 end Behavioral;
 

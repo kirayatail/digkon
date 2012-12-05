@@ -1,0 +1,75 @@
+MDF Database:  version 1.0
+MDF_INFO | checker | XC9572XL-5-PC44
+MACROCELL | 2 | 4 | found_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 7 | resp<1>  | chall<1>  | lastKey  | chall<0>  | resp<0>  | EXP6_.EXP  | EXP7_.EXP
+INPUTMC | 3 | 1 | 1 | 2 | 3 | 2 | 5
+INPUTP | 4 | 83 | 3 | 89 | 12
+IMPORTS | 2 | 2 | 3 | 2 | 5
+EQ | 16 | 
+   !found = resp<1> & chall<1>
+	# !resp<1> & !chall<1>
+	# lastKey & chall<0> & resp<0>
+	# lastKey & !chall<0> & !resp<0>
+	# !lastKey & !chall<0> & resp<0>
+;Imported pterms FB3_4
+	# lastKey & chall<3> & resp<3>
+	# lastKey & !chall<3> & !resp<3>
+	# !lastKey & chall<0> & !resp<0>
+	# !lastKey & chall<3> & !resp<3>
+	# !lastKey & !chall<3> & resp<3>
+;Imported pterms FB3_6
+	# lastKey & chall<2> & !resp<2>
+	# lastKey & !chall<2> & resp<2>
+	# !lastKey & chall<2> & resp<2>
+	# !lastKey & !chall<2> & !resp<2>;
+
+MACROCELL | 1 | 1 | XLXN_22<0>
+ATTRIBUTES | 4629250 | 0
+OUTPUTMC | 3 | 2 | 4 | 2 | 3 | 2 | 5
+INPUTS | 0
+EQ | 3 | 
+   lastKey.T = Vcc;
+   lastKey.CLK = nextKey;	// GCK
+   lastKey.AR = reset;	// GSR
+GLOBALS | 2 | 2 | nextKey | 4 | reset
+
+MACROCELL | 2 | 3 | EXP6_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 5 | lastKey  | chall<3>  | resp<3>  | chall<0>  | resp<0>
+INPUTMC | 1 | 1 | 1
+INPUTP | 4 | 62 | 90 | 89 | 12
+EXPORTS | 1 | 2 | 4
+EQ | 5 | 
+       EXP6_.EXP  =  lastKey & chall<3> & resp<3>
+	# lastKey & !chall<3> & !resp<3>
+	# !lastKey & chall<0> & !resp<0>
+	# !lastKey & chall<3> & !resp<3>
+	# !lastKey & !chall<3> & resp<3>
+
+MACROCELL | 2 | 5 | EXP7_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 3 | lastKey  | chall<2>  | resp<2>
+INPUTMC | 1 | 1 | 1
+INPUTP | 2 | 65 | 9
+EXPORTS | 1 | 2 | 4
+EQ | 4 | 
+       EXP7_.EXP  =  lastKey & chall<2> & !resp<2>
+	# lastKey & !chall<2> & resp<2>
+	# !lastKey & chall<2> & resp<2>
+	# !lastKey & !chall<2> & !resp<2>
+
+PIN | chall<1> | 64 | 0 | N/A | 3 | 1 | 2 | 4
+PIN | resp<1> | 64 | 0 | N/A | 83 | 1 | 2 | 4
+PIN | chall<0> | 64 | 0 | N/A | 89 | 2 | 2 | 4 | 2 | 3
+PIN | resp<0> | 64 | 0 | N/A | 12 | 2 | 2 | 4 | 2 | 3
+PIN | chall<3> | 64 | 0 | N/A | 62 | 1 | 2 | 3
+PIN | resp<3> | 64 | 0 | N/A | 90 | 1 | 2 | 3
+PIN | chall<2> | 64 | 0 | N/A | 65 | 1 | 2 | 5
+PIN | resp<2> | 64 | 0 | N/A | 9 | 1 | 2 | 5
+PIN | nextKey | 4096 | 0 | N/A | 20 | 1 | 1 | 1
+PIN | reset | 65536 | 0 | N/A | 92 | 1 | 1 | 1
+PIN | found | 536871040 | 0 | N/A | 31
+PIN | lastKey | 536871040 | 0 | N/A | 87

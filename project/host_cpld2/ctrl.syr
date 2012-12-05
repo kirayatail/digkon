@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: ctrl.prj
 
@@ -76,19 +76,18 @@ wysiwyg                            : NO
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" in Library work.
-Entity <ctrl> compiled.
-Entity <ctrl> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity ctrl is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <ctrl> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <ctrl> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <ctrl> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <ctrl> in library <work> (Architecture <behavioral>).
 Entity <ctrl> analyzed. Unit <ctrl> generated.
 
 
@@ -223,12 +222,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.43 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.37 secs
  
 --> 
 
-Total memory usage is 246932 kilobytes
+Total memory usage is 246676 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

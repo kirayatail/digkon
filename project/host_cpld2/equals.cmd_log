@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family xc9500xl -refsym equals C:/workspace/digkon/project/host_cpld2/equals.sch C:/workspace/digkon/project/host_cpld2/equals.sym 
+sch2sym -intstyle ise -family xc9500xl -refsym equals C:/workspace/digkon/project/host_cpld2/equals.sch C:/workspace/digkon/project/host_cpld2/equals.sym 
+sch2sym -intstyle ise -family xc9500xl -refsym equals C:/workspace/digkon/project/host_cpld2/equals.sch C:/workspace/digkon/project/host_cpld2/equals.sym 
+sch2sym -intstyle ise -family xc9500xl -refsym equals C:/workspace/digkon/project/host_cpld2/equals.sch C:/workspace/digkon/project/host_cpld2/equals.sym 

@@ -1,0 +1,83 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.3
+//  \   \         Application : sch2hdl
+//  /   /         Filename : checker.vf
+// /___/   /\     Timestamp : 12/05/2012 12:02:25
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/workspace/digkon/project/host_cpld2/checker.vf -w C:/workspace/digkon/project/host_cpld2/checker.sch
+//Design Name: checker
+//Device: xc9500xl
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module equals_MUSER_checker(A, 
+                            B, 
+                            result);
+
+    input [3:0] A;
+    input [3:0] B;
+   output result;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   
+   XNOR2  XLXI_2 (.I0(B[3]), 
+                 .I1(A[3]), 
+                 .O(XLXN_4));
+   XNOR2  XLXI_3 (.I0(B[2]), 
+                 .I1(A[2]), 
+                 .O(XLXN_3));
+   XNOR2  XLXI_4 (.I0(B[1]), 
+                 .I1(A[1]), 
+                 .O(XLXN_2));
+   XNOR2  XLXI_5 (.I0(B[0]), 
+                 .I1(A[0]), 
+                 .O(XLXN_1));
+   AND4  XLXI_6 (.I0(XLXN_4), 
+                .I1(XLXN_3), 
+                .I2(XLXN_2), 
+                .I3(XLXN_1), 
+                .O(result));
+endmodule
+`timescale 1ns / 1ps
+
+module checker(chall, 
+               nextKey, 
+               reset, 
+               resp, 
+               found, 
+               lastKey);
+
+    input [3:0] chall;
+    input nextKey;
+    input reset;
+    input [3:0] resp;
+   output found;
+   output lastKey;
+   
+   wire [3:0] XLXN_22;
+   wire [3:0] XLXN_23;
+   
+   keylookup  XLXI_12 (.getNext(nextKey), 
+                      .reset(reset), 
+                      .isLast(lastKey), 
+                      .key(XLXN_22[3:0]));
+   crypto  XLXI_15 (.key(XLXN_22[3:0]), 
+                   .plain(chall[3:0]), 
+                   .enc(XLXN_23[3:0]));
+   equals_MUSER_checker  XLXI_17 (.A(XLXN_23[3:0]), 
+                                 .B(resp[3:0]), 
+                                 .result(found));
+endmodule

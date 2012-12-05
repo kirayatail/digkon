@@ -1,0 +1,7 @@
+[Inputs]
+getNext
+reset
+[Outputs]
+isLast
+=key[3:0]=
+[BiDir]

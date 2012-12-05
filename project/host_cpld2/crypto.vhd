@@ -12,13 +12,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity crypto is
-    Port ( plain : in  STD_LOGIC_VECTOR (7 downto 0);
+    Port ( plain : in  STD_LOGIC_VECTOR (3 downto 0);
            key : in  STD_LOGIC_VECTOR (3 downto 0);
-           enc : out  STD_LOGIC_VECTOR (7 downto 0));
+           enc : out  STD_LOGIC_VECTOR (3 downto 0));
 end crypto;
 architecture Behavioral of crypto is
 begin
-	enc(7 downto 4) <= plain(7 downto 4) xor key;
 	enc(3 downto 0) <= plain(3 downto 0) xor key;
 
 end Behavioral;

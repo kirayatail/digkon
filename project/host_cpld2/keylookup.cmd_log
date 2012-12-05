@@ -1,0 +1,2 @@
+vhdtdtfi -lib work keylookup.vhd -prj host_cpld2 -o keylookup.spl -module keylookup -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl keylookup.spl C:/workspace/digkon/project/host_cpld2/keylookup.sym 

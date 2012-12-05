@@ -10,3 +10,5 @@ XSLTProcess ctrl_build.xml
 tsim -intstyle ise ctrl ctrl.nga 
 taengine -intstyle ise -f ctrl -w --format html1 -l ctrl_html/tim/timing_report.htm 
 hprep6 -s IEEE1149 -n ctrl -i ctrl 
+xst -intstyle ise -ifn "C:/workspace/digkon/project/host_cpld2/ctrl.xst" -ofn "C:/workspace/digkon/project/host_cpld2/ctrl.syr" 
+XSLTProcess ctrl_build.xml 

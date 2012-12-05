@@ -1,0 +1,8 @@
+sch2hdl -intstyle ise -family xc9500xl -verilog checker.vf -w C:/workspace/digkon/project/host_cpld2/checker.sch 
+xst -intstyle ise -ifn "C:/workspace/digkon/project/host_cpld2/checker.xst" -ofn "C:/workspace/digkon/project/host_cpld2/checker.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 checker.ngc checker.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper checker.ngd 
+tsim -intstyle ise checker checker.nga 
+taengine -intstyle ise -f checker -w --format html1 -l checker_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n checker -i checker 
+sch2sym -intstyle ise -family xc9500xl -refsym checker C:/workspace/digkon/project/host_cpld2/checker.sch C:/workspace/digkon/project/host_cpld2/checker.sym 

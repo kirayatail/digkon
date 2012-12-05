@@ -1,0 +1,4 @@
+vhdtdtfi -lib work crypto.vhd -prj host_cpld2 -o crypto.spl -module crypto -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl crypto.spl C:/workspace/digkon/project/host_cpld2/crypto.sym 
+vhdtdtfi -lib work crypto.vhd -prj host_cpld2 -o crypto.spl -module crypto -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl crypto.spl C:/workspace/digkon/project/host_cpld2/crypto.sym 
