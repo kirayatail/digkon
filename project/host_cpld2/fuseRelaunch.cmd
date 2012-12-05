@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/workspace/digkon/project/host_cpld2/ctrl_isim_beh.exe" -prj "C:/workspace/digkon/project/host_cpld2/ctrl_beh.prj" "work.ctrl" 

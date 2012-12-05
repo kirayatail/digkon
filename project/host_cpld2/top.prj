@@ -1,0 +1,7 @@
+vhdl work "keylookup.vhd"
+verilog work "equals.vf"
+vhdl work "crypto.vhd"
+vhdl work "timer.vhd"
+vhdl work "ctrl.vhd"
+verilog work "checker.vf"
+verilog work "top.vf"

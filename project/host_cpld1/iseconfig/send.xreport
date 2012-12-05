@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-12-04T14:10:34</DateModified>
+  <DateModified>2012-12-05T14:24:27</DateModified>
   <ModuleName>send</ModuleName>
   <SummaryTimeStamp>2012-12-04T14:01:57</SummaryTimeStamp>
-  <SavedFilePath>Z:/DigKon/project/digkon/project/host_cpld1/iseconfig/send.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/DigKon/project/digkon/project/host_cpld1\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/workspace/digkon/project/host_cpld1/iseconfig/send.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/workspace/digkon/project/host_cpld1\</ImplementationReportsDirectory>
   <DateInitialized>2012-11-30T13:35:59</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

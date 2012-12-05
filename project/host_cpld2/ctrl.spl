@@ -1,0 +1,17 @@
+[Inputs]
+clk
+reset
+trig
+timeout
+rcvDone
+sendDone
+checkOK
+lastKey
+[Outputs]
+rand
+send
+timerstart
+nextKey
+checkRst
+larmOut
+[BiDir]

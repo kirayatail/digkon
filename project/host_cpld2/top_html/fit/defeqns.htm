@@ -1,0 +1,94 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FTCPE_XLXI_1/count0: FTCPE port map (XLXI_1/count(0),XLXI_1/count_T(0),clk,'0','0',reset);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(0) <= ((XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/count(0) AND XLXI_9/timer(0) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5)));
+</td></tr><tr><td>
+FTCPE_XLXI_1/count1: FTCPE port map (XLXI_1/count(1),XLXI_1/count_T(1),clk,'0','0',reset);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(1) <= ((XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(0) AND XLXI_9/timer(0) AND NOT XLXI_1/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(1) AND XLXI_9/timer(2) AND XLXI_9/timer(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(4) AND XLXI_9/timer(5)));
+</td></tr><tr><td>
+FDCPE_XLXI_1/state_FSM_FFd1: FDCPE port map (XLXI_1/state_FSM_FFd1,XLXI_1/state_FSM_FFd1_D,clk,NOT reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/state_FSM_FFd1_D <= ((NOT XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5)));
+</td></tr><tr><td>
+FTCPE_XLXI_1/state_FSM_FFd2: FTCPE port map (XLXI_1/state_FSM_FFd2,XLXI_1/state_FSM_FFd2_T,clk,NOT reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/state_FSM_FFd2_T <= ((XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	senddone)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT trig)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/count(0) AND XLXI_9/timer(0) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5)));
+</td></tr><tr><td>
+FTCPE_XLXI_9/timer0: FTCPE port map (XLXI_9/timer(0),'1',lowclk,XLXI_9/timer_CLR(0),'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(0) <= (XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1);
+</td></tr><tr><td>
+FTCPE_XLXI_9/timer1: FTCPE port map (XLXI_9/timer(1),XLXI_9/timer(0),lowclk,XLXI_9/timer_CLR(1),'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(1) <= (XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1);
+</td></tr><tr><td>
+FTCPE_XLXI_9/timer2: FTCPE port map (XLXI_9/timer(2),XLXI_9/timer_T(2),lowclk,XLXI_9/timer_CLR(2),'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_T(2) <= (XLXI_9/timer(0) AND XLXI_9/timer(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(2) <= (XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1);
+</td></tr><tr><td>
+FTCPE_XLXI_9/timer3: FTCPE port map (XLXI_9/timer(3),XLXI_9/timer_T(3),lowclk,XLXI_9/timer_CLR(3),'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_T(3) <= (XLXI_9/timer(0) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(3) <= (XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1);
+</td></tr><tr><td>
+FTCPE_XLXI_9/timer4: FTCPE port map (XLXI_9/timer(4),XLXI_9/timer_T(4),lowclk,XLXI_9/timer_CLR(4),'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_T(4) <= (XLXI_9/timer(0) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(4) <= (XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1);
+</td></tr><tr><td>
+FTCPE_XLXI_9/timer5: FTCPE port map (XLXI_9/timer(5),XLXI_9/timer_T(5),lowclk,XLXI_9/timer_CLR(5),'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_T(5) <= (XLXI_9/timer(0) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(5) <= (XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1);
+</td></tr><tr><td>
+</td></tr><tr><td>
+larm <= '0';
+</td></tr><tr><td>
+</td></tr><tr><td>
+rand <= (XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1);
+</td></tr><tr><td>
+</td></tr><tr><td>
+send <= (XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1);
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

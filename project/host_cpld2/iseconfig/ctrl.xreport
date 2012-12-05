@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-12-05T11:53:07</DateModified>
-  <ModuleName>checker</ModuleName>
+  <DateModified>2012-12-05T13:45:00</DateModified>
+  <ModuleName>top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/workspace/digkon/project/host_cpld2/iseconfig/ctrl.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/workspace/digkon/project/host_cpld2</ImplementationReportsDirectory>
-  <DateInitialized>2012-12-05T11:53:06</DateInitialized>
+  <ImplementationReportsDirectory>C:/workspace/digkon/project/host_cpld2\</ImplementationReportsDirectory>
+  <DateInitialized>2012-12-05T13:45:00</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

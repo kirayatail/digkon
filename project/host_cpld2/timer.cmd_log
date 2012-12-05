@@ -1,0 +1,2 @@
+vhdtdtfi -lib work timer.vhd -prj host_cpld2 -o timer.spl -module timer -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl timer.spl C:/workspace/digkon/project/host_cpld2/timer.sym 
