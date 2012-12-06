@@ -15,13 +15,13 @@ begin
 	process(clk, reset)
 	begin
 		if reset = '0' then
-			count <= "000000001";
+			count <= "00000001";
 			done <= '0';
 		elsif clk'event and clk = '1' then
 			done <= '0';
 			count <= count +1;
-			if count = "111111111" then
-				count <= "000000001";
+			if count = "11111111" then
+				count <= "00000001";
 				done <= '1';
 			end if;
 		end if;

@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.28xd
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
-11-30-2012  3:08PM
+12- 6-2012  3:40PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -22,7 +22,7 @@ P1|lmp<0>|O|I/O|OUTPUT|||||||||
 P2|lmp<1>|O|I/O|OUTPUT|||||||||
 P3|lmp<2>|O|I/O|OUTPUT|||||||||
 P4|lmp<3>|O|I/O|OUTPUT|||||||||
-P5|clk|GCK/I|I/O/GCK1||||||||||
+P5|clk|GCK|I/O/GCK1||||||||||
 P6|enable|I|I/O/GCK2|INPUT|||||||||
 P7|TIE||I/O/GCK3||||||||||
 P8|TIE||I/O||||||||||
@@ -31,7 +31,7 @@ P10|GND||GND||||||||||
 P11|TIE||I/O||||||||||
 P12|TIE||I/O||||||||||
 P13|transmitter|O|I/O|OUTPUT|||||||||
-P14|TIE||I/O||||||||||
+P14|reciever|I|I/O|INPUT|||||||||
 P15|TDI||TDI||||||||||
 P16|TMS||TMS||||||||||
 P17|TCK||TCK||||||||||

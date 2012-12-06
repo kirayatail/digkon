@@ -6,3 +6,34 @@ XSLTProcess recieve_build.xml
 tsim -intstyle ise recieve recieve.nga 
 taengine -intstyle ise -f recieve -w --format html1 -l recieve_html/tim/timing_report.htm 
 hprep6 -s IEEE1149 -n recieve -i recieve 
+xst -intstyle ise -ifn "C:/Projekt/client_cpld1/recieve.xst" -ofn "C:/Projekt/client_cpld1/recieve.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve.ucf -p xc9572xl-PC44-5 recieve.ngc recieve.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve.ngd 
+XSLTProcess recieve_build.xml 
+tsim -intstyle ise recieve recieve.nga 
+hprep6 -s IEEE1149 -n recieve -i recieve 
+xst -intstyle ise -ifn "C:/Projekt/client_cpld1/recieve.xst" -ofn "C:/Projekt/client_cpld1/recieve.syr" 
+xst -intstyle ise -ifn "C:/Projekt/client_cpld1/recieve.xst" -ofn "C:/Projekt/client_cpld1/recieve.syr" 
+xst -intstyle ise -ifn "C:/Projekt/client_cpld1/recieve.xst" -ofn "C:/Projekt/client_cpld1/recieve.syr" 
+xst -intstyle ise -ifn "C:/Projekt/client_cpld1/recieve.xst" -ofn "C:/Projekt/client_cpld1/recieve.syr" 
+xst -intstyle ise -ifn "C:/Projekt/client_cpld1/recieve.xst" -ofn "C:/Projekt/client_cpld1/recieve.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve.ucf -p xc9572xl-PC44-5 recieve.ngc recieve.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve.ngd 
+XSLTProcess recieve_build.xml 
+tsim -intstyle ise recieve recieve.nga 
+hprep6 -s IEEE1149 -n recieve -i recieve 
+xst -intstyle ise -ifn "C:/Projekt/client_cpld1/recieve.xst" -ofn "C:/Projekt/client_cpld1/recieve.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve.ucf -p xc9572xl-PC44-5 recieve.ngc recieve.ngd  
+xst -intstyle ise -ifn "C:/Projekt/client_cpld1/recieve.xst" -ofn "C:/Projekt/client_cpld1/recieve.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve.ucf -p xc9572xl-PC44-5 recieve.ngc recieve.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc recieve.ucf -p xc9572xl-PC44-5 recieve.ngc recieve.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve.ngd 
+XSLTProcess recieve_build.xml 
+tsim -intstyle ise recieve recieve.nga 
+hprep6 -s IEEE1149 -n recieve -i recieve 
+xst -intstyle ise -ifn "C:/Projekt/client_cpld1/recieve.xst" -ofn "C:/Projekt/client_cpld1/recieve.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc recieve.ucf -p xc9572xl-PC44-5 recieve.ngc recieve.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper recieve.ngd 
+XSLTProcess recieve_build.xml 
+tsim -intstyle ise recieve recieve.nga 
+hprep6 -s IEEE1149 -n recieve -i recieve 

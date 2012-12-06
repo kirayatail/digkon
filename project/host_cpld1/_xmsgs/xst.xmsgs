@@ -5,10 +5,50 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="3384" delta="new" >&quot;<arg fmt="%s" index="1">//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld1/counter.vhd</arg>&quot; Line <arg fmt="%d" index="2">18</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">000000001</arg>&quot; is of size <arg fmt="%u" index="4">9</arg> but is expected to be of size <arg fmt="%u" index="5">8</arg>.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/send</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Projekt/host_cpld1/send.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/send.vhd</arg>&quot;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3384" delta="new" >&quot;<arg fmt="%s" index="1">//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld1/counter.vhd</arg>&quot; Line <arg fmt="%d" index="2">24</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">000000001</arg>&quot; is of size <arg fmt="%u" index="4">9</arg> but is expected to be of size <arg fmt="%u" index="5">8</arg>.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/send/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Projekt/host_cpld1/send.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/send.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/counter</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Projekt/host_cpld1/counter.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/counter.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/counter/arch</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Projekt/host_cpld1/counter.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/counter.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/send.vhd</arg>&quot; line <arg fmt="%d" index="2">41</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;in_signal&gt;</arg>
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">lmp&lt;0&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">send</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">lmp&lt;3:1&gt;</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">count</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">transmitter</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">pause</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">5</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">nstate_re</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">5</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">nstate_tr</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 </msg>
 
 </messages>
