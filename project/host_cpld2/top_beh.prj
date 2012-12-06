@@ -1,0 +1,8 @@
+vhdl work "keylookup.vhd"
+verilog work "equals.vf"
+vhdl work "crypto.vhd"
+vhdl work "timer.vhd"
+vhdl work "ctrl.vhd"
+verilog work "checker.vf"
+verilog work "top.vf"
+verilog work "C:/Xilinx/14.3/ISE_DS/ISE//verilog/src/glbl.v"
