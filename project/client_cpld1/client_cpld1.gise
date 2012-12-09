@@ -25,6 +25,14 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="counter.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="counter.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="crypto.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="crypto.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="ctrl.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ctrl.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="receiver.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="receiver.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="recieve.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="recieve.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="recieve.gyd"/>
@@ -55,6 +63,40 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="recieve_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="recieve_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="recieve_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="sender.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="sender.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="top.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="top.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="top.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="top.jed"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="top.jhd"/>
+    <file xil_pn:fileType="FILE_LFP" xil_pn:name="top.lfp"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="top.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="top.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="top.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="top.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="top.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="top.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="top.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="top.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="top.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="top.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="top.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="top.syr"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="top.tim"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="top.tspec"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="top.vf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="top.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="top.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="top.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="top_build.xml"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="top_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="top_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="top_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="top_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="top_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="top_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="top_xst.xrpt"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -65,68 +107,67 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1354801834" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7010322539899971360" xil_pn:start_ts="1354801834">
+    <transform xil_pn:end_ts="1355080034" xil_pn:in_ck="154288917887" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="4609711123863737754" xil_pn:start_ts="1355080032">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="top.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1354802314" xil_pn:in_ck="-1951238215070100925" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="7654446349847365565" xil_pn:start_ts="1354802290">
+    <transform xil_pn:end_ts="1355080041" xil_pn:in_ck="6532081779938865977" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="4669839836528774231" xil_pn:start_ts="1355080034">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="recieve.lso"/>
-      <outfile xil_pn:name="recieve.ngc"/>
-      <outfile xil_pn:name="recieve.ngr"/>
-      <outfile xil_pn:name="recieve.prj"/>
-      <outfile xil_pn:name="recieve.stx"/>
-      <outfile xil_pn:name="recieve.syr"/>
-      <outfile xil_pn:name="recieve.xst"/>
-      <outfile xil_pn:name="recieve_vhdl.prj"/>
-      <outfile xil_pn:name="recieve_xst.xrpt"/>
+      <outfile xil_pn:name="top.jhd"/>
+      <outfile xil_pn:name="top.lso"/>
+      <outfile xil_pn:name="top.ngc"/>
+      <outfile xil_pn:name="top.ngr"/>
+      <outfile xil_pn:name="top.prj"/>
+      <outfile xil_pn:name="top.stx"/>
+      <outfile xil_pn:name="top.syr"/>
+      <outfile xil_pn:name="top.xst"/>
+      <outfile xil_pn:name="top_vhdl.prj"/>
+      <outfile xil_pn:name="top_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1354801893" xil_pn:in_ck="179431408812266031" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8194157928585763003" xil_pn:start_ts="1354801893">
+    <transform xil_pn:end_ts="1355078083" xil_pn:in_ck="154288920063" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3734212952611957" xil_pn:start_ts="1355078082">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1354802333" xil_pn:in_ck="-8971692167243594888" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1354802314">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="recieve.bld"/>
-      <outfile xil_pn:name="recieve.ngd"/>
-      <outfile xil_pn:name="recieve_ngdbuild.xrpt"/>
-    </transform>
-    <transform xil_pn:end_ts="1354802347" xil_pn:in_ck="179431408812258538" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="200342955521051637" xil_pn:start_ts="1354802333">
+    <transform xil_pn:end_ts="1355080047" xil_pn:in_ck="-5309018480343564991" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1355080041">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="recieve.gyd"/>
-      <outfile xil_pn:name="recieve.mfd"/>
-      <outfile xil_pn:name="recieve.nga"/>
-      <outfile xil_pn:name="recieve.pad"/>
-      <outfile xil_pn:name="recieve.pnx"/>
-      <outfile xil_pn:name="recieve.rpt"/>
-      <outfile xil_pn:name="recieve.tim"/>
-      <outfile xil_pn:name="recieve.tspec"/>
-      <outfile xil_pn:name="recieve.vm6"/>
-      <outfile xil_pn:name="recieve.xml"/>
-      <outfile xil_pn:name="recieve_build.xml"/>
-      <outfile xil_pn:name="recieve_html"/>
-      <outfile xil_pn:name="recieve_pad.csv"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="top.bld"/>
+      <outfile xil_pn:name="top.ngd"/>
+      <outfile xil_pn:name="top_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1354802350" xil_pn:in_ck="179431408812267402" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1354802347">
+    <transform xil_pn:end_ts="1355080058" xil_pn:in_ck="5189099272945369700" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="6453728859599101509" xil_pn:start_ts="1355080047">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="top.gyd"/>
+      <outfile xil_pn:name="top.mfd"/>
+      <outfile xil_pn:name="top.nga"/>
+      <outfile xil_pn:name="top.pad"/>
+      <outfile xil_pn:name="top.pnx"/>
+      <outfile xil_pn:name="top.rpt"/>
+      <outfile xil_pn:name="top.tim"/>
+      <outfile xil_pn:name="top.tspec"/>
+      <outfile xil_pn:name="top.vm6"/>
+      <outfile xil_pn:name="top.xml"/>
+      <outfile xil_pn:name="top_build.xml"/>
+      <outfile xil_pn:name="top_html"/>
+      <outfile xil_pn:name="top_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1355080060" xil_pn:in_ck="5189477042823926692" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1355080058">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="recieve.jed"/>
+      <outfile xil_pn:name="top.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1354802353" xil_pn:in_ck="179431408812254116" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1354802352">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1354282747" xil_pn:in_ck="179431408812267402" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1354282742">
+    <transform xil_pn:end_ts="1355078105" xil_pn:in_ck="5189477042823926692" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1355078100">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>

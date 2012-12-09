@@ -1,0 +1,4 @@
+vhdtdtfi -lib work ctrl.vhd -prj client_cpld1 -o ctrl.spl -module ctrl -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl ctrl.spl C:/workspace/digkon/project/client_cpld1/ctrl.sym 
+vhdtdtfi -lib work ctrl.vhd -prj client_cpld1 -o ctrl.spl -module ctrl -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl ctrl.spl C:/workspace/digkon/project/client_cpld1/ctrl.sym 

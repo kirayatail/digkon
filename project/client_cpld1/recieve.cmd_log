@@ -37,3 +37,9 @@ cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -lo
 XSLTProcess recieve_build.xml 
 tsim -intstyle ise recieve recieve.nga 
 hprep6 -s IEEE1149 -n recieve -i recieve 
+xst -intstyle ise -ifn "C:/workspace/digkon/project/client_cpld1/recieve.xst" -ofn "C:/workspace/digkon/project/client_cpld1/recieve.syr" 
+XSLTProcess recieve_build.xml 
+XSLTProcess recieve_build.xml 
+XSLTProcess recieve_build.xml 
+XSLTProcess recieve_build.xml 
+XSLTProcess recieve_build.xml 

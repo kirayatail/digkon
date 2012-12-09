@@ -14,14 +14,14 @@ signal count: STD_LOGIC_VECTOR(7 downto 0);
 begin	
 	process(clk, reset)
 	begin
-		if reset = '0' then
-			count <= "00000001";
+		if reset = '1' then
+			count <= "00000000";
 			done <= '0';
 		elsif clk'event and clk = '1' then
 			done <= '0';
 			count <= count +1;
 			if count = "11111111" then
-				count <= "00000001";
+				count <= "00000000";
 				done <= '1';
 			end if;
 		end if;
