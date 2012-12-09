@@ -39,7 +39,7 @@ entity receiver is
 end receiver;
 
 architecture Behavioral of receiver is
-type state_type is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17);
+type state_type is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,sWait);
 signal state : state_type;
 signal data : STD_LOGIC_VECTOR (3 downto 0);
 begin
@@ -66,13 +66,14 @@ begin
 				when s14 => data(1) <= receiver; state <= s15;
 				when s15 => data(2) <= receiver; state <= s16;
 				when s16 => data(3) <= receiver; state <= s17;
-				when s17 => state <= s17;
+				when s17 => if receiver = '0' then state <= sWait; else state <= s1; end if;
+				when sWait => state <= sWait;
 			end case;
 		end if;
 	end process;
 	
 	rcvData <= data;
-	rcvDone <= '1' when (state = s15) else '0';
+	rcvDone <= '1' when (state = sWait) else '0';
 	
 end Behavioral;
 
