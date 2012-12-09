@@ -1,7 +1,7 @@
  
 cpldfit:  version P.28xd                            Xilinx Inc.
                                   Fitter Report
-Design Name: recieve                             Date: 11-30-2012,  2:38PM
+Design Name: recieve                             Date: 12- 6-2012,  2:58PM
 Device Used: XC9572XL-5-PC44
 Fitting Status: Successful
 
@@ -9,18 +9,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-33 /72  ( 46%) 91  /360  ( 25%) 34 /216 ( 16%)   23 /72  ( 32%) 7  /34  ( 21%)
+51 /72  ( 71%) 166 /360  ( 46%) 68 /216 ( 31%)   34 /72  ( 47%) 4  /34  ( 12%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-FB1          18/18*      12/54       70/90       5/ 9
-FB2          10/18       12/54       11/90       1/ 9
-FB3           5/18       10/54       10/90       1/ 9
-FB4           0/18        0/54        0/90       0/ 7
+FB1          13/18       21/54       35/90       1/ 9
+FB2          14/18       21/54       35/90       1/ 9
+FB3          16/18       14/54       80/90       2/ 9
+FB4           8/18       12/54       16/90       0/ 7
              -----       -----       -----      -----    
-             33/72       34/216      91/360      7/34 
+             51/72       68/216     166/360      4/34 
 
 * - Resource is exhausted
 
@@ -34,18 +34,18 @@ Signal 'reset' mapped onto global set/reset net GSR.
 
 Signal Type    Required     Mapped  |  Pin Type            Used    Total 
 ------------------------------------|------------------------------------
-Input         :    1           1    |  I/O              :     5      28
-Output        :    4           4    |  GCK/IO           :     1       3
+Input         :    1           1    |  I/O              :     2      28
+Output        :    1           1    |  GCK/IO           :     1       3
 Bidirectional :    0           0    |  GTS/IO           :     0       2
 GCK           :    1           1    |  GSR/IO           :     1       1
 GTS           :    0           0    |
 GSR           :    1           1    |
                  ----        ----
-        Total      7           7
+        Total      4           4
 
 ** Power Data **
 
-There are 33 macrocells in high performance mode (MCHP).
+There are 51 macrocells in high performance mode (MCHP).
 There are 0 macrocells in low power mode (MCLP).
 End of Mapped Resource Summary
 **************************  Errors and Warnings  ***************************
@@ -59,56 +59,77 @@ INFO:Cpld - Inferring BUFG constraint for signal 'clk' based upon the LOC
    ignored.
 *************************  Summary of Mapped Logic  ************************
 
-** 4 Outputs **
+** 1 Outputs **
 
-Signal                          Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
-Name                            Pts   Inps          No.  Type    Use     Mode Rate State
-lmp<0>                          2     6     FB1_2   1    I/O     O       STD  FAST RESET
-lmp<1>                          2     6     FB1_5   2    I/O     O       STD  FAST RESET
-lmp<2>                          2     6     FB1_6   3    I/O     O       STD  FAST RESET
-lmp<3>                          2     6     FB1_8   4    I/O     O       STD  FAST RESET
+Signal                                                Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                                                  Pts   Inps          No.  Type    Use     Mode Rate State
+transmitter                                           2     2     FB3_8   13   I/O     O       STD  FAST RESET
 
-** 29 Buried Nodes **
+** 50 Buried Nodes **
 
-Signal                          Total Total Loc     Pwr  Reg Init
-Name                            Pts   Inps          Mode State
-nstate<4>/nstate<4>_SETF        2     5     FB1_1   STD  
-state<2>                        2     4     FB1_3   STD  RESET
-state<1>                        2     4     FB1_4   STD  RESET
-state<0>                        2     4     FB1_7   STD  RESET
-$OpTx$FX_DC$22                  2     5     FB1_9   STD  
-nstate<1>/nstate<1>_SETF        4     6     FB1_10  STD  
-nstate<3>/nstate<3>_SETF        5     6     FB1_11  STD  
-nstate<2>/nstate<2>_SETF        5     6     FB1_12  STD  
-nstate<0>/nstate<0>_SETF        5     6     FB1_13  STD  
-nstate<0>/nstate<0>_RSTF        5     6     FB1_14  STD  
-nstate<1>/nstate<1>_RSTF        8     6     FB1_15  STD  
-nstate<3>/nstate<3>_RSTF__$INT  9     6     FB1_16  STD  
-state<3>                        2     4     FB1_17  STD  RESET
-nstate<2>/nstate<2>_RSTF        9     6     FB1_18  STD  
-x1/count<7>                     1     7     FB2_9   STD  RESET
-x1/count<6>                     1     6     FB2_10  STD  RESET
-x1/count<5>                     1     5     FB2_11  STD  RESET
-x1/count<4>                     1     4     FB2_12  STD  RESET
-x1/count<3>                     1     3     FB2_13  STD  RESET
-x1/count<2>                     1     2     FB2_14  STD  RESET
-x1/count<1>                     1     1     FB2_15  STD  RESET
-x1/count<0>                     1     8     FB2_16  STD  RESET
-en                              1     8     FB2_17  STD  RESET
-state<4>                        2     4     FB2_18  STD  RESET
-nstate<4>                       2     2     FB3_14  STD  RESET
-nstate<3>                       2     2     FB3_15  STD  RESET
-nstate<2>                       2     2     FB3_16  STD  RESET
-nstate<1>                       2     2     FB3_17  STD  RESET
-nstate<0>                       2     2     FB3_18  STD  RESET
+Signal                                                Total Total Loc     Pwr  Reg Init
+Name                                                  Pts   Inps          Mode State
+transmitter_mux0001/transmitter_mux0001_D2            19    11    FB1_1   STD  
+x1/count<7>                                           1     7     FB1_6   STD  RESET
+x1/count<6>                                           1     6     FB1_7   STD  RESET
+x1/count<5>                                           1     5     FB1_8   STD  RESET
+x1/count<4>                                           1     4     FB1_9   STD  RESET
+x1/count<3>                                           1     3     FB1_10  STD  RESET
+x1/count<2>                                           1     2     FB1_11  STD  RESET
+x1/count<1>                                           1     1     FB1_12  STD  RESET
+x1/count<0>                                           1     8     FB1_13  STD  RESET
+en                                                    1     8     FB1_14  STD  RESET
+state_tr<0>                                           2     2     FB1_15  STD  RESET
+nstate_tr<4>/nstate_tr<4>_SETF                        2     5     FB1_16  STD  
+nstate_tr<1>/nstate_tr<1>_SETF                        3     5     FB1_17  STD  
+state_tr<4>                                           2     2     FB2_5   STD  RESET
+state_tr<3>                                           2     2     FB2_6   STD  RESET
+state_tr<2>                                           2     2     FB2_7   STD  RESET
+state_tr<1>                                           2     2     FB2_8   STD  RESET
+nstate_re<4>/nstate_re<4>_SETF                        2     5     FB2_9   STD  
+state_re<4>                                           3     5     FB2_10  STD  RESET
+state_re<3>                                           3     5     FB2_11  STD  RESET
+state_re<2>                                           3     5     FB2_12  STD  RESET
+state_re<1>                                           3     5     FB2_13  STD  RESET
+state_re<0>                                           3     5     FB2_14  STD  RESET
+nstate_re<2>                                          2     2     FB2_15  STD  RESET
+nstate_re<0>                                          2     2     FB2_16  STD  RESET
+buffert<3>                                            2     6     FB2_17  STD  RESET
+nstate_re<2>/nstate_re<2>_SETF                        4     6     FB2_18  STD  
+nstate_re<3>/nstate_re<3>_RSTF__$INT                  10    6     FB3_1   STD  
+pause_and0000/pause_and0000_D2                        1     11    FB3_2   STD  
+buffert<2>                                            2     6     FB3_3   STD  RESET
+buffert<1>                                            2     6     FB3_4   STD  RESET
+buffert<0>                                            2     6     FB3_5   STD  RESET
+nstate_tr_mux0001<0>/nstate_tr_mux0001<0>_D2          5     11    FB3_6   STD  
+nstate_re_or0000/nstate_re_or0000_D2                  5     6     FB3_7   STD  
+nstate_re<3>/nstate_re<3>_SETF                        5     6     FB3_9   STD  
+nstate_re<1>/nstate_re<1>_SETF                        5     6     FB3_10  STD  
+pause                                                 6     12    FB3_11  STD  
+nstate_re<1>/nstate_re<1>_RSTF                        6     6     FB3_12  STD  
+nstate_tr<2>/nstate_tr<2>_RSTF                        7     11    FB3_14  STD  
+nstate_re_mux0001<0>/nstate_re_mux0001<0>_D2          7     6     FB3_15  STD  
+
+Signal                                                Total Total Loc     Pwr  Reg Init
+Name                                                  Pts   Inps          Mode State
+$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854  7     11    FB3_17  STD  
+nstate_tr<3>/nstate_tr<3>_RSTF                        8     11    FB3_18  STD  
+nstate_tr<4>                                          2     2     FB4_11  STD  RESET
+nstate_tr<3>                                          2     2     FB4_12  STD  RESET
+nstate_tr<2>                                          2     2     FB4_13  STD  RESET
+nstate_tr<1>                                          2     2     FB4_14  STD  RESET
+nstate_tr<0>                                          2     2     FB4_15  STD  RESET
+nstate_re<4>                                          2     2     FB4_16  STD  RESET
+nstate_re<3>                                          2     2     FB4_17  STD  RESET
+nstate_re<1>                                          2     2     FB4_18  STD  RESET
 
 ** 3 Inputs **
 
-Signal                          Loc     Pin  Pin     Pin     
-Name                                    No.  Type    Use     
-clk                             FB1_9   5    GCK/I/O GCK
-reset                           FB2_9   39   GSR/I/O GSR/I
-reciever                        FB3_9   14   I/O     I
+Signal                                                Loc     Pin  Pin     Pin     
+Name                                                          No.  Type    Use     
+clk                                                   FB1_9   5    GCK/I/O GCK/I
+reset                                                 FB2_9   39   GSR/I/O GSR/I
+reciever                                              FB3_9   14   I/O     I
 
 Legend:
 Pin No. - ~ - User Assigned
@@ -126,161 +147,192 @@ Pin Type/Use - I  - Input             GCK - Global Clock
 X            - Signal used as input to the macrocell logic.
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
-Number of function block inputs used/remaining:               12/42
-Number of signals used by logic mapping into function block:  12
+Number of function block inputs used/remaining:               21/33
+Number of signals used by logic mapping into function block:  21
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-nstate<4>/nstate<4>_SETF
-                      2       2<- /\5   0     FB1_1         (b)     (b)
-lmp<0>                2       0   /\2   1     FB1_2   1     I/O     O
-state<2>              2       0     0   3     FB1_3         (b)     (b)
-state<1>              2       0     0   3     FB1_4         (b)     (b)
-lmp<1>                2       0     0   3     FB1_5   2     I/O     O
-lmp<2>                2       0     0   3     FB1_6   3     I/O     O
-state<0>              2       0     0   3     FB1_7         (b)     (b)
-lmp<3>                2       0     0   3     FB1_8   4     I/O     O
-$OpTx$FX_DC$22        2       0   \/2   1     FB1_9   5     GCK/I/O GCK
-nstate<1>/nstate<1>_SETF
-                      4       2<- \/3   0     FB1_10        (b)     (b)
-nstate<3>/nstate<3>_SETF
-                      5       3<- \/3   0     FB1_11  6     GCK/I/O (b)
-nstate<2>/nstate<2>_SETF
-                      5       3<- \/3   0     FB1_12        (b)     (b)
-nstate<0>/nstate<0>_SETF
-                      5       3<- \/3   0     FB1_13        (b)     (b)
-nstate<0>/nstate<0>_RSTF
-                      5       3<- \/3   0     FB1_14  7     GCK/I/O (b)
-nstate<1>/nstate<1>_RSTF
-                      8       3<-   0   0     FB1_15  8     I/O     (b)
-nstate<3>/nstate<3>_RSTF__$INT
-                      9       4<-   0   0     FB1_16        (b)     (b)
-state<3>              2       1<- /\4   0     FB1_17  9     I/O     (b)
-nstate<2>/nstate<2>_RSTF
-                      9       5<- /\1   0     FB1_18        (b)     (b)
+transmitter_mux0001/transmitter_mux0001_D2
+                     19      14<-   0   0     FB1_1         (b)     (b)
+(unused)              0       0   /\5   0     FB1_2   1     I/O     (b)
+(unused)              0       0   /\3   2     FB1_3         (b)     (b)
+(unused)              0       0     0   5     FB1_4         (b)     
+(unused)              0       0     0   5     FB1_5   2     I/O     
+x1/count<7>           1       0     0   4     FB1_6   3     I/O     (b)
+x1/count<6>           1       0     0   4     FB1_7         (b)     (b)
+x1/count<5>           1       0     0   4     FB1_8   4     I/O     (b)
+x1/count<4>           1       0     0   4     FB1_9   5     GCK/I/O GCK/I
+x1/count<3>           1       0     0   4     FB1_10        (b)     (b)
+x1/count<2>           1       0     0   4     FB1_11  6     GCK/I/O (b)
+x1/count<1>           1       0     0   4     FB1_12        (b)     (b)
+x1/count<0>           1       0     0   4     FB1_13        (b)     (b)
+en                    1       0     0   4     FB1_14  7     GCK/I/O (b)
+state_tr<0>           2       0     0   3     FB1_15  8     I/O     (b)
+nstate_tr<4>/nstate_tr<4>_SETF
+                      2       0     0   3     FB1_16        (b)     (b)
+nstate_tr<1>/nstate_tr<1>_SETF
+                      3       0   \/1   1     FB1_17  9     I/O     (b)
+(unused)              0       0   \/5   0     FB1_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: en                 5: nstate<3>          9: state<1> 
-  2: nstate<0>          6: reciever          10: state<2> 
-  3: nstate<1>          7: reset             11: state<3> 
-  4: nstate<2>          8: state<0>          12: state<4> 
+  1: buffert<0>         8: state_tr<0>       15: x1/count<1> 
+  2: buffert<1>         9: state_tr<1>       16: x1/count<2> 
+  3: buffert<2>        10: state_tr<2>       17: x1/count<3> 
+  4: buffert<3>        11: state_tr<3>       18: x1/count<4> 
+  5: clk               12: state_tr<4>       19: x1/count<5> 
+  6: en                13: transmitter       20: x1/count<6> 
+  7: nstate_tr<0>      14: x1/count<0>       21: x1/count<7> 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-nstate<4>/nstate<4>_SETF 
+transmitter_mux0001/transmitter_mux0001_D2 
+                     XXXXX..XXXXXX........................... 11
+x1/count<7>          .............XXXXXXX.................... 7
+x1/count<6>          .............XXXXXX..................... 6
+x1/count<5>          .............XXXXX...................... 5
+x1/count<4>          .............XXXX....................... 4
+x1/count<3>          .............XXX........................ 3
+x1/count<2>          .............XX......................... 2
+x1/count<1>          .............X.......................... 1
+x1/count<0>          .............XXXXXXXX................... 8
+en                   .............XXXXXXXX................... 8
+state_tr<0>          .....XX................................. 2
+nstate_tr<4>/nstate_tr<4>_SETF 
                      .......XXXXX............................ 5
-lmp<0>               .....X.XXXXX............................ 6
-state<2>             X..X..X..X.............................. 4
-state<1>             X.X...X.X............................... 4
-lmp<1>               .....X.XXXXX............................ 6
-lmp<2>               .....X.XXXXX............................ 6
-state<0>             XX....XX................................ 4
-lmp<3>               .....X.XXXXX............................ 6
-$OpTx$FX_DC$22       .....X..XXXX............................ 5
-nstate<1>/nstate<1>_SETF 
-                     .....X.XXXXX............................ 6
-nstate<3>/nstate<3>_SETF 
-                     .....X.XXXXX............................ 6
-nstate<2>/nstate<2>_SETF 
-                     .....X.XXXXX............................ 6
-nstate<0>/nstate<0>_SETF 
-                     .....X.XXXXX............................ 6
-nstate<0>/nstate<0>_RSTF 
-                     .....X.XXXXX............................ 6
-nstate<1>/nstate<1>_RSTF 
-                     .....X.XXXXX............................ 6
-nstate<3>/nstate<3>_RSTF__$INT 
-                     .....X.XXXXX............................ 6
-state<3>             X...X.X...X............................. 4
-nstate<2>/nstate<2>_RSTF 
-                     .....X.XXXXX............................ 6
+nstate_tr<1>/nstate_tr<1>_SETF 
+                     .......XXXXX............................ 5
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB2  ***********************************
-Number of function block inputs used/remaining:               12/42
-Number of signals used by logic mapping into function block:  12
+Number of function block inputs used/remaining:               21/33
+Number of signals used by logic mapping into function block:  21
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB2_1         (b)     
 (unused)              0       0     0   5     FB2_2   35    I/O     
 (unused)              0       0     0   5     FB2_3         (b)     
 (unused)              0       0     0   5     FB2_4         (b)     
-(unused)              0       0     0   5     FB2_5   36    I/O     
-(unused)              0       0     0   5     FB2_6   37    I/O     
-(unused)              0       0     0   5     FB2_7         (b)     
-(unused)              0       0     0   5     FB2_8   38    I/O     
-x1/count<7>           1       0     0   4     FB2_9   39    GSR/I/O GSR/I
-x1/count<6>           1       0     0   4     FB2_10        (b)     (b)
-x1/count<5>           1       0     0   4     FB2_11  40    GTS/I/O (b)
-x1/count<4>           1       0     0   4     FB2_12        (b)     (b)
-x1/count<3>           1       0     0   4     FB2_13        (b)     (b)
-x1/count<2>           1       0     0   4     FB2_14  42    GTS/I/O (b)
-x1/count<1>           1       0     0   4     FB2_15  43    I/O     (b)
-x1/count<0>           1       0     0   4     FB2_16        (b)     (b)
-en                    1       0     0   4     FB2_17  44    I/O     (b)
-state<4>              2       0     0   3     FB2_18        (b)     (b)
+state_tr<4>           2       0     0   3     FB2_5   36    I/O     (b)
+state_tr<3>           2       0     0   3     FB2_6   37    I/O     (b)
+state_tr<2>           2       0     0   3     FB2_7         (b)     (b)
+state_tr<1>           2       0     0   3     FB2_8   38    I/O     (b)
+nstate_re<4>/nstate_re<4>_SETF
+                      2       0     0   3     FB2_9   39    GSR/I/O GSR/I
+state_re<4>           3       0     0   2     FB2_10        (b)     (b)
+state_re<3>           3       0     0   2     FB2_11  40    GTS/I/O (b)
+state_re<2>           3       0     0   2     FB2_12        (b)     (b)
+state_re<1>           3       0     0   2     FB2_13        (b)     (b)
+state_re<0>           3       0     0   2     FB2_14  42    GTS/I/O (b)
+nstate_re<2>          2       0     0   3     FB2_15  43    I/O     (b)
+nstate_re<0>          2       0     0   3     FB2_16        (b)     (b)
+buffert<3>            2       0     0   3     FB2_17  44    I/O     (b)
+nstate_re<2>/nstate_re<2>_SETF
+                      4       0     0   1     FB2_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: en                 5: x1/count<0>        9: x1/count<4> 
-  2: nstate<4>          6: x1/count<1>       10: x1/count<5> 
-  3: reset              7: x1/count<2>       11: x1/count<6> 
-  4: state<4>           8: x1/count<3>       12: x1/count<7> 
+  1: en                               8: nstate_re_mux0001<0>/nstate_re_mux0001<0>_D2  15: reciever 
+  2: nstate_re<0>                     9: nstate_re_or0000/nstate_re_or0000_D2          16: reset 
+  3: nstate_re<1>                    10: nstate_tr<1>                                  17: state_re<0> 
+  4: nstate_re<2>                    11: nstate_tr<2>                                  18: state_re<1> 
+  5: nstate_re<2>/nstate_re<2>_SETF  12: nstate_tr<3>                                  19: state_re<2> 
+  6: nstate_re<3>                    13: nstate_tr<4>                                  20: state_re<3> 
+  7: nstate_re<4>                    14: pause                                         21: state_re<4> 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-x1/count<7>          ....XXXXXXX............................. 7
-x1/count<6>          ....XXXXXX.............................. 6
-x1/count<5>          ....XXXXX............................... 5
-x1/count<4>          ....XXXX................................ 4
-x1/count<3>          ....XXX................................. 3
-x1/count<2>          ....XX.................................. 2
-x1/count<1>          ....X................................... 1
-x1/count<0>          ....XXXXXXXX............................ 8
-en                   ....XXXXXXXX............................ 8
-state<4>             XXXX.................................... 4
+state_tr<4>          X...........X........................... 2
+state_tr<3>          X..........X............................ 2
+state_tr<2>          X.........X............................. 2
+state_tr<1>          X........X.............................. 2
+nstate_re<4>/nstate_re<4>_SETF 
+                     ................XXXXX................... 5
+state_re<4>          X.....X......X.X....X................... 5
+state_re<3>          X....X.......X.X...X.................... 5
+state_re<2>          X..X.........X.X..X..................... 5
+state_re<1>          X.X..........X.X.X...................... 5
+state_re<0>          XX...........X.XX....................... 5
+nstate_re<2>         ....X...X............................... 2
+nstate_re<0>         .......XX............................... 2
+buffert<3>           ..............X.XXXXX................... 6
+nstate_re<2>/nstate_re<2>_SETF 
+                     ..............X.XXXXX................... 6
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB3  ***********************************
-Number of function block inputs used/remaining:               10/44
-Number of signals used by logic mapping into function block:  10
+Number of function block inputs used/remaining:               14/40
+Number of signals used by logic mapping into function block:  14
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0     0   5     FB3_1         (b)     
-(unused)              0       0     0   5     FB3_2   11    I/O     
-(unused)              0       0     0   5     FB3_3         (b)     
-(unused)              0       0     0   5     FB3_4         (b)     
-(unused)              0       0     0   5     FB3_5   12    I/O     
-(unused)              0       0     0   5     FB3_6         (b)     
-(unused)              0       0     0   5     FB3_7         (b)     
-(unused)              0       0     0   5     FB3_8   13    I/O     
-(unused)              0       0     0   5     FB3_9   14    I/O     I
-(unused)              0       0     0   5     FB3_10        (b)     
-(unused)              0       0     0   5     FB3_11  18    I/O     
-(unused)              0       0     0   5     FB3_12        (b)     
-(unused)              0       0     0   5     FB3_13        (b)     
-nstate<4>             2       0     0   3     FB3_14  19    I/O     (b)
-nstate<3>             2       0     0   3     FB3_15  20    I/O     (b)
-nstate<2>             2       0     0   3     FB3_16  24    I/O     (b)
-nstate<1>             2       0     0   3     FB3_17  22    I/O     (b)
-nstate<0>             2       0     0   3     FB3_18        (b)     (b)
+nstate_re<3>/nstate_re<3>_RSTF__$INT
+                     10       5<-   0   0     FB3_1         (b)     (b)
+pause_and0000/pause_and0000_D2
+                      1       1<- /\5   0     FB3_2   11    I/O     (b)
+buffert<2>            2       0   /\1   2     FB3_3         (b)     (b)
+buffert<1>            2       0     0   3     FB3_4         (b)     (b)
+buffert<0>            2       0     0   3     FB3_5   12    I/O     (b)
+nstate_tr_mux0001<0>/nstate_tr_mux0001<0>_D2
+                      5       0     0   0     FB3_6         (b)     (b)
+nstate_re_or0000/nstate_re_or0000_D2
+                      5       0     0   0     FB3_7         (b)     (b)
+transmitter           2       0   \/2   1     FB3_8   13    I/O     O
+nstate_re<3>/nstate_re<3>_SETF
+                      5       2<- \/2   0     FB3_9   14    I/O     I
+nstate_re<1>/nstate_re<1>_SETF
+                      5       2<- \/2   0     FB3_10        (b)     (b)
+pause                 6       2<- \/1   0     FB3_11  18    I/O     (b)
+nstate_re<1>/nstate_re<1>_RSTF
+                      6       1<-   0   0     FB3_12        (b)     (b)
+(unused)              0       0   \/4   1     FB3_13        (b)     (b)
+nstate_tr<2>/nstate_tr<2>_RSTF
+                      7       4<- \/2   0     FB3_14  19    I/O     (b)
+nstate_re_mux0001<0>/nstate_re_mux0001<0>_D2
+                      7       2<-   0   0     FB3_15  20    I/O     (b)
+(unused)              0       0   \/5   0     FB3_16  24    I/O     (b)
+$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854
+                      7       5<- \/3   0     FB3_17  22    I/O     (b)
+nstate_tr<3>/nstate_tr<3>_RSTF
+                      8       3<-   0   0     FB3_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: $OpTx$FX_DC$22             5: nstate<1>/nstate<1>_SETF   8: nstate<3>/nstate<3>_RSTF__$INT 
-  2: nstate<0>/nstate<0>_RSTF   6: nstate<2>/nstate<2>_RSTF   9: nstate<3>/nstate<3>_SETF 
-  3: nstate<0>/nstate<0>_SETF   7: nstate<2>/nstate<2>_SETF  10: nstate<4>/nstate<4>_SETF 
-  4: nstate<1>/nstate<1>_RSTF 
+  1: pause                            6: state_re<2>       11: state_tr<2> 
+  2: pause_and0000/pause_and0000_D2   7: state_re<3>       12: state_tr<3> 
+  3: reciever                         8: state_re<4>       13: state_tr<4> 
+  4: state_re<0>                      9: state_tr<0>       14: transmitter_mux0001/transmitter_mux0001_D2 
+  5: state_re<1>                     10: state_tr<1>      
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-nstate<4>            X........X.............................. 2
-nstate<3>            .......XX............................... 2
-nstate<2>            .....XX................................. 2
-nstate<1>            ...XX................................... 2
-nstate<0>            .XX..................................... 2
+nstate_re<3>/nstate_re<3>_RSTF__$INT 
+                     ..XXXXXX................................ 6
+pause_and0000/pause_and0000_D2 
+                     ..XXXXXXXXXXX........................... 11
+buffert<2>           ..XXXXXX................................ 6
+buffert<1>           ..XXXXXX................................ 6
+buffert<0>           ..XXXXXX................................ 6
+nstate_tr_mux0001<0>/nstate_tr_mux0001<0>_D2 
+                     ..XXXXXXXXXXX........................... 11
+nstate_re_or0000/nstate_re_or0000_D2 
+                     ..XXXXXX................................ 6
+transmitter          .X...........X.......................... 2
+nstate_re<3>/nstate_re<3>_SETF 
+                     ..XXXXXX................................ 6
+nstate_re<1>/nstate_re<1>_SETF 
+                     ..XXXXXX................................ 6
+pause                X.XXXXXXXXXXX........................... 12
+nstate_re<1>/nstate_re<1>_RSTF 
+                     ..XXXXXX................................ 6
+nstate_tr<2>/nstate_tr<2>_RSTF 
+                     ..XXXXXXXXXXX........................... 11
+nstate_re_mux0001<0>/nstate_re_mux0001<0>_D2 
+                     ..XXXXXX................................ 6
+$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 
+                     ..XXXXXXXXXXX........................... 11
+nstate_tr<3>/nstate_tr<3>_RSTF 
+                     ..XXXXXXXXXXX........................... 11
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB4  ***********************************
-Number of function block inputs used/remaining:               0/54
-Number of signals used by logic mapping into function block:  0
+Number of function block inputs used/remaining:               12/42
+Number of signals used by logic mapping into function block:  12
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB4_1         (b)     
@@ -293,168 +345,359 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB4_8   27    I/O     
 (unused)              0       0     0   5     FB4_9         (b)     
 (unused)              0       0     0   5     FB4_10        (b)     
-(unused)              0       0     0   5     FB4_11  28    I/O     
-(unused)              0       0     0   5     FB4_12        (b)     
-(unused)              0       0     0   5     FB4_13        (b)     
-(unused)              0       0     0   5     FB4_14  29    I/O     
-(unused)              0       0     0   5     FB4_15  33    I/O     
-(unused)              0       0     0   5     FB4_16        (b)     
-(unused)              0       0     0   5     FB4_17  34    I/O     
-(unused)              0       0     0   5     FB4_18        (b)     
+nstate_tr<4>          2       0     0   3     FB4_11  28    I/O     (b)
+nstate_tr<3>          2       0     0   3     FB4_12        (b)     (b)
+nstate_tr<2>          2       0     0   3     FB4_13        (b)     (b)
+nstate_tr<1>          2       0     0   3     FB4_14  29    I/O     (b)
+nstate_tr<0>          2       0     0   3     FB4_15  33    I/O     (b)
+nstate_re<4>          2       0     0   3     FB4_16        (b)     (b)
+nstate_re<3>          2       0     0   3     FB4_17  34    I/O     (b)
+nstate_re<1>          2       0     0   3     FB4_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854   5: nstate_re<3>/nstate_re<3>_SETF         9: nstate_tr<2>/nstate_tr<2>_RSTF 
+  2: nstate_re<1>/nstate_re<1>_RSTF                         6: nstate_re<4>/nstate_re<4>_SETF        10: nstate_tr<3>/nstate_tr<3>_RSTF 
+  3: nstate_re<1>/nstate_re<1>_SETF                         7: nstate_re_or0000/nstate_re_or0000_D2  11: nstate_tr<4>/nstate_tr<4>_SETF 
+  4: nstate_re<3>/nstate_re<3>_RSTF__$INT                   8: nstate_tr<1>/nstate_tr<1>_SETF        12: nstate_tr_mux0001<0>/nstate_tr_mux0001<0>_D2 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+nstate_tr<4>         X.........X............................. 2
+nstate_tr<3>         X........X.............................. 2
+nstate_tr<2>         X.......X............................... 2
+nstate_tr<1>         X......X................................ 2
+nstate_tr<0>         X..........X............................ 2
+nstate_re<4>         .....XX................................. 2
+nstate_re<3>         ...XX................................... 2
+nstate_re<1>         .XX..................................... 2
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
 *******************************  Equations  ********************************
 
 ********** Mapped Logic **********
 
 
-$OpTx$FX_DC$22 <= ((NOT state(4))
-	OR (NOT state(2) AND NOT state(1) AND NOT state(3) AND NOT reciever));
+$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 <= ((state_tr(0) AND NOT state_tr(4))
+	OR (state_tr(3) AND NOT state_tr(4))
+	OR (state_tr(0) AND NOT state_tr(1) AND NOT state_tr(2) AND 
+	NOT state_tr(3))
+	OR (NOT state_tr(0) AND NOT state_tr(2) AND NOT state_tr(3) AND 
+	state_tr(4))
+	OR (NOT reciever AND NOT state_tr(4) AND state_re(1) AND 
+	NOT state_re(2) AND NOT state_re(3) AND NOT state_re(0) AND state_re(4))
+	OR (state_tr(1) AND NOT state_tr(4))
+	OR (state_tr(2) AND NOT state_tr(4)));
+
+
+
+
+
+
+
+
+
+
+
+FDCPE_buffert0: FDCPE port map (buffert(0),'0','0',buffert_CLR(0),buffert_PRE(0));
+buffert_CLR(0) <= (NOT reciever AND state_re(1) AND state_re(2) AND 
+	state_re(3) AND NOT state_re(0) AND NOT state_re(4));
+buffert_PRE(0) <= (reciever AND state_re(1) AND state_re(2) AND 
+	state_re(3) AND NOT state_re(0) AND NOT state_re(4));
+
+FDCPE_buffert1: FDCPE port map (buffert(1),'0','0',buffert_CLR(1),buffert_PRE(1));
+buffert_CLR(1) <= (NOT reciever AND state_re(1) AND state_re(2) AND 
+	state_re(3) AND state_re(0) AND NOT state_re(4));
+buffert_PRE(1) <= (reciever AND state_re(1) AND state_re(2) AND 
+	state_re(3) AND state_re(0) AND NOT state_re(4));
+
+FDCPE_buffert2: FDCPE port map (buffert(2),'0','0',buffert_CLR(2),buffert_PRE(2));
+buffert_CLR(2) <= (NOT reciever AND NOT state_re(1) AND NOT state_re(2) AND 
+	NOT state_re(3) AND NOT state_re(0) AND state_re(4));
+buffert_PRE(2) <= (reciever AND NOT state_re(1) AND NOT state_re(2) AND 
+	NOT state_re(3) AND NOT state_re(0) AND state_re(4));
+
+FDCPE_buffert3: FDCPE port map (buffert(3),'0','0',buffert_CLR(3),buffert_PRE(3));
+buffert_CLR(3) <= (NOT reciever AND NOT state_re(1) AND NOT state_re(2) AND 
+	NOT state_re(3) AND state_re(0) AND state_re(4));
+buffert_PRE(3) <= (reciever AND NOT state_re(1) AND NOT state_re(2) AND 
+	NOT state_re(3) AND state_re(0) AND state_re(4));
 
 FDCPE_en: FDCPE port map (en,en_D,clk,NOT reset,'0');
 en_D <= (x1/count(0) AND x1/count(1) AND x1/count(2) AND 
 	x1/count(3) AND x1/count(4) AND x1/count(5) AND x1/count(6) AND 
 	x1/count(7));
 
-FDCPE_lmp0: FDCPE port map (lmp(0),'0','0',lmp_CLR(0),lmp_PRE(0));
-lmp_CLR(0) <= (state(2) AND state(0) AND NOT state(1) AND state(3) AND 
-	NOT state(4) AND reciever);
-lmp_PRE(0) <= (state(2) AND state(0) AND NOT state(1) AND state(3) AND 
-	NOT state(4) AND NOT reciever);
+FDCPE_nstate_re0: FDCPE port map (nstate_re(0),'0','0',nstate_re_CLR(0),nstate_re_PRE(0));
+nstate_re_CLR(0) <= (NOT nstate_re_mux0001(0)/nstate_re_mux0001(0)_D2 AND 
+	NOT nstate_re_or0000/nstate_re_or0000_D2);
+nstate_re_PRE(0) <= (nstate_re_mux0001(0)/nstate_re_mux0001(0)_D2 AND 
+	NOT nstate_re_or0000/nstate_re_or0000_D2);
 
-FDCPE_lmp1: FDCPE port map (lmp(1),'0','0',lmp_CLR(1),lmp_PRE(1));
-lmp_CLR(1) <= (state(2) AND NOT state(0) AND state(1) AND state(3) AND 
-	NOT state(4) AND reciever);
-lmp_PRE(1) <= (state(2) AND NOT state(0) AND state(1) AND state(3) AND 
-	NOT state(4) AND NOT reciever);
-
-FDCPE_lmp2: FDCPE port map (lmp(2),'0','0',lmp_CLR(2),lmp_PRE(2));
-lmp_CLR(2) <= (state(2) AND state(0) AND state(1) AND state(3) AND 
-	NOT state(4) AND reciever);
-lmp_PRE(2) <= (state(2) AND state(0) AND state(1) AND state(3) AND 
-	NOT state(4) AND NOT reciever);
-
-FDCPE_lmp3: FDCPE port map (lmp(3),'0','0',lmp_CLR(3),lmp_PRE(3));
-lmp_CLR(3) <= (NOT state(2) AND NOT state(0) AND NOT state(1) AND NOT state(3) AND 
-	state(4) AND reciever);
-lmp_PRE(3) <= (NOT state(2) AND NOT state(0) AND NOT state(1) AND NOT state(3) AND 
-	state(4) AND NOT reciever);
+FDCPE_nstate_re1: FDCPE port map (nstate_re(1),'0','0',nstate_re(1)/nstate_re(1)_RSTF,nstate_re(1)/nstate_re(1)_SETF);
 
 
-nstate(0)/nstate(0)_SETF <= ((NOT state(0) AND NOT state(4) AND reciever)
-	OR (state(2) AND NOT state(0) AND state(1) AND state(3) AND 
-	NOT state(4))
-	OR (NOT state(2) AND NOT state(0) AND NOT state(1) AND NOT state(3) AND 
-	state(4))
-	OR (NOT state(2) AND NOT state(4) AND reciever)
-	OR (NOT state(3) AND NOT state(4) AND reciever));
+nstate_re(1)/nstate_re(1)_RSTF <= ((NOT reciever AND NOT state_re(2) AND NOT state_re(3) AND 
+	NOT state_re(0) AND state_re(4))
+	OR (NOT reciever AND state_re(0) AND NOT state_re(4))
+	OR (state_re(1) AND state_re(0) AND NOT state_re(4))
+	OR (NOT reciever AND NOT state_re(1) AND state_re(2) AND 
+	NOT state_re(4))
+	OR (NOT reciever AND NOT state_re(1) AND state_re(3) AND 
+	NOT state_re(4))
+	OR (NOT state_re(1) AND NOT state_re(2) AND NOT state_re(3) AND 
+	NOT state_re(0) AND state_re(4)));
 
 
-nstate(0)/nstate(0)_RSTF <= ((NOT state(3) AND NOT state(4) AND NOT reciever)
-	OR (state(2) AND state(0) AND state(3) AND NOT state(4))
-	OR (NOT state(2) AND state(0) AND NOT state(1) AND NOT state(3) AND 
-	NOT reciever)
-	OR (NOT state(2) AND NOT state(4) AND NOT reciever)
-	OR (NOT state(1) AND NOT state(4) AND NOT reciever));
+nstate_re(1)/nstate_re(1)_SETF <= ((state_re(1) AND NOT state_re(0) AND NOT state_re(4))
+	OR (NOT state_re(1) AND NOT state_re(2) AND NOT state_re(3) AND 
+	state_re(0) AND state_re(4))
+	OR (reciever AND NOT state_re(1) AND state_re(2) AND 
+	NOT state_re(4))
+	OR (reciever AND NOT state_re(1) AND state_re(3) AND 
+	NOT state_re(4))
+	OR (reciever AND NOT state_re(1) AND state_re(0) AND 
+	NOT state_re(4)));
 
-FDCPE_nstate0: FDCPE port map (nstate(0),'0','0',nstate(0)/nstate(0)_RSTF,nstate(0)/nstate(0)_SETF);
-
-
-nstate(1)/nstate(1)_SETF <= ((state(2) AND state(0) AND NOT state(1) AND state(3) AND 
-	NOT state(4))
-	OR (state(2) AND NOT state(0) AND state(1) AND state(3) AND 
-	NOT state(4))
-	OR (state(0) AND NOT state(1) AND NOT state(4) AND NOT reciever)
-	OR (NOT state(0) AND state(1) AND NOT state(4) AND reciever));
-
-FDCPE_nstate1: FDCPE port map (nstate(1),'0','0',nstate(1)/nstate(1)_RSTF,nstate(1)/nstate(1)_SETF);
+FDCPE_nstate_re2: FDCPE port map (nstate_re(2),'0','0',nstate_re_CLR(2),nstate_re(2)/nstate_re(2)_SETF);
+nstate_re_CLR(2) <= (NOT nstate_re_or0000/nstate_re_or0000_D2 AND 
+	NOT nstate_re(2)/nstate_re(2)_SETF);
 
 
-nstate(1)/nstate(1)_RSTF <= ((NOT state(2) AND NOT state(0) AND NOT state(1) AND NOT state(3))
-	OR (NOT state(0) AND NOT state(3) AND NOT state(4) AND NOT reciever)
-	OR (NOT state(2) AND NOT state(1) AND NOT state(3) AND state(4) AND 
-	NOT reciever)
-	OR (state(0) AND state(1) AND NOT state(4))
-	OR (NOT state(0) AND NOT state(1) AND NOT state(4))
-	OR (NOT state(2) AND state(0) AND NOT state(4) AND reciever)
-	OR (NOT state(2) AND NOT state(0) AND NOT state(4) AND NOT reciever)
-	OR (state(0) AND NOT state(3) AND NOT state(4) AND reciever));
+nstate_re(2)/nstate_re(2)_SETF <= ((NOT reciever AND state_re(2) AND NOT state_re(0) AND 
+	NOT state_re(4))
+	OR (reciever AND state_re(1) AND NOT state_re(2) AND 
+	state_re(0) AND NOT state_re(4))
+	OR (reciever AND NOT state_re(1) AND state_re(2) AND 
+	state_re(0) AND NOT state_re(4))
+	OR (state_re(1) AND state_re(2) AND state_re(3) AND 
+	NOT state_re(0) AND NOT state_re(4)));
 
-FDCPE_nstate2: FDCPE port map (nstate(2),'0','0',nstate(2)/nstate(2)_RSTF,nstate(2)/nstate(2)_SETF);
-
-
-nstate(2)/nstate(2)_RSTF <= ((NOT state(2) AND NOT state(1) AND NOT state(3) AND NOT reciever)
-	OR (state(0) AND state(1) AND NOT state(4) AND reciever)
-	OR (state(0) AND NOT state(3) AND NOT state(4) AND reciever)
-	OR (NOT state(0) AND NOT state(1) AND NOT state(4) AND NOT reciever)
-	OR (NOT state(0) AND NOT state(3) AND NOT state(4) AND NOT reciever)
-	OR (NOT state(2) AND NOT state(0) AND NOT state(4))
-	OR (NOT state(2) AND NOT state(1) AND NOT state(4))
-	OR (state(2) AND state(0) AND state(1) AND NOT state(4))
-	OR (NOT state(2) AND NOT state(0) AND NOT state(1) AND NOT state(3)));
+FDCPE_nstate_re3: FDCPE port map (nstate_re(3),'0','0',NOT nstate_re(3)/nstate_re(3)_RSTF__$INT,nstate_re(3)/nstate_re(3)_SETF);
 
 
-nstate(2)/nstate(2)_SETF <= ((state(2) AND state(0) AND NOT state(1) AND state(3) AND 
-	NOT state(4))
-	OR (state(2) AND NOT state(0) AND state(1) AND state(3) AND 
-	NOT state(4))
-	OR (NOT state(2) AND state(0) AND state(1) AND NOT state(4) AND 
-	NOT reciever)
-	OR (state(2) AND NOT state(0) AND NOT state(4) AND reciever)
-	OR (state(2) AND state(0) AND NOT state(1) AND NOT state(4) AND 
-	NOT reciever));
+nstate_re(3)/nstate_re(3)_RSTF__$INT <= ((reciever AND state_re(1) AND state_re(4))
+	OR (state_re(1) AND state_re(0) AND state_re(4))
+	OR (reciever AND NOT state_re(1) AND state_re(3) AND 
+	state_re(0))
+	OR (reciever AND NOT state_re(2) AND state_re(3) AND 
+	state_re(0))
+	OR (reciever AND state_re(1) AND state_re(2) AND 
+	NOT state_re(3) AND state_re(0))
+	OR (state_re(2) AND state_re(4))
+	OR (state_re(3) AND state_re(4))
+	OR (NOT reciever AND state_re(3) AND NOT state_re(0))
+	OR (state_re(1) AND state_re(2) AND state_re(3) AND 
+	NOT state_re(0))
+	OR (NOT state_re(1) AND NOT state_re(2) AND NOT state_re(3) AND 
+	NOT state_re(0) AND NOT state_re(4)));
 
 
-nstate(3)/nstate(3)_SETF <= ((state(2) AND state(0) AND NOT state(1) AND state(3) AND 
-	NOT state(4))
-	OR (NOT state(2) AND state(0) AND state(3) AND NOT state(4) AND 
-	NOT reciever)
-	OR (state(2) AND state(0) AND state(1) AND NOT state(3) AND 
-	NOT state(4) AND NOT reciever)
-	OR (NOT state(0) AND state(3) AND NOT state(4) AND reciever)
-	OR (state(2) AND NOT state(0) AND state(1) AND state(3) AND 
-	NOT state(4)));
+nstate_re(3)/nstate_re(3)_SETF <= ((reciever AND NOT state_re(1) AND state_re(3) AND 
+	state_re(0) AND NOT state_re(4))
+	OR (reciever AND NOT state_re(2) AND state_re(3) AND 
+	state_re(0) AND NOT state_re(4))
+	OR (NOT reciever AND state_re(3) AND NOT state_re(0) AND 
+	NOT state_re(4))
+	OR (state_re(1) AND state_re(2) AND state_re(3) AND 
+	NOT state_re(0) AND NOT state_re(4))
+	OR (reciever AND state_re(1) AND state_re(2) AND 
+	NOT state_re(3) AND state_re(0) AND NOT state_re(4)));
+
+FDCPE_nstate_re4: FDCPE port map (nstate_re(4),'0','0',nstate_re_CLR(4),nstate_re(4)/nstate_re(4)_SETF);
+nstate_re_CLR(4) <= (NOT nstate_re_or0000/nstate_re_or0000_D2 AND 
+	NOT nstate_re(4)/nstate_re(4)_SETF);
 
 
-nstate(3)/nstate(3)_RSTF__$INT <= ((state(2) AND state(0) AND NOT state(1) AND state(3))
-	OR (state(2) AND NOT state(0) AND state(1) AND state(3))
-	OR (NOT state(2) AND state(0) AND state(3) AND NOT reciever)
-	OR (state(2) AND state(0) AND state(1) AND NOT state(3) AND 
-	NOT reciever)
-	OR (state(2) AND state(4))
-	OR (state(1) AND state(4))
-	OR (state(3) AND state(4))
-	OR (state(0) AND state(4) AND reciever)
-	OR (NOT state(0) AND state(3) AND reciever));
-
-FDCPE_nstate3: FDCPE port map (nstate(3),'0','0',NOT nstate(3)/nstate(3)_RSTF__$INT,nstate(3)/nstate(3)_SETF);
+nstate_re(4)/nstate_re(4)_SETF <= ((NOT state_re(1) AND NOT state_re(2) AND NOT state_re(3) AND 
+	state_re(4))
+	OR (state_re(1) AND state_re(2) AND state_re(3) AND 
+	state_re(0) AND NOT state_re(4)));
 
 
-nstate(4)/nstate(4)_SETF <= ((state(2) AND state(0) AND state(1) AND state(3) AND 
-	NOT state(4))
-	OR (NOT state(2) AND NOT state(0) AND NOT state(1) AND NOT state(3) AND 
-	state(4)));
+nstate_re_mux0001(0)/nstate_re_mux0001(0)_D2 <= ((NOT reciever AND state_re(2) AND NOT state_re(3) AND 
+	NOT state_re(4))
+	OR (state_re(1) AND state_re(2) AND state_re(3) AND 
+	NOT state_re(0) AND NOT state_re(4))
+	OR (NOT reciever AND state_re(1) AND NOT state_re(3) AND 
+	NOT state_re(4))
+	OR (NOT reciever AND NOT state_re(1) AND state_re(3) AND 
+	NOT state_re(4))
+	OR (NOT reciever AND NOT state_re(2) AND state_re(3) AND 
+	NOT state_re(4))
+	OR (NOT reciever AND NOT state_re(3) AND state_re(0) AND 
+	NOT state_re(4))
+	OR (NOT state_re(2) AND NOT state_re(3) AND NOT state_re(0) AND 
+	state_re(4)));
 
-FDCPE_nstate4: FDCPE port map (nstate(4),'0','0',nstate_CLR(4),nstate(4)/nstate(4)_SETF);
-nstate_CLR(4) <= (NOT nstate(4)/nstate(4)_SETF AND $OpTx$FX_DC$22);
 
-FDCPE_state0: FDCPE port map (state(0),state_D(0),clk,'0','0');
-state_D(0) <= ((en AND nstate(0))
-	OR (state(0) AND reset AND NOT en));
+nstate_re_or0000/nstate_re_or0000_D2 <= ((state_re(2) AND state_re(4))
+	OR (state_re(3) AND state_re(4))
+	OR (reciever AND state_re(1) AND state_re(4))
+	OR (state_re(1) AND state_re(0) AND state_re(4))
+	OR (NOT state_re(1) AND NOT state_re(2) AND NOT state_re(3) AND 
+	NOT state_re(0) AND NOT state_re(4)));
 
-FDCPE_state1: FDCPE port map (state(1),state_D(1),clk,'0','0');
-state_D(1) <= ((en AND nstate(1))
-	OR (state(1) AND reset AND NOT en));
+FDCPE_nstate_tr0: FDCPE port map (nstate_tr(0),'0','0',nstate_tr_CLR(0),nstate_tr_mux0001(0)/nstate_tr_mux0001(0)_D2);
+nstate_tr_CLR(0) <= (NOT nstate_tr_mux0001(0)/nstate_tr_mux0001(0)_D2 AND 
+	$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854);
 
-FDCPE_state2: FDCPE port map (state(2),state_D(2),clk,'0','0');
-state_D(2) <= ((en AND nstate(2))
-	OR (state(2) AND reset AND NOT en));
 
-FDCPE_state3: FDCPE port map (state(3),state_D(3),clk,'0','0');
-state_D(3) <= ((state(3) AND reset AND NOT en)
-	OR (en AND nstate(3)));
+nstate_tr(1)/nstate_tr(1)_SETF <= ((state_tr(0) AND NOT state_tr(1) AND NOT state_tr(4))
+	OR (NOT state_tr(0) AND state_tr(1) AND NOT state_tr(4))
+	OR (state_tr(0) AND NOT state_tr(1) AND NOT state_tr(2) AND 
+	NOT state_tr(3)));
 
-FDCPE_state4: FDCPE port map (state(4),state_D(4),clk,'0','0');
-state_D(4) <= ((en AND nstate(4))
-	OR (state(4) AND reset AND NOT en));
+FDCPE_nstate_tr1: FDCPE port map (nstate_tr(1),'0','0',nstate_tr_CLR(1),nstate_tr(1)/nstate_tr(1)_SETF);
+nstate_tr_CLR(1) <= (
+	$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 AND NOT nstate_tr(1)/nstate_tr(1)_SETF);
+
+
+nstate_tr(2)/nstate_tr(2)_RSTF <= ((state_tr(0) AND state_tr(1) AND state_tr(2) AND 
+	NOT state_tr(4))
+	OR (state_tr(0) AND NOT state_tr(1) AND NOT state_tr(2) AND 
+	NOT state_tr(3))
+	OR (state_tr(0) AND NOT state_tr(1) AND NOT state_tr(2) AND 
+	NOT state_tr(4))
+	OR (NOT state_tr(0) AND NOT state_tr(2) AND NOT state_tr(3) AND 
+	state_tr(4))
+	OR (NOT state_tr(0) AND state_tr(1) AND NOT state_tr(2) AND 
+	NOT state_tr(4))
+	OR (NOT state_tr(0) AND NOT state_tr(2) AND state_tr(3) AND 
+	NOT state_tr(4))
+	OR (NOT reciever AND NOT state_tr(0) AND NOT state_tr(2) AND 
+	NOT state_tr(4) AND state_re(1) AND NOT state_re(2) AND NOT state_re(3) AND 
+	NOT state_re(0) AND state_re(4)));
+
+FDCPE_nstate_tr2: FDCPE port map (nstate_tr(2),'0','0',nstate_tr(2)/nstate_tr(2)_RSTF,nstate_tr_PRE(2));
+nstate_tr_PRE(2) <= (
+	$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 AND NOT nstate_tr(2)/nstate_tr(2)_RSTF);
+
+
+nstate_tr(3)/nstate_tr(3)_RSTF <= ((state_tr(0) AND NOT state_tr(1) AND NOT state_tr(2) AND 
+	NOT state_tr(3))
+	OR (state_tr(0) AND NOT state_tr(2) AND NOT state_tr(3) AND 
+	NOT state_tr(4))
+	OR (state_tr(0) AND state_tr(1) AND state_tr(2) AND 
+	state_tr(3) AND NOT state_tr(4))
+	OR (state_tr(0) AND NOT state_tr(1) AND NOT state_tr(3) AND 
+	NOT state_tr(4))
+	OR (NOT state_tr(0) AND state_tr(1) AND NOT state_tr(3) AND 
+	NOT state_tr(4))
+	OR (NOT state_tr(0) AND state_tr(2) AND NOT state_tr(3) AND 
+	NOT state_tr(4))
+	OR (NOT state_tr(0) AND NOT state_tr(2) AND NOT state_tr(3) AND 
+	state_tr(4))
+	OR (NOT reciever AND NOT state_tr(0) AND NOT state_tr(3) AND 
+	NOT state_tr(4) AND state_re(1) AND NOT state_re(2) AND NOT state_re(3) AND 
+	NOT state_re(0) AND state_re(4)));
+
+FDCPE_nstate_tr3: FDCPE port map (nstate_tr(3),'0','0',nstate_tr(3)/nstate_tr(3)_RSTF,nstate_tr_PRE(3));
+nstate_tr_PRE(3) <= (
+	$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 AND NOT nstate_tr(3)/nstate_tr(3)_RSTF);
+
+FDCPE_nstate_tr4: FDCPE port map (nstate_tr(4),'0','0',nstate_tr_CLR(4),nstate_tr(4)/nstate_tr(4)_SETF);
+nstate_tr_CLR(4) <= (
+	$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 AND NOT nstate_tr(4)/nstate_tr(4)_SETF);
+
+
+nstate_tr(4)/nstate_tr(4)_SETF <= ((NOT state_tr(1) AND NOT state_tr(2) AND NOT state_tr(3) AND 
+	state_tr(4))
+	OR (state_tr(0) AND state_tr(1) AND state_tr(2) AND 
+	state_tr(3) AND NOT state_tr(4)));
+
+
+nstate_tr_mux0001(0)/nstate_tr_mux0001(0)_D2 <= ((NOT state_tr(0) AND state_tr(1) AND NOT state_tr(4))
+	OR (NOT state_tr(0) AND state_tr(2) AND NOT state_tr(4))
+	OR (NOT state_tr(0) AND state_tr(3) AND NOT state_tr(4))
+	OR (NOT state_tr(0) AND NOT state_tr(1) AND NOT state_tr(2) AND 
+	NOT state_tr(3) AND state_tr(4))
+	OR (NOT reciever AND NOT state_tr(0) AND NOT state_tr(4) AND 
+	state_re(1) AND NOT state_re(2) AND NOT state_re(3) AND NOT state_re(0) AND 
+	state_re(4)));
+
+
+pause <= ((NOT state_tr(4) AND pause)
+	OR (NOT reciever AND NOT state_tr(0) AND NOT state_tr(1) AND 
+	NOT state_tr(2) AND NOT state_tr(3) AND NOT state_tr(4) AND state_re(1) AND 
+	NOT state_re(2) AND NOT state_re(3) AND NOT state_re(0) AND state_re(4))
+	OR (state_tr(0) AND pause)
+	OR (NOT state_tr(1) AND pause)
+	OR (state_tr(2) AND pause)
+	OR (state_tr(3) AND pause));
+
+
+pause_and0000/pause_and0000_D2 <= (NOT reciever AND NOT state_tr(0) AND NOT state_tr(1) AND 
+	NOT state_tr(2) AND NOT state_tr(3) AND NOT state_tr(4) AND state_re(1) AND 
+	NOT state_re(2) AND NOT state_re(3) AND NOT state_re(0) AND state_re(4));
+
+FDCPE_state_re0: FDCPE port map (state_re(0),state_re_D(0),clk,'0','0');
+state_re_D(0) <= ((reset AND NOT state_re(0) AND NOT en)
+	OR (reset AND NOT state_re(0) AND pause)
+	OR (en AND NOT pause AND NOT nstate_re(0)));
+
+FDCPE_state_re1: FDCPE port map (state_re(1),state_re_D(1),clk,'0','0');
+state_re_D(1) <= ((reset AND state_re(1) AND NOT en)
+	OR (reset AND state_re(1) AND pause)
+	OR (en AND NOT pause AND nstate_re(1)));
+
+FDCPE_state_re2: FDCPE port map (state_re(2),state_re_D(2),clk,'0','0');
+state_re_D(2) <= ((reset AND state_re(2) AND NOT en)
+	OR (reset AND state_re(2) AND pause)
+	OR (en AND NOT pause AND nstate_re(2)));
+
+FDCPE_state_re3: FDCPE port map (state_re(3),state_re_D(3),clk,'0','0');
+state_re_D(3) <= ((reset AND state_re(3) AND NOT en)
+	OR (reset AND state_re(3) AND pause)
+	OR (en AND NOT pause AND nstate_re(3)));
+
+FDCPE_state_re4: FDCPE port map (state_re(4),state_re_D(4),clk,'0','0');
+state_re_D(4) <= ((reset AND state_re(4) AND NOT en)
+	OR (reset AND state_re(4) AND pause)
+	OR (en AND NOT pause AND nstate_re(4)));
+
+FDCPE_state_tr0: FDCPE port map (state_tr(0),nstate_tr(0),clk,NOT reset,'0',en);
+
+FDCPE_state_tr1: FDCPE port map (state_tr(1),nstate_tr(1),clk,NOT reset,'0',en);
+
+FDCPE_state_tr2: FDCPE port map (state_tr(2),nstate_tr(2),clk,NOT reset,'0',en);
+
+FDCPE_state_tr3: FDCPE port map (state_tr(3),nstate_tr(3),clk,NOT reset,'0',en);
+
+FDCPE_state_tr4: FDCPE port map (state_tr(4),nstate_tr(4),clk,NOT reset,'0',en);
+
+FDCPE_transmitter: FDCPE port map (transmitter,'0','0',transmitter_CLR,transmitter_PRE);
+transmitter_CLR <= (NOT transmitter_mux0001/transmitter_mux0001_D2 AND 
+	NOT pause_and0000/pause_and0000_D2);
+transmitter_PRE <= (transmitter_mux0001/transmitter_mux0001_D2 AND 
+	NOT pause_and0000/pause_and0000_D2);
+
+
+transmitter_mux0001/transmitter_mux0001_D2 <= ((EXP7_.EXP)
+	OR (clk AND NOT state_tr(0) AND state_tr(1) AND NOT state_tr(2) AND 
+	NOT state_tr(3))
+	OR (clk AND NOT state_tr(0) AND NOT state_tr(1) AND state_tr(3) AND 
+	NOT state_tr(4))
+	OR (clk AND NOT state_tr(0) AND NOT state_tr(2) AND NOT state_tr(3) AND 
+	state_tr(4) AND NOT buffert(2))
+	OR (NOT clk AND state_tr(0) AND NOT state_tr(1) AND NOT state_tr(2) AND 
+	NOT state_tr(3) AND buffert(3))
+	OR (NOT state_tr(0) AND NOT state_tr(1) AND NOT state_tr(2) AND 
+	NOT state_tr(3) AND NOT state_tr(4) AND transmitter)
+	OR (nstate_tr(1)/nstate_tr(1)_SETF.EXP)
+	OR (NOT clk AND state_tr(0) AND NOT state_tr(1) AND NOT state_tr(4))
+	OR (NOT clk AND state_tr(0) AND NOT state_tr(4) AND buffert(1))
+	OR (clk AND NOT state_tr(0) AND state_tr(2) AND NOT state_tr(3) AND 
+	NOT state_tr(4))
+	OR (clk AND NOT state_tr(0) AND NOT state_tr(2) AND state_tr(3) AND 
+	NOT state_tr(4))
+	OR (clk AND NOT state_tr(0) AND state_tr(3) AND NOT state_tr(4) AND 
+	NOT buffert(0))
+	OR (state_tr(2) AND state_tr(4) AND transmitter)
+	OR (state_tr(3) AND state_tr(4) AND transmitter)
+	OR (NOT clk AND state_tr(0) AND NOT state_tr(2) AND NOT state_tr(4))
+	OR (NOT clk AND state_tr(0) AND NOT state_tr(3) AND NOT state_tr(4))
+	OR (state_tr(0) AND state_tr(1) AND state_tr(4) AND 
+	transmitter));
 
 FTCPE_x1/count0: FTCPE port map (x1/count(0),x1/count_T(0),clk,'0',NOT reset);
 x1/count_T(0) <= (x1/count(0) AND x1/count(1) AND x1/count(2) AND 
@@ -514,10 +757,10 @@ Device : XC9572XL-5-PC44
 
 Pin Signal                         Pin Signal                        
 No. Name                           No. Name                          
-  1 lmp<0>                           23 GND                           
-  2 lmp<1>                           24 KPR                           
-  3 lmp<2>                           25 KPR                           
-  4 lmp<3>                           26 KPR                           
+  1 KPR                              23 GND                           
+  2 KPR                              24 KPR                           
+  3 KPR                              25 KPR                           
+  4 KPR                              26 KPR                           
   5 clk                              27 KPR                           
   6 KPR                              28 KPR                           
   7 KPR                              29 KPR                           
@@ -526,7 +769,7 @@ No. Name                           No. Name
  10 GND                              32 VCC                           
  11 KPR                              33 KPR                           
  12 KPR                              34 KPR                           
- 13 KPR                              35 KPR                           
+ 13 transmitter                      35 KPR                           
  14 reciever                         36 KPR                           
  15 TDI                              37 KPR                           
  16 TMS                              38 KPR                           

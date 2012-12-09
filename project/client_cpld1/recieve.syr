@@ -75,16 +75,16 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/counter.vhd" in Library work.
+Compiling vhdl file "C:/Projekt/client_cpld1/counter.vhd" in Library work.
 Architecture arch of Entity counter is up to date.
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/recieve.vhd" in Library work.
+Compiling vhdl file "C:/Projekt/client_cpld1/recieve.vhd" in Library work.
 Entity <recieve> compiled.
-Entity <recieve> (Architecture <Behavioral>) compiled.
+Entity <recieve> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <recieve> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <recieve> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <counter> in library <work> (architecture <arch>).
 
@@ -92,7 +92,9 @@ Analyzing hierarchy for entity <counter> in library <work> (architecture <arch>)
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <recieve> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <recieve> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Projekt/client_cpld1/recieve.vhd" line 81: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <buffert>
 Entity <recieve> analyzed. Unit <recieve> generated.
 
 Analyzing Entity <counter> in library <work> (Architecture <arch>).
@@ -106,7 +108,7 @@ Entity <counter> analyzed. Unit <counter> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <counter>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/counter.vhd".
+    Related source file is "C:/Projekt/client_cpld1/counter.vhd".
     Found 1-bit register for signal <done>.
     Found 8-bit up counter for signal <count>.
     Summary:
@@ -116,15 +118,25 @@ Unit <counter> synthesized.
 
 
 Synthesizing Unit <recieve>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/recieve.vhd".
-WARNING:Xst:737 - Found 1-bit latch for signal <lmp_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <lmp_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <lmp_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <lmp_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 5-bit latch for signal <nstate>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Related source file is "C:/Projekt/client_cpld1/recieve.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <pause>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <transmitter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <buffert_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <buffert_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <buffert_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <buffert_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <nstate_re>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 5-bit 18-to-1 multiplexer for signal <nstate$mux0001>.
-    Found 5-bit register for signal <state>.
+WARNING:Xst:737 - Found 5-bit latch for signal <nstate_tr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 5-bit register for signal <state_re>.
+    Found 5-bit register for signal <state_tr>.
+    Found 1-bit xor2 for signal <transmitter$xor0000> created at line 101.
+    Found 1-bit xor2 for signal <transmitter$xor0001> created at line 102.
+    Found 1-bit xor2 for signal <transmitter$xor0002> created at line 103.
+    Found 1-bit xor2 for signal <transmitter$xor0003> created at line 104.
+    Summary:
+	inferred   4 Xor(s).
 Unit <recieve> synthesized.
 
 
@@ -134,14 +146,14 @@ HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 1
  8-bit up counter                                      : 1
-# Registers                                            : 2
+# Registers                                            : 3
  1-bit register                                        : 1
- 5-bit register                                        : 1
-# Latches                                              : 5
- 1-bit latch                                           : 4
- 5-bit latch                                           : 1
-# Multiplexers                                         : 1
- 5-bit 18-to-1 multiplexer                             : 1
+ 5-bit register                                        : 2
+# Latches                                              : 8
+ 1-bit latch                                           : 6
+ 5-bit latch                                           : 2
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
 
 =========================================================================
 
@@ -158,11 +170,9 @@ Macro Statistics
  8-bit up counter                                      : 1
 # Registers                                            : 1
  Flip-Flops                                            : 1
-# Latches                                              : 5
- 1-bit latch                                           : 4
- 5-bit latch                                           : 1
-# Multiplexers                                         : 1
- 5-bit 18-to-1 multiplexer                             : 1
+# Latches                                              : 8
+ 1-bit latch                                           : 6
+ 5-bit latch                                           : 2
 
 =========================================================================
 
@@ -171,11 +181,16 @@ Macro Statistics
 =========================================================================
 
 Optimizing unit <recieve> ...
-  implementation constraint: INIT=r	 : state_4
-  implementation constraint: INIT=r	 : state_3
-  implementation constraint: INIT=r	 : state_1
-  implementation constraint: INIT=r	 : state_2
-  implementation constraint: INIT=r	 : state_0
+  implementation constraint: INIT=r	 : state_re_4
+  implementation constraint: INIT=r	 : state_tr_4
+  implementation constraint: INIT=r	 : state_tr_1
+  implementation constraint: INIT=r	 : state_tr_2
+  implementation constraint: INIT=r	 : state_tr_3
+  implementation constraint: INIT=r	 : state_re_0
+  implementation constraint: INIT=r	 : state_re_1
+  implementation constraint: INIT=r	 : state_re_2
+  implementation constraint: INIT=r	 : state_re_3
+  implementation constraint: INIT=r	 : state_tr_0
 
 Optimizing unit <counter> ...
 
@@ -206,39 +221,41 @@ Clock Enable                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 7
+# IOs                              : 4
 
 Cell Usage :
-# BELS                             : 146
-#      AND2                        : 48
-#      AND3                        : 8
-#      AND4                        : 3
-#      AND5                        : 2
+# BELS                             : 296
+#      AND2                        : 86
+#      AND3                        : 15
+#      AND4                        : 6
+#      AND5                        : 3
+#      AND7                        : 1
 #      AND8                        : 1
 #      GND                         : 1
-#      INV                         : 57
-#      OR2                         : 18
-#      OR3                         : 1
-#      XOR2                        : 7
-# FlipFlops/Latches                : 23
+#      INV                         : 125
+#      OR2                         : 42
+#      OR3                         : 5
+#      XOR2                        : 11
+# FlipFlops/Latches                : 35
 #      FDC                         : 8
-#      FDCE                        : 5
+#      FDCE                        : 10
 #      FDP                         : 1
-#      LD                          : 9
-# IO Buffers                       : 7
+#      LD                          : 15
+#      LDP                         : 1
+# IO Buffers                       : 4
 #      IBUF                        : 3
-#      OBUF                        : 4
+#      OBUF                        : 1
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 22.82 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.48 secs
  
 --> 
 
-Total memory usage is 246168 kilobytes
+Total memory usage is 250948 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

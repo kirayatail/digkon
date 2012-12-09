@@ -7,6 +7,7 @@ in_signal<0> S:PIN20
 in_signal<1> S:PIN18
 in_signal<2> S:PIN19
 in_signal<3> S:PIN22
+reciever S:PIN14
 reset S:PIN39
 lmp<0> S:PIN1
 lmp<1> S:PIN2
@@ -18,20 +19,22 @@ transmitter S:PIN13
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 nstate<4>/nstate<4>_SETF lmp_0 nstate<3>/nstate<3>_SETF nstate<1>/nstate<1>_SETF
-		 lmp_1 lmp_2 nstate<0>/nstate<0>_RSTF lmp_3
-		 $OpTx$$OpTx$FX_DC$34_INV$346 nstate<0>/nstate<0>_SETF__$INT nstate<4>/nstate<4>_RSTF__$INT EXP6_
-		 nstate<2>/nstate<2>_RSTF__$INT nstate<3>/nstate<3>_RSTF__$INT $OpTx$BIN_STEP$139 EXP7_
-		 transmitter_OBUF/transmitter_OBUF_RSTF EXP8_
-PARTITION FB2_7 x2/state<1> x2/state<0> x1/q levin
-		 x2/nstate<1>/x2/nstate<1>_SETF x2/nstate<0>/x2/nstate<0>_SETF state<4> pulse/pulse_RSTF
-		 nstate<2>/nstate<2>_SETF x2/nstate<1>/x2/nstate<1>_RSTF__$INT x2/nstate<0>/x2/nstate<0>_RSTF__$INT pulse/pulse_SETF__$INT
+PARTITION FB1_1 nstate_re<3>/nstate_re<3>_RSTF__$INT lmp_0 nstate_re<2>/nstate_re<2>_RSTF $OpTx$$OpTx$INV$224_INV$416
+		 lmp_1 lmp_2 nstate_re<0>/nstate_re<0>_SETF lmp_3
+		 nstate_re<0>/nstate_re<0>_RSTF nstate_re<4>/nstate_re<4>_RSTF__$INT nstate_re<1>/nstate_re<1>_RSTF EXP6_
+		 pause/pause_RSTF nstate_re<3>/nstate_re<3>_SETF nstate_re<2>/nstate_re<2>_SETF pause
 		
-PARTITION FB3_4 x3/count<7> x3/count<6> x3/count<5> x3/count<4>
-		 transmitter_OBUF x3/count<3> x3/count<2> x3/count<1>
-		 x3/count<0> x2/pulson_mux0001 en state<3>
-		 state<2> state<1> state<0>
-PARTITION FB4_11 x2/nstate<1> x2/nstate<0> pulse nstate<4>
-		 nstate<3> nstate<2> nstate<1> nstate<0>
-		
+PARTITION FB1_18 EXP7_
+PARTITION FB2_4 x3/count<7> x3/count<6> x3/count<5> x3/count<4>
+		 x3/count<3> x3/count<2> x3/count<1> x3/count<0>
+		 en state_tr<4> state_tr<3> state_tr<2>
+		 state_tr<1> state_tr<0> state_re<0>
+PARTITION FB3_1 $OpTx$BIN_STEP$94 nstate_tr<4>/nstate_tr<4>_SETF nstate_re<4>/nstate_re<4>_SETF nstate_tr<2>/nstate_tr<2>_SETF
+		 nstate_tr<1>/nstate_tr<1>_SETF nstate_tr<0>/nstate_tr<0>_RSTF state_re<4> transmitter_OBUF
+		 state_re<2> state_re<1> nstate_tr<3>/nstate_tr<3>_SETF $OpTx$$OpTx$FX_DC$38_INV$415
+		 nstate_tr<1>/nstate_tr<1>_RSTF nstate_tr<0>/nstate_tr<0>_SETF__$INT nstate_tr<4>/nstate_tr<4>_RSTF__$INT nstate_tr<2>/nstate_tr<2>_RSTF__$INT
+		 transmitter_OBUF/transmitter_OBUF_SETF state_re<3>
+PARTITION FB4_9 nstate_tr<4> nstate_tr<3> nstate_tr<2> nstate_tr<1>
+		 nstate_tr<0> nstate_re<4> nstate_re<3> nstate_re<2>
+		 nstate_re<1> nstate_re<0>
 

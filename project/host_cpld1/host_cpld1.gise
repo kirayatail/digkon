@@ -61,19 +61,20 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1354279735" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1354279735">
+    <transform xil_pn:end_ts="1354807131" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1354807131">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1354279735" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8975492240380290873" xil_pn:start_ts="1354279735">
+    <transform xil_pn:end_ts="1354807135" xil_pn:in_ck="4988200159409" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8975492240380290873" xil_pn:start_ts="1354807131">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1354626116" xil_pn:in_ck="-6630599067828085160" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="6830179341578115428" xil_pn:start_ts="1354626108">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1354807160" xil_pn:in_ck="7756027305070028586" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="6830179341578115428" xil_pn:start_ts="1354807135">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -83,58 +84,43 @@
       <outfile xil_pn:name="send.ngc"/>
       <outfile xil_pn:name="send.ngr"/>
       <outfile xil_pn:name="send.prj"/>
+      <outfile xil_pn:name="send.stx"/>
       <outfile xil_pn:name="send.syr"/>
       <outfile xil_pn:name="send.xst"/>
       <outfile xil_pn:name="send_vhdl.prj"/>
       <outfile xil_pn:name="send_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1354279846" xil_pn:in_ck="5035984476438" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="7968832431321720354" xil_pn:start_ts="1354279845">
+    <transform xil_pn:end_ts="1354807160" xil_pn:in_ck="5035984476438" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="7968832431321720354" xil_pn:start_ts="1354807160">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1354284475" xil_pn:in_ck="6124610847148369126" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1354284456">
+    <transform xil_pn:end_ts="1354807178" xil_pn:in_ck="6124610847148369126" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1354807160">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="send.bld"/>
       <outfile xil_pn:name="send.ngd"/>
       <outfile xil_pn:name="send_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1354284496" xil_pn:in_ck="5035984468945" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="7516556952665050492" xil_pn:start_ts="1354284475">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
+    <transform xil_pn:end_ts="1354807195" xil_pn:in_ck="5035984468945" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="7516556952665050492" xil_pn:start_ts="1354807178">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="send.gyd"/>
-      <outfile xil_pn:name="send.mfd"/>
-      <outfile xil_pn:name="send.nga"/>
-      <outfile xil_pn:name="send.pad"/>
-      <outfile xil_pn:name="send.pnx"/>
-      <outfile xil_pn:name="send.rpt"/>
-      <outfile xil_pn:name="send.tim"/>
-      <outfile xil_pn:name="send.tspec"/>
-      <outfile xil_pn:name="send.vm6"/>
-      <outfile xil_pn:name="send.xml"/>
-      <outfile xil_pn:name="send_build.xml"/>
-      <outfile xil_pn:name="send_html"/>
-      <outfile xil_pn:name="send_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1354284500" xil_pn:in_ck="5035984477809" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1354284496">
+    <transform xil_pn:end_ts="1354804825" xil_pn:in_ck="5035984477809" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1354804821">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="send.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1354622375" xil_pn:in_ck="5035984464523" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1354622373">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1354806453" xil_pn:in_ck="5035984464523" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1354806451">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
     </transform>
-    <transform xil_pn:end_ts="1354279920" xil_pn:in_ck="5035984477809" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1354279915">
+    <transform xil_pn:end_ts="1354804302" xil_pn:in_ck="5035984477809" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1354804299">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>

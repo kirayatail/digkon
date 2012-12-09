@@ -1,5 +1,0 @@
-# begin LFP file Z:\DigKon\project\digkon\project\host_cpld1\send.lfp
-designfile send.vhd
-parttype xc9572xl-pc44-5
-bus_delimiter 0;
-set_busdelim_onsave 1;

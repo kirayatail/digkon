@@ -1,4 +1,2 @@
-vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\project\host_cpld1\sync.vhd"
-vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\project\host_cpld1\lev_to_pulse.vhd"
-vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\project\host_cpld1\counter.vhd"
-vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\project\host_cpld1\send.vhd"
+vhdl work "\\file00.chalmers.se\home\sjoksda\digkon\project\host_cpld1\counter.vhd"
+vhdl work "\\file00.chalmers.se\home\sjoksda\digkon\project\host_cpld1\send.vhd"

@@ -4,24 +4,27 @@ Pin Freeze File:  version P.28xd
 clk S:PIN5
 reciever S:PIN14
 reset S:PIN39
-lmp<0> S:PIN1
-lmp<1> S:PIN2
-lmp<2> S:PIN3
-lmp<3> S:PIN4
+transmitter S:PIN13
 
 
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 nstate<4>/nstate<4>_SETF lmp_0 state<2> state<1>
-		 lmp_1 lmp_2 state<0> lmp_3
-		 $OpTx$FX_DC$22 nstate<1>/nstate<1>_SETF nstate<3>/nstate<3>_SETF nstate<2>/nstate<2>_SETF
-		 nstate<0>/nstate<0>_SETF nstate<0>/nstate<0>_RSTF nstate<1>/nstate<1>_RSTF nstate<3>/nstate<3>_RSTF__$INT
-		 state<3> nstate<2>/nstate<2>_RSTF
-PARTITION FB2_9 x1/count<7> x1/count<6> x1/count<5> x1/count<4>
+PARTITION FB1_1 transmitter_mux0001/transmitter_mux0001_D2 EXP6_ EXP7_
+PARTITION FB1_6 x1/count<7> x1/count<6> x1/count<5> x1/count<4>
 		 x1/count<3> x1/count<2> x1/count<1> x1/count<0>
-		 en state<4>
-PARTITION FB3_14 nstate<4> nstate<3> nstate<2> nstate<1>
-		 nstate<0>
-
+		 en state_tr<0> nstate_tr<4>/nstate_tr<4>_SETF nstate_tr<1>/nstate_tr<1>_SETF
+		 EXP8_
+PARTITION FB2_5 state_tr<4> state_tr<3> state_tr<2> state_tr<1>
+		 nstate_re<4>/nstate_re<4>_SETF state_re<4> state_re<3> state_re<2>
+		 state_re<1> state_re<0> nstate_re<2> nstate_re<0>
+		 buffert<3> nstate_re<2>/nstate_re<2>_SETF
+PARTITION FB3_1 nstate_re<3>/nstate_re<3>_RSTF__$INT pause_and0000/pause_and0000_D2 buffert<2> buffert<1>
+		 buffert<0> nstate_tr_mux0001<0>/nstate_tr_mux0001<0>_D2 nstate_re_or0000/nstate_re_or0000_D2 transmitter_OBUF
+		 nstate_re<3>/nstate_re<3>_SETF nstate_re<1>/nstate_re<1>_SETF pause nstate_re<1>/nstate_re<1>_RSTF
+		 EXP9_ nstate_tr<2>/nstate_tr<2>_RSTF nstate_re_mux0001<0>/nstate_re_mux0001<0>_D2 EXP10_
+		 $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 nstate_tr<3>/nstate_tr<3>_RSTF
+PARTITION FB4_11 nstate_tr<4> nstate_tr<3> nstate_tr<2> nstate_tr<1>
+		 nstate_tr<0> nstate_re<4> nstate_re<3> nstate_re<1>
+		
 

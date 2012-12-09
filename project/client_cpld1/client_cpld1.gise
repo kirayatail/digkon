@@ -42,6 +42,8 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="recieve.rpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="recieve.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="recieve.syr"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="recieve.tim"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="recieve.tspec"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="recieve.vm6"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="recieve.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="recieve.xst"/>
@@ -59,15 +61,15 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1354281128" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1354281128">
+    <transform xil_pn:end_ts="1354801834" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1354801834">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1354281236" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7010322539899971360" xil_pn:start_ts="1354281236">
+    <transform xil_pn:end_ts="1354801834" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7010322539899971360" xil_pn:start_ts="1354801834">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1354282676" xil_pn:in_ck="-1951238215070100925" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="7654446349847365565" xil_pn:start_ts="1354282648">
+    <transform xil_pn:end_ts="1354802314" xil_pn:in_ck="-1951238215070100925" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="7654446349847365565" xil_pn:start_ts="1354802290">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -84,11 +86,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1354282603" xil_pn:in_ck="179431408812266031" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8194157928585763003" xil_pn:start_ts="1354282603">
+    <transform xil_pn:end_ts="1354801893" xil_pn:in_ck="179431408812266031" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8194157928585763003" xil_pn:start_ts="1354801893">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1354282696" xil_pn:in_ck="-8971692167243594888" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1354282676">
+    <transform xil_pn:end_ts="1354802333" xil_pn:in_ck="-8971692167243594888" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1354802314">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -97,8 +99,9 @@
       <outfile xil_pn:name="recieve.ngd"/>
       <outfile xil_pn:name="recieve_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1354282747" xil_pn:in_ck="179431408812258538" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="200342955521051637" xil_pn:start_ts="1354282696">
+    <transform xil_pn:end_ts="1354802347" xil_pn:in_ck="179431408812258538" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="200342955521051637" xil_pn:start_ts="1354802333">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="recieve.gyd"/>
       <outfile xil_pn:name="recieve.mfd"/>
@@ -106,25 +109,29 @@
       <outfile xil_pn:name="recieve.pad"/>
       <outfile xil_pn:name="recieve.pnx"/>
       <outfile xil_pn:name="recieve.rpt"/>
+      <outfile xil_pn:name="recieve.tim"/>
+      <outfile xil_pn:name="recieve.tspec"/>
       <outfile xil_pn:name="recieve.vm6"/>
       <outfile xil_pn:name="recieve.xml"/>
       <outfile xil_pn:name="recieve_build.xml"/>
       <outfile xil_pn:name="recieve_html"/>
       <outfile xil_pn:name="recieve_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1354282751" xil_pn:in_ck="179431408812267402" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1354282747">
+    <transform xil_pn:end_ts="1354802350" xil_pn:in_ck="179431408812267402" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1354802347">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="recieve.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1354622300" xil_pn:in_ck="179431408812254116" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1354622298">
+    <transform xil_pn:end_ts="1354802353" xil_pn:in_ck="179431408812254116" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1354802352">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1354282747" xil_pn:in_ck="179431408812267402" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1354282742">
-      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
 
