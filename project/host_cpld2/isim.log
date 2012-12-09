@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\workspace\digkon\project\host_cpld2\top_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/workspace/digkon/project/host_cpld2/top_isim_beh.wdb 
+Running: C:\workspace\digkon\project\host_cpld2\receiver_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/workspace/digkon/project/host_cpld2/receiver_isim_beh.wdb 
 ISim P.40xd (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,241 +11,75 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /top/clk 1 -radix bin -value 0 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /top/clk 1 -radix bin -value 0 -radix bin -time 50 ns -repeat 100 ns
-# isim force add /top/lowclk 1 -radix bin -value 0 -radix bin -time 10 ns -repeat 20 ns
+# isim force add /receiver/lowclk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /receiver/lowclk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
 # run
-at 1020 ns(2), Instance /top/XLXI_9/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# put reset 0
+# run
+# put enable 1
+# run
+# put receiver 1
+# run
+# put receiver 0
+# run
+# put recceiver 1
+recceiver: No such HDL object
+# put receiver 1
 # run
 # run
-# put trig 0
-# run
-# put trig 1
+# put receiver 0
 # run
 # run
-# put senddone
+# put receiver 1
+# run
+# put receiver 0
+# run
+# put receiver 1
+# run
+# put receiver 0
+# run
+# put receiver 1
+# run
+# put receiver 0
+# run
+# put receiver 1
+# run
+# put receiver 0
+# run
+# put receiver 1
+# run
+# put receiver 0
+# run
+# put receiver 1
+# run
+# put receiver 0
+# run
+# put receiver
 Incorrect usage of command 'put'
 Usage: put <hdl_object_name> <value> [-radix <type>]
 for detailed help use 'help put'
-# put senddone 1
+# put receiver 1
 # run
-# put senddone 0
 # run
 # run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# put senddone 1
-# put senddone 1
-# run
-# run
-# put senddone 0
-# put senddone 0
-# put senddone 0
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# put senddone 1
-# put senddone 1
-# run
-# put senddone 0
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# restart
-# isim force add /top/clk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
-# isim force add /top/clk 1 -radix bin -value 0 -radix bin -time 5 ns -repeat 10 ns
-# run
+ISim P.40xd (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /top/lowclk 1 -radix bin -value 0 -radix bin -time 10 ns -repeat 20 ns
-# isim force add /top/lowclk 1 -radix bin -value 0 -radix bin -time 10 ns -repeat 20 ns
+# isim force add /receiver/lowclk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
+# isim force add /receiver/receiver 1 -radix bin -value 0 -radix bin -time 100 ns -repeat 200 ns
+# isim force add /receiver/receiver 1 -radix bin -value 0 -radix bin -time 100 ns -repeat 200 ns
 # run
-# put reset 1
-# put trig 0
-# put trig 1
 # run
 # run
-# put trig 1
 # run
-# put trig 0
+# put enable 1
 # run
-# put trig 1
-# put senddone 1
 # run
-# put senddone 0
 # run
 # run
 # run
@@ -257,15 +91,13 @@ Finished circuit initialization process.
 # run
 # run
 # run
+# put receiver 1
 # run
-# put senddone 1
 # run
-# put senddone 0
-# put senddone 0
-# put senddone 0
-# put senddone 0
-# put senddone 0
+# put receiver 0
 # run
+# put receiver 1
+# put receiver 1
 # run
 # run
 # run
@@ -274,82 +106,5 @@ Finished circuit initialization process.
 # run
 # run
 # run
-# run
-# run
-# run
-# put senddone 1
-# run
-# put sendddone 0
-sendddone: No such HDL object
-# put senddone 0
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# put senddone 1
-# run
-# put senddone 0
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
+# put enable 0
 # run

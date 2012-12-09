@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "uni9000_ver" -lib "aim_ver" -lib "cpld_ver" -lib "xilinxcorelib_ver" -o "C:/workspace/digkon/project/host_cpld2/top_isim_beh.exe" -prj "C:/workspace/digkon/project/host_cpld2/top_beh.prj" "work.top" "work.glbl" 
+-intstyle "ise" -incremental -o "C:/workspace/digkon/project/host_cpld2/receiver_isim_beh.exe" -prj "C:/workspace/digkon/project/host_cpld2/receiver_beh.prj" "work.receiver" 

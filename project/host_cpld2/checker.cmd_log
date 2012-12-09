@@ -6,3 +6,8 @@ tsim -intstyle ise checker checker.nga
 taengine -intstyle ise -f checker -w --format html1 -l checker_html/tim/timing_report.htm 
 hprep6 -s IEEE1149 -n checker -i checker 
 sch2sym -intstyle ise -family xc9500xl -refsym checker C:/workspace/digkon/project/host_cpld2/checker.sch C:/workspace/digkon/project/host_cpld2/checker.sym 
+XSLTProcess checker_build.xml 
+XSLTProcess checker_build.xml 
+XSLTProcess checker_build.xml 
+XSLTProcess checker_build.xml 
+XSLTProcess checker_build.xml 

@@ -24,6 +24,7 @@ entity ctrl is
            lastKey : in  STD_LOGIC;
            rand : out  STD_LOGIC;
            send : out  STD_LOGIC;
+			  rcvEnable : out STD_LOGIC;
            timerstart : out  STD_LOGIC;
            nextKey : out  STD_LOGIC;
 			  checkRst : out STD_LOGIC;
@@ -89,7 +90,18 @@ begin
 	
 	nextKey <= nextSig when (state = s4) else '0';
 	
-	sttOut <= state;
+	rcvEnable <= '1' when (state = s3 OR state = s4) else '0';
+	
+	checkRst <= '1' when (state = s2) else '0';
+	
+	larmOut <= alarm;
+	
+	-- debug! Remove before real implement
+	sttOut <= "000" when state = s0 else
+				 "001" when state = s1 else
+				 "010" when state = s2 else
+				 "011" when state = s3 else
+				 "100" when state = s4;
 	
 end Behavioral;
 

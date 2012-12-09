@@ -13,7 +13,7 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:452 - logical net 'XLXN_1' has no driver
+WARNING:NgdBuild:452 - logical net 'XLXI_2/XLXN_22<1>' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -26,7 +26,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   1
 
-Total memory usage is 148812 kilobytes
+Total memory usage is 148492 kilobytes
 
 Writing NGD file "top.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec

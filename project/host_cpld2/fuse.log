@@ -1,37 +1,17 @@
-Running: C:\Xilinx\14.3\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib uni9000_ver -lib aim_ver -lib cpld_ver -lib xilinxcorelib_ver -o C:/workspace/digkon/project/host_cpld2/top_isim_beh.exe -prj C:/workspace/digkon/project/host_cpld2/top_beh.prj work.top work.glbl 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/workspace/digkon/project/host_cpld2/receiver_isim_beh.exe" -prj "C:/workspace/digkon/project/host_cpld2/receiver_beh.prj" "work.receiver" 
 ISim P.40xd (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/workspace/digkon/project/host_cpld2/equals.vf" into library work
-Analyzing Verilog file "C:/workspace/digkon/project/host_cpld2/checker.vf" into library work
-Analyzing Verilog file "C:/workspace/digkon/project/host_cpld2/top.vf" into library work
-Analyzing Verilog file "C:/Xilinx/14.3/ISE_DS/ISE//verilog/src/glbl.v" into library work
-Parsing VHDL file "C:/workspace/digkon/project/host_cpld2/keylookup.vhd" into library work
-Parsing VHDL file "C:/workspace/digkon/project/host_cpld2/crypto.vhd" into library work
-Parsing VHDL file "C:/workspace/digkon/project/host_cpld2/timer.vhd" into library work
-Parsing VHDL file "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" into library work
+Parsing VHDL file "C:/workspace/digkon/project/host_cpld2/receiver.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module XNOR2
-Compiling module AND4
-Compiling module equals_MUSER_top
-Compiling module checker_MUSER_top
-Compiling module INV
-Compiling module top
-Compiling module glbl
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package std_logic_arith
-Compiling package std_logic_unsigned
-Compiling architecture behavioral of entity ctrl [ctrl_default]
-Compiling architecture behavioral of entity keylookup [keylookup_default]
-Compiling architecture behavioral of entity crypto [crypto_default]
-Compiling architecture behavioral of entity timer [timer_default]
+Compiling architecture behavioral of entity receiver
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 12 VHDL Units
-Compiled 7 Verilog Units
-Built simulation executable C:/workspace/digkon/project/host_cpld2/top_isim_beh.exe
-Fuse Memory Usage: 35700 KB
-Fuse CPU Usage: 654 ms
+Compiled 3 VHDL Units
+Built simulation executable C:/workspace/digkon/project/host_cpld2/receiver_isim_beh.exe
+Fuse Memory Usage: 29660 KB
+Fuse CPU Usage: 467 ms

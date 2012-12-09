@@ -1,13 +1,4 @@
-select figure at 1210 399 8 -branches -sn=1
-move instance at 1024 448 to 1136 528 R0 -keepConn -sn=1
-select figure at 1436 129 8 -branches -sn=1
-select figure at 1304 458 8 -branches -sn=1
-move instance at 1136 528 to 1184 1808 R0 -keepConn -sn=1
-move instance at 1184 1808 to 1152 1920 R0 -keepConn -sn=1
-select figure at 232 754 8 -branches -sn=1
-move iomarker at 288 752 to 272 1200 R180 -keepConn -sn=1
-move iomarker at 272 1200 to 288 1040 R180 -keepConn -sn=1
-select figure at 358 1361 8 -branches -sn=1
-select figure at 641 1531 8 -branches -sn=1
-move wire at 640 1040 640 1888 to 608 1040 608 1888 -keepConn -sn=1
-select figure at 795 1137 8 -branches -sn=1
+select figure at 2075 655 8 -branches -sn=1
+select figure at 1997 1345 8 -branches -sn=1
+select figure at 1757 833 8 -branches -sn=1
+select figure at 2069 830 8 -branches -toggle -sn=1
