@@ -11,6 +11,8 @@ USE ieee.std_logic_unsigned.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+
 entity ctrl is
     Port ( clk : in STD_LOGIC;
 			  reset : in STD_LOGIC;
@@ -25,7 +27,8 @@ entity ctrl is
            timerstart : out  STD_LOGIC;
            nextKey : out  STD_LOGIC;
 			  checkRst : out STD_LOGIC;
-           larmOut : out  STD_LOGIC);
+           larmOut : out  STD_LOGIC;
+			  sttOut: out STD_LOGIC_VECTOR(2 downto 0));
 end ctrl;
 
 architecture Behavioral of ctrl is
@@ -86,6 +89,7 @@ begin
 	
 	nextKey <= nextSig when (state = s4) else '0';
 	
+	sttOut <= state;
 	
 end Behavioral;
 

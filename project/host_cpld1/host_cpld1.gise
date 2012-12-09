@@ -70,11 +70,14 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1354626116" xil_pn:in_ck="-6630599067828085160" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="6830179341578115428" xil_pn:start_ts="1354626108">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="send.lso"/>
       <outfile xil_pn:name="send.ngc"/>
@@ -85,7 +88,6 @@
       <outfile xil_pn:name="send_vhdl.prj"/>
       <outfile xil_pn:name="send_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
     </transform>
     <transform xil_pn:end_ts="1354279846" xil_pn:in_ck="5035984476438" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="7968832431321720354" xil_pn:start_ts="1354279845">
       <status xil_pn:value="SuccessfullyRun"/>
