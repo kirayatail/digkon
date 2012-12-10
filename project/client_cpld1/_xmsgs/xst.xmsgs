@@ -5,14 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">s1</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">state</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2257" delta="old" ><arg fmt="%s" index="1">FF/Latches</arg> &lt;<arg fmt="%s" index="2">FFd1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="3">FSM</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">state_FSM_FFd1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_2</arg>&gt;.
-</msg>
-
 </messages>
 

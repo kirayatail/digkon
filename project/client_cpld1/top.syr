@@ -3,13 +3,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: top.prj
@@ -80,7 +80,8 @@ Architecture arch of Entity counter is up to date.
 Compiling vhdl file "C:/workspace/digkon/project/client_cpld1/crypto.vhd" in Library work.
 Architecture behavioral of Entity crypto is up to date.
 Compiling vhdl file "C:/workspace/digkon/project/client_cpld1/ctrl.vhd" in Library work.
-Architecture behavioral of Entity ctrl is up to date.
+Entity <ctrl> compiled.
+Entity <ctrl> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/workspace/digkon/project/client_cpld1/receiver.vhd" in Library work.
 Architecture behavioral of Entity receiver is up to date.
 Compiling vhdl file "C:/workspace/digkon/project/client_cpld1/sender.vhd" in Library work.
@@ -137,23 +138,22 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <ctrl>.
     Related source file is "C:/workspace/digkon/project/client_cpld1/ctrl.vhd".
-INFO:Xst:1799 - State s1 is never reached in FSM <state>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 16                                             |
+    | States             | 4                                              |
+    | Transitions        | 31                                             |
     | Inputs             | 3                                              |
-    | Outputs            | 4                                              |
+    | Outputs            | 5                                              |
     | Clock              | lowClk                    (rising_edge)        |
     | Clock enable       | state$not0000             (positive)           |
     | Reset              | reset                     (positive)           |
     | Reset type         | asynchronous                                   |
-    | Reset State        | s3                                             |
+    | Reset State        | s0                                             |
     | Power Up State     | s0                                             |
     | Encoding           | automatic                                      |
     | Implementation     | automatic                                      |
     -----------------------------------------------------------------------
-    Found 4-bit up counter for signal <sendcount>.
+    Found 3-bit up counter for signal <sendcount>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 Counter(s).
@@ -232,7 +232,7 @@ HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 2
- 4-bit up counter                                      : 1
+ 3-bit up counter                                      : 1
  8-bit up counter                                      : 1
 # Registers                                            : 6
  1-bit register                                        : 6
@@ -296,16 +296,15 @@ Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:19]> with one-hot encoding.
  swait | 1000000000000000000
 ------------------------------
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <XLXI_1/state/FSM> on signal <state[1:2]> with sequential encoding.
+Optimizing FSM <XLXI_1/state/FSM> on signal <state[1:2]> with user encoding.
 -------------------
  State | Encoding
 -------------------
  s0    | 00
- s1    | unreached
+ s1    | 01
  s2    | 10
- s3    | 01
+ s3    | 11
 -------------------
-WARNING:Xst:2257 - FF/Latches <FFd1> is unconnected in block <FSM>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -313,7 +312,7 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # FSMs                                                 : 3
 # Counters                                             : 2
- 4-bit up counter                                      : 1
+ 3-bit up counter                                      : 1
  8-bit up counter                                      : 1
 # Registers                                            : 6
  Flip-Flops                                            : 6
@@ -377,7 +376,6 @@ Optimizing unit <ctrl> ...
   implementation constraint: INIT=r	 : state_FSM_FFd2
 
 Optimizing unit <counter> ...
-WARNING:Xst:2677 - Node <state_FSM_FFd1> of sequential type is unconnected in block <XLXI_2>.
 
 =========================================================================
 *                           Partition Report                            *
@@ -409,23 +407,22 @@ Design Statistics
 # IOs                              : 8
 
 Cell Usage :
-# BELS                             : 124
-#      AND2                        : 49
-#      AND4                        : 1
+# BELS                             : 145
+#      AND2                        : 53
+#      AND3                        : 3
 #      AND8                        : 1
 #      GND                         : 2
-#      INV                         : 40
-#      OR2                         : 16
+#      INV                         : 52
+#      OR2                         : 20
 #      OR3                         : 1
 #      OR4                         : 2
 #      OR7                         : 1
 #      OR8                         : 1
-#      XOR2                        : 10
+#      XOR2                        : 9
 # FlipFlops/Latches                : 57
-#      FDC                         : 45
+#      FDC                         : 46
 #      FDCE                        : 9
 #      FDP                         : 2
-#      FDPE                        : 1
 # IO Buffers                       : 8
 #      IBUF                        : 7
 #      OBUF                        : 1
@@ -433,13 +430,13 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.77 secs
+Total CPU time to Xst completion: 4.79 secs
  
 --> 
 
-Total memory usage is 260372 kilobytes
+Total memory usage is 259796 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 
