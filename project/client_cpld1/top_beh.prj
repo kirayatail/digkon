@@ -1,0 +1,7 @@
+vhdl work "sender.vhd"
+vhdl work "receiver.vhd"
+vhdl work "ctrl.vhd"
+vhdl work "crypto.vhd"
+vhdl work "counter.vhd"
+verilog work "top.vf"
+verilog work "C:/Xilinx/14.3/ISE_DS/ISE//verilog/src/glbl.v"

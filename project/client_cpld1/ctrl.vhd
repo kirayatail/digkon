@@ -42,14 +42,15 @@ end ctrl;
 architecture Behavioral of ctrl is
 type state_type is (s0, s1, s2, s3);
 signal state : state_type;
-signal sendcount : STD_LOGIC_VECTOR(3 downto 0);
+signal sendcount : STD_LOGIC_VECTOR(2 downto 0);
 begin
 	process(lowClk, reset) begin
 		if reset = '1' then
-			state <= s3;
+			state <= s0;
 		elsif rising_edge(lowClk) then
 			if state = s0 then
-				sendcount <= "0000";
+				sendcount <= "000";
+				state <= s1;
 			end if;
 			
 			if state = s1 AND rcvDone = '1' then
@@ -62,7 +63,7 @@ begin
 			end if;
 			
 			if state = s3 then
-				if sendCount = "1111" then
+				if sendCount = "111" then
 					state <= s0;
 				else
 					state <= s2;
