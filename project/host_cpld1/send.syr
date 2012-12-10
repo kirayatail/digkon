@@ -1,16 +1,16 @@
-Release 14.2 - xst P.28xd (nt64)
+Release 14.3 - xst P.40xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.27 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.27 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: send.prj
 
@@ -75,13 +75,9 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/send is now defined in a different file.  It was defined in "C:/Projekt/host_cpld1/send.vhd", and is now defined in "//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/send.vhd".
-WARNING:HDLParsers:3607 - Unit work/send/Behavioral is now defined in a different file.  It was defined in "C:/Projekt/host_cpld1/send.vhd", and is now defined in "//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/send.vhd".
-WARNING:HDLParsers:3607 - Unit work/counter is now defined in a different file.  It was defined in "C:/Projekt/host_cpld1/counter.vhd", and is now defined in "//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/counter.vhd".
-WARNING:HDLParsers:3607 - Unit work/counter/arch is now defined in a different file.  It was defined in "C:/Projekt/host_cpld1/counter.vhd", and is now defined in "//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/counter.vhd".
-Compiling vhdl file "//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/counter.vhd" in Library work.
+Compiling vhdl file "C:/workspace/digkon/project/host_cpld1/counter.vhd" in Library work.
 Architecture arch of Entity counter is up to date.
-Compiling vhdl file "//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/send.vhd" in Library work.
+Compiling vhdl file "C:/workspace/digkon/project/host_cpld1/send.vhd" in Library work.
 Architecture behavioral of Entity send is up to date.
 
 =========================================================================
@@ -96,7 +92,7 @@ Analyzing hierarchy for entity <counter> in library <work> (architecture <arch>)
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <send> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/send.vhd" line 41: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/workspace/digkon/project/host_cpld1/send.vhd" line 41: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <in_signal>
 INFO:Xst:2679 - Register <lmp<0>> in unit <send> has a constant value of 1 during circuit operation. The register is replaced by logic.
 Entity <send> analyzed. Unit <send> generated.
@@ -112,7 +108,7 @@ Entity <counter> analyzed. Unit <counter> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <counter>.
-    Related source file is "//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/counter.vhd".
+    Related source file is "C:/workspace/digkon/project/host_cpld1/counter.vhd".
     Found 1-bit register for signal <done>.
     Found 8-bit up counter for signal <count>.
     Summary:
@@ -122,7 +118,7 @@ Unit <counter> synthesized.
 
 
 Synthesizing Unit <send>.
-    Related source file is "//file00.chalmers.se/home/sjoksda/digkon/project/host_cpld1/send.vhd".
+    Related source file is "C:/workspace/digkon/project/host_cpld1/send.vhd".
 WARNING:Xst:1306 - Output <lmp<3:1>> is never assigned.
 WARNING:Xst:1780 - Signal <count> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:737 - Found 1-bit latch for signal <transmitter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -244,14 +240,14 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.91 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.62 secs
  
 --> 
 
-Total memory usage is 251972 kilobytes
+Total memory usage is 250196 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 
