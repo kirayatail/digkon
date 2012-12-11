@@ -29,7 +29,7 @@ entity ctrl is
            nextKey : out  STD_LOGIC;
 			  checkRst : out STD_LOGIC;
            larmOut : out  STD_LOGIC;
-			  sttOut: out STD_LOGIC_VECTOR(2 downto 0));
+			  okOut : out STD_LOGIC);
 end ctrl;
 
 architecture Behavioral of ctrl is
@@ -94,14 +94,9 @@ begin
 	
 	checkRst <= '1' when (state = s2) else '0';
 	
-	larmOut <= alarm;
+	larmOut <= '1' when (state = s0 AND alarm = '1') else '0';
 	
-	-- debug! Remove before real implement
-	sttOut <= "000" when state = s0 else
-				 "001" when state = s1 else
-				 "010" when state = s2 else
-				 "011" when state = s3 else
-				 "100" when state = s4;
+	okOut <= '1' when (state = s0 AND alarm = '0') else '0';
 	
 end Behavioral;
 

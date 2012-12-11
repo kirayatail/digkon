@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.40xd
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
-12-10-2012 12:11PM
+12-11-2012  9:50AM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -18,32 +18,32 @@ Pinout by Pin Number:
 
 -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
-P1|data<2>|O|I/O|OUTPUT|||||||||
+P1|TIE||I/O||||||||||
 P2|TIE||I/O||||||||||
 P3|TIE||I/O||||||||||
-P4|data<3>|O|I/O|OUTPUT|||||||||
+P4|TIE||I/O||||||||||
 P5|clk|GCK|I/O/GCK1||||||||||
 P6|TIE||I/O/GCK2||||||||||
 P7|TIE||I/O/GCK3||||||||||
 P8|TIE||I/O||||||||||
 P9|TIE||I/O||||||||||
 P10|GND||GND||||||||||
-P11|xmt|O|I/O|OUTPUT|||||||||
+P11|TIE||I/O||||||||||
 P12|TIE||I/O||||||||||
-P13|TIE||I/O||||||||||
-P14|TIE||I/O||||||||||
+P13|xmt|O|I/O|OUTPUT|||||||||
+P14|lowClk|O|I/O|OUTPUT|||||||||
 P15|TDI||TDI||||||||||
 P16|TMS||TMS||||||||||
 P17|TCK||TCK||||||||||
-P18|TIE||I/O||||||||||
+P18|data<0>|O|I/O|OUTPUT|||||||||
 P19|data<1>|O|I/O|OUTPUT|||||||||
-P20|TIE||I/O||||||||||
+P20|data<2>|O|I/O|OUTPUT|||||||||
 P21|VCC||VCCINT||||||||||
-P22|rst|I|I/O|INPUT|||||||||
+P22|data<3>|O|I/O|OUTPUT|||||||||
 P23|GND||GND||||||||||
-P24|TIE||I/O||||||||||
+P24|sendEnable|I|I/O|INPUT|||||||||
 P25|sendDone|O|I/O|OUTPUT|||||||||
-P26|TIE||I/O||||||||||
+P26|getRand|I|I/O|INPUT|||||||||
 P27|TIE||I/O||||||||||
 P28|TIE||I/O||||||||||
 P29|TIE||I/O||||||||||
@@ -52,11 +52,11 @@ P31|GND||GND||||||||||
 P32|VCC||VCCIO||||||||||
 P33|TIE||I/O||||||||||
 P34|TIE||I/O||||||||||
-P35|data<0>|O|I/O|OUTPUT|||||||||
+P35|TIE||I/O||||||||||
 P36|TIE||I/O||||||||||
-P37|getRand|I|I/O|INPUT|||||||||
-P38|lowClk|O|I/O|OUTPUT|||||||||
-P39|sendEnable|GSR|I/O/GSR||||||||||
+P37|TIE||I/O||||||||||
+P38|TIE||I/O||||||||||
+P39|rst|I|I/O/GSR|INPUT|||||||||
 P40|TIE||I/O/GTS2||||||||||
 P41|VCC||VCCINT||||||||||
 P42|TIE||I/O/GTS1||||||||||

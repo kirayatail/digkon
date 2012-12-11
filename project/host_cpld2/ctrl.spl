@@ -15,5 +15,5 @@ timerstart
 nextKey
 checkRst
 larmOut
-=sttOut[2:0]=
+okOut
 [BiDir]

@@ -107,17 +107,17 @@ FDCPE_sendDone: FDCPE port map (sendDone,sendDone_D,lowClk,NOT sendEnable,'0');
 </td></tr><tr><td>
 FDCPE_xmt: FDCPE port map (xmt,xmt_D,lowClk,NOT sendEnable,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmt_D <= ((XLXI_2/state_FSM_FFd11)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_2/state_FSM_FFd13)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_2/state_FSM_FFd7)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_2/state_FSM_FFd19)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_2/state_FSM_FFd13)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_2/state_FSM_FFd15)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_2/state_FSM_FFd17)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_2/state_FSM_FFd9)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP6_.EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data(1) AND XLXI_2/state_FSM_FFd5)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data(0) AND XLXI_2/state_FSM_FFd6)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data(2) AND XLXI_2/state_FSM_FFd4)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data(3) AND XLXI_2/state_FSM_FFd3)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sendDone AND xmt));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data(3) AND XLXI_2/state_FSM_FFd3));
 </td></tr><tr><td>
 Register Legend:
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 

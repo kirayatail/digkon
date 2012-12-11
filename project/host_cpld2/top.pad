@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.40xd
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
-12- 9-2012  2:55PM
+12-11-2012  9:42AM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -18,49 +18,49 @@ Pinout by Pin Number:
 
 -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
-P1|rand|O|I/O|OUTPUT|||||||||
+P1|TIE||I/O||||||||||
 P2|TIE||I/O||||||||||
-P3|data<0>|I|I/O|INPUT|||||||||
-P4|TIE||I/O||||||||||
+P3|okLmp|O|I/O|OUTPUT|||||||||
+P4|larm|O|I/O|OUTPUT|||||||||
 P5|clk|GCK|I/O/GCK1||||||||||
-P6|lowClk|GCK|I/O/GCK2||||||||||
+P6|trig|I|I/O/GCK2|INPUT|||||||||
 P7|TIE||I/O/GCK3||||||||||
 P8|TIE||I/O||||||||||
 P9|TIE||I/O||||||||||
 P10|GND||GND||||||||||
 P11|TIE||I/O||||||||||
-P12|state<2>|O|I/O|OUTPUT|||||||||
-P13|TIE||I/O||||||||||
-P14|TIE||I/O||||||||||
+P12|TIE||I/O||||||||||
+P13|rcv|I|I/O|INPUT|||||||||
+P14|lowClk|I|I/O|INPUT|||||||||
 P15|TDI||TDI||||||||||
 P16|TMS||TMS||||||||||
 P17|TCK||TCK||||||||||
-P18|TIE||I/O||||||||||
-P19|larm|O|I/O|OUTPUT|||||||||
-P20|TIE||I/O||||||||||
+P18|data<0>|I|I/O|INPUT|||||||||
+P19|data<1>|I|I/O|INPUT|||||||||
+P20|data<2>|I|I/O|INPUT|||||||||
 P21|VCC||VCCINT||||||||||
-P22|TIE||I/O||||||||||
+P22|data<3>|I|I/O|INPUT|||||||||
 P23|GND||GND||||||||||
-P24|TIE||I/O||||||||||
-P25|state<1>|O|I/O|OUTPUT|||||||||
-P26|data<3>|I|I/O|INPUT|||||||||
+P24|sendEnable|O|I/O|OUTPUT|||||||||
+P25|sendDone|I|I/O|INPUT|||||||||
+P26|getRand|O|I/O|OUTPUT|||||||||
 P27|TIE||I/O||||||||||
 P28|TIE||I/O||||||||||
-P29|data<2>|I|I/O|INPUT|||||||||
+P29|TIE||I/O||||||||||
 P30|TDO||TDO||||||||||
 P31|GND||GND||||||||||
 P32|VCC||VCCIO||||||||||
 P33|TIE||I/O||||||||||
-P34|data<1>|I|I/O|INPUT|||||||||
-P35|send|O|I/O|OUTPUT|||||||||
+P34|TIE||I/O||||||||||
+P35|TIE||I/O||||||||||
 P36|TIE||I/O||||||||||
-P37|state<0>|O|I/O|OUTPUT|||||||||
-P38|trig|I|I/O|INPUT|||||||||
-P39|reset|GSR/I|I/O/GSR||||||||||
-P40|rcv|I|I/O/GTS2|INPUT|||||||||
+P37|TIE||I/O||||||||||
+P38|TIE||I/O||||||||||
+P39|rst|GSR/I|I/O/GSR||||||||||
+P40|TIE||I/O/GTS2||||||||||
 P41|VCC||VCCINT||||||||||
 P42|TIE||I/O/GTS1||||||||||
-P43|senddone|I|I/O|INPUT|||||||||
+P43|TIE||I/O||||||||||
 P44|TIE||I/O||||||||||
 
 To preserve the pinout above for future design iterations in

@@ -2,37 +2,34 @@ Pin Freeze File:  version P.40xd
 
 9572XL44PC XC9572XL-5-PC44
 clk S:PIN5
-data<0> S:PIN3
-data<1> S:PIN34
-data<2> S:PIN29
-data<3> S:PIN26
-lowClk S:PIN6
-rcv S:PIN40
-reset S:PIN39
-senddone S:PIN43
-trig S:PIN38
-send S:PIN35
-larm S:PIN19
-rand S:PIN1
-state<0> S:PIN37
-state<1> S:PIN25
-state<2> S:PIN12
+data<0> S:PIN18
+data<1> S:PIN19
+data<2> S:PIN20
+data<3> S:PIN22
+lowClk S:PIN14
+rcv S:PIN13
+rst S:PIN39
+sendDone S:PIN25
+trig S:PIN6
+sendEnable S:PIN24
+getRand S:PIN26
+larm S:PIN4
+okLmp S:PIN3
 
 
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_2 rand_OBUF
-PARTITION FB1_17 XLXI_9/timer<0> XLXN_61
-PARTITION FB2_1 XLXI_12/state_FSM_FFd1 XLXN_30 XLXN_83<3> XLXI_9/timer<3>
-		 XLXI_9/timer<2> state_0_OBUF XLXN_83<2> XLXI_9/timer<4>
-		 XLXN_83<1> XLXN_83<0> XLXI_12/state_FSM_FFd3 XLXI_1/count<1>
-		 XLXI_12/state_FSM_FFd4 XLXI_12/state_FSM_FFd2 XLXI_12/state_FSM_FFd5 XLXI_9/timer<5>
-		 XLXI_1/count<0> XLXI_9/timer<1>
-PARTITION FB3_4 EXP6_ state_2_OBUF EXP7_
-PARTITION FB3_14 larm_OBUF
+PARTITION FB1_1 XLXI_9/timer<4> XLXI_1/count<0> XLXI_9/timer<3> XLXI_9/timer<2>
+		 XLXN_83<0> okLmp_OBUF XLXI_1/alarm larm_OBUF
+		 XLXI_12/state_FSM_FFd3 XLXI_1/state_FSM_FFd1 XLXI_1/count<1> XLXI_12/state_FSM_FFd5
+		 XLXI_9/timer<5> XLXI_12/state_FSM_FFd4 EXP6_ XLXI_12/state_FSM_FFd2
+		 EXP7_ XLXI_12/state_FSM_FFd1
 
-PARTITION FB4_1 EXP8_ state_1_OBUF XLXI_1/nextSig EXP9_
-		
-PARTITION FB4_16 XLXN_83<3>/XLXN_83<3>_RSTF__$INT EXP10_ XLXI_1/state_FSM_FFd2
+PARTITION FB3_1 XLXI_1/state_FSM_FFd3 EXP8_
+PARTITION FB3_12 XLXN_83<3>/XLXN_83<3>_RSTF__$INT EXP9_ XLXI_1/state_FSM_FFd2 EXP10_
+		 XLXN_30 EXP11_ XLXI_1/nextSig
+PARTITION FB4_5 getRand_OBUF
+PARTITION FB4_13 XLXN_61 XLXI_9/timer<0> XLXI_9/timer<1> XLXN_83<3>
+		 XLXN_83<2> XLXN_83<1>
 

@@ -1,7 +1,7 @@
  
 cpldfit:  version P.40xd                            Xilinx Inc.
                                   Fitter Report
-Design Name: top                                 Date: 12-10-2012, 12:11PM
+Design Name: top                                 Date: 12-11-2012,  9:50AM
 Device Used: XC9572XL-5-PC44
 Fitting Status: Successful
 
@@ -9,18 +9,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-37 /72  ( 51%) 84  /360  ( 23%) 61 /216 ( 28%)   37 /72  ( 51%) 11 /34  ( 32%)
+37 /72  ( 51%) 104 /360  ( 29%) 69 /216 ( 32%)   37 /72  ( 51%) 11 /34  ( 32%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-FB1          12/18       15/54       26/90       3/ 9
-FB2          15/18       15/54       26/90       4/ 9
-FB3           2/18       21/54       16/90       3/ 9
-FB4           8/18       10/54       16/90       1/ 7
+FB1          12/18       13/54       20/90       1/ 9
+FB2           7/18        9/54       21/90       1/ 9
+FB3           6/18       33/54       28/90       7/ 9
+FB4          12/18       14/54       35/90       2/ 7
              -----       -----       -----      -----    
-             37/72       61/216      84/360     11/34 
+             37/72       69/216     104/360     11/34 
 
 * - Resource is exhausted
 
@@ -28,18 +28,18 @@ FB4           8/18       10/54       16/90       1/ 7
 
 Signal 'clk' mapped onto global clock net GCK1.
 Global output enable net(s) unused.
-Signal 'sendEnable' mapped onto global set/reset net GSR.
+Global set/reset net(s) unused.
 
 ** Pin Resources **
 
 Signal Type    Required     Mapped  |  Pin Type            Used    Total 
 ------------------------------------|------------------------------------
-Input         :    2           2    |  I/O              :     9      28
+Input         :    3           3    |  I/O              :     9      28
 Output        :    7           7    |  GCK/IO           :     1       3
 Bidirectional :    0           0    |  GTS/IO           :     0       2
 GCK           :    1           1    |  GSR/IO           :     1       1
 GTS           :    0           0    |
-GSR           :    1           1    |
+GSR           :    0           0    |
                  ----        ----
         Total     11          11
 
@@ -52,63 +52,68 @@ End of Mapped Resource Summary
 
 WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
    use the default filename of 'top.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'clk' based upon the LOC
+   constraint 'P5'. It is recommended that you declare this BUFG explicitedly in
+   your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
 *************************  Summary of Mapped Logic  ************************
 
 ** 7 Outputs **
 
 Signal                  Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
 Name                    Pts   Inps          No.  Type    Use     Mode Rate State
-data<2>                 3     3     FB1_2   1    I/O     O       STD  FAST RESET
-data<3>                 3     3     FB1_8   4    I/O     O       STD  FAST RESET
-data<0>                 3     3     FB2_2   35   I/O     O       STD  FAST RESET
-lowClk                  2     9     FB2_8   38   I/O     O       STD  FAST RESET
-xmt                     13    18    FB3_2   11   I/O     O       STD  FAST RESET
+xmt                     14    19    FB3_8   13   I/O     O       STD  FAST RESET
+lowClk                  2     9     FB3_9   14   I/O     O       STD  FAST RESET
+data<0>                 3     3     FB3_11  18   I/O     O       STD  FAST RESET
 data<1>                 3     3     FB3_14  19   I/O     O       STD  FAST RESET
-sendDone                2     3     FB4_2   25   I/O     O       STD  FAST RESET
+data<2>                 3     3     FB3_15  20   I/O     O       STD  FAST RESET
+data<3>                 3     3     FB3_17  22   I/O     O       STD  FAST RESET
+sendDone                3     4     FB4_2   25   I/O     O       STD  FAST RESET
 
 ** 30 Buried Nodes **
 
 Signal                  Total Total Loc     Pwr  Reg Init
 Name                    Pts   Inps          Mode State
-XLXI_2/state_FSM_FFd2   2     2     FB1_9   STD  RESET
-XLXI_2/state_FSM_FFd18  2     2     FB1_10  STD  RESET
-XLXI_2/state_FSM_FFd17  2     2     FB1_11  STD  RESET
-XLXI_2/state_FSM_FFd16  2     2     FB1_12  STD  RESET
-XLXI_2/state_FSM_FFd15  2     2     FB1_13  STD  RESET
-XLXI_2/state_FSM_FFd14  2     2     FB1_14  STD  RESET
-XLXI_2/state_FSM_FFd13  2     2     FB1_15  STD  RESET
-XLXI_2/state_FSM_FFd12  2     2     FB1_16  STD  RESET
-XLXI_2/state_FSM_FFd11  2     2     FB1_17  STD  RESET
-XLXI_2/state_FSM_FFd10  2     2     FB1_18  STD  RESET
-XLXI_3/XLXN_69          1     2     FB2_5   STD  RESET
-XLXI_3/XLXN_68          1     2     FB2_6   STD  RESET
-XLXI_3/XLXN_67          1     2     FB2_7   STD  RESET
-XLXI_3/XLXN_66          1     2     FB2_9   STD  RESET
-XLXI_2/state_FSM_FFd19  1     1     FB2_10  STD  SET
-XLXI_1/count<7>         2     8     FB2_11  STD  RESET
-XLXI_1/count<6>         2     7     FB2_12  STD  RESET
-XLXI_1/count<5>         2     6     FB2_13  STD  RESET
-XLXI_1/count<4>         2     5     FB2_14  STD  RESET
-XLXI_1/count<3>         2     4     FB2_15  STD  RESET
-XLXI_1/count<2>         2     3     FB2_16  STD  RESET
-XLXI_1/count<1>         2     2     FB2_17  STD  RESET
-XLXI_1/count<0>         2     9     FB2_18  STD  RESET
-XLXI_2/state_FSM_FFd9   2     2     FB4_12  STD  RESET
-XLXI_2/state_FSM_FFd8   2     2     FB4_13  STD  RESET
-XLXI_2/state_FSM_FFd7   2     2     FB4_14  STD  RESET
-XLXI_2/state_FSM_FFd6   2     2     FB4_15  STD  RESET
-XLXI_2/state_FSM_FFd5   2     2     FB4_16  STD  RESET
-XLXI_2/state_FSM_FFd4   2     2     FB4_17  STD  RESET
-XLXI_2/state_FSM_FFd3   2     2     FB4_18  STD  RESET
+XLXI_3/XLXN_69          1     2     FB1_7   STD  RESET
+XLXI_3/XLXN_68          1     2     FB1_8   STD  RESET
+XLXI_3/XLXN_67          1     2     FB1_9   STD  RESET
+XLXI_3/XLXN_66          1     2     FB1_10  STD  RESET
+XLXI_1/count<7>         2     8     FB1_11  STD  RESET
+XLXI_1/count<6>         2     7     FB1_12  STD  RESET
+XLXI_1/count<5>         2     6     FB1_13  STD  RESET
+XLXI_1/count<4>         2     5     FB1_14  STD  RESET
+XLXI_1/count<3>         2     4     FB1_15  STD  RESET
+XLXI_1/count<2>         2     3     FB1_16  STD  RESET
+XLXI_1/count<1>         2     2     FB1_17  STD  RESET
+XLXI_1/count<0>         2     9     FB1_18  STD  RESET
+XLXI_2/state_FSM_FFd9   3     3     FB2_12  STD  RESET
+XLXI_2/state_FSM_FFd8   3     3     FB2_13  STD  RESET
+XLXI_2/state_FSM_FFd7   3     3     FB2_14  STD  RESET
+XLXI_2/state_FSM_FFd6   3     3     FB2_15  STD  RESET
+XLXI_2/state_FSM_FFd5   3     3     FB2_16  STD  RESET
+XLXI_2/state_FSM_FFd4   3     3     FB2_17  STD  RESET
+XLXI_2/state_FSM_FFd3   3     3     FB2_18  STD  RESET
+XLXI_2/state_FSM_FFd19  2     2     FB4_8   STD  SET
+XLXI_2/state_FSM_FFd2   3     3     FB4_9   STD  RESET
+XLXI_2/state_FSM_FFd18  3     3     FB4_10  STD  RESET
+XLXI_2/state_FSM_FFd17  3     3     FB4_11  STD  RESET
+XLXI_2/state_FSM_FFd16  3     3     FB4_12  STD  RESET
+XLXI_2/state_FSM_FFd15  3     3     FB4_13  STD  RESET
+XLXI_2/state_FSM_FFd14  3     3     FB4_14  STD  RESET
+XLXI_2/state_FSM_FFd13  3     3     FB4_15  STD  RESET
+XLXI_2/state_FSM_FFd12  3     3     FB4_16  STD  RESET
+XLXI_2/state_FSM_FFd11  3     3     FB4_17  STD  RESET
+XLXI_2/state_FSM_FFd10  3     3     FB4_18  STD  RESET
 
 ** 4 Inputs **
 
 Signal                  Loc     Pin  Pin     Pin     
 Name                            No.  Type    Use     
-clk                     FB1_9   5~   GCK/I/O GCK
-getRand                 FB2_6   37   I/O     I
-sendEnable              FB2_9   39~  GSR/I/O GSR
-rst                     FB3_17  22   I/O     I
+clk                     FB1_9   5    GCK/I/O GCK
+rst                     FB2_9   39   GSR/I/O I
+sendEnable              FB3_16  24   I/O     I
+getRand                 FB4_5   26   I/O     I
 
 Legend:
 Pin No. - ~ - User Assigned
@@ -126,217 +131,220 @@ Pin Type/Use - I  - Input             GCK - Global Clock
 X            - Signal used as input to the macrocell logic.
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
-Number of function block inputs used/remaining:               15/39
-Number of signals used by logic mapping into function block:  15
+Number of function block inputs used/remaining:               13/41
+Number of signals used by logic mapping into function block:  13
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB1_1         (b)     
-data<2>               3       0     0   2     FB1_2   1     I/O     O
+(unused)              0       0     0   5     FB1_2   1     I/O     
 (unused)              0       0     0   5     FB1_3         (b)     
 (unused)              0       0     0   5     FB1_4         (b)     
 (unused)              0       0     0   5     FB1_5   2     I/O     
 (unused)              0       0     0   5     FB1_6   3     I/O     
-(unused)              0       0     0   5     FB1_7         (b)     
-data<3>               3       0     0   2     FB1_8   4     I/O     O
-XLXI_2/state_FSM_FFd2
-                      2       0     0   3     FB1_9   5     GCK/I/O GCK
-XLXI_2/state_FSM_FFd18
-                      2       0     0   3     FB1_10        (b)     (b)
-XLXI_2/state_FSM_FFd17
-                      2       0     0   3     FB1_11  6     GCK/I/O (b)
-XLXI_2/state_FSM_FFd16
-                      2       0     0   3     FB1_12        (b)     (b)
-XLXI_2/state_FSM_FFd15
-                      2       0     0   3     FB1_13        (b)     (b)
-XLXI_2/state_FSM_FFd14
-                      2       0     0   3     FB1_14  7     GCK/I/O (b)
-XLXI_2/state_FSM_FFd13
-                      2       0     0   3     FB1_15  8     I/O     (b)
-XLXI_2/state_FSM_FFd12
-                      2       0     0   3     FB1_16        (b)     (b)
-XLXI_2/state_FSM_FFd11
-                      2       0     0   3     FB1_17  9     I/O     (b)
-XLXI_2/state_FSM_FFd10
-                      2       0     0   3     FB1_18        (b)     (b)
+XLXI_3/XLXN_69        1       0     0   4     FB1_7         (b)     (b)
+XLXI_3/XLXN_68        1       0     0   4     FB1_8   4     I/O     (b)
+XLXI_3/XLXN_67        1       0     0   4     FB1_9   5     GCK/I/O GCK
+XLXI_3/XLXN_66        1       0     0   4     FB1_10        (b)     (b)
+XLXI_1/count<7>       2       0     0   3     FB1_11  6     GCK/I/O (b)
+XLXI_1/count<6>       2       0     0   3     FB1_12        (b)     (b)
+XLXI_1/count<5>       2       0     0   3     FB1_13        (b)     (b)
+XLXI_1/count<4>       2       0     0   3     FB1_14  7     GCK/I/O (b)
+XLXI_1/count<3>       2       0     0   3     FB1_15  8     I/O     (b)
+XLXI_1/count<2>       2       0     0   3     FB1_16        (b)     (b)
+XLXI_1/count<1>       2       0     0   3     FB1_17  9     I/O     (b)
+XLXI_1/count<0>       2       0     0   3     FB1_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: XLXI_2/state_FSM_FFd11   6: XLXI_2/state_FSM_FFd16  11: XLXI_3/XLXN_68 
-  2: XLXI_2/state_FSM_FFd12   7: XLXI_2/state_FSM_FFd17  12: XLXI_3/XLXN_69 
-  3: XLXI_2/state_FSM_FFd13   8: XLXI_2/state_FSM_FFd18  13: getRand 
-  4: XLXI_2/state_FSM_FFd14   9: XLXI_2/state_FSM_FFd19  14: lowClk 
-  5: XLXI_2/state_FSM_FFd15  10: XLXI_2/state_FSM_FFd3   15: rst 
+  1: XLXI_1/count<0>    6: XLXI_1/count<5>   10: XLXI_3/XLXN_67 
+  2: XLXI_1/count<1>    7: XLXI_1/count<6>   11: XLXI_3/XLXN_68 
+  3: XLXI_1/count<2>    8: XLXI_1/count<7>   12: XLXI_3/XLXN_69 
+  4: XLXI_1/count<3>    9: XLXI_3/XLXN_66    13: rst 
+  5: XLXI_1/count<4>  
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-data<2>              ..........X.X.X......................... 3
-data<3>              ...........XX.X......................... 3
-XLXI_2/state_FSM_FFd2 
-                     .........X...X.......................... 2
-XLXI_2/state_FSM_FFd18 
-                     ........X....X.......................... 2
-XLXI_2/state_FSM_FFd17 
-                     .......X.....X.......................... 2
-XLXI_2/state_FSM_FFd16 
-                     ......X......X.......................... 2
-XLXI_2/state_FSM_FFd15 
-                     .....X.......X.......................... 2
-XLXI_2/state_FSM_FFd14 
-                     ....X........X.......................... 2
-XLXI_2/state_FSM_FFd13 
-                     ...X.........X.......................... 2
-XLXI_2/state_FSM_FFd12 
-                     ..X..........X.......................... 2
-XLXI_2/state_FSM_FFd11 
-                     .X...........X.......................... 2
-XLXI_2/state_FSM_FFd10 
-                     X............X.......................... 2
+XLXI_3/XLXN_69       ..........X.X........................... 2
+XLXI_3/XLXN_68       .........X..X........................... 2
+XLXI_3/XLXN_67       ........X...X........................... 2
+XLXI_3/XLXN_66       ...........XX........................... 2
+XLXI_1/count<7>      XXXXXXX.....X........................... 8
+XLXI_1/count<6>      XXXXXX......X........................... 7
+XLXI_1/count<5>      XXXXX.......X........................... 6
+XLXI_1/count<4>      XXXX........X........................... 5
+XLXI_1/count<3>      XXX.........X........................... 4
+XLXI_1/count<2>      XX..........X........................... 3
+XLXI_1/count<1>      X...........X........................... 2
+XLXI_1/count<0>      XXXXXXXX....X........................... 9
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB2  ***********************************
-Number of function block inputs used/remaining:               15/39
-Number of signals used by logic mapping into function block:  15
+Number of function block inputs used/remaining:               9/45
+Number of signals used by logic mapping into function block:  9
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB2_1         (b)     
-data<0>               3       0     0   2     FB2_2   35    I/O     O
+(unused)              0       0     0   5     FB2_2   35    I/O     
 (unused)              0       0     0   5     FB2_3         (b)     
 (unused)              0       0     0   5     FB2_4         (b)     
-XLXI_3/XLXN_69        1       0     0   4     FB2_5   36    I/O     (b)
-XLXI_3/XLXN_68        1       0     0   4     FB2_6   37    I/O     I
-XLXI_3/XLXN_67        1       0     0   4     FB2_7         (b)     (b)
-lowClk                2       0     0   3     FB2_8   38    I/O     O
-XLXI_3/XLXN_66        1       0     0   4     FB2_9   39    GSR/I/O GSR
-XLXI_2/state_FSM_FFd19
-                      1       0     0   4     FB2_10        (b)     (b)
-XLXI_1/count<7>       2       0     0   3     FB2_11  40    GTS/I/O (b)
-XLXI_1/count<6>       2       0     0   3     FB2_12        (b)     (b)
-XLXI_1/count<5>       2       0     0   3     FB2_13        (b)     (b)
-XLXI_1/count<4>       2       0     0   3     FB2_14  42    GTS/I/O (b)
-XLXI_1/count<3>       2       0     0   3     FB2_15  43    I/O     (b)
-XLXI_1/count<2>       2       0     0   3     FB2_16        (b)     (b)
-XLXI_1/count<1>       2       0     0   3     FB2_17  44    I/O     (b)
-XLXI_1/count<0>       2       0     0   3     FB2_18        (b)     (b)
+(unused)              0       0     0   5     FB2_5   36    I/O     
+(unused)              0       0     0   5     FB2_6   37    I/O     
+(unused)              0       0     0   5     FB2_7         (b)     
+(unused)              0       0     0   5     FB2_8   38    I/O     
+(unused)              0       0     0   5     FB2_9   39    GSR/I/O I
+(unused)              0       0     0   5     FB2_10        (b)     
+(unused)              0       0     0   5     FB2_11  40    GTS/I/O 
+XLXI_2/state_FSM_FFd9
+                      3       0     0   2     FB2_12        (b)     (b)
+XLXI_2/state_FSM_FFd8
+                      3       0     0   2     FB2_13        (b)     (b)
+XLXI_2/state_FSM_FFd7
+                      3       0     0   2     FB2_14  42    GTS/I/O (b)
+XLXI_2/state_FSM_FFd6
+                      3       0     0   2     FB2_15  43    I/O     (b)
+XLXI_2/state_FSM_FFd5
+                      3       0     0   2     FB2_16        (b)     (b)
+XLXI_2/state_FSM_FFd4
+                      3       0     0   2     FB2_17  44    I/O     (b)
+XLXI_2/state_FSM_FFd3
+                      3       0     0   2     FB2_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: XLXI_1/count<0>    6: XLXI_1/count<5>   11: XLXI_3/XLXN_68 
-  2: XLXI_1/count<1>    7: XLXI_1/count<6>   12: XLXI_3/XLXN_69 
-  3: XLXI_1/count<2>    8: XLXI_1/count<7>   13: getRand 
-  4: XLXI_1/count<3>    9: XLXI_3/XLXN_66    14: lowClk 
-  5: XLXI_1/count<4>   10: XLXI_3/XLXN_67    15: rst 
+  1: XLXI_2/state_FSM_FFd10   4: XLXI_2/state_FSM_FFd6   7: XLXI_2/state_FSM_FFd9 
+  2: XLXI_2/state_FSM_FFd4    5: XLXI_2/state_FSM_FFd7   8: lowClk 
+  3: XLXI_2/state_FSM_FFd5    6: XLXI_2/state_FSM_FFd8   9: sendEnable 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-data<0>              ........X...X.X......................... 3
-XLXI_3/XLXN_69       ..........X...X......................... 2
-XLXI_3/XLXN_68       .........X....X......................... 2
-XLXI_3/XLXN_67       ........X.....X......................... 2
-lowClk               XXXXXXXX......X......................... 9
-XLXI_3/XLXN_66       ...........X..X......................... 2
-XLXI_2/state_FSM_FFd19 
-                     .............X.......................... 1
-XLXI_1/count<7>      XXXXXXX.......X......................... 8
-XLXI_1/count<6>      XXXXXX........X......................... 7
-XLXI_1/count<5>      XXXXX.........X......................... 6
-XLXI_1/count<4>      XXXX..........X......................... 5
-XLXI_1/count<3>      XXX...........X......................... 4
-XLXI_1/count<2>      XX............X......................... 3
-XLXI_1/count<1>      X.............X......................... 2
-XLXI_1/count<0>      XXXXXXXX......X......................... 9
+XLXI_2/state_FSM_FFd9 
+                     X......XX............................... 3
+XLXI_2/state_FSM_FFd8 
+                     ......XXX............................... 3
+XLXI_2/state_FSM_FFd7 
+                     .....X.XX............................... 3
+XLXI_2/state_FSM_FFd6 
+                     ....X..XX............................... 3
+XLXI_2/state_FSM_FFd5 
+                     ...X...XX............................... 3
+XLXI_2/state_FSM_FFd4 
+                     ..X....XX............................... 3
+XLXI_2/state_FSM_FFd3 
+                     .X.....XX............................... 3
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB3  ***********************************
-Number of function block inputs used/remaining:               21/33
-Number of signals used by logic mapping into function block:  21
+Number of function block inputs used/remaining:               33/21
+Number of signals used by logic mapping into function block:  33
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0   \/4   1     FB3_1         (b)     (b)
-xmt                  13       8<-   0   0     FB3_2   11    I/O     O
-(unused)              0       0   /\4   1     FB3_3         (b)     (b)
+(unused)              0       0     0   5     FB3_1         (b)     
+(unused)              0       0     0   5     FB3_2   11    I/O     
+(unused)              0       0     0   5     FB3_3         (b)     
 (unused)              0       0     0   5     FB3_4         (b)     
 (unused)              0       0     0   5     FB3_5   12    I/O     
-(unused)              0       0     0   5     FB3_6         (b)     
-(unused)              0       0     0   5     FB3_7         (b)     
-(unused)              0       0     0   5     FB3_8   13    I/O     
-(unused)              0       0     0   5     FB3_9   14    I/O     
+(unused)              0       0   \/1   4     FB3_6         (b)     (b)
+(unused)              0       0   \/5   0     FB3_7         (b)     (b)
+xmt                  14       9<-   0   0     FB3_8   13    I/O     O
+lowClk                2       0   /\3   0     FB3_9   14    I/O     O
 (unused)              0       0     0   5     FB3_10        (b)     
-(unused)              0       0     0   5     FB3_11  18    I/O     
+data<0>               3       0     0   2     FB3_11  18    I/O     O
 (unused)              0       0     0   5     FB3_12        (b)     
 (unused)              0       0     0   5     FB3_13        (b)     
 data<1>               3       0     0   2     FB3_14  19    I/O     O
-(unused)              0       0     0   5     FB3_15  20    I/O     
-(unused)              0       0     0   5     FB3_16  24    I/O     
-(unused)              0       0     0   5     FB3_17  22    I/O     I
+data<2>               3       0     0   2     FB3_15  20    I/O     O
+(unused)              0       0     0   5     FB3_16  24    I/O     I
+data<3>               3       0     0   2     FB3_17  22    I/O     O
 (unused)              0       0     0   5     FB3_18        (b)     
 
 Signals Used by Logic in Function Block
-  1: XLXI_2/state_FSM_FFd11   8: XLXI_2/state_FSM_FFd5  15: data<2> 
-  2: XLXI_2/state_FSM_FFd13   9: XLXI_2/state_FSM_FFd6  16: data<3> 
-  3: XLXI_2/state_FSM_FFd15  10: XLXI_2/state_FSM_FFd7  17: getRand 
-  4: XLXI_2/state_FSM_FFd17  11: XLXI_2/state_FSM_FFd9  18: lowClk 
-  5: XLXI_2/state_FSM_FFd19  12: XLXI_3/XLXN_67         19: rst 
-  6: XLXI_2/state_FSM_FFd3   13: data<0>                20: sendDone 
-  7: XLXI_2/state_FSM_FFd4   14: data<1>                21: xmt 
+  1: XLXI_1/count<0>         12: XLXI_2/state_FSM_FFd17  23: XLXI_3/XLXN_69 
+  2: XLXI_1/count<1>         13: XLXI_2/state_FSM_FFd19  24: data<0> 
+  3: XLXI_1/count<2>         14: XLXI_2/state_FSM_FFd3   25: data<1> 
+  4: XLXI_1/count<3>         15: XLXI_2/state_FSM_FFd4   26: data<2> 
+  5: XLXI_1/count<4>         16: XLXI_2/state_FSM_FFd5   27: data<3> 
+  6: XLXI_1/count<5>         17: XLXI_2/state_FSM_FFd6   28: getRand 
+  7: XLXI_1/count<6>         18: XLXI_2/state_FSM_FFd7   29: lowClk 
+  8: XLXI_1/count<7>         19: XLXI_2/state_FSM_FFd9   30: rst 
+  9: XLXI_2/state_FSM_FFd11  20: XLXI_3/XLXN_66          31: sendDone 
+ 10: XLXI_2/state_FSM_FFd13  21: XLXI_3/XLXN_67          32: sendEnable 
+ 11: XLXI_2/state_FSM_FFd15  22: XLXI_3/XLXN_68          33: xmt 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-xmt                  XXXXXXXXXXX.XXXX.X.XX................... 18
-data<1>              ...........X....X.X..................... 3
+xmt                  ........XXXXXXXXXXX....XXXX.X.XXX....... 19
+lowClk               XXXXXXXX.....................X.......... 9
+data<0>              ...................X.......X.X.......... 3
+data<1>              ....................X......X.X.......... 3
+data<2>              .....................X.....X.X.......... 3
+data<3>              ......................X....X.X.......... 3
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB4  ***********************************
-Number of function block inputs used/remaining:               10/44
-Number of signals used by logic mapping into function block:  10
+Number of function block inputs used/remaining:               14/40
+Number of signals used by logic mapping into function block:  14
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB4_1         (b)     
-sendDone              2       0     0   3     FB4_2   25    I/O     O
+sendDone              3       0     0   2     FB4_2   25    I/O     O
 (unused)              0       0     0   5     FB4_3         (b)     
 (unused)              0       0     0   5     FB4_4         (b)     
-(unused)              0       0     0   5     FB4_5   26    I/O     
+(unused)              0       0     0   5     FB4_5   26    I/O     I
 (unused)              0       0     0   5     FB4_6         (b)     
 (unused)              0       0     0   5     FB4_7         (b)     
-(unused)              0       0     0   5     FB4_8   27    I/O     
-(unused)              0       0     0   5     FB4_9         (b)     
-(unused)              0       0     0   5     FB4_10        (b)     
-(unused)              0       0     0   5     FB4_11  28    I/O     
-XLXI_2/state_FSM_FFd9
-                      2       0     0   3     FB4_12        (b)     (b)
-XLXI_2/state_FSM_FFd8
-                      2       0     0   3     FB4_13        (b)     (b)
-XLXI_2/state_FSM_FFd7
-                      2       0     0   3     FB4_14  29    I/O     (b)
-XLXI_2/state_FSM_FFd6
-                      2       0     0   3     FB4_15  33    I/O     (b)
-XLXI_2/state_FSM_FFd5
-                      2       0     0   3     FB4_16        (b)     (b)
-XLXI_2/state_FSM_FFd4
-                      2       0     0   3     FB4_17  34    I/O     (b)
-XLXI_2/state_FSM_FFd3
-                      2       0     0   3     FB4_18        (b)     (b)
+XLXI_2/state_FSM_FFd19
+                      2       0     0   3     FB4_8   27    I/O     (b)
+XLXI_2/state_FSM_FFd2
+                      3       0     0   2     FB4_9         (b)     (b)
+XLXI_2/state_FSM_FFd18
+                      3       0     0   2     FB4_10        (b)     (b)
+XLXI_2/state_FSM_FFd17
+                      3       0     0   2     FB4_11  28    I/O     (b)
+XLXI_2/state_FSM_FFd16
+                      3       0     0   2     FB4_12        (b)     (b)
+XLXI_2/state_FSM_FFd15
+                      3       0     0   2     FB4_13        (b)     (b)
+XLXI_2/state_FSM_FFd14
+                      3       0     0   2     FB4_14  29    I/O     (b)
+XLXI_2/state_FSM_FFd13
+                      3       0     0   2     FB4_15  33    I/O     (b)
+XLXI_2/state_FSM_FFd12
+                      3       0     0   2     FB4_16        (b)     (b)
+XLXI_2/state_FSM_FFd11
+                      3       0     0   2     FB4_17  34    I/O     (b)
+XLXI_2/state_FSM_FFd10
+                      3       0     0   2     FB4_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: XLXI_2/state_FSM_FFd10   5: XLXI_2/state_FSM_FFd6   8: XLXI_2/state_FSM_FFd9 
-  2: XLXI_2/state_FSM_FFd2    6: XLXI_2/state_FSM_FFd7   9: lowClk 
-  3: XLXI_2/state_FSM_FFd4    7: XLXI_2/state_FSM_FFd8  10: sendDone 
-  4: XLXI_2/state_FSM_FFd5  
+  1: XLXI_2/state_FSM_FFd11   6: XLXI_2/state_FSM_FFd16  11: XLXI_2/state_FSM_FFd3 
+  2: XLXI_2/state_FSM_FFd12   7: XLXI_2/state_FSM_FFd17  12: lowClk 
+  3: XLXI_2/state_FSM_FFd13   8: XLXI_2/state_FSM_FFd18  13: sendDone 
+  4: XLXI_2/state_FSM_FFd14   9: XLXI_2/state_FSM_FFd19  14: sendEnable 
+  5: XLXI_2/state_FSM_FFd15  10: XLXI_2/state_FSM_FFd2  
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-sendDone             .X......XX.............................. 3
-XLXI_2/state_FSM_FFd9 
-                     X.......X............................... 2
-XLXI_2/state_FSM_FFd8 
-                     .......XX............................... 2
-XLXI_2/state_FSM_FFd7 
-                     ......X.X............................... 2
-XLXI_2/state_FSM_FFd6 
-                     .....X..X............................... 2
-XLXI_2/state_FSM_FFd5 
-                     ....X...X............................... 2
-XLXI_2/state_FSM_FFd4 
-                     ...X....X............................... 2
-XLXI_2/state_FSM_FFd3 
-                     ..X.....X............................... 2
+sendDone             .........X.XXX.......................... 4
+XLXI_2/state_FSM_FFd19 
+                     ...........X.X.......................... 2
+XLXI_2/state_FSM_FFd2 
+                     ..........XX.X.......................... 3
+XLXI_2/state_FSM_FFd18 
+                     ........X..X.X.......................... 3
+XLXI_2/state_FSM_FFd17 
+                     .......X...X.X.......................... 3
+XLXI_2/state_FSM_FFd16 
+                     ......X....X.X.......................... 3
+XLXI_2/state_FSM_FFd15 
+                     .....X.....X.X.......................... 3
+XLXI_2/state_FSM_FFd14 
+                     ....X......X.X.......................... 3
+XLXI_2/state_FSM_FFd13 
+                     ...X.......X.X.......................... 3
+XLXI_2/state_FSM_FFd12 
+                     ..X........X.X.......................... 3
+XLXI_2/state_FSM_FFd11 
+                     .X.........X.X.......................... 3
+XLXI_2/state_FSM_FFd10 
+                     X..........X.X.......................... 3
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *******************************  Equations  ********************************
@@ -445,17 +453,17 @@ sendDone_D <= (NOT sendDone AND NOT XLXI_2/state_FSM_FFd2);
 
 FDCPE_xmt: FDCPE port map (xmt,xmt_D,lowClk,NOT sendEnable,'0');
 xmt_D <= ((XLXI_2/state_FSM_FFd11)
-	OR (XLXI_2/state_FSM_FFd13)
 	OR (XLXI_2/state_FSM_FFd7)
 	OR (XLXI_2/state_FSM_FFd19)
+	OR (XLXI_2/state_FSM_FFd13)
 	OR (XLXI_2/state_FSM_FFd15)
 	OR (XLXI_2/state_FSM_FFd17)
 	OR (XLXI_2/state_FSM_FFd9)
+	OR (EXP6_.EXP)
 	OR (data(1) AND XLXI_2/state_FSM_FFd5)
 	OR (data(0) AND XLXI_2/state_FSM_FFd6)
 	OR (data(2) AND XLXI_2/state_FSM_FFd4)
-	OR (data(3) AND XLXI_2/state_FSM_FFd3)
-	OR (sendDone AND xmt));
+	OR (data(3) AND XLXI_2/state_FSM_FFd3));
 
 Register Legend:
  FDCPE (Q,D,C,CLR,PRE,CE); 
@@ -486,28 +494,28 @@ Device : XC9572XL-5-PC44
 
 Pin Signal                         Pin Signal                        
 No. Name                           No. Name                          
-  1 data<2>                          23 GND                           
-  2 KPR                              24 KPR                           
+  1 KPR                              23 GND                           
+  2 KPR                              24 sendEnable                    
   3 KPR                              25 sendDone                      
-  4 data<3>                          26 KPR                           
+  4 KPR                              26 getRand                       
   5 clk                              27 KPR                           
   6 KPR                              28 KPR                           
   7 KPR                              29 KPR                           
   8 KPR                              30 TDO                           
   9 KPR                              31 GND                           
  10 GND                              32 VCC                           
- 11 xmt                              33 KPR                           
+ 11 KPR                              33 KPR                           
  12 KPR                              34 KPR                           
- 13 KPR                              35 data<0>                       
- 14 KPR                              36 KPR                           
- 15 TDI                              37 getRand                       
- 16 TMS                              38 lowClk                        
- 17 TCK                              39 sendEnable                    
- 18 KPR                              40 KPR                           
+ 13 xmt                              35 KPR                           
+ 14 lowClk                           36 KPR                           
+ 15 TDI                              37 KPR                           
+ 16 TMS                              38 KPR                           
+ 17 TCK                              39 rst                           
+ 18 data<0>                          40 KPR                           
  19 data<1>                          41 VCC                           
- 20 KPR                              42 KPR                           
+ 20 data<2>                          42 KPR                           
  21 VCC                              43 KPR                           
- 22 rst                              44 KPR                           
+ 22 data<3>                          44 KPR                           
 
 
 Legend :  NC  = Not Connected, unbonded pin
