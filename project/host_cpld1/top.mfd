@@ -9,7 +9,7 @@ INPUTP | 2 | 92 | 63
 EQ | 4 | 
    data<0>.D = XLXI_3/XLXN_66;
    data<0>.CLK = clk;	// GCK
-   data<0>.AR = rst;
+   data<0>.AR = !rst;
    data<0>.CE = getRand;
 GLOBALS | 1 | 2 | clk
 
@@ -22,7 +22,7 @@ INPUTP | 2 | 92 | 63
 EQ | 4 | 
    data<1>.D = XLXI_3/XLXN_67;
    data<1>.CLK = clk;	// GCK
-   data<1>.AR = rst;
+   data<1>.AR = !rst;
    data<1>.CE = getRand;
 GLOBALS | 1 | 2 | clk
 
@@ -35,7 +35,7 @@ INPUTP | 2 | 92 | 63
 EQ | 4 | 
    data<2>.D = XLXI_3/XLXN_68;
    data<2>.CLK = clk;	// GCK
-   data<2>.AR = rst;
+   data<2>.AR = !rst;
    data<2>.CE = getRand;
 GLOBALS | 1 | 2 | clk
 
@@ -48,7 +48,7 @@ INPUTP | 2 | 92 | 63
 EQ | 4 | 
    data<3>.D = XLXI_3/XLXN_69;
    data<3>.CLK = clk;	// GCK
-   data<3>.AR = rst;
+   data<3>.AR = !rst;
    data<3>.CE = getRand;
 GLOBALS | 1 | 2 | clk
 
@@ -64,7 +64,7 @@ EQ | 8 |
 	XLXI_1/count<2> & XLXI_1/count<3> & XLXI_1/count<4> & 
 	XLXI_1/count<5> & XLXI_1/count<6> & XLXI_1/count<7>;
    lowClk.CLK = clk;	// GCK
-   lowClk.AR = !rst;
+   lowClk.AR = rst;
     lowClk_OBUF.EXP  =  data<0> & XLXI_2/state_FSM_FFd6
 	# data<2> & XLXI_2/state_FSM_FFd4
 	# data<3> & XLXI_2/state_FSM_FFd3
@@ -118,7 +118,7 @@ EQ | 5 |
 	XLXI_1/count<2> & XLXI_1/count<3> & XLXI_1/count<4> & 
 	XLXI_1/count<5> & XLXI_1/count<6> & XLXI_1/count<7>;
    XLXI_1/count<0>.CLK = clk;	// GCK
-   XLXI_1/count<0>.AP = !rst;
+   XLXI_1/count<0>.AP = rst;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 0 | 16 | XLXI_1/count<1>
@@ -130,7 +130,7 @@ INPUTP | 1 | 92
 EQ | 3 | 
    XLXI_1/count<1>.T = XLXI_1/count<0>;
    XLXI_1/count<1>.CLK = clk;	// GCK
-   XLXI_1/count<1>.AR = !rst;
+   XLXI_1/count<1>.AR = rst;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 0 | 15 | XLXI_1/count<2>
@@ -142,7 +142,7 @@ INPUTP | 1 | 92
 EQ | 3 | 
    XLXI_1/count<2>.T = XLXI_1/count<0> & XLXI_1/count<1>;
    XLXI_1/count<2>.CLK = clk;	// GCK
-   XLXI_1/count<2>.AR = !rst;
+   XLXI_1/count<2>.AR = rst;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 0 | 14 | XLXI_1/count<3>
@@ -155,7 +155,7 @@ EQ | 4 |
    XLXI_1/count<3>.T = XLXI_1/count<0> & XLXI_1/count<1> & 
 	XLXI_1/count<2>;
    XLXI_1/count<3>.CLK = clk;	// GCK
-   XLXI_1/count<3>.AR = !rst;
+   XLXI_1/count<3>.AR = rst;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 0 | 13 | XLXI_1/count<4>
@@ -168,7 +168,7 @@ EQ | 4 |
    XLXI_1/count<4>.T = XLXI_1/count<0> & XLXI_1/count<1> & 
 	XLXI_1/count<2> & XLXI_1/count<3>;
    XLXI_1/count<4>.CLK = clk;	// GCK
-   XLXI_1/count<4>.AR = !rst;
+   XLXI_1/count<4>.AR = rst;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 0 | 12 | XLXI_1/count<5>
@@ -181,7 +181,7 @@ EQ | 4 |
    XLXI_1/count<5>.T = XLXI_1/count<0> & XLXI_1/count<1> & 
 	XLXI_1/count<2> & XLXI_1/count<3> & XLXI_1/count<4>;
    XLXI_1/count<5>.CLK = clk;	// GCK
-   XLXI_1/count<5>.AR = !rst;
+   XLXI_1/count<5>.AR = rst;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 0 | 11 | XLXI_1/count<6>
@@ -195,7 +195,7 @@ EQ | 5 |
 	XLXI_1/count<2> & XLXI_1/count<3> & XLXI_1/count<4> & 
 	XLXI_1/count<5>;
    XLXI_1/count<6>.CLK = clk;	// GCK
-   XLXI_1/count<6>.AR = !rst;
+   XLXI_1/count<6>.AR = rst;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 3 | 16 | XLXI_2/state_FSM_FFd11
@@ -319,7 +319,7 @@ EQ | 5 |
 	XLXI_1/count<2> & XLXI_1/count<3> & XLXI_1/count<4> & 
 	XLXI_1/count<5> & XLXI_1/count<6>;
    XLXI_1/count<7>.CLK = clk;	// GCK
-   XLXI_1/count<7>.AR = !rst;
+   XLXI_1/count<7>.AR = rst;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 3 | 17 | XLXI_2/state_FSM_FFd10
@@ -417,7 +417,7 @@ INPUTS | 2 | rst  | XLXI_3/XLXN_69
 INPUTMC | 1 | 0 | 6
 INPUTP | 1 | 92
 EQ | 2 | 
-   XLXI_3/XLXN_66.D = !rst & !XLXI_3/XLXN_69;
+   XLXI_3/XLXN_66.D = rst & !XLXI_3/XLXN_69;
    XLXI_3/XLXN_66.CLK = clk;	// GCK
 GLOBALS | 1 | 2 | clk
 
@@ -428,7 +428,7 @@ INPUTS | 2 | rst  | XLXI_3/XLXN_66
 INPUTMC | 1 | 0 | 9
 INPUTP | 1 | 92
 EQ | 2 | 
-   XLXI_3/XLXN_67.D = !rst & XLXI_3/XLXN_66;
+   XLXI_3/XLXN_67.D = rst & XLXI_3/XLXN_66;
    XLXI_3/XLXN_67.CLK = clk;	// GCK
 GLOBALS | 1 | 2 | clk
 
@@ -439,7 +439,7 @@ INPUTS | 2 | rst  | XLXI_3/XLXN_67
 INPUTMC | 1 | 0 | 8
 INPUTP | 1 | 92
 EQ | 2 | 
-   XLXI_3/XLXN_68.D = !rst & XLXI_3/XLXN_67;
+   XLXI_3/XLXN_68.D = rst & XLXI_3/XLXN_67;
    XLXI_3/XLXN_68.CLK = clk;	// GCK
 GLOBALS | 1 | 2 | clk
 
@@ -450,7 +450,7 @@ INPUTS | 2 | rst  | XLXI_3/XLXN_68
 INPUTMC | 1 | 0 | 7
 INPUTP | 1 | 92
 EQ | 2 | 
-   XLXI_3/XLXN_69.D = !rst & XLXI_3/XLXN_68;
+   XLXI_3/XLXN_69.D = rst & XLXI_3/XLXN_68;
    XLXI_3/XLXN_69.CLK = clk;	// GCK
 GLOBALS | 1 | 2 | clk
 

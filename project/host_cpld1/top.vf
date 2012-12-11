@@ -4,14 +4,14 @@
 //   ____  ____ 
 //  /   /\/   / 
 // /___/  \  /    Vendor: Xilinx 
-// \   \   \/     Version : 14.3
+// \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : top.vf
-// /___/   /\     Timestamp : 12/10/2012 12:11:26
+// /___/   /\     Timestamp : 12/11/2012 14:36:06
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/workspace/digkon/project/host_cpld1/top.vf -w C:/workspace/digkon/project/host_cpld1/top.sch
+//Command: sch2hdl -intstyle ise -family xc9500xl -verilog Z:/DigKon/project/digkon/project/host_cpld1/top.vf -w Z:/DigKon/project/digkon/project/host_cpld1/top.sch
 //Design Name: top
 //Device: xc9500xl
 //Purpose:
@@ -240,13 +240,14 @@ module top(clk,
    output sendDone;
    output xmt;
    
+   wire XLXN_20;
    wire lowClk_DUMMY;
    wire [3:0] data_DUMMY;
    
    assign data[3:0] = data_DUMMY[3:0];
    assign lowClk = lowClk_DUMMY;
    counter  XLXI_1 (.clk(clk), 
-                   .reset(rst), 
+                   .reset(XLXN_20), 
                    .done(lowClk_DUMMY));
    sender  XLXI_2 (.data(data_DUMMY[3:0]), 
                   .lowClk(lowClk_DUMMY), 
@@ -255,6 +256,8 @@ module top(clk,
                   .transmitter(xmt));
    rand_MUSER_top  XLXI_3 (.clk(clk), 
                           .getrand(getRand), 
-                          .rst(rst), 
+                          .rst(XLXN_20), 
                           .chall(data_DUMMY[3:0]));
+   INV  XLXI_4 (.I(rst), 
+               .O(XLXN_20));
 endmodule

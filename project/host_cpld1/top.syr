@@ -1,16 +1,16 @@
-Release 14.3 - xst P.40xd (nt64)
+Release 14.2 - xst P.28xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Reading design: top.prj
 
@@ -75,10 +75,11 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/workspace/digkon/project/host_cpld1/counter.vhd" in Library work.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld1/counter.vhd" in Library work.
 Architecture arch of Entity counter is up to date.
-Compiling vhdl file "C:/workspace/digkon/project/host_cpld1/sender.vhd" in Library work.
-Architecture behavioral of Entity sender is up to date.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld1/sender.vhd" in Library work.
+Entity <sender> compiled.
+Entity <sender> (Architecture <Behavioral>) compiled.
 Compiling verilog file "rand.vf" in library work
 Module <FD4CE_MXILINX_rand> compiled
 Module <FD_MXILINX_rand> compiled
@@ -103,7 +104,7 @@ Analyzing hierarchy for module <top> in library <work>.
 
 Analyzing hierarchy for entity <counter> in library <work> (architecture <arch>).
 
-Analyzing hierarchy for entity <sender> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <sender> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for module <rand_MUSER_top> in library <work>.
 
@@ -136,7 +137,7 @@ Module <top> is correct for synthesis.
 Analyzing Entity <counter> in library <work> (Architecture <arch>).
 Entity <counter> analyzed. Unit <counter> generated.
 
-Analyzing Entity <sender> in library <work> (Architecture <behavioral>).
+Analyzing Entity <sender> in library <work> (Architecture <Behavioral>).
 Entity <sender> analyzed. Unit <sender> generated.
 
 Analyzing module <rand_MUSER_top> in library <work>.
@@ -195,7 +196,7 @@ Module <FDRE_MXILINX_top.4> is correct for synthesis.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <counter>.
-    Related source file is "C:/workspace/digkon/project/host_cpld1/counter.vhd".
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld1/counter.vhd".
     Found 1-bit register for signal <done>.
     Found 8-bit up counter for signal <count>.
     Summary:
@@ -205,7 +206,7 @@ Unit <counter> synthesized.
 
 
 Synthesizing Unit <sender>.
-    Related source file is "C:/workspace/digkon/project/host_cpld1/sender.vhd".
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld1/sender.vhd".
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 19                                             |
@@ -405,11 +406,11 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 55
+# BELS                             : 56
 #      AND2                        : 18
 #      AND8                        : 1
 #      GND                         : 5
-#      INV                         : 11
+#      INV                         : 12
 #      OR2                         : 9
 #      OR3                         : 1
 #      OR4                         : 2
@@ -429,12 +430,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.60 secs
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 20.44 secs
  
 --> 
 
-Total memory usage is 252564 kilobytes
+Total memory usage is 254020 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

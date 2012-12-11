@@ -1,7 +1,7 @@
  
-cpldfit:  version P.40xd                            Xilinx Inc.
+cpldfit:  version P.28xd                            Xilinx Inc.
                                   Fitter Report
-Design Name: top                                 Date: 12-11-2012,  9:50AM
+Design Name: top                                 Date: 12-11-2012,  2:36PM
 Device Used: XC9572XL-5-PC44
 Fitting Status: Successful
 
@@ -355,34 +355,34 @@ XLXI_2/state_FSM_FFd10
 
 
 
-FTCPE_XLXI_1/count0: FTCPE port map (XLXI_1/count(0),XLXI_1/count_T(0),clk,'0',NOT rst);
+FTCPE_XLXI_1/count0: FTCPE port map (XLXI_1/count(0),XLXI_1/count_T(0),clk,'0',rst);
 XLXI_1/count_T(0) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 	XLXI_1/count(2) AND XLXI_1/count(3) AND XLXI_1/count(4) AND 
 	XLXI_1/count(5) AND XLXI_1/count(6) AND XLXI_1/count(7));
 
-FTCPE_XLXI_1/count1: FTCPE port map (XLXI_1/count(1),XLXI_1/count(0),clk,NOT rst,'0');
+FTCPE_XLXI_1/count1: FTCPE port map (XLXI_1/count(1),XLXI_1/count(0),clk,rst,'0');
 
-FTCPE_XLXI_1/count2: FTCPE port map (XLXI_1/count(2),XLXI_1/count_T(2),clk,NOT rst,'0');
+FTCPE_XLXI_1/count2: FTCPE port map (XLXI_1/count(2),XLXI_1/count_T(2),clk,rst,'0');
 XLXI_1/count_T(2) <= (XLXI_1/count(0) AND XLXI_1/count(1));
 
-FTCPE_XLXI_1/count3: FTCPE port map (XLXI_1/count(3),XLXI_1/count_T(3),clk,NOT rst,'0');
+FTCPE_XLXI_1/count3: FTCPE port map (XLXI_1/count(3),XLXI_1/count_T(3),clk,rst,'0');
 XLXI_1/count_T(3) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 	XLXI_1/count(2));
 
-FTCPE_XLXI_1/count4: FTCPE port map (XLXI_1/count(4),XLXI_1/count_T(4),clk,NOT rst,'0');
+FTCPE_XLXI_1/count4: FTCPE port map (XLXI_1/count(4),XLXI_1/count_T(4),clk,rst,'0');
 XLXI_1/count_T(4) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 	XLXI_1/count(2) AND XLXI_1/count(3));
 
-FTCPE_XLXI_1/count5: FTCPE port map (XLXI_1/count(5),XLXI_1/count_T(5),clk,NOT rst,'0');
+FTCPE_XLXI_1/count5: FTCPE port map (XLXI_1/count(5),XLXI_1/count_T(5),clk,rst,'0');
 XLXI_1/count_T(5) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 	XLXI_1/count(2) AND XLXI_1/count(3) AND XLXI_1/count(4));
 
-FTCPE_XLXI_1/count6: FTCPE port map (XLXI_1/count(6),XLXI_1/count_T(6),clk,NOT rst,'0');
+FTCPE_XLXI_1/count6: FTCPE port map (XLXI_1/count(6),XLXI_1/count_T(6),clk,rst,'0');
 XLXI_1/count_T(6) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 	XLXI_1/count(2) AND XLXI_1/count(3) AND XLXI_1/count(4) AND 
 	XLXI_1/count(5));
 
-FTCPE_XLXI_1/count7: FTCPE port map (XLXI_1/count(7),XLXI_1/count_T(7),clk,NOT rst,'0');
+FTCPE_XLXI_1/count7: FTCPE port map (XLXI_1/count(7),XLXI_1/count_T(7),clk,rst,'0');
 XLXI_1/count_T(7) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 	XLXI_1/count(2) AND XLXI_1/count(3) AND XLXI_1/count(4) AND 
 	XLXI_1/count(5) AND XLXI_1/count(6));
@@ -424,26 +424,26 @@ FDCPE_XLXI_2/state_FSM_FFd8: FDCPE port map (XLXI_2/state_FSM_FFd8,XLXI_2/state_
 FDCPE_XLXI_2/state_FSM_FFd9: FDCPE port map (XLXI_2/state_FSM_FFd9,XLXI_2/state_FSM_FFd10,lowClk,NOT sendEnable,'0');
 
 FDCPE_XLXI_3/XLXN_66: FDCPE port map (XLXI_3/XLXN_66,XLXI_3/XLXN_66_D,clk,'0','0');
-XLXI_3/XLXN_66_D <= (NOT rst AND NOT XLXI_3/XLXN_69);
+XLXI_3/XLXN_66_D <= (rst AND NOT XLXI_3/XLXN_69);
 
 FDCPE_XLXI_3/XLXN_67: FDCPE port map (XLXI_3/XLXN_67,XLXI_3/XLXN_67_D,clk,'0','0');
-XLXI_3/XLXN_67_D <= (NOT rst AND XLXI_3/XLXN_66);
+XLXI_3/XLXN_67_D <= (rst AND XLXI_3/XLXN_66);
 
 FDCPE_XLXI_3/XLXN_68: FDCPE port map (XLXI_3/XLXN_68,XLXI_3/XLXN_68_D,clk,'0','0');
-XLXI_3/XLXN_68_D <= (NOT rst AND XLXI_3/XLXN_67);
+XLXI_3/XLXN_68_D <= (rst AND XLXI_3/XLXN_67);
 
 FDCPE_XLXI_3/XLXN_69: FDCPE port map (XLXI_3/XLXN_69,XLXI_3/XLXN_69_D,clk,'0','0');
-XLXI_3/XLXN_69_D <= (NOT rst AND XLXI_3/XLXN_68);
+XLXI_3/XLXN_69_D <= (rst AND XLXI_3/XLXN_68);
 
-FDCPE_data0: FDCPE port map (data(0),XLXI_3/XLXN_66,clk,rst,'0',getRand);
+FDCPE_data0: FDCPE port map (data(0),XLXI_3/XLXN_66,clk,NOT rst,'0',getRand);
 
-FDCPE_data1: FDCPE port map (data(1),XLXI_3/XLXN_67,clk,rst,'0',getRand);
+FDCPE_data1: FDCPE port map (data(1),XLXI_3/XLXN_67,clk,NOT rst,'0',getRand);
 
-FDCPE_data2: FDCPE port map (data(2),XLXI_3/XLXN_68,clk,rst,'0',getRand);
+FDCPE_data2: FDCPE port map (data(2),XLXI_3/XLXN_68,clk,NOT rst,'0',getRand);
 
-FDCPE_data3: FDCPE port map (data(3),XLXI_3/XLXN_69,clk,rst,'0',getRand);
+FDCPE_data3: FDCPE port map (data(3),XLXI_3/XLXN_69,clk,NOT rst,'0',getRand);
 
-FDCPE_lowClk: FDCPE port map (lowClk,lowClk_D,clk,NOT rst,'0');
+FDCPE_lowClk: FDCPE port map (lowClk,lowClk_D,clk,rst,'0');
 lowClk_D <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 	XLXI_1/count(2) AND XLXI_1/count(3) AND XLXI_1/count(4) AND 
 	XLXI_1/count(5) AND XLXI_1/count(6) AND XLXI_1/count(7));
