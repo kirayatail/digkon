@@ -40,7 +40,7 @@
         <port polarity="Input" name="rcv" />
         <port polarity="Output" name="okLmp" />
         <blockdef name="ctrl">
-            <timestamp>2012-12-11T8:37:50</timestamp>
+            <timestamp>2012-12-11T13:56:33</timestamp>
             <line x2="384" y1="160" y2="160" x1="320" />
             <line x2="384" y1="32" y2="32" x1="320" />
             <line x2="0" y1="-480" y2="-480" x1="64" />
