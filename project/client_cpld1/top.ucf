@@ -9,6 +9,7 @@ NET "key<2>"  LOC = "p20"  ;
 NET "key<3>"  LOC = "p22"  ;  
 NET "xmt"  LOC = "p13"  ; 
 NET "rcv" LOC = "p14" ;
+NET "volt" LOC = "p44" ;
 
 #PACE: Start of PACE Area Constraints
 

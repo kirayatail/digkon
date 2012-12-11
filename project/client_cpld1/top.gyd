@@ -1,4 +1,4 @@
-Pin Freeze File:  version P.40xd
+Pin Freeze File:  version P.28xd
 
 9572XL44PC XC9572XL-5-PC44
 clk S:PIN5
@@ -8,6 +8,7 @@ key<2> S:PIN20
 key<3> S:PIN22
 rcv S:PIN14
 rst S:PIN39
+volt S:PIN44
 xmt S:PIN13
 
 
@@ -22,14 +23,14 @@ PARTITION FB1_1 xmt_OBUF/xmt_OBUF_RSTF__$INT XLXN_20 XLXI_8/count<7> XLXI_8/coun
 PARTITION FB2_1 XLXN_45 XLXI_2/state_FSM_FFd9 XLXI_2/state_FSM_FFd8 XLXI_2/state_FSM_FFd7
 		 XLXI_2/state_FSM_FFd6 XLXI_2/state_FSM_FFd17 XLXI_2/state_FSM_FFd16 XLXI_2/state_FSM_FFd15
 		 XLXI_2/state_FSM_FFd14 XLXI_2/state_FSM_FFd13 XLXI_2/state_FSM_FFd12 XLXI_2/state_FSM_FFd11
-		 XLXI_2/state_FSM_FFd10 XLXN_4<2> XLXN_4<1> XLXN_4<0>
-		 XLXI_2/state_FSM_FFd19 XLXI_2/state_FSM_FFd18
+		 XLXI_2/state_FSM_FFd10 XLXN_4<1> XLXN_4<0> XLXI_2/state_FSM_FFd19
+		 volt_OBUF XLXI_2/state_FSM_FFd18
 PARTITION FB3_3 XLXI_4/state_FSM_FFd19 XLXN_2 XLXI_4/state_FSM_FFd8 EXP6_
 		 EXP7_ xmt_OBUF XLXI_4/state_FSM_FFd6 XLXI_4/state_FSM_FFd5
 		 XLXI_4/state_FSM_FFd4 XLXI_4/state_FSM_FFd3 XLXI_4/state_FSM_FFd2 XLXI_4/state_FSM_FFd18
 		 XLXI_4/state_FSM_FFd16 XLXI_4/state_FSM_FFd14 XLXI_4/state_FSM_FFd12 XLXI_4/state_FSM_FFd10
 		
-PARTITION FB4_10 XLXI_8/count<4> XLXI_8/count<3> XLXI_8/count<2> XLXI_4/state_FSM_FFd9
+PARTITION FB4_9 XLXI_8/count<4> XLXI_8/count<3> XLXI_8/count<2> XLXI_4/state_FSM_FFd9
 		 XLXI_4/state_FSM_FFd7 XLXI_4/state_FSM_FFd17 XLXI_4/state_FSM_FFd15 XLXI_4/state_FSM_FFd13
-		 XLXI_4/state_FSM_FFd11
+		 XLXI_4/state_FSM_FFd11 XLXN_4<2>
 

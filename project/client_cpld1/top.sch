@@ -6,30 +6,26 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_1" />
-        <signal name="XLXN_6" />
-        <signal name="XLXN_17" />
-        <signal name="XLXN_18" />
         <signal name="XLXN_4(3:0)" />
         <signal name="XLXN_5(3:0)" />
         <signal name="XLXN_8" />
         <signal name="xmt" />
         <signal name="key(3:0)" />
         <signal name="rcv" />
-        <signal name="XLXN_34" />
         <signal name="XLXN_3" />
         <signal name="XLXN_20" />
         <signal name="XLXN_2" />
-        <signal name="XLXN_19" />
         <signal name="XLXN_42" />
         <signal name="clk" />
         <signal name="rst" />
         <signal name="XLXN_45" />
+        <signal name="volt" />
         <port polarity="Output" name="xmt" />
         <port polarity="Input" name="key(3:0)" />
         <port polarity="Input" name="rcv" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="rst" />
+        <port polarity="Output" name="volt" />
         <blockdef name="ctrl">
             <timestamp>2012-12-9T18:20:31</timestamp>
             <line x2="0" y1="32" y2="32" x1="64" />
@@ -87,6 +83,12 @@
             <line x2="64" y1="0" y2="-64" x1="64" />
             <circle r="16" cx="144" cy="-32" />
         </blockdef>
+        <blockdef name="vcc">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="32" y1="-64" y2="-64" x1="96" />
+            <line x2="64" y1="0" y2="-32" x1="64" />
+            <line x2="64" y1="-32" y2="-64" x1="64" />
+        </blockdef>
         <block symbolname="sender" name="XLXI_4">
             <blockpin signalname="XLXN_8" name="sendEnable" />
             <blockpin signalname="XLXN_20" name="lowClk" />
@@ -123,6 +125,9 @@
         <block symbolname="inv" name="XLXI_14">
             <blockpin signalname="rst" name="I" />
             <blockpin signalname="XLXN_42" name="O" />
+        </block>
+        <block symbolname="vcc" name="XLXI_15">
+            <blockpin signalname="volt" name="P" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -208,5 +213,12 @@
             <wire x2="1664" y1="448" y2="864" x1="1664" />
             <wire x2="1696" y1="448" y2="448" x1="1664" />
         </branch>
+        <instance x="2336" y="1360" name="XLXI_15" orien="R0" />
+        <branch name="volt">
+            <wire x2="2400" y1="1360" y2="1376" x1="2400" />
+            <wire x2="2736" y1="1376" y2="1376" x1="2400" />
+            <wire x2="2784" y1="1376" y2="1376" x1="2736" />
+        </branch>
+        <iomarker fontsize="28" x="2784" y="1376" name="volt" orien="R0" />
     </sheet>
 </drawing>

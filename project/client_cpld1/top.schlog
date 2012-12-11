@@ -1,8 +1,0 @@
-select figure at 756 1234 8 -branches -sn=1
-add instance inv4 848 1440 R0 -sn=1
-select figure at 1005 1409 8 -branches -sn=1
-delete selection -sn=1
-undo
-undo
-undo
-undo

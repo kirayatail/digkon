@@ -4,14 +4,14 @@
 //   ____  ____ 
 //  /   /\/   / 
 // /___/  \  /    Vendor: Xilinx 
-// \   \   \/     Version : 14.3
+// \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : top.vf
-// /___/   /\     Timestamp : 12/09/2012 20:07:13
+// /___/   /\     Timestamp : 12/11/2012 13:53:02
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/workspace/digkon/project/client_cpld1/top.vf -w C:/workspace/digkon/project/client_cpld1/top.sch
+//Command: sch2hdl -intstyle ise -family xc9500xl -verilog Z:/DigKon/project/digkon/project/client_cpld1/top.vf -w Z:/DigKon/project/digkon/project/client_cpld1/top.sch
 //Design Name: top
 //Device: xc9500xl
 //Purpose:
@@ -24,12 +24,14 @@ module top(clk,
            key, 
            rcv, 
            rst, 
+           volt, 
            xmt);
 
     input clk;
     input [3:0] key;
     input rcv;
     input rst;
+   output volt;
    output xmt;
    
    wire XLXN_2;
@@ -66,4 +68,5 @@ module top(clk,
                    .done(XLXN_20));
    INV  XLXI_14 (.I(rst), 
                 .O(XLXN_42));
+   VCC  XLXI_15 (.P(volt));
 endmodule

@@ -28,7 +28,7 @@ EQ | 6 |
    !XLXI_1/state_FSM_FFd1.AR = rst;	// GSR
 GLOBALS | 1 | 4 | rst
 
-MACROCELL | 1 | 15 | XLXN_4<0>
+MACROCELL | 1 | 14 | XLXN_4<0>
 ATTRIBUTES | 8520560 | 0
 OUTPUTMC | 1 | 2 | 8
 INPUTS | 4 | rcv  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF  | XLXI_2/state_FSM_FFd6
@@ -40,7 +40,7 @@ EQ | 4 |
    XLXN_4<0>.AR = XLXN_4<3>/XLXN_4<3>_RSTF;
    XLXN_4<0>.CE = XLXI_2/state_FSM_FFd6;
 
-MACROCELL | 1 | 14 | XLXN_4<1>
+MACROCELL | 1 | 13 | XLXN_4<1>
 ATTRIBUTES | 8520560 | 0
 OUTPUTMC | 2 | 2 | 5 | 2 | 4
 INPUTS | 4 | rcv  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF  | XLXI_2/state_FSM_FFd5
@@ -52,7 +52,7 @@ EQ | 4 |
    XLXN_4<1>.AR = XLXN_4<3>/XLXN_4<3>_RSTF;
    XLXN_4<1>.CE = XLXI_2/state_FSM_FFd5;
 
-MACROCELL | 1 | 13 | XLXN_4<2>
+MACROCELL | 3 | 17 | XLXN_4<2>
 ATTRIBUTES | 8520560 | 0
 OUTPUTMC | 1 | 2 | 5
 INPUTS | 4 | rcv  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF  | XLXI_2/state_FSM_FFd4
@@ -80,7 +80,7 @@ MACROCELL | 2 | 7 | xmt_OBUF
 ATTRIBUTES | 8782642 | 0
 OUTPUTMC | 1 | 2 | 6
 INPUTS | 7 | XLXI_4/state_FSM_FFd19  | XLXI_4/state_FSM_FFd11  | XLXI_4/state_FSM_FFd7  | EXP7_.EXP  | XLXI_4/state_FSM_FFd6.EXP  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
-INPUTMC | 7 | 2 | 2 | 3 | 17 | 3 | 13 | 2 | 6 | 2 | 8 | 0 | 1 | 0 | 0
+INPUTMC | 7 | 2 | 2 | 3 | 16 | 3 | 12 | 2 | 6 | 2 | 8 | 0 | 1 | 0 | 0
 IMPORTS | 2 | 2 | 6 | 2 | 8
 EQ | 22 | 
    xmt.D = XLXI_4/state_FSM_FFd11
@@ -108,9 +108,9 @@ EQ | 22 |
 
 MACROCELL | 0 | 1 | XLXN_20
 ATTRIBUTES | 8561408 | 0
-OUTPUTMC | 48 | 0 | 12 | 0 | 13 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 17 | 2 | 7 | 0 | 16 | 2 | 3 | 1 | 0 | 0 | 15 | 0 | 14 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 17 | 1 | 16 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 1 | 4 | 1 | 3 | 1 | 2 | 1 | 1 | 3 | 17 | 3 | 16 | 3 | 15 | 3 | 14 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 3 | 13 | 3 | 12 | 2 | 17 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 4 | 2 | 2
+OUTPUTMC | 48 | 0 | 12 | 0 | 13 | 1 | 14 | 1 | 13 | 3 | 17 | 0 | 17 | 2 | 7 | 0 | 16 | 2 | 3 | 1 | 0 | 0 | 15 | 0 | 14 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 17 | 1 | 15 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 1 | 4 | 1 | 3 | 1 | 2 | 1 | 1 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 3 | 12 | 3 | 11 | 2 | 17 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 4 | 2 | 2
 INPUTS | 8 | XLXI_8/count<0>  | XLXI_8/count<1>  | XLXI_8/count<2>  | XLXI_8/count<3>  | XLXI_8/count<4>  | XLXI_8/count<5>  | XLXI_8/count<6>  | XLXI_8/count<7>
-INPUTMC | 8 | 0 | 6 | 0 | 5 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 4 | 0 | 3 | 0 | 2
+INPUTMC | 8 | 0 | 6 | 0 | 5 | 3 | 10 | 3 | 9 | 3 | 8 | 0 | 4 | 0 | 3 | 0 | 2
 EQ | 5 | 
    XLXN_20.D = XLXI_8/count<0> & XLXI_8/count<1> & 
 	XLXI_8/count<2> & XLXI_8/count<3> & XLXI_8/count<4> & 
@@ -155,7 +155,7 @@ EQ | 3 |
 
 MACROCELL | 0 | 6 | XLXI_8/count<0>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 8 | 0 | 1 | 0 | 5 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 4 | 0 | 3 | 0 | 2
+OUTPUTMC | 8 | 0 | 1 | 0 | 5 | 3 | 10 | 3 | 9 | 3 | 8 | 0 | 4 | 0 | 3 | 0 | 2
 INPUTS | 0
 EQ | 3 | 
    XLXI_8/count<0>.T = Vcc;
@@ -178,7 +178,7 @@ EQ | 5 |
 
 MACROCELL | 0 | 5 | XLXI_8/count<1>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 7 | 0 | 1 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 4 | 0 | 3 | 0 | 2
+OUTPUTMC | 7 | 0 | 1 | 3 | 10 | 3 | 9 | 3 | 8 | 0 | 4 | 0 | 3 | 0 | 2
 INPUTS | 1 | XLXI_8/count<0>
 INPUTMC | 1 | 0 | 6
 EQ | 3 | 
@@ -187,9 +187,9 @@ EQ | 3 |
    !XLXI_8/count<1>.AR = rst;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | rst
 
-MACROCELL | 3 | 11 | XLXI_8/count<2>
+MACROCELL | 3 | 10 | XLXI_8/count<2>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 6 | 0 | 1 | 3 | 10 | 3 | 9 | 0 | 4 | 0 | 3 | 0 | 2
+OUTPUTMC | 6 | 0 | 1 | 3 | 9 | 3 | 8 | 0 | 4 | 0 | 3 | 0 | 2
 INPUTS | 2 | XLXI_8/count<0>  | XLXI_8/count<1>
 INPUTMC | 2 | 0 | 6 | 0 | 5
 EQ | 3 | 
@@ -198,11 +198,11 @@ EQ | 3 |
    !XLXI_8/count<2>.AR = rst;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | rst
 
-MACROCELL | 3 | 10 | XLXI_8/count<3>
+MACROCELL | 3 | 9 | XLXI_8/count<3>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 5 | 0 | 1 | 3 | 9 | 0 | 4 | 0 | 3 | 0 | 2
+OUTPUTMC | 5 | 0 | 1 | 3 | 8 | 0 | 4 | 0 | 3 | 0 | 2
 INPUTS | 3 | XLXI_8/count<0>  | XLXI_8/count<1>  | XLXI_8/count<2>
-INPUTMC | 3 | 0 | 6 | 0 | 5 | 3 | 11
+INPUTMC | 3 | 0 | 6 | 0 | 5 | 3 | 10
 EQ | 4 | 
    XLXI_8/count<3>.T = XLXI_8/count<0> & XLXI_8/count<1> & 
 	XLXI_8/count<2>;
@@ -210,11 +210,11 @@ EQ | 4 |
    !XLXI_8/count<3>.AR = rst;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | rst
 
-MACROCELL | 3 | 9 | XLXI_8/count<4>
+MACROCELL | 3 | 8 | XLXI_8/count<4>
 ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 4 | 0 | 1 | 0 | 4 | 0 | 3 | 0 | 2
 INPUTS | 4 | XLXI_8/count<0>  | XLXI_8/count<1>  | XLXI_8/count<2>  | XLXI_8/count<3>
-INPUTMC | 4 | 0 | 6 | 0 | 5 | 3 | 11 | 3 | 10
+INPUTMC | 4 | 0 | 6 | 0 | 5 | 3 | 10 | 3 | 9
 EQ | 4 | 
    XLXI_8/count<4>.T = XLXI_8/count<0> & XLXI_8/count<1> & 
 	XLXI_8/count<2> & XLXI_8/count<3>;
@@ -226,7 +226,7 @@ MACROCELL | 0 | 4 | XLXI_8/count<5>
 ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 3 | 0 | 1 | 0 | 3 | 0 | 2
 INPUTS | 5 | XLXI_8/count<0>  | XLXI_8/count<1>  | XLXI_8/count<2>  | XLXI_8/count<3>  | XLXI_8/count<4>
-INPUTMC | 5 | 0 | 6 | 0 | 5 | 3 | 11 | 3 | 10 | 3 | 9
+INPUTMC | 5 | 0 | 6 | 0 | 5 | 3 | 10 | 3 | 9 | 3 | 8
 EQ | 4 | 
    XLXI_8/count<5>.T = XLXI_8/count<0> & XLXI_8/count<1> & 
 	XLXI_8/count<2> & XLXI_8/count<3> & XLXI_8/count<4>;
@@ -238,7 +238,7 @@ MACROCELL | 0 | 3 | XLXI_8/count<6>
 ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 2 | 0 | 1 | 0 | 2
 INPUTS | 6 | XLXI_8/count<0>  | XLXI_8/count<1>  | XLXI_8/count<2>  | XLXI_8/count<3>  | XLXI_8/count<4>  | XLXI_8/count<5>
-INPUTMC | 6 | 0 | 6 | 0 | 5 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 4
+INPUTMC | 6 | 0 | 6 | 0 | 5 | 3 | 10 | 3 | 9 | 3 | 8 | 0 | 4
 EQ | 5 | 
    XLXI_8/count<6>.T = XLXI_8/count<0> & XLXI_8/count<1> & 
 	XLXI_8/count<2> & XLXI_8/count<3> & XLXI_8/count<4> & 
@@ -274,7 +274,7 @@ EQ | 3 |
 
 MACROCELL | 1 | 11 | XLXI_2/state_FSM_FFd11
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 2 | 1 | 12 | 1 | 16
+OUTPUTMC | 2 | 1 | 12 | 1 | 15
 INPUTS | 4 | rcv  | XLXI_2/state_FSM_FFd12  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
 INPUTMC | 3 | 1 | 10 | 0 | 1 | 0 | 7
 INPUTP | 1 | 38
@@ -296,7 +296,7 @@ EQ | 3 |
 
 MACROCELL | 1 | 9 | XLXI_2/state_FSM_FFd13
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 2 | 1 | 10 | 1 | 16
+OUTPUTMC | 2 | 1 | 10 | 1 | 15
 INPUTS | 4 | rcv  | XLXI_2/state_FSM_FFd14  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
 INPUTMC | 3 | 1 | 8 | 0 | 1 | 0 | 7
 INPUTP | 1 | 38
@@ -318,7 +318,7 @@ EQ | 3 |
 
 MACROCELL | 1 | 7 | XLXI_2/state_FSM_FFd15
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 2 | 1 | 8 | 1 | 16
+OUTPUTMC | 2 | 1 | 8 | 1 | 15
 INPUTS | 4 | rcv  | XLXI_2/state_FSM_FFd16  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
 INPUTMC | 3 | 1 | 6 | 0 | 1 | 0 | 7
 INPUTP | 1 | 38
@@ -340,7 +340,7 @@ EQ | 3 |
 
 MACROCELL | 1 | 5 | XLXI_2/state_FSM_FFd17
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 2 | 1 | 6 | 1 | 16
+OUTPUTMC | 2 | 1 | 6 | 1 | 15
 INPUTS | 4 | rcv  | XLXI_2/state_FSM_FFd18  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
 INPUTMC | 3 | 1 | 17 | 0 | 1 | 0 | 7
 INPUTP | 1 | 38
@@ -353,7 +353,7 @@ MACROCELL | 1 | 17 | XLXI_2/state_FSM_FFd18
 ATTRIBUTES | 8520496 | 0
 OUTPUTMC | 2 | 1 | 5 | 1 | 17
 INPUTS | 11 | rcv  | XLXI_2/state_FSM_FFd10  | XLXI_2/state_FSM_FFd12  | XLXI_2/state_FSM_FFd14  | XLXI_2/state_FSM_FFd16  | XLXI_2/state_FSM_FFd18  | XLXI_2/state_FSM_FFd19  | XLXI_2/state_FSM_FFd2  | XLXI_2/state_FSM_FFd8  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
-INPUTMC | 10 | 1 | 12 | 1 | 10 | 1 | 8 | 1 | 6 | 1 | 17 | 1 | 16 | 0 | 11 | 1 | 2 | 0 | 1 | 0 | 7
+INPUTMC | 10 | 1 | 12 | 1 | 10 | 1 | 8 | 1 | 6 | 1 | 17 | 1 | 15 | 0 | 11 | 1 | 2 | 0 | 1 | 0 | 7
 INPUTP | 1 | 38
 EQ | 6 | 
    !XLXI_2/state_FSM_FFd18.D = !rcv
@@ -363,11 +363,11 @@ EQ | 6 |
    XLXI_2/state_FSM_FFd18.CLK = XLXN_20;
    XLXI_2/state_FSM_FFd18.AR = XLXN_4<3>/XLXN_4<3>_RSTF;
 
-MACROCELL | 1 | 16 | XLXI_2/state_FSM_FFd19
+MACROCELL | 1 | 15 | XLXI_2/state_FSM_FFd19
 ATTRIBUTES | 8520612 | 0
-OUTPUTMC | 2 | 1 | 17 | 1 | 16
+OUTPUTMC | 2 | 1 | 17 | 1 | 15
 INPUTS | 10 | rcv  | XLXI_2/state_FSM_FFd11  | XLXI_2/state_FSM_FFd13  | XLXI_2/state_FSM_FFd15  | XLXI_2/state_FSM_FFd17  | XLXI_2/state_FSM_FFd19  | XLXI_2/state_FSM_FFd7  | XLXI_2/state_FSM_FFd9  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
-INPUTMC | 9 | 1 | 11 | 1 | 9 | 1 | 7 | 1 | 5 | 1 | 16 | 1 | 3 | 1 | 1 | 0 | 1 | 0 | 7
+INPUTMC | 9 | 1 | 11 | 1 | 9 | 1 | 7 | 1 | 5 | 1 | 15 | 1 | 3 | 1 | 1 | 0 | 1 | 0 | 7
 INPUTP | 1 | 38
 EQ | 6 | 
    !XLXI_2/state_FSM_FFd19.D = rcv
@@ -399,7 +399,7 @@ EQ | 3 |
 
 MACROCELL | 0 | 9 | XLXI_2/state_FSM_FFd4
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 2 | 1 | 13 | 0 | 10
+OUTPUTMC | 2 | 3 | 17 | 0 | 10
 INPUTS | 3 | XLXI_2/state_FSM_FFd5  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
 INPUTMC | 3 | 0 | 8 | 0 | 1 | 0 | 7
 EQ | 3 | 
@@ -409,7 +409,7 @@ EQ | 3 |
 
 MACROCELL | 0 | 8 | XLXI_2/state_FSM_FFd5
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 2 | 1 | 14 | 0 | 9
+OUTPUTMC | 2 | 1 | 13 | 0 | 9
 INPUTS | 3 | XLXI_2/state_FSM_FFd6  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
 INPUTMC | 3 | 1 | 4 | 0 | 1 | 0 | 7
 EQ | 3 | 
@@ -419,7 +419,7 @@ EQ | 3 |
 
 MACROCELL | 1 | 4 | XLXI_2/state_FSM_FFd6
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 2 | 1 | 15 | 0 | 8
+OUTPUTMC | 2 | 1 | 14 | 0 | 8
 INPUTS | 4 | rcv  | XLXI_2/state_FSM_FFd7  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
 INPUTMC | 3 | 1 | 3 | 0 | 1 | 0 | 7
 INPUTP | 1 | 38
@@ -430,7 +430,7 @@ EQ | 3 |
 
 MACROCELL | 1 | 3 | XLXI_2/state_FSM_FFd7
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 2 | 1 | 16 | 1 | 4
+OUTPUTMC | 2 | 1 | 15 | 1 | 4
 INPUTS | 4 | rcv  | XLXI_2/state_FSM_FFd8  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
 INPUTMC | 3 | 1 | 2 | 0 | 1 | 0 | 7
 INPUTP | 1 | 38
@@ -452,7 +452,7 @@ EQ | 3 |
 
 MACROCELL | 1 | 1 | XLXI_2/state_FSM_FFd9
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 2 | 1 | 16 | 1 | 2
+OUTPUTMC | 2 | 1 | 15 | 1 | 2
 INPUTS | 4 | rcv  | XLXI_2/state_FSM_FFd10  | XLXN_20  | XLXN_4<3>/XLXN_4<3>_RSTF
 INPUTMC | 3 | 1 | 12 | 0 | 1 | 0 | 7
 INPUTP | 1 | 38
@@ -461,7 +461,7 @@ EQ | 3 |
    XLXI_2/state_FSM_FFd9.CLK = XLXN_20;
    XLXI_2/state_FSM_FFd9.AR = XLXN_4<3>/XLXN_4<3>_RSTF;
 
-MACROCELL | 3 | 17 | XLXI_4/state_FSM_FFd11
+MACROCELL | 3 | 16 | XLXI_4/state_FSM_FFd11
 ATTRIBUTES | 8520496 | 0
 OUTPUTMC | 2 | 2 | 7 | 2 | 17
 INPUTS | 3 | XLXI_4/state_FSM_FFd12  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
@@ -471,7 +471,7 @@ EQ | 3 |
    XLXI_4/state_FSM_FFd11.CLK = XLXN_20;
    XLXI_4/state_FSM_FFd11.AR = !xmt_OBUF/xmt_OBUF_RSTF__$INT;
 
-MACROCELL | 3 | 16 | XLXI_4/state_FSM_FFd13
+MACROCELL | 3 | 15 | XLXI_4/state_FSM_FFd13
 ATTRIBUTES | 8520496 | 0
 OUTPUTMC | 2 | 2 | 6 | 2 | 16
 INPUTS | 3 | XLXI_4/state_FSM_FFd14  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
@@ -481,7 +481,7 @@ EQ | 3 |
    XLXI_4/state_FSM_FFd13.CLK = XLXN_20;
    XLXI_4/state_FSM_FFd13.AR = !xmt_OBUF/xmt_OBUF_RSTF__$INT;
 
-MACROCELL | 3 | 15 | XLXI_4/state_FSM_FFd15
+MACROCELL | 3 | 14 | XLXI_4/state_FSM_FFd15
 ATTRIBUTES | 8520496 | 0
 OUTPUTMC | 2 | 2 | 6 | 2 | 15
 INPUTS | 3 | XLXI_4/state_FSM_FFd16  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
@@ -491,7 +491,7 @@ EQ | 3 |
    XLXI_4/state_FSM_FFd15.CLK = XLXN_20;
    XLXI_4/state_FSM_FFd15.AR = !xmt_OBUF/xmt_OBUF_RSTF__$INT;
 
-MACROCELL | 3 | 14 | XLXI_4/state_FSM_FFd17
+MACROCELL | 3 | 13 | XLXI_4/state_FSM_FFd17
 ATTRIBUTES | 8520496 | 0
 OUTPUTMC | 2 | 2 | 6 | 2 | 14
 INPUTS | 3 | XLXI_4/state_FSM_FFd18  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
@@ -535,7 +535,7 @@ MACROCELL | 2 | 8 | XLXI_4/state_FSM_FFd6
 ATTRIBUTES | 8520496 | 0
 OUTPUTMC | 3 | 2 | 9 | 2 | 8 | 2 | 7
 INPUTS | 6 | XLXI_4/state_FSM_FFd7  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT  | XLXN_4<0>  | XLXI_4/state_FSM_FFd6  | key<0>
-INPUTMC | 5 | 3 | 13 | 0 | 1 | 0 | 0 | 1 | 15 | 2 | 8
+INPUTMC | 5 | 3 | 12 | 0 | 1 | 0 | 0 | 1 | 14 | 2 | 8
 INPUTP | 1 | 46
 EXPORTS | 1 | 2 | 7
 EQ | 5 | 
@@ -545,7 +545,7 @@ EQ | 5 |
     XLXI_4/state_FSM_FFd6.EXP  =  XLXN_4<0> & XLXI_4/state_FSM_FFd6 & !key<0>
 	# !XLXN_4<0> & XLXI_4/state_FSM_FFd6 & key<0>
 
-MACROCELL | 3 | 13 | XLXI_4/state_FSM_FFd7
+MACROCELL | 3 | 12 | XLXI_4/state_FSM_FFd7
 ATTRIBUTES | 8520496 | 0
 OUTPUTMC | 2 | 2 | 7 | 2 | 8
 INPUTS | 3 | XLXI_4/state_FSM_FFd8  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
@@ -555,7 +555,7 @@ EQ | 3 |
    XLXI_4/state_FSM_FFd7.CLK = XLXN_20;
    XLXI_4/state_FSM_FFd7.AR = !xmt_OBUF/xmt_OBUF_RSTF__$INT;
 
-MACROCELL | 3 | 12 | XLXI_4/state_FSM_FFd9
+MACROCELL | 3 | 11 | XLXI_4/state_FSM_FFd9
 ATTRIBUTES | 8520496 | 0
 OUTPUTMC | 2 | 2 | 6 | 2 | 4
 INPUTS | 3 | XLXI_4/state_FSM_FFd10  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
@@ -569,7 +569,7 @@ MACROCELL | 0 | 2 | XLXI_8/count<7>
 ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 1 | 0 | 1
 INPUTS | 7 | XLXI_8/count<0>  | XLXI_8/count<1>  | XLXI_8/count<2>  | XLXI_8/count<3>  | XLXI_8/count<4>  | XLXI_8/count<5>  | XLXI_8/count<6>
-INPUTMC | 7 | 0 | 6 | 0 | 5 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 4 | 0 | 3
+INPUTMC | 7 | 0 | 6 | 0 | 5 | 3 | 10 | 3 | 9 | 3 | 8 | 0 | 4 | 0 | 3
 EQ | 5 | 
    XLXI_8/count<7>.T = XLXI_8/count<0> & XLXI_8/count<1> & 
 	XLXI_8/count<2> & XLXI_8/count<3> & XLXI_8/count<4> & 
@@ -580,9 +580,9 @@ GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 2 | 17 | XLXI_4/state_FSM_FFd10
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 1 | 3 | 12
+OUTPUTMC | 1 | 3 | 11
 INPUTS | 3 | XLXI_4/state_FSM_FFd11  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
-INPUTMC | 3 | 3 | 17 | 0 | 1 | 0 | 0
+INPUTMC | 3 | 3 | 16 | 0 | 1 | 0 | 0
 EQ | 3 | 
    XLXI_4/state_FSM_FFd10.D = XLXI_4/state_FSM_FFd11;
    XLXI_4/state_FSM_FFd10.CLK = XLXN_20;
@@ -590,9 +590,9 @@ EQ | 3 |
 
 MACROCELL | 2 | 16 | XLXI_4/state_FSM_FFd12
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 1 | 3 | 17
+OUTPUTMC | 1 | 3 | 16
 INPUTS | 3 | XLXI_4/state_FSM_FFd13  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
-INPUTMC | 3 | 3 | 16 | 0 | 1 | 0 | 0
+INPUTMC | 3 | 3 | 15 | 0 | 1 | 0 | 0
 EQ | 3 | 
    XLXI_4/state_FSM_FFd12.D = XLXI_4/state_FSM_FFd13;
    XLXI_4/state_FSM_FFd12.CLK = XLXN_20;
@@ -600,9 +600,9 @@ EQ | 3 |
 
 MACROCELL | 2 | 15 | XLXI_4/state_FSM_FFd14
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 1 | 3 | 16
+OUTPUTMC | 1 | 3 | 15
 INPUTS | 3 | XLXI_4/state_FSM_FFd15  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
-INPUTMC | 3 | 3 | 15 | 0 | 1 | 0 | 0
+INPUTMC | 3 | 3 | 14 | 0 | 1 | 0 | 0
 EQ | 3 | 
    XLXI_4/state_FSM_FFd14.D = XLXI_4/state_FSM_FFd15;
    XLXI_4/state_FSM_FFd14.CLK = XLXN_20;
@@ -610,9 +610,9 @@ EQ | 3 |
 
 MACROCELL | 2 | 14 | XLXI_4/state_FSM_FFd16
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 1 | 3 | 15
+OUTPUTMC | 1 | 3 | 14
 INPUTS | 3 | XLXI_4/state_FSM_FFd17  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
-INPUTMC | 3 | 3 | 14 | 0 | 1 | 0 | 0
+INPUTMC | 3 | 3 | 13 | 0 | 1 | 0 | 0
 EQ | 3 | 
    XLXI_4/state_FSM_FFd16.D = XLXI_4/state_FSM_FFd17;
    XLXI_4/state_FSM_FFd16.CLK = XLXN_20;
@@ -620,7 +620,7 @@ EQ | 3 |
 
 MACROCELL | 2 | 13 | XLXI_4/state_FSM_FFd18
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 1 | 3 | 14
+OUTPUTMC | 1 | 3 | 13
 INPUTS | 3 | XLXI_4/state_FSM_FFd19  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT
 INPUTMC | 3 | 2 | 2 | 0 | 1 | 0 | 0
 EQ | 3 | 
@@ -640,9 +640,9 @@ EQ | 3 |
 
 MACROCELL | 2 | 4 | XLXI_4/state_FSM_FFd8
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 2 | 3 | 13 | 2 | 5
+OUTPUTMC | 2 | 3 | 12 | 2 | 5
 INPUTS | 6 | XLXI_4/state_FSM_FFd9  | XLXN_20  | xmt_OBUF/xmt_OBUF_RSTF__$INT  | XLXN_4<1>  | XLXI_4/state_FSM_FFd5  | key<1>
-INPUTMC | 5 | 3 | 12 | 0 | 1 | 0 | 0 | 1 | 14 | 2 | 9
+INPUTMC | 5 | 3 | 11 | 0 | 1 | 0 | 0 | 1 | 13 | 2 | 9
 INPUTP | 1 | 49
 EXPORTS | 1 | 2 | 5
 EQ | 4 | 
@@ -661,9 +661,15 @@ EQ | 3 |
    XLXI_4/state_FSM_FFd19.CLK = XLXN_20;
    XLXI_4/state_FSM_FFd19.AP = !xmt_OBUF/xmt_OBUF_RSTF__$INT;
 
+MACROCELL | 1 | 16 | volt_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   volt = Vcc;
+
 MACROCELL | 0 | 7 | XLXN_4<3>/XLXN_4<3>_RSTF
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 23 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 17 | 1 | 0 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 17 | 1 | 16 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 1 | 4 | 1 | 3 | 1 | 2 | 1 | 1
+OUTPUTMC | 23 | 1 | 14 | 1 | 13 | 3 | 17 | 0 | 17 | 1 | 0 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 17 | 1 | 15 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 1 | 4 | 1 | 3 | 1 | 2 | 1 | 1
 INPUTS | 3 | rst  | XLXI_1/state_FSM_FFd2  | XLXI_1/state_FSM_FFd1
 INPUTMC | 2 | 0 | 12 | 0 | 13
 INPUTP | 1 | 92
@@ -673,7 +679,7 @@ EQ | 2 |
 
 MACROCELL | 0 | 0 | xmt_OBUF/xmt_OBUF_RSTF__$INT
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 20 | 2 | 7 | 2 | 3 | 3 | 17 | 3 | 16 | 3 | 15 | 3 | 14 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 3 | 13 | 3 | 12 | 2 | 17 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 4 | 2 | 2
+OUTPUTMC | 20 | 2 | 7 | 2 | 3 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 8 | 3 | 12 | 3 | 11 | 2 | 17 | 2 | 16 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 4 | 2 | 2
 INPUTS | 2 | XLXI_1/state_FSM_FFd2  | XLXI_1/state_FSM_FFd1
 INPUTMC | 2 | 0 | 12 | 0 | 13
 EQ | 1 | 
@@ -683,7 +689,7 @@ MACROCELL | 2 | 5 | EXP6_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 2 | 6
 INPUTS | 10 | XLXN_4<1>  | XLXI_4/state_FSM_FFd5  | key<1>  | XLXN_4<2>  | XLXI_4/state_FSM_FFd4  | key<2>  | XLXN_4<3>  | XLXI_4/state_FSM_FFd3  | key<3>  | XLXI_4/state_FSM_FFd8.EXP
-INPUTMC | 7 | 1 | 14 | 2 | 9 | 1 | 13 | 2 | 10 | 0 | 17 | 2 | 11 | 2 | 4
+INPUTMC | 7 | 1 | 13 | 2 | 9 | 3 | 17 | 2 | 10 | 0 | 17 | 2 | 11 | 2 | 4
 INPUTP | 3 | 49 | 50 | 52
 EXPORTS | 1 | 2 | 6
 IMPORTS | 1 | 2 | 4
@@ -700,7 +706,7 @@ MACROCELL | 2 | 6 | EXP7_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 2 | 7
 INPUTS | 7 | XLXI_4/state_FSM_FFd13  | XLXI_4/state_FSM_FFd15  | XLXI_4/state_FSM_FFd17  | XLXI_4/state_FSM_FFd9  | xmt  | XLXN_2  | EXP6_.EXP
-INPUTMC | 7 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 12 | 2 | 7 | 2 | 3 | 2 | 5
+INPUTMC | 7 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 11 | 2 | 7 | 2 | 3 | 2 | 5
 EXPORTS | 1 | 2 | 7
 IMPORTS | 1 | 2 | 5
 EQ | 13 | 
@@ -718,11 +724,12 @@ EQ | 13 |
 ;Imported pterms FB3_5
 	# !XLXN_4<1> & XLXI_4/state_FSM_FFd5 & key<1>
 
-PIN | rst | 65600 | 0 | N/A | 92 | 15 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 7 | 0 | 12 | 0 | 13 | 0 | 1 | 0 | 6 | 0 | 5 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 4 | 0 | 3 | 0 | 2
-PIN | rcv | 64 | 0 | N/A | 38 | 19 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 17 | 1 | 0 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 17 | 1 | 16 | 1 | 4 | 1 | 3 | 1 | 2 | 1 | 1
+PIN | rst | 65600 | 0 | N/A | 92 | 15 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 7 | 0 | 12 | 0 | 13 | 0 | 1 | 0 | 6 | 0 | 5 | 3 | 10 | 3 | 9 | 3 | 8 | 0 | 4 | 0 | 3 | 0 | 2
+PIN | rcv | 64 | 0 | N/A | 38 | 19 | 1 | 14 | 1 | 13 | 3 | 17 | 0 | 17 | 1 | 0 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 17 | 1 | 15 | 1 | 4 | 1 | 3 | 1 | 2 | 1 | 1
 PIN | key<0> | 64 | 0 | N/A | 46 | 1 | 2 | 8
 PIN | key<3> | 64 | 0 | N/A | 52 | 1 | 2 | 5
 PIN | key<2> | 64 | 0 | N/A | 50 | 1 | 2 | 5
 PIN | key<1> | 64 | 0 | N/A | 49 | 2 | 2 | 5 | 2 | 4
-PIN | clk | 4096 | 0 | N/A | 20 | 9 | 0 | 1 | 0 | 6 | 0 | 5 | 3 | 11 | 3 | 10 | 3 | 9 | 0 | 4 | 0 | 3 | 0 | 2
+PIN | clk | 4096 | 0 | N/A | 20 | 9 | 0 | 1 | 0 | 6 | 0 | 5 | 3 | 10 | 3 | 9 | 3 | 8 | 0 | 4 | 0 | 3 | 0 | 2
 PIN | xmt | 536871040 | 0 | N/A | 33
+PIN | volt | 536871040 | 0 | N/A | 10
