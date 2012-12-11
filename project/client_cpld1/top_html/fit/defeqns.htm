@@ -9,8 +9,6 @@
 </td></tr><tr><td>
 </td></tr><tr><td>
 </td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
 FTCPE_XLXI_1/sendcount0: FTCPE port map (XLXI_1/sendcount(0),XLXI_1/sendcount_T(0),XLXN_20,'0','0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/sendcount_T(0) <= ((rst AND NOT XLXI_1/state_FSM_FFd2 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND XLXN_2)
@@ -180,11 +178,11 @@ FDCPE_XLXN_41: FDCPE port map (XLXN_4(1),rcv,XLXN_20,XLXN_4(3)/XLXN_4(3)_RSTF,'0
 </td></tr><tr><td>
 FDCPE_XLXN_42: FDCPE port map (XLXN_4(2),rcv,XLXN_20,XLXN_4(3)/XLXN_4(3)_RSTF,'0',XLXI_2/state_FSM_FFd4);
 </td></tr><tr><td>
+FDCPE_XLXN_43: FDCPE port map (XLXN_4(3),rcv,XLXN_20,XLXN_4(3)/XLXN_4(3)_RSTF,'0',XLXI_2/state_FSM_FFd3);
+</td></tr><tr><td>
 </td></tr><tr><td>
 XLXN_4(3)/XLXN_4(3)_RSTF <= ((NOT rst)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1));
-</td></tr><tr><td>
-FDCPE_XLXN_43: FDCPE port map (XLXN_4(3),rcv,XLXN_20,XLXN_4(3)/XLXN_4(3)_RSTF,'0',XLXI_2/state_FSM_FFd3);
 </td></tr><tr><td>
 FDCPE_xmt: FDCPE port map (xmt,xmt_D,XLXN_20,NOT xmt_OBUF/xmt_OBUF_RSTF__$INT,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmt_D <= ((XLXI_4/state_FSM_FFd11)
@@ -194,13 +192,10 @@ FDCPE_xmt: FDCPE port map (xmt,xmt_D,XLXN_20,NOT xmt_OBUF/xmt_OBUF_RSTF__$INT,'0
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/state_FSM_FFd15)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/state_FSM_FFd17)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_4/state_FSM_FFd9)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP6_.EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (xmt AND XLXN_2)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP8_.EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_4(0) AND XLXI_4/state_FSM_FFd6 AND NOT key(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_4(0) AND XLXI_4/state_FSM_FFd6 AND key(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_4(2) AND XLXI_4/state_FSM_FFd4 AND NOT key(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_4(3) AND XLXI_4/state_FSM_FFd3 AND NOT key(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_4(3) AND XLXI_4/state_FSM_FFd3 AND key(3)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_4(0) AND XLXI_4/state_FSM_FFd6 AND key(0)));
 </td></tr><tr><td>
 </td></tr><tr><td>
 xmt_OBUF/xmt_OBUF_RSTF__$INT <= (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1);

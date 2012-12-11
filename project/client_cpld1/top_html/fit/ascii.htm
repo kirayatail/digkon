@@ -3,7 +3,7 @@
  
 cpldfit:  version P.40xd                            Xilinx Inc.
                                   Fitter Report
-Design Name: top                                 Date: 12-10-2012, 10:38AM
+Design Name: top                                 Date: 12-11-2012,  9:55AM
 Device Used: XC9572XL-5-PC44
 Fitting Status: Successful
 
@@ -17,10 +17,10 @@ Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-FB1          18/18*      23/54       39/90       2/ 9
-FB2          18/18*      21/54       59/90       2/ 9
-FB3          14/18       24/54       56/90       3/ 9
-FB4           9/18       12/54       21/90       1/ 7
+FB1          18/18*      23/54       39/90       1/ 9
+FB2          18/18*      21/54       59/90       1/ 9
+FB3          14/18       24/54       56/90       6/ 9
+FB4           9/18       12/54       21/90       0/ 7
              -----       -----       -----      -----    
              59/72       80/216     175/360      8/34 
 
@@ -54,13 +54,18 @@ End of Mapped Resource Summary
 
 WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
    use the default filename of 'top.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'clk' based upon the LOC
+   constraint 'P5'. It is recommended that you declare this BUFG explicitedly in
+   your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
 *************************  Summary of Mapped Logic  ************************
 
 ** 1 Outputs **
 
 Signal                        Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
 Name                          Pts   Inps          No.  Type    Use     Mode Rate State
-xmt                           18    23    FB3_2   11   I/O     O       STD  FAST RESET
+xmt                           18    23    FB3_8   13   I/O     O       STD  FAST RESET
 
 ** 58 Buried Nodes **
 
@@ -102,9 +107,9 @@ XLXN_4<1>                     4     4     FB2_15  STD  RESET
 XLXN_4<0>                     4     4     FB2_16  STD  RESET
 XLXI_2/state_FSM_FFd19        4     10    FB2_17  STD  SET
 XLXI_2/state_FSM_FFd18        4     11    FB2_18  STD  RESET
-XLXI_4/state_FSM_FFd19        2     2     FB3_6   STD  SET
-XLXN_2                        3     4     FB3_7   STD  RESET
-XLXI_4/state_FSM_FFd8         3     3     FB3_8   STD  RESET
+XLXI_4/state_FSM_FFd19        2     2     FB3_3   STD  SET
+XLXN_2                        3     4     FB3_4   STD  RESET
+XLXI_4/state_FSM_FFd8         3     3     FB3_5   STD  RESET
 XLXI_4/state_FSM_FFd6         3     3     FB3_9   STD  RESET
 
 Signal                        Total Total Loc     Pwr  Reg Init
@@ -132,13 +137,13 @@ XLXI_4/state_FSM_FFd11        3     3     FB4_18  STD  RESET
 
 Signal                        Loc     Pin  Pin     Pin     
 Name                                  No.  Type    Use     
-key<1>                        FB1_5   2    I/O     I
-clk                           FB1_9   5~   GCK/I/O GCK
-rst                           FB2_9   39~  GSR/I/O GSR/I
-key<0>                        FB2_15  43   I/O     I
-key<3>                        FB3_9   14   I/O     I
-key<2>                        FB3_16  24   I/O     I
-rcv                           FB4_17  34   I/O     I
+clk                           FB1_9   5    GCK/I/O GCK
+rst                           FB2_9   39   GSR/I/O GSR/I
+rcv                           FB3_9   14   I/O     I
+key<0>                        FB3_11  18   I/O     I
+key<1>                        FB3_14  19   I/O     I
+key<2>                        FB3_15  20   I/O     I
+key<3>                        FB3_17  22   I/O     I
 
 Legend:
 Pin No. - ~ - User Assigned
@@ -165,7 +170,7 @@ xmt_OBUF/xmt_OBUF_RSTF__$INT
 XLXN_20               1       0     0   4     FB1_2   1     I/O     (b)
 XLXI_8/count<7>       1       0     0   4     FB1_3         (b)     (b)
 XLXI_8/count<6>       1       0     0   4     FB1_4         (b)     (b)
-XLXI_8/count<5>       1       0     0   4     FB1_5   2     I/O     I
+XLXI_8/count<5>       1       0     0   4     FB1_5   2     I/O     (b)
 XLXI_8/count<1>       1       0     0   4     FB1_6   3     I/O     (b)
 XLXI_8/count<0>       0       0     0   5     FB1_7         (b)     (b)
 XLXN_4<3>/XLXN_4<3>_RSTF
@@ -258,7 +263,7 @@ XLXI_2/state_FSM_FFd11
 XLXI_2/state_FSM_FFd10
                       3       0     0   2     FB2_13        (b)     (b)
 XLXN_4<2>             4       0     0   1     FB2_14  42    GTS/I/O (b)
-XLXN_4<1>             4       0     0   1     FB2_15  43    I/O     I
+XLXN_4<1>             4       0     0   1     FB2_15  43    I/O     (b)
 XLXN_4<0>             4       0     0   1     FB2_16        (b)     (b)
 XLXI_2/state_FSM_FFd19
                       4       0     0   1     FB2_17  44    I/O     (b)
@@ -315,34 +320,34 @@ Number of function block inputs used/remaining:               24/30
 Number of signals used by logic mapping into function block:  24
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0   \/5   0     FB3_1         (b)     (b)
-xmt                  18      13<-   0   0     FB3_2   11    I/O     O
-(unused)              0       0   /\5   0     FB3_3         (b)     (b)
-(unused)              0       0   /\3   2     FB3_4         (b)     (b)
-(unused)              0       0     0   5     FB3_5   12    I/O     
+(unused)              0       0     0   5     FB3_1         (b)     
+(unused)              0       0     0   5     FB3_2   11    I/O     
 XLXI_4/state_FSM_FFd19
-                      2       0     0   3     FB3_6         (b)     (b)
-XLXN_2                3       0     0   2     FB3_7         (b)     (b)
+                      2       0     0   3     FB3_3         (b)     (b)
+XLXN_2                3       0     0   2     FB3_4         (b)     (b)
 XLXI_4/state_FSM_FFd8
-                      3       0     0   2     FB3_8   13    I/O     (b)
+                      3       0   \/1   1     FB3_5   12    I/O     (b)
+(unused)              0       0   \/5   0     FB3_6         (b)     (b)
+(unused)              0       0   \/5   0     FB3_7         (b)     (b)
+xmt                  18      13<-   0   0     FB3_8   13    I/O     O
 XLXI_4/state_FSM_FFd6
-                      3       0     0   2     FB3_9   14    I/O     I
+                      3       0   /\2   0     FB3_9   14    I/O     I
 XLXI_4/state_FSM_FFd5
                       3       0     0   2     FB3_10        (b)     (b)
 XLXI_4/state_FSM_FFd4
-                      3       0     0   2     FB3_11  18    I/O     (b)
+                      3       0     0   2     FB3_11  18    I/O     I
 XLXI_4/state_FSM_FFd3
                       3       0     0   2     FB3_12        (b)     (b)
 XLXI_4/state_FSM_FFd2
                       3       0     0   2     FB3_13        (b)     (b)
 XLXI_4/state_FSM_FFd18
-                      3       0     0   2     FB3_14  19    I/O     (b)
+                      3       0     0   2     FB3_14  19    I/O     I
 XLXI_4/state_FSM_FFd16
-                      3       0     0   2     FB3_15  20    I/O     (b)
+                      3       0     0   2     FB3_15  20    I/O     I
 XLXI_4/state_FSM_FFd14
-                      3       0     0   2     FB3_16  24    I/O     I
+                      3       0     0   2     FB3_16  24    I/O     (b)
 XLXI_4/state_FSM_FFd12
-                      3       0     0   2     FB3_17  22    I/O     (b)
+                      3       0     0   2     FB3_17  22    I/O     I
 XLXI_4/state_FSM_FFd10
                       3       0     0   2     FB3_18        (b)     (b)
 
@@ -358,12 +363,12 @@ Signals Used by Logic in Function Block
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-xmt                  XXXXX.XXXXXXXXXXXXXXXXXX................ 23
 XLXI_4/state_FSM_FFd19 
                      .............X.........X................ 2
 XLXN_2               .....X......XX.........X................ 4
 XLXI_4/state_FSM_FFd8 
                      ...........X.X.........X................ 3
+xmt                  XXXXX.XXXXXXXXXXXXXXXXXX................ 23
 XLXI_4/state_FSM_FFd6 
                      ..........X..X.........X................ 3
 XLXI_4/state_FSM_FFd5 
@@ -412,7 +417,7 @@ XLXI_4/state_FSM_FFd17
 XLXI_4/state_FSM_FFd15
                       3       0     0   2     FB4_16        (b)     (b)
 XLXI_4/state_FSM_FFd13
-                      3       0     0   2     FB4_17  34    I/O     I
+                      3       0     0   2     FB4_17  34    I/O     (b)
 XLXI_4/state_FSM_FFd11
                       3       0     0   2     FB4_18        (b)     (b)
 
@@ -444,8 +449,6 @@ XLXI_4/state_FSM_FFd11
 *******************************  Equations  ********************************
 
 ********** Mapped Logic **********
-
-
 
 
 
@@ -620,11 +623,11 @@ FDCPE_XLXN_41: FDCPE port map (XLXN_4(1),rcv,XLXN_20,XLXN_4(3)/XLXN_4(3)_RSTF,'0
 
 FDCPE_XLXN_42: FDCPE port map (XLXN_4(2),rcv,XLXN_20,XLXN_4(3)/XLXN_4(3)_RSTF,'0',XLXI_2/state_FSM_FFd4);
 
+FDCPE_XLXN_43: FDCPE port map (XLXN_4(3),rcv,XLXN_20,XLXN_4(3)/XLXN_4(3)_RSTF,'0',XLXI_2/state_FSM_FFd3);
+
 
 XLXN_4(3)/XLXN_4(3)_RSTF <= ((NOT rst)
 	OR (NOT XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1));
-
-FDCPE_XLXN_43: FDCPE port map (XLXN_4(3),rcv,XLXN_20,XLXN_4(3)/XLXN_4(3)_RSTF,'0',XLXI_2/state_FSM_FFd3);
 
 FDCPE_xmt: FDCPE port map (xmt,xmt_D,XLXN_20,NOT xmt_OBUF/xmt_OBUF_RSTF__$INT,'0');
 xmt_D <= ((XLXI_4/state_FSM_FFd11)
@@ -634,13 +637,10 @@ xmt_D <= ((XLXI_4/state_FSM_FFd11)
 	OR (XLXI_4/state_FSM_FFd15)
 	OR (XLXI_4/state_FSM_FFd17)
 	OR (XLXI_4/state_FSM_FFd9)
+	OR (EXP6_.EXP)
 	OR (xmt AND XLXN_2)
-	OR (EXP8_.EXP)
 	OR (XLXN_4(0) AND XLXI_4/state_FSM_FFd6 AND NOT key(0))
-	OR (NOT XLXN_4(0) AND XLXI_4/state_FSM_FFd6 AND key(0))
-	OR (XLXN_4(2) AND XLXI_4/state_FSM_FFd4 AND NOT key(2))
-	OR (XLXN_4(3) AND XLXI_4/state_FSM_FFd3 AND NOT key(3))
-	OR (NOT XLXN_4(3) AND XLXI_4/state_FSM_FFd3 AND key(3)));
+	OR (NOT XLXN_4(0) AND XLXI_4/state_FSM_FFd6 AND key(0)));
 
 
 xmt_OBUF/xmt_OBUF_RSTF__$INT <= (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1);
@@ -675,7 +675,7 @@ Device : XC9572XL-5-PC44
 Pin Signal                         Pin Signal                        
 No. Name                           No. Name                          
   1 KPR                              23 GND                           
-  2 key<1>                           24 key<2>                        
+  2 KPR                              24 KPR                           
   3 KPR                              25 KPR                           
   4 KPR                              26 KPR                           
   5 clk                              27 KPR                           
@@ -684,18 +684,18 @@ No. Name                           No. Name
   8 KPR                              30 TDO                           
   9 KPR                              31 GND                           
  10 GND                              32 VCC                           
- 11 xmt                              33 KPR                           
- 12 KPR                              34 rcv                           
- 13 KPR                              35 KPR                           
- 14 key<3>                           36 KPR                           
+ 11 KPR                              33 KPR                           
+ 12 KPR                              34 KPR                           
+ 13 xmt                              35 KPR                           
+ 14 rcv                              36 KPR                           
  15 TDI                              37 KPR                           
  16 TMS                              38 KPR                           
  17 TCK                              39 rst                           
- 18 KPR                              40 KPR                           
- 19 KPR                              41 VCC                           
- 20 KPR                              42 KPR                           
- 21 VCC                              43 key<0>                        
- 22 KPR                              44 KPR                           
+ 18 key<0>                           40 KPR                           
+ 19 key<1>                           41 VCC                           
+ 20 key<2>                           42 KPR                           
+ 21 VCC                              43 KPR                           
+ 22 key<3>                           44 KPR                           
 
 
 Legend :  NC  = Not Connected, unbonded pin

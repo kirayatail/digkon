@@ -15,4 +15,4 @@
   sr     (SLOW|FAST|slow|fast) "SLOW"
   dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
 ]>
-<ibis><part arch="xc9500xl" device="XC9572XL" pkg="PC44" spg="-5"/><pin dir="input" nm="rst" no="39"/><pin dir="input" nm="rcv" no="34"/><pin dir="input" nm="key&lt;0&gt;" no="43"/><pin dir="input" nm="key&lt;3&gt;" no="14"/><pin dir="input" nm="key&lt;2&gt;" no="24"/><pin dir="input" nm="key&lt;1&gt;" no="2"/><pin dir="input" nm="clk" no="5"/><pin dir="output" nm="xmt" no="11" sr="fast"/></ibis>
+<ibis><part arch="xc9500xl" device="XC9572XL" pkg="PC44" spg="-5"/><pin dir="input" nm="rst" no="39"/><pin dir="input" nm="rcv" no="14"/><pin dir="input" nm="key&lt;0&gt;" no="18"/><pin dir="input" nm="key&lt;3&gt;" no="22"/><pin dir="input" nm="key&lt;2&gt;" no="20"/><pin dir="input" nm="key&lt;1&gt;" no="19"/><pin dir="input" nm="clk" no="5"/><pin dir="output" nm="xmt" no="13" sr="fast"/></ibis>
