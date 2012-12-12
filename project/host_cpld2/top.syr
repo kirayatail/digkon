@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Reading design: top.prj
 
@@ -77,24 +77,332 @@ Setting FSM Encoding Algorithm to : OPT
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3516 - Found error in file "C:/workspace/digkon/project/host_cpld2/ctrl.vhd". 
-WARNING:HDLParsers:3458 - Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file "C:/workspace/digkon/project/host_cpld2/top_vhdl.prj" may be inaccurate. Please put the files in the project file in correct order with keyword 'nosort' at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
 Compiling vhdl file "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" in Library work.
-ERROR:HDLParsers:164 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 89. parse error, unexpected CASE, expecting IF
-ERROR:HDLParsers:164 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 91. parse error, unexpected PROCESS, expecting CASE
-ERROR:HDLParsers:164 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 93. parse error, unexpected WHEN, expecting SEMICOLON
-ERROR:HDLParsers:164 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 94. parse error, unexpected WHEN, expecting SEMICOLON
-ERROR:HDLParsers:164 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 95. parse error, unexpected WHEN, expecting SEMICOLON
-ERROR:HDLParsers:164 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 97. parse error, unexpected WHEN, expecting SEMICOLON
-ERROR:HDLParsers:164 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 99. parse error, unexpected WHEN, expecting SEMICOLON
-ERROR:HDLParsers:164 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 101. parse error, unexpected WHEN, expecting SEMICOLON
-ERROR:HDLParsers:164 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 103. parse error, unexpected WHEN, expecting SEMICOLON
-ERROR:HDLParsers:164 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 105. parse error, unexpected WHEN, expecting SEMICOLON
+Entity <ctrl> compiled.
+Entity <ctrl> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/workspace/digkon/project/host_cpld2/receiver.vhd" in Library work.
+Architecture behavioral of Entity receiver is up to date.
+Compiling vhdl file "C:/workspace/digkon/project/host_cpld2/timer.vhd" in Library work.
+Architecture behavioral of Entity timer is up to date.
+Compiling vhdl file "C:/workspace/digkon/project/host_cpld2/crypto.vhd" in Library work.
+Architecture behavioral of Entity crypto is up to date.
+Compiling vhdl file "C:/workspace/digkon/project/host_cpld2/keylookup.vhd" in Library work.
+Architecture behavioral of Entity keylookup is up to date.
+Compiling verilog file "equals.vf" in library work
+Compiling verilog file "checker.vf" in library work
+Module <equals> compiled
+Module <equals_MUSER_checker> compiled
+Compiling verilog file "top.vf" in library work
+Module <checker> compiled
+Module <equals_MUSER_top> compiled
+Module <checker_MUSER_top> compiled
+Module <top> compiled
+No errors in compilation
+Analysis of file <"top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top> in library <work>.
+
+Analyzing hierarchy for entity <ctrl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <checker_MUSER_top> in library <work>.
+
+Analyzing hierarchy for entity <timer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <receiver> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <keylookup> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <crypto> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <equals_MUSER_top> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top>.
+Module <top> is correct for synthesis.
+ 
+Analyzing Entity <ctrl> in library <work> (Architecture <behavioral>).
+Entity <ctrl> analyzed. Unit <ctrl> generated.
+
+Analyzing module <checker_MUSER_top> in library <work>.
+Module <checker_MUSER_top> is correct for synthesis.
+ 
+Analyzing Entity <keylookup> in library <work> (Architecture <behavioral>).
+Entity <keylookup> analyzed. Unit <keylookup> generated.
+
+Analyzing Entity <crypto> in library <work> (Architecture <behavioral>).
+Entity <crypto> analyzed. Unit <crypto> generated.
+
+Analyzing module <equals_MUSER_top> in library <work>.
+Module <equals_MUSER_top> is correct for synthesis.
+ 
+Analyzing Entity <timer> in library <work> (Architecture <behavioral>).
+Entity <timer> analyzed. Unit <timer> generated.
+
+Analyzing Entity <receiver> in library <work> (Architecture <behavioral>).
+Entity <receiver> analyzed. Unit <receiver> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ctrl>.
+    Related source file is "C:/workspace/digkon/project/host_cpld2/ctrl.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 11                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | compact                                        |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <alarm>.
+    Found 2-bit register for signal <count>.
+    Found 2-bit adder for signal <count$addsub0000> created at line 68.
+    Found 1-bit register for signal <nextSig>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ctrl> synthesized.
+
+
+Synthesizing Unit <timer>.
+    Related source file is "C:/workspace/digkon/project/host_cpld2/timer.vhd".
+    Found 6-bit up counter for signal <timer>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <timer> synthesized.
+
+
+Synthesizing Unit <receiver>.
+    Related source file is "C:/workspace/digkon/project/host_cpld2/receiver.vhd".
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 19                                             |
+    | Transitions        | 33                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 5                                              |
+    | Clock              | lowClk                    (rising_edge)        |
+    | Reset              | state$or0000              (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | compact                                        |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <data>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   4 D-type flip-flop(s).
+Unit <receiver> synthesized.
+
+
+Synthesizing Unit <keylookup>.
+    Related source file is "C:/workspace/digkon/project/host_cpld2/keylookup.vhd".
+    Found 1-bit register for signal <state<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <keylookup> synthesized.
+
+
+Synthesizing Unit <crypto>.
+    Related source file is "C:/workspace/digkon/project/host_cpld2/crypto.vhd".
+    Found 4-bit xor2 for signal <enc>.
+Unit <crypto> synthesized.
+
+
+Synthesizing Unit <equals_MUSER_top>.
+    Related source file is "top.vf".
+Unit <equals_MUSER_top> synthesized.
+
+
+Synthesizing Unit <checker_MUSER_top>.
+    Related source file is "top.vf".
+Unit <checker_MUSER_top> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "top.vf".
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 2-bit adder                                           : 1
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 8
+ 1-bit register                                        : 7
+ 2-bit register                                        : 1
+# Xors                                                 : 1
+ 4-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Optimizing FSM <XLXI_12/state/FSM> on signal <state[1:5]> with compact encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 00000
+ s1    | 10000
+ s2    | 10010
+ s3    | 01000
+ s4    | 10001
+ s5    | 00100
+ s6    | 00001
+ s7    | 10100
+ s8    | 11010
+ s9    | 11100
+ s10   | 01010
+ s11   | 01100
+ s12   | 11001
+ s13   | 00010
+ s14   | 01011
+ s15   | 00011
+ s16   | 10011
+ s17   | 11000
+ swait | 01001
+-------------------
+Optimizing FSM <XLXI_1/state/FSM> on signal <state[1:3]> with compact encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 000
+ s1    | 100
+ s2    | 010
+ s3    | 110
+ s4    | 111
+ s5    | 011
+ s6    | 001
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Adders/Subtractors                                   : 1
+ 2-bit adder                                           : 1
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Xors                                                 : 1
+ 4-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <receiver> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+  implementation constraint: INIT=r	 : state_FSM_FFd3
+  implementation constraint: INIT=r	 : state_FSM_FFd4
+  implementation constraint: INIT=r	 : state_FSM_FFd5
+
+Optimizing unit <keylookup> ...
+  implementation constraint: INIT=r	 : state_0
+
+Optimizing unit <crypto> ...
+
+Optimizing unit <equals_MUSER_top> ...
+
+Optimizing unit <ctrl> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+  implementation constraint: INIT=r	 : state_FSM_FFd3
+
+Optimizing unit <checker_MUSER_top> ...
+
+Optimizing unit <timer> ...
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 244
+#      AND2                        : 74
+#      AND3                        : 14
+#      AND4                        : 7
+#      AND6                        : 1
+#      GND                         : 1
+#      INV                         : 90
+#      OR2                         : 38
+#      OR3                         : 8
+#      VCC                         : 1
+#      XNOR2                       : 4
+#      XOR2                        : 6
+# FlipFlops/Latches                : 23
+#      FDC                         : 15
+#      FDCE                        : 8
+# IO Buffers                       : 14
+#      IBUF                        : 10
+#      OBUF                        : 4
+=========================================================================
+
+
+Total REAL time to Xst completion: 50.00 secs
+Total CPU time to Xst completion: 50.12 secs
+ 
 --> 
 
-Total memory usage is 232752 kilobytes
+Total memory usage is 281556 kilobytes
 
-Number of errors   :   10 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

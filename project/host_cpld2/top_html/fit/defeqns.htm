@@ -11,164 +11,172 @@
 </td></tr><tr><td>
 </td></tr><tr><td>
 </td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
 FTCPE_XLXI_1/alarm: FTCPE port map (XLXI_1/alarm,XLXI_1/alarm_T,clk,NOT rst,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/alarm_T <= ((NOT XLXI_12/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/alarm_T <= ((XLXI_1/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_1/count(1) AND XLXI_9/timer(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND NOT XLXI_1/alarm AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd4 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_12/state_FSM_FFd4 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_1/count(1) AND XLXI_9/timer(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND NOT XLXI_1/alarm AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_12/state_FSM_FFd5 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd5 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_1/count(1) AND XLXI_9/timer(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND NOT XLXI_1/alarm AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_1/count(1) AND XLXI_9/timer(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND NOT XLXI_1/alarm AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5)));
 </td></tr><tr><td>
 FTCPE_XLXI_1/count0: FTCPE port map (XLXI_1/count(0),XLXI_1/count_T(0),clk,'0','0',rst);
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(0) <= ((XLXI_12/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/count(0) AND XLXI_9/timer(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(1) AND XLXI_9/timer(2) AND XLXI_9/timer(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_12/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(0) <= ((XLXI_1/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(3) AND XLXI_9/timer(4) AND XLXI_9/timer(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_12/state_FSM_FFd1 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(3) AND XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd4 AND XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_12/state_FSM_FFd4 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(3) AND XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_12/state_FSM_FFd5 AND XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd5 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(3) AND XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(3) AND XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd2 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_12/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/count(0) AND XLXI_9/timer(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(1) AND XLXI_9/timer(2) AND XLXI_9/timer(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd4 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/count(0) AND XLXI_9/timer(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(1) AND XLXI_9/timer(2) AND XLXI_9/timer(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_12/state_FSM_FFd5 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/count(0) AND XLXI_9/timer(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(1) AND XLXI_9/timer(2) AND XLXI_9/timer(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(4) AND XLXI_9/timer(5)));
-</td></tr><tr><td>
-FTCPE_XLXI_1/count1: FTCPE port map (XLXI_1/count(1),XLXI_1/count_T(1),clk,'0','0',rst);
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(1) <= ((XLXI_12/state_FSM_FFd4 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(3) AND XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_12/state_FSM_FFd5 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_12/state_FSM_FFd4 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(3) AND XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(3) AND XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_12/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd5 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND XLXI_9/timer(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND XLXI_9/timer(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(3) AND XLXI_9/timer(4) AND XLXI_9/timer(5)));
 </td></tr><tr><td>
-FTCPE_XLXI_1/nextSig: FTCPE port map (XLXI_1/nextSig,XLXI_1/nextSig_T,clk,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/nextSig_T <= ((XLXN_83(2) AND rst AND XLXI_1/state_FSM_FFd3 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_61 AND data(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(2) AND rst AND XLXI_1/state_FSM_FFd3 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_61 AND NOT data(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(3) AND rst AND XLXI_1/state_FSM_FFd3 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_61 AND data(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(0) AND rst AND XLXI_1/state_FSM_FFd3 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_61 AND NOT data(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(0) AND rst AND XLXI_1/state_FSM_FFd3 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_61 AND data(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(1) AND rst AND XLXI_1/state_FSM_FFd3 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_61 AND data(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(1) AND rst AND XLXI_1/state_FSM_FFd3 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_61 AND NOT data(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(3) AND rst AND XLXI_1/state_FSM_FFd3 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXN_61 AND NOT data(3)));
+FTCPE_XLXI_1/count1: FTCPE port map (XLXI_1/count(1),XLXI_1/count_T(1),clk,'0','0',rst);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(1) <= ((XLXI_1/state_FSM_FFd1 AND XLXI_12/state_FSM_FFd4 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd5 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND NOT XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5)));
 </td></tr><tr><td>
-FTCPE_XLXI_1/state_FSM_FFd1: FTCPE port map (XLXI_1/state_FSM_FFd1,XLXI_1/state_FSM_FFd1_T,clk,NOT rst,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/state_FSM_FFd1_T <= ((XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
+FTCPE_XLXI_1/nextSig: FTCPE port map (XLXI_1/nextSig,XLXI_1/nextSig_T,clk,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/nextSig_T <= ((NOT XLXN_83(0) AND rst AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND data(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(3) AND rst AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND NOT data(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(3) AND rst AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND data(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(0) AND rst AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND NOT data(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(1) AND rst AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND data(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(1) AND rst AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND NOT data(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(2) AND rst AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND data(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(2) AND rst AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND NOT data(2)));
+</td></tr><tr><td>
+FDCPE_XLXI_1/state_FSM_FFd1: FDCPE port map (XLXI_1/state_FSM_FFd1,XLXI_1/state_FSM_FFd1_D,clk,NOT rst,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/state_FSM_FFd1_D <= ((EXP7_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_9/timer(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND sendDone)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd2 AND NOT XLXI_12/state_FSM_FFd4 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd5 AND NOT XLXI_12/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd1)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_9/timer(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(1) AND XLXI_9/timer(2) AND XLXI_9/timer(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(4) AND XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND NOT trig));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND NOT trig)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(1) AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND data(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(1) AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND NOT data(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(0) AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND NOT data(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(0) AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND data(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(2) AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND data(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(2) AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND NOT data(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(3) AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND NOT data(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_9/timer(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_9/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_9/timer(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_9/timer(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_9/timer(4)));
 </td></tr><tr><td>
 FDCPE_XLXI_1/state_FSM_FFd2: FDCPE port map (XLXI_1/state_FSM_FFd2,XLXI_1/state_FSM_FFd2_D,clk,NOT rst,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/state_FSM_FFd2_D <= ((XLXN_83(3)/XLXN_83(3)_RSTF__$INT.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/count(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/count(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_9/timer(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_30.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(0) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT data(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(0) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	data(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(1) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	data(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(1) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT data(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(3) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT data(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_9/timer(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_9/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_9/timer(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_9/timer(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_9/timer(4)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/state_FSM_FFd2_D <= ((XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	trig)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND XLXI_12/state_FSM_FFd4 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_1/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd5 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(0) AND XLXI_1/count(1) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5)));
 </td></tr><tr><td>
-FDCPE_XLXI_1/state_FSM_FFd3: FDCPE port map (XLXI_1/state_FSM_FFd3,XLXI_1/state_FSM_FFd3_D,clk,NOT rst,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/state_FSM_FFd3_D <= ((XLXN_83(2) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	data(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(2) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT data(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(3) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	data(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd2 AND NOT XLXI_12/state_FSM_FFd4 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd5 AND NOT XLXI_12/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(0) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT data(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(0) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	data(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(1) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	data(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXN_83(1) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT data(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXN_83(3) AND XLXI_1/state_FSM_FFd3 AND NOT XLXN_61 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT data(3)));
+FTCPE_XLXI_1/state_FSM_FFd3: FTCPE port map (XLXI_1/state_FSM_FFd3,XLXI_1/state_FSM_FFd3_T,clk,NOT rst,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/state_FSM_FFd3_T <= ((XLXI_1/state_FSM_FFd1 AND XLXI_12/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd4 AND XLXI_12/state_FSM_FFd5 AND XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd3 AND XLXI_9/timer(0) AND XLXI_9/timer(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(5)));
 </td></tr><tr><td>
 FDCPE_XLXI_12/state_FSM_FFd1: FDCPE port map (XLXI_12/state_FSM_FFd1,XLXI_12/state_FSM_FFd1_D,lowClk,NOT XLXN_83(3)/XLXN_83(3)_RSTF__$INT,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_12/state_FSM_FFd1_D <= ((NOT rcv AND XLXI_12/state_FSM_FFd2 AND 
@@ -183,9 +191,9 @@ FDCPE_XLXI_12/state_FSM_FFd1: FDCPE port map (XLXI_12/state_FSM_FFd1,XLXI_12/sta
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd3)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rcv AND NOT XLXI_12/state_FSM_FFd2 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd5 AND NOT XLXI_12/state_FSM_FFd1)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd2 AND XLXI_12/state_FSM_FFd4 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd3)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd2 AND XLXI_12/state_FSM_FFd5 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd4 AND NOT XLXI_12/state_FSM_FFd5 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd1 AND NOT XLXI_12/state_FSM_FFd3));
 </td></tr><tr><td>
 FDCPE_XLXI_12/state_FSM_FFd2: FDCPE port map (XLXI_12/state_FSM_FFd2,XLXI_12/state_FSM_FFd2_D,lowClk,NOT XLXN_83(3)/XLXN_83(3)_RSTF__$INT,'0');
@@ -205,71 +213,66 @@ FDCPE_XLXI_12/state_FSM_FFd2: FDCPE port map (XLXI_12/state_FSM_FFd2,XLXI_12/sta
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd1));
 </td></tr><tr><td>
 FDCPE_XLXI_12/state_FSM_FFd3: FDCPE port map (XLXI_12/state_FSM_FFd3,XLXI_12/state_FSM_FFd3_D,lowClk,NOT XLXN_83(3)/XLXN_83(3)_RSTF__$INT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_12/state_FSM_FFd3_D <= ((rcv AND XLXI_12/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_12/state_FSM_FFd3_D <= ((rcv AND NOT XLXI_12/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd4 AND XLXI_12/state_FSM_FFd5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rcv AND XLXI_12/state_FSM_FFd2 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd4 AND NOT XLXI_12/state_FSM_FFd5)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rcv AND XLXI_12/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd4 AND XLXI_12/state_FSM_FFd1)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rcv AND NOT XLXI_12/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd4 AND XLXI_12/state_FSM_FFd5));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd4 AND XLXI_12/state_FSM_FFd1));
 </td></tr><tr><td>
 FDCPE_XLXI_12/state_FSM_FFd4: FDCPE port map (XLXI_12/state_FSM_FFd4,XLXI_12/state_FSM_FFd4_D,lowClk,NOT XLXN_83(3)/XLXN_83(3)_RSTF__$INT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_12/state_FSM_FFd4_D <= ((rcv AND XLXI_12/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_12/state_FSM_FFd4_D <= ((NOT rcv AND XLXI_12/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rcv AND XLXI_12/state_FSM_FFd2 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd5 AND XLXI_12/state_FSM_FFd1)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rcv AND NOT XLXI_12/state_FSM_FFd2 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd4 AND NOT XLXI_12/state_FSM_FFd5 AND XLXI_12/state_FSM_FFd1)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rcv AND XLXI_12/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd2 AND XLXI_12/state_FSM_FFd4 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd5)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_12/state_FSM_FFd2 AND XLXI_12/state_FSM_FFd4 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd1));
 </td></tr><tr><td>
 FDCPE_XLXI_12/state_FSM_FFd5: FDCPE port map (XLXI_12/state_FSM_FFd5,XLXI_12/state_FSM_FFd5_D,lowClk,NOT XLXN_83(3)/XLXN_83(3)_RSTF__$INT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_12/state_FSM_FFd5_D <= ((NOT XLXI_12/state_FSM_FFd2 AND XLXI_12/state_FSM_FFd4 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd1)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rcv AND XLXI_12/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd4 AND NOT XLXI_12/state_FSM_FFd5 AND NOT XLXI_12/state_FSM_FFd3)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rcv AND NOT XLXI_12/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_12/state_FSM_FFd5_D <= ((NOT rcv AND NOT XLXI_12/state_FSM_FFd1 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd2 AND XLXI_12/state_FSM_FFd4 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd5)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_12/state_FSM_FFd2 AND XLXI_12/state_FSM_FFd5 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XLXI_12/state_FSM_FFd2 AND XLXI_12/state_FSM_FFd4 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rcv AND XLXI_12/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_12/state_FSM_FFd4 AND NOT XLXI_12/state_FSM_FFd5 AND NOT XLXI_12/state_FSM_FFd3));
 </td></tr><tr><td>
 FTCPE_XLXI_9/timer0: FTCPE port map (XLXI_9/timer(0),'1',lowClk,XLXI_9/timer_CLR(0),'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(0) <= (XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(0) <= (NOT XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2);
 </td></tr><tr><td>
 FTCPE_XLXI_9/timer1: FTCPE port map (XLXI_9/timer(1),XLXI_9/timer(0),lowClk,XLXI_9/timer_CLR(1),'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(1) <= (XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(1) <= (NOT XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2);
 </td></tr><tr><td>
 FTCPE_XLXI_9/timer2: FTCPE port map (XLXI_9/timer(2),XLXI_9/timer_T(2),lowClk,XLXI_9/timer_CLR(2),'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_T(2) <= (XLXI_9/timer(0) AND XLXI_9/timer(1));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(2) <= (XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(2) <= (NOT XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2);
 </td></tr><tr><td>
 FTCPE_XLXI_9/timer3: FTCPE port map (XLXI_9/timer(3),XLXI_9/timer_T(3),lowClk,XLXI_9/timer_CLR(3),'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_T(3) <= (XLXI_9/timer(0) AND XLXI_9/timer(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(3) <= (XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(3) <= (NOT XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2);
 </td></tr><tr><td>
 FTCPE_XLXI_9/timer4: FTCPE port map (XLXI_9/timer(4),XLXI_9/timer_T(4),lowClk,XLXI_9/timer_CLR(4),'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_T(4) <= (XLXI_9/timer(0) AND XLXI_9/timer(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(4) <= (XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(4) <= (NOT XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2);
 </td></tr><tr><td>
 FTCPE_XLXI_9/timer5: FTCPE port map (XLXI_9/timer(5),XLXI_9/timer_T(5),lowClk,XLXI_9/timer_CLR(5),'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_T(5) <= (XLXI_9/timer(0) AND XLXI_9/timer(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer(2) AND XLXI_9/timer(3) AND XLXI_9/timer(4));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(5) <= (XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_9/timer_CLR(5) <= (NOT XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2);
 </td></tr><tr><td>
 FTCPE_XLXN_61: FTCPE port map (XLXN_61,'1',XLXN_61_C,XLXN_61_CLR,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_61_C <= (XLXI_1/state_FSM_FFd3 AND XLXI_1/nextSig);
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_61_CLR <= (XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_61_C <= (XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd3 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/nextSig);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_61_CLR <= (NOT XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3);
 </td></tr><tr><td>
 FDCPE_XLXN_830: FDCPE port map (XLXN_83(0),rcv,lowClk,NOT XLXN_83(3)/XLXN_83(3)_RSTF__$INT,'0',XLXN_83_CE(0));
@@ -289,23 +292,24 @@ FDCPE_XLXN_833: FDCPE port map (XLXN_83(3),rcv,lowClk,NOT XLXN_83(3)/XLXN_83(3)_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd1);
 </td></tr><tr><td>
 </td></tr><tr><td>
-XLXN_83(3)/XLXN_83(3)_RSTF__$INT <= ((rst AND XLXI_1/state_FSM_FFd3)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND XLXI_1/state_FSM_FFd2 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd1));
+XLXN_83(3)/XLXN_83(3)_RSTF__$INT <= ((rst AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND XLXI_1/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/state_FSM_FFd3));
 </td></tr><tr><td>
 </td></tr><tr><td>
-getRand <= (NOT XLXI_1/state_FSM_FFd2 AND XLXI_1/state_FSM_FFd1);
+getRand <= (XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd2);
 </td></tr><tr><td>
 </td></tr><tr><td>
-larm <= (NOT XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/alarm);
+larm <= (NOT XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND XLXI_1/alarm);
 </td></tr><tr><td>
 </td></tr><tr><td>
-okLmp <= (NOT XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/alarm);
+okLmp <= (NOT XLXI_1/state_FSM_FFd1 AND NOT XLXI_1/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3 AND NOT XLXI_1/alarm);
 </td></tr><tr><td>
 </td></tr><tr><td>
-sendEnable <= (XLXI_1/state_FSM_FFd2 AND NOT XLXI_1/state_FSM_FFd1 AND 
+sendEnable <= (NOT XLXI_1/state_FSM_FFd1 AND XLXI_1/state_FSM_FFd2 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_1/state_FSM_FFd3);
 </td></tr><tr><td>
 Register Legend:

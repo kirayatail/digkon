@@ -5,41 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLParsers" num="3516" delta="old" >Found error in file &quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot;. 
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3458" delta="old" >Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file &quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/top_vhdl.prj</arg>&quot; may be inaccurate. Please put the files in the project file in correct order with keyword &apos;nosort&apos; at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">89</arg>. <arg fmt="%s" index="3">parse error, unexpected CASE, expecting IF</arg>
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">91</arg>. <arg fmt="%s" index="3">parse error, unexpected PROCESS, expecting CASE</arg>
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">93</arg>. <arg fmt="%s" index="3">parse error, unexpected WHEN, expecting SEMICOLON</arg>
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">94</arg>. <arg fmt="%s" index="3">parse error, unexpected WHEN, expecting SEMICOLON</arg>
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">95</arg>. <arg fmt="%s" index="3">parse error, unexpected WHEN, expecting SEMICOLON</arg>
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">97</arg>. <arg fmt="%s" index="3">parse error, unexpected WHEN, expecting SEMICOLON</arg>
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">99</arg>. <arg fmt="%s" index="3">parse error, unexpected WHEN, expecting SEMICOLON</arg>
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">101</arg>. <arg fmt="%s" index="3">parse error, unexpected WHEN, expecting SEMICOLON</arg>
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">103</arg>. <arg fmt="%s" index="3">parse error, unexpected WHEN, expecting SEMICOLON</arg>
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/workspace/digkon/project/host_cpld2/ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">105</arg>. <arg fmt="%s" index="3">parse error, unexpected WHEN, expecting SEMICOLON</arg>
-</msg>
-
 </messages>
 

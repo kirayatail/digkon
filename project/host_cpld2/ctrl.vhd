@@ -83,8 +83,8 @@ begin
 				when s5 =>				-- Wait for trigger release
 					if (trig = '0') then state <= s6; end if;
 					
-				when s6 =>
-					if (timeout = '1') then state <= s0;
+				when s6 =>				-- Delay until ready for next trigger
+					if (timeout = '1') then state <= s0; end if;
 					
 			end case;
 		end if;
