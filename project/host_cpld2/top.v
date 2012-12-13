@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.3
 //  \   \         Application : sch2hdl
 //  /   /         Filename : top.vf
-// /___/   /\     Timestamp : 12/11/2012 09:30:19
+// /___/   /\     Timestamp : 12/11/2012 14:56:58
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -87,25 +87,25 @@ module top(clk,
            data, 
            lowClk, 
            rcv, 
-           reset, 
-           senddone, 
+           rst, 
+           sendDone, 
            trig, 
+           getRand, 
            larm, 
-           rand, 
-           send, 
-           state);
+           okLmp, 
+           sendEnable);
 
     input clk;
     input [3:0] data;
     input lowClk;
     input rcv;
-    input reset;
-    input senddone;
+    input rst;
+    input sendDone;
     input trig;
+   output getRand;
    output larm;
-   output rand;
-   output send;
-   output [2:0] state;
+   output okLmp;
+   output sendEnable;
    
    wire Timeout;
    wire XLXN_4;
@@ -124,16 +124,16 @@ module top(clk,
                 .lastKey(XLXN_61), 
                 .rcvDone(XLXN_84), 
                 .reset(XLXN_51), 
-                .sendDone(senddone), 
+                .sendDone(sendDone), 
                 .timeout(Timeout), 
                 .trig(XLXN_56), 
                 .checkRst(XLXN_5), 
                 .larmOut(larm), 
                 .nextKey(XLXN_4), 
-                .rand(rand), 
+                .okOut(okLmp), 
+                .rand(getRand), 
                 .rcvEnable(XLXN_85), 
-                .send(send), 
-                .sttOut(state[2:0]), 
+                .send(sendEnable), 
                 .timerstart(XLXN_30));
    checker_MUSER_top  XLXI_2 (.chall(data[3:0]), 
                              .nextKey(XLXN_4), 
@@ -144,7 +144,7 @@ module top(clk,
    timer  XLXI_9 (.lowclk(lowClk), 
                  .restart(XLXN_30), 
                  .timeout(Timeout));
-   INV  XLXI_10 (.I(reset), 
+   INV  XLXI_10 (.I(rst), 
                 .O(XLXN_51));
    INV  XLXI_11 (.I(trig), 
                 .O(XLXN_56));

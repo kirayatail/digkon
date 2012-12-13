@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/workspace/digkon/project2/host_2/top_isim_beh.exe" -prj "C:/workspace/digkon/project2/host_2/top_beh.prj" "work.top" 

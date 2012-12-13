@@ -1,0 +1,2 @@
+sch2hdl,-intstyle,ise,-family,xc9500xl,-flat,-suppress,-vhdl,C:/workspace/digkon/project2/host_1/rand.vhf,-w,C:/workspace/digkon/project2/host_1/rand.sch
+sch2hdl,-intstyle,ise,-family,xc9500xl,-flat,-suppress,-vhdl,C:/workspace/digkon/project2/host_1/top.vhf,-w,C:/workspace/digkon/project2/host_1/top.sch

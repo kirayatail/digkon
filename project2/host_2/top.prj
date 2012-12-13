@@ -1,0 +1,8 @@
+vhdl work "keylookup.vhd"
+vhdl work "equals.vhd"
+vhdl work "crypto.vhd"
+vhdl work "timer.vhd"
+vhdl work "receiver.vhd"
+vhdl work "ctrl.vhd"
+vhdl work "checker.vhd"
+vhdl work "top.vhd"

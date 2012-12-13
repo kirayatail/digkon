@@ -1,0 +1,38 @@
+Pin Freeze File:  version P.40xd
+
+9572XL44PC XC9572XL-5-PC44
+clk S:PIN5
+data<0> S:PIN18
+data<1> S:PIN19
+data<2> S:PIN20
+data<3> S:PIN22
+lowClk S:PIN14
+rcv S:PIN13
+rst S:PIN39
+sendDone S:PIN25
+trig S:PIN6
+sendEnable S:PIN24
+getRand S:PIN26
+larm S:PIN4
+okLmp S:PIN3
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT
+PARTITION FB1_6 okLmp_OBUF
+PARTITION FB1_8 larm_OBUF
+PARTITION FB1_13 EXP6_ ctrl1/state<1> ctrl1/alarm ctrl1/count<1>
+		 EXP7_ ctrl1/count<0>
+PARTITION FB2_1 ctrl1/nextSig EXP8_
+PARTITION FB2_17 EXP9_ ctrl1/state<2>
+PARTITION FB3_11 tim1/timer<0> tim1/timer<5> tim1/timer<4> tim1/timer<3>
+		 tim1/timer<2> CheckRst tim1/timer<1> ctrl1/state<0>
+		
+PARTITION FB4_1 rcv1/state<3> rcv1/state<0> EXP10_
+PARTITION FB4_5 getRand_OBUF
+PARTITION FB4_8 LastKey RcvData<3> RcvData<2> RcvData<1>
+		 RcvData<0> rcv1/state<4> EXP11_ rcv1/state<2>
+		 rcv1/state<1> EXP12_ EXP13_
+

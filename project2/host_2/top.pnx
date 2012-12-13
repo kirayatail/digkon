@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ibis [
+<!ELEMENT ibis (part, pin+)>
+<!ELEMENT part EMPTY>
+<!ELEMENT pin EMPTY>
+<!ATTLIST part
+  arch   CDATA #REQUIRED
+  device CDATA #REQUIRED
+  spg    CDATA #REQUIRED
+  pkg    CDATA #REQUIRED>
+<!ATTLIST pin
+  nm     CDATA #REQUIRED
+  no     CDATA #REQUIRED
+  iostd  (TTL|LVTTL|LVCMOS2|NA) "NA"
+  sr     (SLOW|FAST|slow|fast) "SLOW"
+  dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
+]>
+<ibis><part arch="xc9500xl" device="XC9572XL" pkg="PC44" spg="-5"/><pin dir="input" nm="rst" no="39"/><pin dir="input" nm="clk" no="5"/><pin dir="input" nm="sendDone" no="25"/><pin dir="input" nm="trig" no="6"/><pin dir="input" nm="data&lt;1&gt;" no="19"/><pin dir="input" nm="data&lt;0&gt;" no="18"/><pin dir="input" nm="data&lt;2&gt;" no="20"/><pin dir="input" nm="data&lt;3&gt;" no="22"/><pin dir="input" nm="lowClk" no="14"/><pin dir="input" nm="rcv" no="13"/><pin dir="output" nm="larm" no="4" sr="fast"/><pin dir="output" nm="okLmp" no="3" sr="fast"/><pin dir="output" nm="sendEnable" no="24" sr="fast"/><pin dir="output" nm="getRand" no="26" sr="fast"/></ibis>

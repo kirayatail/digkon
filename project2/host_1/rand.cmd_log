@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family xc9500xl -refsym rand C:/workspace/digkon/project2/host_1/rand.sch C:/workspace/digkon/project2/host_1/rand.sym 

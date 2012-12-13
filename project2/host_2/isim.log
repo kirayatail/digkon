@@ -1,0 +1,77 @@
+ISim log file
+Running: C:\workspace\digkon\project2\host_2\top_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/workspace/digkon/project2/host_2/top_isim_beh.wdb 
+ISim P.40xd (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /top/clk 0 -radix bin -value 1 -radix bin -time 25 ns -repeat 50 ns
+# run
+# put rst 1
+# put rst 0
+# run
+# put rst 1
+# put trig 1
+# put data 1010
+# isim force add /top/lowclk 1 -radix bin -value 0 -radix bin -time 100 ns -repeat 200 ns
+# run
+# run
+at 1400 ns(1), Instance /top/tim1/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# run
+# run
+# isim force add /top/clk 0 -radix bin -value 1 -radix bin -time 6250 ps -repeat 12500 ps
+# isim force add /top/clk 0 -radix bin -value 1 -radix bin -time 6250 ps -repeat 12500 ps
+# run
+# run
+# put rcv 0
+# put senddone 0
+# run
+# put trig 0
+# run
+# put trig 1
+# put senddone 1
+# run
+# put senddone 0
+# put rcv 1
+# run
+# run
+# put rcv 0
+# run
+# run
+# put rcv 1
+# run
+# run
+# put rcv 0
+# run
+# run
+# put rcv 1
+# run
+# run
+# put rcv 0
+# run
+# run
+# put rcv 1
+# run
+# run
+# put rcv 0
+# run
+# run
+# put rcv 1
+# run
+# run
+# put rcv 0
+# run
+# put rcv 1
+# run
+# put rcv 0
+# put rcv 1
+# put rcv 0
+# put rcv 1
+# run
+# put rcv 0
