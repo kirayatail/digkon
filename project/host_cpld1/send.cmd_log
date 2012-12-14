@@ -73,3 +73,5 @@ xst -intstyle ise -ifn "C:/workspace/digkon/project/host_cpld1/send.xst" -ofn "C
 ngdbuild -intstyle ise -dd _ngo -uc send.ucf -p xc9572xl-PC44-5 send.ngc send.ngd  
 cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper send.ngd 
 XSLTProcess send_build.xml 
+XSLTProcess send_build.xml 
+XSLTProcess send_build.xml 

@@ -40,6 +40,7 @@ end sender;
 architecture Behavioral of sender is
 type state_type is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,sWait);
 signal state : state_type;
+signal parity : std_logic;
 begin
 	process(lowClk,sendEnable) begin
 		if sendEnable = '0' then
@@ -59,17 +60,17 @@ begin
 				when s9 => state <= s10; transmitter <= '0';
 				when s10 => state <= s11; transmitter <= '1';
 				when s11 => state <= s12; transmitter <= '0';
-				when s12 => state <= s13; transmitter <= '1';
-				when s13 => state <= s14; transmitter <= data(0);
-				when s14 => state <= s15; transmitter <= data(1);
-				when s15 => state <= s16; transmitter <= data(2);
-				when s16 => state <= s17; transmitter <= data(3);
+				when s12 => state <= s13; transmitter <= data(0);
+				when s13 => state <= s14; transmitter <= data(1);
+				when s14 => state <= s15; transmitter <= data(2);
+				when s15 => state <= s16; transmitter <= data(3);
+				when s16 => state <= s17; transmitter <= parity;
 				when s17	=> state <= sWait; transmitter <= '0';
 				when sWait => state <= sWait;
 			end case;
 		end if;
 	end process;
-	
+	parity <= ((data(0) xor data(1)) xor (data(2) xor data(3)));
 	sendDone <= '1' when (state = sWait) else '0';
 
 end Behavioral;

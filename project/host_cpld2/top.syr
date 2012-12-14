@@ -3,13 +3,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: top.prj
@@ -158,10 +158,10 @@ Synthesizing Unit <ctrl>.
     Related source file is "C:/workspace/digkon/project/host_cpld2/ctrl.vhd".
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 5                                              |
-    | Transitions        | 12                                             |
+    | States             | 7                                              |
+    | Transitions        | 16                                             |
     | Inputs             | 7                                              |
-    | Outputs            | 8                                              |
+    | Outputs            | 10                                             |
     | Clock              | clk                       (rising_edge)        |
     | Reset              | reset                     (positive)           |
     | Reset type         | asynchronous                                   |
@@ -194,8 +194,8 @@ Synthesizing Unit <receiver>.
     Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 19                                             |
-    | Transitions        | 33                                             |
-    | Inputs             | 1                                              |
+    | Transitions        | 35                                             |
+    | Inputs             | 2                                              |
     | Outputs            | 5                                              |
     | Clock              | lowClk                    (rising_edge)        |
     | Reset              | state$or0000              (positive)           |
@@ -206,6 +206,7 @@ Synthesizing Unit <receiver>.
     | Implementation     | automatic                                      |
     -----------------------------------------------------------------------
     Found 4-bit register for signal <data>.
+    Found 1-bit xor4 for signal <parity>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   4 D-type flip-flop(s).
@@ -252,7 +253,8 @@ Macro Statistics
 # Registers                                            : 8
  1-bit register                                        : 7
  2-bit register                                        : 1
-# Xors                                                 : 1
+# Xors                                                 : 2
+ 1-bit xor4                                            : 1
  4-bit xor2                                            : 1
 
 =========================================================================
@@ -277,13 +279,13 @@ Optimizing FSM <XLXI_12/state/FSM> on signal <state[1:5]> with compact encoding.
  s9    | 11100
  s10   | 01010
  s11   | 01100
- s12   | 11001
- s13   | 00010
- s14   | 01011
- s15   | 00011
- s16   | 10011
+ s12   | 01001
+ s13   | 01101
+ s14   | 00101
+ s15   | 10101
+ s16   | 00010
  s17   | 11000
- swait | 01001
+ swait | 11001
 -------------------
 Optimizing FSM <XLXI_1/state/FSM> on signal <state[1:3]> with compact encoding.
 -------------------
@@ -293,7 +295,9 @@ Optimizing FSM <XLXI_1/state/FSM> on signal <state[1:3]> with compact encoding.
  s1    | 100
  s2    | 010
  s3    | 110
- s4    | 011
+ s4    | 111
+ s5    | 011
+ s6    | 001
 -------------------
 
 =========================================================================
@@ -307,7 +311,8 @@ Macro Statistics
  6-bit up counter                                      : 1
 # Registers                                            : 7
  Flip-Flops                                            : 7
-# Xors                                                 : 1
+# Xors                                                 : 2
+ 1-bit xor4                                            : 1
  4-bit xor2                                            : 1
 
 =========================================================================
@@ -317,13 +322,6 @@ Macro Statistics
 =========================================================================
 
 Optimizing unit <top> ...
-
-Optimizing unit <receiver> ...
-  implementation constraint: INIT=r	 : state_FSM_FFd1
-  implementation constraint: INIT=r	 : state_FSM_FFd2
-  implementation constraint: INIT=r	 : state_FSM_FFd3
-  implementation constraint: INIT=r	 : state_FSM_FFd4
-  implementation constraint: INIT=r	 : state_FSM_FFd5
 
 Optimizing unit <keylookup> ...
   implementation constraint: INIT=r	 : state_0
@@ -336,6 +334,13 @@ Optimizing unit <ctrl> ...
   implementation constraint: INIT=r	 : state_FSM_FFd1
   implementation constraint: INIT=r	 : state_FSM_FFd2
   implementation constraint: INIT=r	 : state_FSM_FFd3
+
+Optimizing unit <receiver> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+  implementation constraint: INIT=r	 : state_FSM_FFd3
+  implementation constraint: INIT=r	 : state_FSM_FFd4
+  implementation constraint: INIT=r	 : state_FSM_FFd5
 
 Optimizing unit <checker_MUSER_top> ...
 
@@ -371,22 +376,21 @@ Design Statistics
 # IOs                              : 14
 
 Cell Usage :
-# BELS                             : 225
-#      AND2                        : 65
-#      AND3                        : 16
+# BELS                             : 249
+#      AND2                        : 67
+#      AND3                        : 18
 #      AND4                        : 6
 #      AND6                        : 1
 #      GND                         : 1
-#      INV                         : 86
-#      OR2                         : 30
-#      OR3                         : 8
+#      INV                         : 91
+#      OR2                         : 41
+#      OR3                         : 10
 #      OR4                         : 1
-#      VCC                         : 1
 #      XNOR2                       : 4
-#      XOR2                        : 6
+#      XOR2                        : 9
 # FlipFlops/Latches                : 23
-#      FDC                         : 15
-#      FDCE                        : 8
+#      FDC                         : 16
+#      FDCE                        : 7
 # IO Buffers                       : 14
 #      IBUF                        : 10
 #      OBUF                        : 4
@@ -394,11 +398,11 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 50.00 secs
-Total CPU time to Xst completion: 49.97 secs
+Total CPU time to Xst completion: 49.98 secs
  
 --> 
 
-Total memory usage is 277496 kilobytes
+Total memory usage is 278072 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

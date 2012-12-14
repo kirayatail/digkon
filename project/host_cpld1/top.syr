@@ -43,7 +43,7 @@ Target Device                      : XC9500XL CPLDs
 ---- Source Options
 Top Module Name                    : top
 Automatic FSM Extraction           : YES
-FSM Encoding Algorithm             : Auto
+FSM Encoding Algorithm             : Gray
 Safe Implementation                : No
 Mux Extraction                     : Yes
 Resource Sharing                   : YES
@@ -55,7 +55,7 @@ XOR Preserve                       : YES
 Equivalent register Removal        : YES
 
 ---- General Options
-Optimization Goal                  : Speed
+Optimization Goal                  : Area
 Optimization Effort                : 1
 Keep Hierarchy                     : Yes
 Netlist Hierarchy                  : As_Optimized
@@ -71,13 +71,14 @@ wysiwyg                            : NO
 
 =========================================================================
 
+Setting FSM Encoding Algorithm to : Gray
+
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/workspace/digkon/project/host_cpld1/counter.vhd" in Library work.
-Entity <counter> compiled.
-Entity <counter> (Architecture <arch>) compiled.
+Architecture arch of Entity counter is up to date.
 Compiling vhdl file "C:/workspace/digkon/project/host_cpld1/sender.vhd" in Library work.
 Architecture behavioral of Entity sender is up to date.
 Compiling verilog file "rand.vf" in library work
@@ -218,10 +219,11 @@ Synthesizing Unit <sender>.
     | Reset type         | asynchronous                                   |
     | Reset State        | s0                                             |
     | Power Up State     | s0                                             |
-    | Encoding           | automatic                                      |
+    | Encoding           | gray                                           |
     | Implementation     | automatic                                      |
     -----------------------------------------------------------------------
     Found 1-bit register for signal <transmitter>.
+    Found 1-bit xor4 for signal <parity>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 D-type flip-flop(s).
@@ -281,6 +283,8 @@ Macro Statistics
  8-bit up counter                                      : 1
 # Registers                                            : 2
  1-bit register                                        : 2
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
 
 =========================================================================
 
@@ -288,31 +292,30 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:19]> with one-hot encoding.
-------------------------------
+Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:5]> with gray encoding.
+-------------------
  State | Encoding
-------------------------------
- s0    | 0000000000000000001
- s1    | 0000000000000000010
- s2    | 0000000000000000100
- s3    | 0000000000000001000
- s4    | 0000000000000010000
- s5    | 0000000000000100000
- s6    | 0000000000001000000
- s7    | 0000000000010000000
- s8    | 0000000000100000000
- s9    | 0000000001000000000
- s10   | 0000000010000000000
- s11   | 0000000100000000000
- s12   | 0000001000000000000
- s13   | 0000010000000000000
- s14   | 0000100000000000000
- s15   | 0001000000000000000
- s16   | 0010000000000000000
- s17   | 0100000000000000000
- swait | 1000000000000000000
-------------------------------
+-------------------
+ s0    | 00000
+ s1    | 00001
+ s2    | 00011
+ s3    | 00010
+ s4    | 00110
+ s5    | 00111
+ s6    | 00101
+ s7    | 00100
+ s8    | 01100
+ s9    | 01101
+ s10   | 01111
+ s11   | 01110
+ s12   | 01010
+ s13   | 01011
+ s14   | 01001
+ s15   | 01000
+ s16   | 11000
+ s17   | 11001
+ swait | 11011
+-------------------
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -323,6 +326,8 @@ Macro Statistics
  8-bit up counter                                      : 1
 # Registers                                            : 10
  Flip-Flops                                            : 10
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
 
 =========================================================================
 
@@ -332,27 +337,6 @@ Macro Statistics
 
 Optimizing unit <top> ...
 
-Optimizing unit <sender> ...
-  implementation constraint: INIT=r	 : state_FSM_FFd9
-  implementation constraint: INIT=s	 : state_FSM_FFd19
-  implementation constraint: INIT=r	 : state_FSM_FFd10
-  implementation constraint: INIT=r	 : state_FSM_FFd11
-  implementation constraint: INIT=r	 : state_FSM_FFd12
-  implementation constraint: INIT=r	 : state_FSM_FFd13
-  implementation constraint: INIT=r	 : state_FSM_FFd14
-  implementation constraint: INIT=r	 : state_FSM_FFd15
-  implementation constraint: INIT=r	 : state_FSM_FFd16
-  implementation constraint: INIT=r	 : state_FSM_FFd17
-  implementation constraint: INIT=r	 : state_FSM_FFd18
-  implementation constraint: INIT=r	 : state_FSM_FFd1
-  implementation constraint: INIT=r	 : state_FSM_FFd2
-  implementation constraint: INIT=r	 : state_FSM_FFd3
-  implementation constraint: INIT=r	 : state_FSM_FFd4
-  implementation constraint: INIT=r	 : state_FSM_FFd5
-  implementation constraint: INIT=r	 : state_FSM_FFd6
-  implementation constraint: INIT=r	 : state_FSM_FFd7
-  implementation constraint: INIT=r	 : state_FSM_FFd8
-
 Optimizing unit <FD4CE_MXILINX_top> ...
   implementation constraint: INIT=0	 : U0
   implementation constraint: INIT=0	 : U1
@@ -361,6 +345,13 @@ Optimizing unit <FD4CE_MXILINX_top> ...
 
 Optimizing unit <FD_MXILINX_top> ...
   implementation constraint: INIT=0	 : U0
+
+Optimizing unit <sender> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd5
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+  implementation constraint: INIT=r	 : state_FSM_FFd3
+  implementation constraint: INIT=r	 : state_FSM_FFd4
 
 Optimizing unit <FDRE_MXILINX_top_1> ...
 
@@ -394,7 +385,7 @@ Final Results
 RTL Top Level Output File Name     : top.ngr
 Top Level Output File Name         : top
 Output Format                      : NGC
-Optimization Goal                  : Speed
+Optimization Goal                  : Area
 Keep Hierarchy                     : Yes
 Target Technology                  : XC9500XL CPLDs
 Macro Preserve                     : YES
@@ -406,21 +397,21 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 55
-#      AND2                        : 18
-#      AND8                        : 1
-#      GND                         : 5
-#      INV                         : 11
-#      OR2                         : 9
+# BELS                             : 119
+#      AND2                        : 38
+#      AND3                        : 5
+#      AND4                        : 1
+#      GND                         : 4
+#      INV                         : 36
+#      OR2                         : 22
 #      OR3                         : 1
-#      OR4                         : 2
 #      VCC                         : 1
-#      XOR2                        : 7
-# FlipFlops/Latches                : 37
-#      FDC                         : 27
+#      XOR2                        : 11
+# FlipFlops/Latches                : 23
+#      FDC                         : 14
 #      FDCE                        : 4
 #      FDCP                        : 4
-#      FDP                         : 2
+#      FDP                         : 1
 # IO Buffers                       : 11
 #      IBUF                        : 4
 #      OBUF                        : 7
@@ -431,11 +422,11 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.98 secs
+Total CPU time to Xst completion: 4.94 secs
  
 --> 
 
-Total memory usage is 249336 kilobytes
+Total memory usage is 245304 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

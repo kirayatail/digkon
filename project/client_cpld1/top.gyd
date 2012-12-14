@@ -15,22 +15,22 @@ xmt S:PIN13
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 xmt_OBUF/xmt_OBUF_RSTF__$INT XLXN_20 XLXI_8/count<7> XLXI_8/count<6>
-		 XLXI_8/count<5> XLXI_8/count<1> XLXI_8/count<0> XLXN_4<3>/XLXN_4<3>_RSTF
-		 XLXI_2/state_FSM_FFd5 XLXI_2/state_FSM_FFd4 XLXI_2/state_FSM_FFd3 XLXI_2/state_FSM_FFd2
-		 XLXI_1/state_FSM_FFd2 XLXI_1/state_FSM_FFd1 XLXI_1/sendcount<2> XLXI_1/sendcount<1>
-		 XLXI_1/sendcount<0> XLXN_4<3>
-PARTITION FB2_1 XLXN_45 XLXI_2/state_FSM_FFd9 XLXI_2/state_FSM_FFd8 XLXI_2/state_FSM_FFd7
-		 XLXI_2/state_FSM_FFd6 XLXI_2/state_FSM_FFd17 XLXI_2/state_FSM_FFd16 XLXI_2/state_FSM_FFd15
-		 XLXI_2/state_FSM_FFd14 XLXI_2/state_FSM_FFd13 XLXI_2/state_FSM_FFd12 XLXI_2/state_FSM_FFd11
-		 XLXI_2/state_FSM_FFd10 XLXN_4<1> XLXN_4<0> XLXI_2/state_FSM_FFd19
-		 volt_OBUF XLXI_2/state_FSM_FFd18
-PARTITION FB3_3 XLXI_4/state_FSM_FFd19 XLXN_2 XLXI_4/state_FSM_FFd8 EXP6_
-		 EXP7_ xmt_OBUF XLXI_4/state_FSM_FFd6 XLXI_4/state_FSM_FFd5
-		 XLXI_4/state_FSM_FFd4 XLXI_4/state_FSM_FFd3 XLXI_4/state_FSM_FFd2 XLXI_4/state_FSM_FFd18
-		 XLXI_4/state_FSM_FFd16 XLXI_4/state_FSM_FFd14 XLXI_4/state_FSM_FFd12 XLXI_4/state_FSM_FFd10
+PARTITION FB1_1 XLXI_2/state_FSM_FFd2 EXP6_ EXP7_ XLXN_4<3>
 		
-PARTITION FB4_9 XLXI_8/count<4> XLXI_8/count<3> XLXI_8/count<2> XLXI_4/state_FSM_FFd9
-		 XLXI_4/state_FSM_FFd7 XLXI_4/state_FSM_FFd17 XLXI_4/state_FSM_FFd15 XLXI_4/state_FSM_FFd13
-		 XLXI_4/state_FSM_FFd11 XLXN_4<2>
+PARTITION FB1_6 XLXN_4<2> XLXN_4<1> EXP8_ XLXI_2/state_FSM_FFd4
+		 EXP9_ XLXI_2/state_FSM_FFd5 EXP10_ EXP11_
+		 EXP12_ XLXI_2/state_FSM_FFd1 EXP13_ EXP14_
+		 EXP15_
+PARTITION FB2_1 EXP16_
+PARTITION FB2_6 XLXN_20 XLXI_8/count<7> XLXI_8/count<6> XLXI_8/count<5>
+		 XLXI_8/count<4> XLXI_8/count<3> XLXI_8/count<2> XLXI_8/count<1>
+		 XLXN_5<1>/XLXN_5<1>_D XLXN_5<0>/XLXN_5<0>_D XLXN_4<0> volt_OBUF
+		 XLXI_2/state_FSM_FFd3
+PARTITION FB3_1 XLXI_4/state_FSM_FFd1
+PARTITION FB3_3 xmt_OBUF/xmt_OBUF_RSTF__$INT XLXI_8/count<0> XLXN_4<3>/XLXN_4<3>_RSTF EXP17_
+		 EXP18_ xmt_OBUF EXP19_ XLXI_1/state_FSM_FFd2
+		 XLXI_1/sendcount<2> XLXI_1/sendcount<1> XLXI_1/sendcount<0> XLXI_4/state_FSM_FFd3
+		 XLXI_4/state_FSM_FFd2 XLXI_4/state_FSM_FFd4 XLXI_1/state_FSM_FFd1 XLXI_4/state_FSM_FFd5
+		
+PARTITION FB4_17 XLXN_5<3>/XLXN_5<3>_D XLXN_5<2>/XLXN_5<2>_D
 
