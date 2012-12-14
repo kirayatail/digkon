@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: top.prj
 
@@ -78,8 +78,7 @@ Setting FSM Encoding Algorithm to : OPT
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" in Library work.
-Entity <ctrl> compiled.
-Entity <ctrl> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity ctrl is up to date.
 Compiling vhdl file "C:/workspace/digkon/project/host_cpld2/receiver.vhd" in Library work.
 Architecture behavioral of Entity receiver is up to date.
 Compiling vhdl file "C:/workspace/digkon/project/host_cpld2/timer.vhd" in Library work.
@@ -159,10 +158,10 @@ Synthesizing Unit <ctrl>.
     Related source file is "C:/workspace/digkon/project/host_cpld2/ctrl.vhd".
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 7                                              |
-    | Transitions        | 16                                             |
+    | States             | 5                                              |
+    | Transitions        | 12                                             |
     | Inputs             | 7                                              |
-    | Outputs            | 11                                             |
+    | Outputs            | 8                                              |
     | Clock              | clk                       (rising_edge)        |
     | Reset              | reset                     (positive)           |
     | Reset type         | asynchronous                                   |
@@ -294,9 +293,7 @@ Optimizing FSM <XLXI_1/state/FSM> on signal <state[1:3]> with compact encoding.
  s1    | 100
  s2    | 010
  s3    | 110
- s4    | 111
- s5    | 011
- s6    | 001
+ s4    | 011
 -------------------
 
 =========================================================================
@@ -374,15 +371,16 @@ Design Statistics
 # IOs                              : 14
 
 Cell Usage :
-# BELS                             : 244
-#      AND2                        : 74
-#      AND3                        : 14
-#      AND4                        : 7
+# BELS                             : 225
+#      AND2                        : 65
+#      AND3                        : 16
+#      AND4                        : 6
 #      AND6                        : 1
 #      GND                         : 1
-#      INV                         : 90
-#      OR2                         : 38
+#      INV                         : 86
+#      OR2                         : 30
 #      OR3                         : 8
+#      OR4                         : 1
 #      VCC                         : 1
 #      XNOR2                       : 4
 #      XOR2                        : 6
@@ -396,11 +394,11 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 50.00 secs
-Total CPU time to Xst completion: 50.12 secs
+Total CPU time to Xst completion: 49.97 secs
  
 --> 
 
-Total memory usage is 281556 kilobytes
+Total memory usage is 277496 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

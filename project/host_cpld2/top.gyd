@@ -20,16 +20,16 @@ okLmp S:PIN3
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 XLXI_12/state_FSM_FFd3 XLXN_83<1> XLXN_83<0> XLXN_83<2>
-		 XLXI_12/state_FSM_FFd1 okLmp_OBUF XLXI_1/alarm larm_OBUF
-		 XLXI_12/state_FSM_FFd5 XLXI_12/state_FSM_FFd4 XLXI_12/state_FSM_FFd2 XLXI_9/timer<5>
-		 XLXI_1/count<1> XLXI_9/timer<4> XLXI_9/timer<3> XLXI_1/count<0>
-		 XLXI_1/state_FSM_FFd3 XLXI_1/state_FSM_FFd2
+PARTITION FB1_1 XLXI_9/timer<4> XLXI_1/count<0> XLXI_9/timer<3> XLXI_9/timer<2>
+		 XLXN_83<0> okLmp_OBUF XLXI_1/alarm larm_OBUF
+		 XLXI_12/state_FSM_FFd3 XLXI_1/state_FSM_FFd1 XLXI_1/count<1> XLXI_12/state_FSM_FFd5
+		 XLXI_9/timer<5> XLXI_12/state_FSM_FFd4 EXP6_ XLXI_12/state_FSM_FFd2
+		 EXP7_ XLXI_12/state_FSM_FFd1
 
-PARTITION FB3_1 EXP6_
-PARTITION FB3_13 EXP7_ EXP8_ XLXI_1/state_FSM_FFd1 XLXN_5
-		 XLXN_83<3>/XLXN_83<3>_RSTF__$INT XLXI_1/nextSig
+PARTITION FB3_1 XLXI_1/state_FSM_FFd3 EXP8_
+PARTITION FB3_12 XLXN_83<3>/XLXN_83<3>_RSTF__$INT EXP9_ XLXI_1/state_FSM_FFd2 EXP10_
+		 XLXN_30 EXP11_ XLXI_1/nextSig
 PARTITION FB4_5 getRand_OBUF
-PARTITION FB4_14 XLXN_61 XLXI_9/timer<0> XLXI_9/timer<2> XLXI_9/timer<1>
-		 XLXN_83<3>
+PARTITION FB4_13 XLXN_61 XLXI_9/timer<0> XLXI_9/timer<1> XLXN_83<3>
+		 XLXN_83<2> XLXN_83<1>
 

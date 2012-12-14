@@ -60,7 +60,7 @@
             <rect width="256" x="64" y="-512" height="704" />
         </blockdef>
         <blockdef name="checker">
-            <timestamp>2012-12-5T11:9:0</timestamp>
+            <timestamp>2012-12-14T12:48:12</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
             <rect width="64" x="0" y="-236" height="24" />
             <line x2="0" y1="-224" y2="-224" x1="64" />

@@ -70,6 +70,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1355411795" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1355411795">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1355411795" xil_pn:in_ck="-4063929291082818238" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1355411795">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -131,6 +132,7 @@
     </transform>
     <transform xil_pn:end_ts="1355410661" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1355410661">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1355410661" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7646533561835447007" xil_pn:start_ts="1355410661">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -189,7 +191,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="top.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1355413134" xil_pn:in_ck="154288908148" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-4971510443586489938" xil_pn:start_ts="1355413133">
+    <transform xil_pn:end_ts="1355416352" xil_pn:in_ck="154288908148" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-4971510443586489938" xil_pn:start_ts="1355416351">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>

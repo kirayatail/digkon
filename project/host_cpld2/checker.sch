@@ -6,7 +6,6 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_22(3:0)" />
         <signal name="XLXN_23(3:0)" />
         <signal name="resp(3:0)" />
         <signal name="chall(3:0)" />
@@ -14,7 +13,7 @@
         <signal name="reset" />
         <signal name="lastKey" />
         <signal name="found" />
-        <signal name="XLXN_30" />
+        <signal name="XLXN_31(3:0)" />
         <port polarity="Input" name="resp(3:0)" />
         <port polarity="Input" name="chall(3:0)" />
         <port polarity="Input" name="nextKey" />
@@ -53,11 +52,11 @@
             <blockpin signalname="nextKey" name="getNext" />
             <blockpin signalname="reset" name="reset" />
             <blockpin signalname="lastKey" name="isLast" />
-            <blockpin signalname="XLXN_22(3:0)" name="key(3:0)" />
+            <blockpin signalname="XLXN_31(3:0)" name="key(3:0)" />
         </block>
         <block symbolname="crypto" name="XLXI_15">
             <blockpin signalname="chall(3:0)" name="plain(3:0)" />
-            <blockpin signalname="XLXN_22(3:0)" name="key(3:0)" />
+            <blockpin signalname="XLXN_31(3:0)" name="key(3:0)" />
             <blockpin signalname="XLXN_23(3:0)" name="enc(3:0)" />
         </block>
         <block symbolname="equals" name="XLXI_17">
@@ -69,9 +68,6 @@
     <sheet sheetnum="1" width="3520" height="2720">
         <instance x="848" y="1312" name="XLXI_12" orien="R0">
         </instance>
-        <branch name="XLXN_22(3:0)">
-            <wire x2="1376" y1="1280" y2="1280" x1="1232" />
-        </branch>
         <branch name="XLXN_23(3:0)">
             <wire x2="1824" y1="1216" y2="1216" x1="1760" />
         </branch>
@@ -110,5 +106,8 @@
         <iomarker fontsize="28" x="640" y="1360" name="resp(3:0)" orien="R180" />
         <instance x="1824" y="1312" name="XLXI_17" orien="R0">
         </instance>
+        <branch name="XLXN_31(3:0)">
+            <wire x2="1376" y1="1280" y2="1280" x1="1232" />
+        </branch>
     </sheet>
 </drawing>

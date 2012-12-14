@@ -7,36 +7,34 @@
 </td></tr><tr><td>
 </td></tr><tr><td>
 </td></tr><tr><td>
-</td></tr><tr><td>
-</td></tr><tr><td>
-FTCPE_XLXI_1/count0: FTCPE port map (XLXI_1/count(0),XLXI_1/count_T(0),clk,'0',rst);
+FTCPE_XLXI_1/count0: FTCPE port map (XLXI_1/count(0),XLXI_1/count_T(0),clk,'0',NOT rst);
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(0) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(2) AND XLXI_1/count(3) AND XLXI_1/count(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(5) AND XLXI_1/count(6) AND XLXI_1/count(7));
 </td></tr><tr><td>
-FTCPE_XLXI_1/count1: FTCPE port map (XLXI_1/count(1),XLXI_1/count(0),clk,rst,'0');
+FTCPE_XLXI_1/count1: FTCPE port map (XLXI_1/count(1),XLXI_1/count(0),clk,NOT rst,'0');
 </td></tr><tr><td>
-FTCPE_XLXI_1/count2: FTCPE port map (XLXI_1/count(2),XLXI_1/count_T(2),clk,rst,'0');
+FTCPE_XLXI_1/count2: FTCPE port map (XLXI_1/count(2),XLXI_1/count_T(2),clk,NOT rst,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(2) <= (XLXI_1/count(0) AND XLXI_1/count(1));
 </td></tr><tr><td>
-FTCPE_XLXI_1/count3: FTCPE port map (XLXI_1/count(3),XLXI_1/count_T(3),clk,rst,'0');
+FTCPE_XLXI_1/count3: FTCPE port map (XLXI_1/count(3),XLXI_1/count_T(3),clk,NOT rst,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(3) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(2));
 </td></tr><tr><td>
-FTCPE_XLXI_1/count4: FTCPE port map (XLXI_1/count(4),XLXI_1/count_T(4),clk,rst,'0');
+FTCPE_XLXI_1/count4: FTCPE port map (XLXI_1/count(4),XLXI_1/count_T(4),clk,NOT rst,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(4) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(2) AND XLXI_1/count(3));
 </td></tr><tr><td>
-FTCPE_XLXI_1/count5: FTCPE port map (XLXI_1/count(5),XLXI_1/count_T(5),clk,rst,'0');
+FTCPE_XLXI_1/count5: FTCPE port map (XLXI_1/count(5),XLXI_1/count_T(5),clk,NOT rst,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(5) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(2) AND XLXI_1/count(3) AND XLXI_1/count(4));
 </td></tr><tr><td>
-FTCPE_XLXI_1/count6: FTCPE port map (XLXI_1/count(6),XLXI_1/count_T(6),clk,rst,'0');
+FTCPE_XLXI_1/count6: FTCPE port map (XLXI_1/count(6),XLXI_1/count_T(6),clk,NOT rst,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(6) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(2) AND XLXI_1/count(3) AND XLXI_1/count(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(5));
 </td></tr><tr><td>
-FTCPE_XLXI_1/count7: FTCPE port map (XLXI_1/count(7),XLXI_1/count_T(7),clk,rst,'0');
+FTCPE_XLXI_1/count7: FTCPE port map (XLXI_1/count(7),XLXI_1/count_T(7),clk,NOT rst,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_1/count_T(7) <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(2) AND XLXI_1/count(3) AND XLXI_1/count(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(5) AND XLXI_1/count(6));
@@ -97,7 +95,7 @@ FDCPE_data2: FDCPE port map (data(2),XLXI_3/XLXN_68,clk,NOT rst,'0',getRand);
 </td></tr><tr><td>
 FDCPE_data3: FDCPE port map (data(3),XLXI_3/XLXN_69,clk,NOT rst,'0',getRand);
 </td></tr><tr><td>
-FDCPE_lowClk: FDCPE port map (lowClk,lowClk_D,clk,rst,'0');
+FDCPE_lowClk: FDCPE port map (lowClk,lowClk_D,clk,NOT rst,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lowClk_D <= (XLXI_1/count(0) AND XLXI_1/count(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(2) AND XLXI_1/count(3) AND XLXI_1/count(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_1/count(5) AND XLXI_1/count(6) AND XLXI_1/count(7));
@@ -113,11 +111,11 @@ FDCPE_xmt: FDCPE port map (xmt,xmt_D,lowClk,NOT sendEnable,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_2/state_FSM_FFd15)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_2/state_FSM_FFd17)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_2/state_FSM_FFd9)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP6_.EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data(1) AND XLXI_2/state_FSM_FFd5)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data(0) AND XLXI_2/state_FSM_FFd6)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data(2) AND XLXI_2/state_FSM_FFd4)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data(3) AND XLXI_2/state_FSM_FFd3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (data(3) AND XLXI_2/state_FSM_FFd3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sendDone AND xmt));
 </td></tr><tr><td>
 Register Legend:
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 

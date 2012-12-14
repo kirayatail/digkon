@@ -1,78 +1,78 @@
 MDF Database:  version 1.0
 MDF_INFO | top | XC9572XL-5-PC44
 MACROCELL | 2 | 10 | data_0_OBUF
-ATTRIBUTES | 8815442 | 0
+ATTRIBUTES | 8823618 | 0
 OUTPUTMC | 1 | 2 | 8
-INPUTS | 3 | XLXI_3/XLXN_66  | rst  | getRand
+INPUTS | 2 | XLXI_3/XLXN_66  | getRand
 INPUTMC | 1 | 0 | 9
-INPUTP | 2 | 92 | 63
+INPUTP | 1 | 63
 EQ | 4 | 
    data<0>.D = XLXI_3/XLXN_66;
    data<0>.CLK = clk;	// GCK
-   data<0>.AR = !rst;
+   !data<0>.AR = rst;	// GSR
    data<0>.CE = getRand;
-GLOBALS | 1 | 2 | clk
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 2 | 13 | data_1_OBUF
-ATTRIBUTES | 8815442 | 0
+ATTRIBUTES | 8823618 | 0
 OUTPUTMC | 1 | 2 | 6
-INPUTS | 3 | XLXI_3/XLXN_67  | rst  | getRand
+INPUTS | 2 | XLXI_3/XLXN_67  | getRand
 INPUTMC | 1 | 0 | 8
-INPUTP | 2 | 92 | 63
+INPUTP | 1 | 63
 EQ | 4 | 
    data<1>.D = XLXI_3/XLXN_67;
    data<1>.CLK = clk;	// GCK
-   data<1>.AR = !rst;
+   !data<1>.AR = rst;	// GSR
    data<1>.CE = getRand;
-GLOBALS | 1 | 2 | clk
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 2 | 14 | data_2_OBUF
-ATTRIBUTES | 8815442 | 0
+ATTRIBUTES | 8823618 | 0
 OUTPUTMC | 1 | 2 | 8
-INPUTS | 3 | XLXI_3/XLXN_68  | rst  | getRand
+INPUTS | 2 | XLXI_3/XLXN_68  | getRand
 INPUTMC | 1 | 0 | 7
-INPUTP | 2 | 92 | 63
+INPUTP | 1 | 63
 EQ | 4 | 
    data<2>.D = XLXI_3/XLXN_68;
    data<2>.CLK = clk;	// GCK
-   data<2>.AR = !rst;
+   !data<2>.AR = rst;	// GSR
    data<2>.CE = getRand;
-GLOBALS | 1 | 2 | clk
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 2 | 16 | data_3_OBUF
-ATTRIBUTES | 8815442 | 0
+ATTRIBUTES | 8823618 | 0
 OUTPUTMC | 1 | 2 | 8
-INPUTS | 3 | XLXI_3/XLXN_69  | rst  | getRand
+INPUTS | 2 | XLXI_3/XLXN_69  | getRand
 INPUTMC | 1 | 0 | 6
-INPUTP | 2 | 92 | 63
+INPUTP | 1 | 63
 EQ | 4 | 
    data<3>.D = XLXI_3/XLXN_69;
    data<3>.CLK = clk;	// GCK
-   data<3>.AR = !rst;
+   !data<3>.AR = rst;	// GSR
    data<3>.CE = getRand;
-GLOBALS | 1 | 2 | clk
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 2 | 8 | lowClk_OBUF
-ATTRIBUTES | 8815378 | 0
+ATTRIBUTES | 8823554 | 0
 OUTPUTMC | 20 | 3 | 1 | 2 | 7 | 3 | 16 | 3 | 14 | 3 | 12 | 3 | 10 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 11 | 3 | 17 | 3 | 15 | 3 | 13 | 3 | 11 | 3 | 9 | 3 | 8 | 1 | 12 | 3 | 7
-INPUTS | 15 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | XLXI_1/count<4>  | XLXI_1/count<5>  | XLXI_1/count<6>  | XLXI_1/count<7>  | rst  | data<0>  | XLXI_2/state_FSM_FFd6  | data<2>  | XLXI_2/state_FSM_FFd4  | data<3>  | XLXI_2/state_FSM_FFd3
-INPUTMC | 14 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10 | 2 | 10 | 1 | 14 | 2 | 14 | 1 | 16 | 2 | 16 | 1 | 17
-INPUTP | 1 | 92
+INPUTS | 16 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | XLXI_1/count<4>  | XLXI_1/count<5>  | XLXI_1/count<6>  | XLXI_1/count<7>  | data<0>  | XLXI_2/state_FSM_FFd6  | data<2>  | XLXI_2/state_FSM_FFd4  | data<3>  | XLXI_2/state_FSM_FFd3  | sendDone  | xmt
+INPUTMC | 16 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10 | 2 | 10 | 1 | 14 | 2 | 14 | 1 | 16 | 2 | 16 | 1 | 17 | 3 | 1 | 2 | 7
 EXPORTS | 1 | 2 | 7
-EQ | 8 | 
+EQ | 9 | 
    lowClk.D = XLXI_1/count<0> & XLXI_1/count<1> & 
 	XLXI_1/count<2> & XLXI_1/count<3> & XLXI_1/count<4> & 
 	XLXI_1/count<5> & XLXI_1/count<6> & XLXI_1/count<7>;
    lowClk.CLK = clk;	// GCK
-   lowClk.AR = rst;
+   !lowClk.AR = rst;	// GSR
     lowClk_OBUF.EXP  =  data<0> & XLXI_2/state_FSM_FFd6
 	# data<2> & XLXI_2/state_FSM_FFd4
 	# data<3> & XLXI_2/state_FSM_FFd3
-GLOBALS | 1 | 2 | clk
+	# sendDone & xmt
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 3 | 1 | sendDone_OBUF
 ATTRIBUTES | 8782642 | 0
-OUTPUTMC | 2 | 3 | 1 | 2 | 5
+OUTPUTMC | 2 | 3 | 1 | 2 | 8
 INPUTS | 4 | sendDone  | XLXI_2/state_FSM_FFd2  | lowClk  | sendEnable
 INPUTMC | 3 | 3 | 1 | 3 | 8 | 2 | 8
 INPUTP | 1 | 59
@@ -83,12 +83,12 @@ EQ | 3 |
 
 MACROCELL | 2 | 7 | xmt_OBUF
 ATTRIBUTES | 8782642 | 0
-OUTPUTMC | 1 | 2 | 5
-INPUTS | 7 | XLXI_2/state_FSM_FFd19  | XLXI_2/state_FSM_FFd11  | XLXI_2/state_FSM_FFd7  | EXP7_.EXP  | lowClk_OBUF.EXP  | lowClk  | sendEnable
+OUTPUTMC | 1 | 2 | 8
+INPUTS | 7 | XLXI_2/state_FSM_FFd19  | XLXI_2/state_FSM_FFd11  | XLXI_2/state_FSM_FFd7  | EXP6_.EXP  | lowClk_OBUF.EXP  | lowClk  | sendEnable
 INPUTMC | 6 | 3 | 7 | 3 | 16 | 1 | 13 | 2 | 6 | 2 | 8 | 2 | 8
 INPUTP | 1 | 59
 IMPORTS | 2 | 2 | 6 | 2 | 8
-EQ | 17 | 
+EQ | 16 | 
    xmt.D = XLXI_2/state_FSM_FFd11
 	# XLXI_2/state_FSM_FFd7
 	# XLXI_2/state_FSM_FFd19
@@ -98,105 +98,97 @@ EQ | 17 |
 	# XLXI_2/state_FSM_FFd17
 	# XLXI_2/state_FSM_FFd9
 	# data<1> & XLXI_2/state_FSM_FFd5
-;Imported pterms FB3_6
-	# sendDone & xmt
 ;Imported pterms FB3_9
 	# data<0> & XLXI_2/state_FSM_FFd6
 	# data<2> & XLXI_2/state_FSM_FFd4
-	# data<3> & XLXI_2/state_FSM_FFd3;
+	# data<3> & XLXI_2/state_FSM_FFd3
+	# sendDone & xmt;
    xmt.CLK = lowClk;
    xmt.AR = !sendEnable;
 
 MACROCELL | 0 | 17 | XLXI_1/count<0>
-ATTRIBUTES | 4359040 | 0
+ATTRIBUTES | 4363008 | 0
 OUTPUTMC | 9 | 2 | 8 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10
-INPUTS | 9 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | XLXI_1/count<4>  | XLXI_1/count<5>  | XLXI_1/count<6>  | XLXI_1/count<7>  | rst
+INPUTS | 8 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | XLXI_1/count<4>  | XLXI_1/count<5>  | XLXI_1/count<6>  | XLXI_1/count<7>
 INPUTMC | 8 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10
-INPUTP | 1 | 92
 EQ | 5 | 
    !XLXI_1/count<0>.T = XLXI_1/count<0> & XLXI_1/count<1> & 
 	XLXI_1/count<2> & XLXI_1/count<3> & XLXI_1/count<4> & 
 	XLXI_1/count<5> & XLXI_1/count<6> & XLXI_1/count<7>;
    XLXI_1/count<0>.CLK = clk;	// GCK
-   XLXI_1/count<0>.AP = rst;
-GLOBALS | 1 | 2 | clk
+   !XLXI_1/count<0>.AP = rst;	// GSR
+GLOBALS | 2 | 2 | clk | 1 | rst
 
 MACROCELL | 0 | 16 | XLXI_1/count<1>
-ATTRIBUTES | 4358928 | 0
+ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 8 | 2 | 8 | 0 | 17 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10
-INPUTS | 2 | XLXI_1/count<0>  | rst
+INPUTS | 1 | XLXI_1/count<0>
 INPUTMC | 1 | 0 | 17
-INPUTP | 1 | 92
 EQ | 3 | 
    XLXI_1/count<1>.T = XLXI_1/count<0>;
    XLXI_1/count<1>.CLK = clk;	// GCK
-   XLXI_1/count<1>.AR = rst;
-GLOBALS | 1 | 2 | clk
+   !XLXI_1/count<1>.AR = rst;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 0 | 15 | XLXI_1/count<2>
-ATTRIBUTES | 4358928 | 0
+ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 7 | 2 | 8 | 0 | 17 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10
-INPUTS | 3 | XLXI_1/count<0>  | XLXI_1/count<1>  | rst
+INPUTS | 2 | XLXI_1/count<0>  | XLXI_1/count<1>
 INPUTMC | 2 | 0 | 17 | 0 | 16
-INPUTP | 1 | 92
 EQ | 3 | 
    XLXI_1/count<2>.T = XLXI_1/count<0> & XLXI_1/count<1>;
    XLXI_1/count<2>.CLK = clk;	// GCK
-   XLXI_1/count<2>.AR = rst;
-GLOBALS | 1 | 2 | clk
+   !XLXI_1/count<2>.AR = rst;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 0 | 14 | XLXI_1/count<3>
-ATTRIBUTES | 4358928 | 0
+ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 6 | 2 | 8 | 0 | 17 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10
-INPUTS | 4 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | rst
+INPUTS | 3 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>
 INPUTMC | 3 | 0 | 17 | 0 | 16 | 0 | 15
-INPUTP | 1 | 92
 EQ | 4 | 
    XLXI_1/count<3>.T = XLXI_1/count<0> & XLXI_1/count<1> & 
 	XLXI_1/count<2>;
    XLXI_1/count<3>.CLK = clk;	// GCK
-   XLXI_1/count<3>.AR = rst;
-GLOBALS | 1 | 2 | clk
+   !XLXI_1/count<3>.AR = rst;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 0 | 13 | XLXI_1/count<4>
-ATTRIBUTES | 4358928 | 0
+ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 5 | 2 | 8 | 0 | 17 | 0 | 12 | 0 | 11 | 0 | 10
-INPUTS | 5 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | rst
+INPUTS | 4 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>
 INPUTMC | 4 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14
-INPUTP | 1 | 92
 EQ | 4 | 
    XLXI_1/count<4>.T = XLXI_1/count<0> & XLXI_1/count<1> & 
 	XLXI_1/count<2> & XLXI_1/count<3>;
    XLXI_1/count<4>.CLK = clk;	// GCK
-   XLXI_1/count<4>.AR = rst;
-GLOBALS | 1 | 2 | clk
+   !XLXI_1/count<4>.AR = rst;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 0 | 12 | XLXI_1/count<5>
-ATTRIBUTES | 4358928 | 0
+ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 4 | 2 | 8 | 0 | 17 | 0 | 11 | 0 | 10
-INPUTS | 6 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | XLXI_1/count<4>  | rst
+INPUTS | 5 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | XLXI_1/count<4>
 INPUTMC | 5 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 13
-INPUTP | 1 | 92
 EQ | 4 | 
    XLXI_1/count<5>.T = XLXI_1/count<0> & XLXI_1/count<1> & 
 	XLXI_1/count<2> & XLXI_1/count<3> & XLXI_1/count<4>;
    XLXI_1/count<5>.CLK = clk;	// GCK
-   XLXI_1/count<5>.AR = rst;
-GLOBALS | 1 | 2 | clk
+   !XLXI_1/count<5>.AR = rst;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 0 | 11 | XLXI_1/count<6>
-ATTRIBUTES | 4358928 | 0
+ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 3 | 2 | 8 | 0 | 17 | 0 | 10
-INPUTS | 7 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | XLXI_1/count<4>  | XLXI_1/count<5>  | rst
+INPUTS | 6 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | XLXI_1/count<4>  | XLXI_1/count<5>
 INPUTMC | 6 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12
-INPUTP | 1 | 92
 EQ | 5 | 
    XLXI_1/count<6>.T = XLXI_1/count<0> & XLXI_1/count<1> & 
 	XLXI_1/count<2> & XLXI_1/count<3> & XLXI_1/count<4> & 
 	XLXI_1/count<5>;
    XLXI_1/count<6>.CLK = clk;	// GCK
-   XLXI_1/count<6>.AR = rst;
-GLOBALS | 1 | 2 | clk
+   !XLXI_1/count<6>.AR = rst;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 3 | 16 | XLXI_2/state_FSM_FFd11
 ATTRIBUTES | 8520496 | 0
@@ -309,18 +301,17 @@ EQ | 3 |
    XLXI_2/state_FSM_FFd9.AR = !sendEnable;
 
 MACROCELL | 0 | 10 | XLXI_1/count<7>
-ATTRIBUTES | 4358928 | 0
+ATTRIBUTES | 4367104 | 0
 OUTPUTMC | 2 | 2 | 8 | 0 | 17
-INPUTS | 8 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | XLXI_1/count<4>  | XLXI_1/count<5>  | XLXI_1/count<6>  | rst
+INPUTS | 7 | XLXI_1/count<0>  | XLXI_1/count<1>  | XLXI_1/count<2>  | XLXI_1/count<3>  | XLXI_1/count<4>  | XLXI_1/count<5>  | XLXI_1/count<6>
 INPUTMC | 7 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11
-INPUTP | 1 | 92
 EQ | 5 | 
    XLXI_1/count<7>.T = XLXI_1/count<0> & XLXI_1/count<1> & 
 	XLXI_1/count<2> & XLXI_1/count<3> & XLXI_1/count<4> & 
 	XLXI_1/count<5> & XLXI_1/count<6>;
    XLXI_1/count<7>.CLK = clk;	// GCK
-   XLXI_1/count<7>.AR = rst;
-GLOBALS | 1 | 2 | clk
+   !XLXI_1/count<7>.AR = rst;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | rst
 
 MACROCELL | 3 | 17 | XLXI_2/state_FSM_FFd10
 ATTRIBUTES | 8520496 | 0
@@ -454,34 +445,22 @@ EQ | 2 |
    XLXI_3/XLXN_69.CLK = clk;	// GCK
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 2 | 5 | EXP6_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 6
-INPUTS | 2 | sendDone  | xmt
-INPUTMC | 2 | 3 | 1 | 2 | 7
-EXPORTS | 1 | 2 | 6
-EQ | 1 | 
-       EXP6_.EXP  =  sendDone & xmt
-
-MACROCELL | 2 | 6 | EXP7_
+MACROCELL | 2 | 6 | EXP6_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 2 | 7
-INPUTS | 7 | XLXI_2/state_FSM_FFd13  | XLXI_2/state_FSM_FFd15  | XLXI_2/state_FSM_FFd17  | XLXI_2/state_FSM_FFd9  | data<1>  | XLXI_2/state_FSM_FFd5  | EXP6_.EXP
-INPUTMC | 7 | 3 | 14 | 3 | 12 | 3 | 10 | 1 | 11 | 2 | 13 | 1 | 15 | 2 | 5
+INPUTS | 6 | XLXI_2/state_FSM_FFd13  | XLXI_2/state_FSM_FFd15  | XLXI_2/state_FSM_FFd17  | XLXI_2/state_FSM_FFd9  | data<1>  | XLXI_2/state_FSM_FFd5
+INPUTMC | 6 | 3 | 14 | 3 | 12 | 3 | 10 | 1 | 11 | 2 | 13 | 1 | 15
 EXPORTS | 1 | 2 | 7
-IMPORTS | 1 | 2 | 5
-EQ | 7 | 
-       EXP7_.EXP  =  XLXI_2/state_FSM_FFd13
+EQ | 5 | 
+       EXP6_.EXP  =  XLXI_2/state_FSM_FFd13
 	# XLXI_2/state_FSM_FFd15
 	# XLXI_2/state_FSM_FFd17
 	# XLXI_2/state_FSM_FFd9
 	# data<1> & XLXI_2/state_FSM_FFd5
-;Imported pterms FB3_6
-	# sendDone & xmt
 
 PIN | getRand | 64 | 0 | N/A | 63 | 4 | 2 | 10 | 2 | 13 | 2 | 14 | 2 | 16
 PIN | clk | 4096 | 0 | N/A | 20 | 17 | 2 | 10 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 8 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6
-PIN | rst | 64 | 0 | N/A | 92 | 17 | 2 | 10 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 8 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6
+PIN | rst | 65600 | 0 | N/A | 92 | 17 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 2 | 10 | 2 | 13 | 2 | 14 | 2 | 16 | 2 | 8 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 14 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10
 PIN | sendEnable | 64 | 0 | N/A | 59 | 20 | 3 | 1 | 2 | 7 | 3 | 16 | 3 | 14 | 3 | 12 | 3 | 10 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 11 | 3 | 17 | 3 | 15 | 3 | 13 | 3 | 11 | 3 | 9 | 3 | 8 | 1 | 12 | 3 | 7
 PIN | data<0> | 536871040 | 0 | N/A | 46
 PIN | data<1> | 536871040 | 0 | N/A | 49

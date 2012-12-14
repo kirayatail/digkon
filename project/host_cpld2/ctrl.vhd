@@ -33,7 +33,7 @@ entity ctrl is
 end ctrl;
 
 architecture Behavioral of ctrl is
-	type state_type is (s0,s1,s2,s3,s4,s5,s6);
+	type state_type is (s0,s1,s2,s3,s4);
 	signal state : state_type;
 	signal alarm : STD_LOGIC;
 	signal count : STD_LOGIC_VECTOR(1 downto 0);
@@ -73,18 +73,18 @@ begin
 				when s4 =>				-- Check state
 					
 					if (checkOK = '1' or lastKey = '1') then
-						state <= s5;
+						state <= s0;
 					elsif(nextSig = '0') then
 						nextSig <= '1';
 					else
 						nextSig <= '0';
 					end if;
 				
-				when s5 =>				-- Wait for trigger release
-					if (trig = '0') then state <= s6; end if;
+--				when s5 =>				-- Wait for trigger release
+--					if (trig = '0') then state <= s6; end if;
 					
-				when s6 =>				-- Delay until ready for next trigger
-					if (timeout = '1') then state <= s0; end if;
+--				when s6 =>				-- Delay until ready for next trigger
+--					if (timeout = '1') then state <= s0; end if;
 					
 			end case;
 		end if;
@@ -92,7 +92,7 @@ begin
 	
 	rand <= '1' when (state = s1) else '0';
 	send <= '1' when (state = s2) else '0';
-	timerStart <= '1' when (state = s2 OR state = s5) else '0';
+	timerStart <= '1' when (state = s2) else '0';
 	
 	nextKey <= nextSig when (state = s4) else '0';
 	
@@ -100,9 +100,9 @@ begin
 	
 	checkRst <= '1' when (state = s2) else '0';
 	
-	larmOut <= '1' when (state = s0 AND alarm = '1') else '0';
+	larmOut <= '0' when (state = s0 AND alarm = '1') else '1';
 	
-	okOut <= '1' when (state = s0 AND alarm = '0') else '0';
+	okOut <= '0' when (state = s0 AND alarm = '0') else '1';
 	
 end Behavioral;
 
