@@ -21,10 +21,14 @@
 </td></tr><tr><td>
 </td></tr><tr><td>
 </td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
 FTCPE_LastKey: FTCPE port map (LastKey,'1',LastKey_C,LastKey_CLR,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LastKey_C <= (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LastKey_C <= (NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/nextSig);
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LastKey_CLR <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LastKey_CLR <= (NOT ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2));
 </td></tr><tr><td>
 FDCPE_RcvData0: FDCPE port map (RcvData(0),rcv,lowClk,NOT rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT,'0',RcvData_CE(0));
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RcvData_CE(0) <= (NOT rcv1/state(1) AND NOT rcv1/state(4) AND rcv1/state(0) AND 
@@ -42,154 +46,201 @@ FDCPE_RcvData3: FDCPE port map (RcvData(3),rcv,lowClk,NOT rcv1/data_0_or0000/rcv
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RcvData_CE(3) <= (NOT rcv1/state(1) AND rcv1/state(4) AND NOT rcv1/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rcv1/state(2) AND NOT rcv1/state(3));
 </td></tr><tr><td>
-FTCPE_ctrl1/alarm: FTCPE port map (ctrl1/alarm,ctrl1/alarm_T,clk,NOT rst,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/alarm_T <= ((ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND ctrl1/count(1) AND NOT ctrl1/alarm AND rcv1/state(0) AND 
+</td></tr><tr><td>
+TimerStart/TimerStart_D2 <= ((ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2)));
+</td></tr><tr><td>
+FDCPE_ctrl1/alarm: FDCPE port map (ctrl1/alarm,ctrl1/alarm_D,clk,NOT rst,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/alarm_D <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND RcvData(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND NOT data(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	data(1) AND RcvData(1) AND LastKey)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT data(1) AND NOT RcvData(1) AND LastKey)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	RcvData(2) AND LastKey AND NOT data(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT RcvData(2) AND LastKey AND data(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP10_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND NOT RcvData(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND data(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND RcvData(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND data(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND NOT RcvData(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND NOT data(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND RcvData(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND NOT data(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND NOT RcvData(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND data(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND ctrl1/count(1) AND NOT rcv1/state(1) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND ctrl1/count(1) AND NOT rcv1/state(4) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND ctrl1/count(1) AND rcv1/state(0) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND ctrl1/count(1) AND rcv1/state(2) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND ctrl1/count(1) AND rcv1/state(3) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1)));
+</td></tr><tr><td>
+FTCPE_ctrl1/count0: FTCPE port map (ctrl1/count(0),ctrl1/count_T(0),clk,'0','0',rst);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/count_T(0) <= ((ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(0) AND NOT rcv1/state(4) AND tim1/timer(5) AND tim1/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(0) AND rcv1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(1) AND NOT rcv1/state(4) AND tim1/timer(5) AND tim1/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(0) AND rcv1/state(2) AND tim1/timer(5) AND tim1/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(0) AND rcv1/state(3) AND tim1/timer(5) AND tim1/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(1) AND rcv1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(1) AND rcv1/state(2) AND tim1/timer(5) AND tim1/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(1) AND rcv1/state(3) AND tim1/timer(5) AND tim1/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND NOT ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(0) AND NOT rcv1/state(1) AND tim1/timer(5) AND tim1/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(1) AND NOT rcv1/state(1) AND tim1/timer(5) AND tim1/timer(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1)));
+</td></tr><tr><td>
+FTCPE_ctrl1/count1: FTCPE port map (ctrl1/count(1),ctrl1/count_T(1),clk,'0','0',rst);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/count_T(1) <= ((ctrl1/nextSig.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND NOT ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND NOT ctrl1/count(1) AND NOT rcv1/state(1) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND NOT ctrl1/count(1) AND NOT rcv1/state(4) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND NOT ctrl1/count(1) AND rcv1/state(0) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND NOT ctrl1/count(1) AND rcv1/state(2) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(1)));
+</td></tr><tr><td>
+FTCPE_ctrl1/nextSig: FTCPE port map (ctrl1/nextSig,ctrl1/nextSig_T,clk,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/nextSig_T <= ((rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND RcvData(2) AND NOT LastKey AND data(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND NOT RcvData(2) AND NOT LastKey AND NOT data(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND RcvData(3) AND NOT LastKey AND NOT data(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND NOT RcvData(3) AND NOT LastKey AND data(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND data(1) AND RcvData(1) AND NOT LastKey)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND NOT data(1) AND NOT RcvData(1) AND NOT LastKey)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND RcvData(0) AND NOT LastKey AND NOT data(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND NOT RcvData(0) AND NOT LastKey AND data(0)));
+</td></tr><tr><td>
+FDCPE_ctrl1/state0: FDCPE port map (ctrl1/state(0),ctrl1/state_D(0),clk,NOT rst,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/state_D(0) <= ((EXP13_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sendDone AND NOT ctrl1/state(0) AND ctrl1/state(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND NOT ctrl1/state(1) AND NOT ctrl1/state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND data(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	RcvData(1) AND NOT LastKey)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND NOT data(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT RcvData(1) AND NOT LastKey)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND RcvData(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND NOT data(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND NOT RcvData(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND data(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND RcvData(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND data(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND RcvData(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND NOT data(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND NOT RcvData(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT LastKey AND data(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (trig AND ctrl1/state(0) AND ctrl1/state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (trig AND NOT ctrl1/state(1) AND NOT ctrl1/state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND NOT ctrl1/state(2) AND rcv1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND NOT rcv1/state(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND NOT ctrl1/state(2) AND NOT ctrl1/count(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND ctrl1/count(1) AND NOT ctrl1/alarm AND rcv1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND ctrl1/count(1) AND NOT ctrl1/alarm AND rcv1/state(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND ctrl1/count(1) AND NOT rcv1/state(1) AND NOT ctrl1/alarm AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND ctrl1/count(1) AND NOT rcv1/state(4) AND NOT ctrl1/alarm AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND NOT ctrl1/state(2) AND NOT ctrl1/count(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(0) AND tim1/timer(1)));
 </td></tr><tr><td>
-FTCPE_ctrl1/count0: FTCPE port map (ctrl1/count(0),ctrl1/count_T(0),clk,'0','0',rst);
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/count_T(0) <= ((ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(0) AND rcv1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(0) AND rcv1/state(2) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(0) AND rcv1/state(3) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(2) AND ctrl1/count(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND ctrl1/state(0) AND ctrl1/count(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/count(0) AND NOT ctrl1/count(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(3) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(0) AND NOT rcv1/state(1) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/count(0) AND NOT rcv1/state(4) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/count(0) AND NOT ctrl1/count(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rcv1/state(1) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/count(0) AND NOT ctrl1/count(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rcv1/state(4) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/count(0) AND NOT ctrl1/count(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/count(0) AND NOT ctrl1/count(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(2) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1)));
-</td></tr><tr><td>
-FDCPE_ctrl1/count1: FDCPE port map (ctrl1/count(1),ctrl1/count_D(1),clk,'0','0',rst);
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/count_D(1) <= ((ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND rcv1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND rcv1/state(2) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND rcv1/state(3) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND NOT ctrl1/state(2) AND ctrl1/count(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/count(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND NOT rcv1/state(1) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(0) AND NOT rcv1/state(4) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1)));
-</td></tr><tr><td>
-FTCPE_ctrl1/nextSig: FTCPE port map (ctrl1/nextSig,ctrl1/nextSig_T,clk,'0','0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/nextSig_T <= ((rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND NOT RcvData(2) AND NOT LastKey AND NOT data(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND RcvData(3) AND NOT LastKey AND NOT data(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND NOT RcvData(3) AND NOT LastKey AND data(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND data(1) AND RcvData(1) AND NOT LastKey)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND NOT data(1) AND NOT RcvData(1) AND NOT LastKey)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND RcvData(0) AND NOT LastKey AND NOT data(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND NOT RcvData(0) AND NOT LastKey AND data(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2) AND RcvData(2) AND NOT LastKey AND data(2)));
-</td></tr><tr><td>
-FDCPE_ctrl1/state0: FDCPE port map (ctrl1/state(0),ctrl1/state_D(0),clk,NOT rst,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/state_D(0) <= ((ctrl1/state(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND trig)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND ctrl1/state(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sendDone AND ctrl1/state(1) AND NOT ctrl1/state(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND rcv1/state(1) AND rcv1/state(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rcv1/state(0) AND NOT rcv1/state(2) AND NOT rcv1/state(3)));
-</td></tr><tr><td>
 FDCPE_ctrl1/state1: FDCPE port map (ctrl1/state(1),ctrl1/state_D(1),clk,NOT rst,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/state_D(1) <= ((ctrl1/state(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND rcv1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/state_D(1) <= ((NOT ctrl1/state(0) AND NOT ctrl1/state(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT trig AND ctrl1/state(0) AND ctrl1/state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND rcv1/state(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND NOT rcv1/state(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND ctrl1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(1) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1)));
 </td></tr><tr><td>
-FDCPE_ctrl1/state2: FDCPE port map (ctrl1/state(2),ctrl1/state_D(2),clk,NOT rst,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/state_D(2) <= ((NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT RcvData(2) AND NOT LastKey AND NOT data(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	RcvData(3) AND NOT LastKey AND NOT data(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT RcvData(3) AND NOT LastKey AND data(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(1) AND rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rcv1/state(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	data(1) AND RcvData(1) AND NOT LastKey)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT data(1) AND NOT RcvData(1) AND NOT LastKey)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	RcvData(0) AND NOT LastKey AND NOT data(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT RcvData(0) AND NOT LastKey AND data(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	RcvData(2) AND NOT LastKey AND data(2)));
+FTCPE_ctrl1/state2: FTCPE port map (ctrl1/state(2),ctrl1/state_T(2),clk,NOT rst,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl1/state_T(2) <= ((ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND rcv1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND NOT rcv1/state(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(1) AND ctrl1/state(2) AND tim1/timer(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/count(1) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-getRand <= (NOT ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2));
+getRand <= (ctrl1/state(0) AND NOT ctrl1/state(1) AND NOT ctrl1/state(2));
 </td></tr><tr><td>
 </td></tr><tr><td>
-larm <= (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/alarm);
+larm <= (NOT ctrl1/state(0) AND ctrl1/alarm AND NOT ctrl1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/state(2));
 </td></tr><tr><td>
 </td></tr><tr><td>
-okLmp <= (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/alarm);
+okLmp <= NOT ((NOT ctrl1/state(0) AND NOT ctrl1/alarm AND NOT ctrl1/state(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/state(2)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT <= ((rst AND ctrl1/state(1) AND ctrl1/state(0) AND 
+rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT <= ((rst AND ctrl1/state(0) AND ctrl1/state(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ctrl1/state(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ctrl1/state(2)));
 </td></tr><tr><td>
 FDCPE_rcv1/state0: FDCPE port map (rcv1/state(0),rcv1/state_D(0),lowClk,NOT rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT,'0');
@@ -218,16 +269,16 @@ FDCPE_rcv1/state1: FDCPE port map (rcv1/state(1),rcv1/state_D(1),lowClk,NOT rcv1
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(2) AND rcv1/state(3)));
 </td></tr><tr><td>
 FDCPE_rcv1/state2: FDCPE port map (rcv1/state(2),rcv1/state_D(2),lowClk,NOT rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rcv1/state_D(2) <= ((rcv1/state(1) AND NOT rcv1/state(4) AND NOT rcv1/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rcv1/state_D(2) <= ((NOT rcv AND NOT rcv1/state(1) AND NOT rcv1/state(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(0) AND rcv1/state(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rcv1/state(1) AND NOT rcv1/state(4) AND NOT rcv1/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(2) AND rcv1/state(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rcv1/state(1) AND NOT rcv1/state(4) AND rcv1/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(2) AND rcv1/state(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rcv AND NOT rcv1/state(4) AND NOT rcv1/state(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rcv AND rcv1/state(1) AND NOT rcv1/state(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(0) AND NOT rcv1/state(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rcv AND NOT rcv1/state(1) AND NOT rcv1/state(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(0) AND rcv1/state(2)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(0) AND NOT rcv1/state(2)));
 </td></tr><tr><td>
 FDCPE_rcv1/state3: FDCPE port map (rcv1/state(3),rcv1/state_D(3),lowClk,NOT rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rcv1/state_D(3) <= ((rcv1/state(1) AND NOT rcv1/state(4) AND NOT rcv1/state(0) AND 
@@ -242,39 +293,33 @@ FDCPE_rcv1/state3: FDCPE port map (rcv1/state(3),rcv1/state_D(3),lowClk,NOT rcv1
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(2) AND rcv1/state(3)));
 </td></tr><tr><td>
 FDCPE_rcv1/state4: FDCPE port map (rcv1/state(4),rcv1/state_D(4),lowClk,NOT rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rcv1/state_D(4) <= ((rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rcv1/state_D(4) <= ((rcv1/state(1) AND NOT rcv1/state(4) AND rcv1/state(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(2) AND rcv1/state(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rcv1/state(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rcv AND NOT rcv1/state(1) AND rcv1/state(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rcv1/state(2) AND NOT rcv1/state(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rcv1/state(1) AND NOT rcv1/state(4) AND rcv1/state(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rcv1/state(2) AND rcv1/state(3)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rcv1/state(2) AND NOT rcv1/state(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-sendEnable <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
+sendEnable <= (NOT ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2));
 </td></tr><tr><td>
-FTCPE_tim1/timer0: FTCPE port map (tim1/timer(0),'1',lowClk,tim1/timer_CLR(0),'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tim1/timer_CLR(0) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
+FTCPE_tim1/timer0: FTCPE port map (tim1/timer(0),'1',lowClk,TimerStart/TimerStart_D2,'0');
 </td></tr><tr><td>
-FTCPE_tim1/timer1: FTCPE port map (tim1/timer(1),tim1/timer(0),lowClk,tim1/timer_CLR(1),'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tim1/timer_CLR(1) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
+FTCPE_tim1/timer1: FTCPE port map (tim1/timer(1),tim1/timer(0),lowClk,TimerStart/TimerStart_D2,'0');
 </td></tr><tr><td>
-FTCPE_tim1/timer2: FTCPE port map (tim1/timer(2),tim1/timer_T(2),lowClk,tim1/timer_CLR(2),'0');
+FTCPE_tim1/timer2: FTCPE port map (tim1/timer(2),tim1/timer_T(2),lowClk,TimerStart/TimerStart_D2,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tim1/timer_T(2) <= (tim1/timer(0) AND tim1/timer(1));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tim1/timer_CLR(2) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
 </td></tr><tr><td>
-FTCPE_tim1/timer3: FTCPE port map (tim1/timer(3),tim1/timer_T(3),lowClk,tim1/timer_CLR(3),'0');
+FTCPE_tim1/timer3: FTCPE port map (tim1/timer(3),tim1/timer_T(3),lowClk,TimerStart/TimerStart_D2,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tim1/timer_T(3) <= (tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tim1/timer_CLR(3) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
 </td></tr><tr><td>
-FTCPE_tim1/timer4: FTCPE port map (tim1/timer(4),tim1/timer_T(4),lowClk,tim1/timer_CLR(4),'0');
+FTCPE_tim1/timer4: FTCPE port map (tim1/timer(4),tim1/timer_T(4),lowClk,TimerStart/TimerStart_D2,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tim1/timer_T(4) <= (tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(1));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tim1/timer_CLR(4) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
 </td></tr><tr><td>
-FTCPE_tim1/timer5: FTCPE port map (tim1/timer(5),tim1/timer_T(5),lowClk,tim1/timer_CLR(5),'0');
+FTCPE_tim1/timer5: FTCPE port map (tim1/timer(5),tim1/timer_T(5),lowClk,TimerStart/TimerStart_D2,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tim1/timer_T(5) <= (tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tim1/timer(0) AND tim1/timer(1));
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tim1/timer_CLR(5) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
 </td></tr><tr><td>
 Register Legend:
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 

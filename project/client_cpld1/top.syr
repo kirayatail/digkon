@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: top.prj
 
@@ -77,16 +77,21 @@ Setting FSM Encoding Algorithm to : Gray
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/workspace/digkon/project/client_cpld1/counter.vhd" in Library work.
-Architecture arch of Entity counter is up to date.
-Compiling vhdl file "C:/workspace/digkon/project/client_cpld1/crypto.vhd" in Library work.
-Architecture behavioral of Entity crypto is up to date.
-Compiling vhdl file "C:/workspace/digkon/project/client_cpld1/ctrl.vhd" in Library work.
-Architecture behavioral of Entity ctrl is up to date.
-Compiling vhdl file "C:/workspace/digkon/project/client_cpld1/receiver.vhd" in Library work.
-Architecture behavioral of Entity receiver is up to date.
-Compiling vhdl file "C:/workspace/digkon/project/client_cpld1/sender.vhd" in Library work.
-Architecture behavioral of Entity sender is up to date.
+Compiling vhdl file "C:/Temp/digkon/project/client_cpld1/counter.vhd" in Library work.
+Entity <counter> compiled.
+Entity <counter> (Architecture <arch>) compiled.
+Compiling vhdl file "C:/Temp/digkon/project/client_cpld1/crypto.vhd" in Library work.
+Entity <crypto> compiled.
+Entity <crypto> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Temp/digkon/project/client_cpld1/ctrl.vhd" in Library work.
+Entity <ctrl> compiled.
+Entity <ctrl> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Temp/digkon/project/client_cpld1/receiver.vhd" in Library work.
+Entity <receiver> compiled.
+Entity <receiver> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Temp/digkon/project/client_cpld1/sender.vhd" in Library work.
+Entity <sender> compiled.
+Entity <sender> (Architecture <Behavioral>) compiled.
 Compiling verilog file "top.vf" in library work
 Module <top> compiled
 No errors in compilation
@@ -98,13 +103,13 @@ Analysis of file <"top.prj"> succeeded.
 =========================================================================
 Analyzing hierarchy for module <top> in library <work>.
 
-Analyzing hierarchy for entity <ctrl> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <ctrl> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <receiver> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <receiver> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <crypto> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <crypto> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <sender> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <sender> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for entity <counter> in library <work> (architecture <arch>).
 
@@ -115,16 +120,16 @@ Analyzing hierarchy for entity <counter> in library <work> (architecture <arch>)
 Analyzing top module <top>.
 Module <top> is correct for synthesis.
  
-Analyzing Entity <ctrl> in library <work> (Architecture <behavioral>).
+Analyzing Entity <ctrl> in library <work> (Architecture <Behavioral>).
 Entity <ctrl> analyzed. Unit <ctrl> generated.
 
-Analyzing Entity <receiver> in library <work> (Architecture <behavioral>).
+Analyzing Entity <receiver> in library <work> (Architecture <Behavioral>).
 Entity <receiver> analyzed. Unit <receiver> generated.
 
-Analyzing Entity <crypto> in library <work> (Architecture <behavioral>).
+Analyzing Entity <crypto> in library <work> (Architecture <Behavioral>).
 Entity <crypto> analyzed. Unit <crypto> generated.
 
-Analyzing Entity <sender> in library <work> (Architecture <behavioral>).
+Analyzing Entity <sender> in library <work> (Architecture <Behavioral>).
 Entity <sender> analyzed. Unit <sender> generated.
 
 Analyzing Entity <counter> in library <work> (Architecture <arch>).
@@ -138,7 +143,7 @@ Entity <counter> analyzed. Unit <counter> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <ctrl>.
-    Related source file is "C:/workspace/digkon/project/client_cpld1/ctrl.vhd".
+    Related source file is "C:/Temp/digkon/project/client_cpld1/ctrl.vhd".
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -162,7 +167,7 @@ Unit <ctrl> synthesized.
 
 
 Synthesizing Unit <receiver>.
-    Related source file is "C:/workspace/digkon/project/client_cpld1/receiver.vhd".
+    Related source file is "C:/Temp/digkon/project/client_cpld1/receiver.vhd".
     Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 19                                             |
@@ -186,13 +191,13 @@ Unit <receiver> synthesized.
 
 
 Synthesizing Unit <crypto>.
-    Related source file is "C:/workspace/digkon/project/client_cpld1/crypto.vhd".
+    Related source file is "C:/Temp/digkon/project/client_cpld1/crypto.vhd".
     Found 4-bit xor2 for signal <enc>.
 Unit <crypto> synthesized.
 
 
 Synthesizing Unit <sender>.
-    Related source file is "C:/workspace/digkon/project/client_cpld1/sender.vhd".
+    Related source file is "C:/Temp/digkon/project/client_cpld1/sender.vhd".
     Found finite state machine <FSM_2> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 19                                             |
@@ -216,7 +221,7 @@ Unit <sender> synthesized.
 
 
 Synthesizing Unit <counter>.
-    Related source file is "C:/workspace/digkon/project/client_cpld1/counter.vhd".
+    Related source file is "C:/Temp/digkon/project/client_cpld1/counter.vhd".
     Found 1-bit register for signal <done>.
     Found 8-bit up counter for signal <count>.
     Summary:
@@ -400,12 +405,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.09 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 19.13 secs
  
 --> 
 
-Total memory usage is 246712 kilobytes
+Total memory usage is 261028 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

@@ -1,4 +1,4 @@
-Pin Freeze File:  version P.40xd
+Pin Freeze File:  version P.28xd
 
 9572XL44PC XC9572XL-5-PC44
 clk S:PIN5
@@ -21,17 +21,17 @@ okLmp S:PIN3
 ;It shows where your internal equations were placed in the last successful fit.
 
 PARTITION FB1_1 EXP6_ EXP7_ XLXI_1/alarm EXP8_
-		 EXP9_ okLmp_OBUF
-PARTITION FB1_8 larm_OBUF
-PARTITION FB1_13 XLXN_83<3>/XLXN_83<3>_RSTF__$INT XLXI_1/state_FSM_FFd3 XLXI_1/count<1> EXP10_
-		 XLXI_1/nextSig XLXI_1/count<0>
-PARTITION FB2_18 XLXN_61
-PARTITION FB3_10 XLXI_9/timer<0> XLXI_9/timer<5> XLXI_9/timer<4> XLXI_9/timer<3>
-		 EXP11_ XLXI_1/state_FSM_FFd1 XLXN_5 XLXI_9/timer<2>
-		 XLXI_9/timer<1>
-PARTITION FB4_1 XLXN_83<3> XLXN_83<2> XLXN_83<1> XLXN_83<0>
-		 getRand_OBUF XLXI_12/state_FSM_FFd4 XLXI_1/state_FSM_FFd2 XLXI_12/state_FSM_FFd5
-		 EXP12_ XLXI_12/state_FSM_FFd3 EXP13_ XLXI_12/state_FSM_FFd1
-		 EXP14_ EXP15_ EXP16_ XLXI_12/state_FSM_FFd2
-		 EXP17_ EXP18_
+		 EXP9_ okLmp_OBUF XLXN_83<3>/XLXN_83<3>_RSTF__$INT larm_OBUF
+		 XLXI_1/count<1> EXP10_ XLXI_1/nextSig EXP11_
+		 XLXI_1/state_FSM_FFd3 EXP12_ XLXI_1/state_FSM_FFd2 EXP13_
+		 EXP14_ XLXI_1/count<0>
+
+PARTITION FB3_1 XLXI_9/timer<5> XLXI_12/state_FSM_FFd1 XLXI_9/timer<4> XLXI_9/timer<3>
+		 XLXI_9/timer<2> XLXI_9/timer<1> XLXN_83<3> XLXN_83<2>
+		 XLXN_83<1> XLXN_83<0> XLXI_12/state_FSM_FFd3 XLXI_1/state_FSM_FFd1
+		 XLXI_12/state_FSM_FFd5 XLXI_12/state_FSM_FFd4 EXP15_ XLXN_30
+		 XLXI_12/state_FSM_FFd2 XLXI_9/timer<0>
+PARTITION FB4_5 getRand_OBUF
+PARTITION FB4_15 XLXI_13/state_FSM_FFd2 XLXN_61 XLXN_110 XLXI_13/state_FSM_FFd1
+		
 

@@ -73,13 +73,10 @@ begin
 				when s4 =>				-- Check state
 					
 					if (checkOK = '1' or lastKey = '1') then
-						if (checkOK = '1') then
-							alarm <= '0';
-						else
-							alarm <= '1';
+						if(checkOK = '1') then
+							alarm <= '0'; else alarm <= '1';
 						end if;
-						
-						state <= s5;
+						state <= s0;
 					elsif(nextSig = '0') then
 						nextSig <= '1';
 					else
