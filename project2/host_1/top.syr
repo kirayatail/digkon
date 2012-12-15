@@ -1,0 +1,404 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : XC9500XL CPLDs
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Temp/digkon/project2/host_1/counter.vhd" in Library work.
+Entity <counter> compiled.
+Entity <counter> (Architecture <arch>) compiled.
+Compiling vhdl file "C:/Temp/digkon/project2/host_1/sender.vhd" in Library work.
+Entity <sender> compiled.
+Entity <sender> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Temp/digkon/project2/host_1/top.vhf" in Library work.
+Entity <FD4CE_MXILINX_top> compiled.
+Entity <FD4CE_MXILINX_top> (Architecture <BEHAVIORAL>) compiled.
+Entity <FD_MXILINX_top> compiled.
+Entity <FD_MXILINX_top> (Architecture <BEHAVIORAL>) compiled.
+Entity <FDRE_MXILINX_top> compiled.
+Entity <FDRE_MXILINX_top> (Architecture <BEHAVIORAL>) compiled.
+Entity <CJ4RE_MXILINX_top> compiled.
+Entity <CJ4RE_MXILINX_top> (Architecture <BEHAVIORAL>) compiled.
+Entity <rand_MUSER_top> compiled.
+Entity <rand_MUSER_top> (Architecture <BEHAVIORAL>) compiled.
+Entity <top> compiled.
+Entity <top> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "C:/Temp/digkon/project2/host_1/rand.vhf" in Library work.
+Entity <FD4CE_MXILINX_rand> compiled.
+Entity <FD4CE_MXILINX_rand> (Architecture <BEHAVIORAL>) compiled.
+Entity <FD_MXILINX_rand> compiled.
+Entity <FD_MXILINX_rand> (Architecture <BEHAVIORAL>) compiled.
+Entity <FDRE_MXILINX_rand> compiled.
+Entity <FDRE_MXILINX_rand> (Architecture <BEHAVIORAL>) compiled.
+Entity <CJ4RE_MXILINX_rand> compiled.
+Entity <CJ4RE_MXILINX_rand> (Architecture <BEHAVIORAL>) compiled.
+Entity <rand> compiled.
+Entity <rand> (Architecture <BEHAVIORAL>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <arch>).
+
+Analyzing hierarchy for entity <sender> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <rand_MUSER_top> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <FD4CE_MXILINX_top> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <CJ4RE_MXILINX_top> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <FDRE_MXILINX_top> in library <work> (architecture <BEHAVIORAL>) with generics.
+	INIT = '0'
+
+Analyzing hierarchy for entity <FD_MXILINX_top> in library <work> (architecture <BEHAVIORAL>) with generics.
+	INIT = '0'
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top> in library <work> (Architecture <BEHAVIORAL>).
+Entity <top> analyzed. Unit <top> generated.
+
+Analyzing Entity <counter> in library <work> (Architecture <arch>).
+Entity <counter> analyzed. Unit <counter> generated.
+
+Analyzing Entity <sender> in library <work> (Architecture <Behavioral>).
+Entity <sender> analyzed. Unit <sender> generated.
+
+Analyzing Entity <rand_MUSER_top> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "HU_SET =  XLXI_16_13" for instance <XLXI_16> in unit <rand_MUSER_top>.
+    Set user-defined property "HU_SET =  XLXI_18_12" for instance <XLXI_18> in unit <rand_MUSER_top>.
+Entity <rand_MUSER_top> analyzed. Unit <rand_MUSER_top> generated.
+
+Analyzing Entity <FD4CE_MXILINX_top> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "INIT =  0" for instance <U0> in unit <FD4CE_MXILINX_top>.
+    Set user-defined property "INIT =  0" for instance <U1> in unit <FD4CE_MXILINX_top>.
+    Set user-defined property "INIT =  0" for instance <U2> in unit <FD4CE_MXILINX_top>.
+    Set user-defined property "INIT =  0" for instance <U3> in unit <FD4CE_MXILINX_top>.
+Entity <FD4CE_MXILINX_top> analyzed. Unit <FD4CE_MXILINX_top> generated.
+
+Analyzing Entity <CJ4RE_MXILINX_top> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "HU_SET =  U0_8" for instance <U0> in unit <CJ4RE_MXILINX_top>.
+    Set user-defined property "HU_SET =  U1_9" for instance <U1> in unit <CJ4RE_MXILINX_top>.
+    Set user-defined property "HU_SET =  U2_11" for instance <U2> in unit <CJ4RE_MXILINX_top>.
+    Set user-defined property "HU_SET =  U3_10" for instance <U3> in unit <CJ4RE_MXILINX_top>.
+Entity <CJ4RE_MXILINX_top> analyzed. Unit <CJ4RE_MXILINX_top> generated.
+
+Analyzing generic Entity <FDRE_MXILINX_top> in library <work> (Architecture <BEHAVIORAL>).
+	INIT = '0'
+    Set user-defined property "HU_SET =  I_36_42_7" for instance <I_36_42> in unit <FDRE_MXILINX_top>.
+    Set user-defined property "RLOC =  R0C0" for instance <I_36_42> in unit <FDRE_MXILINX_top>.
+Entity <FDRE_MXILINX_top> analyzed. Unit <FDRE_MXILINX_top> generated.
+
+Analyzing generic Entity <FD_MXILINX_top> in library <work> (Architecture <BEHAVIORAL>).
+	INIT = '0'
+    Set user-defined property "INIT =  0" for instance <U0> in unit <FD_MXILINX_top>.
+Entity <FD_MXILINX_top> analyzed. Unit <FD_MXILINX_top> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <counter>.
+    Related source file is "C:/Temp/digkon/project2/host_1/counter.vhd".
+    Found 1-bit register for signal <done>.
+    Found 8-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <counter> synthesized.
+
+
+Synthesizing Unit <sender>.
+    Related source file is "C:/Temp/digkon/project2/host_1/sender.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 19                                             |
+    | Transitions        | 19                                             |
+    | Inputs             | 0                                              |
+    | Outputs            | 19                                             |
+    | Clock              | lowClk                    (rising_edge)        |
+    | Reset              | sendEnable                (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <transmitter>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+Unit <sender> synthesized.
+
+
+Synthesizing Unit <FD4CE_MXILINX_top>.
+    Related source file is "C:/Temp/digkon/project2/host_1/top.vhf".
+Unit <FD4CE_MXILINX_top> synthesized.
+
+
+Synthesizing Unit <FD_MXILINX_top>.
+    Related source file is "C:/Temp/digkon/project2/host_1/top.vhf".
+Unit <FD_MXILINX_top> synthesized.
+
+
+Synthesizing Unit <FDRE_MXILINX_top>.
+    Related source file is "C:/Temp/digkon/project2/host_1/top.vhf".
+Unit <FDRE_MXILINX_top> synthesized.
+
+
+Synthesizing Unit <CJ4RE_MXILINX_top>.
+    Related source file is "C:/Temp/digkon/project2/host_1/top.vhf".
+Unit <CJ4RE_MXILINX_top> synthesized.
+
+
+Synthesizing Unit <rand_MUSER_top>.
+    Related source file is "C:/Temp/digkon/project2/host_1/top.vhf".
+Unit <rand_MUSER_top> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "C:/Temp/digkon/project2/host_1/top.vhf".
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 2
+ 1-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:19]> with one-hot encoding.
+------------------------------
+ State | Encoding
+------------------------------
+ s0    | 0000000000000000001
+ s1    | 0000000000000000010
+ s2    | 0000000000000000100
+ s3    | 0000000000000001000
+ s4    | 0000000000000010000
+ s5    | 0000000000000100000
+ s6    | 0000000000001000000
+ s7    | 0000000000010000000
+ s8    | 0000000000100000000
+ s9    | 0000000001000000000
+ s10   | 0000000010000000000
+ s11   | 0000000100000000000
+ s12   | 0000001000000000000
+ s13   | 0000010000000000000
+ s14   | 0000100000000000000
+ s15   | 0001000000000000000
+ s16   | 0010000000000000000
+ s17   | 0100000000000000000
+ swait | 1000000000000000000
+------------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <sender> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd9
+  implementation constraint: INIT=s	 : state_FSM_FFd19
+  implementation constraint: INIT=r	 : state_FSM_FFd10
+  implementation constraint: INIT=r	 : state_FSM_FFd11
+  implementation constraint: INIT=r	 : state_FSM_FFd12
+  implementation constraint: INIT=r	 : state_FSM_FFd13
+  implementation constraint: INIT=r	 : state_FSM_FFd14
+  implementation constraint: INIT=r	 : state_FSM_FFd15
+  implementation constraint: INIT=r	 : state_FSM_FFd16
+  implementation constraint: INIT=r	 : state_FSM_FFd17
+  implementation constraint: INIT=r	 : state_FSM_FFd18
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+  implementation constraint: INIT=r	 : state_FSM_FFd3
+  implementation constraint: INIT=r	 : state_FSM_FFd4
+  implementation constraint: INIT=r	 : state_FSM_FFd5
+  implementation constraint: INIT=r	 : state_FSM_FFd6
+  implementation constraint: INIT=r	 : state_FSM_FFd7
+  implementation constraint: INIT=r	 : state_FSM_FFd8
+
+Optimizing unit <FD4CE_MXILINX_top> ...
+  implementation constraint: INIT=0	 : U0
+  implementation constraint: INIT=0	 : U1
+  implementation constraint: INIT=0	 : U2
+  implementation constraint: INIT=0	 : U3
+
+Optimizing unit <FD_MXILINX_top> ...
+  implementation constraint: INIT=0	 : U0
+
+Optimizing unit <FDRE_MXILINX_top> ...
+
+Optimizing unit <counter> ...
+
+Optimizing unit <CJ4RE_MXILINX_top> ...
+
+Optimizing unit <rand_MUSER_top> ...
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 55
+#      AND2                        : 18
+#      AND8                        : 1
+#      GND                         : 5
+#      INV                         : 11
+#      OR2                         : 9
+#      OR3                         : 1
+#      OR4                         : 2
+#      VCC                         : 1
+#      XOR2                        : 7
+# FlipFlops/Latches                : 37
+#      FDC                         : 27
+#      FDCE                        : 4
+#      FDCP                        : 4
+#      FDP                         : 2
+# IO Buffers                       : 11
+#      IBUF                        : 4
+#      OBUF                        : 7
+# Others                           : 8
+#      AND3B1                      : 4
+#      AND3B2                      : 4
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.15 secs
+ 
+--> 
+
+Total memory usage is 262948 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -14,7 +14,7 @@ signal count: STD_LOGIC_VECTOR(7 downto 0);
 begin	
 	process(clk, reset)
 	begin
-		if reset = '0' then
+		if reset = '1' then
 			count <= "00000001";
 			done <= '0';
 		elsif clk'event and clk = '1' then

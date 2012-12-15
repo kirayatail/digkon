@@ -1,9 +1,9 @@
 <html><body>
 <pre>
  
-cpldfit:  version P.40xd                            Xilinx Inc.
+cpldfit:  version P.28xd                            Xilinx Inc.
                                   Fitter Report
-Design Name: top                                 Date: 12-13-2012,  4:38PM
+Design Name: top                                 Date: 12-15-2012,  4:27PM
 Device Used: XC9572XL-5-PC44
 Fitting Status: Successful
 
@@ -11,18 +11,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-28 /72  ( 39%) 129 /360  ( 36%) 65 /216 ( 30%)   23 /72  ( 32%) 14 /34  ( 41%)
+29 /72  ( 40%) 157 /360  ( 44%) 73 /216 ( 34%)   23 /72  ( 32%) 14 /34  ( 41%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-FB1           7/18       18/54       34/90       4/ 9
-FB2           2/18       18/54       17/90       1/ 9
-FB3           8/18       17/54       24/90       7/ 9
-FB4          11/18       12/54       54/90       2/ 7
+FB1          10/18       28/54       69/90       4/ 9
+FB2           0/18        0/54        0/90       1/ 9
+FB3          17/18       18/54       71/90       7/ 9
+FB4           2/18       27/54       17/90       2/ 7
              -----       -----       -----      -----    
-             28/72       65/216     129/360     14/34 
+             29/72       73/216     157/360     14/34 
 
 * - Resource is exhausted
 
@@ -47,7 +47,7 @@ GSR           :    1           1    |
 
 ** Power Data **
 
-There are 28 macrocells in high performance mode (MCHP).
+There are 29 macrocells in high performance mode (MCHP).
 There are 0 macrocells in low power mode (MCLP).
 End of Mapped Resource Summary
 **************************  Errors and Warnings  ***************************
@@ -78,34 +78,35 @@ larm                                                                            
 sendEnable                                                                                1     3     FB3_16  24   I/O     O       STD  FAST 
 getRand                                                                                   1     3     FB4_5   26   I/O     O       STD  FAST 
 
-** 24 Buried Nodes **
+** 25 Buried Nodes **
 
 Signal                                                                                    Total Total Loc     Pwr  Reg Init
 Name                                                                                      Pts   Inps          Mode State
-rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT  2     4     FB1_1   STD  
-ctrl1/state<1>                                                                            4     16    FB1_14  STD  RESET
-ctrl1/alarm                                                                               5     17    FB1_15  STD  RESET
-ctrl1/count<1>                                                                            8     17    FB1_16  STD  RESET
-ctrl1/count<0>                                                                            13    17    FB1_18  STD  RESET
-ctrl1/nextSig                                                                             8     13    FB2_1   STD  RESET
-ctrl1/state<2>                                                                            9     17    FB2_18  STD  RESET
-tim1/timer<0>                                                                             2     4     FB3_11  STD  RESET
-tim1/timer<5>                                                                             3     9     FB3_12  STD  RESET
-tim1/timer<4>                                                                             3     8     FB3_13  STD  RESET
-tim1/timer<3>                                                                             3     7     FB3_14  STD  RESET
-tim1/timer<2>                                                                             3     6     FB3_15  STD  RESET
-tim1/timer<1>                                                                             3     5     FB3_17  STD  RESET
-ctrl1/state<0>                                                                            6     16    FB3_18  STD  RESET
-rcv1/state<3>                                                                             7     8     FB4_1   STD  RESET
-rcv1/state<0>                                                                             8     8     FB4_2   STD  RESET
-LastKey                                                                                   2     4     FB4_8   STD  RESET
-RcvData<3>                                                                                4     8     FB4_9   STD  RESET
-RcvData<2>                                                                                4     8     FB4_10  STD  RESET
-RcvData<1>                                                                                4     8     FB4_11  STD  RESET
-RcvData<0>                                                                                4     8     FB4_12  STD  RESET
-rcv1/state<4>                                                                             5     8     FB4_13  STD  RESET
-rcv1/state<2>                                                                             7     8     FB4_15  STD  RESET
-rcv1/state<1>                                                                             8     8     FB4_16  STD  RESET
+ctrl1/alarm                                                                               24    26    FB1_1   STD  RESET
+rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT  2     4     FB1_3   STD  
+TimerStart/TimerStart_D2                                                                  2     3     FB1_4   STD  
+ctrl1/state<2>                                                                            4     16    FB1_9   STD  RESET
+ctrl1/state<1>                                                                            6     17    FB1_11  STD  RESET
+ctrl1/nextSig                                                                             8     13    FB1_12  STD  RESET
+ctrl1/count<1>                                                                            8     17    FB1_14  STD  RESET
+ctrl1/count<0>                                                                            13    17    FB1_15  STD  RESET
+rcv1/state<0>                                                                             8     8     FB3_1   STD  RESET
+LastKey                                                                                   2     4     FB3_3   STD  RESET
+tim1/timer<5>                                                                             3     7     FB3_4   STD  RESET
+tim1/timer<4>                                                                             3     6     FB3_5   STD  RESET
+tim1/timer<3>                                                                             3     5     FB3_6   STD  RESET
+tim1/timer<2>                                                                             3     4     FB3_7   STD  RESET
+tim1/timer<1>                                                                             3     3     FB3_8   STD  RESET
+RcvData<3>                                                                                4     8     FB3_9   STD  RESET
+RcvData<2>                                                                                4     8     FB3_10  STD  RESET
+RcvData<1>                                                                                4     8     FB3_11  STD  RESET
+RcvData<0>                                                                                4     8     FB3_12  STD  RESET
+rcv1/state<4>                                                                             5     8     FB3_13  STD  RESET
+rcv1/state<3>                                                                             7     8     FB3_14  STD  RESET
+rcv1/state<2>                                                                             7     8     FB3_15  STD  RESET
+rcv1/state<1>                                                                             8     8     FB3_17  STD  RESET
+tim1/timer<0>                                                                             2     2     FB3_18  STD  RESET
+ctrl1/state<0>                                                                            16    27    FB4_17  STD  RESET
 
 ** 10 Inputs **
 
@@ -138,57 +139,66 @@ Pin Type/Use - I  - Input             GCK - Global Clock
 X            - Signal used as input to the macrocell logic.
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
-Number of function block inputs used/remaining:               18/36
-Number of signals used by logic mapping into function block:  18
+Number of function block inputs used/remaining:               28/26
+Number of signals used by logic mapping into function block:  28
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
+ctrl1/alarm          24      19<-   0   0     FB1_1         (b)     (b)
+(unused)              0       0   /\5   0     FB1_2   1     I/O     (b)
 rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT
-                      2       0   /\3   0     FB1_1         (b)     (b)
-(unused)              0       0     0   5     FB1_2   1     I/O     
-(unused)              0       0     0   5     FB1_3         (b)     
-(unused)              0       0     0   5     FB1_4         (b)     
+                      2       1<- /\4   0     FB1_3         (b)     (b)
+TimerStart/TimerStart_D2
+                      2       0   /\1   2     FB1_4         (b)     (b)
 (unused)              0       0     0   5     FB1_5   2     I/O     
 okLmp                 1       0     0   4     FB1_6   3     I/O     O
 (unused)              0       0     0   5     FB1_7         (b)     
 larm                  1       0     0   4     FB1_8   4     I/O     O
-(unused)              0       0     0   5     FB1_9   5     GCK/I/O GCK
-(unused)              0       0     0   5     FB1_10        (b)     
-(unused)              0       0     0   5     FB1_11  6     GCK/I/O I
-(unused)              0       0     0   5     FB1_12        (b)     
-(unused)              0       0   \/2   3     FB1_13        (b)     (b)
-ctrl1/state<1>        4       2<- \/3   0     FB1_14  7     GCK/I/O (b)
-ctrl1/alarm           5       3<- \/3   0     FB1_15  8     I/O     (b)
-ctrl1/count<1>        8       3<-   0   0     FB1_16        (b)     (b)
+ctrl1/state<2>        4       0     0   1     FB1_9   5     GCK/I/O GCK
+(unused)              0       0   \/5   0     FB1_10        (b)     (b)
+ctrl1/state<1>        6       5<- \/4   0     FB1_11  6     GCK/I/O I
+ctrl1/nextSig         8       4<- \/1   0     FB1_12        (b)     (b)
+(unused)              0       0   \/5   0     FB1_13        (b)     (b)
+ctrl1/count<1>        8       6<- \/3   0     FB1_14  7     GCK/I/O (b)
+ctrl1/count<0>       13       8<-   0   0     FB1_15  8     I/O     (b)
+(unused)              0       0   /\5   0     FB1_16        (b)     (b)
 (unused)              0       0   \/5   0     FB1_17  9     I/O     (b)
-ctrl1/count<0>       13       8<-   0   0     FB1_18        (b)     (b)
+(unused)              0       0   \/5   0     FB1_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: ctrl1/alarm        7: rcv1/state<0>     13: tim1/timer<0> 
-  2: ctrl1/count<0>     8: rcv1/state<1>     14: tim1/timer<1> 
-  3: ctrl1/count<1>     9: rcv1/state<2>     15: tim1/timer<2> 
-  4: ctrl1/state<0>    10: rcv1/state<3>     16: tim1/timer<3> 
-  5: ctrl1/state<1>    11: rcv1/state<4>     17: tim1/timer<4> 
-  6: ctrl1/state<2>    12: rst               18: tim1/timer<5> 
+  1: LastKey           11: ctrl1/state<2>    20: rcv1/state<4> 
+  2: RcvData<0>        12: data<0>           21: rst 
+  3: RcvData<1>        13: data<1>           22: tim1/timer<0> 
+  4: RcvData<2>        14: data<2>           23: tim1/timer<1> 
+  5: RcvData<3>        15: data<3>           24: tim1/timer<2> 
+  6: ctrl1/alarm       16: rcv1/state<0>     25: tim1/timer<3> 
+  7: ctrl1/count<0>    17: rcv1/state<1>     26: tim1/timer<4> 
+  8: ctrl1/count<1>    18: rcv1/state<2>     27: tim1/timer<5> 
+  9: ctrl1/state<0>    19: rcv1/state<3>     28: trig 
+ 10: ctrl1/state<1>   
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
+ctrl1/alarm          XXXXXXXXXXXXXXXXXXXX.XXXXXX............. 26
 rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT 
-                     ...XXX.....X............................ 4
-okLmp                X..XXX.................................. 4
-larm                 X..XXX.................................. 4
-ctrl1/state<1>       .XXXXXXXXXX.XXXXXX...................... 16
-ctrl1/alarm          XXXXXXXXXXX.XXXXXX...................... 17
-ctrl1/count<1>       .XXXXXXXXXXXXXXXXX...................... 17
-ctrl1/count<0>       .XXXXXXXXXXXXXXXXX...................... 17
+                     ........XXX.........X................... 4
+TimerStart/TimerStart_D2 
+                     ........XXX............................. 3
+okLmp                .....X..XXX............................. 4
+larm                 .....X..XXX............................. 4
+ctrl1/state<2>       ......XXXXX....XXXXX.XXXXXX............. 16
+ctrl1/state<1>       ......XXXXX....XXXXX.XXXXXXX............ 17
+ctrl1/nextSig        XXXXX...XXXXXXX.....X................... 13
+ctrl1/count<1>       ......XXXXX....XXXXXXXXXXXX............. 17
+ctrl1/count<0>       ......XXXXX....XXXXXXXXXXXX............. 17
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB2  ***********************************
-Number of function block inputs used/remaining:               18/36
-Number of signals used by logic mapping into function block:  18
+Number of function block inputs used/remaining:               0/54
+Number of signals used by logic mapping into function block:  0
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-ctrl1/nextSig         8       3<-   0   0     FB2_1         (b)     (b)
-(unused)              0       0   /\3   2     FB2_2   35    I/O     (b)
+(unused)              0       0     0   5     FB2_1         (b)     
+(unused)              0       0     0   5     FB2_2   35    I/O     
 (unused)              0       0     0   5     FB2_3         (b)     
 (unused)              0       0     0   5     FB2_4         (b)     
 (unused)              0       0     0   5     FB2_5   36    I/O     
@@ -203,110 +213,100 @@ ctrl1/nextSig         8       3<-   0   0     FB2_1         (b)     (b)
 (unused)              0       0     0   5     FB2_14  42    GTS/I/O 
 (unused)              0       0     0   5     FB2_15  43    I/O     
 (unused)              0       0     0   5     FB2_16        (b)     
-(unused)              0       0   \/4   1     FB2_17  44    I/O     (b)
-ctrl1/state<2>        9       4<-   0   0     FB2_18        (b)     (b)
-
-Signals Used by Logic in Function Block
-  1: LastKey            7: ctrl1/state<1>    13: rcv1/state<0> 
-  2: RcvData<0>         8: ctrl1/state<2>    14: rcv1/state<1> 
-  3: RcvData<1>         9: data<0>           15: rcv1/state<2> 
-  4: RcvData<2>        10: data<1>           16: rcv1/state<3> 
-  5: RcvData<3>        11: data<2>           17: rcv1/state<4> 
-  6: ctrl1/state<0>    12: data<3>           18: rst 
-
-Signal                        1         2         3         4 FB
-Name                0----+----0----+----0----+----0----+----0 Inputs
-ctrl1/nextSig        XXXXXXXXXXXX.....X...................... 13
-ctrl1/state<2>       XXXXXXXXXXXXXXXXX....................... 17
-                    0----+----1----+----2----+----3----+----4
-                              0         0         0         0
+(unused)              0       0     0   5     FB2_17  44    I/O     
+(unused)              0       0     0   5     FB2_18        (b)     
 *********************************** FB3  ***********************************
-Number of function block inputs used/remaining:               17/37
-Number of signals used by logic mapping into function block:  17
+Number of function block inputs used/remaining:               18/36
+Number of signals used by logic mapping into function block:  18
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0     0   5     FB3_1         (b)     
-(unused)              0       0     0   5     FB3_2   11    I/O     
-(unused)              0       0     0   5     FB3_3         (b)     
-(unused)              0       0     0   5     FB3_4         (b)     
-(unused)              0       0     0   5     FB3_5   12    I/O     
-(unused)              0       0     0   5     FB3_6         (b)     
-(unused)              0       0     0   5     FB3_7         (b)     
-(unused)              0       0     0   5     FB3_8   13    I/O     I
-(unused)              0       0     0   5     FB3_9   14    I/O     I
-(unused)              0       0     0   5     FB3_10        (b)     
-tim1/timer<0>         2       0     0   3     FB3_11  18    I/O     I
-tim1/timer<5>         3       0     0   2     FB3_12        (b)     (b)
-tim1/timer<4>         3       0     0   2     FB3_13        (b)     (b)
-tim1/timer<3>         3       0     0   2     FB3_14  19    I/O     I
-tim1/timer<2>         3       0     0   2     FB3_15  20    I/O     I
-sendEnable            1       0     0   4     FB3_16  24    I/O     O
-tim1/timer<1>         3       0   \/1   1     FB3_17  22    I/O     I
-ctrl1/state<0>        6       1<-   0   0     FB3_18        (b)     (b)
+rcv1/state<0>         8       3<-   0   0     FB3_1         (b)     (b)
+(unused)              0       0   /\3   2     FB3_2   11    I/O     (b)
+LastKey               2       0     0   3     FB3_3         (b)     (b)
+tim1/timer<5>         3       0     0   2     FB3_4         (b)     (b)
+tim1/timer<4>         3       0     0   2     FB3_5   12    I/O     (b)
+tim1/timer<3>         3       0     0   2     FB3_6         (b)     (b)
+tim1/timer<2>         3       0     0   2     FB3_7         (b)     (b)
+tim1/timer<1>         3       0     0   2     FB3_8   13    I/O     I
+RcvData<3>            4       0     0   1     FB3_9   14    I/O     I
+RcvData<2>            4       0     0   1     FB3_10        (b)     (b)
+RcvData<1>            4       0     0   1     FB3_11  18    I/O     I
+RcvData<0>            4       0   \/1   0     FB3_12        (b)     (b)
+rcv1/state<4>         5       1<- \/1   0     FB3_13        (b)     (b)
+rcv1/state<3>         7       2<-   0   0     FB3_14  19    I/O     I
+rcv1/state<2>         7       3<- /\1   0     FB3_15  20    I/O     I
+sendEnable            1       0   /\3   1     FB3_16  24    I/O     O
+rcv1/state<1>         8       3<-   0   0     FB3_17  22    I/O     I
+tim1/timer<0>         2       0   /\3   0     FB3_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: ctrl1/state<0>     7: rcv1/state<2>     13: tim1/timer<2> 
-  2: ctrl1/state<1>     8: rcv1/state<3>     14: tim1/timer<3> 
-  3: ctrl1/state<2>     9: rcv1/state<4>     15: tim1/timer<4> 
-  4: lowClk            10: sendDone          16: tim1/timer<5> 
-  5: rcv1/state<0>     11: tim1/timer<0>     17: trig 
-  6: rcv1/state<1>     12: tim1/timer<1>    
+  1: TimerStart/TimerStart_D2   7: rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT  13: rcv 
+  2: ctrl1/nextSig              8: rcv1/state<0>                                                                             14: tim1/timer<0> 
+  3: ctrl1/state<0>             9: rcv1/state<1>                                                                             15: tim1/timer<1> 
+  4: ctrl1/state<1>            10: rcv1/state<2>                                                                             16: tim1/timer<2> 
+  5: ctrl1/state<2>            11: rcv1/state<3>                                                                             17: tim1/timer<3> 
+  6: lowClk                    12: rcv1/state<4>                                                                             18: tim1/timer<4> 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-tim1/timer<0>        XXXX.................................... 4
-tim1/timer<5>        XXXX......XXXXX......................... 9
-tim1/timer<4>        XXXX......XXXX.......................... 8
-tim1/timer<3>        XXXX......XXX........................... 7
-tim1/timer<2>        XXXX......XX............................ 6
-sendEnable           XXX..................................... 3
-tim1/timer<1>        XXXX......X............................. 5
-ctrl1/state<0>       XXX.XXXXXXXXXXXXX....................... 16
+rcv1/state<0>        .....XXXXXXXX........................... 8
+LastKey              .XXXX................................... 4
+tim1/timer<5>        X....X.......XXXXX...................... 7
+tim1/timer<4>        X....X.......XXXX....................... 6
+tim1/timer<3>        X....X.......XXX........................ 5
+tim1/timer<2>        X....X.......XX......................... 4
+tim1/timer<1>        X....X.......X.......................... 3
+RcvData<3>           .....XXXXXXXX........................... 8
+RcvData<2>           .....XXXXXXXX........................... 8
+RcvData<1>           .....XXXXXXXX........................... 8
+RcvData<0>           .....XXXXXXXX........................... 8
+rcv1/state<4>        .....XXXXXXXX........................... 8
+rcv1/state<3>        .....XXXXXXXX........................... 8
+rcv1/state<2>        .....XXXXXXXX........................... 8
+sendEnable           ..XXX................................... 3
+rcv1/state<1>        .....XXXXXXXX........................... 8
+tim1/timer<0>        X....X.................................. 2
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB4  ***********************************
-Number of function block inputs used/remaining:               12/42
-Number of signals used by logic mapping into function block:  12
+Number of function block inputs used/remaining:               27/27
+Number of signals used by logic mapping into function block:  27
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-rcv1/state<3>         7       2<-   0   0     FB4_1         (b)     (b)
-rcv1/state<0>         8       3<-   0   0     FB4_2   25    I/O     I
-(unused)              0       0   /\3   2     FB4_3         (b)     (b)
+(unused)              0       0     0   5     FB4_1         (b)     
+(unused)              0       0     0   5     FB4_2   25    I/O     I
+(unused)              0       0     0   5     FB4_3         (b)     
 (unused)              0       0     0   5     FB4_4         (b)     
 getRand               1       0     0   4     FB4_5   26    I/O     O
 (unused)              0       0     0   5     FB4_6         (b)     
 (unused)              0       0     0   5     FB4_7         (b)     
-LastKey               2       0     0   3     FB4_8   27    I/O     (b)
-RcvData<3>            4       0     0   1     FB4_9         (b)     (b)
-RcvData<2>            4       0     0   1     FB4_10        (b)     (b)
-RcvData<1>            4       0     0   1     FB4_11  28    I/O     (b)
-RcvData<0>            4       0     0   1     FB4_12        (b)     (b)
-rcv1/state<4>         5       0     0   0     FB4_13        (b)     (b)
-(unused)              0       0   \/2   3     FB4_14  29    I/O     (b)
-rcv1/state<2>         7       2<-   0   0     FB4_15  33    I/O     (b)
-rcv1/state<1>         8       3<-   0   0     FB4_16        (b)     (b)
-(unused)              0       0   /\3   2     FB4_17  34    I/O     (b)
-(unused)              0       0   \/2   3     FB4_18        (b)     (b)
+(unused)              0       0     0   5     FB4_8   27    I/O     
+(unused)              0       0     0   5     FB4_9         (b)     
+(unused)              0       0     0   5     FB4_10        (b)     
+(unused)              0       0     0   5     FB4_11  28    I/O     
+(unused)              0       0     0   5     FB4_12        (b)     
+(unused)              0       0     0   5     FB4_13        (b)     
+(unused)              0       0     0   5     FB4_14  29    I/O     
+(unused)              0       0   \/1   4     FB4_15  33    I/O     (b)
+(unused)              0       0   \/5   0     FB4_16        (b)     (b)
+ctrl1/state<0>       16      11<-   0   0     FB4_17  34    I/O     (b)
+(unused)              0       0   /\5   0     FB4_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: ctrl1/nextSig      5: lowClk                                                                                     9: rcv1/state<2> 
-  2: ctrl1/state<0>     6: rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT  10: rcv1/state<3> 
-  3: ctrl1/state<1>     7: rcv1/state<0>                                                                             11: rcv1/state<4> 
-  4: ctrl1/state<2>     8: rcv1/state<1>                                                                             12: rcv 
+  1: LastKey           10: ctrl1/state<2>    19: rcv1/state<4> 
+  2: RcvData<0>        11: data<0>           20: sendDone 
+  3: RcvData<1>        12: data<1>           21: tim1/timer<0> 
+  4: RcvData<2>        13: data<2>           22: tim1/timer<1> 
+  5: RcvData<3>        14: data<3>           23: tim1/timer<2> 
+  6: ctrl1/count<0>    15: rcv1/state<0>     24: tim1/timer<3> 
+  7: ctrl1/count<1>    16: rcv1/state<1>     25: tim1/timer<4> 
+  8: ctrl1/state<0>    17: rcv1/state<2>     26: tim1/timer<5> 
+  9: ctrl1/state<1>    18: rcv1/state<3>     27: trig 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-rcv1/state<3>        ....XXXXXXXX............................ 8
-rcv1/state<0>        ....XXXXXXXX............................ 8
-getRand              .XXX.................................... 3
-LastKey              XXXX.................................... 4
-RcvData<3>           ....XXXXXXXX............................ 8
-RcvData<2>           ....XXXXXXXX............................ 8
-RcvData<1>           ....XXXXXXXX............................ 8
-RcvData<0>           ....XXXXXXXX............................ 8
-rcv1/state<4>        ....XXXXXXXX............................ 8
-rcv1/state<2>        ....XXXXXXXX............................ 8
-rcv1/state<1>        ....XXXXXXXX............................ 8
+getRand              .......XXX.............................. 3
+ctrl1/state<0>       XXXXXXXXXXXXXXXXXXXXXXXXXXX............. 27
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *******************************  Equations  ********************************
@@ -329,10 +329,14 @@ rcv1/state<1>        ....XXXXXXXX............................ 8
 
 
 
+
+
+
+
 FTCPE_LastKey: FTCPE port map (LastKey,'1',LastKey_C,LastKey_CLR,'0');
-LastKey_C <= (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
+LastKey_C <= (NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2) AND 
 	ctrl1/nextSig);
-LastKey_CLR <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
+LastKey_CLR <= (NOT ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2));
 
 FDCPE_RcvData0: FDCPE port map (RcvData(0),rcv,lowClk,NOT rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT,'0',RcvData_CE(0));
 RcvData_CE(0) <= (NOT rcv1/state(1) AND NOT rcv1/state(4) AND rcv1/state(0) AND 
@@ -350,154 +354,201 @@ FDCPE_RcvData3: FDCPE port map (RcvData(3),rcv,lowClk,NOT rcv1/data_0_or0000/rcv
 RcvData_CE(3) <= (NOT rcv1/state(1) AND rcv1/state(4) AND NOT rcv1/state(0) AND 
 	NOT rcv1/state(2) AND NOT rcv1/state(3));
 
-FTCPE_ctrl1/alarm: FTCPE port map (ctrl1/alarm,ctrl1/alarm_T,clk,NOT rst,'0');
-ctrl1/alarm_T <= ((ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/count(0) AND ctrl1/count(1) AND NOT ctrl1/alarm AND rcv1/state(0) AND 
+
+TimerStart/TimerStart_D2 <= ((ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2))
+	OR (NOT ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2)));
+
+FDCPE_ctrl1/alarm: FDCPE port map (ctrl1/alarm,ctrl1/alarm_D,clk,NOT rst,'0');
+ctrl1/alarm_D <= ((
+	rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT.EXP)
+	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND RcvData(0) AND 
+	NOT LastKey AND NOT data(0))
+	OR (NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2) AND 
+	data(1) AND RcvData(1) AND LastKey)
+	OR (NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2) AND 
+	NOT data(1) AND NOT RcvData(1) AND LastKey)
+	OR (NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2) AND 
+	RcvData(2) AND LastKey AND NOT data(2))
+	OR (NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND ctrl1/state(2) AND 
+	NOT RcvData(2) AND LastKey AND data(2))
+	OR (EXP10_.EXP)
+	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND NOT RcvData(0) AND 
+	NOT LastKey AND data(0))
+	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND RcvData(2) AND 
+	NOT LastKey AND data(2))
+	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND NOT RcvData(2) AND 
+	NOT LastKey AND NOT data(2))
+	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND RcvData(3) AND 
+	NOT LastKey AND NOT data(3))
+	OR (ctrl1/alarm AND NOT ctrl1/state(1) AND NOT RcvData(3) AND 
+	NOT LastKey AND data(3))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(0) AND ctrl1/count(1) AND NOT rcv1/state(1) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(0) AND ctrl1/count(1) AND NOT rcv1/state(4) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(0) AND ctrl1/count(1) AND rcv1/state(0) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(0) AND ctrl1/count(1) AND rcv1/state(2) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(0) AND ctrl1/count(1) AND rcv1/state(3) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1)));
+
+FTCPE_ctrl1/count0: FTCPE port map (ctrl1/count(0),ctrl1/count_T(0),clk,'0','0',rst);
+ctrl1/count_T(0) <= ((ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	NOT ctrl1/count(0) AND NOT rcv1/state(4) AND tim1/timer(5) AND tim1/timer(4) AND 
+	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	NOT ctrl1/count(0) AND rcv1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND 
+	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+	NOT ctrl1/count(1) AND NOT rcv1/state(4) AND tim1/timer(5) AND tim1/timer(4) AND 
+	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	NOT ctrl1/count(0) AND rcv1/state(2) AND tim1/timer(5) AND tim1/timer(4) AND 
+	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	NOT ctrl1/count(0) AND rcv1/state(3) AND tim1/timer(5) AND tim1/timer(4) AND 
+	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+	NOT ctrl1/count(1) AND rcv1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND 
+	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+	NOT ctrl1/count(1) AND rcv1/state(2) AND tim1/timer(5) AND tim1/timer(4) AND 
+	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+	NOT ctrl1/count(1) AND rcv1/state(3) AND tim1/timer(5) AND tim1/timer(4) AND 
+	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/state(2) AND 
+	ctrl1/count(0))
+	OR (ctrl1/state(0) AND NOT ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(0))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	NOT ctrl1/count(0) AND NOT rcv1/state(1) AND tim1/timer(5) AND tim1/timer(4) AND 
+	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+	NOT ctrl1/count(1) AND NOT rcv1/state(1) AND tim1/timer(5) AND tim1/timer(4) AND 
+	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1)));
+
+FTCPE_ctrl1/count1: FTCPE port map (ctrl1/count(1),ctrl1/count_T(1),clk,'0','0',rst);
+ctrl1/count_T(1) <= ((ctrl1/nextSig.EXP)
+	OR (ctrl1/state(0) AND NOT ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(0) AND NOT ctrl1/count(1) AND NOT rcv1/state(1) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(0) AND NOT ctrl1/count(1) AND NOT rcv1/state(4) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(0) AND NOT ctrl1/count(1) AND rcv1/state(0) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2) AND 
+	ctrl1/count(0) AND NOT ctrl1/count(1) AND rcv1/state(2) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/state(2) AND 
+	ctrl1/count(1)));
+
+FTCPE_ctrl1/nextSig: FTCPE port map (ctrl1/nextSig,ctrl1/nextSig_T,clk,'0','0');
+ctrl1/nextSig_T <= ((rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+	ctrl1/state(2) AND RcvData(2) AND NOT LastKey AND data(2))
+	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+	ctrl1/state(2) AND NOT RcvData(2) AND NOT LastKey AND NOT data(2))
+	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+	ctrl1/state(2) AND RcvData(3) AND NOT LastKey AND NOT data(3))
+	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+	ctrl1/state(2) AND NOT RcvData(3) AND NOT LastKey AND data(3))
+	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+	ctrl1/state(2) AND data(1) AND RcvData(1) AND NOT LastKey)
+	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+	ctrl1/state(2) AND NOT data(1) AND NOT RcvData(1) AND NOT LastKey)
+	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+	ctrl1/state(2) AND RcvData(0) AND NOT LastKey AND NOT data(0))
+	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
+	ctrl1/state(2) AND NOT RcvData(0) AND NOT LastKey AND data(0)));
+
+FDCPE_ctrl1/state0: FDCPE port map (ctrl1/state(0),ctrl1/state_D(0),clk,NOT rst,'0');
+ctrl1/state_D(0) <= ((EXP13_.EXP)
+	OR (ctrl1/state(1) AND ctrl1/state(2))
+	OR (NOT sendDone AND NOT ctrl1/state(0) AND ctrl1/state(1))
+	OR (ctrl1/state(0) AND NOT ctrl1/state(1) AND NOT ctrl1/state(2))
+	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND data(1) AND 
+	RcvData(1) AND NOT LastKey)
+	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND NOT data(1) AND 
+	NOT RcvData(1) AND NOT LastKey)
+	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND RcvData(0) AND 
+	NOT LastKey AND NOT data(0))
+	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND NOT RcvData(0) AND 
+	NOT LastKey AND data(0))
+	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND RcvData(2) AND 
+	NOT LastKey AND data(2))
+	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND RcvData(3) AND 
+	NOT LastKey AND NOT data(3))
+	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND NOT RcvData(3) AND 
+	NOT LastKey AND data(3))
+	OR (trig AND ctrl1/state(0) AND ctrl1/state(2))
+	OR (trig AND NOT ctrl1/state(1) AND NOT ctrl1/state(2))
+	OR (ctrl1/state(0) AND NOT ctrl1/state(2) AND rcv1/state(1) AND 
+	rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND NOT rcv1/state(3))
+	OR (ctrl1/state(0) AND NOT ctrl1/state(2) AND NOT ctrl1/count(0) AND 
 	tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
 	tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/count(0) AND ctrl1/count(1) AND NOT ctrl1/alarm AND rcv1/state(2) AND 
-	tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
-	tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/count(0) AND ctrl1/count(1) AND NOT ctrl1/alarm AND rcv1/state(3) AND 
-	tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
-	tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/count(0) AND ctrl1/count(1) AND NOT rcv1/state(1) AND NOT ctrl1/alarm AND 
-	tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
-	tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/count(0) AND ctrl1/count(1) AND NOT rcv1/state(4) AND NOT ctrl1/alarm AND 
+	OR (ctrl1/state(0) AND NOT ctrl1/state(2) AND NOT ctrl1/count(1) AND 
 	tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
 	tim1/timer(0) AND tim1/timer(1)));
 
-FTCPE_ctrl1/count0: FTCPE port map (ctrl1/count(0),ctrl1/count_T(0),clk,'0','0',rst);
-ctrl1/count_T(0) <= ((ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	NOT ctrl1/count(0) AND rcv1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	NOT ctrl1/count(0) AND rcv1/state(2) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	NOT ctrl1/count(0) AND rcv1/state(3) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(2) AND ctrl1/count(0))
-	OR (NOT ctrl1/state(1) AND ctrl1/state(0) AND ctrl1/count(0))
-	OR (ctrl1/state(0) AND ctrl1/count(0) AND NOT ctrl1/count(1) AND 
-	rcv1/state(3) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
-	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	NOT ctrl1/count(0) AND NOT rcv1/state(1) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	NOT ctrl1/count(0) AND NOT rcv1/state(4) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(0) AND ctrl1/count(0) AND NOT ctrl1/count(1) AND 
-	NOT rcv1/state(1) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
-	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(0) AND ctrl1/count(0) AND NOT ctrl1/count(1) AND 
-	NOT rcv1/state(4) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
-	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(0) AND ctrl1/count(0) AND NOT ctrl1/count(1) AND 
-	rcv1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
-	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(0) AND ctrl1/count(0) AND NOT ctrl1/count(1) AND 
-	rcv1/state(2) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
-	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1)));
-
-FDCPE_ctrl1/count1: FDCPE port map (ctrl1/count(1),ctrl1/count_D(1),clk,'0','0',rst);
-ctrl1/count_D(1) <= ((ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/count(0) AND rcv1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/count(0) AND rcv1/state(2) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/count(0) AND rcv1/state(3) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND NOT ctrl1/state(2) AND ctrl1/count(1))
-	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/count(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/count(0) AND NOT rcv1/state(1) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/count(0) AND NOT rcv1/state(4) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1)));
-
-FTCPE_ctrl1/nextSig: FTCPE port map (ctrl1/nextSig,ctrl1/nextSig_T,clk,'0','0');
-ctrl1/nextSig_T <= ((rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-	ctrl1/state(2) AND NOT RcvData(2) AND NOT LastKey AND NOT data(2))
-	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-	ctrl1/state(2) AND RcvData(3) AND NOT LastKey AND NOT data(3))
-	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-	ctrl1/state(2) AND NOT RcvData(3) AND NOT LastKey AND data(3))
-	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-	ctrl1/state(2) AND data(1) AND RcvData(1) AND NOT LastKey)
-	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-	ctrl1/state(2) AND NOT data(1) AND NOT RcvData(1) AND NOT LastKey)
-	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-	ctrl1/state(2) AND RcvData(0) AND NOT LastKey AND NOT data(0))
-	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-	ctrl1/state(2) AND NOT RcvData(0) AND NOT LastKey AND data(0))
-	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
-	ctrl1/state(2) AND RcvData(2) AND NOT LastKey AND data(2)));
-
-FDCPE_ctrl1/state0: FDCPE port map (ctrl1/state(0),ctrl1/state_D(0),clk,NOT rst,'0');
-ctrl1/state_D(0) <= ((ctrl1/state(2))
-	OR (ctrl1/state(0) AND tim1/timer(5) AND tim1/timer(4) AND 
-	tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (NOT ctrl1/state(1) AND trig)
-	OR (NOT ctrl1/state(1) AND ctrl1/state(0))
-	OR (NOT sendDone AND ctrl1/state(1) AND NOT ctrl1/state(0))
-	OR (ctrl1/state(0) AND rcv1/state(1) AND rcv1/state(4) AND 
-	NOT rcv1/state(0) AND NOT rcv1/state(2) AND NOT rcv1/state(3)));
-
 FDCPE_ctrl1/state1: FDCPE port map (ctrl1/state(1),ctrl1/state_D(1),clk,NOT rst,'0');
-ctrl1/state_D(1) <= ((ctrl1/state(2))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND rcv1/state(1) AND 
+ctrl1/state_D(1) <= ((NOT ctrl1/state(0) AND NOT ctrl1/state(1))
+	OR (NOT trig AND ctrl1/state(0) AND ctrl1/state(2))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/state(2))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND rcv1/state(1) AND 
 	rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND NOT rcv1/state(3))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND ctrl1/count(0) AND 
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
 	ctrl1/count(1) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
 	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1))
-	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0)));
+	OR (NOT ctrl1/state(0) AND ctrl1/state(2) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1)));
 
-FDCPE_ctrl1/state2: FDCPE port map (ctrl1/state(2),ctrl1/state_D(2),clk,NOT rst,'0');
-ctrl1/state_D(2) <= ((NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-	NOT RcvData(2) AND NOT LastKey AND NOT data(2))
-	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-	RcvData(3) AND NOT LastKey AND NOT data(3))
-	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-	NOT RcvData(3) AND NOT LastKey AND data(3))
-	OR (ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	rcv1/state(1) AND rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND 
-	NOT rcv1/state(3))
-	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-	data(1) AND RcvData(1) AND NOT LastKey)
-	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-	NOT data(1) AND NOT RcvData(1) AND NOT LastKey)
-	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-	RcvData(0) AND NOT LastKey AND NOT data(0))
-	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-	NOT RcvData(0) AND NOT LastKey AND data(0))
-	OR (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND ctrl1/state(2) AND 
-	RcvData(2) AND NOT LastKey AND data(2)));
+FTCPE_ctrl1/state2: FTCPE port map (ctrl1/state(2),ctrl1/state_T(2),clk,NOT rst,'0');
+ctrl1/state_T(2) <= ((ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/state(2))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND rcv1/state(1) AND 
+	rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND NOT rcv1/state(3))
+	OR (ctrl1/state(1) AND ctrl1/state(2) AND tim1/timer(5) AND 
+	tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
+	tim1/timer(1))
+	OR (ctrl1/state(0) AND ctrl1/state(1) AND ctrl1/count(0) AND 
+	ctrl1/count(1) AND tim1/timer(5) AND tim1/timer(4) AND tim1/timer(3) AND 
+	tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1)));
 
 
-getRand <= (NOT ctrl1/state(1) AND ctrl1/state(0) AND NOT ctrl1/state(2));
+getRand <= (ctrl1/state(0) AND NOT ctrl1/state(1) AND NOT ctrl1/state(2));
 
 
-larm <= (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	ctrl1/alarm);
+larm <= (NOT ctrl1/state(0) AND ctrl1/alarm AND NOT ctrl1/state(1) AND 
+	NOT ctrl1/state(2));
 
 
-okLmp <= (NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2) AND 
-	NOT ctrl1/alarm);
+okLmp <= NOT ((NOT ctrl1/state(0) AND NOT ctrl1/alarm AND NOT ctrl1/state(1) AND 
+	NOT ctrl1/state(2)));
 
 
-rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT <= ((rst AND ctrl1/state(1) AND ctrl1/state(0) AND 
+rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT <= ((rst AND ctrl1/state(0) AND ctrl1/state(1) AND 
 	NOT ctrl1/state(2))
-	OR (rst AND NOT ctrl1/state(1) AND NOT ctrl1/state(0) AND 
+	OR (rst AND NOT ctrl1/state(0) AND NOT ctrl1/state(1) AND 
 	ctrl1/state(2)));
 
 FDCPE_rcv1/state0: FDCPE port map (rcv1/state(0),rcv1/state_D(0),lowClk,NOT rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT,'0');
@@ -526,16 +577,16 @@ rcv1/state_D(1) <= ((NOT rcv AND NOT rcv1/state(1) AND rcv1/state(0) AND
 	rcv1/state(2) AND rcv1/state(3)));
 
 FDCPE_rcv1/state2: FDCPE port map (rcv1/state(2),rcv1/state_D(2),lowClk,NOT rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT,'0');
-rcv1/state_D(2) <= ((rcv1/state(1) AND NOT rcv1/state(4) AND NOT rcv1/state(0) AND 
+rcv1/state_D(2) <= ((NOT rcv AND NOT rcv1/state(1) AND NOT rcv1/state(4) AND 
+	rcv1/state(0) AND rcv1/state(2))
+	OR (rcv1/state(1) AND NOT rcv1/state(4) AND NOT rcv1/state(0) AND 
 	rcv1/state(2) AND rcv1/state(3))
 	OR (NOT rcv1/state(1) AND NOT rcv1/state(4) AND rcv1/state(0) AND 
 	rcv1/state(2) AND rcv1/state(3))
 	OR (rcv AND NOT rcv1/state(4) AND NOT rcv1/state(0) AND 
 	rcv1/state(2))
 	OR (NOT rcv AND rcv1/state(1) AND NOT rcv1/state(4) AND 
-	rcv1/state(0) AND NOT rcv1/state(2))
-	OR (NOT rcv AND NOT rcv1/state(1) AND NOT rcv1/state(4) AND 
-	rcv1/state(0) AND rcv1/state(2)));
+	rcv1/state(0) AND NOT rcv1/state(2)));
 
 FDCPE_rcv1/state3: FDCPE port map (rcv1/state(3),rcv1/state_D(3),lowClk,NOT rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT,'0');
 rcv1/state_D(3) <= ((rcv1/state(1) AND NOT rcv1/state(4) AND NOT rcv1/state(0) AND 
@@ -550,39 +601,33 @@ rcv1/state_D(3) <= ((rcv1/state(1) AND NOT rcv1/state(4) AND NOT rcv1/state(0) A
 	rcv1/state(2) AND rcv1/state(3)));
 
 FDCPE_rcv1/state4: FDCPE port map (rcv1/state(4),rcv1/state_D(4),lowClk,NOT rcv1/data_0_or0000/rcv1/data_0_or0000_D/rcv1/data_0_or0000/rcv1/data_0_or0000_D_D1__$INT,'0');
-rcv1/state_D(4) <= ((rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND 
+rcv1/state_D(4) <= ((rcv1/state(1) AND NOT rcv1/state(4) AND rcv1/state(0) AND 
+	rcv1/state(2) AND rcv1/state(3))
+	OR (rcv1/state(4) AND NOT rcv1/state(0) AND NOT rcv1/state(2) AND 
 	NOT rcv1/state(3))
 	OR (NOT rcv AND NOT rcv1/state(1) AND rcv1/state(4) AND 
-	NOT rcv1/state(2) AND NOT rcv1/state(3))
-	OR (rcv1/state(1) AND NOT rcv1/state(4) AND rcv1/state(0) AND 
-	rcv1/state(2) AND rcv1/state(3)));
+	NOT rcv1/state(2) AND NOT rcv1/state(3)));
 
 
-sendEnable <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
+sendEnable <= (NOT ctrl1/state(0) AND ctrl1/state(1) AND NOT ctrl1/state(2));
 
-FTCPE_tim1/timer0: FTCPE port map (tim1/timer(0),'1',lowClk,tim1/timer_CLR(0),'0');
-tim1/timer_CLR(0) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
+FTCPE_tim1/timer0: FTCPE port map (tim1/timer(0),'1',lowClk,TimerStart/TimerStart_D2,'0');
 
-FTCPE_tim1/timer1: FTCPE port map (tim1/timer(1),tim1/timer(0),lowClk,tim1/timer_CLR(1),'0');
-tim1/timer_CLR(1) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
+FTCPE_tim1/timer1: FTCPE port map (tim1/timer(1),tim1/timer(0),lowClk,TimerStart/TimerStart_D2,'0');
 
-FTCPE_tim1/timer2: FTCPE port map (tim1/timer(2),tim1/timer_T(2),lowClk,tim1/timer_CLR(2),'0');
+FTCPE_tim1/timer2: FTCPE port map (tim1/timer(2),tim1/timer_T(2),lowClk,TimerStart/TimerStart_D2,'0');
 tim1/timer_T(2) <= (tim1/timer(0) AND tim1/timer(1));
-tim1/timer_CLR(2) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
 
-FTCPE_tim1/timer3: FTCPE port map (tim1/timer(3),tim1/timer_T(3),lowClk,tim1/timer_CLR(3),'0');
+FTCPE_tim1/timer3: FTCPE port map (tim1/timer(3),tim1/timer_T(3),lowClk,TimerStart/TimerStart_D2,'0');
 tim1/timer_T(3) <= (tim1/timer(2) AND tim1/timer(0) AND tim1/timer(1));
-tim1/timer_CLR(3) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
 
-FTCPE_tim1/timer4: FTCPE port map (tim1/timer(4),tim1/timer_T(4),lowClk,tim1/timer_CLR(4),'0');
+FTCPE_tim1/timer4: FTCPE port map (tim1/timer(4),tim1/timer_T(4),lowClk,TimerStart/TimerStart_D2,'0');
 tim1/timer_T(4) <= (tim1/timer(3) AND tim1/timer(2) AND tim1/timer(0) AND 
 	tim1/timer(1));
-tim1/timer_CLR(4) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
 
-FTCPE_tim1/timer5: FTCPE port map (tim1/timer(5),tim1/timer_T(5),lowClk,tim1/timer_CLR(5),'0');
+FTCPE_tim1/timer5: FTCPE port map (tim1/timer(5),tim1/timer_T(5),lowClk,TimerStart/TimerStart_D2,'0');
 tim1/timer_T(5) <= (tim1/timer(4) AND tim1/timer(3) AND tim1/timer(2) AND 
 	tim1/timer(0) AND tim1/timer(1));
-tim1/timer_CLR(5) <= (ctrl1/state(1) AND NOT ctrl1/state(0) AND NOT ctrl1/state(2));
 
 Register Legend:
  FDCPE (Q,D,C,CLR,PRE,CE); 

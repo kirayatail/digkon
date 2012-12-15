@@ -1,16 +1,16 @@
-Release 14.3 - xst P.40xd (nt64)
+Release 14.2 - xst P.28xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: top.prj
 
@@ -77,22 +77,22 @@ Setting FSM Encoding Algorithm to : OPT
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/workspace/digkon/project2/host_2/keylookup.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project2/host_2/keylookup.vhd" in Library work.
 Architecture behavioral of Entity keylookup is up to date.
-Compiling vhdl file "C:/workspace/digkon/project2/host_2/crypto.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project2/host_2/crypto.vhd" in Library work.
 Architecture behavioral of Entity crypto is up to date.
-Compiling vhdl file "C:/workspace/digkon/project2/host_2/equals.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project2/host_2/equals.vhd" in Library work.
 Architecture behavioral of Entity equals is up to date.
-Compiling vhdl file "C:/workspace/digkon/project2/host_2/ctrl.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project2/host_2/ctrl.vhd" in Library work.
 Entity <ctrl> compiled.
 Entity <ctrl> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/workspace/digkon/project2/host_2/checker.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project2/host_2/checker.vhd" in Library work.
 Architecture behavioral of Entity checker is up to date.
-Compiling vhdl file "C:/workspace/digkon/project2/host_2/timer.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project2/host_2/timer.vhd" in Library work.
 Architecture behavioral of Entity timer is up to date.
-Compiling vhdl file "C:/workspace/digkon/project2/host_2/receiver.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project2/host_2/receiver.vhd" in Library work.
 Architecture behavioral of Entity receiver is up to date.
-Compiling vhdl file "C:/workspace/digkon/project2/host_2/top.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project2/host_2/top.vhd" in Library work.
 Architecture behavioral of Entity top is up to date.
 
 =========================================================================
@@ -171,13 +171,14 @@ Entity <receiver> analyzed. Unit <receiver> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <ctrl>.
-    Related source file is "C:/workspace/digkon/project2/host_2/ctrl.vhd".
+    Related source file is "C:/Temp/digkon/project2/host_2/ctrl.vhd".
     Found 1-bit register for signal <alarm>.
+    Found 1-bit 7-to-1 multiplexer for signal <alarm$mux0001> created at line 47.
     Found 2-bit register for signal <count>.
     Found 2-bit adder for signal <count$addsub0000> created at line 68.
     Found 1-bit register for signal <nextSig>.
     Found 3-bit register for signal <state>.
-    Found 3-bit 5-to-1 multiplexer for signal <state$mux0001> created at line 47.
+    Found 3-bit 7-to-1 multiplexer for signal <state$mux0001> created at line 47.
     Summary:
 	inferred   2 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
@@ -185,7 +186,7 @@ Unit <ctrl> synthesized.
 
 
 Synthesizing Unit <timer>.
-    Related source file is "C:/workspace/digkon/project2/host_2/timer.vhd".
+    Related source file is "C:/Temp/digkon/project2/host_2/timer.vhd".
     Found 6-bit up counter for signal <timer>.
     Summary:
 	inferred   1 Counter(s).
@@ -193,7 +194,7 @@ Unit <timer> synthesized.
 
 
 Synthesizing Unit <receiver>.
-    Related source file is "C:/workspace/digkon/project2/host_2/receiver.vhd".
+    Related source file is "C:/Temp/digkon/project2/host_2/receiver.vhd".
     Found 4-bit register for signal <data>.
     Found 5-bit register for signal <state>.
     Found 5-bit 19-to-1 multiplexer for signal <state$mux0002> created at line 51.
@@ -203,7 +204,7 @@ Unit <receiver> synthesized.
 
 
 Synthesizing Unit <keylookup>.
-    Related source file is "C:/workspace/digkon/project2/host_2/keylookup.vhd".
+    Related source file is "C:/Temp/digkon/project2/host_2/keylookup.vhd".
     Found 1-bit register for signal <state<0>>.
     Summary:
 	inferred   1 D-type flip-flop(s).
@@ -211,13 +212,13 @@ Unit <keylookup> synthesized.
 
 
 Synthesizing Unit <crypto>.
-    Related source file is "C:/workspace/digkon/project2/host_2/crypto.vhd".
+    Related source file is "C:/Temp/digkon/project2/host_2/crypto.vhd".
     Found 4-bit xor2 for signal <enc>.
 Unit <crypto> synthesized.
 
 
 Synthesizing Unit <equals>.
-    Related source file is "C:/workspace/digkon/project2/host_2/equals.vhd".
+    Related source file is "C:/Temp/digkon/project2/host_2/equals.vhd".
     Found 1-bit xor2 for signal <result$xor0000>.
     Found 1-bit xor2 for signal <result$xor0001>.
     Found 1-bit xor2 for signal <result$xor0002>.
@@ -228,12 +229,12 @@ Unit <equals> synthesized.
 
 
 Synthesizing Unit <checker>.
-    Related source file is "C:/workspace/digkon/project2/host_2/checker.vhd".
+    Related source file is "C:/Temp/digkon/project2/host_2/checker.vhd".
 Unit <checker> synthesized.
 
 
 Synthesizing Unit <top>.
-    Related source file is "C:/workspace/digkon/project2/host_2/top.vhd".
+    Related source file is "C:/Temp/digkon/project2/host_2/top.vhd".
 Unit <top> synthesized.
 
 
@@ -250,8 +251,9 @@ Macro Statistics
  2-bit register                                        : 1
  3-bit register                                        : 1
  5-bit register                                        : 1
-# Multiplexers                                         : 2
- 3-bit 5-to-1 multiplexer                              : 1
+# Multiplexers                                         : 3
+ 1-bit 7-to-1 multiplexer                              : 1
+ 3-bit 7-to-1 multiplexer                              : 1
  5-bit 19-to-1 multiplexer                             : 1
 # Xors                                                 : 5
  1-bit xor2                                            : 4
@@ -274,8 +276,9 @@ Macro Statistics
  6-bit up counter                                      : 1
 # Registers                                            : 7
  Flip-Flops                                            : 7
-# Multiplexers                                         : 2
- 3-bit 5-to-1 multiplexer                              : 1
+# Multiplexers                                         : 3
+ 1-bit 7-to-1 multiplexer                              : 1
+ 3-bit 7-to-1 multiplexer                              : 1
  5-bit 19-to-1 multiplexer                             : 1
 # Xors                                                 : 1
  4-bit xor2                                            : 1
@@ -386,36 +389,38 @@ Design Statistics
 # IOs                              : 14
 
 Cell Usage :
-# BELS                             : 337
-#      AND2                        : 116
-#      AND3                        : 18
+# BELS                             : 390
+#      AND2                        : 152
+#      AND3                        : 16
 #      AND4                        : 2
 #      AND5                        : 6
 #      AND6                        : 1
 #      GND                         : 1
-#      INV                         : 128
-#      OR2                         : 42
-#      OR3                         : 3
-#      OR4                         : 6
+#      INV                         : 137
+#      OR2                         : 53
+#      OR3                         : 2
+#      OR4                         : 3
 #      OR5                         : 1
+#      OR6                         : 2
+#      OR7                         : 2
 #      OR8                         : 1
-#      VCC                         : 2
+#      VCC                         : 1
 #      XOR2                        : 10
 # FlipFlops/Latches                : 23
-#      FDC                         : 15
-#      FDCE                        : 8
+#      FDC                         : 16
+#      FDCE                        : 7
 # IO Buffers                       : 14
 #      IBUF                        : 10
 #      OBUF                        : 4
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.05 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 19.17 secs
  
 --> 
 
-Total memory usage is 248376 kilobytes
+Total memory usage is 252900 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

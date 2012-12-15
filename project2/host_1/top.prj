@@ -1,0 +1,4 @@
+vhdl work "sender.vhd"
+vhdl work "rand.vhf"
+vhdl work "counter.vhd"
+vhdl work "top.vhf"

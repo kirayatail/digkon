@@ -4,14 +4,14 @@
 //   ____  ____ 
 //  /   /\/   / 
 // /___/  \  /    Vendor: Xilinx 
-// \   \   \/     Version : 14.3
+// \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : equals.vf
-// /___/   /\     Timestamp : 12/05/2012 14:19:12
+// /___/   /\     Timestamp : 12/15/2012 16:08:19
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/workspace/digkon/project/host_cpld2/equals.vf -w C:/workspace/digkon/project/host_cpld2/equals.sch
+//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/Temp/digkon/project/host_cpld2/equals.vf -w C:/Temp/digkon/project/host_cpld2/equals.sch
 //Design Name: equals
 //Device: xc9500xl
 //Purpose:

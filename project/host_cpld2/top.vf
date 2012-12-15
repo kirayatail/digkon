@@ -4,14 +4,14 @@
 //   ____  ____ 
 //  /   /\/   / 
 // /___/  \  /    Vendor: Xilinx 
-// \   \   \/     Version : 14.3
+// \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : top.vf
-// /___/   /\     Timestamp : 12/14/2012 13:48:33
+// /___/   /\     Timestamp : 12/15/2012 16:08:20
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/workspace/digkon/project/host_cpld2/top.vf -w C:/workspace/digkon/project/host_cpld2/top.sch
+//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/Temp/digkon/project/host_cpld2/top.vf -w C:/Temp/digkon/project/host_cpld2/top.sch
 //Design Name: top
 //Device: xc9500xl
 //Purpose:
@@ -111,22 +111,23 @@ module top(clk,
    wire XLXN_4;
    wire XLXN_5;
    wire XLXN_30;
-   wire XLXN_51;
-   wire XLXN_56;
    wire XLXN_61;
    wire [3:0] XLXN_83;
    wire XLXN_84;
    wire XLXN_85;
    wire XLXN_105;
+   wire XLXN_106;
+   wire XLXN_109;
+   wire XLXN_110;
    
    ctrl  XLXI_1 (.checkOK(XLXN_105), 
                 .clk(clk), 
                 .lastKey(XLXN_61), 
                 .rcvDone(XLXN_84), 
-                .reset(XLXN_51), 
+                .reset(XLXN_109), 
                 .sendDone(sendDone), 
                 .timeout(Timeout), 
-                .trig(XLXN_56), 
+                .trig(XLXN_110), 
                 .checkRst(XLXN_5), 
                 .larmOut(larm), 
                 .nextKey(XLXN_4), 
@@ -145,13 +146,17 @@ module top(clk,
                  .restart(XLXN_30), 
                  .timeout(Timeout));
    INV  XLXI_10 (.I(rst), 
-                .O(XLXN_51));
+                .O(XLXN_109));
    INV  XLXI_11 (.I(trig), 
-                .O(XLXN_56));
+                .O(XLXN_106));
    receiver  XLXI_12 (.enable(XLXN_85), 
                      .lowClk(lowClk), 
                      .receiver(rcv), 
-                     .reset(XLXN_51), 
+                     .reset(XLXN_109), 
                      .rcvData(XLXN_83[3:0]), 
                      .rcvDone(XLXN_84));
+   lev2puls  XLXI_13 (.clk(clk), 
+                     .levin(XLXN_106), 
+                     .reset(XLXN_109), 
+                     .pulson(XLXN_110));
 endmodule

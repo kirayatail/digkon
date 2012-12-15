@@ -40,3 +40,22 @@ cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -lo
 XSLTProcess top_build.xml 
 tsim -intstyle ise top top.nga 
 hprep6 -s IEEE1149 -n top -i top 
+xst -intstyle ise -ifn "C:/Temp/digkon/project2/host_2/top.xst" -ofn "C:/Temp/digkon/project2/host_2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pin_ass.ucf -p xc9572xl-PC44-5 top.ngc top.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -nomlopt -inputs 54 -pterms 25 -unused float -power std -terminate keeper -wysiwyg top.ngd 
+XSLTProcess top_build.xml 
+tsim -intstyle ise top top.nga 
+hprep6 -s IEEE1149 -n top -i top 
+xst -intstyle ise -ifn "C:/Temp/digkon/project2/host_2/top.xst" -ofn "C:/Temp/digkon/project2/host_2/top.syr" 
+xst -intstyle ise -ifn "C:/Temp/digkon/project2/host_2/top.xst" -ofn "C:/Temp/digkon/project2/host_2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pin_ass.ucf -p xc9572xl-PC44-5 top.ngc top.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -nomlopt -inputs 54 -pterms 25 -unused float -power std -terminate keeper -wysiwyg top.ngd 
+XSLTProcess top_build.xml 
+tsim -intstyle ise top top.nga 
+hprep6 -s IEEE1149 -n top -i top 
+xst -intstyle ise -ifn "C:/Temp/digkon/project2/host_2/top.xst" -ofn "C:/Temp/digkon/project2/host_2/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pin_ass.ucf -p xc9572xl-PC44-5 top.ngc top.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -nomlopt -inputs 54 -pterms 25 -unused float -power std -terminate keeper -wysiwyg top.ngd 
+XSLTProcess top_build.xml 
+tsim -intstyle ise top top.nga 
+hprep6 -s IEEE1149 -n top -i top 

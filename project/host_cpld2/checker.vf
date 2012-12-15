@@ -4,14 +4,14 @@
 //   ____  ____ 
 //  /   /\/   / 
 // /___/  \  /    Vendor: Xilinx 
-// \   \   \/     Version : 14.3
+// \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : checker.vf
-// /___/   /\     Timestamp : 12/14/2012 13:48:33
+// /___/   /\     Timestamp : 12/15/2012 16:08:19
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/workspace/digkon/project/host_cpld2/checker.vf -w C:/workspace/digkon/project/host_cpld2/checker.sch
+//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/Temp/digkon/project/host_cpld2/checker.vf -w C:/Temp/digkon/project/host_cpld2/checker.sch
 //Design Name: checker
 //Device: xc9500xl
 //Purpose:
