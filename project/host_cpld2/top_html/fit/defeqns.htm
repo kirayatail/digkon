@@ -13,18 +13,18 @@ XLXI_12/state_FSM_FFd1.D = rcv & !XLXI_12/state_FSM_FFd1 &
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd2
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_2
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_1
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# rcv & !XLXI_12/state_FSM_FFd5 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_4
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# rcv & !XLXI_12/state_FSM_FFd5 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_2
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_12/state_FSM_FFd1 & !XLXI_12/state_FSM_FFd2 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_12/state_FSM_FFd1.CLK = lowClk;
@@ -36,13 +36,14 @@ XLXI_12/state_FSM_FFd2.T = !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 &
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# rcv & !XLXI_12/state_FSM_FFd1 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_1
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_15
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# rcv & XLXI_12/state_FSM_FFd2 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd4
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_17
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcv & XLXI_12/state_FSM_FFd1 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd4;
@@ -53,16 +54,15 @@ XLXI_12/state_FSM_FFd3.D = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 &
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd5
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_13
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# rcv & XLXI_12/state_FSM_FFd1 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_1
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# rcv & XLXI_12/state_FSM_FFd1 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# rcv & !XLXI_12/state_FSM_FFd1 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# rcv & !XLXI_12/state_FSM_FFd2 & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_17
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# rcv & XLXI_12/state_FSM_FFd1 & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_12/state_FSM_FFd3.CLK = lowClk;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_12/state_FSM_FFd3.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;    
 </td></tr><tr><td>
@@ -70,22 +70,22 @@ XLXI_12/state_FSM_FFd4.D = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 &
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd4
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcv & XLXI_12/state_FSM_FFd1 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_11
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcv & XLXI_12/state_FSM_FFd1 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_15
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcv & !XLXI_12/state_FSM_FFd1 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & XLXI_12/state_FSM_FFd3;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_12/state_FSM_FFd4.CLK = lowClk;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_12/state_FSM_FFd4.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;    
 </td></tr><tr><td>
 XLXI_12/state_FSM_FFd5.D = XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_10
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcv & XLXI_12/state_FSM_FFd1 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcv & !XLXI_12/state_FSM_FFd1 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcv & !XLXI_12/state_FSM_FFd1 & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd4
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_13
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcv & XLXI_12/state_FSM_FFd1 & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd4;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_12/state_FSM_FFd5.CLK = lowClk;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_12/state_FSM_FFd5.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;    
 </td></tr><tr><td>
@@ -108,7 +108,25 @@ XLXI_14/alarm.D = !XLXI_14/tstate<2> & XLXI_14/alarm
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<0> & !XLXI_2/XLXN_31<0> & !data<0> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_1
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<2> & XLXI_2/XLXN_31<2> & data<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_2
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_14/tstate<2> & XLXI_14/count<0> & XLXI_14/count<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_17
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0> & 
@@ -119,29 +137,12 @@ XLXI_14/alarm.D = !XLXI_14/tstate<2> & XLXI_14/alarm
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_15
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_16
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<3> & XLXI_2/XLXN_31<3> & data<3> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_14/tstate<2> & XLXI_14/count<0> & XLXI_14/count<1> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_18
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<2> & XLXI_2/XLXN_31<2> & data<2> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_SC$16;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_14/alarm.CLK = clk;	// GCK
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !XLXI_14/alarm.AR = rst;	// GSR    
@@ -150,6 +151,7 @@ XLXI_14/count<0>.T = XLXI_14/tstate<0> & XLXI_14/tstate<1> &
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_14/tstate<2> & XLXI_14/count<0>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_14/tstate<2> & XLXI_14/count<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_12
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_14/tstate<2> & !XLXI_14/count<0> & XLXI_9/timer<0> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<1> & XLXI_9/timer<2> & XLXI_9/timer<3> & 
@@ -165,6 +167,7 @@ XLXI_14/count<1>.T = XLXI_14/tstate<0> & XLXI_14/tstate<1> &
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_14/tstate<2> & XLXI_14/count<1>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_14/tstate<2> & XLXI_14/count<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_11
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_14/tstate<2> & XLXI_14/count<0> & !XLXI_14/count<1> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
@@ -185,7 +188,7 @@ XLXI_14/tstate<0>.T = rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !XLXI_14/tstate<1> & !XLXI_14/tstate<2> & XLXN_110
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_14/tstate<2> & sendDone
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_17
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_14
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>;
@@ -194,13 +197,13 @@ XLXI_14/tstate<0>.T = rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
 </td></tr><tr><td>
 !XLXI_14/tstate<1>.D = !XLXI_14/tstate<0> & !XLXI_14/tstate<1>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_14/tstate<2>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_14/tstate<0> & XLXI_14/tstate<2> & XLXN_110
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !XLXI_14/tstate<0> & XLXI_14/tstate<2> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_15
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_13
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_14/tstate<2>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_14/count<0> & XLXI_14/count<1> & XLXI_9/timer<0> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_9/timer<1> & XLXI_9/timer<2> & XLXI_9/timer<3> & 
@@ -217,40 +220,62 @@ XLXI_14/tstate<2>.T = rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_14/tstate<2>.CLK = clk;	// GCK
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !XLXI_14/tstate<2>.AR = rst;	// GSR    
 </td></tr><tr><td>
-!XLXI_2/XLXI_12/tstate<0>.D = XLXI_2/XLXI_12/tstate<0> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<1>;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXI_12/tstate<0>.CLK = nextKey;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXI_12/tstate<0>.AR = resetChecker;    
+XLXI_2/XLXI_12/tstate<0> = !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resetChecker & !nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_2/XLXI_12/tstate<0>;    
 </td></tr><tr><td>
-!XLXI_2/XLXI_12/tstate<1>.D = !XLXI_2/XLXI_12/tstate<0> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<1>;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXI_12/tstate<1>.CLK = nextKey;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXI_12/tstate<1>.AR = resetChecker;    
-</td></tr><tr><td>
-XLXI_2/XLXN_31<0>.D = XLXI_2/XLXI_12/tstate<0> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<1>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_2/XLXI_12/tstate<0> & XLXI_2/XLXN_31<0>;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<0>.CLK = nextKey;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<0>.CE = !resetChecker;    
-</td></tr><tr><td>
-!XLXI_2/XLXN_31<1>.D = !XLXI_2/XLXI_12/tstate<0> & 
+XLXI_2/XLXI_12/tstate<1> = !resetChecker & !nextKey & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_2/XLXI_12/tstate<1>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<1>;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<1>.CLK = nextKey;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<1>.CE = !resetChecker;    
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resetChecker & XLXI_2/XLXI_12/tstate<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<1> & XLXI_2/XLXI_12/tstate<0>;    
 </td></tr><tr><td>
-XLXI_2/XLXN_31<2>.D = !XLXI_2/XLXI_12/tstate<0> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<1>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_2/XLXI_12/tstate<0> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_2/XLXI_12/tstate<1> & XLXI_2/XLXN_31<2>;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<2>.CLK = nextKey;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<2>.CE = !resetChecker;    
+XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF = !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<0>;    
 </td></tr><tr><td>
-XLXI_2/XLXN_31<3>.D = XLXI_2/XLXI_12/tstate<0> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<1>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# XLXI_2/XLXI_12/tstate<0> & XLXI_2/XLXN_31<3>;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<3>.CLK = nextKey;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<3>.CE = !resetChecker;    
+XLXI_2/XLXN_31<0>.D = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<0>.CLK = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<0>.AP = !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<0>.AR = XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF;    
+</td></tr><tr><td>
+XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF = !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<1>;    
+</td></tr><tr><td>
+XLXI_2/XLXN_31<1>.D = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<1>.CLK = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<1>.AP = !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<1>.AR = XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF;    
+</td></tr><tr><td>
+XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF = !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_2/XLXI_12/tstate<1> & XLXI_2/XLXI_12/tstate<0> & XLXI_2/XLXN_31<2>;    
+</td></tr><tr><td>
+XLXI_2/XLXN_31<2>.D = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<2>.CLK = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<2>.AP = XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<2>.AR = !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF;    
+</td></tr><tr><td>
+XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF = !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_12
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<3>;    
+</td></tr><tr><td>
+XLXI_2/XLXN_31<3>.D = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<3>.CLK = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<3>.AP = !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_2/XLXN_31<3>.AR = XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF;    
 </td></tr><tr><td>
 XLXI_9/timer<0>.T = Vcc;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXI_9/timer<0>.CLK = lowClk;
@@ -293,24 +318,24 @@ XLXN_30.D = XLXI_14/tstate<0> & !XLXI_14/tstate<1> &
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   XLXN_30.CE = rst;    
 </td></tr><tr><td>
 !found = resp<0> & XLXI_2/XLXN_31<0> & data<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_4
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<0> & !XLXI_2/XLXN_31<0> & !data<0>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<1> & XLXI_2/XLXN_31<1> & data<1>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_6
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_3
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<2> & XLXI_2/XLXN_31<2> & data<2>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_7
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_8
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>;    
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_6
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>;    
 </td></tr><tr><td>
 getRand.D = XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_14/tstate<2>;
@@ -322,40 +347,39 @@ larm.D = !XLXI_14/tstate<0> & !XLXI_14/tstate<1> &
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   larm.CLK = clk;	// GCK
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   larm.CE = rst;    
 </td></tr><tr><td>
-lastkey.D = Vcc;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   lastkey.CLK = nextKey;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   lastkey.AR = resetChecker;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   lastkey.CE = XLXI_2/XLXI_12/tstate<0> & 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_2/XLXI_12/tstate<1>;    
+lastkey = !resetChecker & !nextKey & lastkey
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resetChecker & nextKey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resetChecker & lastkey & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>;    
 </td></tr><tr><td>
 nextKey.D = !XLXI_14/nextSig & !XLXI_14/tstate<0> & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!XLXI_14/tstate<1> & XLXI_14/tstate<2>;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   nextKey.CLK = clk;	// GCK
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   nextKey.CE = rst;    
 </td></tr><tr><td>
-okLmp = okLmp_BUFR;    
-</td></tr><tr><td>
-!okLmp_BUFR.D = resp<0> & XLXI_2/XLXN_31<0> & data<0>
+!okLmp.D = resp<3> & XLXI_2/XLXN_31<3> & data<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_5
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<0> & XLXI_2/XLXN_31<0> & data<0>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<0> & !XLXI_2/XLXN_31<0> & !data<0>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_1
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_17
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_7
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<1> & XLXI_2/XLXN_31<1> & data<1>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<2> & XLXI_2/XLXN_31<2> & data<2>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_16
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>;
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   okLmp_BUFR.CLK = clk;	// GCK
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   okLmp_BUFR.CE = rst;    
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_8
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   okLmp.CLK = clk;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   okLmp.CE = rst;    
 </td></tr><tr><td>
 rcvDone.D = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd4;
@@ -388,13 +412,15 @@ resp<1>.D = rcv;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   resp<1>.CE = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3;    
 </td></tr><tr><td>
-resp<2>.D = rcv;
+resp<2>.D = ;Imported pterms FB1_18
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	  rcv;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   resp<2>.CLK = lowClk;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   resp<2>.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   resp<2>.CE = XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_12/state_FSM_FFd3;    
 </td></tr><tr><td>
-resp<3>.D = rcv;
+resp<3>.D = ;Imported pterms FB1_14
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	  rcv;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   resp<3>.CLK = lowClk;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   resp<3>.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   resp<3>.CE = !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 

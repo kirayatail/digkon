@@ -31,7 +31,7 @@ entity keylookup is
 end keylookup;
 
 architecture Behavioral of keylookup is
-	type state_type is (s0, s1 , s2,last);
+	type state_type is (s0 , s1 , s2 , last);
 	signal state,tstate : state_type;
 begin
 	process(getNext, reset) begin
@@ -39,8 +39,10 @@ begin
 			tstate <= s0;
 			isLast <= '0';
 		elsif getNext = '1' then
+			isLast <= '0';
 			case state is
 				when s0 =>
+					isLast <= '1';
 					tstate <= s1;
 					key <="0110";
 				when s1 =>
@@ -50,8 +52,9 @@ begin
 					tstate <= last;
 					key <="0000";
 				when last =>
-					isLast <= '1';
-					
+					tstate <= s0;
+				when others => 
+					tstate <= s0;	
 			end case;
 		end if;
 	end process;
@@ -60,5 +63,6 @@ begin
 	process(tstate) begin
 		state <=tstate;
 	end process;
+	
 end Behavioral;
 

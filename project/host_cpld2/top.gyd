@@ -11,12 +11,12 @@ rcv S:PIN13
 rst S:PIN39
 sendDone S:PIN25
 trig S:PIN6
-okLmp S:PIN3
 found S:PIN12
 getRand S:PIN26
 larm S:PIN4
 lastkey S:PIN2
 nextKey S:PIN11
+okLmp S:PIN3
 rcvDone S:PIN36
 rcvEnable S:PIN35
 resetChecker S:PIN1
@@ -30,22 +30,21 @@ sendEnable S:PIN24
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 XLXI_14/nextSig resetChecker_OBUF XLXI_13/state_FSM_FFd2 $OpTx$FX_SC$16
-		 lastkey_OBUF _6_ XLXI_2/XLXI_12/tstate<1> larm_OBUF
-		 XLXI_2/XLXI_12/tstate<0> XLXI_2/XLXN_31<3> XLXI_2/XLXN_31<2> XLXI_2/XLXN_31<1>
-		 XLXI_2/XLXN_31<0> XLXI_12/state_FSM_FFd5 resp_3_OBUF XLXI_12/state_FSM_FFd4
-		 resp_2_OBUF XLXI_12/state_FSM_FFd3
+PARTITION FB1_1 EXP6_ resetChecker_OBUF XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF
+		 lastkey_OBUF okLmp_OBUF EXP7_ larm_OBUF
+		 XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF $OpTx$FX_SC$16 XLXI_12/state_FSM_FFd5 XLXI_12/state_FSM_FFd4
+		 XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF XLXI_12/state_FSM_FFd3 resp_3_OBUF XLXI_12/state_FSM_FFd2
+		 resp_2_OBUF XLXI_12/state_FSM_FFd1
 PARTITION FB2_2 rcvEnable_OBUF
 PARTITION FB2_5 rcvDone_OBUF
-PARTITION FB2_15 EXP7_ EXP8_ XLXI_14/alarm EXP9_
-		
-PARTITION FB3_1 EXP10_ nextKey_OBUF XLXI_12/state_FSM_FFd1 XLXI_9/timer<0>
-		 found_OBUF EXP11_ EXP12_ resp_3_OBUF/resp_3_OBUF_RSTF__$INT
-		
-PARTITION FB3_16 sendEnable_OBUF EXP13_ okLmp_BUFR.MC
-PARTITION FB4_1 EXP14_ XLXN_110 XLXI_13/state_FSM_FFd1 XLXN_30
-		 getRand_OBUF XLXI_9/timer<5> XLXI_9/timer<4> XLXI_9/timer<3>
-		 XLXI_9/timer<2> XLXI_9/timer<1> XLXI_14/tstate<2> XLXI_14/count<1>
-		 XLXI_14/count<0> XLXI_14/tstate<1> resp_0_OBUF XLXI_14/tstate<0>
-		 resp_1_OBUF XLXI_12/state_FSM_FFd2
+
+PARTITION FB3_1 EXP8_ nextKey_OBUF XLXI_14/nextSig EXP9_
+		 found_OBUF XLXN_30 XLXI_9/timer<5> XLXI_9/timer<4>
+		 XLXI_9/timer<3> XLXI_9/timer<2> XLXI_14/tstate<2> XLXI_14/count<1>
+		 XLXI_14/count<0> XLXI_14/tstate<1> XLXI_14/tstate<0> sendEnable_OBUF
+		 EXP10_ XLXI_14/alarm
+PARTITION FB4_4 resp_3_OBUF/resp_3_OBUF_RSTF__$INT getRand_OBUF XLXI_13/state_FSM_FFd2 XLXN_110
+		 XLXI_9/timer<0> XLXI_2/XLXI_12/tstate<0> XLXI_13/state_FSM_FFd1 XLXI_9/timer<1>
+		 XLXI_2/XLXN_31<3> XLXI_2/XLXN_31<2> XLXI_2/XLXN_31<1> resp_0_OBUF
+		 XLXI_2/XLXN_31<0> resp_1_OBUF XLXI_2/XLXI_12/tstate<1>
 

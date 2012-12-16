@@ -83,7 +83,7 @@ begin
 					checkRst <= '1';
 				
 				when s3 =>				-- Receive state
-				checkRst <= '0';
+					checkRst <= '0';
 					if (rcvDone = '1') then
 						tstate <= s4;
 					elsif(timeout = '1') then

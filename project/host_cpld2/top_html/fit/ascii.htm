@@ -3,7 +3,7 @@
  
 cpldfit:  version P.28xd                            Xilinx Inc.
                                   Fitter Report
-Design Name: top                                 Date: 12-16-2012, 10:53PM
+Design Name: top                                 Date: 12-16-2012, 11:43PM
 Device Used: XC9572XL-5-PC44
 Fitting Status: Successful
 
@@ -11,18 +11,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-45 /72  ( 62%) 204 /360  ( 57%) 112/216 ( 52%)   41 /72  ( 57%) 24 /34  ( 71%)
+48 /72  ( 67%) 202 /360  ( 56%) 97 /216 ( 45%)   38 /72  ( 53%) 24 /34  ( 71%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-FB1          18/18*      26/54       63/90       8/ 9
-FB2           3/18       32/54       26/90       3/ 9
-FB3           7/18       27/54       50/90       9/ 9*
-FB4          17/18       27/54       65/90       4/ 7
+FB1          16/18       30/54       82/90       8/ 9
+FB2           2/18        9/54        6/90       3/ 9
+FB3          15/18       32/54       80/90       9/ 9*
+FB4          15/18       26/54       34/90       4/ 7
              -----       -----       -----      -----    
-             45/72      112/216     204/360     24/34 
+             48/72       97/216     202/360     24/34 
 
 * - Resource is exhausted
 
@@ -47,7 +47,7 @@ GSR           :    1           1    |
 
 ** Power Data **
 
-There are 45 macrocells in high performance mode (MCHP).
+There are 48 macrocells in high performance mode (MCHP).
 There are 0 macrocells in low power mode (MCLP).
 End of Mapped Resource Summary
 **************************  Errors and Warnings  ***************************
@@ -67,81 +67,80 @@ INFO:Cpld - Inferring BUFG constraint for signal 'trig' based upon the LOC
 WARNING:Cpld:1239 - The global clock designation (BUFG) on signal 'trig_IBUF' is
    ignored. Most likely the signal is gated and therefore cannot be used as a
    global control signal.
-WARNING:Cpld:896 - Unable to map all desired signals into function block, FB1,
-   because too many function block product terms are required. Buffering output
-   signal okLmp to allow all signals assigned to this function block to be
-   placed.
 *************************  Summary of Mapped Logic  ************************
 
 ** 14 Outputs **
 
-Signal                              Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
-Name                                Pts   Inps          No.  Type    Use     Mode Rate State
-resetChecker                        3     5     FB1_2   1    I/O     O       STD  FAST RESET
-lastkey                             3     4     FB1_5   2    I/O     O       STD  FAST RESET
-okLmp                               1     1     FB1_6   3    I/O     O       STD  FAST 
-larm                                2     5     FB1_8   4    I/O     O       STD  FAST RESET
-resp<3>                             4     6     FB1_15  8    I/O     O       STD  FAST RESET
-resp<2>                             4     6     FB1_17  9    I/O     O       STD  FAST RESET
-rcvEnable                           3     4     FB2_2   35   I/O     O       STD  FAST RESET
-rcvDone                             3     6     FB2_5   36   I/O     O       STD  FAST RESET
-nextKey                             2     5     FB3_2   11   I/O     O       STD  FAST RESET
-found                               16    12    FB3_5   12   I/O     O       STD  FAST 
-sendEnable                          2     4     FB3_16  24   I/O     O       STD  FAST RESET
-getRand                             2     4     FB4_5   26   I/O     O       STD  FAST RESET
-resp<0>                             4     6     FB4_15  33   I/O     O       STD  FAST RESET
-resp<1>                             4     7     FB4_17  34   I/O     O       STD  FAST RESET
+Signal                                    Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                                      Pts   Inps          No.  Type    Use     Mode Rate State
+resetChecker                              3     5     FB1_2   1    I/O     O       STD  FAST RESET
+lastkey                                   3     5     FB1_5   2    I/O     O       STD  FAST 
+okLmp                                     17    13    FB1_6   3    I/O     O       STD  FAST RESET
+larm                                      2     5     FB1_8   4    I/O     O       STD  FAST RESET
+resp<3>                                   4     6     FB1_15  8    I/O     O       STD  FAST RESET
+resp<2>                                   4     6     FB1_17  9    I/O     O       STD  FAST RESET
+rcvEnable                                 3     4     FB2_2   35   I/O     O       STD  FAST RESET
+rcvDone                                   3     6     FB2_5   36   I/O     O       STD  FAST RESET
+nextKey                                   2     5     FB3_2   11   I/O     O       STD  FAST RESET
+found                                     16    12    FB3_5   12   I/O     O       STD  FAST 
+sendEnable                                2     4     FB3_16  24   I/O     O       STD  FAST RESET
+getRand                                   2     4     FB4_5   26   I/O     O       STD  FAST RESET
+resp<0>                                   4     6     FB4_15  33   I/O     O       STD  FAST RESET
+resp<1>                                   4     7     FB4_17  34   I/O     O       STD  FAST RESET
 
-** 31 Buried Nodes **
+** 34 Buried Nodes **
 
-Signal                              Total Total Loc     Pwr  Reg Init
-Name                                Pts   Inps          Mode State
-XLXI_14/nextSig                     1     3     FB1_1   STD  RESET
-XLXI_13/state_FSM_FFd2              1     3     FB1_3   STD  RESET
-$OpTx$FX_SC$16                      2     5     FB1_4   STD  
-XLXI_2/XLXI_12/tstate<1>            3     4     FB1_7   STD  RESET
-XLXI_2/XLXI_12/tstate<0>            3     4     FB1_9   STD  RESET
-XLXI_2/XLXN_31<3>                   4     5     FB1_10  STD  RESET
-XLXI_2/XLXN_31<2>                   4     5     FB1_11  STD  RESET
-XLXI_2/XLXN_31<1>                   4     5     FB1_12  STD  RESET
-XLXI_2/XLXN_31<0>                   4     5     FB1_13  STD  RESET
-XLXI_12/state_FSM_FFd5              6     8     FB1_14  STD  RESET
-XLXI_12/state_FSM_FFd4              6     8     FB1_16  STD  RESET
-XLXI_12/state_FSM_FFd3              8     8     FB1_18  STD  RESET
-XLXI_14/alarm                       20    26    FB2_17  STD  RESET
-XLXI_12/state_FSM_FFd1              10    8     FB3_3   STD  RESET
-XLXI_9/timer<0>                     2     2     FB3_4   STD  RESET
-resp_3_OBUF/resp_3_OBUF_RSTF__$INT  1     2     FB3_8   STD  
-okLmp_BUFR                          17    13    FB3_18  STD  RESET
-XLXN_110                            2     4     FB4_2   STD  RESET
-XLXI_13/state_FSM_FFd1              2     3     FB4_3   STD  RESET
-XLXN_30                             3     4     FB4_4   STD  RESET
-XLXI_9/timer<5>                     3     7     FB4_6   STD  RESET
-XLXI_9/timer<4>                     3     6     FB4_7   STD  RESET
-XLXI_9/timer<3>                     3     5     FB4_8   STD  RESET
-XLXI_9/timer<2>                     3     4     FB4_9   STD  RESET
-XLXI_9/timer<1>                     3     3     FB4_10  STD  RESET
-XLXI_14/tstate<2>                   3     10    FB4_11  STD  RESET
-XLXI_14/count<1>                    4     13    FB4_12  STD  RESET
-XLXI_14/count<0>                    5     13    FB4_13  STD  RESET
-XLXI_14/tstate<1>                   6     13    FB4_14  STD  RESET
-XLXI_14/tstate<0>                   6     12    FB4_16  STD  RESET
-XLXI_12/state_FSM_FFd2              9     8     FB4_18  STD  RESET
+Signal                                    Total Total Loc     Pwr  Reg Init
+Name                                      Pts   Inps          Mode State
+XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF  2     5     FB1_3   STD  
+XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF  2     5     FB1_4   STD  
+XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF  2     5     FB1_9   STD  
+$OpTx$FX_SC$16                            2     5     FB1_10  STD  
+XLXI_12/state_FSM_FFd5                    6     8     FB1_11  STD  RESET
+XLXI_12/state_FSM_FFd4                    6     8     FB1_12  STD  RESET
+XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF  2     5     FB1_13  STD  
+XLXI_12/state_FSM_FFd3                    8     8     FB1_14  STD  RESET
+XLXI_12/state_FSM_FFd2                    9     8     FB1_16  STD  RESET
+XLXI_12/state_FSM_FFd1                    10    8     FB1_18  STD  RESET
+XLXI_14/nextSig                           1     3     FB3_3   STD  RESET
+XLXN_30                                   3     4     FB3_6   STD  RESET
+XLXI_9/timer<5>                           3     7     FB3_7   STD  RESET
+XLXI_9/timer<4>                           3     6     FB3_8   STD  RESET
+XLXI_9/timer<3>                           3     5     FB3_9   STD  RESET
+XLXI_9/timer<2>                           3     4     FB3_10  STD  RESET
+XLXI_14/tstate<2>                         3     10    FB3_11  STD  RESET
+XLXI_14/count<1>                          4     13    FB3_12  STD  RESET
+XLXI_14/count<0>                          5     13    FB3_13  STD  RESET
+XLXI_14/tstate<1>                         6     13    FB3_14  STD  RESET
+XLXI_14/tstate<0>                         6     12    FB3_15  STD  RESET
+XLXI_14/alarm                             20    26    FB3_18  STD  RESET
+resp_3_OBUF/resp_3_OBUF_RSTF__$INT        1     2     FB4_4   STD  
+XLXI_13/state_FSM_FFd2                    1     3     FB4_6   STD  RESET
+XLXN_110                                  2     4     FB4_7   STD  RESET
+XLXI_9/timer<0>                           2     2     FB4_8   STD  RESET
+XLXI_2/XLXI_12/tstate<0>                  2     3     FB4_9   STD  
+XLXI_13/state_FSM_FFd1                    2     3     FB4_10  STD  RESET
+XLXI_9/timer<1>                           3     3     FB4_11  STD  RESET
+XLXI_2/XLXN_31<3>                         2     3     FB4_12  STD  RESET
+XLXI_2/XLXN_31<2>                         2     3     FB4_13  STD  RESET
+XLXI_2/XLXN_31<1>                         2     3     FB4_14  STD  RESET
+XLXI_2/XLXN_31<0>                         2     3     FB4_16  STD  RESET
+XLXI_2/XLXI_12/tstate<1>                  3     4     FB4_18  STD  
 
 ** 10 Inputs **
 
-Signal                              Loc     Pin  Pin     Pin     
-Name                                        No.  Type    Use     
-clk                                 FB1_9   5    GCK/I/O GCK
-trig                                FB1_11  6    GCK/I/O I
-rst                                 FB2_9   39   GSR/I/O GSR/I
-rcv                                 FB3_8   13   I/O     I
-lowClk                              FB3_9   14   I/O     I
-data<0>                             FB3_11  18   I/O     I
-data<1>                             FB3_14  19   I/O     I
-data<2>                             FB3_15  20   I/O     I
-data<3>                             FB3_17  22   I/O     I
-sendDone                            FB4_2   25   I/O     I
+Signal                                    Loc     Pin  Pin     Pin     
+Name                                              No.  Type    Use     
+clk                                       FB1_9   5    GCK/I/O GCK
+trig                                      FB1_11  6    GCK/I/O I
+rst                                       FB2_9   39   GSR/I/O GSR/I
+rcv                                       FB3_8   13   I/O     I
+lowClk                                    FB3_9   14   I/O     I
+data<0>                                   FB3_11  18   I/O     I
+data<1>                                   FB3_14  19   I/O     I
+data<2>                                   FB3_15  20   I/O     I
+data<3>                                   FB3_17  22   I/O     I
+sendDone                                  FB4_2   25   I/O     I
 
 Legend:
 Pin No. - ~ - User Assigned
@@ -159,77 +158,82 @@ Pin Type/Use - I  - Input             GCK - Global Clock
 X            - Signal used as input to the macrocell logic.
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
-Number of function block inputs used/remaining:               26/28
-Number of signals used by logic mapping into function block:  26
+Number of function block inputs used/remaining:               30/24
+Number of signals used by logic mapping into function block:  30
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-XLXI_14/nextSig       1       0   /\2   2     FB1_1         (b)     (b)
-resetChecker          3       0     0   2     FB1_2   1     I/O     O
-XLXI_13/state_FSM_FFd2
-                      1       0     0   4     FB1_3         (b)     (b)
-$OpTx$FX_SC$16        2       0     0   3     FB1_4         (b)     (b)
-lastkey               3       0     0   2     FB1_5   2     I/O     O
-okLmp                 1       0     0   4     FB1_6   3     I/O     O
-XLXI_2/XLXI_12/tstate<1>
-                      3       0     0   2     FB1_7         (b)     (b)
-larm                  2       0     0   3     FB1_8   4     I/O     O
-XLXI_2/XLXI_12/tstate<0>
-                      3       0     0   2     FB1_9   5     GCK/I/O GCK
-XLXI_2/XLXN_31<3>     4       0     0   1     FB1_10        (b)     (b)
-XLXI_2/XLXN_31<2>     4       0     0   1     FB1_11  6     GCK/I/O I
-XLXI_2/XLXN_31<1>     4       0     0   1     FB1_12        (b)     (b)
-XLXI_2/XLXN_31<0>     4       0   \/1   0     FB1_13        (b)     (b)
+(unused)              0       0   /\5   0     FB1_1         (b)     (b)
+resetChecker          3       0   /\1   1     FB1_2   1     I/O     O
+XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF
+                      2       0     0   3     FB1_3         (b)     (b)
+XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF
+                      2       0   \/2   1     FB1_4         (b)     (b)
+lastkey               3       2<- \/4   0     FB1_5   2     I/O     O
+okLmp                17      12<-   0   0     FB1_6   3     I/O     O
+(unused)              0       0   /\5   0     FB1_7         (b)     (b)
+larm                  2       0   /\3   0     FB1_8   4     I/O     O
+XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF
+                      2       0     0   3     FB1_9   5     GCK/I/O GCK
+$OpTx$FX_SC$16        2       0   \/3   0     FB1_10        (b)     (b)
 XLXI_12/state_FSM_FFd5
-                      6       1<-   0   0     FB1_14  7     GCK/I/O (b)
-resp<3>               4       0   \/1   0     FB1_15  8     I/O     O
+                      6       3<- \/2   0     FB1_11  6     GCK/I/O I
 XLXI_12/state_FSM_FFd4
-                      6       1<-   0   0     FB1_16        (b)     (b)
-resp<2>               4       0   \/1   0     FB1_17  9     I/O     O
+                      6       2<- \/1   0     FB1_12        (b)     (b)
+XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF
+                      2       1<- \/4   0     FB1_13        (b)     (b)
 XLXI_12/state_FSM_FFd3
-                      8       3<-   0   0     FB1_18        (b)     (b)
+                      8       4<- \/1   0     FB1_14  7     GCK/I/O (b)
+resp<3>               4       1<- \/2   0     FB1_15  8     I/O     O
+XLXI_12/state_FSM_FFd2
+                      9       4<-   0   0     FB1_16        (b)     (b)
+resp<2>               4       1<- /\2   0     FB1_17  9     I/O     O
+XLXI_12/state_FSM_FFd1
+                     10       6<- /\1   0     FB1_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: XLXI_12/state_FSM_FFd1  10: XLXI_14/tstate<1>         19: lowClk 
-  2: XLXI_12/state_FSM_FFd2  11: XLXI_14/tstate<2>         20: nextKey 
-  3: XLXI_12/state_FSM_FFd3  12: XLXI_2/XLXI_12/tstate<0>  21: okLmp_BUFR 
-  4: XLXI_12/state_FSM_FFd4  13: XLXI_2/XLXI_12/tstate<1>  22: rcv 
-  5: XLXI_12/state_FSM_FFd5  14: XLXI_2/XLXN_31<0>         23: resetChecker 
-  6: XLXI_13/state_FSM_FFd1  15: XLXI_2/XLXN_31<1>         24: resp_3_OBUF/resp_3_OBUF_RSTF__$INT 
-  7: XLXI_13/state_FSM_FFd2  16: XLXI_2/XLXN_31<2>         25: rst 
-  8: XLXI_14/alarm           17: XLXI_2/XLXN_31<3>         26: trig 
-  9: XLXI_14/tstate<0>       18: lastkey                  
+  1: XLXI_12/state_FSM_FFd1    11: XLXI_2/XLXI_12/tstate<1>  21: lowClk 
+  2: XLXI_12/state_FSM_FFd2    12: XLXI_2/XLXN_31<0>         22: nextKey 
+  3: XLXI_12/state_FSM_FFd3    13: XLXI_2/XLXN_31<1>         23: rcv 
+  4: XLXI_12/state_FSM_FFd4    14: XLXI_2/XLXN_31<2>         24: resetChecker 
+  5: XLXI_12/state_FSM_FFd5    15: XLXI_2/XLXN_31<3>         25: resp<0> 
+  6: XLXI_14/alarm             16: data<0>                   26: resp<1> 
+  7: XLXI_14/tstate<0>         17: data<1>                   27: resp<2> 
+  8: XLXI_14/tstate<1>         18: data<2>                   28: resp<3> 
+  9: XLXI_14/tstate<2>         19: data<3>                   29: resp_3_OBUF/resp_3_OBUF_RSTF__$INT 
+ 10: XLXI_2/XLXI_12/tstate<0>  20: lastkey                   30: rst 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-XLXI_14/nextSig      ........XXX............................. 3
-resetChecker         ........XXX...........X.X............... 5
-XLXI_13/state_FSM_FFd2 
-                     .....XX..................X.............. 3
-$OpTx$FX_SC$16       .......XXXX......X...................... 5
-lastkey              ...........XX......X..X................. 4
-okLmp                ....................X................... 1
-XLXI_2/XLXI_12/tstate<1> 
-                     ...........XX......X..X................. 4
-larm                 .......XXXX.............X............... 5
-XLXI_2/XLXI_12/tstate<0> 
-                     ...........XX......X..X................. 4
-XLXI_2/XLXN_31<3>    ...........XX...X..X..X................. 5
-XLXI_2/XLXN_31<2>    ...........XX..X...X..X................. 5
-XLXI_2/XLXN_31<1>    ...........XX.X....X..X................. 5
-XLXI_2/XLXN_31<0>    ...........XXX.....X..X................. 5
+resetChecker         ......XXX..............X.....X.......... 5
+XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF 
+                     .........XX..X.......X.X................ 5
+XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF 
+                     .........XX.X........X.X................ 5
+lastkey              .........XX........X.X.X................ 5
+okLmp                ...........XXXXXXXX.....XXXX.X.......... 13
+larm                 .....XXXX....................X.......... 5
+XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF 
+                     .........XXX.........X.X................ 5
+$OpTx$FX_SC$16       .....XXXX..........X.................... 5
 XLXI_12/state_FSM_FFd5 
-                     XXXXX.............X..X.X................ 8
-resp<3>              .XX.X.............X..X.X................ 6
+                     XXXXX...............X.X.....X........... 8
 XLXI_12/state_FSM_FFd4 
-                     XXXXX.............X..X.X................ 8
-resp<2>              .XX.X.............X..X.X................ 6
+                     XXXXX...............X.X.....X........... 8
+XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF 
+                     .........XX...X......X.X................ 5
 XLXI_12/state_FSM_FFd3 
-                     XXXXX.............X..X.X................ 8
+                     XXXXX...............X.X.....X........... 8
+resp<3>              .XX.X...............X.X.....X........... 6
+XLXI_12/state_FSM_FFd2 
+                     XXXXX...............X.X.....X........... 8
+resp<2>              .XX.X...............X.X.....X........... 6
+XLXI_12/state_FSM_FFd1 
+                     XXXXX...............X.X.....X........... 8
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB2  ***********************************
-Number of function block inputs used/remaining:               32/22
-Number of signals used by logic mapping into function block:  32
+Number of function block inputs used/remaining:               9/45
+Number of signals used by logic mapping into function block:  9
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB2_1         (b)     
@@ -246,139 +250,140 @@ rcvDone               3       0     0   2     FB2_5   36    I/O     O
 (unused)              0       0     0   5     FB2_12        (b)     
 (unused)              0       0     0   5     FB2_13        (b)     
 (unused)              0       0     0   5     FB2_14  42    GTS/I/O 
-(unused)              0       0   \/5   0     FB2_15  43    I/O     (b)
-(unused)              0       0   \/5   0     FB2_16        (b)     (b)
-XLXI_14/alarm        20      15<-   0   0     FB2_17  44    I/O     (b)
-(unused)              0       0   /\5   0     FB2_18        (b)     (b)
+(unused)              0       0     0   5     FB2_15  43    I/O     
+(unused)              0       0     0   5     FB2_16        (b)     
+(unused)              0       0     0   5     FB2_17  44    I/O     
+(unused)              0       0     0   5     FB2_18        (b)     
 
 Signals Used by Logic in Function Block
-  1: $OpTx$FX_SC$16          12: XLXI_2/XLXN_31<1>  23: data<2> 
-  2: XLXI_12/state_FSM_FFd1  13: XLXI_2/XLXN_31<2>  24: data<3> 
-  3: XLXI_12/state_FSM_FFd2  14: XLXI_2/XLXN_31<3>  25: lowClk 
-  4: XLXI_12/state_FSM_FFd4  15: XLXI_9/timer<0>    26: rcvDone 
-  5: XLXI_14/alarm           16: XLXI_9/timer<1>    27: rcvEnable 
-  6: XLXI_14/count<0>        17: XLXI_9/timer<2>    28: resp<0> 
-  7: XLXI_14/count<1>        18: XLXI_9/timer<3>    29: resp<1> 
-  8: XLXI_14/tstate<0>       19: XLXI_9/timer<4>    30: resp<2> 
-  9: XLXI_14/tstate<1>       20: XLXI_9/timer<5>    31: resp<3> 
- 10: XLXI_14/tstate<2>       21: data<0>            32: rst 
- 11: XLXI_2/XLXN_31<0>       22: data<1>           
+  1: XLXI_12/state_FSM_FFd1   4: XLXI_14/tstate<0>   7: lowClk 
+  2: XLXI_12/state_FSM_FFd2   5: XLXI_14/tstate<1>   8: rcvEnable 
+  3: XLXI_12/state_FSM_FFd4   6: XLXI_14/tstate<2>   9: rst 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-rcvEnable            .......XXX.....................X........ 4
-rcvDone              .XXX....................X.X....X........ 6
-XLXI_14/alarm        X...XXXXXXXXXXXXXXXXXXXX.X.XXXX......... 26
+rcvEnable            ...XXX..X............................... 4
+rcvDone              XXX...XXX............................... 6
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB3  ***********************************
-Number of function block inputs used/remaining:               27/27
-Number of signals used by logic mapping into function block:  27
+Number of function block inputs used/remaining:               32/22
+Number of signals used by logic mapping into function block:  32
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0   /\4   1     FB3_1         (b)     (b)
-nextKey               2       0   \/2   1     FB3_2   11    I/O     O
-XLXI_12/state_FSM_FFd1
-                     10       5<-   0   0     FB3_3         (b)     (b)
-XLXI_9/timer<0>       2       0   /\3   0     FB3_4         (b)     (b)
+(unused)              0       0   /\5   0     FB3_1         (b)     (b)
+nextKey               2       0   /\2   1     FB3_2   11    I/O     O
+XLXI_14/nextSig       1       0   \/4   0     FB3_3         (b)     (b)
+(unused)              0       0   \/5   0     FB3_4         (b)     (b)
 found                16      11<-   0   0     FB3_5   12    I/O     O
-(unused)              0       0   /\5   0     FB3_6         (b)     (b)
-(unused)              0       0   /\5   0     FB3_7         (b)     (b)
-resp_3_OBUF/resp_3_OBUF_RSTF__$INT
-                      1       0   /\1   3     FB3_8   13    I/O     I
-(unused)              0       0     0   5     FB3_9   14    I/O     I
-(unused)              0       0     0   5     FB3_10        (b)     
-(unused)              0       0     0   5     FB3_11  18    I/O     I
-(unused)              0       0     0   5     FB3_12        (b)     
-(unused)              0       0     0   5     FB3_13        (b)     
-(unused)              0       0     0   5     FB3_14  19    I/O     I
-(unused)              0       0     0   5     FB3_15  20    I/O     I
+XLXN_30               3       0   /\2   0     FB3_6         (b)     (b)
+XLXI_9/timer<5>       3       0     0   2     FB3_7         (b)     (b)
+XLXI_9/timer<4>       3       0     0   2     FB3_8   13    I/O     I
+XLXI_9/timer<3>       3       0     0   2     FB3_9   14    I/O     I
+XLXI_9/timer<2>       3       0     0   2     FB3_10        (b)     (b)
+XLXI_14/tstate<2>     3       0   \/1   1     FB3_11  18    I/O     I
+XLXI_14/count<1>      4       1<- \/2   0     FB3_12        (b)     (b)
+XLXI_14/count<0>      5       2<- \/2   0     FB3_13        (b)     (b)
+XLXI_14/tstate<1>     6       2<- \/1   0     FB3_14  19    I/O     I
+XLXI_14/tstate<0>     6       1<-   0   0     FB3_15  20    I/O     I
 sendEnable            2       0   \/3   0     FB3_16  24    I/O     O
 (unused)              0       0   \/5   0     FB3_17  22    I/O     I
-okLmp_BUFR           17      12<-   0   0     FB3_18        (b)     (b)
+XLXI_14/alarm        20      15<-   0   0     FB3_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: XLXI_12/state_FSM_FFd1  10: XLXI_2/XLXN_31<0>  19: lowClk 
-  2: XLXI_12/state_FSM_FFd2  11: XLXI_2/XLXN_31<1>  20: rcvEnable 
-  3: XLXI_12/state_FSM_FFd3  12: XLXI_2/XLXN_31<2>  21: rcv 
-  4: XLXI_12/state_FSM_FFd4  13: XLXI_2/XLXN_31<3>  22: resp<0> 
-  5: XLXI_12/state_FSM_FFd5  14: XLXN_30            23: resp<1> 
-  6: XLXI_14/nextSig         15: data<0>            24: resp<2> 
-  7: XLXI_14/tstate<0>       16: data<1>            25: resp<3> 
-  8: XLXI_14/tstate<1>       17: data<2>            26: resp_3_OBUF/resp_3_OBUF_RSTF__$INT 
-  9: XLXI_14/tstate<2>       18: data<3>            27: rst 
+  1: $OpTx$FX_SC$16     12: XLXI_2/XLXN_31<3>  23: data<2> 
+  2: XLXI_14/alarm      13: XLXI_9/timer<0>    24: data<3> 
+  3: XLXI_14/count<0>   14: XLXI_9/timer<1>    25: lowClk 
+  4: XLXI_14/count<1>   15: XLXI_9/timer<2>    26: rcvDone 
+  5: XLXI_14/nextSig    16: XLXI_9/timer<3>    27: resp<0> 
+  6: XLXI_14/tstate<0>  17: XLXI_9/timer<4>    28: resp<1> 
+  7: XLXI_14/tstate<1>  18: XLXI_9/timer<5>    29: resp<2> 
+  8: XLXI_14/tstate<2>  19: XLXN_110           30: resp<3> 
+  9: XLXI_2/XLXN_31<0>  20: XLXN_30            31: rst 
+ 10: XLXI_2/XLXN_31<1>  21: data<0>            32: sendDone 
+ 11: XLXI_2/XLXN_31<2>  22: data<1>           
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-nextKey              .....XXXX.................X............. 5
-XLXI_12/state_FSM_FFd1 
-                     XXXXX.............X.X....X.............. 8
-XLXI_9/timer<0>      .............X....X..................... 2
-found                .........XXXX.XXXX...XXXX............... 12
-resp_3_OBUF/resp_3_OBUF_RSTF__$INT 
-                     ...................X......X............. 2
-sendEnable           ......XXX.................X............. 4
-okLmp_BUFR           .........XXXX.XXXX...XXXX.X............. 13
+nextKey              ....XXXX......................X......... 5
+XLXI_14/nextSig      .....XXX................................ 3
+found                ........XXXX........XXXX..XXXX.......... 12
+XLXN_30              .....XXX......................X......... 4
+XLXI_9/timer<5>      ............XXXXX..X....X............... 7
+XLXI_9/timer<4>      ............XXXX...X....X............... 6
+XLXI_9/timer<3>      ............XXX....X....X............... 5
+XLXI_9/timer<2>      ............XX.....X....X............... 4
+XLXI_14/tstate<2>    .....XXX....XXXXXX.......X.............. 10
+XLXI_14/count<1>     ..XX.XXX....XXXXXX.......X....X......... 13
+XLXI_14/count<0>     ..XX.XXX....XXXXXX.......X....X......... 13
+XLXI_14/tstate<1>    ..XX.XXX....XXXXXXX......X.............. 13
+XLXI_14/tstate<0>    .....XXX....XXXXXXX......X.....X........ 12
+sendEnable           .....XXX......................X......... 4
+XLXI_14/alarm        XXXX.XXXXXXXXXXXXX..XXXX.XXXXX.......... 26
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB4  ***********************************
-Number of function block inputs used/remaining:               27/27
-Number of signals used by logic mapping into function block:  27
+Number of function block inputs used/remaining:               26/28
+Number of signals used by logic mapping into function block:  26
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0   /\4   1     FB4_1         (b)     (b)
-XLXN_110              2       0     0   3     FB4_2   25    I/O     I
-XLXI_13/state_FSM_FFd1
-                      2       0     0   3     FB4_3         (b)     (b)
-XLXN_30               3       0     0   2     FB4_4         (b)     (b)
+(unused)              0       0     0   5     FB4_1         (b)     
+(unused)              0       0     0   5     FB4_2   25    I/O     I
+(unused)              0       0     0   5     FB4_3         (b)     
+resp_3_OBUF/resp_3_OBUF_RSTF__$INT
+                      1       0     0   4     FB4_4         (b)     (b)
 getRand               2       0     0   3     FB4_5   26    I/O     O
-XLXI_9/timer<5>       3       0     0   2     FB4_6         (b)     (b)
-XLXI_9/timer<4>       3       0     0   2     FB4_7         (b)     (b)
-XLXI_9/timer<3>       3       0     0   2     FB4_8   27    I/O     (b)
-XLXI_9/timer<2>       3       0     0   2     FB4_9         (b)     (b)
-XLXI_9/timer<1>       3       0     0   2     FB4_10        (b)     (b)
-XLXI_14/tstate<2>     3       0     0   2     FB4_11  28    I/O     (b)
-XLXI_14/count<1>      4       0     0   1     FB4_12        (b)     (b)
-XLXI_14/count<0>      5       0     0   0     FB4_13        (b)     (b)
-XLXI_14/tstate<1>     6       1<-   0   0     FB4_14  29    I/O     (b)
-resp<0>               4       0   /\1   0     FB4_15  33    I/O     O
-XLXI_14/tstate<0>     6       1<-   0   0     FB4_16        (b)     (b)
-resp<1>               4       0   /\1   0     FB4_17  34    I/O     O
-XLXI_12/state_FSM_FFd2
-                      9       4<-   0   0     FB4_18        (b)     (b)
+XLXI_13/state_FSM_FFd2
+                      1       0     0   4     FB4_6         (b)     (b)
+XLXN_110              2       0     0   3     FB4_7         (b)     (b)
+XLXI_9/timer<0>       2       0     0   3     FB4_8   27    I/O     (b)
+XLXI_2/XLXI_12/tstate<0>
+                      2       0     0   3     FB4_9         (b)     (b)
+XLXI_13/state_FSM_FFd1
+                      2       0     0   3     FB4_10        (b)     (b)
+XLXI_9/timer<1>       3       0     0   2     FB4_11  28    I/O     (b)
+XLXI_2/XLXN_31<3>     2       0     0   3     FB4_12        (b)     (b)
+XLXI_2/XLXN_31<2>     2       0     0   3     FB4_13        (b)     (b)
+XLXI_2/XLXN_31<1>     2       0     0   3     FB4_14  29    I/O     (b)
+resp<0>               4       0     0   1     FB4_15  33    I/O     O
+XLXI_2/XLXN_31<0>     2       0     0   3     FB4_16        (b)     (b)
+resp<1>               4       0     0   1     FB4_17  34    I/O     O
+XLXI_2/XLXI_12/tstate<1>
+                      3       0     0   2     FB4_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: XLXI_12/state_FSM_FFd1  10: XLXI_14/tstate<0>  19: XLXN_110 
-  2: XLXI_12/state_FSM_FFd2  11: XLXI_14/tstate<1>  20: XLXN_30 
-  3: XLXI_12/state_FSM_FFd3  12: XLXI_14/tstate<2>  21: lowClk 
-  4: XLXI_12/state_FSM_FFd4  13: XLXI_9/timer<0>    22: rcvDone 
-  5: XLXI_12/state_FSM_FFd5  14: XLXI_9/timer<1>    23: rcv 
-  6: XLXI_13/state_FSM_FFd1  15: XLXI_9/timer<2>    24: resp_3_OBUF/resp_3_OBUF_RSTF__$INT 
-  7: XLXI_13/state_FSM_FFd2  16: XLXI_9/timer<3>    25: rst 
-  8: XLXI_14/count<0>        17: XLXI_9/timer<4>    26: sendDone 
-  9: XLXI_14/count<1>        18: XLXI_9/timer<5>    27: trig 
+  1: XLXI_12/state_FSM_FFd1  10: XLXI_2/XLXI_12/tstate<0>                  19: lowClk 
+  2: XLXI_12/state_FSM_FFd2  11: XLXI_2/XLXI_12/tstate<1>                  20: nextKey 
+  3: XLXI_12/state_FSM_FFd3  12: XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF  21: rcvEnable 
+  4: XLXI_12/state_FSM_FFd5  13: XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF  22: rcv 
+  5: XLXI_13/state_FSM_FFd1  14: XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF  23: resetChecker 
+  6: XLXI_13/state_FSM_FFd2  15: XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF  24: resp_3_OBUF/resp_3_OBUF_RSTF__$INT 
+  7: XLXI_14/tstate<0>       16: XLXI_9/timer<0>                           25: rst 
+  8: XLXI_14/tstate<1>       17: XLXN_110                                  26: trig 
+  9: XLXI_14/tstate<2>       18: XLXN_30                                  
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-XLXN_110             .....XX...........X.......X............. 4
+resp_3_OBUF/resp_3_OBUF_RSTF__$INT 
+                     ....................X...X............... 2
+getRand              ......XXX...............X............... 4
+XLXI_13/state_FSM_FFd2 
+                     ....XX...................X.............. 3
+XLXN_110             ....XX..........X........X.............. 4
+XLXI_9/timer<0>      .................XX..................... 2
+XLXI_2/XLXI_12/tstate<0> 
+                     .........X.........X..X................. 3
 XLXI_13/state_FSM_FFd1 
-                     .....XX...................X............. 3
-XLXN_30              .........XXX............X............... 4
-getRand              .........XXX............X............... 4
-XLXI_9/timer<5>      ............XXXXX..XX................... 7
-XLXI_9/timer<4>      ............XXXX...XX................... 6
-XLXI_9/timer<3>      ............XXX....XX................... 5
-XLXI_9/timer<2>      ............XX.....XX................... 4
-XLXI_9/timer<1>      ............X......XX................... 3
-XLXI_14/tstate<2>    .........XXXXXXXXX...X.................. 10
-XLXI_14/count<1>     .......XXXXXXXXXXX...X..X............... 13
-XLXI_14/count<0>     .......XXXXXXXXXXX...X..X............... 13
-XLXI_14/tstate<1>    .......XXXXXXXXXXXX..X.................. 13
-resp<0>              XX..X...............X.XX................ 6
-XLXI_14/tstate<0>    .........XXXXXXXXXX..X...X.............. 12
-resp<1>              XXX.X...............X.XX................ 7
-XLXI_12/state_FSM_FFd2 
-                     XXXXX...............X.XX................ 8
+                     ....XX...................X.............. 3
+XLXI_9/timer<1>      ...............X.XX..................... 3
+XLXI_2/XLXN_31<3>    ..............X....X..X................. 3
+XLXI_2/XLXN_31<2>    .............X.....X..X................. 3
+XLXI_2/XLXN_31<1>    ............X......X..X................. 3
+resp<0>              XX.X..............X..X.X................ 6
+XLXI_2/XLXN_31<0>    ...........X.......X..X................. 3
+resp<1>              XXXX..............X..X.X................ 7
+XLXI_2/XLXI_12/tstate<1> 
+                     .........XX........X..X................. 4
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *******************************  Equations  ********************************
@@ -393,18 +398,18 @@ XLXI_12/state_FSM_FFd1.D = rcv & !XLXI_12/state_FSM_FFd1 &
 	!XLXI_12/state_FSM_FFd2
 	# XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
 	XLXI_12/state_FSM_FFd3
-	# !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
-	XLXI_12/state_FSM_FFd3
-;Imported pterms FB3_2
+;Imported pterms FB1_1
 	# rcv & !XLXI_12/state_FSM_FFd5 & 
 	XLXI_12/state_FSM_FFd3
-	# XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & 
-	XLXI_12/state_FSM_FFd3
-;Imported pterms FB3_4
 	# rcv & !XLXI_12/state_FSM_FFd5 & 
 	!XLXI_12/state_FSM_FFd4
+	# XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & 
+	XLXI_12/state_FSM_FFd3
+	# !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
+	XLXI_12/state_FSM_FFd3
 	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd4
+;Imported pterms FB1_2
 	# XLXI_12/state_FSM_FFd1 & !XLXI_12/state_FSM_FFd2 & 
 	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4;
    XLXI_12/state_FSM_FFd1.CLK = lowClk;
@@ -416,13 +421,14 @@ XLXI_12/state_FSM_FFd2.T = !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 &
 	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
 	# rcv & !XLXI_12/state_FSM_FFd1 & 
 	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
-;Imported pterms FB4_1
+;Imported pterms FB1_15
 	# rcv & XLXI_12/state_FSM_FFd2 & 
 	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd4
-	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
-	XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
 	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
+;Imported pterms FB1_17
+	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
+	XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
 	# !rcv & XLXI_12/state_FSM_FFd1 & 
 	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & 
 	XLXI_12/state_FSM_FFd4;
@@ -433,16 +439,15 @@ XLXI_12/state_FSM_FFd3.D = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 &
 	XLXI_12/state_FSM_FFd5
 	# XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
 	XLXI_12/state_FSM_FFd3
+;Imported pterms FB1_13
 	# rcv & XLXI_12/state_FSM_FFd1 & 
 	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
-;Imported pterms FB1_1
+	# rcv & XLXI_12/state_FSM_FFd1 & 
+	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
 	# rcv & !XLXI_12/state_FSM_FFd1 & 
 	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
 	# rcv & !XLXI_12/state_FSM_FFd2 & 
-	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3
-;Imported pterms FB1_17
-	# rcv & XLXI_12/state_FSM_FFd1 & 
-	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5;
+	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3;
    XLXI_12/state_FSM_FFd3.CLK = lowClk;
    XLXI_12/state_FSM_FFd3.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;    
 
@@ -450,22 +455,22 @@ XLXI_12/state_FSM_FFd4.D = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 &
 	XLXI_12/state_FSM_FFd4
 	# !rcv & XLXI_12/state_FSM_FFd1 & 
 	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
+;Imported pterms FB1_11
 	# !rcv & XLXI_12/state_FSM_FFd1 & 
 	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
-;Imported pterms FB1_15
 	# !rcv & !XLXI_12/state_FSM_FFd1 & 
 	!XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & XLXI_12/state_FSM_FFd3;
    XLXI_12/state_FSM_FFd4.CLK = lowClk;
    XLXI_12/state_FSM_FFd4.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;    
 
 XLXI_12/state_FSM_FFd5.D = XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
+;Imported pterms FB1_10
+	# !rcv & XLXI_12/state_FSM_FFd1 & 
+	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
 	# !rcv & !XLXI_12/state_FSM_FFd1 & 
 	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
 	# !rcv & !XLXI_12/state_FSM_FFd1 & 
-	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd4
-;Imported pterms FB1_13
-	# !rcv & XLXI_12/state_FSM_FFd1 & 
-	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3;
+	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd4;
    XLXI_12/state_FSM_FFd5.CLK = lowClk;
    XLXI_12/state_FSM_FFd5.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;    
 
@@ -488,7 +493,25 @@ XLXI_14/alarm.D = !XLXI_14/tstate<2> & XLXI_14/alarm
 	$OpTx$FX_SC$16
 	# resp<0> & !XLXI_2/XLXN_31<0> & !data<0> & 
 	$OpTx$FX_SC$16
-;Imported pterms FB2_16
+;Imported pterms FB3_1
+	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1> & 
+	$OpTx$FX_SC$16
+	# resp<2> & XLXI_2/XLXN_31<2> & data<2> & 
+	$OpTx$FX_SC$16
+	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2> & 
+	$OpTx$FX_SC$16
+	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2> & 
+	$OpTx$FX_SC$16
+	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2> & 
+	$OpTx$FX_SC$16
+;Imported pterms FB3_2
+	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3> & 
+	$OpTx$FX_SC$16
+	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	!XLXI_14/tstate<2> & XLXI_14/count<0> & XLXI_14/count<1> & 
+	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
+	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
+;Imported pterms FB3_17
 	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0> & 
 	$OpTx$FX_SC$16
 	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0> & 
@@ -499,29 +522,12 @@ XLXI_14/alarm.D = !XLXI_14/tstate<2> & XLXI_14/alarm
 	$OpTx$FX_SC$16
 	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1> & 
 	$OpTx$FX_SC$16
-;Imported pterms FB2_15
+;Imported pterms FB3_16
 	# resp<3> & XLXI_2/XLXN_31<3> & data<3> & 
 	$OpTx$FX_SC$16
 	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3> & 
 	$OpTx$FX_SC$16
 	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3> & 
-	$OpTx$FX_SC$16
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3> & 
-	$OpTx$FX_SC$16
-	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
-	!XLXI_14/tstate<2> & XLXI_14/count<0> & XLXI_14/count<1> & 
-	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
-	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
-;Imported pterms FB2_18
-	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1> & 
-	$OpTx$FX_SC$16
-	# resp<2> & XLXI_2/XLXN_31<2> & data<2> & 
-	$OpTx$FX_SC$16
-	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2> & 
-	$OpTx$FX_SC$16
-	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2> & 
-	$OpTx$FX_SC$16
-	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2> & 
 	$OpTx$FX_SC$16;
    XLXI_14/alarm.CLK = clk;	// GCK
    !XLXI_14/alarm.AR = rst;	// GSR    
@@ -530,6 +536,7 @@ XLXI_14/count<0>.T = XLXI_14/tstate<0> & XLXI_14/tstate<1> &
 	XLXI_14/tstate<2> & XLXI_14/count<0>
 	# XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & XLXI_14/count<0>
+;Imported pterms FB3_12
 	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & !XLXI_14/count<0> & XLXI_9/timer<0> & 
 	XLXI_9/timer<1> & XLXI_9/timer<2> & XLXI_9/timer<3> & 
@@ -545,6 +552,7 @@ XLXI_14/count<1>.T = XLXI_14/tstate<0> & XLXI_14/tstate<1> &
 	XLXI_14/tstate<2> & XLXI_14/count<1>
 	# XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & XLXI_14/count<1>
+;Imported pterms FB3_11
 	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & XLXI_14/count<0> & !XLXI_14/count<1> & 
 	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
@@ -565,7 +573,7 @@ XLXI_14/tstate<0>.T = rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
 	# !XLXI_14/tstate<1> & !XLXI_14/tstate<2> & XLXN_110
 	# !XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & sendDone
-;Imported pterms FB4_17
+;Imported pterms FB3_14
 	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
 	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>;
@@ -574,13 +582,13 @@ XLXI_14/tstate<0>.T = rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
 
 !XLXI_14/tstate<1>.D = !XLXI_14/tstate<0> & !XLXI_14/tstate<1>
 	# rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
-	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
-	XLXI_14/tstate<2>
 	# XLXI_14/tstate<0> & XLXI_14/tstate<2> & XLXN_110
 	# !XLXI_14/tstate<0> & XLXI_14/tstate<2> & 
 	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
 	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
-;Imported pterms FB4_15
+;Imported pterms FB3_13
+	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	XLXI_14/tstate<2>
 	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	XLXI_14/count<0> & XLXI_14/count<1> & XLXI_9/timer<0> & 
 	XLXI_9/timer<1> & XLXI_9/timer<2> & XLXI_9/timer<3> & 
@@ -597,40 +605,62 @@ XLXI_14/tstate<2>.T = rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
    XLXI_14/tstate<2>.CLK = clk;	// GCK
    !XLXI_14/tstate<2>.AR = rst;	// GSR    
 
-!XLXI_2/XLXI_12/tstate<0>.D = XLXI_2/XLXI_12/tstate<0> & 
-	!XLXI_2/XLXI_12/tstate<1>;
-   XLXI_2/XLXI_12/tstate<0>.CLK = nextKey;
-   XLXI_2/XLXI_12/tstate<0>.AR = resetChecker;    
+XLXI_2/XLXI_12/tstate<0> = !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & !nextKey & 
+	XLXI_2/XLXI_12/tstate<0>;    
 
-!XLXI_2/XLXI_12/tstate<1>.D = !XLXI_2/XLXI_12/tstate<0> & 
-	!XLXI_2/XLXI_12/tstate<1>;
-   XLXI_2/XLXI_12/tstate<1>.CLK = nextKey;
-   XLXI_2/XLXI_12/tstate<1>.AR = resetChecker;    
-
-XLXI_2/XLXN_31<0>.D = XLXI_2/XLXI_12/tstate<0> & 
-	!XLXI_2/XLXI_12/tstate<1>
-	# XLXI_2/XLXI_12/tstate<0> & XLXI_2/XLXN_31<0>;
-   XLXI_2/XLXN_31<0>.CLK = nextKey;
-   XLXI_2/XLXN_31<0>.CE = !resetChecker;    
-
-!XLXI_2/XLXN_31<1>.D = !XLXI_2/XLXI_12/tstate<0> & 
+XLXI_2/XLXI_12/tstate<1> = !resetChecker & !nextKey & 
 	XLXI_2/XLXI_12/tstate<1>
-	# XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<1>;
-   XLXI_2/XLXN_31<1>.CLK = nextKey;
-   XLXI_2/XLXN_31<1>.CE = !resetChecker;    
+	# !resetChecker & XLXI_2/XLXI_12/tstate<1> & 
+	!XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<1> & XLXI_2/XLXI_12/tstate<0>;    
 
-XLXI_2/XLXN_31<2>.D = !XLXI_2/XLXI_12/tstate<0> & 
-	!XLXI_2/XLXI_12/tstate<1>
-	# XLXI_2/XLXI_12/tstate<0> & 
-	XLXI_2/XLXI_12/tstate<1> & XLXI_2/XLXN_31<2>;
-   XLXI_2/XLXN_31<2>.CLK = nextKey;
-   XLXI_2/XLXN_31<2>.CE = !resetChecker;    
+XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF = !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<0>;    
 
-XLXI_2/XLXN_31<3>.D = XLXI_2/XLXI_12/tstate<0> & 
-	!XLXI_2/XLXI_12/tstate<1>
-	# XLXI_2/XLXI_12/tstate<0> & XLXI_2/XLXN_31<3>;
-   XLXI_2/XLXN_31<3>.CLK = nextKey;
-   XLXI_2/XLXN_31<3>.CE = !resetChecker;    
+XLXI_2/XLXN_31<0>.D = Gnd;
+   XLXI_2/XLXN_31<0>.CLK = Gnd;
+   XLXI_2/XLXN_31<0>.AP = !resetChecker & nextKey & 
+	!XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF;
+   XLXI_2/XLXN_31<0>.AR = XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF;    
+
+XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF = !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<1>;    
+
+XLXI_2/XLXN_31<1>.D = Gnd;
+   XLXI_2/XLXN_31<1>.CLK = Gnd;
+   XLXI_2/XLXN_31<1>.AP = !resetChecker & nextKey & 
+	!XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF;
+   XLXI_2/XLXN_31<1>.AR = XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF;    
+
+XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF = !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & XLXI_2/XLXI_12/tstate<0> & XLXI_2/XLXN_31<2>;    
+
+XLXI_2/XLXN_31<2>.D = Gnd;
+   XLXI_2/XLXN_31<2>.CLK = Gnd;
+   XLXI_2/XLXN_31<2>.AP = XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF;
+   XLXI_2/XLXN_31<2>.AR = !resetChecker & nextKey & 
+	!XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF;    
+
+XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF = !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<0>
+;Imported pterms FB1_12
+	# !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<3>;    
+
+XLXI_2/XLXN_31<3>.D = Gnd;
+   XLXI_2/XLXN_31<3>.CLK = Gnd;
+   XLXI_2/XLXN_31<3>.AP = !resetChecker & nextKey & 
+	!XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF;
+   XLXI_2/XLXN_31<3>.AR = XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF;    
 
 XLXI_9/timer<0>.T = Vcc;
    XLXI_9/timer<0>.CLK = lowClk;
@@ -673,24 +703,24 @@ XLXN_30.D = XLXI_14/tstate<0> & !XLXI_14/tstate<1> &
    XLXN_30.CE = rst;    
 
 !found = resp<0> & XLXI_2/XLXN_31<0> & data<0>
+	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
+	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
+	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
+	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
+;Imported pterms FB3_4
 	# resp<0> & !XLXI_2/XLXN_31<0> & !data<0>
 	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0>
 	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0>
 	# resp<1> & XLXI_2/XLXN_31<1> & data<1>
-;Imported pterms FB3_6
 	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1>
-	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
-	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>
+;Imported pterms FB3_3
 	# resp<2> & XLXI_2/XLXN_31<2> & data<2>
 	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
-;Imported pterms FB3_7
 	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
 	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
-	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
-	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
-;Imported pterms FB3_8
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>;    
+;Imported pterms FB3_6
+	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
+	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>;    
 
 getRand.D = XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2>;
@@ -702,40 +732,39 @@ larm.D = !XLXI_14/tstate<0> & !XLXI_14/tstate<1> &
    larm.CLK = clk;	// GCK
    larm.CE = rst;    
 
-lastkey.D = Vcc;
-   lastkey.CLK = nextKey;
-   lastkey.AR = resetChecker;
-   lastkey.CE = XLXI_2/XLXI_12/tstate<0> & 
-	XLXI_2/XLXI_12/tstate<1>;    
+lastkey = !resetChecker & !nextKey & lastkey
+;Imported pterms FB1_4
+	# !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & lastkey & 
+	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>;    
 
 nextKey.D = !XLXI_14/nextSig & !XLXI_14/tstate<0> & 
 	!XLXI_14/tstate<1> & XLXI_14/tstate<2>;
    nextKey.CLK = clk;	// GCK
    nextKey.CE = rst;    
 
-okLmp = okLmp_BUFR;    
-
-!okLmp_BUFR.D = resp<0> & XLXI_2/XLXN_31<0> & data<0>
+!okLmp.D = resp<3> & XLXI_2/XLXN_31<3> & data<3>
+	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
+	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
+	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
+;Imported pterms FB1_5
+	# resp<0> & XLXI_2/XLXN_31<0> & data<0>
 	# resp<0> & !XLXI_2/XLXN_31<0> & !data<0>
 	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0>
 	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0>
-;Imported pterms FB3_1
-	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
-	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
-	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
-	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
-;Imported pterms FB3_17
+;Imported pterms FB1_7
 	# resp<1> & XLXI_2/XLXN_31<1> & data<1>
 	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1>
 	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
 	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>
 	# resp<2> & XLXI_2/XLXN_31<2> & data<2>
-;Imported pterms FB3_16
-	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>;
-   okLmp_BUFR.CLK = clk;	// GCK
-   okLmp_BUFR.CE = rst;    
+;Imported pterms FB1_8
+	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
+	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
+	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>;
+   okLmp.CLK = clk;	// GCK
+   okLmp.CE = rst;    
 
 rcvDone.D = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 	XLXI_12/state_FSM_FFd4;
@@ -768,13 +797,15 @@ resp<1>.D = rcv;
    resp<1>.CE = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3;    
 
-resp<2>.D = rcv;
+resp<2>.D = ;Imported pterms FB1_18
+	  rcv;
    resp<2>.CLK = lowClk;
    resp<2>.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
    resp<2>.CE = XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
 	XLXI_12/state_FSM_FFd3;    
 
-resp<3>.D = rcv;
+resp<3>.D = ;Imported pterms FB1_14
+	  rcv;
    resp<3>.CLK = lowClk;
    resp<3>.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
    resp<3>.CE = !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 

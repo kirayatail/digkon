@@ -2,122 +2,140 @@ MDF Database:  version 1.0
 MDF_INFO | top | XC9572XL-5-PC44
 MACROCELL | 2 | 4 | found_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 7 | resp<0>  | XLXI_2/XLXN_31<0>  | data<0>  | resp<1>  | XLXI_2/XLXN_31<1>  | data<1>  | EXP11_.EXP
-INPUTMC | 5 | 3 | 14 | 0 | 12 | 3 | 16 | 0 | 11 | 2 | 5
-INPUTP | 2 | 46 | 49
-IMPORTS | 1 | 2 | 5
+INPUTS | 8 | resp<3>  | XLXI_2/XLXN_31<3>  | data<3>  | resp<0>  | XLXI_2/XLXN_31<0>  | data<0>  | EXP9_.EXP  | XLXN_30.EXP
+INPUTMC | 6 | 0 | 14 | 3 | 11 | 3 | 14 | 3 | 15 | 2 | 3 | 2 | 5
+INPUTP | 2 | 52 | 46
+IMPORTS | 2 | 2 | 3 | 2 | 5
 EQ | 19 | 
    !found = resp<0> & XLXI_2/XLXN_31<0> & data<0>
+	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
+	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
+	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
+	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
+;Imported pterms FB3_4
 	# resp<0> & !XLXI_2/XLXN_31<0> & !data<0>
 	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0>
 	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0>
 	# resp<1> & XLXI_2/XLXN_31<1> & data<1>
-;Imported pterms FB3_6
 	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1>
-	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
-	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>
+;Imported pterms FB3_3
 	# resp<2> & XLXI_2/XLXN_31<2> & data<2>
 	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
-;Imported pterms FB3_7
 	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
 	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
-	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
-	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
-;Imported pterms FB3_8
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>;
+;Imported pterms FB3_6
+	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
+	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>;
 
 MACROCELL | 3 | 14 | resp_0_OBUF
 ATTRIBUTES | 8782706 | 0
-OUTPUTMC | 5 | 2 | 4 | 1 | 16 | 2 | 17 | 1 | 15 | 3 | 13
-INPUTS | 16 | rcv  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/count<0>  | XLXI_14/count<1>  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>
-INPUTMC | 14 | 2 | 7 | 2 | 2 | 3 | 17 | 0 | 13 | 3 | 15 | 3 | 13 | 3 | 12 | 3 | 11 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5
+OUTPUTMC | 5 | 2 | 4 | 2 | 17 | 0 | 4 | 2 | 3 | 2 | 16
+INPUTS | 6 | rcv  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5
+INPUTMC | 4 | 3 | 3 | 0 | 17 | 0 | 15 | 0 | 10
 INPUTP | 2 | 33 | 38
-EXPORTS | 1 | 3 | 13
-EQ | 9 | 
+EQ | 5 | 
    resp<0>.D = rcv;
    resp<0>.CLK = lowClk;
    resp<0>.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
    resp<0>.CE = XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 	XLXI_12/state_FSM_FFd5;
-    resp_0_OBUF.EXP  =  XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
-	XLXI_14/count<0> & XLXI_14/count<1> & XLXI_9/timer<0> & 
-	XLXI_9/timer<1> & XLXI_9/timer<2> & XLXI_9/timer<3> & 
-	XLXI_9/timer<4> & XLXI_9/timer<5>
 
 MACROCELL | 3 | 16 | resp_1_OBUF
 ATTRIBUTES | 8782706 | 0
-OUTPUTMC | 6 | 2 | 4 | 1 | 15 | 2 | 16 | 1 | 17 | 2 | 5 | 3 | 15
-INPUTS | 15 | rcv  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>
-INPUTMC | 13 | 2 | 7 | 2 | 2 | 3 | 17 | 0 | 13 | 0 | 17 | 3 | 15 | 3 | 13 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5
+OUTPUTMC | 5 | 2 | 3 | 2 | 16 | 0 | 6 | 2 | 0 | 2 | 5
+INPUTS | 7 | rcv  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3
+INPUTMC | 5 | 3 | 3 | 0 | 17 | 0 | 15 | 0 | 10 | 0 | 13
 INPUTP | 2 | 33 | 38
-EXPORTS | 1 | 3 | 15
-EQ | 8 | 
+EQ | 5 | 
    resp<1>.D = rcv;
    resp<1>.CLK = lowClk;
    resp<1>.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
    resp<1>.CE = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3;
-    resp_1_OBUF.EXP  =  XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
-	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
-	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
 
 MACROCELL | 0 | 16 | resp_2_OBUF
 ATTRIBUTES | 8782706 | 0
-OUTPUTMC | 6 | 2 | 0 | 2 | 16 | 1 | 17 | 2 | 5 | 2 | 6 | 0 | 17
-INPUTS | 7 | rcv  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd1
-INPUTMC | 5 | 2 | 7 | 3 | 17 | 0 | 13 | 0 | 17 | 2 | 2
-INPUTP | 2 | 33 | 38
-EXPORTS | 1 | 0 | 17
-EQ | 7 | 
-   resp<2>.D = rcv;
+OUTPUTMC | 5 | 2 | 2 | 2 | 0 | 0 | 6 | 0 | 7 | 0 | 15
+INPUTS | 9 | XLXI_12/state_FSM_FFd1  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd4  | rcv  | XLXI_12/state_FSM_FFd1.EXP
+INPUTMC | 7 | 0 | 17 | 3 | 3 | 0 | 15 | 0 | 10 | 0 | 13 | 0 | 11 | 0 | 17
+INPUTP | 2 | 38 | 33
+EXPORTS | 1 | 0 | 15
+IMPORTS | 1 | 0 | 17
+EQ | 11 | 
+   resp<2>.D = ;Imported pterms FB1_18
+	  rcv;
    resp<2>.CLK = lowClk;
    resp<2>.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
    resp<2>.CE = XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
 	XLXI_12/state_FSM_FFd3;
-    resp_2_OBUF.EXP  =  rcv & XLXI_12/state_FSM_FFd1 & 
-	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
+    resp_2_OBUF.EXP  =  !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
+	XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
+	# !rcv & XLXI_12/state_FSM_FFd1 & 
+	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & 
+	XLXI_12/state_FSM_FFd4
 
 MACROCELL | 0 | 14 | resp_3_OBUF
 ATTRIBUTES | 8782706 | 0
-OUTPUTMC | 6 | 2 | 0 | 1 | 14 | 2 | 15 | 2 | 6 | 2 | 7 | 0 | 15
-INPUTS | 7 | rcv  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd1
-INPUTMC | 5 | 2 | 7 | 3 | 17 | 0 | 13 | 0 | 17 | 2 | 2
+OUTPUTMC | 5 | 2 | 4 | 2 | 15 | 0 | 5 | 2 | 1 | 0 | 15
+INPUTS | 9 | rcv  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd4  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd3.EXP
+INPUTMC | 7 | 3 | 3 | 0 | 15 | 0 | 10 | 0 | 13 | 0 | 11 | 0 | 17 | 0 | 13
 INPUTP | 2 | 33 | 38
 EXPORTS | 1 | 0 | 15
-EQ | 7 | 
-   resp<3>.D = rcv;
+IMPORTS | 1 | 0 | 13
+EQ | 10 | 
+   resp<3>.D = ;Imported pterms FB1_14
+	  rcv;
    resp<3>.CLK = lowClk;
    resp<3>.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
    resp<3>.CE = !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
 	XLXI_12/state_FSM_FFd3;
-    resp_3_OBUF.EXP  =  !rcv & !XLXI_12/state_FSM_FFd1 & 
-	!XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & XLXI_12/state_FSM_FFd3
+    resp_3_OBUF.EXP  =  rcv & XLXI_12/state_FSM_FFd2 & 
+	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd4
+	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
+	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
 
-MACROCELL | 0 | 0 | XLXI_14/nextSig
+MACROCELL | 2 | 2 | XLXI_14/nextSig
 ATTRIBUTES | 4367168 | 0
-OUTPUTMC | 2 | 2 | 1 | 0 | 17
-INPUTS | 9 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rcv  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd4  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3
-INPUTMC | 8 | 3 | 15 | 3 | 13 | 3 | 10 | 2 | 2 | 3 | 17 | 0 | 15 | 0 | 13 | 0 | 17
-INPUTP | 1 | 33
-EXPORTS | 1 | 0 | 17
+OUTPUTMC | 2 | 2 | 1 | 2 | 3
+INPUTS | 6 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | resp<2>  | XLXI_2/XLXN_31<2>  | data<2>
+INPUTMC | 5 | 2 | 14 | 2 | 13 | 2 | 10 | 0 | 16 | 3 | 12
+INPUTP | 1 | 50
+EXPORTS | 1 | 2 | 3
 EQ | 9 | 
    XLXI_14/nextSig.T = Vcc;
    XLXI_14/nextSig.CLK = clk;	// GCK
    !XLXI_14/nextSig.AR = rst;	// GSR
    XLXI_14/nextSig.CE = !XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 	XLXI_14/tstate<2>;
-    XLXI_14/nextSig.EXP  =  rcv & !XLXI_12/state_FSM_FFd1 & 
-	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
-	# rcv & !XLXI_12/state_FSM_FFd2 & 
-	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3
+    XLXI_14/nextSig.EXP  =  resp<2> & XLXI_2/XLXN_31<2> & data<2>
+	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
+	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
+	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
 GLOBALS | 2 | 2 | clk | 4 | rst
+
+MACROCELL | 0 | 1 | resetChecker_OBUF
+ATTRIBUTES | 4621122 | 0
+OUTPUTMC | 14 | 0 | 1 | 0 | 4 | 3 | 17 | 3 | 8 | 3 | 15 | 3 | 13 | 3 | 12 | 3 | 11 | 0 | 8 | 0 | 3 | 0 | 2 | 0 | 12 | 0 | 11 | 0 | 0
+INPUTS | 10 | resetChecker  | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rst  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd4
+INPUTMC | 9 | 0 | 1 | 2 | 14 | 2 | 13 | 2 | 10 | 0 | 17 | 0 | 15 | 0 | 10 | 0 | 13 | 0 | 11
+INPUTP | 1 | 92
+EXPORTS | 1 | 0 | 0
+EQ | 8 | 
+   resetChecker.T = resetChecker & XLXI_14/tstate<0> & 
+	XLXI_14/tstate<1>
+	# !resetChecker & !XLXI_14/tstate<0> & 
+	XLXI_14/tstate<1> & !XLXI_14/tstate<2>;
+   resetChecker.CLK = clk;	// GCK
+   resetChecker.CE = rst;
+    resetChecker_OBUF.EXP  =  XLXI_12/state_FSM_FFd1 & !XLXI_12/state_FSM_FFd2 & 
+	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
+GLOBALS | 1 | 2 | clk
 
 MACROCELL | 1 | 4 | rcvDone_OBUF
 ATTRIBUTES | 8782690 | 0
-OUTPUTMC | 6 | 3 | 15 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 11 | 1 | 14
+OUTPUTMC | 5 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 11 | 2 | 1
 INPUTS | 6 | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd4  | lowClk  | rst  | rcvEnable
-INPUTMC | 4 | 2 | 2 | 3 | 17 | 0 | 15 | 1 | 1
+INPUTMC | 4 | 0 | 17 | 0 | 15 | 0 | 11 | 1 | 1
 INPUTP | 2 | 38 | 92
 EQ | 4 | 
    rcvDone.D = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
@@ -125,56 +143,51 @@ EQ | 4 |
    rcvDone.CLK = lowClk;
    rcvDone.CE = rst & rcvEnable;
 
-MACROCELL | 0 | 1 | resetChecker_OBUF
-ATTRIBUTES | 4621122 | 0
-OUTPUTMC | 8 | 0 | 1 | 0 | 4 | 0 | 8 | 0 | 6 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9
-INPUTS | 5 | resetChecker  | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rst
-INPUTMC | 4 | 0 | 1 | 3 | 15 | 3 | 13 | 3 | 10
-INPUTP | 1 | 92
-EQ | 6 | 
-   resetChecker.T = resetChecker & XLXI_14/tstate<0> & 
-	XLXI_14/tstate<1>
-	# !resetChecker & !XLXI_14/tstate<0> & 
-	XLXI_14/tstate<1> & !XLXI_14/tstate<2>;
-   resetChecker.CLK = clk;	// GCK
-   resetChecker.CE = rst;
-GLOBALS | 1 | 2 | clk
-
 MACROCELL | 2 | 1 | nextKey_OBUF
 ATTRIBUTES | 8815426 | 0
-OUTPUTMC | 8 | 0 | 4 | 0 | 8 | 0 | 6 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 2 | 2
-INPUTS | 9 | XLXI_14/nextSig  | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rst  | rcv  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd2
-INPUTMC | 7 | 0 | 0 | 3 | 15 | 3 | 13 | 3 | 10 | 0 | 13 | 0 | 17 | 3 | 17
-INPUTP | 2 | 92 | 33
-EXPORTS | 1 | 2 | 2
-EQ | 8 | 
+OUTPUTMC | 13 | 0 | 4 | 3 | 17 | 3 | 8 | 3 | 15 | 3 | 13 | 3 | 12 | 3 | 11 | 0 | 8 | 0 | 3 | 0 | 2 | 0 | 12 | 0 | 11 | 2 | 0
+INPUTS | 18 | XLXI_14/nextSig  | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rst  | resp<3>  | XLXI_2/XLXN_31<3>  | data<3>  | $OpTx$FX_SC$16  | rcvDone  | XLXI_14/count<0>  | XLXI_14/count<1>  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>
+INPUTMC | 16 | 2 | 2 | 2 | 14 | 2 | 13 | 2 | 10 | 0 | 14 | 3 | 11 | 0 | 9 | 1 | 4 | 2 | 12 | 2 | 11 | 3 | 7 | 3 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 6
+INPUTP | 2 | 92 | 52
+EXPORTS | 1 | 2 | 0
+EQ | 10 | 
    nextKey.D = !XLXI_14/nextSig & !XLXI_14/tstate<0> & 
 	!XLXI_14/tstate<1> & XLXI_14/tstate<2>;
    nextKey.CLK = clk;	// GCK
    nextKey.CE = rst;
-    nextKey_OBUF.EXP  =  rcv & !XLXI_12/state_FSM_FFd5 & 
-	XLXI_12/state_FSM_FFd3
-	# XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & 
-	XLXI_12/state_FSM_FFd3
+    nextKey_OBUF.EXP  =  !resp<3> & !XLXI_2/XLXN_31<3> & data<3> & 
+	$OpTx$FX_SC$16
+	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	!XLXI_14/tstate<2> & XLXI_14/count<0> & XLXI_14/count<1> & 
+	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
+	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 0 | 4 | lastkey_OBUF
-ATTRIBUTES | 8782706 | 0
-OUTPUTMC | 1 | 0 | 3
-INPUTS | 4 | nextKey  | resetChecker  | XLXI_2/XLXI_12/tstate<0>  | XLXI_2/XLXI_12/tstate<1>
-INPUTMC | 4 | 2 | 1 | 0 | 1 | 0 | 8 | 0 | 6
-EQ | 5 | 
-   lastkey.D = Vcc;
-   lastkey.CLK = nextKey;
-   lastkey.AR = resetChecker;
-   lastkey.CE = XLXI_2/XLXI_12/tstate<0> & 
-	XLXI_2/XLXI_12/tstate<1>;
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 4 | 0 | 4 | 0 | 9 | 0 | 3 | 0 | 5
+INPUTS | 7 | resetChecker  | nextKey  | lastkey  | resp<0>  | XLXI_2/XLXN_31<0>  | data<0>  | XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF.EXP
+INPUTMC | 6 | 0 | 1 | 2 | 1 | 0 | 4 | 3 | 14 | 3 | 15 | 0 | 3
+INPUTP | 1 | 46
+EXPORTS | 1 | 0 | 5
+IMPORTS | 1 | 0 | 3
+EQ | 10 | 
+   lastkey = !resetChecker & !nextKey & lastkey
+;Imported pterms FB1_4
+	# !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & lastkey & 
+	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>;
+    lastkey_OBUF.EXP  =  resp<0> & XLXI_2/XLXN_31<0> & data<0>
+	# resp<0> & !XLXI_2/XLXN_31<0> & !data<0>
+	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0>
+	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0>
 
 MACROCELL | 1 | 1 | rcvEnable_OBUF
 ATTRIBUTES | 8815426 | 0
-OUTPUTMC | 2 | 1 | 4 | 2 | 7
+OUTPUTMC | 2 | 1 | 4 | 3 | 3
 INPUTS | 4 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rst
-INPUTMC | 3 | 3 | 15 | 3 | 13 | 3 | 10
+INPUTMC | 3 | 2 | 14 | 2 | 13 | 2 | 10
 INPUTP | 1 | 92
 EQ | 6 | 
    rcvEnable.D = XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
@@ -185,13 +198,13 @@ EQ | 6 |
    rcvEnable.CE = rst;
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 3 | 15 | XLXI_14/tstate<0>
+MACROCELL | 2 | 14 | XLXI_14/tstate<0>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 18 | 0 | 0 | 0 | 1 | 2 | 1 | 1 | 1 | 3 | 15 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 3 | 3 | 11 | 1 | 16 | 3 | 4 | 0 | 7 | 2 | 15 | 0 | 3 | 1 | 14 | 3 | 14 | 3 | 16
-INPUTS | 7 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXN_110  | XLXI_14/tstate<2>  | sendDone  | rcvDone  | resp_1_OBUF.EXP
-INPUTMC | 6 | 3 | 15 | 3 | 13 | 3 | 1 | 3 | 10 | 1 | 4 | 3 | 16
+OUTPUTMC | 15 | 2 | 2 | 0 | 1 | 2 | 1 | 1 | 1 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 12 | 2 | 5 | 2 | 11 | 2 | 17 | 3 | 4 | 0 | 7 | 2 | 15 | 0 | 9
+INPUTS | 7 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXN_110  | XLXI_14/tstate<2>  | sendDone  | rcvDone  | XLXI_14/tstate<1>.EXP
+INPUTMC | 6 | 2 | 14 | 2 | 13 | 3 | 6 | 2 | 10 | 1 | 4 | 2 | 13
 INPUTP | 1 | 62
-IMPORTS | 1 | 3 | 16
+IMPORTS | 1 | 2 | 13
 EQ | 13 | 
    XLXI_14/tstate<0>.T = rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
 	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
@@ -200,7 +213,7 @@ EQ | 13 |
 	# !XLXI_14/tstate<1> & !XLXI_14/tstate<2> & XLXN_110
 	# !XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & sendDone
-;Imported pterms FB4_17
+;Imported pterms FB3_14
 	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
 	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>;
@@ -208,36 +221,41 @@ EQ | 13 |
    !XLXI_14/tstate<0>.AR = rst;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | rst
 
-MACROCELL | 3 | 13 | XLXI_14/tstate<1>
+MACROCELL | 2 | 13 | XLXI_14/tstate<1>
 ATTRIBUTES | 8561408 | 0
-OUTPUTMC | 18 | 0 | 0 | 0 | 1 | 2 | 1 | 1 | 1 | 3 | 15 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 3 | 3 | 11 | 1 | 16 | 3 | 4 | 0 | 7 | 2 | 15 | 0 | 3 | 1 | 14 | 3 | 14 | 3 | 16
-INPUTS | 12 | XLXI_14/tstate<0>  | XLXI_14/tstate<2>  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>  | XLXN_110  | XLXI_14/tstate<1>  | rcvDone  | resp_0_OBUF.EXP
-INPUTMC | 12 | 3 | 15 | 3 | 10 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5 | 3 | 1 | 3 | 13 | 1 | 4 | 3 | 14
-IMPORTS | 1 | 3 | 14
-EQ | 15 | 
+OUTPUTMC | 15 | 2 | 2 | 0 | 1 | 2 | 1 | 1 | 1 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 12 | 2 | 5 | 2 | 11 | 2 | 17 | 3 | 4 | 0 | 7 | 2 | 15 | 0 | 9
+INPUTS | 12 | XLXI_14/tstate<0>  | XLXI_14/tstate<2>  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>  | XLXN_110  | XLXI_14/tstate<1>  | rcvDone  | XLXI_14/count<0>.EXP
+INPUTMC | 12 | 2 | 14 | 2 | 10 | 3 | 7 | 3 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 6 | 3 | 6 | 2 | 13 | 1 | 4 | 2 | 12
+EXPORTS | 1 | 2 | 14
+IMPORTS | 1 | 2 | 12
+EQ | 18 | 
    !XLXI_14/tstate<1>.D = !XLXI_14/tstate<0> & !XLXI_14/tstate<1>
 	# rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
-	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
-	XLXI_14/tstate<2>
 	# XLXI_14/tstate<0> & XLXI_14/tstate<2> & XLXN_110
 	# !XLXI_14/tstate<0> & XLXI_14/tstate<2> & 
 	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
 	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
-;Imported pterms FB4_15
+;Imported pterms FB3_13
+	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	XLXI_14/tstate<2>
 	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	XLXI_14/count<0> & XLXI_14/count<1> & XLXI_9/timer<0> & 
 	XLXI_9/timer<1> & XLXI_9/timer<2> & XLXI_9/timer<3> & 
 	XLXI_9/timer<4> & XLXI_9/timer<5>;
    XLXI_14/tstate<1>.CLK = clk;	// GCK
    !XLXI_14/tstate<1>.AR = rst;	// GSR
+    XLXI_14/tstate<1>.EXP  =  XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
+	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
 GLOBALS | 2 | 2 | clk | 4 | rst
 
-MACROCELL | 3 | 10 | XLXI_14/tstate<2>
+MACROCELL | 2 | 10 | XLXI_14/tstate<2>
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 16 | 0 | 0 | 0 | 1 | 2 | 1 | 1 | 1 | 3 | 15 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 3 | 3 | 11 | 1 | 16 | 3 | 4 | 0 | 7 | 2 | 15 | 0 | 3 | 1 | 14
-INPUTS | 10 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rcvDone  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>
-INPUTMC | 10 | 3 | 15 | 3 | 13 | 3 | 10 | 1 | 4 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5
-EQ | 8 | 
+OUTPUTMC | 15 | 2 | 2 | 0 | 1 | 2 | 1 | 1 | 1 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 12 | 2 | 5 | 2 | 11 | 2 | 17 | 3 | 4 | 0 | 7 | 2 | 15 | 0 | 9
+INPUTS | 12 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rcvDone  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>  | XLXI_14/count<0>  | XLXI_14/count<1>
+INPUTMC | 12 | 2 | 14 | 2 | 13 | 2 | 10 | 1 | 4 | 3 | 7 | 3 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 12 | 2 | 11
+EXPORTS | 1 | 2 | 11
+EQ | 12 | 
    XLXI_14/tstate<2>.T = rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1>
 	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	XLXI_14/tstate<2>
@@ -246,161 +264,171 @@ EQ | 8 |
 	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>;
    XLXI_14/tstate<2>.CLK = clk;	// GCK
    !XLXI_14/tstate<2>.AR = rst;	// GSR
+    XLXI_14/tstate<2>.EXP  =  !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	!XLXI_14/tstate<2> & XLXI_14/count<0> & !XLXI_14/count<1> & 
+	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
+	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
 GLOBALS | 2 | 2 | clk | 4 | rst
 
-MACROCELL | 2 | 2 | XLXI_12/state_FSM_FFd1
+MACROCELL | 0 | 17 | XLXI_12/state_FSM_FFd1
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 14 | 3 | 14 | 3 | 16 | 1 | 4 | 2 | 2 | 3 | 17 | 0 | 13 | 0 | 17 | 0 | 15 | 0 | 0 | 0 | 12 | 0 | 14 | 0 | 16 | 2 | 3 | 3 | 0
-INPUTS | 9 | rcv  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | nextKey_OBUF.EXP  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_9/timer<0>.EXP
-INPUTMC | 7 | 2 | 2 | 3 | 17 | 0 | 13 | 0 | 17 | 2 | 1 | 2 | 7 | 2 | 3
+OUTPUTMC | 14 | 3 | 14 | 3 | 16 | 1 | 4 | 0 | 17 | 0 | 15 | 0 | 9 | 0 | 13 | 0 | 11 | 0 | 0 | 0 | 1 | 0 | 10 | 0 | 12 | 0 | 14 | 0 | 16
+INPUTS | 8 | rcv  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | EXP6_.EXP  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT
+INPUTMC | 6 | 0 | 17 | 0 | 15 | 0 | 10 | 0 | 13 | 0 | 0 | 3 | 3
 INPUTP | 2 | 33 | 38
-IMPORTS | 2 | 2 | 1 | 2 | 3
-EQ | 20 | 
+EXPORTS | 1 | 0 | 16
+IMPORTS | 1 | 0 | 0
+EQ | 21 | 
    XLXI_12/state_FSM_FFd1.D = rcv & !XLXI_12/state_FSM_FFd1 & 
 	!XLXI_12/state_FSM_FFd2
 	# XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
 	XLXI_12/state_FSM_FFd3
-	# !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
-	XLXI_12/state_FSM_FFd3
-;Imported pterms FB3_2
+;Imported pterms FB1_1
 	# rcv & !XLXI_12/state_FSM_FFd5 & 
 	XLXI_12/state_FSM_FFd3
-	# XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & 
-	XLXI_12/state_FSM_FFd3
-;Imported pterms FB3_4
 	# rcv & !XLXI_12/state_FSM_FFd5 & 
 	!XLXI_12/state_FSM_FFd4
+	# XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & 
+	XLXI_12/state_FSM_FFd3
+	# !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
+	XLXI_12/state_FSM_FFd3
 	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd4
+;Imported pterms FB1_2
 	# XLXI_12/state_FSM_FFd1 & !XLXI_12/state_FSM_FFd2 & 
 	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4;
    XLXI_12/state_FSM_FFd1.CLK = lowClk;
    XLXI_12/state_FSM_FFd1.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
+    XLXI_12/state_FSM_FFd1.EXP  =  rcv
 
-MACROCELL | 3 | 17 | XLXI_12/state_FSM_FFd2
+MACROCELL | 0 | 15 | XLXI_12/state_FSM_FFd2
 ATTRIBUTES | 4326192 | 0
-OUTPUTMC | 15 | 3 | 14 | 3 | 16 | 0 | 16 | 0 | 14 | 1 | 4 | 2 | 2 | 3 | 17 | 0 | 13 | 0 | 17 | 0 | 15 | 0 | 0 | 0 | 12 | 2 | 1 | 2 | 3 | 3 | 0
-INPUTS | 9 | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | rcv  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd4  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | EXP14_.EXP
-INPUTMC | 7 | 3 | 17 | 0 | 13 | 0 | 17 | 2 | 2 | 0 | 15 | 2 | 7 | 3 | 0
+OUTPUTMC | 14 | 3 | 14 | 3 | 16 | 0 | 16 | 0 | 14 | 1 | 4 | 0 | 17 | 0 | 15 | 0 | 10 | 0 | 13 | 0 | 11 | 0 | 0 | 0 | 1 | 0 | 9 | 0 | 12
+INPUTS | 10 | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | rcv  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd4  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | resp_3_OBUF.EXP  | resp_2_OBUF.EXP
+INPUTMC | 8 | 0 | 15 | 0 | 10 | 0 | 13 | 0 | 17 | 0 | 11 | 3 | 3 | 0 | 14 | 0 | 16
 INPUTP | 2 | 33 | 38
-IMPORTS | 1 | 3 | 0
-EQ | 18 | 
+IMPORTS | 2 | 0 | 14 | 0 | 16
+EQ | 19 | 
    XLXI_12/state_FSM_FFd2.T = !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
 	XLXI_12/state_FSM_FFd3
 	# rcv & XLXI_12/state_FSM_FFd1 & 
 	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
 	# rcv & !XLXI_12/state_FSM_FFd1 & 
 	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
-;Imported pterms FB4_1
+;Imported pterms FB1_15
 	# rcv & XLXI_12/state_FSM_FFd2 & 
 	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd4
-	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
-	XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
 	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
+;Imported pterms FB1_17
+	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
+	XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
 	# !rcv & XLXI_12/state_FSM_FFd1 & 
 	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & 
 	XLXI_12/state_FSM_FFd4;
    XLXI_12/state_FSM_FFd2.CLK = lowClk;
    XLXI_12/state_FSM_FFd2.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
 
-MACROCELL | 0 | 13 | XLXI_12/state_FSM_FFd5
+MACROCELL | 0 | 10 | XLXI_12/state_FSM_FFd5
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 13 | 3 | 14 | 3 | 16 | 0 | 16 | 0 | 14 | 2 | 2 | 3 | 17 | 0 | 13 | 0 | 17 | 0 | 15 | 0 | 0 | 2 | 1 | 2 | 3 | 3 | 0
-INPUTS | 9 | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | rcv  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd4  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_2/XLXN_31<0>.EXP
-INPUTMC | 7 | 3 | 17 | 0 | 13 | 2 | 2 | 0 | 17 | 0 | 15 | 2 | 7 | 0 | 12
+OUTPUTMC | 12 | 3 | 14 | 3 | 16 | 0 | 16 | 0 | 14 | 0 | 17 | 0 | 15 | 0 | 10 | 0 | 13 | 0 | 1 | 0 | 0 | 0 | 12 | 0 | 11
+INPUTS | 9 | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | rcv  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd4  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | $OpTx$FX_SC$16.EXP
+INPUTMC | 7 | 0 | 15 | 0 | 10 | 0 | 17 | 0 | 13 | 0 | 11 | 3 | 3 | 0 | 9
 INPUTP | 2 | 33 | 38
-IMPORTS | 1 | 0 | 12
-EQ | 10 | 
+EXPORTS | 1 | 0 | 11
+IMPORTS | 1 | 0 | 9
+EQ | 14 | 
    XLXI_12/state_FSM_FFd5.D = XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
+;Imported pterms FB1_10
+	# !rcv & XLXI_12/state_FSM_FFd1 & 
+	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
 	# !rcv & !XLXI_12/state_FSM_FFd1 & 
 	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
 	# !rcv & !XLXI_12/state_FSM_FFd1 & 
-	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd4
-;Imported pterms FB1_13
-	# !rcv & XLXI_12/state_FSM_FFd1 & 
-	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3;
+	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd4;
    XLXI_12/state_FSM_FFd5.CLK = lowClk;
    XLXI_12/state_FSM_FFd5.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
+    XLXI_12/state_FSM_FFd5.EXP  =  !rcv & XLXI_12/state_FSM_FFd1 & 
+	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
+	# !rcv & !XLXI_12/state_FSM_FFd1 & 
+	!XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & XLXI_12/state_FSM_FFd3
 
-MACROCELL | 0 | 17 | XLXI_12/state_FSM_FFd3
+MACROCELL | 0 | 13 | XLXI_12/state_FSM_FFd3
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 13 | 3 | 16 | 0 | 16 | 0 | 14 | 2 | 2 | 3 | 17 | 0 | 13 | 0 | 17 | 0 | 15 | 0 | 0 | 0 | 12 | 2 | 1 | 2 | 3 | 3 | 0
-INPUTS | 10 | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | rcv  | XLXI_12/state_FSM_FFd4  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | XLXI_14/nextSig.EXP  | resp_2_OBUF.EXP
-INPUTMC | 8 | 2 | 2 | 3 | 17 | 0 | 13 | 0 | 17 | 0 | 15 | 2 | 7 | 0 | 0 | 0 | 16
+OUTPUTMC | 12 | 3 | 16 | 0 | 16 | 0 | 14 | 0 | 17 | 0 | 15 | 0 | 9 | 0 | 13 | 0 | 11 | 0 | 0 | 0 | 1 | 0 | 10 | 0 | 12
+INPUTS | 8 | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | rcv  | XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF.EXP  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT
+INPUTMC | 6 | 0 | 17 | 0 | 15 | 0 | 10 | 0 | 13 | 0 | 12 | 3 | 3
 INPUTP | 2 | 33 | 38
-IMPORTS | 2 | 0 | 0 | 0 | 16
+EXPORTS | 1 | 0 | 14
+IMPORTS | 1 | 0 | 12
 EQ | 16 | 
    XLXI_12/state_FSM_FFd3.D = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 	XLXI_12/state_FSM_FFd5
 	# XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
 	XLXI_12/state_FSM_FFd3
+;Imported pterms FB1_13
 	# rcv & XLXI_12/state_FSM_FFd1 & 
 	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
-;Imported pterms FB1_1
+	# rcv & XLXI_12/state_FSM_FFd1 & 
+	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
 	# rcv & !XLXI_12/state_FSM_FFd1 & 
 	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
 	# rcv & !XLXI_12/state_FSM_FFd2 & 
-	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3
-;Imported pterms FB1_17
-	# rcv & XLXI_12/state_FSM_FFd1 & 
-	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5;
+	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3;
    XLXI_12/state_FSM_FFd3.CLK = lowClk;
    XLXI_12/state_FSM_FFd3.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
+    XLXI_12/state_FSM_FFd3.EXP  =  rcv
 
-MACROCELL | 0 | 15 | XLXI_12/state_FSM_FFd4
+MACROCELL | 3 | 17 | XLXI_2/XLXI_12/tstate<1>
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 5 | 0 | 11 | 3 | 17 | 0 | 8 | 0 | 3 | 0 | 2
+INPUTS | 4 | resetChecker  | nextKey  | XLXI_2/XLXI_12/tstate<1>  | XLXI_2/XLXI_12/tstate<0>
+INPUTMC | 4 | 0 | 1 | 2 | 1 | 3 | 17 | 3 | 8
+EQ | 6 | 
+   XLXI_2/XLXI_12/tstate<1> = !resetChecker & !nextKey & 
+	XLXI_2/XLXI_12/tstate<1>
+	# !resetChecker & XLXI_2/XLXI_12/tstate<1> & 
+	!XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<1> & XLXI_2/XLXI_12/tstate<0>;
+
+MACROCELL | 0 | 11 | XLXI_12/state_FSM_FFd4
 ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 8 | 1 | 4 | 0 | 0 | 3 | 17 | 0 | 13 | 0 | 17 | 0 | 15 | 2 | 3 | 3 | 0
-INPUTS | 9 | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd4  | rcv  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd5  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | resp_3_OBUF.EXP
-INPUTMC | 7 | 2 | 2 | 3 | 17 | 0 | 15 | 0 | 17 | 0 | 13 | 2 | 7 | 0 | 14
+OUTPUTMC | 10 | 1 | 4 | 0 | 16 | 0 | 15 | 0 | 9 | 0 | 12 | 0 | 11 | 0 | 0 | 0 | 1 | 0 | 10 | 0 | 14
+INPUTS | 12 | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd4  | rcv  | XLXI_12/state_FSM_FFd3  | resetChecker  | lowClk  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT  | nextKey  | XLXI_2/XLXI_12/tstate<1>  | XLXI_2/XLXN_31<3>  | XLXI_12/state_FSM_FFd5.EXP
+INPUTMC | 10 | 0 | 17 | 0 | 15 | 0 | 11 | 0 | 13 | 0 | 1 | 3 | 3 | 2 | 1 | 3 | 17 | 3 | 11 | 0 | 10
 INPUTP | 2 | 33 | 38
-IMPORTS | 1 | 0 | 14
-EQ | 11 | 
+EXPORTS | 1 | 0 | 12
+IMPORTS | 1 | 0 | 10
+EQ | 13 | 
    XLXI_12/state_FSM_FFd4.D = !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
 	XLXI_12/state_FSM_FFd4
 	# !rcv & XLXI_12/state_FSM_FFd1 & 
 	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
+;Imported pterms FB1_11
 	# !rcv & XLXI_12/state_FSM_FFd1 & 
 	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
-;Imported pterms FB1_15
 	# !rcv & !XLXI_12/state_FSM_FFd1 & 
 	!XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & XLXI_12/state_FSM_FFd3;
    XLXI_12/state_FSM_FFd4.CLK = lowClk;
    XLXI_12/state_FSM_FFd4.AR = !resp_3_OBUF/resp_3_OBUF_RSTF__$INT;
+    XLXI_12/state_FSM_FFd4.EXP  =  !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<3>
 
-MACROCELL | 0 | 8 | XLXI_2/XLXI_12/tstate<0>
-ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 7 | 0 | 4 | 0 | 8 | 0 | 6 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9
-INPUTS | 4 | XLXI_2/XLXI_12/tstate<0>  | XLXI_2/XLXI_12/tstate<1>  | nextKey  | resetChecker
-INPUTMC | 4 | 0 | 8 | 0 | 6 | 2 | 1 | 0 | 1
-EQ | 4 | 
-   !XLXI_2/XLXI_12/tstate<0>.D = XLXI_2/XLXI_12/tstate<0> & 
-	!XLXI_2/XLXI_12/tstate<1>;
-   XLXI_2/XLXI_12/tstate<0>.CLK = nextKey;
-   XLXI_2/XLXI_12/tstate<0>.AR = resetChecker;
-
-MACROCELL | 0 | 6 | XLXI_2/XLXI_12/tstate<1>
-ATTRIBUTES | 8520496 | 0
-OUTPUTMC | 7 | 0 | 4 | 0 | 8 | 0 | 6 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9
-INPUTS | 4 | XLXI_2/XLXI_12/tstate<0>  | XLXI_2/XLXI_12/tstate<1>  | nextKey  | resetChecker
-INPUTMC | 4 | 0 | 8 | 0 | 6 | 2 | 1 | 0 | 1
-EQ | 4 | 
-   !XLXI_2/XLXI_12/tstate<1>.D = !XLXI_2/XLXI_12/tstate<0> & 
-	!XLXI_2/XLXI_12/tstate<1>;
-   XLXI_2/XLXI_12/tstate<1>.CLK = nextKey;
-   XLXI_2/XLXI_12/tstate<1>.AR = resetChecker;
-
-MACROCELL | 3 | 12 | XLXI_14/count<0>
+MACROCELL | 2 | 12 | XLXI_14/count<0>
 ATTRIBUTES | 4358976 | 0
-OUTPUTMC | 4 | 1 | 14 | 3 | 12 | 3 | 11 | 3 | 14
-INPUTS | 13 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | XLXI_14/count<0>  | rcvDone  | XLXI_14/count<1>  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>  | rst
-INPUTMC | 12 | 3 | 15 | 3 | 13 | 3 | 10 | 3 | 12 | 1 | 4 | 3 | 11 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5
+OUTPUTMC | 5 | 2 | 11 | 2 | 12 | 2 | 10 | 2 | 1 | 2 | 13
+INPUTS | 13 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | XLXI_14/count<0>  | XLXI_14/count<1>  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>  | XLXI_14/count<1>.EXP  | rst
+INPUTMC | 12 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 12 | 2 | 11 | 3 | 7 | 3 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 11
 INPUTP | 1 | 92
-EQ | 14 | 
+EXPORTS | 1 | 2 | 13
+IMPORTS | 1 | 2 | 11
+EQ | 21 | 
    XLXI_14/count<0>.T = XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	XLXI_14/tstate<2> & XLXI_14/count<0>
 	# XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & XLXI_14/count<0>
+;Imported pterms FB3_12
 	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & !XLXI_14/count<0> & XLXI_9/timer<0> & 
 	XLXI_9/timer<1> & XLXI_9/timer<2> & XLXI_9/timer<3> & 
@@ -411,65 +439,78 @@ EQ | 14 |
 	XLXI_9/timer<4> & XLXI_9/timer<5>;
    XLXI_14/count<0>.CLK = clk;	// GCK
    XLXI_14/count<0>.CE = rst;
+    XLXI_14/count<0>.EXP  =  XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	XLXI_14/tstate<2>
+	# XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	XLXI_14/count<0> & XLXI_14/count<1> & XLXI_9/timer<0> & 
+	XLXI_9/timer<1> & XLXI_9/timer<2> & XLXI_9/timer<3> & 
+	XLXI_9/timer<4> & XLXI_9/timer<5>
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 3 | 3 | XLXN_30
+MACROCELL | 2 | 5 | XLXN_30
 ATTRIBUTES | 8553280 | 0
-OUTPUTMC | 6 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5
-INPUTS | 4 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rst
-INPUTMC | 3 | 3 | 15 | 3 | 13 | 3 | 10
-INPUTP | 1 | 92
-EQ | 6 | 
+OUTPUTMC | 7 | 3 | 7 | 3 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 4
+INPUTS | 7 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rst  | resp<1>  | XLXI_2/XLXN_31<1>  | data<1>
+INPUTMC | 5 | 2 | 14 | 2 | 13 | 2 | 10 | 3 | 16 | 3 | 13
+INPUTP | 2 | 92 | 49
+EXPORTS | 1 | 2 | 4
+EQ | 8 | 
    XLXN_30.D = XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 	XLXI_14/tstate<2>
 	# !XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2>;
    XLXN_30.CLK = clk;	// GCK
    XLXN_30.CE = rst;
+    XLXN_30.EXP  =  !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
+	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 3 | 11 | XLXI_14/count<1>
+MACROCELL | 2 | 11 | XLXI_14/count<1>
 ATTRIBUTES | 4358976 | 0
-OUTPUTMC | 4 | 1 | 14 | 3 | 12 | 3 | 11 | 3 | 14
-INPUTS | 13 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | XLXI_14/count<1>  | rcvDone  | XLXI_14/count<0>  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>  | rst
-INPUTMC | 12 | 3 | 15 | 3 | 13 | 3 | 10 | 3 | 11 | 1 | 4 | 3 | 12 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5
+OUTPUTMC | 4 | 2 | 12 | 2 | 10 | 2 | 11 | 2 | 1
+INPUTS | 14 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | XLXI_14/count<1>  | rcvDone  | XLXI_14/count<0>  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>  | rst  | XLXI_14/tstate<2>.EXP
+INPUTMC | 13 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 11 | 1 | 4 | 2 | 12 | 3 | 7 | 3 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 6 | 2 | 10
 INPUTP | 1 | 92
-EQ | 10 | 
+EXPORTS | 1 | 2 | 12
+IMPORTS | 1 | 2 | 10
+EQ | 19 | 
    XLXI_14/count<1>.T = XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	XLXI_14/tstate<2> & XLXI_14/count<1>
 	# XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & XLXI_14/count<1>
+;Imported pterms FB3_11
 	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & XLXI_14/count<0> & !XLXI_14/count<1> & 
 	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
 	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>;
    XLXI_14/count<1>.CLK = clk;	// GCK
    XLXI_14/count<1>.CE = rst;
+    XLXI_14/count<1>.EXP  =  !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	!XLXI_14/tstate<2> & !XLXI_14/count<0> & XLXI_9/timer<0> & 
+	XLXI_9/timer<1> & XLXI_9/timer<2> & XLXI_9/timer<3> & 
+	XLXI_9/timer<4> & XLXI_9/timer<5>
+	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	XLXI_14/count<0> & !XLXI_14/count<1> & XLXI_9/timer<0> & 
+	XLXI_9/timer<1> & XLXI_9/timer<2> & XLXI_9/timer<3> & 
+	XLXI_9/timer<4> & XLXI_9/timer<5>
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 2 | 3 | XLXI_9/timer<0>
+MACROCELL | 3 | 7 | XLXI_9/timer<0>
 ATTRIBUTES | 4326192 | 0
-OUTPUTMC | 13 | 3 | 14 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5 | 1 | 14 | 3 | 16 | 2 | 2
-INPUTS | 8 | lowClk  | XLXN_30  | rcv  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd4  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd3
-INPUTMC | 6 | 3 | 3 | 0 | 13 | 0 | 15 | 2 | 2 | 3 | 17 | 0 | 17
-INPUTP | 2 | 38 | 33
-EXPORTS | 1 | 2 | 2
-EQ | 9 | 
+OUTPUTMC | 10 | 2 | 12 | 2 | 13 | 2 | 10 | 2 | 11 | 2 | 1 | 3 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 6
+INPUTS | 2 | lowClk  | XLXN_30
+INPUTMC | 1 | 2 | 5
+INPUTP | 1 | 38
+EQ | 3 | 
    XLXI_9/timer<0>.T = Vcc;
    XLXI_9/timer<0>.CLK = lowClk;
    XLXI_9/timer<0>.AR = XLXN_30;
-    XLXI_9/timer<0>.EXP  =  rcv & !XLXI_12/state_FSM_FFd5 & 
-	!XLXI_12/state_FSM_FFd4
-	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
-	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd4
-	# XLXI_12/state_FSM_FFd1 & !XLXI_12/state_FSM_FFd2 & 
-	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
 
-MACROCELL | 3 | 2 | XLXI_13/state_FSM_FFd1
+MACROCELL | 3 | 9 | XLXI_13/state_FSM_FFd1
 ATTRIBUTES | 8561408 | 0
-OUTPUTMC | 3 | 3 | 2 | 0 | 2 | 3 | 1
+OUTPUTMC | 3 | 3 | 9 | 3 | 5 | 3 | 6
 INPUTS | 3 | XLXI_13/state_FSM_FFd2  | XLXI_13/state_FSM_FFd1  | trig
-INPUTMC | 2 | 0 | 2 | 3 | 2
+INPUTMC | 2 | 3 | 5 | 3 | 9
 INPUTP | 1 | 21
 EQ | 4 | 
    XLXI_13/state_FSM_FFd1.D = XLXI_13/state_FSM_FFd2
@@ -478,86 +519,33 @@ EQ | 4 |
    !XLXI_13/state_FSM_FFd1.AR = rst;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | rst
 
-MACROCELL | 0 | 12 | XLXI_2/XLXN_31<0>
-ATTRIBUTES | 8520544 | 0
-OUTPUTMC | 6 | 2 | 4 | 0 | 12 | 1 | 16 | 2 | 17 | 1 | 15 | 0 | 13
-INPUTS | 9 | XLXI_2/XLXI_12/tstate<0>  | XLXI_2/XLXN_31<0>  | XLXI_2/XLXI_12/tstate<1>  | nextKey  | resetChecker  | rcv  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd3
-INPUTMC | 8 | 0 | 8 | 0 | 12 | 0 | 6 | 2 | 1 | 0 | 1 | 2 | 2 | 3 | 17 | 0 | 17
-INPUTP | 1 | 33
-EXPORTS | 1 | 0 | 13
-EQ | 7 | 
-   XLXI_2/XLXN_31<0>.D = XLXI_2/XLXI_12/tstate<0> & 
-	!XLXI_2/XLXI_12/tstate<1>
-	# XLXI_2/XLXI_12/tstate<0> & XLXI_2/XLXN_31<0>;
-   XLXI_2/XLXN_31<0>.CLK = nextKey;
-   XLXI_2/XLXN_31<0>.CE = !resetChecker;
-    XLXI_2/XLXN_31<0>.EXP  =  !rcv & XLXI_12/state_FSM_FFd1 & 
-	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
-
-MACROCELL | 0 | 11 | XLXI_2/XLXN_31<1>
-ATTRIBUTES | 8520544 | 0
-OUTPUTMC | 6 | 2 | 4 | 0 | 11 | 1 | 15 | 2 | 16 | 1 | 17 | 2 | 5
-INPUTS | 5 | XLXI_2/XLXI_12/tstate<1>  | XLXI_2/XLXN_31<1>  | XLXI_2/XLXI_12/tstate<0>  | nextKey  | resetChecker
-INPUTMC | 5 | 0 | 6 | 0 | 11 | 0 | 8 | 2 | 1 | 0 | 1
-EQ | 5 | 
-   !XLXI_2/XLXN_31<1>.D = !XLXI_2/XLXI_12/tstate<0> & 
-	XLXI_2/XLXI_12/tstate<1>
-	# XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<1>;
-   XLXI_2/XLXN_31<1>.CLK = nextKey;
-   XLXI_2/XLXN_31<1>.CE = !resetChecker;
-
-MACROCELL | 0 | 10 | XLXI_2/XLXN_31<2>
-ATTRIBUTES | 8520544 | 0
-OUTPUTMC | 6 | 2 | 0 | 0 | 10 | 2 | 16 | 1 | 17 | 2 | 5 | 2 | 6
-INPUTS | 5 | XLXI_2/XLXI_12/tstate<0>  | XLXI_2/XLXI_12/tstate<1>  | XLXI_2/XLXN_31<2>  | nextKey  | resetChecker
-INPUTMC | 5 | 0 | 8 | 0 | 6 | 0 | 10 | 2 | 1 | 0 | 1
-EQ | 6 | 
-   XLXI_2/XLXN_31<2>.D = !XLXI_2/XLXI_12/tstate<0> & 
-	!XLXI_2/XLXI_12/tstate<1>
-	# XLXI_2/XLXI_12/tstate<0> & 
-	XLXI_2/XLXI_12/tstate<1> & XLXI_2/XLXN_31<2>;
-   XLXI_2/XLXN_31<2>.CLK = nextKey;
-   XLXI_2/XLXN_31<2>.CE = !resetChecker;
-
-MACROCELL | 0 | 9 | XLXI_2/XLXN_31<3>
-ATTRIBUTES | 8520544 | 0
-OUTPUTMC | 6 | 2 | 0 | 0 | 9 | 1 | 14 | 2 | 15 | 2 | 6 | 2 | 7
-INPUTS | 5 | XLXI_2/XLXI_12/tstate<0>  | XLXI_2/XLXN_31<3>  | XLXI_2/XLXI_12/tstate<1>  | nextKey  | resetChecker
-INPUTMC | 5 | 0 | 8 | 0 | 9 | 0 | 6 | 2 | 1 | 0 | 1
-EQ | 5 | 
-   XLXI_2/XLXN_31<3>.D = XLXI_2/XLXI_12/tstate<0> & 
-	!XLXI_2/XLXI_12/tstate<1>
-	# XLXI_2/XLXI_12/tstate<0> & XLXI_2/XLXN_31<3>;
-   XLXI_2/XLXN_31<3>.CLK = nextKey;
-   XLXI_2/XLXN_31<3>.CE = !resetChecker;
-
-MACROCELL | 3 | 9 | XLXI_9/timer<1>
+MACROCELL | 3 | 10 | XLXI_9/timer<1>
 ATTRIBUTES | 4326192 | 0
-OUTPUTMC | 11 | 3 | 14 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 11 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5 | 1 | 14 | 3 | 16
+OUTPUTMC | 9 | 2 | 12 | 2 | 13 | 2 | 10 | 2 | 11 | 2 | 1 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 6
 INPUTS | 3 | XLXI_9/timer<0>  | lowClk  | XLXN_30
-INPUTMC | 2 | 2 | 3 | 3 | 3
+INPUTMC | 2 | 3 | 7 | 2 | 5
 INPUTP | 1 | 38
 EQ | 3 | 
    XLXI_9/timer<1>.T = XLXI_9/timer<0>;
    XLXI_9/timer<1>.CLK = lowClk;
    XLXI_9/timer<1>.AR = XLXN_30;
 
-MACROCELL | 3 | 8 | XLXI_9/timer<2>
+MACROCELL | 2 | 9 | XLXI_9/timer<2>
 ATTRIBUTES | 4326192 | 0
-OUTPUTMC | 10 | 3 | 14 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 11 | 3 | 7 | 3 | 6 | 3 | 5 | 1 | 14 | 3 | 16
+OUTPUTMC | 8 | 2 | 12 | 2 | 13 | 2 | 10 | 2 | 11 | 2 | 1 | 2 | 8 | 2 | 7 | 2 | 6
 INPUTS | 4 | XLXI_9/timer<0>  | XLXI_9/timer<1>  | lowClk  | XLXN_30
-INPUTMC | 3 | 2 | 3 | 3 | 9 | 3 | 3
+INPUTMC | 3 | 3 | 7 | 3 | 10 | 2 | 5
 INPUTP | 1 | 38
 EQ | 3 | 
    XLXI_9/timer<2>.T = XLXI_9/timer<0> & XLXI_9/timer<1>;
    XLXI_9/timer<2>.CLK = lowClk;
    XLXI_9/timer<2>.AR = XLXN_30;
 
-MACROCELL | 3 | 7 | XLXI_9/timer<3>
+MACROCELL | 2 | 8 | XLXI_9/timer<3>
 ATTRIBUTES | 4326192 | 0
-OUTPUTMC | 9 | 3 | 14 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 11 | 3 | 6 | 3 | 5 | 1 | 14 | 3 | 16
+OUTPUTMC | 7 | 2 | 12 | 2 | 13 | 2 | 10 | 2 | 11 | 2 | 1 | 2 | 7 | 2 | 6
 INPUTS | 5 | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | lowClk  | XLXN_30
-INPUTMC | 4 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 3
+INPUTMC | 4 | 3 | 7 | 3 | 10 | 2 | 9 | 2 | 5
 INPUTP | 1 | 38
 EQ | 4 | 
    XLXI_9/timer<3>.T = XLXI_9/timer<0> & XLXI_9/timer<1> & 
@@ -565,11 +553,11 @@ EQ | 4 |
    XLXI_9/timer<3>.CLK = lowClk;
    XLXI_9/timer<3>.AR = XLXN_30;
 
-MACROCELL | 3 | 6 | XLXI_9/timer<4>
+MACROCELL | 2 | 7 | XLXI_9/timer<4>
 ATTRIBUTES | 4326192 | 0
-OUTPUTMC | 8 | 3 | 14 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 11 | 3 | 5 | 1 | 14 | 3 | 16
+OUTPUTMC | 6 | 2 | 12 | 2 | 13 | 2 | 10 | 2 | 11 | 2 | 1 | 2 | 6
 INPUTS | 6 | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | lowClk  | XLXN_30
-INPUTMC | 5 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 3
+INPUTMC | 5 | 3 | 7 | 3 | 10 | 2 | 9 | 2 | 8 | 2 | 5
 INPUTP | 1 | 38
 EQ | 4 | 
    XLXI_9/timer<4>.T = XLXI_9/timer<0> & XLXI_9/timer<1> & 
@@ -577,11 +565,11 @@ EQ | 4 |
    XLXI_9/timer<4>.CLK = lowClk;
    XLXI_9/timer<4>.AR = XLXN_30;
 
-MACROCELL | 0 | 2 | XLXI_13/state_FSM_FFd2
+MACROCELL | 3 | 5 | XLXI_13/state_FSM_FFd2
 ATTRIBUTES | 8561408 | 0
-OUTPUTMC | 3 | 3 | 2 | 0 | 2 | 3 | 1
+OUTPUTMC | 3 | 3 | 9 | 3 | 5 | 3 | 6
 INPUTS | 3 | XLXI_13/state_FSM_FFd1  | trig  | XLXI_13/state_FSM_FFd2
-INPUTMC | 2 | 3 | 2 | 0 | 2
+INPUTMC | 2 | 3 | 9 | 3 | 5
 INPUTP | 1 | 21
 EQ | 4 | 
    XLXI_13/state_FSM_FFd2.D = !XLXI_13/state_FSM_FFd1 & !trig & 
@@ -590,11 +578,11 @@ EQ | 4 |
    !XLXI_13/state_FSM_FFd2.AR = rst;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | rst
 
-MACROCELL | 3 | 1 | XLXN_110
+MACROCELL | 3 | 6 | XLXN_110
 ATTRIBUTES | 8561408 | 0
-OUTPUTMC | 3 | 3 | 15 | 3 | 13 | 3 | 1
+OUTPUTMC | 3 | 2 | 14 | 2 | 13 | 3 | 6
 INPUTS | 4 | XLXI_13/state_FSM_FFd1  | XLXN_110  | trig  | XLXI_13/state_FSM_FFd2
-INPUTMC | 3 | 3 | 2 | 3 | 1 | 0 | 2
+INPUTMC | 3 | 3 | 9 | 3 | 6 | 3 | 5
 INPUTP | 1 | 21
 EQ | 5 | 
    XLXN_110.D = XLXI_13/state_FSM_FFd1 & XLXN_110
@@ -604,11 +592,11 @@ EQ | 5 |
    !XLXN_110.AR = rst;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | rst
 
-MACROCELL | 3 | 5 | XLXI_9/timer<5>
+MACROCELL | 2 | 6 | XLXI_9/timer<5>
 ATTRIBUTES | 4326192 | 0
-OUTPUTMC | 7 | 3 | 14 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 11 | 1 | 14 | 3 | 16
+OUTPUTMC | 5 | 2 | 12 | 2 | 13 | 2 | 10 | 2 | 11 | 2 | 1
 INPUTS | 7 | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | lowClk  | XLXN_30
-INPUTMC | 6 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 3
+INPUTMC | 6 | 3 | 7 | 3 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 5
 INPUTP | 1 | 38
 EQ | 4 | 
    XLXI_9/timer<5>.T = XLXI_9/timer<0> & XLXI_9/timer<1> & 
@@ -616,14 +604,14 @@ EQ | 4 |
    XLXI_9/timer<5>.CLK = lowClk;
    XLXI_9/timer<5>.AR = XLXN_30;
 
-MACROCELL | 1 | 16 | XLXI_14/alarm
+MACROCELL | 2 | 17 | XLXI_14/alarm
 ATTRIBUTES | 8561408 | 0
-OUTPUTMC | 3 | 1 | 16 | 0 | 7 | 0 | 3
-INPUTS | 10 | XLXI_14/tstate<2>  | XLXI_14/alarm  | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | resp<0>  | XLXI_2/XLXN_31<0>  | data<0>  | $OpTx$FX_SC$16  | EXP8_.EXP  | EXP9_.EXP
-INPUTMC | 9 | 3 | 10 | 1 | 16 | 3 | 15 | 3 | 13 | 3 | 14 | 0 | 12 | 0 | 3 | 1 | 15 | 1 | 17
+OUTPUTMC | 3 | 2 | 17 | 0 | 7 | 0 | 9
+INPUTS | 10 | XLXI_14/tstate<2>  | XLXI_14/alarm  | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | resp<0>  | XLXI_2/XLXN_31<0>  | data<0>  | $OpTx$FX_SC$16  | EXP8_.EXP  | EXP10_.EXP
+INPUTMC | 9 | 2 | 10 | 2 | 17 | 2 | 14 | 2 | 13 | 3 | 14 | 3 | 15 | 0 | 9 | 2 | 0 | 2 | 16
 INPUTP | 1 | 46
-IMPORTS | 2 | 1 | 15 | 1 | 17
-EQ | 46 | 
+IMPORTS | 2 | 2 | 0 | 2 | 16
+EQ | 47 | 
    XLXI_14/alarm.D = !XLXI_14/tstate<2> & XLXI_14/alarm
 	# XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 	XLXI_14/alarm
@@ -633,7 +621,25 @@ EQ | 46 |
 	$OpTx$FX_SC$16
 	# resp<0> & !XLXI_2/XLXN_31<0> & !data<0> & 
 	$OpTx$FX_SC$16
-;Imported pterms FB2_16
+;Imported pterms FB3_1
+	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1> & 
+	$OpTx$FX_SC$16
+	# resp<2> & XLXI_2/XLXN_31<2> & data<2> & 
+	$OpTx$FX_SC$16
+	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2> & 
+	$OpTx$FX_SC$16
+	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2> & 
+	$OpTx$FX_SC$16
+	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2> & 
+	$OpTx$FX_SC$16
+;Imported pterms FB3_2
+	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3> & 
+	$OpTx$FX_SC$16
+	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	!XLXI_14/tstate<2> & XLXI_14/count<0> & XLXI_14/count<1> & 
+	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
+	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
+;Imported pterms FB3_17
 	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0> & 
 	$OpTx$FX_SC$16
 	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0> & 
@@ -644,29 +650,12 @@ EQ | 46 |
 	$OpTx$FX_SC$16
 	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1> & 
 	$OpTx$FX_SC$16
-;Imported pterms FB2_15
+;Imported pterms FB3_16
 	# resp<3> & XLXI_2/XLXN_31<3> & data<3> & 
 	$OpTx$FX_SC$16
 	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3> & 
 	$OpTx$FX_SC$16
 	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3> & 
-	$OpTx$FX_SC$16
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3> & 
-	$OpTx$FX_SC$16
-	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
-	!XLXI_14/tstate<2> & XLXI_14/count<0> & XLXI_14/count<1> & 
-	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
-	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
-;Imported pterms FB2_18
-	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1> & 
-	$OpTx$FX_SC$16
-	# resp<2> & XLXI_2/XLXN_31<2> & data<2> & 
-	$OpTx$FX_SC$16
-	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2> & 
-	$OpTx$FX_SC$16
-	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2> & 
-	$OpTx$FX_SC$16
-	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2> & 
 	$OpTx$FX_SC$16;
    XLXI_14/alarm.CLK = clk;	// GCK
    !XLXI_14/alarm.AR = rst;	// GSR
@@ -675,7 +664,7 @@ GLOBALS | 2 | 2 | clk | 4 | rst
 MACROCELL | 3 | 4 | getRand_OBUF
 ATTRIBUTES | 8684354 | 0
 INPUTS | 4 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rst
-INPUTMC | 3 | 3 | 15 | 3 | 13 | 3 | 10
+INPUTMC | 3 | 2 | 14 | 2 | 13 | 2 | 10
 INPUTP | 1 | 92
 EQ | 4 | 
    getRand.D = XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
@@ -686,155 +675,270 @@ GLOBALS | 1 | 2 | clk
 
 MACROCELL | 0 | 7 | larm_OBUF
 ATTRIBUTES | 8684354 | 0
-INPUTS | 5 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | XLXI_14/alarm  | rst
-INPUTMC | 4 | 3 | 15 | 3 | 13 | 3 | 10 | 1 | 16
-INPUTP | 1 | 92
-EQ | 4 | 
+OUTPUTMC | 1 | 0 | 6
+INPUTS | 8 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | XLXI_14/alarm  | rst  | resp<2>  | XLXI_2/XLXN_31<2>  | data<2>
+INPUTMC | 6 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 17 | 0 | 16 | 3 | 12
+INPUTP | 2 | 92 | 50
+EXPORTS | 1 | 0 | 6
+EQ | 7 | 
    larm.D = !XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2> & XLXI_14/alarm;
    larm.CLK = clk;	// GCK
    larm.CE = rst;
+    larm_OBUF.EXP  =  resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
+	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
+	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 2 | 17 | okLmp_BUFR.MC
-ATTRIBUTES | 8553280 | 0
-OUTPUTMC | 1 | 0 | 5
-INPUTS | 6 | resp<0>  | XLXI_2/XLXN_31<0>  | data<0>  | EXP10_.EXP  | EXP13_.EXP  | rst
-INPUTMC | 4 | 3 | 14 | 0 | 12 | 2 | 0 | 2 | 16
-INPUTP | 2 | 46 | 92
-IMPORTS | 2 | 2 | 0 | 2 | 16
+MACROCELL | 0 | 5 | okLmp_OBUF
+ATTRIBUTES | 8684354 | 0
+INPUTS | 6 | resp<3>  | XLXI_2/XLXN_31<3>  | data<3>  | lastkey_OBUF.EXP  | EXP7_.EXP  | rst
+INPUTMC | 4 | 0 | 14 | 3 | 11 | 0 | 4 | 0 | 6
+INPUTP | 2 | 52 | 92
+IMPORTS | 2 | 0 | 4 | 0 | 6
 EQ | 21 | 
-   !okLmp_BUFR.D = resp<0> & XLXI_2/XLXN_31<0> & data<0>
+   !okLmp.D = resp<3> & XLXI_2/XLXN_31<3> & data<3>
+	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
+	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
+	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
+;Imported pterms FB1_5
+	# resp<0> & XLXI_2/XLXN_31<0> & data<0>
 	# resp<0> & !XLXI_2/XLXN_31<0> & !data<0>
 	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0>
 	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0>
-;Imported pterms FB3_1
-	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
-	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
-	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
-	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
-;Imported pterms FB3_17
+;Imported pterms FB1_7
 	# resp<1> & XLXI_2/XLXN_31<1> & data<1>
 	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1>
 	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
 	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>
 	# resp<2> & XLXI_2/XLXN_31<2> & data<2>
-;Imported pterms FB3_16
-	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>;
-   okLmp_BUFR.CLK = clk;	// GCK
-   okLmp_BUFR.CE = rst;
+;Imported pterms FB1_8
+	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
+	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
+	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>;
+   okLmp.CLK = clk;	// GCK
+   okLmp.CE = rst;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 2 | 15 | sendEnable_OBUF
 ATTRIBUTES | 8684354 | 0
 OUTPUTMC | 1 | 2 | 16
-INPUTS | 7 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rst  | resp<3>  | XLXI_2/XLXN_31<3>  | data<3>
-INPUTMC | 5 | 3 | 15 | 3 | 13 | 3 | 10 | 0 | 14 | 0 | 9
+INPUTS | 8 | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rst  | resp<3>  | XLXI_2/XLXN_31<3>  | data<3>  | $OpTx$FX_SC$16
+INPUTMC | 6 | 2 | 14 | 2 | 13 | 2 | 10 | 0 | 14 | 3 | 11 | 0 | 9
 INPUTP | 2 | 92 | 52
 EXPORTS | 1 | 2 | 16
-EQ | 7 | 
+EQ | 10 | 
    sendEnable.D = !XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
 	!XLXI_14/tstate<2>;
    sendEnable.CLK = clk;	// GCK
    sendEnable.CE = rst;
-    sendEnable_OBUF.EXP  =  resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
+    sendEnable_OBUF.EXP  =  resp<3> & XLXI_2/XLXN_31<3> & data<3> & 
+	$OpTx$FX_SC$16
+	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3> & 
+	$OpTx$FX_SC$16
+	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3> & 
+	$OpTx$FX_SC$16
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 2 | 7 | resp_3_OBUF/resp_3_OBUF_RSTF__$INT
+MACROCELL | 3 | 8 | XLXI_2/XLXI_12/tstate<0>
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 10 | 3 | 14 | 3 | 16 | 0 | 16 | 0 | 14 | 2 | 2 | 3 | 17 | 0 | 13 | 0 | 17 | 0 | 15 | 2 | 6
-INPUTS | 5 | rst  | rcvEnable  | resp<3>  | XLXI_2/XLXN_31<3>  | data<3>
-INPUTMC | 3 | 1 | 1 | 0 | 14 | 0 | 9
-INPUTP | 2 | 92 | 52
-EXPORTS | 1 | 2 | 6
-EQ | 2 | 
-   resp_3_OBUF/resp_3_OBUF_RSTF__$INT = rst & rcvEnable;
-    resp_3_OBUF/resp_3_OBUF_RSTF__$INT.EXP  =  !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
+OUTPUTMC | 6 | 0 | 12 | 3 | 17 | 3 | 8 | 0 | 8 | 0 | 3 | 0 | 2
+INPUTS | 3 | resetChecker  | nextKey  | XLXI_2/XLXI_12/tstate<0>
+INPUTMC | 3 | 0 | 1 | 2 | 1 | 3 | 8
+EQ | 4 | 
+   XLXI_2/XLXI_12/tstate<0> = !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & !nextKey & 
+	XLXI_2/XLXI_12/tstate<0>;
 
-MACROCELL | 0 | 3 | $OpTx$FX_SC$16
+MACROCELL | 3 | 15 | XLXI_2/XLXN_31<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 6 | 2 | 4 | 2 | 17 | 0 | 4 | 0 | 8 | 2 | 3 | 2 | 16
+INPUTS | 3 | resetChecker  | nextKey  | XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF
+INPUTMC | 3 | 0 | 1 | 2 | 1 | 0 | 8
+EQ | 5 | 
+   XLXI_2/XLXN_31<0>.D = Gnd;
+   XLXI_2/XLXN_31<0>.CLK = Gnd;
+   XLXI_2/XLXN_31<0>.AP = !resetChecker & nextKey & 
+	!XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF;
+   XLXI_2/XLXN_31<0>.AR = XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF;
+
+MACROCELL | 3 | 13 | XLXI_2/XLXN_31<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 6 | 2 | 3 | 2 | 16 | 0 | 3 | 0 | 6 | 2 | 0 | 2 | 5
+INPUTS | 3 | resetChecker  | nextKey  | XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF
+INPUTMC | 3 | 0 | 1 | 2 | 1 | 0 | 3
+EQ | 5 | 
+   XLXI_2/XLXN_31<1>.D = Gnd;
+   XLXI_2/XLXN_31<1>.CLK = Gnd;
+   XLXI_2/XLXN_31<1>.AP = !resetChecker & nextKey & 
+	!XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF;
+   XLXI_2/XLXN_31<1>.AR = XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF;
+
+MACROCELL | 3 | 12 | XLXI_2/XLXN_31<2>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 5 | 2 | 2 | 2 | 0 | 0 | 2 | 0 | 6 | 0 | 7
+INPUTS | 3 | XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF  | resetChecker  | nextKey
+INPUTMC | 3 | 0 | 2 | 0 | 1 | 2 | 1
+EQ | 5 | 
+   XLXI_2/XLXN_31<2>.D = Gnd;
+   XLXI_2/XLXN_31<2>.CLK = Gnd;
+   XLXI_2/XLXN_31<2>.AP = XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF;
+   XLXI_2/XLXN_31<2>.AR = !resetChecker & nextKey & 
+	!XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF;
+
+MACROCELL | 3 | 11 | XLXI_2/XLXN_31<3>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 5 | 2 | 4 | 2 | 15 | 0 | 5 | 0 | 11 | 2 | 1
+INPUTS | 3 | resetChecker  | nextKey  | XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF
+INPUTMC | 3 | 0 | 1 | 2 | 1 | 0 | 12
+EQ | 5 | 
+   XLXI_2/XLXN_31<3>.D = Gnd;
+   XLXI_2/XLXN_31<3>.CLK = Gnd;
+   XLXI_2/XLXN_31<3>.AP = !resetChecker & nextKey & 
+	!XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF;
+   XLXI_2/XLXN_31<3>.AR = XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF;
+
+MACROCELL | 3 | 3 | resp_3_OBUF/resp_3_OBUF_RSTF__$INT
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 4 | 1 | 16 | 1 | 14 | 1 | 15 | 1 | 17
-INPUTS | 5 | XLXI_14/tstate<0>  | XLXI_14/alarm  | lastkey  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>
-INPUTMC | 5 | 3 | 15 | 1 | 16 | 0 | 4 | 3 | 13 | 3 | 10
-EQ | 3 | 
+OUTPUTMC | 9 | 3 | 14 | 3 | 16 | 0 | 16 | 0 | 14 | 0 | 17 | 0 | 15 | 0 | 10 | 0 | 13 | 0 | 11
+INPUTS | 2 | rst  | rcvEnable
+INPUTMC | 1 | 1 | 1
+INPUTP | 1 | 92
+EQ | 1 | 
+   resp_3_OBUF/resp_3_OBUF_RSTF__$INT = rst & rcvEnable;
+
+MACROCELL | 0 | 9 | $OpTx$FX_SC$16
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 6 | 2 | 17 | 2 | 0 | 2 | 1 | 2 | 15 | 2 | 16 | 0 | 10
+INPUTS | 10 | XLXI_14/tstate<0>  | XLXI_14/alarm  | lastkey  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | rcv  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd4
+INPUTMC | 9 | 2 | 14 | 2 | 17 | 0 | 4 | 2 | 13 | 2 | 10 | 0 | 17 | 0 | 15 | 0 | 13 | 0 | 11
+INPUTP | 1 | 33
+EXPORTS | 1 | 0 | 10
+EQ | 9 | 
    $OpTx$FX_SC$16 = !XLXI_14/tstate<0> & XLXI_14/alarm
 	# lastkey & !XLXI_14/tstate<0> & !XLXI_14/tstate<1> & 
 	XLXI_14/tstate<2>;
+    $OpTx$FX_SC$16.EXP  =  !rcv & XLXI_12/state_FSM_FFd1 & 
+	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
+	# !rcv & !XLXI_12/state_FSM_FFd1 & 
+	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd3
+	# !rcv & !XLXI_12/state_FSM_FFd1 & 
+	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd4
 
-MACROCELL | 0 | 5 | _6_
-ATTRIBUTES | 264962 | 0
-INPUTS | 1 | okLmp_BUFR
-INPUTMC | 1 | 2 | 17
-EQ | 1 | 
-   okLmp = okLmp_BUFR;
+MACROCELL | 0 | 8 | XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 5 | resetChecker  | nextKey  | XLXI_2/XLXI_12/tstate<0>  | XLXI_2/XLXI_12/tstate<1>  | XLXI_2/XLXN_31<0>
+INPUTMC | 5 | 0 | 1 | 2 | 1 | 3 | 8 | 3 | 17 | 3 | 15
+EQ | 4 | 
+   XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF = !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<0>;
 
-MACROCELL | 1 | 14 | EXP7_
+MACROCELL | 0 | 3 | XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 3 | 13 | 0 | 4
+INPUTS | 6 | resetChecker  | nextKey  | XLXI_2/XLXI_12/tstate<1>  | XLXI_2/XLXI_12/tstate<0>  | XLXI_2/XLXN_31<1>  | lastkey
+INPUTMC | 6 | 0 | 1 | 2 | 1 | 3 | 17 | 3 | 8 | 3 | 13 | 0 | 4
+EXPORTS | 1 | 0 | 4
+EQ | 8 | 
+   XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF = !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<1>;
+    XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF.EXP  =  !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & lastkey & 
+	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+
+MACROCELL | 0 | 2 | XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 12
+INPUTS | 5 | resetChecker  | nextKey  | XLXI_2/XLXI_12/tstate<1>  | XLXI_2/XLXI_12/tstate<0>  | XLXI_2/XLXN_31<2>
+INPUTMC | 5 | 0 | 1 | 2 | 1 | 3 | 17 | 3 | 8 | 3 | 12
+EQ | 4 | 
+   XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF = !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXI_12/tstate<0>
+	# !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & XLXI_2/XLXI_12/tstate<0> & XLXI_2/XLXN_31<2>;
+
+MACROCELL | 0 | 12 | XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 3 | 11 | 0 | 13
+INPUTS | 10 | resetChecker  | nextKey  | XLXI_2/XLXI_12/tstate<0>  | rcv  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd4  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd4.EXP
+INPUTMC | 9 | 0 | 1 | 2 | 1 | 3 | 8 | 0 | 17 | 0 | 15 | 0 | 11 | 0 | 10 | 0 | 13 | 0 | 11
+INPUTP | 1 | 33
+EXPORTS | 1 | 0 | 13
+IMPORTS | 1 | 0 | 11
+EQ | 13 | 
+   XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF = !resetChecker & nextKey & 
+	!XLXI_2/XLXI_12/tstate<0>
+;Imported pterms FB1_12
+	# !resetChecker & nextKey & 
+	XLXI_2/XLXI_12/tstate<1> & !XLXI_2/XLXN_31<3>;
+    XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF.EXP  =  rcv & XLXI_12/state_FSM_FFd1 & 
+	XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
+	# rcv & XLXI_12/state_FSM_FFd1 & 
+	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5
+	# rcv & !XLXI_12/state_FSM_FFd1 & 
+	!XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd4
+	# rcv & !XLXI_12/state_FSM_FFd2 & 
+	XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3
+
+MACROCELL | 0 | 0 | EXP6_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 15
-INPUTS | 16 | resp<3>  | XLXI_2/XLXN_31<3>  | data<3>  | $OpTx$FX_SC$16  | rcvDone  | XLXI_14/tstate<0>  | XLXI_14/tstate<1>  | XLXI_14/tstate<2>  | XLXI_14/count<0>  | XLXI_14/count<1>  | XLXI_9/timer<0>  | XLXI_9/timer<1>  | XLXI_9/timer<2>  | XLXI_9/timer<3>  | XLXI_9/timer<4>  | XLXI_9/timer<5>
-INPUTMC | 15 | 0 | 14 | 0 | 9 | 0 | 3 | 1 | 4 | 3 | 15 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 11 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5
-INPUTP | 1 | 52
-EXPORTS | 1 | 1 | 15
-EQ | 12 | 
-       EXP7_.EXP  =  resp<3> & XLXI_2/XLXN_31<3> & data<3> & 
-	$OpTx$FX_SC$16
-	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3> & 
-	$OpTx$FX_SC$16
-	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3> & 
-	$OpTx$FX_SC$16
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3> & 
-	$OpTx$FX_SC$16
-	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
-	!XLXI_14/tstate<2> & XLXI_14/count<0> & XLXI_14/count<1> & 
-	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
-	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
+OUTPUTMC | 1 | 0 | 17
+INPUTS | 7 | rcv  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd3  | XLXI_12/state_FSM_FFd4  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd1  | resetChecker_OBUF.EXP
+INPUTMC | 6 | 0 | 10 | 0 | 13 | 0 | 11 | 0 | 15 | 0 | 17 | 0 | 1
+INPUTP | 1 | 33
+EXPORTS | 1 | 0 | 17
+IMPORTS | 1 | 0 | 1
+EQ | 13 | 
+       EXP6_.EXP  =  rcv & !XLXI_12/state_FSM_FFd5 & 
+	XLXI_12/state_FSM_FFd3
+	# rcv & !XLXI_12/state_FSM_FFd5 & 
+	!XLXI_12/state_FSM_FFd4
+	# XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & 
+	XLXI_12/state_FSM_FFd3
+	# !XLXI_12/state_FSM_FFd2 & XLXI_12/state_FSM_FFd5 & 
+	XLXI_12/state_FSM_FFd3
+	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
+	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd4
+;Imported pterms FB1_2
+	# XLXI_12/state_FSM_FFd1 & !XLXI_12/state_FSM_FFd2 & 
+	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
 
-MACROCELL | 1 | 15 | EXP8_
+MACROCELL | 0 | 6 | EXP7_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 16
-INPUTS | 8 | resp<0>  | XLXI_2/XLXN_31<0>  | data<0>  | $OpTx$FX_SC$16  | resp<1>  | XLXI_2/XLXN_31<1>  | data<1>  | EXP7_.EXP
-INPUTMC | 6 | 3 | 14 | 0 | 12 | 0 | 3 | 3 | 16 | 0 | 11 | 1 | 14
-INPUTP | 2 | 46 | 49
-EXPORTS | 1 | 1 | 16
-IMPORTS | 1 | 1 | 14
-EQ | 23 | 
-       EXP8_.EXP  =  !resp<0> & XLXI_2/XLXN_31<0> & !data<0> & 
-	$OpTx$FX_SC$16
-	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0> & 
-	$OpTx$FX_SC$16
-	# resp<1> & XLXI_2/XLXN_31<1> & data<1> & 
-	$OpTx$FX_SC$16
-	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1> & 
-	$OpTx$FX_SC$16
-	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1> & 
-	$OpTx$FX_SC$16
-;Imported pterms FB2_15
-	# resp<3> & XLXI_2/XLXN_31<3> & data<3> & 
-	$OpTx$FX_SC$16
-	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3> & 
-	$OpTx$FX_SC$16
-	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3> & 
-	$OpTx$FX_SC$16
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3> & 
-	$OpTx$FX_SC$16
-	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
-	!XLXI_14/tstate<2> & XLXI_14/count<0> & XLXI_14/count<1> & 
-	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
-	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
-
-MACROCELL | 1 | 17 | EXP9_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 1 | 16
-INPUTS | 7 | resp<1>  | XLXI_2/XLXN_31<1>  | data<1>  | $OpTx$FX_SC$16  | resp<2>  | XLXI_2/XLXN_31<2>  | data<2>
-INPUTMC | 5 | 3 | 16 | 0 | 11 | 0 | 3 | 0 | 16 | 0 | 10
+OUTPUTMC | 1 | 0 | 5
+INPUTS | 7 | resp<1>  | XLXI_2/XLXN_31<1>  | data<1>  | resp<2>  | XLXI_2/XLXN_31<2>  | data<2>  | larm_OBUF.EXP
+INPUTMC | 5 | 3 | 16 | 3 | 13 | 0 | 16 | 3 | 12 | 0 | 7
 INPUTP | 2 | 49 | 50
-EXPORTS | 1 | 1 | 16
-EQ | 10 | 
-       EXP9_.EXP  =  !resp<1> & !XLXI_2/XLXN_31<1> & data<1> & 
+EXPORTS | 1 | 0 | 5
+IMPORTS | 1 | 0 | 7
+EQ | 9 | 
+       EXP7_.EXP  =  resp<1> & XLXI_2/XLXN_31<1> & data<1>
+	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1>
+	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
+	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>
+	# resp<2> & XLXI_2/XLXN_31<2> & data<2>
+;Imported pterms FB1_8
+	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
+	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
+	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
+
+MACROCELL | 2 | 0 | EXP8_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 17
+INPUTS | 8 | resp<1>  | XLXI_2/XLXN_31<1>  | data<1>  | $OpTx$FX_SC$16  | resp<2>  | XLXI_2/XLXN_31<2>  | data<2>  | nextKey_OBUF.EXP
+INPUTMC | 6 | 3 | 16 | 3 | 13 | 0 | 9 | 0 | 16 | 3 | 12 | 2 | 1
+INPUTP | 2 | 49 | 50
+EXPORTS | 1 | 2 | 17
+IMPORTS | 1 | 2 | 1
+EQ | 17 | 
+       EXP8_.EXP  =  !resp<1> & !XLXI_2/XLXN_31<1> & data<1> & 
 	$OpTx$FX_SC$16
 	# resp<2> & XLXI_2/XLXN_31<2> & data<2> & 
 	$OpTx$FX_SC$16
@@ -844,114 +948,78 @@ EQ | 10 |
 	$OpTx$FX_SC$16
 	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2> & 
 	$OpTx$FX_SC$16
+;Imported pterms FB3_2
+	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3> & 
+	$OpTx$FX_SC$16
+	# !rcvDone & XLXI_14/tstate<0> & XLXI_14/tstate<1> & 
+	!XLXI_14/tstate<2> & XLXI_14/count<0> & XLXI_14/count<1> & 
+	XLXI_9/timer<0> & XLXI_9/timer<1> & XLXI_9/timer<2> & 
+	XLXI_9/timer<3> & XLXI_9/timer<4> & XLXI_9/timer<5>
 
-MACROCELL | 2 | 0 | EXP10_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 17
-INPUTS | 6 | resp<2>  | XLXI_2/XLXN_31<2>  | data<2>  | resp<3>  | XLXI_2/XLXN_31<3>  | data<3>
-INPUTMC | 4 | 0 | 16 | 0 | 10 | 0 | 14 | 0 | 9
-INPUTP | 2 | 50 | 52
-EXPORTS | 1 | 2 | 17
-EQ | 4 | 
-       EXP10_.EXP  =  resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
-	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
-	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
-	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
-
-MACROCELL | 2 | 5 | EXP11_
+MACROCELL | 2 | 3 | EXP9_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 2 | 4
-INPUTS | 7 | resp<1>  | XLXI_2/XLXN_31<1>  | data<1>  | resp<2>  | XLXI_2/XLXN_31<2>  | data<2>  | EXP12_.EXP
-INPUTMC | 5 | 3 | 16 | 0 | 11 | 0 | 16 | 0 | 10 | 2 | 6
-INPUTP | 2 | 49 | 50
+INPUTS | 7 | resp<0>  | XLXI_2/XLXN_31<0>  | data<0>  | resp<1>  | XLXI_2/XLXN_31<1>  | data<1>  | XLXI_14/nextSig.EXP
+INPUTMC | 5 | 3 | 14 | 3 | 15 | 3 | 16 | 3 | 13 | 2 | 2
+INPUTP | 2 | 46 | 49
 EXPORTS | 1 | 2 | 4
-IMPORTS | 1 | 2 | 6
-EQ | 13 | 
-       EXP11_.EXP  =  resp<1> & !XLXI_2/XLXN_31<1> & !data<1>
-	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
-	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>
+IMPORTS | 1 | 2 | 2
+EQ | 10 | 
+       EXP9_.EXP  =  resp<0> & !XLXI_2/XLXN_31<0> & !data<0>
+	# !resp<0> & XLXI_2/XLXN_31<0> & !data<0>
+	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0>
+	# resp<1> & XLXI_2/XLXN_31<1> & data<1>
+	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1>
+;Imported pterms FB3_3
 	# resp<2> & XLXI_2/XLXN_31<2> & data<2>
 	# resp<2> & !XLXI_2/XLXN_31<2> & !data<2>
-;Imported pterms FB3_7
 	# !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
 	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
-	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
-	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
-;Imported pterms FB3_8
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
 
-MACROCELL | 2 | 6 | EXP12_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 5
-INPUTS | 7 | resp<2>  | XLXI_2/XLXN_31<2>  | data<2>  | resp<3>  | XLXI_2/XLXN_31<3>  | data<3>  | resp_3_OBUF/resp_3_OBUF_RSTF__$INT.EXP
-INPUTMC | 5 | 0 | 16 | 0 | 10 | 0 | 14 | 0 | 9 | 2 | 7
-INPUTP | 2 | 50 | 52
-EXPORTS | 1 | 2 | 5
-IMPORTS | 1 | 2 | 7
-EQ | 7 | 
-       EXP12_.EXP  =  !resp<2> & XLXI_2/XLXN_31<2> & !data<2>
-	# !resp<2> & !XLXI_2/XLXN_31<2> & data<2>
-	# resp<3> & XLXI_2/XLXN_31<3> & data<3>
-	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
-;Imported pterms FB3_8
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
-
-MACROCELL | 2 | 16 | EXP13_
+MACROCELL | 2 | 16 | EXP10_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 2 | 17
-INPUTS | 7 | resp<1>  | XLXI_2/XLXN_31<1>  | data<1>  | resp<2>  | XLXI_2/XLXN_31<2>  | data<2>  | sendEnable_OBUF.EXP
-INPUTMC | 5 | 3 | 16 | 0 | 11 | 0 | 16 | 0 | 10 | 2 | 15
-INPUTP | 2 | 49 | 50
+INPUTS | 8 | resp<0>  | XLXI_2/XLXN_31<0>  | data<0>  | $OpTx$FX_SC$16  | resp<1>  | XLXI_2/XLXN_31<1>  | data<1>  | sendEnable_OBUF.EXP
+INPUTMC | 6 | 3 | 14 | 3 | 15 | 0 | 9 | 3 | 16 | 3 | 13 | 2 | 15
+INPUTP | 2 | 46 | 49
 EXPORTS | 1 | 2 | 17
 IMPORTS | 1 | 2 | 15
-EQ | 9 | 
-       EXP13_.EXP  =  resp<1> & XLXI_2/XLXN_31<1> & data<1>
-	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1>
-	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1>
-	# !resp<1> & !XLXI_2/XLXN_31<1> & data<1>
-	# resp<2> & XLXI_2/XLXN_31<2> & data<2>
+EQ | 17 | 
+       EXP10_.EXP  =  !resp<0> & XLXI_2/XLXN_31<0> & !data<0> & 
+	$OpTx$FX_SC$16
+	# !resp<0> & !XLXI_2/XLXN_31<0> & data<0> & 
+	$OpTx$FX_SC$16
+	# resp<1> & XLXI_2/XLXN_31<1> & data<1> & 
+	$OpTx$FX_SC$16
+	# resp<1> & !XLXI_2/XLXN_31<1> & !data<1> & 
+	$OpTx$FX_SC$16
+	# !resp<1> & XLXI_2/XLXN_31<1> & !data<1> & 
+	$OpTx$FX_SC$16
 ;Imported pterms FB3_16
-	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3>
-	# !resp<3> & !XLXI_2/XLXN_31<3> & data<3>
+	# resp<3> & XLXI_2/XLXN_31<3> & data<3> & 
+	$OpTx$FX_SC$16
+	# resp<3> & !XLXI_2/XLXN_31<3> & !data<3> & 
+	$OpTx$FX_SC$16
+	# !resp<3> & XLXI_2/XLXN_31<3> & !data<3> & 
+	$OpTx$FX_SC$16
 
-MACROCELL | 3 | 0 | EXP14_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 17
-INPUTS | 6 | rcv  | XLXI_12/state_FSM_FFd2  | XLXI_12/state_FSM_FFd5  | XLXI_12/state_FSM_FFd4  | XLXI_12/state_FSM_FFd1  | XLXI_12/state_FSM_FFd3
-INPUTMC | 5 | 3 | 17 | 0 | 13 | 0 | 15 | 2 | 2 | 0 | 17
-INPUTP | 1 | 33
-EXPORTS | 1 | 3 | 17
-EQ | 9 | 
-       EXP14_.EXP  =  rcv & XLXI_12/state_FSM_FFd2 & 
-	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd4
-	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd5 & 
-	XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
-	# !XLXI_12/state_FSM_FFd1 & XLXI_12/state_FSM_FFd2 & 
-	!XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & !XLXI_12/state_FSM_FFd4
-	# !rcv & XLXI_12/state_FSM_FFd1 & 
-	XLXI_12/state_FSM_FFd2 & !XLXI_12/state_FSM_FFd5 & !XLXI_12/state_FSM_FFd3 & 
-	XLXI_12/state_FSM_FFd4
-
-PIN | data<0> | 64 | 0 | N/A | 46 | 4 | 2 | 4 | 1 | 16 | 2 | 17 | 1 | 15
-PIN | data<1> | 64 | 0 | N/A | 49 | 5 | 2 | 4 | 1 | 15 | 2 | 16 | 1 | 17 | 2 | 5
-PIN | data<2> | 64 | 0 | N/A | 50 | 5 | 2 | 0 | 2 | 16 | 1 | 17 | 2 | 5 | 2 | 6
-PIN | data<3> | 64 | 0 | N/A | 52 | 5 | 2 | 0 | 1 | 14 | 2 | 15 | 2 | 6 | 2 | 7
-PIN | rcv | 64 | 0 | N/A | 33 | 14 | 3 | 14 | 3 | 16 | 0 | 16 | 0 | 14 | 2 | 2 | 3 | 17 | 0 | 13 | 0 | 17 | 0 | 15 | 0 | 0 | 0 | 12 | 2 | 1 | 2 | 3 | 3 | 0
-PIN | lowClk | 64 | 0 | N/A | 38 | 16 | 3 | 14 | 3 | 16 | 0 | 16 | 0 | 14 | 1 | 4 | 2 | 2 | 3 | 17 | 0 | 13 | 0 | 17 | 0 | 15 | 2 | 3 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 5
-PIN | rst | 65600 | 0 | N/A | 92 | 20 | 1 | 4 | 0 | 1 | 2 | 1 | 1 | 1 | 3 | 12 | 3 | 3 | 3 | 11 | 3 | 4 | 0 | 7 | 2 | 17 | 2 | 15 | 2 | 7 | 0 | 0 | 3 | 15 | 3 | 13 | 3 | 10 | 3 | 2 | 0 | 2 | 3 | 1 | 1 | 16
-PIN | clk | 4096 | 0 | N/A | 20 | 18 | 0 | 0 | 0 | 1 | 2 | 1 | 1 | 1 | 3 | 15 | 3 | 13 | 3 | 10 | 3 | 12 | 3 | 3 | 3 | 11 | 3 | 2 | 0 | 2 | 3 | 1 | 1 | 16 | 3 | 4 | 0 | 7 | 2 | 17 | 2 | 15
-PIN | sendDone | 64 | 0 | N/A | 62 | 1 | 3 | 15
-PIN | trig | 64 | 0 | N/A | 21 | 3 | 3 | 2 | 0 | 2 | 3 | 1
+PIN | data<3> | 64 | 0 | N/A | 52 | 4 | 2 | 4 | 2 | 15 | 0 | 5 | 2 | 1
+PIN | data<0> | 64 | 0 | N/A | 46 | 5 | 2 | 4 | 2 | 17 | 0 | 4 | 2 | 3 | 2 | 16
+PIN | data<1> | 64 | 0 | N/A | 49 | 5 | 2 | 3 | 2 | 16 | 0 | 6 | 2 | 0 | 2 | 5
+PIN | data<2> | 64 | 0 | N/A | 50 | 4 | 2 | 2 | 2 | 0 | 0 | 6 | 0 | 7
+PIN | rcv | 64 | 0 | N/A | 33 | 12 | 3 | 14 | 3 | 16 | 0 | 14 | 0 | 13 | 0 | 17 | 0 | 15 | 0 | 9 | 0 | 12 | 0 | 11 | 0 | 0 | 0 | 10 | 0 | 16
+PIN | lowClk | 64 | 0 | N/A | 38 | 16 | 3 | 14 | 3 | 16 | 0 | 16 | 0 | 14 | 1 | 4 | 0 | 17 | 0 | 15 | 0 | 10 | 0 | 13 | 0 | 11 | 3 | 7 | 3 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 6
+PIN | rst | 65600 | 0 | N/A | 92 | 20 | 0 | 1 | 1 | 4 | 2 | 1 | 1 | 1 | 2 | 12 | 2 | 5 | 2 | 11 | 3 | 4 | 0 | 7 | 0 | 5 | 2 | 15 | 3 | 3 | 2 | 2 | 2 | 14 | 2 | 13 | 2 | 10 | 3 | 9 | 3 | 5 | 3 | 6 | 2 | 17
+PIN | clk | 4096 | 0 | N/A | 20 | 18 | 2 | 2 | 0 | 1 | 2 | 1 | 1 | 1 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 12 | 2 | 5 | 2 | 11 | 3 | 9 | 3 | 5 | 3 | 6 | 2 | 17 | 3 | 4 | 0 | 7 | 0 | 5 | 2 | 15
+PIN | sendDone | 64 | 0 | N/A | 62 | 1 | 2 | 14
+PIN | trig | 64 | 0 | N/A | 21 | 3 | 3 | 9 | 3 | 5 | 3 | 6
 PIN | found | 536871040 | 0 | N/A | 31
 PIN | resp<0> | 536871040 | 0 | N/A | 82
 PIN | resp<1> | 536871040 | 0 | N/A | 83
 PIN | resp<2> | 536871040 | 0 | N/A | 27
 PIN | resp<3> | 536871040 | 0 | N/A | 26
-PIN | rcvDone | 536871040 | 0 | N/A | 88
 PIN | resetChecker | 536871040 | 0 | N/A | 11
+PIN | rcvDone | 536871040 | 0 | N/A | 88
 PIN | nextKey | 536871040 | 0 | N/A | 29
 PIN | lastkey | 536871040 | 0 | N/A | 12
 PIN | rcvEnable | 536871040 | 0 | N/A | 87
