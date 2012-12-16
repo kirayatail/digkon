@@ -3,9 +3,9 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="impact" timeStamp="Tue Dec 11 13:57:49 2012">
+<application name="impact" timeStamp="Sun Dec 16 19:32:02 2012">
 <section name="Project Information" visible="false">
-<property name="ProjectID" value="6a5be3f569a44e93b5fdde63709e595a"/>
+<property name="ProjectID" value="6deb15dcae974c80ba3301c47c4cd0aa"/>
 <property name="ProjectIteration" value="1"/>
 </section>
 <section name="iMPACT Project Info" visible="true">
@@ -14,19 +14,21 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="OS Name" value="Microsoft Windows 7 (64 Bit)"/>
 <property name="User Lic. Info" value="__174110869_174110870_174416152"/>
 </section>
-<section name="iMPACT Boundary Scan Mode" visible="true">
+<section name="iMPACT One Step SVF File Mode" visible="true">
 <item name="Chain Summary">
 <property name="Number of device" value="2"/>
-<property name="Number of Xilinx device" value="0"/>
-<property name="Number of Non-Xilinx device" value="2"/>
+<property name="Number of Xilinx device" value="2"/>
+<property name="Number of Non-Xilinx device" value="0"/>
 </item>
 <item name="Chain Description">
-<property name="Device1" value="Non-Xilinx"/>
-<property name="Part1" value="UNKNOWN"/>
-<property name="Device2" value="Non-Xilinx"/>
-<property name="Part2" value="UNKNOWN"/>
+<property name="Device1" value="xc9500xl"/>
+<property name="Part1" value="xc9572xl"/>
+<property name="Device2" value="xc9500xl"/>
+<property name="Part2" value="xc9572xl"/>
 </item>
 <item name="Boundary Scan Operations Statistics">
+<property name="BSCAN Operation" value="Program -p 1 -e -v
+"/>
 </item>
 <item name="Cable Summary">
 <property name="Cable Type" value="Parallel III"/>

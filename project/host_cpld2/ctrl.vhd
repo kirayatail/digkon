@@ -37,25 +37,47 @@ architecture Behavioral of ctrl is
 	signal state : state_type;
 	signal alarm : STD_LOGIC;
 	signal count : STD_LOGIC_VECTOR(1 downto 0);
-	signal nextSig : STD_LOGIC;
+
 begin
-	process(clk, reset) begin
+	process(clk, reset) 
+		variable nextSig : STD_LOGIC;
+	begin
+		
 		if(reset = '1') then
 			alarm <= '0';
 			state <= s0;
+			
 		elsif rising_edge(clk) then
+			rand <= '0';
+			send <= '0';
+			rcvEnable <= '0';
+			checkRst <= '0';
+			larmOut <= '0';
+			timerStart <= '0';
+			nextKey <= '0';
+			okOut <= checkOK;
 			case state is
 				when s0 => 				-- Wait state
-					if (trig = '1') then state <= s1; end if;
-				
+					if (trig = '1') then 
+						state <= s1; 
+					end if;
+					
+					if (alarm='1') then 
+						larmOut <= '1';
+					end if;
+					
 				when s1 =>				-- Random state
 					count <= "00";
 					state <= s2;
+					rand <= '1';
 				
 				when s2 =>				-- Send state
 					if(sendDone = '1') then 
 						state <= s3; 
 					end if;
+					send <= '1';
+					timerStart <= '1';
+					checkRst <= '1';
 				
 				when s3 =>				-- Receive state
 					if (rcvDone = '1') then
@@ -69,43 +91,36 @@ begin
 							state <= s2;
 						end if;
 					end if;
-					
+					rcvEnable <= '1';
 				when s4 =>				-- Check state
 					
 					if (checkOK = '1' or lastKey = '1') then
 						if(checkOK = '1') then
-							alarm <= '0'; else alarm <= '1';
+							alarm <= '0'; 
+						else 
+							alarm <= '1';
 						end if;
-						state <= s0;
+						state <= s5;
 					elsif(nextSig = '0') then
-						nextSig <= '1';
-					else
-						nextSig <= '0';
+						nextSig := '1';
+					else 
+						nextSig := '0';
 					end if;
-				
+					nextKey<=nextSig;
+
 				when s5 =>				-- Wait for trigger release
-					if (trig = '0') then state <= s6; end if;
+					if (trig = '0') then 
+						state <= s6; 
+					end if;
+					timerStart <= '1';
 					
 				when s6 =>				-- Delay until ready for next trigger
-					if (timeout = '1') then state <= s0; end if;
+					if (timeout = '1') then 
+						state <= s0; 
+					end if;
 					
 			end case;
 		end if;
 	end process;
-	
-	rand <= '1' when (state = s1) else '0';
-	send <= '1' when (state = s2) else '0';
-	timerStart <= '1' when (state = s2 OR state = s5) else '0';
-	
-	nextKey <= nextSig when (state = s4) else '0';
-	
-	rcvEnable <= '1' when (state = s3 OR state = s4) else '0';
-	
-	checkRst <= '1' when (state = s2) else '0';
-	
-	larmOut <= '1' when (state = s0 AND alarm = '1') else '0';
-	
-	okOut <= '0' when (state = s0 AND alarm = '0') else '1';
-	
 end Behavioral;
 

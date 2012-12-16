@@ -4,7 +4,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 Command Line: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -uc top.ucf -p xc9572xl-PC44-5 top.ngc top.ngd
 
-Reading NGO file "C:/Temp/digkon/project/host_cpld2/top.ngc" ...
+Reading NGO file "Z:/DigKon/project/digkon/project/host_cpld2/top.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -14,7 +14,6 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:452 - logical net 'XLXI_2/XLXN_31<1>' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -25,12 +24,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   1
+  Number of warnings:   0
 
-Total memory usage is 151124 kilobytes
+Total memory usage is 150596 kilobytes
 
 Writing NGD file "top.ngd" ...
-Total REAL time to NGDBUILD completion:  14 sec
-Total CPU time to NGDBUILD completion:   13 sec
+Total REAL time to NGDBUILD completion:  15 sec
+Total CPU time to NGDBUILD completion:   14 sec
 
 Writing NGDBUILD log file "top.bld"...

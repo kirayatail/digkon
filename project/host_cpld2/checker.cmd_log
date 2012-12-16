@@ -18,3 +18,9 @@ sch2sym -intstyle ise -family xc9500xl -w -refsym checker C:/workspace/digkon/pr
 XSLTProcess checker_build.xml 
 XSLTProcess checker_build.xml 
 XSLTProcess checker_build.xml 
+XSLTProcess checker_build.xml 
+XSLTProcess checker_build.xml 
+XSLTProcess checker_build.xml 
+XSLTProcess checker_build.xml 
+XSLTProcess checker_build.xml 
+XSLTProcess checker_build.xml 

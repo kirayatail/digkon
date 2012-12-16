@@ -165,6 +165,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="top.prj"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="top.rpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="top.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="top.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="top.syr"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="top.tim"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="top.tspec"/>
@@ -270,15 +271,16 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1355584101" xil_pn:in_ck="8105174381180985399" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="4609711123863737754" xil_pn:start_ts="1355584097">
+    <transform xil_pn:end_ts="1355678253" xil_pn:in_ck="8105174381180985399" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="4609711123863737754" xil_pn:start_ts="1355678248">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="checker.vf"/>
       <outfile xil_pn:name="equals.vf"/>
       <outfile xil_pn:name="top.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1355591809" xil_pn:in_ck="5406665831855806652" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="9061847873646450469" xil_pn:start_ts="1355591741">
+    <transform xil_pn:end_ts="1355684325" xil_pn:in_ck="5406665831855806652" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="9061847873646450469" xil_pn:start_ts="1355684253">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -297,11 +299,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1355489095" xil_pn:in_ck="154288920063" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3734212952611957" xil_pn:start_ts="1355489095">
+    <transform xil_pn:end_ts="1355683319" xil_pn:in_ck="154288920063" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3734212952611957" xil_pn:start_ts="1355683319">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1355591826" xil_pn:in_ck="-4550160615649242011" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1355591809">
+    <transform xil_pn:end_ts="1355684344" xil_pn:in_ck="-4550160615649242011" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7789384908474775783" xil_pn:start_ts="1355684325">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -310,7 +312,7 @@
       <outfile xil_pn:name="top.ngd"/>
       <outfile xil_pn:name="top_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1355591839" xil_pn:in_ck="3285584845764088968" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="6453728859599101509" xil_pn:start_ts="1355591826">
+    <transform xil_pn:end_ts="1355684364" xil_pn:in_ck="3285584845764088968" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="6453728859599101509" xil_pn:start_ts="1355684344">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -328,16 +330,18 @@
       <outfile xil_pn:name="top_html"/>
       <outfile xil_pn:name="top_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1355591841" xil_pn:in_ck="-1881695254521582840" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1355591839">
+    <transform xil_pn:end_ts="1355684368" xil_pn:in_ck="-1881695254521582840" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1355684364">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="top.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1355584321" xil_pn:in_ck="6650045796048999984" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1355584320">
+    <transform xil_pn:end_ts="1355684384" xil_pn:in_ck="6650045796048999984" xil_pn:name="TRAN_impactProgrammingTool_CPLD" xil_pn:prop_ck="-3598488201878296819" xil_pn:start_ts="1355684383">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1355684389" xil_pn:in_ck="6650045796048999984" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-154879694275837835" xil_pn:start_ts="1355684387">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1354713746" xil_pn:in_ck="-1881695254521582840" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1354713744">
       <status xil_pn:value="AbortedRun"/>

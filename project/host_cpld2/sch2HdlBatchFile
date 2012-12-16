@@ -1,5 +1,1 @@
-sch2hdl,-intstyle,ise,-family,xc9500xl,-verilog,C:/Temp/digkon/project/host_cpld2/checker.vf,-w,C:/Temp/digkon/project/host_cpld2/checker.sch
-sch2hdl,-intstyle,ise,-family,xc9500xl,-verilog,C:/Temp/digkon/project/host_cpld2/top.vf,-w,C:/Temp/digkon/project/host_cpld2/top.sch
-sch2hdl,-intstyle,ise,-family,xc9500xl,-verilog,C:/Temp/digkon/project/host_cpld2/equals.vf,-w,C:/Temp/digkon/project/host_cpld2/equals.sch
-sch2hdl,-intstyle,ise,-family,xc9500xl,-verilog,C:/Temp/digkon/project/host_cpld2/checker.vf,-w,C:/Temp/digkon/project/host_cpld2/checker.sch
-sch2hdl,-intstyle,ise,-family,xc9500xl,-verilog,C:/Temp/digkon/project/host_cpld2/top.vf,-w,C:/Temp/digkon/project/host_cpld2/top.sch
+sch2hdl,-intstyle,ise,-family,xc9500xl,-verilog,Z:/DigKon/project/digkon/project/host_cpld2/top.vf,-w,Z:/DigKon/project/digkon/project/host_cpld2/top.sch

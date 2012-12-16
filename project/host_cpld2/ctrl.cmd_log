@@ -25,3 +25,12 @@ XSLTProcess ctrl_build.xml
 vhdtdtfi -lib work ctrl.vhd -prj host_cpld2 -o ctrl.spl -module ctrl -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family xc9500xl ctrl.spl C:/workspace/digkon/project/host_cpld2/ctrl.sym 
 XSLTProcess ctrl_build.xml 
+XSLTProcess ctrl_build.xml 
+XSLTProcess ctrl_build.xml 
+XSLTProcess ctrl_build.xml 
+XSLTProcess ctrl_build.xml 
+XSLTProcess ctrl_build.xml 
+XSLTProcess ctrl_build.xml 
+XSLTProcess ctrl_build.xml 
+XSLTProcess ctrl_build.xml 
+XSLTProcess ctrl_build.xml 

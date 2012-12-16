@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : top.vf
-// /___/   /\     Timestamp : 12/11/2012 13:53:02
+// /___/   /\     Timestamp : 12/16/2012 16:38:25
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -24,6 +24,8 @@ module top(clk,
            key, 
            rcv, 
            rst, 
+           reciverClient, 
+           senderMsg, 
            volt, 
            xmt);
 
@@ -31,18 +33,22 @@ module top(clk,
     input [3:0] key;
     input rcv;
     input rst;
+   output [3:0] reciverClient;
+   output [3:0] senderMsg;
    output volt;
    output xmt;
    
    wire XLXN_2;
    wire XLXN_3;
-   wire [3:0] XLXN_4;
-   wire [3:0] XLXN_5;
    wire XLXN_8;
    wire XLXN_20;
    wire XLXN_42;
    wire XLXN_45;
+   wire [3:0] reciverClient_DUMMY;
+   wire [3:0] senderMsg_DUMMY;
    
+   assign reciverClient[3:0] = reciverClient_DUMMY[3:0];
+   assign senderMsg[3:0] = senderMsg_DUMMY[3:0];
    ctrl  XLXI_1 (.lowClk(XLXN_20), 
                 .rcvDone(XLXN_45), 
                 .reset(XLXN_42), 
@@ -53,12 +59,12 @@ module top(clk,
                     .lowClk(XLXN_20), 
                     .receiver(rcv), 
                     .reset(XLXN_42), 
-                    .rcvData(XLXN_4[3:0]), 
+                    .rcvData(reciverClient_DUMMY[3:0]), 
                     .rcvDone(XLXN_45));
    crypto  XLXI_3 (.key(key[3:0]), 
-                  .plain(XLXN_4[3:0]), 
-                  .enc(XLXN_5[3:0]));
-   sender  XLXI_4 (.data(XLXN_5[3:0]), 
+                  .plain(reciverClient_DUMMY[3:0]), 
+                  .enc(senderMsg_DUMMY[3:0]));
+   sender  XLXI_4 (.data(senderMsg_DUMMY[3:0]), 
                   .lowClk(XLXN_20), 
                   .sendEnable(XLXN_8), 
                   .sendDone(XLXN_2), 

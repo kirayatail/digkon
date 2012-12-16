@@ -8,6 +8,14 @@ key<2> S:PIN20
 key<3> S:PIN22
 rcv S:PIN14
 rst S:PIN39
+reciverClient<0> S:PIN37
+reciverClient<1> S:PIN36
+reciverClient<2> S:PIN35
+reciverClient<3> S:PIN11
+senderMsg<0> S:PIN43
+senderMsg<1> S:PIN42
+senderMsg<2> S:PIN40
+senderMsg<3> S:PIN38
 volt S:PIN44
 xmt S:PIN13
 
@@ -15,22 +23,22 @@ xmt S:PIN13
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 XLXI_2/state_FSM_FFd2 EXP6_ EXP7_ XLXN_4<3>
-		
-PARTITION FB1_6 XLXN_4<2> XLXN_4<1> EXP8_ XLXI_2/state_FSM_FFd4
-		 EXP9_ XLXI_2/state_FSM_FFd5 EXP10_ EXP11_
-		 EXP12_ XLXI_2/state_FSM_FFd1 EXP13_ EXP14_
-		 EXP15_
-PARTITION FB2_1 EXP16_
-PARTITION FB2_6 XLXN_20 XLXI_8/count<7> XLXI_8/count<6> XLXI_8/count<5>
+PARTITION FB1_1 EXP6_
+PARTITION FB1_6 xmt_OBUF/xmt_OBUF_RSTF__$INT XLXI_8/count<0> reciverClient_3_OBUF/reciverClient_3_OBUF_RSTF XLXI_4/state_FSM_FFd1
+		 XLXI_1/state_FSM_FFd2 XLXI_1/sendcount<2> XLXI_1/sendcount<1> XLXI_1/sendcount<0>
+		 XLXI_4/state_FSM_FFd3 XLXI_4/state_FSM_FFd2 XLXI_4/state_FSM_FFd4 XLXI_1/state_FSM_FFd1
+		 XLXI_4/state_FSM_FFd5
+PARTITION FB2_1 XLXI_2/state_FSM_FFd1 reciverClient_2_OBUF EXP7_ XLXI_2/state_FSM_FFd5
+		 reciverClient_1_OBUF reciverClient_0_OBUF XLXI_2/state_FSM_FFd4 senderMsg_3_OBUF
+		 XLXI_2/state_FSM_FFd2 EXP8_ senderMsg_2_OBUF XLXI_2/state_FSM_FFd3
+		 EXP9_ senderMsg_1_OBUF senderMsg_0_OBUF
+PARTITION FB2_17 volt_OBUF
+
+PARTITION FB3_2 reciverClient_3_OBUF
+PARTITION FB3_6 EXP10_ EXP11_ xmt_OBUF EXP12_
+		 EXP13_
+
+PARTITION FB4_11 XLXN_20 XLXI_8/count<7> XLXI_8/count<6> XLXI_8/count<5>
 		 XLXI_8/count<4> XLXI_8/count<3> XLXI_8/count<2> XLXI_8/count<1>
-		 XLXN_5<1>/XLXN_5<1>_D XLXN_5<0>/XLXN_5<0>_D XLXN_4<0> volt_OBUF
-		 XLXI_2/state_FSM_FFd3
-PARTITION FB3_1 XLXI_4/state_FSM_FFd1
-PARTITION FB3_3 xmt_OBUF/xmt_OBUF_RSTF__$INT XLXI_8/count<0> XLXN_4<3>/XLXN_4<3>_RSTF EXP17_
-		 EXP18_ xmt_OBUF EXP19_ XLXI_1/state_FSM_FFd2
-		 XLXI_1/sendcount<2> XLXI_1/sendcount<1> XLXI_1/sendcount<0> XLXI_4/state_FSM_FFd3
-		 XLXI_4/state_FSM_FFd2 XLXI_4/state_FSM_FFd4 XLXI_1/state_FSM_FFd1 XLXI_4/state_FSM_FFd5
 		
-PARTITION FB4_17 XLXN_5<3>/XLXN_5<3>_D XLXN_5<2>/XLXN_5<2>_D
 

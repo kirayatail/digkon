@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : top.vf
-// /___/   /\     Timestamp : 12/15/2012 16:08:20
+// /___/   /\     Timestamp : 12/16/2012 18:17:32
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/Temp/digkon/project/host_cpld2/top.vf -w C:/Temp/digkon/project/host_cpld2/top.sch
+//Command: sch2hdl -intstyle ise -family xc9500xl -verilog Z:/DigKon/project/digkon/project/host_cpld2/top.vf -w Z:/DigKon/project/digkon/project/host_cpld2/top.sch
 //Design Name: top
 //Device: xc9500xl
 //Purpose:
@@ -90,9 +90,14 @@ module top(clk,
            rst, 
            sendDone, 
            trig, 
+           found, 
            getRand, 
            larm, 
+           lastkey, 
+           nextKey, 
            okLmp, 
+           resetChecker, 
+           resp, 
            sendEnable);
 
     input clk;
@@ -102,46 +107,56 @@ module top(clk,
     input rst;
     input sendDone;
     input trig;
+   output found;
    output getRand;
    output larm;
+   output lastkey;
+   output nextKey;
    output okLmp;
+   output resetChecker;
+   output [3:0] resp;
    output sendEnable;
    
    wire Timeout;
-   wire XLXN_4;
-   wire XLXN_5;
    wire XLXN_30;
-   wire XLXN_61;
-   wire [3:0] XLXN_83;
    wire XLXN_84;
    wire XLXN_85;
-   wire XLXN_105;
    wire XLXN_106;
    wire XLXN_109;
    wire XLXN_110;
+   wire [3:0] resp_DUMMY;
+   wire found_DUMMY;
+   wire resetChecker_DUMMY;
+   wire lastkey_DUMMY;
+   wire nextKey_DUMMY;
    
-   ctrl  XLXI_1 (.checkOK(XLXN_105), 
+   assign found = found_DUMMY;
+   assign lastkey = lastkey_DUMMY;
+   assign nextKey = nextKey_DUMMY;
+   assign resetChecker = resetChecker_DUMMY;
+   assign resp[3:0] = resp_DUMMY[3:0];
+   ctrl  XLXI_1 (.checkOK(found_DUMMY), 
                 .clk(clk), 
-                .lastKey(XLXN_61), 
+                .lastKey(lastkey_DUMMY), 
                 .rcvDone(XLXN_84), 
                 .reset(XLXN_109), 
                 .sendDone(sendDone), 
                 .timeout(Timeout), 
                 .trig(XLXN_110), 
-                .checkRst(XLXN_5), 
+                .checkRst(resetChecker_DUMMY), 
                 .larmOut(larm), 
-                .nextKey(XLXN_4), 
+                .nextKey(nextKey_DUMMY), 
                 .okOut(okLmp), 
                 .rand(getRand), 
                 .rcvEnable(XLXN_85), 
                 .send(sendEnable), 
                 .timerstart(XLXN_30));
    checker_MUSER_top  XLXI_2 (.chall(data[3:0]), 
-                             .nextKey(XLXN_4), 
-                             .reset(XLXN_5), 
-                             .resp(XLXN_83[3:0]), 
-                             .found(XLXN_105), 
-                             .lastKey(XLXN_61));
+                             .nextKey(nextKey_DUMMY), 
+                             .reset(resetChecker_DUMMY), 
+                             .resp(resp_DUMMY[3:0]), 
+                             .found(found_DUMMY), 
+                             .lastKey(lastkey_DUMMY));
    timer  XLXI_9 (.lowclk(lowClk), 
                  .restart(XLXN_30), 
                  .timeout(Timeout));
@@ -153,7 +168,7 @@ module top(clk,
                      .lowClk(lowClk), 
                      .receiver(rcv), 
                      .reset(XLXN_109), 
-                     .rcvData(XLXN_83[3:0]), 
+                     .rcvData(resp_DUMMY[3:0]), 
                      .rcvDone(XLXN_84));
    lev2puls  XLXI_13 (.clk(clk), 
                      .levin(XLXN_106), 

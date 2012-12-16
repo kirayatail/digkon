@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.28xd
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
-12-15-2012  6:17PM
+12-16-2012  7:59PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -18,18 +18,18 @@ Pinout by Pin Number:
 
 -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
-P1|TIE||I/O||||||||||
-P2|TIE||I/O||||||||||
+P1|resetChecker|O|I/O|OUTPUT|||||||||
+P2|lastkey|O|I/O|OUTPUT|||||||||
 P3|okLmp|O|I/O|OUTPUT|||||||||
 P4|larm|O|I/O|OUTPUT|||||||||
 P5|clk|GCK|I/O/GCK1||||||||||
 P6|trig|I|I/O/GCK2|INPUT|||||||||
 P7|TIE||I/O/GCK3||||||||||
-P8|TIE||I/O||||||||||
-P9|TIE||I/O||||||||||
+P8|resp<3>|O|I/O|OUTPUT|||||||||
+P9|resp<2>|O|I/O|OUTPUT|||||||||
 P10|GND||GND||||||||||
-P11|TIE||I/O||||||||||
-P12|TIE||I/O||||||||||
+P11|nextKey|O|I/O|OUTPUT|||||||||
+P12|found|O|I/O|OUTPUT|||||||||
 P13|rcv|I|I/O|INPUT|||||||||
 P14|lowClk|I|I/O|INPUT|||||||||
 P15|TDI||TDI||||||||||
@@ -50,8 +50,8 @@ P29|TIE||I/O||||||||||
 P30|TDO||TDO||||||||||
 P31|GND||GND||||||||||
 P32|VCC||VCCIO||||||||||
-P33|TIE||I/O||||||||||
-P34|TIE||I/O||||||||||
+P33|resp<0>|O|I/O|OUTPUT|||||||||
+P34|resp<1>|O|I/O|OUTPUT|||||||||
 P35|TIE||I/O||||||||||
 P36|TIE||I/O||||||||||
 P37|TIE||I/O||||||||||

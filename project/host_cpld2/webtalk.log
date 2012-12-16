@@ -3,7 +3,7 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 Project Information
 --------------------
-ProjectID=6a5be3f569a44e93b5fdde63709e595a
+ProjectID=6deb15dcae974c80ba3301c47c4cd0aa
 ProjectIteration=1
 
 WebTalk Summary
@@ -13,4 +13,4 @@ INFO:WebTalk:2 - WebTalk is enabled.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:4 - Z:/DigKon/project/digkon/project/host_cpld2/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2012-12-11T13:57:57.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.2/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:4 - Z:/DigKon/project/digkon/project/host_cpld2/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2012-12-16T19:32:10.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.2/ISE_DS/ISE/data/reports/webtalk_introduction.html

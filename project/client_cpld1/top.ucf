@@ -11,6 +11,22 @@ NET "xmt"  LOC = "p13"  ;
 NET "rcv" LOC = "p14" ;
 NET "volt" LOC = "p44" ;
 
+
+NET "senderMsg<0>"  LOC = "p43"  ; 
+NET "senderMsg<1>"  LOC = "p42"  ; 
+NET "senderMsg<2>"  LOC = "p40"  ; 
+NET "senderMsg<3>"  LOC = "p38"  ; 
+
+
+
+NET "reciverClient<0>"  LOC = "p37"  ; 
+NET "reciverClient<1>"  LOC = "p36"  ; 
+NET "reciverClient<2>"  LOC = "p35"  ; 
+NET "reciverClient<3>"  LOC = "p11"  ; 
+
+
+ 
+
 #PACE: Start of PACE Area Constraints
 
 #PACE: Start of PACE Prohibit Constraints

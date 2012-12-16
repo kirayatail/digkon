@@ -38,7 +38,7 @@ entity sender is
 end sender;
 
 architecture Behavioral of sender is
-type state_type is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,sWait);
+type state_type is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,sWait);
 signal state : state_type;
 signal parity : std_logic;
 begin
@@ -64,8 +64,8 @@ begin
 				when s13 => state <= s14; transmitter <= data(1);
 				when s14 => state <= s15; transmitter <= data(2);
 				when s15 => state <= s16; transmitter <= data(3);
-				when s16 => state <= s17; transmitter <= parity;
-				when s17	=> state <= sWait; transmitter <= '0';
+				--when s16 => state <= s17; transmitter <= parity;
+				when s16	=> state <= sWait; transmitter <= '0';
 				when sWait => state <= sWait;
 			end case;
 		end if;

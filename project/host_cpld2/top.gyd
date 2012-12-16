@@ -11,27 +11,40 @@ rcv S:PIN13
 rst S:PIN39
 sendDone S:PIN25
 trig S:PIN6
-sendEnable S:PIN24
+okLmp S:PIN3
+found S:PIN12
 getRand S:PIN26
 larm S:PIN4
-okLmp S:PIN3
+lastkey S:PIN2
+nextKey S:PIN11
+sendEnable S:PIN24
+resetChecker S:PIN1
+resp<0> S:PIN33
+resp<1> S:PIN34
+resp<2> S:PIN9
+resp<3> S:PIN8
 
 
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 EXP6_ EXP7_ XLXI_1/alarm EXP8_
-		 EXP9_ okLmp_OBUF XLXN_83<3>/XLXN_83<3>_RSTF__$INT larm_OBUF
-		 XLXI_1/count<1> EXP10_ XLXI_1/nextSig EXP11_
-		 XLXI_1/state_FSM_FFd3 EXP12_ XLXI_1/state_FSM_FFd2 EXP13_
-		 EXP14_ XLXI_1/count<0>
-
-PARTITION FB3_1 XLXI_9/timer<5> XLXI_12/state_FSM_FFd1 XLXI_9/timer<4> XLXI_9/timer<3>
-		 XLXI_9/timer<2> XLXI_9/timer<1> XLXN_83<3> XLXN_83<2>
-		 XLXN_83<1> XLXN_83<0> XLXI_12/state_FSM_FFd3 XLXI_1/state_FSM_FFd1
-		 XLXI_12/state_FSM_FFd5 XLXI_12/state_FSM_FFd4 EXP15_ XLXN_30
-		 XLXI_12/state_FSM_FFd2 XLXI_9/timer<0>
+PARTITION FB1_1 XLXI_1/state_FSM_FFd2 resetChecker_OBUF$BUF0 XLXI_1/count<1> XLXI_12/state_FSM_FFd5
+		 lastkey_OBUF _6_ XLXI_12/state_FSM_FFd4 larm_OBUF
+		 XLXI_12/state_FSM_FFd3 EXP7_ XLXI_1/count<0> XLXI_1/alarm
+		 XLXI_12/state_FSM_FFd2 EXP8_ resp_3_OBUF
+PARTITION FB1_17 resp_2_OBUF XLXI_12/state_FSM_FFd1
+PARTITION FB2_1 XLXI_13/state_FSM_FFd2
+PARTITION FB2_10 XLXN_110 XLXI_13/state_FSM_FFd1 EXP9_ $OpTx$FX_DC$46
+		 EXP10_ EXP11_ EXP12_ okLmp_BUFR.MC
+		 EXP13_
+PARTITION FB3_1 EXP14_ nextKey_OBUF EXP15_ XLXI_2/XLXN_23<3>/XLXI_2/XLXN_23<3>_D2
+		 found_OBUF EXP16_ EXP17_ EXP18_
+		 XLXN_85 XLXN_30 EXP19_ XLXI_1/nextSig
+		 EXP20_ XLXI_1/state_FSM_FFd3 $OpTx$FX_DC$19 resetChecker_OBUF
+		 resp_3_OBUF/resp_3_OBUF_RSTF__$INT EXP21_
+PARTITION FB4_1 XLXI_1/state_FSM_FFd1 EXP22_
 PARTITION FB4_5 getRand_OBUF
-PARTITION FB4_15 XLXI_13/state_FSM_FFd2 XLXN_61 XLXN_110 XLXI_13/state_FSM_FFd1
-		
+PARTITION FB4_8 XLXI_9/timer<0> XLXI_2/XLXN_31<0> XLXI_9/timer<5> XLXI_9/timer<4>
+		 XLXI_9/timer<3> XLXI_9/timer<2> XLXI_9/timer<1> resp_0_OBUF
+		 XLXI_2/XLXI_12/state_FSM_FFd1 resp_1_OBUF EXP23_
 

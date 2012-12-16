@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sat Dec 15 18:03:05 2012">
+<application name="pn" timeStamp="Sun Dec 16 16:38:27 2012">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="6461F155F44848D785021360B9E46869" type="project"/>
 <property name="ProjectIteration" value="0" type="project"/>
-<property name="ProjectFile" value="C:/Temp/digkon/project/client_cpld1/client_cpld1.xise" type="project"/>
+<property name="ProjectFile" value="Z:/DigKon/project/digkon/project/client_cpld1/client_cpld1.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2012-11-30T14:09:47" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">

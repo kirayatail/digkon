@@ -6,8 +6,7 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_4(3:0)" />
-        <signal name="XLXN_5(3:0)" />
+        <signal name="reciverClient(3:0)" />
         <signal name="XLXN_8" />
         <signal name="xmt" />
         <signal name="key(3:0)" />
@@ -20,12 +19,15 @@
         <signal name="rst" />
         <signal name="XLXN_45" />
         <signal name="volt" />
+        <signal name="senderMsg(3:0)" />
+        <port polarity="Output" name="reciverClient(3:0)" />
         <port polarity="Output" name="xmt" />
         <port polarity="Input" name="key(3:0)" />
         <port polarity="Input" name="rcv" />
         <port polarity="Input" name="clk" />
         <port polarity="Input" name="rst" />
         <port polarity="Output" name="volt" />
+        <port polarity="Output" name="senderMsg(3:0)" />
         <blockdef name="ctrl">
             <timestamp>2012-12-9T18:20:31</timestamp>
             <line x2="0" y1="32" y2="32" x1="64" />
@@ -92,14 +94,14 @@
         <block symbolname="sender" name="XLXI_4">
             <blockpin signalname="XLXN_8" name="sendEnable" />
             <blockpin signalname="XLXN_20" name="lowClk" />
-            <blockpin signalname="XLXN_5(3:0)" name="data(3:0)" />
+            <blockpin signalname="senderMsg(3:0)" name="data(3:0)" />
             <blockpin signalname="XLXN_2" name="sendDone" />
             <blockpin signalname="xmt" name="transmitter" />
         </block>
         <block symbolname="crypto" name="XLXI_3">
-            <blockpin signalname="XLXN_4(3:0)" name="plain(3:0)" />
+            <blockpin signalname="reciverClient(3:0)" name="plain(3:0)" />
             <blockpin signalname="key(3:0)" name="key(3:0)" />
-            <blockpin signalname="XLXN_5(3:0)" name="enc(3:0)" />
+            <blockpin signalname="senderMsg(3:0)" name="enc(3:0)" />
         </block>
         <block symbolname="receiver" name="XLXI_2">
             <blockpin signalname="XLXN_42" name="reset" />
@@ -107,7 +109,7 @@
             <blockpin signalname="rcv" name="receiver" />
             <blockpin signalname="XLXN_3" name="enable" />
             <blockpin signalname="XLXN_45" name="rcvDone" />
-            <blockpin signalname="XLXN_4(3:0)" name="rcvData(3:0)" />
+            <blockpin signalname="reciverClient(3:0)" name="rcvData(3:0)" />
         </block>
         <block symbolname="counter" name="XLXI_8">
             <blockpin signalname="clk" name="clk" />
@@ -133,11 +135,10 @@
     <sheet sheetnum="1" width="3520" height="2720">
         <instance x="2192" y="1088" name="XLXI_4" orien="R0">
         </instance>
-        <branch name="XLXN_4(3:0)">
-            <wire x2="1744" y1="1056" y2="1056" x1="1632" />
-        </branch>
-        <branch name="XLXN_5(3:0)">
-            <wire x2="2192" y1="1056" y2="1056" x1="2128" />
+        <branch name="reciverClient(3:0)">
+            <wire x2="1680" y1="1056" y2="1056" x1="1632" />
+            <wire x2="1744" y1="1056" y2="1056" x1="1680" />
+            <wire x2="1680" y1="1056" y2="1312" x1="1680" />
         </branch>
         <branch name="XLXN_8">
             <wire x2="2176" y1="576" y2="576" x1="2080" />
@@ -220,5 +221,12 @@
             <wire x2="2784" y1="1376" y2="1376" x1="2736" />
         </branch>
         <iomarker fontsize="28" x="2784" y="1376" name="volt" orien="R0" />
+        <branch name="senderMsg(3:0)">
+            <wire x2="2176" y1="1056" y2="1056" x1="2128" />
+            <wire x2="2192" y1="1056" y2="1056" x1="2176" />
+            <wire x2="2176" y1="1056" y2="1328" x1="2176" />
+        </branch>
+        <iomarker fontsize="28" x="2176" y="1328" name="senderMsg(3:0)" orien="R90" />
+        <iomarker fontsize="28" x="1680" y="1312" name="reciverClient(3:0)" orien="R90" />
     </sheet>
 </drawing>
