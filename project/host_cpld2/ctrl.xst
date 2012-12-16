@@ -1,5 +1,5 @@
-set -tmpdir "C:/workspace/digkon/project/host_cpld2/xst/projnav.tmp"
-set -xsthdpdir "C:/workspace/digkon/project/host_cpld2/xst"
+set -tmpdir "Z:/DigKon/project/digkon/project/host_cpld2/xst/projnav.tmp"
+set -xsthdpdir "Z:/DigKon/project/digkon/project/host_cpld2/xst"
 elaborate
 -ifn ctrl.prj
 -ifmt mixed

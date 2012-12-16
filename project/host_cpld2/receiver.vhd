@@ -49,6 +49,8 @@ begin
 			state <= s0;
 			data <= "0000";
 		elsif rising_edge(lowClk) AND enable = '1' then
+		
+			rcvDone<='0';
 			case state is
 				when s0 => if receiver = '1' then state <= s1; else state <= s0; end if;
 				when s1 => if receiver = '0' then state <= s2; else state <= s1; end if;
@@ -68,12 +70,14 @@ begin
 				when s15 => data(3) <= receiver; state <= s16;
 				--when s16 => if receiver = parity then state <= s17; else if parity = '1' then state <= s1; else state <= s0; end if; end if;
 				when s16 => if receiver = '0' then state <= sWait; else state <= s1; end if;
-				when sWait => state <= sWait;
+				when sWait => 
+					state <= sWait;
+					rcvDone <= '1';
 			end case;
 		end if;
 	end process;
 	parity <= ((data(0) xor data(1)) xor (data(2) xor data(3)));
 	rcvData <= data;
-	rcvDone <= '1' when (state = sWait) else '0';
+
 end Behavioral;
 

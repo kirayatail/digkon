@@ -1,36 +1,41 @@
-Release 14.3 - xst P.40xd (nt64)
+Release 14.2 - xst P.28xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/workspace/digkon/project/host_cpld2/xst/projnav.tmp
+--> Parameter TMPDIR set to Z:/DigKon/project/digkon/project/host_cpld2/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.29 secs
  
---> Parameter xsthdpdir set to C:/workspace/digkon/project/host_cpld2/xst
+--> Parameter xsthdpdir set to Z:/DigKon/project/digkon/project/host_cpld2/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.29 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" in Library work.
-ERROR:HDLParsers:3312 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 31. Undefined symbol 'state_type'.
-ERROR:HDLParsers:1209 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 31. state_type: Undefined symbol (last report in this block)
-ERROR:HDLParsers:3312 - "C:/workspace/digkon/project/host_cpld2/ctrl.vhd" Line 92. Undefined symbol 'sttOut'.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd" in Library work.
+Entity <ctrl> compiled.
+ERROR:HDLParsers:3313 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd" Line 49. Undefined symbol 'tstate'.  Should it be: state?
+ERROR:HDLParsers:1209 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd" Line 65. tstate: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd" Line 140. Undefined symbol 'tstate'.  Should it be: state?
+ERROR:HDLParsers:1209 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd" Line 140. tstate: Undefined symbol (last report in this block)
+ERROR:HDLParsers:164 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd" Line 142. parse error, unexpected PROCESS
+WARNING:HDLParsers:1406 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd" Line 140. No sensitivity list and no wait in the process
+ERROR:HDLParsers:164 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd" Line 144. parse error, unexpected SEMICOLON
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.55 secs
  
 --> 
 
-Total memory usage is 209836 kilobytes
+Total memory usage is 211116 kilobytes
 
-Number of errors   :    3 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of errors   :    6 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -34,7 +34,7 @@ end ctrl;
 
 architecture Behavioral of ctrl is
 	type state_type is (s0,s1,s2,s3,s4,s5,s6);
-	signal state : state_type;
+	signal state,tstate : state_type;
 	signal alarm : STD_LOGIC;
 	signal count : STD_LOGIC_VECTOR(1 downto 0);
 
@@ -44,14 +44,17 @@ begin
 	begin
 		
 		if(reset = '1') then
+		
 			alarm <= '0';
-			state <= s0;
-			
+			tstate <= s0;
+			nextSig := '0';
 		elsif rising_edge(clk) then
 			rand <= '0';
 			send <= '0';
 			rcvEnable <= '0';
-			checkRst <= '0';
+		
+			
+			
 			larmOut <= '0';
 			timerStart <= '0';
 			nextKey <= '0';
@@ -59,7 +62,7 @@ begin
 			case state is
 				when s0 => 				-- Wait state
 					if (trig = '1') then 
-						state <= s1; 
+						tstate <= s1; 
 					end if;
 					
 					if (alarm='1') then 
@@ -68,31 +71,34 @@ begin
 					
 				when s1 =>				-- Random state
 					count <= "00";
-					state <= s2;
+					tstate <= s2;
 					rand <= '1';
 				
 				when s2 =>				-- Send state
 					if(sendDone = '1') then 
-						state <= s3; 
+						tstate <= s3; 
 					end if;
 					send <= '1';
 					timerStart <= '1';
 					checkRst <= '1';
 				
 				when s3 =>				-- Receive state
+				checkRst <= '0';
 					if (rcvDone = '1') then
-						state <= s4;
+						tstate <= s4;
 					elsif(timeout = '1') then
 						if(count = "11") then
 							alarm <= '1';
-							state <= s0;
+							tstate <= s0;
 						else
 							count <= count +1;
-							state <= s2;
+							tstate <= s2;
 						end if;
 					end if;
+					
+
 					rcvEnable <= '1';
-				when s4 =>				-- Check state
+				when s4 =>				-- Check stats
 					
 					if (checkOK = '1' or lastKey = '1') then
 						if(checkOK = '1') then
@@ -100,27 +106,43 @@ begin
 						else 
 							alarm <= '1';
 						end if;
-						state <= s5;
-					elsif(nextSig = '0') then
+					end if;
+					--	tstate <= s5;
+					if(nextSig = '0') then
 						nextSig := '1';
 					else 
 						nextSig := '0';
 					end if;
+					
 					nextKey<=nextSig;
+					
+					--nextKey<='1';
+					rcvEnable <= '1';
+					
 
 				when s5 =>				-- Wait for trigger release
+					nextKey<='0';
 					if (trig = '0') then 
-						state <= s6; 
+						tstate <= s6; 
 					end if;
 					timerStart <= '1';
 					
 				when s6 =>				-- Delay until ready for next trigger
+				nextKey<='0';
 					if (timeout = '1') then 
-						state <= s0; 
+						tstate <= s0; 
 					end if;
 					
 			end case;
 		end if;
 	end process;
+	
+	
+
+	process(tstate) begin
+		state <= tstate;
+	end process;
+	
+	
 end Behavioral;
 

@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.28 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Reading design: top.prj
 
@@ -108,8 +108,6 @@ Analysis of file <"top.prj"> succeeded.
 =========================================================================
 Analyzing hierarchy for module <top> in library <work>.
 
-Analyzing hierarchy for entity <ctrl> in library <work> (architecture <behavioral>).
-
 Analyzing hierarchy for module <checker_MUSER_top> in library <work>.
 
 Analyzing hierarchy for entity <timer> in library <work> (architecture <behavioral>).
@@ -117,6 +115,8 @@ Analyzing hierarchy for entity <timer> in library <work> (architecture <behavior
 Analyzing hierarchy for entity <receiver> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <lev2puls> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ctrl> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <keylookup> in library <work> (architecture <behavioral>).
 
@@ -131,13 +131,12 @@ Analyzing hierarchy for module <equals_MUSER_top> in library <work>.
 Analyzing top module <top>.
 Module <top> is correct for synthesis.
  
-Analyzing Entity <ctrl> in library <work> (Architecture <behavioral>).
-Entity <ctrl> analyzed. Unit <ctrl> generated.
-
 Analyzing module <checker_MUSER_top> in library <work>.
 Module <checker_MUSER_top> is correct for synthesis.
  
 Analyzing Entity <keylookup> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/keylookup.vhd" line 37: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <state>
 Entity <keylookup> analyzed. Unit <keylookup> generated.
 
 Analyzing Entity <crypto> in library <work> (Architecture <behavioral>).
@@ -155,47 +154,15 @@ Entity <receiver> analyzed. Unit <receiver> generated.
 Analyzing Entity <lev2puls> in library <work> (Architecture <behavioral>).
 Entity <lev2puls> analyzed. Unit <lev2puls> generated.
 
+Analyzing Entity <ctrl> in library <work> (Architecture <behavioral>).
+Entity <ctrl> analyzed. Unit <ctrl> generated.
+
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Performing bidirectional port resolution...
-
-Synthesizing Unit <ctrl>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd".
-    Register <send> equivalent to <checkRst> has been removed
-    Found finite state machine <FSM_0> for signal <state>.
-    -----------------------------------------------------------------------
-    | States             | 7                                              |
-    | Transitions        | 16                                             |
-    | Inputs             | 7                                              |
-    | Outputs            | 9                                              |
-    | Clock              | clk                       (rising_edge)        |
-    | Reset              | reset                     (positive)           |
-    | Reset type         | asynchronous                                   |
-    | Reset State        | s0                                             |
-    | Power Up State     | s0                                             |
-    | Encoding           | compact                                        |
-    | Implementation     | automatic                                      |
-    -----------------------------------------------------------------------
-    Found 1-bit register for signal <checkRst>.
-    Found 1-bit register for signal <timerstart>.
-    Found 1-bit register for signal <okOut>.
-    Found 1-bit register for signal <nextKey>.
-    Found 1-bit register for signal <rcvEnable>.
-    Found 1-bit register for signal <larmOut>.
-    Found 1-bit register for signal <rand>.
-    Found 1-bit register for signal <alarm>.
-    Found 2-bit register for signal <count>.
-    Found 2-bit adder for signal <count$addsub0000> created at line 90.
-    Found 1-bit register for signal <nextSig>.
-    Summary:
-	inferred   1 Finite State Machine(s).
-	inferred   9 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
-Unit <ctrl> synthesized.
-
 
 Synthesizing Unit <timer>.
     Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/timer.vhd".
@@ -208,7 +175,7 @@ Unit <timer> synthesized.
 Synthesizing Unit <receiver>.
     Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/receiver.vhd".
 WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found finite state machine <FSM_1> for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 18                                             |
     | Transitions        | 31                                             |
@@ -222,16 +189,17 @@ WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected s
     | Encoding           | compact                                        |
     | Implementation     | automatic                                      |
     -----------------------------------------------------------------------
+    Found 1-bit register for signal <rcvDone>.
     Found 4-bit register for signal <data>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred   4 D-type flip-flop(s).
+	inferred   5 D-type flip-flop(s).
 Unit <receiver> synthesized.
 
 
 Synthesizing Unit <lev2puls>.
     Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/lev2puls.vhd".
-    Found finite state machine <FSM_2> for signal <state>.
+    Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
     | Transitions        | 5                                              |
@@ -252,27 +220,36 @@ Synthesizing Unit <lev2puls>.
 Unit <lev2puls> synthesized.
 
 
+Synthesizing Unit <ctrl>.
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd".
+    Found 7x4-bit ROM for signal <state$rom0000>.
+    Found 1-bit register for signal <send>.
+    Found 1-bit register for signal <checkRst>.
+    Found 1-bit register for signal <timerstart>.
+    Found 1-bit register for signal <okOut>.
+    Found 1-bit register for signal <nextKey>.
+    Found 1-bit register for signal <rcvEnable>.
+    Found 1-bit register for signal <larmOut>.
+    Found 1-bit register for signal <rand>.
+    Found 1-bit register for signal <alarm>.
+    Found 1-bit 7-to-1 multiplexer for signal <alarm$mux0001> created at line 62.
+    Found 2-bit register for signal <count>.
+    Found 2-bit adder for signal <count$addsub0000> created at line 94.
+    Found 1-bit register for signal <nextSig>.
+    Found 3-bit register for signal <tstate>.
+    Found 3-bit 7-to-1 multiplexer for signal <tstate$mux0001> created at line 62.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ctrl> synthesized.
+
+
 Synthesizing Unit <keylookup>.
     Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/keylookup.vhd".
-    Found finite state machine <FSM_3> for signal <state>.
-    -----------------------------------------------------------------------
-    | States             | 4                                              |
-    | Transitions        | 4                                              |
-    | Inputs             | 0                                              |
-    | Outputs            | 4                                              |
-    | Clock              | getNext                   (rising_edge)        |
-    | Reset              | reset                     (positive)           |
-    | Reset type         | asynchronous                                   |
-    | Reset State        | s0                                             |
-    | Power Up State     | s0                                             |
-    | Encoding           | compact                                        |
-    | Implementation     | automatic                                      |
-    -----------------------------------------------------------------------
-    Found 1-bit register for signal <isLast>.
-    Found 4-bit register for signal <key>.
-    Summary:
-	inferred   1 Finite State Machine(s).
-	inferred   1 D-type flip-flop(s).
+WARNING:Xst:737 - Found 4-bit latch for signal <key>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <tstate>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <isLast>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 Unit <keylookup> synthesized.
 
 
@@ -301,14 +278,23 @@ Unit <top> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
+# ROMs                                                 : 1
+ 7x4-bit ROM                                           : 1
 # Adders/Subtractors                                   : 1
  2-bit adder                                           : 1
 # Counters                                             : 1
  6-bit up counter                                      : 1
-# Registers                                            : 17
- 1-bit register                                        : 15
+# Registers                                            : 18
+ 1-bit register                                        : 16
  2-bit register                                        : 1
- 4-bit register                                        : 1
+ 3-bit register                                        : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 1
+ 2-bit latch                                           : 1
+ 4-bit latch                                           : 1
+# Multiplexers                                         : 2
+ 1-bit 7-to-1 multiplexer                              : 1
+ 3-bit 7-to-1 multiplexer                              : 1
 # Xors                                                 : 1
  4-bit xor2                                            : 1
 
@@ -318,15 +304,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-Optimizing FSM <XLXI_2/XLXI_12/state/FSM> on signal <state[1:2]> with compact encoding.
--------------------
- State | Encoding
--------------------
- s0    | 00
- s1    | 10
- s2    | 01
- last  | 11
--------------------
 Optimizing FSM <XLXI_13/state/FSM> on signal <state[1:2]> with compact encoding.
 -------------------
  State | Encoding
@@ -358,30 +335,27 @@ Optimizing FSM <XLXI_12/state/FSM> on signal <state[1:5]> with compact encoding.
  s16   | 11000
  swait | 01010
 -------------------
-Optimizing FSM <XLXI_1/state/FSM> on signal <state[1:3]> with compact encoding.
--------------------
- State | Encoding
--------------------
- s0    | 000
- s1    | 100
- s2    | 010
- s3    | 110
- s4    | 111
- s5    | 011
- s6    | 001
--------------------
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# FSMs                                                 : 4
+# FSMs                                                 : 2
+# ROMs                                                 : 1
+ 7x4-bit ROM                                           : 1
 # Adders/Subtractors                                   : 1
  2-bit adder                                           : 1
 # Counters                                             : 1
  6-bit up counter                                      : 1
-# Registers                                            : 15
- Flip-Flops                                            : 15
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+# Latches                                              : 3
+ 1-bit latch                                           : 1
+ 2-bit latch                                           : 1
+ 4-bit latch                                           : 1
+# Multiplexers                                         : 2
+ 1-bit 7-to-1 multiplexer                              : 1
+ 3-bit 7-to-1 multiplexer                              : 1
 # Xors                                                 : 1
  4-bit xor2                                            : 1
 
@@ -409,13 +383,11 @@ Optimizing unit <crypto> ...
 Optimizing unit <equals_MUSER_top> ...
 
 Optimizing unit <ctrl> ...
-  implementation constraint: INIT=r	 : state_FSM_FFd1
-  implementation constraint: INIT=r	 : state_FSM_FFd2
-  implementation constraint: INIT=r	 : state_FSM_FFd3
+  implementation constraint: INIT=r	 : tstate_0
+  implementation constraint: INIT=r	 : tstate_2
+  implementation constraint: INIT=r	 : tstate_1
 
 Optimizing unit <keylookup> ...
-  implementation constraint: INIT=r	 : state_FSM_FFd1
-  implementation constraint: INIT=r	 : state_FSM_FFd2
 
 Optimizing unit <timer> ...
 
@@ -448,38 +420,39 @@ Clock Enable                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 22
+# IOs                              : 24
 
 Cell Usage :
-# BELS                             : 297
-#      AND2                        : 90
-#      AND3                        : 17
+# BELS                             : 326
+#      AND2                        : 85
+#      AND3                        : 28
 #      AND4                        : 5
 #      AND6                        : 1
 #      GND                         : 2
-#      INV                         : 108
-#      OR2                         : 55
-#      OR3                         : 7
-#      OR4                         : 1
+#      INV                         : 130
+#      OR2                         : 56
+#      OR3                         : 9
 #      XNOR2                       : 4
-#      XOR2                        : 7
-# FlipFlops/Latches                : 39
-#      FDC                         : 20
-#      FDCE                        : 19
-# IO Buffers                       : 22
+#      XOR2                        : 6
+# FlipFlops/Latches                : 41
+#      FDC                         : 18
+#      FDCE                        : 16
+#      LD                          : 4
+#      LDC                         : 3
+# IO Buffers                       : 24
 #      IBUF                        : 10
-#      OBUF                        : 12
+#      OBUF                        : 14
 =========================================================================
 
 
-Total REAL time to Xst completion: 68.00 secs
-Total CPU time to Xst completion: 67.98 secs
+Total REAL time to Xst completion: 66.00 secs
+Total CPU time to Xst completion: 66.46 secs
  
 --> 
 
-Total memory usage is 283796 kilobytes
+Total memory usage is 286164 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

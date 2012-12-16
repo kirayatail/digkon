@@ -29,8 +29,9 @@ NET "resp<2>"  LOC = "p9"  ;
 NET "resp<3>"  LOC = "p8"  ;
 
 
-
-
+NET "rcvEnable"  LOC = "p35"  ;
+NET "rcvDone"  LOC = "p36"  ;
+#NET "status"  LOC = "p36"  ;
 
 #PACE: Start of PACE Area Constraints
 #PACE: Start of PACE Prohibit Constraints
