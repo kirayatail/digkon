@@ -205,11 +205,9 @@
             <wire x2="2016" y1="336" y2="336" x1="2000" />
         </branch>
         <branch name="larm">
-            <wire x2="2000" y1="624" y2="624" x1="1552" />
-            <wire x2="2000" y1="624" y2="656" x1="2000" />
-            <wire x2="2016" y1="656" y2="656" x1="2000" />
+            <wire x2="1568" y1="624" y2="624" x1="1552" />
+            <wire x2="2064" y1="624" y2="624" x1="1568" />
         </branch>
-        <iomarker fontsize="28" x="2016" y="656" name="larm" orien="R0" />
         <iomarker fontsize="28" x="2016" y="336" name="sendEnable" orien="R0" />
         <iomarker fontsize="28" x="2016" y="256" name="getRand" orien="R0" />
         <branch name="lowClk">
@@ -350,5 +348,6 @@
         </branch>
         <instance x="1168" y="704" name="XLXI_14" orien="R0">
         </instance>
+        <iomarker fontsize="28" x="2064" y="624" name="larm" orien="R0" />
     </sheet>
 </drawing>

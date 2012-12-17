@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Mon Dec 17 00:27:02 2012">
+  <application stringID="Xst" timeStamp="Mon Dec 17 14:40:49 2012">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.2\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.2\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.2\ISE_DS\ISE\lib\nt64;C:\Xilinx\Vivado\2012.2\bin;C:\Xilinx\14.2\ISE_DS\PlanAhead\bin;C:\Xilinx\14.2\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.2\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.2\ISE_DS\EDK\gnu\microblaze\nt64\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\arm\nt64\bin;C:\Xilinx\14.2\ISE_DS\common\bin\nt64;C:\Xilinx\14.2\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\PROGRA~2\F-Secure\Ssh;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Temp\Program\sharpe;C:\Program Files\MATLAB\R2012a\runtime\win64;C:\Program Files\MATLAB\R2012a\bin;C:\Program Files (x86)\Mozilla Firefox"/>
+          <item stringID="value" value="C:\Xilinx\14.2\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.2\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.2\ISE_DS\ISE\lib\nt64;C:\Xilinx\Vivado\2012.2\bin;C:\Xilinx\14.2\ISE_DS\PlanAhead\bin;C:\Xilinx\14.2\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.2\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.2\ISE_DS\EDK\gnu\microblaze\nt64\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\arm\nt64\bin;C:\Xilinx\14.2\ISE_DS\common\bin\nt64;C:\Xilinx\14.2\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\PROGRA~2\F-Secure\Ssh;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Temp\Program\sharpe;C:\Program Files\MATLAB\R2012a\runtime\win64;C:\Program Files\MATLAB\R2012a\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -86,8 +86,8 @@
       <item dataType="int" stringID="XST_ROMS" value="1"></item>
       <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="1"></item>
       <item dataType="int" stringID="XST_COUNTERS" value="1"></item>
-      <item dataType="int" stringID="XST_REGISTERS" value="18">
-        <item dataType="int" stringID="XST_1BIT_REGISTER" value="16"/>
+      <item dataType="int" stringID="XST_REGISTERS" value="17">
+        <item dataType="int" stringID="XST_1BIT_REGISTER" value="15"/>
         <item dataType="int" stringID="XST_2BIT_REGISTER" value="1"/>
         <item dataType="int" stringID="XST_3BIT_REGISTER" value="1"/>
       </item>
@@ -99,8 +99,8 @@
       <item dataType="int" stringID="XST_ROMS" value="1"></item>
       <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="1"></item>
       <item dataType="int" stringID="XST_COUNTERS" value="1"></item>
-      <item dataType="int" stringID="XST_REGISTERS" value="16">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="16"/>
+      <item dataType="int" stringID="XST_REGISTERS" value="15">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="15"/>
       </item>
       <item dataType="int" stringID="XST_MULTIPLEXERS" value="3"></item>
       <item dataType="int" stringID="XST_XORS" value="1"></item>
@@ -122,18 +122,18 @@
         <item stringID="XST_IOS" value="24"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="325">
-          <item dataType="int" stringID="XST_AND2" value="84"/>
-          <item dataType="int" stringID="XST_AND3" value="26"/>
-          <item dataType="int" stringID="XST_AND4" value="7"/>
-          <item dataType="int" stringID="XST_GND" value="2"/>
-          <item dataType="int" stringID="XST_INV" value="135"/>
-          <item dataType="int" stringID="XST_OR2" value="50"/>
-          <item dataType="int" stringID="XST_XOR2" value="6"/>
+        <item dataType="int" stringID="XST_BELS" value="340">
+          <item dataType="int" stringID="XST_AND2" value="86"/>
+          <item dataType="int" stringID="XST_AND3" value="28"/>
+          <item dataType="int" stringID="XST_AND4" value="6"/>
+          <item dataType="int" stringID="XST_GND" value="1"/>
+          <item dataType="int" stringID="XST_INV" value="140"/>
+          <item dataType="int" stringID="XST_OR2" value="58"/>
+          <item dataType="int" stringID="XST_XOR2" value="7"/>
         </item>
-        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="39">
-          <item dataType="int" stringID="XST_FDC" value="21"/>
-          <item dataType="int" stringID="XST_FDCE" value="15"/>
+        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="38">
+          <item dataType="int" stringID="XST_FDC" value="23"/>
+          <item dataType="int" stringID="XST_FDCE" value="12"/>
         </item>
         <item dataType="int" stringID="XST_IO_BUFFERS" value="24">
           <item dataType="int" stringID="XST_IBUF" value="10"/>

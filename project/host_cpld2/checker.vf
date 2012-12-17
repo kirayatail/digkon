@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : checker.vf
-// /___/   /\     Timestamp : 12/16/2012 15:25:48
+// /___/   /\     Timestamp : 12/17/2012 14:08:39
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family xc9500xl -verilog Z:/DigKon/project/digkon/project/host_cpld2/checker.vf -w Z:/DigKon/project/digkon/project/host_cpld2/checker.sch
+//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/Temp/digkon/project/host_cpld2/checker.vf -w C:/Temp/digkon/project/host_cpld2/checker.sch
 //Design Name: checker
 //Device: xc9500xl
 //Purpose:

@@ -48,6 +48,7 @@ begin
 		if reset = '1' OR enable = '0' then 
 			state <= s0;
 			data <= "0000";
+			rcvDone<='0';
 		elsif rising_edge(lowClk) AND enable = '1' then
 		
 			rcvDone<='0';

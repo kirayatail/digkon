@@ -35,7 +35,6 @@ end ctrl;
 architecture Behavioral of ctrl is
 	type state_type is (s0,s1,s2,s3,s4,s5,s6);
 	signal state,tstate : state_type;
-	signal alarm : STD_LOGIC;
 	signal count : STD_LOGIC_VECTOR(1 downto 0);
 
 begin
@@ -45,36 +44,33 @@ begin
 		
 		if(reset = '1') then
 		
-			alarm <= '0';
+			
 			tstate <= s0;
 			nextSig := '0';
+			larmOut <= '0';
+			okOut <= '0';
 		elsif rising_edge(clk) then
 			rand <= '0';
 			send <= '0';
 			rcvEnable <= '0';
 		
-			
-			
-			larmOut <= '0';
 			timerStart <= '0';
 			nextKey <= '0';
-			okOut <= checkOK;
 			case state is
 				when s0 => 				-- Wait state
 					if (trig = '1') then 
 						tstate <= s1; 
 					end if;
 					
-					if (alarm='1') then 
-						larmOut <= '1';
-					end if;
-					
+					okOut <= '1';
 				when s1 =>				-- Random state
 					count <= "00";
 					tstate <= s2;
 					rand <= '1';
-				
+					larmOut <= '0';
+					okOut <= '0';
 				when s2 =>				-- Send state
+				
 					if(sendDone = '1') then 
 						tstate <= s3; 
 					end if;
@@ -89,7 +85,7 @@ begin
 						tstate <= s4;
 					elsif(timeout = '1') then
 						if(count = "11") then
-							alarm <= '1';
+							larmOut <= '1';
 							tstate <= s0;
 						else
 							count <= count +1;
@@ -103,12 +99,13 @@ begin
 					
 					if (checkOK = '1' or lastKey = '1') then
 						if(checkOK = '1') then
-							alarm <= '0'; 
+							larmOut <= '0';
 						else 
-							alarm <= '1';
+							larmOut <= '1';
 						end if;
+						tstate <= s0;
 					end if;
-					--	tstate <= s5;
+					
 					if(nextSig = '0') then
 						nextSig := '1';
 					else 

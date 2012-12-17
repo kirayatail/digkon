@@ -1,139 +1,90 @@
 ISim log file
-Running: C:\workspace\digkon\project\host_cpld2\ctrl_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/workspace/digkon/project/host_cpld2/ctrl_isim_beh.wdb 
-ISim P.40xd (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
+Running: C:\Temp\digkon\project\host_cpld2\ctrl_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Temp/digkon/project/host_cpld2/ctrl_isim_beh.wdb 
+ISim P.28xd (signature 0xa0883be4)
+----------------------------------------------------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to '5296@xilinx1.lic.chalmers.se'.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to '5288@mentor1.lic.chalmers.se'.
+WARNING:Security:43 - No license file was found in the standard Xilinx license directory.
+WARNING:Security:44 - Since no license file was found,
+       please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# put reset 0
-# put trig 0
-# put timeout 0
-# put rcvdone +
-rcvdone: Illegal literal for enumeration type
-# put rcvdone 0
-# put senddone
-Incorrect usage of command 'put'
-Usage: put <hdl_object_name> <value> [-radix <type>]
-for detailed help use 'help put'
-# put senddone 0
-# put checkok 0
-# put lastkey 0
-# run
+# put all 0
+all: No such HDL object
 # isim force add /ctrl/clk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
 # run
 # run
+# put reset 0
 # run
 # put reset 1
 # run
+# put reset o
+reset: Illegal literal for enumeration type
 # put reset 0
-# run
-# put trig 1
-# run
-# run
-# put senddone
-Incorrect usage of command 'put'
-Usage: put <hdl_object_name> <value> [-radix <type>]
-for detailed help use 'help put'
-# put senddone 1
-# run
-# put senddone 0
-# put rcvdone 1
-# run
-# put rcvdone 0
-# run
-# run
-# run
-# run
-# run
-# put checkok 1
-# run
-# put checkok 0
 # run
 # put trig 0
 # run
-# run
-# run
-# run
-# run
-# put timeout 1
-# run
-# put timeout 0
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# run
-# restart
-# isim force add /ctrl/clk 0 -radix bin -value 1 -radix bin -time 50 ns -repeat 100 ns
-# put reset 0
-# put trig 0
 # put timeout 0
 # put rcvdone 0
-# put senddone
-Incorrect usage of command 'put'
-Usage: put <hdl_object_name> <value> [-radix <type>]
-for detailed help use 'help put'
 # put senddone 0
-# put checkok 0
+# put checkOK 0
 # put lastkey 0
 # run
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
+# run
 # put trig 1
 # run
-# put trig 0
+# run
 # run
 # put senddone 1
 # run
 # put senddone 0
+# run
+# run
+# run
 # put rcvdone 1
 # run
 # put rcvdone 0
+# run
+# run
+# run
+# run
+# run
+# run
+# run
+# run
+# run
 # run
 # run
 # put lastkey 1
 # run
-# put lastkey 0
 # run
-# put timeout 1
 # run
-# put timeout 0
 # run
-# put trig 1
 # run
+# run
+# put trig 0
 # run
 # put senddone 1
 # run
+# put senddone 9
+senddone: Illegal literal for enumeration type
 # put senddone 0
 # put rcvdone 1
 # run
 # put rcvdone 0
-# put checkok 1
 # run
-# put checkok 0
-# run
-# run
-# run
-# run
-# run
-# run
-# put trig 0
-# put trig 0
+# put lastkey 0
 # run
 # run
 # run
@@ -143,7 +94,7 @@ Finished circuit initialization process.
 # run
 # run
 # run
-# put timeout 1
 # run
-# put timeout 0
+# run
+# run
 # run

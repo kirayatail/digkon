@@ -1,8 +1,8 @@
 INTSTYLE=impact
-INFILE=Z:\DigKon\project\digkon\project\host_cpld2\impact.xsl
-OUTFILE=Z:\DigKon\project\digkon\project\host_cpld2\impact.xsl
-FAMILY=Single
-PART=Multiple
-WORKINGDIR=Z:\DigKon\project\digkon\project\host_cpld2
+INFILE=C:\Temp\digkon\project\host_cpld2\impact.xsl
+OUTFILE=C:\Temp\digkon\project\host_cpld2\impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=C:\Temp\digkon\project\host_cpld2
 LICENSE=iMPACT
 USER_INFO=iMPACT

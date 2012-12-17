@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : top.vf
-// /___/   /\     Timestamp : 12/16/2012 21:27:34
+// /___/   /\     Timestamp : 12/17/2012 14:08:39
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family xc9500xl -verilog Z:/DigKon/project/digkon/project/host_cpld2/top.vf -w Z:/DigKon/project/digkon/project/host_cpld2/top.sch
+//Command: sch2hdl -intstyle ise -family xc9500xl -verilog C:/Temp/digkon/project/host_cpld2/top.vf -w C:/Temp/digkon/project/host_cpld2/top.sch
 //Design Name: top
 //Device: xc9500xl
 //Purpose:

@@ -9,14 +9,14 @@ NET "data<1>"  LOC = "p19"  ;
 NET "data<2>"  LOC = "p20"  ;
 NET "data<3>"  LOC = "p22"  ;
 NET "lowClk"  LOC = "p14"  ;
-NET "resetChecker" LOC = "p1" ;
 
+
+NET "resetChecker" LOC = "p1" ;
 NET "lastkey" LOC = "p2" ;
 NET "found" LOC = "p12" ;
-
 NET "nextKey" LOC = "p11" ;
 
-NET "larm" LOC = "p4" ;
+NET "larm" LOC = "p27" ;
 NET "okLmp" LOC = "p3" ;
 NET "rcv"  LOC = "p13"  ;
 NET "sendEnable" LOC = "p24" ;
