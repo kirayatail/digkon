@@ -78,12 +78,12 @@ Setting FSM Encoding Algorithm to : OPT
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Temp/digkon/project/host_cpld2/ctrl.vhd" in Library work.
-Entity <ctrl> compiled.
-Entity <ctrl> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity ctrl is up to date.
 Compiling vhdl file "C:/Temp/digkon/project/host_cpld2/lev2puls.vhd" in Library work.
 Architecture behavioral of Entity lev2puls is up to date.
 Compiling vhdl file "C:/Temp/digkon/project/host_cpld2/receiver.vhd" in Library work.
-Architecture behavioral of Entity receiver is up to date.
+Entity <receiver> compiled.
+Entity <receiver> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Temp/digkon/project/host_cpld2/timer.vhd" in Library work.
 Architecture behavioral of Entity timer is up to date.
 Compiling vhdl file "C:/Temp/digkon/project/host_cpld2/crypto.vhd" in Library work.
@@ -172,12 +172,11 @@ Unit <timer> synthesized.
 
 Synthesizing Unit <receiver>.
     Related source file is "C:/Temp/digkon/project/host_cpld2/receiver.vhd".
-WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 18                                             |
-    | Transitions        | 31                                             |
-    | Inputs             | 1                                              |
+    | States             | 19                                             |
+    | Transitions        | 35                                             |
+    | Inputs             | 2                                              |
     | Outputs            | 5                                              |
     | Clock              | lowClk                    (rising_edge)        |
     | Reset              | state$or0000              (positive)           |
@@ -189,6 +188,7 @@ WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected s
     -----------------------------------------------------------------------
     Found 1-bit register for signal <rcvDone>.
     Found 4-bit register for signal <data>.
+    Found 1-bit xor4 for signal <parity>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   5 D-type flip-flop(s).
@@ -306,7 +306,8 @@ Macro Statistics
 # Multiplexers                                         : 3
  1-bit 7-to-1 multiplexer                              : 2
  3-bit 7-to-1 multiplexer                              : 1
-# Xors                                                 : 1
+# Xors                                                 : 2
+ 1-bit xor4                                            : 1
  4-bit xor2                                            : 1
 
 =========================================================================
@@ -342,18 +343,19 @@ Optimizing FSM <XLXI_12/state/FSM> on signal <state[1:5]> with compact encoding.
  s3    | 01000
  s4    | 10001
  s5    | 00100
- s6    | 00010
+ s6    | 00001
  s7    | 10100
- s8    | 00001
+ s8    | 11010
  s9    | 11100
- s10   | 11010
+ s10   | 01010
  s11   | 01100
- s12   | 11001
- s13   | 01001
- s14   | 01101
- s15   | 00101
- s16   | 11000
- swait | 01010
+ s12   | 01001
+ s13   | 01101
+ s14   | 00101
+ s15   | 10101
+ s16   | 00010
+ s17   | 11000
+ swait | 11001
 -------------------
 
 =========================================================================
@@ -374,7 +376,8 @@ Macro Statistics
 # Multiplexers                                         : 3
  1-bit 7-to-1 multiplexer                              : 2
  3-bit 7-to-1 multiplexer                              : 1
-# Xors                                                 : 1
+# Xors                                                 : 2
+ 1-bit xor4                                            : 1
  4-bit xor2                                            : 1
 
 =========================================================================
@@ -386,13 +389,6 @@ INFO:Xst:2261 - The FF/Latch <key_0> in Unit <keylookup> is equivalent to the fo
 
 Optimizing unit <top> ...
 
-Optimizing unit <receiver> ...
-  implementation constraint: INIT=r	 : state_FSM_FFd1
-  implementation constraint: INIT=r	 : state_FSM_FFd2
-  implementation constraint: INIT=r	 : state_FSM_FFd3
-  implementation constraint: INIT=r	 : state_FSM_FFd4
-  implementation constraint: INIT=r	 : state_FSM_FFd5
-
 Optimizing unit <lev2puls> ...
   implementation constraint: INIT=r	 : state_FSM_FFd1
   implementation constraint: INIT=r	 : state_FSM_FFd2
@@ -400,6 +396,13 @@ Optimizing unit <lev2puls> ...
 Optimizing unit <crypto> ...
 
 Optimizing unit <equals_MUSER_top> ...
+
+Optimizing unit <receiver> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+  implementation constraint: INIT=r	 : state_FSM_FFd3
+  implementation constraint: INIT=r	 : state_FSM_FFd4
+  implementation constraint: INIT=r	 : state_FSM_FFd5
 
 Optimizing unit <ctrl> ...
   implementation constraint: INIT=r	 : tstate_1
@@ -444,17 +447,17 @@ Design Statistics
 # IOs                              : 24
 
 Cell Usage :
-# BELS                             : 340
-#      AND2                        : 86
-#      AND3                        : 28
+# BELS                             : 329
+#      AND2                        : 76
+#      AND3                        : 31
 #      AND4                        : 6
 #      AND6                        : 1
 #      GND                         : 1
-#      INV                         : 140
-#      OR2                         : 58
-#      OR3                         : 9
+#      INV                         : 134
+#      OR2                         : 54
+#      OR3                         : 12
 #      XNOR2                       : 4
-#      XOR2                        : 7
+#      XOR2                        : 10
 # FlipFlops/Latches                : 38
 #      FDC                         : 23
 #      FDCE                        : 12
@@ -466,13 +469,13 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 65.00 secs
-Total CPU time to Xst completion: 64.89 secs
+Total CPU time to Xst completion: 64.69 secs
  
 --> 
 
 Total memory usage is 286164 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

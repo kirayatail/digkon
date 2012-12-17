@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.26 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.26 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: top.prj
 
@@ -77,11 +77,11 @@ Setting FSM Encoding Algorithm to : Gray
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld1/counter.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project/host_cpld1/counter.vhd" in Library work.
 Architecture arch of Entity counter is up to date.
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld1/sender.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project/host_cpld1/sender.vhd" in Library work.
 Entity <sender> compiled.
-Entity <sender> (Architecture <behavioral>) compiled.
+Entity <sender> (Architecture <Behavioral>) compiled.
 Compiling verilog file "rand.vf" in library work
 Module <FD4CE_MXILINX_rand> compiled
 Module <FD_MXILINX_rand> compiled
@@ -106,7 +106,7 @@ Analyzing hierarchy for module <top> in library <work>.
 
 Analyzing hierarchy for entity <counter> in library <work> (architecture <arch>).
 
-Analyzing hierarchy for entity <sender> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <sender> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for module <rand_MUSER_top> in library <work>.
 
@@ -139,7 +139,7 @@ Module <top> is correct for synthesis.
 Analyzing Entity <counter> in library <work> (Architecture <arch>).
 Entity <counter> analyzed. Unit <counter> generated.
 
-Analyzing Entity <sender> in library <work> (Architecture <behavioral>).
+Analyzing Entity <sender> in library <work> (Architecture <Behavioral>).
 Entity <sender> analyzed. Unit <sender> generated.
 
 Analyzing module <rand_MUSER_top> in library <work>.
@@ -198,7 +198,7 @@ Module <FDRE_MXILINX_top.4> is correct for synthesis.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <counter>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld1/counter.vhd".
+    Related source file is "C:/Temp/digkon/project/host_cpld1/counter.vhd".
     Found 1-bit register for signal <done>.
     Found 8-bit up counter for signal <count>.
     Summary:
@@ -208,14 +208,13 @@ Unit <counter> synthesized.
 
 
 Synthesizing Unit <sender>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld1/sender.vhd".
-WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "C:/Temp/digkon/project/host_cpld1/sender.vhd".
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 18                                             |
-    | Transitions        | 18                                             |
+    | States             | 19                                             |
+    | Transitions        | 19                                             |
     | Inputs             | 0                                              |
-    | Outputs            | 18                                             |
+    | Outputs            | 19                                             |
     | Clock              | lowClk                    (rising_edge)        |
     | Reset              | sendEnable                (negative)           |
     | Reset type         | asynchronous                                   |
@@ -225,6 +224,7 @@ WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected s
     | Implementation     | automatic                                      |
     -----------------------------------------------------------------------
     Found 1-bit register for signal <transmitter>.
+    Found 1-bit xor4 for signal <parity>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 D-type flip-flop(s).
@@ -284,6 +284,8 @@ Macro Statistics
  8-bit up counter                                      : 1
 # Registers                                            : 2
  1-bit register                                        : 2
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
 
 =========================================================================
 
@@ -312,7 +314,8 @@ Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:5]> with gray encoding.
  s14   | 01001
  s15   | 01000
  s16   | 11000
- swait | 11001
+ s17   | 11001
+ swait | 11011
 -------------------
 
 =========================================================================
@@ -324,6 +327,8 @@ Macro Statistics
  8-bit up counter                                      : 1
 # Registers                                            : 10
  Flip-Flops                                            : 10
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
 
 =========================================================================
 
@@ -333,13 +338,6 @@ Macro Statistics
 
 Optimizing unit <top> ...
 
-Optimizing unit <sender> ...
-  implementation constraint: INIT=r	 : state_FSM_FFd4
-  implementation constraint: INIT=r	 : state_FSM_FFd5
-  implementation constraint: INIT=r	 : state_FSM_FFd1
-  implementation constraint: INIT=r	 : state_FSM_FFd2
-  implementation constraint: INIT=r	 : state_FSM_FFd3
-
 Optimizing unit <FD4CE_MXILINX_top> ...
   implementation constraint: INIT=0	 : U0
   implementation constraint: INIT=0	 : U1
@@ -348,6 +346,13 @@ Optimizing unit <FD4CE_MXILINX_top> ...
 
 Optimizing unit <FD_MXILINX_top> ...
   implementation constraint: INIT=0	 : U0
+
+Optimizing unit <sender> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd5
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+  implementation constraint: INIT=r	 : state_FSM_FFd3
+  implementation constraint: INIT=r	 : state_FSM_FFd4
 
 Optimizing unit <FDRE_MXILINX_top_1> ...
 
@@ -393,16 +398,16 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 109
-#      AND2                        : 33
-#      AND3                        : 6
+# BELS                             : 119
+#      AND2                        : 38
+#      AND3                        : 5
 #      AND4                        : 1
 #      GND                         : 4
-#      INV                         : 35
-#      OR2                         : 19
+#      INV                         : 36
+#      OR2                         : 22
 #      OR3                         : 1
 #      VCC                         : 1
-#      XOR2                        : 9
+#      XOR2                        : 11
 # FlipFlops/Latches                : 23
 #      FDC                         : 14
 #      FDCE                        : 4
@@ -417,14 +422,14 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 18.91 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.84 secs
  
 --> 
 
-Total memory usage is 249748 kilobytes
+Total memory usage is 250644 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

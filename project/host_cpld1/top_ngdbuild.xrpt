@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Sun Dec 16 16:09:02 2012">
+  <application stringID="NgdBuild" timeStamp="Mon Dec 17 15:07:55 2012">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.2\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.2\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.2\ISE_DS\ISE\lib\nt64;C:\Xilinx\Vivado\2012.2\bin;C:\Xilinx\14.2\ISE_DS\PlanAhead\bin;C:\Xilinx\14.2\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.2\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.2\ISE_DS\EDK\gnu\microblaze\nt64\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\arm\nt64\bin;C:\Xilinx\14.2\ISE_DS\common\bin\nt64;C:\Xilinx\14.2\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\PROGRA~2\F-Secure\Ssh;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Temp\Program\sharpe;C:\Program Files\MATLAB\R2012a\runtime\win64;C:\Program Files\MATLAB\R2012a\bin;C:\Program Files (x86)\Mozilla Firefox"/>
+          <item stringID="value" value="C:\Xilinx\14.2\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.2\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.2\ISE_DS\ISE\lib\nt64;C:\Xilinx\Vivado\2012.2\bin;C:\Xilinx\14.2\ISE_DS\PlanAhead\bin;C:\Xilinx\14.2\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.2\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.2\ISE_DS\EDK\gnu\microblaze\nt64\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.2\ISE_DS\EDK\gnu\arm\nt64\bin;C:\Xilinx\14.2\ISE_DS\common\bin\nt64;C:\Xilinx\14.2\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\PROGRA~2\F-Secure\Ssh;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Temp\Program\sharpe;C:\Program Files\MATLAB\R2012a\runtime\win64;C:\Program Files\MATLAB\R2012a\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -74,8 +74,8 @@
         <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="0"/>
       </section>
       <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
-        <item dataType="int" stringID="NGDBUILD_NUM_AND2" value="33"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_AND3" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_AND2" value="38"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_AND3" value="5"/>
         <item dataType="int" stringID="NGDBUILD_NUM_AND4" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="14"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="4"/>
@@ -83,27 +83,27 @@
         <item dataType="int" stringID="NGDBUILD_NUM_FDP" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="4"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="4"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="35"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="36"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="7"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_OR2" value="19"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OR2" value="22"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OR3" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_XOR2" value="9"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XOR2" value="11"/>
       </section>
       <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
-        <item dataType="int" stringID="NGDBUILD_NUM_AND2" value="33"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_AND3" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_AND2" value="38"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_AND3" value="5"/>
         <item dataType="int" stringID="NGDBUILD_NUM_AND3B1" value="4"/>
         <item dataType="int" stringID="NGDBUILD_NUM_AND3B2" value="4"/>
         <item dataType="int" stringID="NGDBUILD_NUM_AND4" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="19"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="4"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="35"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="36"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="7"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_OR2" value="19"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OR2" value="22"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OR3" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_XOR2" value="9"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XOR2" value="11"/>
       </section>
       <section stringID="NGDBUILD_CORE_GENERATION_SUMMARY">
         <section stringID="NGDBUILD_CORE_INSTANCES"/>

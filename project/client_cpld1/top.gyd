@@ -23,21 +23,23 @@ xmt S:PIN13
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 EXP6_
-PARTITION FB1_6 xmt_OBUF/xmt_OBUF_RSTF__$INT XLXI_8/count<0> reciverClient_3_OBUF/reciverClient_3_OBUF_RSTF XLXI_4/state_FSM_FFd1
-		 XLXI_1/state_FSM_FFd2 XLXI_1/sendcount<2> XLXI_1/sendcount<1> XLXI_1/sendcount<0>
-		 XLXI_4/state_FSM_FFd3 XLXI_4/state_FSM_FFd2 XLXI_4/state_FSM_FFd4 XLXI_1/state_FSM_FFd1
-		 XLXI_4/state_FSM_FFd5
-PARTITION FB2_1 XLXI_2/state_FSM_FFd1 reciverClient_2_OBUF EXP7_ XLXI_2/state_FSM_FFd5
-		 reciverClient_1_OBUF reciverClient_0_OBUF XLXI_2/state_FSM_FFd4 senderMsg_3_OBUF
-		 XLXI_2/state_FSM_FFd2 EXP8_ senderMsg_2_OBUF XLXI_2/state_FSM_FFd3
-		 EXP9_ senderMsg_1_OBUF senderMsg_0_OBUF
+PARTITION FB1_1 XLXI_1/sendcount<0> EXP6_ EXP7_ XLXI_2/state_FSM_FFd1
+		 EXP8_ EXP9_ XLXI_2/state_FSM_FFd5 EXP10_
+		 XLXI_1/state_FSM_FFd1 XLXI_1/sendcount<1> XLXI_1/sendcount<2> XLXI_1/state_FSM_FFd2
+		 reciverClient_3_OBUF/reciverClient_3_OBUF_RSTF XLXI_8/count<0> EXP11_ XLXI_2/state_FSM_FFd2
+		 EXP12_ EXP13_
+PARTITION FB2_2 reciverClient_2_OBUF
+PARTITION FB2_5 reciverClient_1_OBUF reciverClient_0_OBUF
+PARTITION FB2_8 senderMsg_3_OBUF
+PARTITION FB2_11 senderMsg_2_OBUF
+PARTITION FB2_14 senderMsg_1_OBUF senderMsg_0_OBUF
 PARTITION FB2_17 volt_OBUF
 
-PARTITION FB3_2 reciverClient_3_OBUF
-PARTITION FB3_6 EXP10_ EXP11_ xmt_OBUF EXP12_
-		 EXP13_
-
+PARTITION FB3_1 xmt_OBUF/xmt_OBUF_RSTF__$INT reciverClient_3_OBUF
+PARTITION FB3_6 EXP14_ EXP15_ xmt_OBUF EXP16_
+		 XLXI_4/state_FSM_FFd1 XLXI_4/state_FSM_FFd3 XLXI_4/state_FSM_FFd2 XLXI_4/state_FSM_FFd4
+		 XLXI_4/state_FSM_FFd5 EXP17_ XLXI_2/state_FSM_FFd4 EXP18_
+		 XLXI_2/state_FSM_FFd3
 PARTITION FB4_11 XLXN_20 XLXI_8/count<7> XLXI_8/count<6> XLXI_8/count<5>
 		 XLXI_8/count<4> XLXI_8/count<3> XLXI_8/count<2> XLXI_8/count<1>
 		

@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.26 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: top.prj
 
@@ -77,15 +77,15 @@ Setting FSM Encoding Algorithm to : Gray
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/counter.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project/client_cpld1/counter.vhd" in Library work.
 Architecture arch of Entity counter is up to date.
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/crypto.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project/client_cpld1/crypto.vhd" in Library work.
 Architecture behavioral of Entity crypto is up to date.
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/ctrl.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project/client_cpld1/ctrl.vhd" in Library work.
 Architecture behavioral of Entity ctrl is up to date.
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/receiver.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project/client_cpld1/receiver.vhd" in Library work.
 Architecture behavioral of Entity receiver is up to date.
-Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/sender.vhd" in Library work.
+Compiling vhdl file "C:/Temp/digkon/project/client_cpld1/sender.vhd" in Library work.
 Architecture behavioral of Entity sender is up to date.
 Compiling verilog file "top.vf" in library work
 Module <top> compiled
@@ -138,7 +138,7 @@ Entity <counter> analyzed. Unit <counter> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <ctrl>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/ctrl.vhd".
+    Related source file is "C:/Temp/digkon/project/client_cpld1/ctrl.vhd".
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -162,13 +162,12 @@ Unit <ctrl> synthesized.
 
 
 Synthesizing Unit <receiver>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/receiver.vhd".
-WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "C:/Temp/digkon/project/client_cpld1/receiver.vhd".
     Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 18                                             |
-    | Transitions        | 31                                             |
-    | Inputs             | 1                                              |
+    | States             | 19                                             |
+    | Transitions        | 35                                             |
+    | Inputs             | 2                                              |
     | Outputs            | 5                                              |
     | Clock              | lowClk                    (rising_edge)        |
     | Reset              | state$or0000              (positive)           |
@@ -179,6 +178,7 @@ WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected s
     | Implementation     | automatic                                      |
     -----------------------------------------------------------------------
     Found 4-bit register for signal <data>.
+    Found 1-bit xor4 for signal <parity>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   4 D-type flip-flop(s).
@@ -186,20 +186,19 @@ Unit <receiver> synthesized.
 
 
 Synthesizing Unit <crypto>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/crypto.vhd".
+    Related source file is "C:/Temp/digkon/project/client_cpld1/crypto.vhd".
     Found 4-bit xor2 for signal <enc>.
 Unit <crypto> synthesized.
 
 
 Synthesizing Unit <sender>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/sender.vhd".
-WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "C:/Temp/digkon/project/client_cpld1/sender.vhd".
     Found finite state machine <FSM_2> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 18                                             |
-    | Transitions        | 18                                             |
+    | States             | 19                                             |
+    | Transitions        | 19                                             |
     | Inputs             | 0                                              |
-    | Outputs            | 18                                             |
+    | Outputs            | 19                                             |
     | Clock              | lowClk                    (rising_edge)        |
     | Reset              | sendEnable                (negative)           |
     | Reset type         | asynchronous                                   |
@@ -209,6 +208,7 @@ WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected s
     | Implementation     | automatic                                      |
     -----------------------------------------------------------------------
     Found 1-bit register for signal <transmitter>.
+    Found 1-bit xor4 for signal <parity>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 D-type flip-flop(s).
@@ -216,7 +216,7 @@ Unit <sender> synthesized.
 
 
 Synthesizing Unit <counter>.
-    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/client_cpld1/counter.vhd".
+    Related source file is "C:/Temp/digkon/project/client_cpld1/counter.vhd".
     Found 1-bit register for signal <done>.
     Found 8-bit up counter for signal <count>.
     Summary:
@@ -239,7 +239,8 @@ Macro Statistics
  8-bit up counter                                      : 1
 # Registers                                            : 6
  1-bit register                                        : 6
-# Xors                                                 : 1
+# Xors                                                 : 3
+ 1-bit xor4                                            : 2
  4-bit xor2                                            : 1
 
 =========================================================================
@@ -269,7 +270,8 @@ Optimizing FSM <XLXI_4/state/FSM> on signal <state[1:5]> with gray encoding.
  s14   | 01001
  s15   | 01000
  s16   | 11000
- swait | 11001
+ s17   | 11001
+ swait | 11011
 -------------------
 Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:5]> with gray encoding.
 -------------------
@@ -292,7 +294,8 @@ Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:5]> with gray encoding.
  s14   | 01001
  s15   | 01000
  s16   | 11000
- swait | 11001
+ s17   | 11001
+ swait | 11011
 -------------------
 Optimizing FSM <XLXI_1/state/FSM> on signal <state[1:2]> with gray encoding.
 -------------------
@@ -314,7 +317,8 @@ Macro Statistics
  8-bit up counter                                      : 1
 # Registers                                            : 6
  Flip-Flops                                            : 6
-# Xors                                                 : 1
+# Xors                                                 : 3
+ 1-bit xor4                                            : 2
  4-bit xor2                                            : 1
 
 =========================================================================
@@ -325,6 +329,8 @@ Macro Statistics
 
 Optimizing unit <top> ...
 
+Optimizing unit <crypto> ...
+
 Optimizing unit <receiver> ...
   implementation constraint: INIT=r	 : state_FSM_FFd1
   implementation constraint: INIT=r	 : state_FSM_FFd2
@@ -332,14 +338,12 @@ Optimizing unit <receiver> ...
   implementation constraint: INIT=r	 : state_FSM_FFd4
   implementation constraint: INIT=r	 : state_FSM_FFd5
 
-Optimizing unit <crypto> ...
-
 Optimizing unit <sender> ...
-  implementation constraint: INIT=r	 : state_FSM_FFd4
   implementation constraint: INIT=r	 : state_FSM_FFd5
   implementation constraint: INIT=r	 : state_FSM_FFd1
   implementation constraint: INIT=r	 : state_FSM_FFd2
   implementation constraint: INIT=r	 : state_FSM_FFd3
+  implementation constraint: INIT=r	 : state_FSM_FFd4
 
 Optimizing unit <ctrl> ...
   implementation constraint: INIT=r	 : state_FSM_FFd1
@@ -377,16 +381,16 @@ Design Statistics
 # IOs                              : 17
 
 Cell Usage :
-# BELS                             : 273
-#      AND2                        : 90
-#      AND3                        : 14
+# BELS                             : 303
+#      AND2                        : 104
+#      AND3                        : 13
 #      AND4                        : 1
 #      GND                         : 1
-#      INV                         : 98
-#      OR2                         : 49
+#      INV                         : 101
+#      OR2                         : 58
 #      OR3                         : 3
 #      VCC                         : 1
-#      XOR2                        : 16
+#      XOR2                        : 21
 # FlipFlops/Latches                : 29
 #      FDC                         : 20
 #      FDCE                        : 9
@@ -396,14 +400,14 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.58 secs
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 20.42 secs
  
 --> 
 
-Total memory usage is 251924 kilobytes
+Total memory usage is 251988 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

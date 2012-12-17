@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-12-17T12:47:25</DateModified>
+  <DateModified>2012-12-17T15:19:28</DateModified>
   <ModuleName>top</ModuleName>
-  <SummaryTimeStamp>2012-12-16T21:18:59</SummaryTimeStamp>
+  <SummaryTimeStamp>2012-12-17T14:46:50</SummaryTimeStamp>
   <SavedFilePath>C:/Temp/digkon/project/host_cpld2/iseconfig/top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Temp/digkon/project/host_cpld2\</ImplementationReportsDirectory>
   <DateInitialized>2012-12-05T14:18:53</DateInitialized>

@@ -30,23 +30,23 @@ sendEnable S:PIN24
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 XLXI_12/state_FSM_FFd1 resetChecker_OBUF XLXN_30 XLXI_12/state_FSM_FFd2
-		 lastkey_OBUF okLmp_OBUF XLXI_9/timer<2> XLXI_14/nextSig
-		 XLXI_12/state_FSM_FFd5 XLXI_12/state_FSM_FFd4 XLXI_14/tstate<0> XLXI_9/timer<3>
-		 XLXI_13/state_FSM_FFd2 XLXI_12/state_FSM_FFd3 resp_3_OBUF XLXI_13/state_FSM_FFd1
-		 resp_2_OBUF XLXN_110
-PARTITION FB2_2 rcvEnable_OBUF
-PARTITION FB2_5 rcvDone_OBUF
-PARTITION FB2_9 resp_3_OBUF/resp_3_OBUF_RSTF__$INT $OpTx$$OpTx$FX_DC$14_INV$128 XLXI_9/timer<0> XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF
-		 XLXI_9/timer<1> XLXI_2/XLXN_31<2> XLXI_2/XLXN_31<1> XLXI_2/XLXN_31<0>
-		 XLXI_2/XLXI_12/state_FSM_FFd2 XLXI_2/XLXI_12/state_FSM_FFd1
-PARTITION FB3_1 XLXI_9/timer<5> nextKey_OBUF EXP6_ EXP7_
-		 found_OBUF EXP8_ EXP9_ XLXI_14/tstate<2>
-		 EXP10_ XLXI_9/timer<4> XLXI_14/count<1> EXP11_
-		 EXP12_ BUF_XLXI_14/tstate<2> EXP13_ sendEnable_OBUF
+PARTITION FB1_1 XLXI_12/state_FSM_FFd3 resetChecker_OBUF XLXI_12/state_FSM_FFd4 XLXI_14/tstate<0>
+		 lastkey_OBUF okLmp_OBUF EXP6_ XLXI_12/state_FSM_FFd2
+		 EXP7_ EXP8_ EXP9_ XLXI_12/state_FSM_FFd1
+		 EXP10_ XLXI_14/nextSig resp_3_OBUF XLXI_12/state_FSM_FFd5
+		 resp_2_OBUF XLXN_30
+PARTITION FB2_2 rcvEnable_OBUF resp_3_OBUF/resp_3_OBUF_RSTF__$INT XLXI_13/state_FSM_FFd2 rcvDone_OBUF
+		 $OpTx$$OpTx$FX_DC$16_INV$130 XLXN_110 XLXI_9/timer<0> XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF
+		 XLXI_13/state_FSM_FFd1 XLXI_9/timer<3> XLXI_9/timer<2> XLXI_9/timer<1>
+		 XLXI_2/XLXN_31<2> XLXI_2/XLXN_31<1> XLXI_2/XLXN_31<0> XLXI_2/XLXI_12/state_FSM_FFd2
+		 XLXI_2/XLXI_12/state_FSM_FFd1
+PARTITION FB3_1 XLXI_9/timer<5> nextKey_OBUF EXP11_ EXP12_
+		 found_OBUF EXP13_ EXP14_ XLXI_14/tstate<2>
+		 EXP15_ XLXI_9/timer<4> XLXI_14/count<1> EXP16_
+		 EXP17_ BUF_XLXI_14/tstate<2> EXP18_ sendEnable_OBUF
 		 XLXI_14/count<0> XLXI_14/tstate<1>
-PARTITION FB4_5 getRand_OBUF EXP14_ EXP15_ larm_OBUF
-		 EXP16_ EXP17_
+PARTITION FB4_5 getRand_OBUF EXP19_ EXP20_ larm_OBUF
+		 EXP21_ EXP22_
 PARTITION FB4_15 resp_0_OBUF
 PARTITION FB4_17 resp_1_OBUF
 
