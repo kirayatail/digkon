@@ -1,0 +1,9 @@
+[Inputs]
+reset
+lowClk
+receiver
+enable
+[Outputs]
+rcvDone
+=rcvData[3:0]=
+[BiDir]

@@ -85,6 +85,7 @@ begin
 				when s3 =>				-- Receive state
 					checkRst <= '0';
 					if (rcvDone = '1') then
+						nextSig := '0';
 						tstate <= s4;
 					elsif(timeout = '1') then
 						if(count = "11") then

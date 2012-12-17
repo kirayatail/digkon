@@ -1,0 +1,65 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FTCPE_count0: FTCPE port map (count(0),count_T(0),clk,'0','0',NOT reset);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count_T(0) <= ((state_FSM_FFd3 AND NOT state_FSM_FFd2 AND NOT state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state_FSM_FFd3 AND state_FSM_FFd2 AND NOT count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rcvDone AND timeout)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state_FSM_FFd3 AND NOT state_FSM_FFd1 AND count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT count(1) AND NOT rcvDone AND timeout));
+</td></tr><tr><td>
+FTCPE_count1: FTCPE port map (count(1),count_T(1),clk,'0','0',NOT reset);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count_T(1) <= ((state_FSM_FFd3 AND NOT state_FSM_FFd2 AND NOT state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state_FSM_FFd3 AND state_FSM_FFd2 AND count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT count(1) AND NOT rcvDone AND timeout));
+</td></tr><tr><td>
+</td></tr><tr><td>
+nextKey <= (state_FSM_FFd1 AND nextSig);
+</td></tr><tr><td>
+FTCPE_nextSig: FTCPE port map (nextSig,'1',clk,'0','0',nextSig_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nextSig_CE <= (NOT reset AND state_FSM_FFd1 AND NOT lastKey AND NOT checkOK);
+</td></tr><tr><td>
+</td></tr><tr><td>
+rand <= (state_FSM_FFd3 AND NOT state_FSM_FFd2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+send <= (NOT state_FSM_FFd3 AND state_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_state_FSM_FFd1: FDCPE port map (state_FSM_FFd1,state_FSM_FFd1_D,clk,reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state_FSM_FFd1_D <= ((state_FSM_FFd3 AND state_FSM_FFd2 AND rcvDone)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state_FSM_FFd1 AND NOT lastKey AND NOT checkOK));
+</td></tr><tr><td>
+FDCPE_state_FSM_FFd2: FDCPE port map (state_FSM_FFd2,state_FSM_FFd2_D,clk,reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state_FSM_FFd2_D <= ((NOT state_FSM_FFd3 AND NOT state_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state_FSM_FFd3 AND state_FSM_FFd2 AND rcvDone)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state_FSM_FFd3 AND state_FSM_FFd2 AND count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(1) AND timeout));
+</td></tr><tr><td>
+FDCPE_state_FSM_FFd3: FDCPE port map (state_FSM_FFd3,state_FSM_FFd3_D,clk,reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state_FSM_FFd3_D <= ((NOT state_FSM_FFd3 AND state_FSM_FFd2 AND sendDone)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (trig AND NOT state_FSM_FFd3 AND NOT state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT state_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (state_FSM_FFd3 AND state_FSM_FFd2 AND NOT rcvDone AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT timeout));
+</td></tr><tr><td>
+</td></tr><tr><td>
+timerstart <= (NOT state_FSM_FFd3 AND state_FSM_FFd2);
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

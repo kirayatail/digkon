@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/project/host_cpld2/dipswitch.xst" -ofn "Z:/DigKon/project/digkon/project/host_cpld2/dipswitch.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc dipswitch.ucf -p xc9572xl-PC44-5 dipswitch.ngc dipswitch.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper dipswitch.ngd 
+XSLTProcess dipswitch_build.xml 
+tsim -intstyle ise dipswitch dipswitch.nga 
+taengine -intstyle ise -f dipswitch -w --format html1 -l dipswitch_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n dipswitch -i dipswitch 

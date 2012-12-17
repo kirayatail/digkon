@@ -1,0 +1,2 @@
+vhdtdtfi -lib work counter.vhd -prj client_cpld1 -o counter.spl -module counter -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl counter.spl C:/workspace/digkon/project/client_cpld1/counter.sym 

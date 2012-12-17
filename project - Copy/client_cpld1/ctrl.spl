@@ -1,0 +1,9 @@
+[Inputs]
+reset
+rcvDone
+sendDone
+lowClk
+[Outputs]
+rcvEnable
+sendEnable
+[BiDir]

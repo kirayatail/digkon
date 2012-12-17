@@ -1,0 +1,2 @@
+vhdtdtfi -lib work lev2puls.vhd -prj host_cpld2 -o lev2puls.spl -module lev2puls -template C:/Xilinx/14.2/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl -w lev2puls.spl C:/Temp/digkon/project/host_cpld2/lev2puls.sym 

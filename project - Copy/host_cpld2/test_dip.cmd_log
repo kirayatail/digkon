@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "Z:/DigKon/project/digkon/project/host_cpld2/test_dip.xst" -ofn "Z:/DigKon/project/digkon/project/host_cpld2/test_dip.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc test_dip.ucf -p xc9572xl-PC44-5 test_dip.ngc test_dip.ngd  

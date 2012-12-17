@@ -34,15 +34,49 @@ architecture Behavioral of keylookup is
 	type state_type is (s0 , s1 , s2 , last);
 	signal state,tstate : state_type;
 begin
-	process(getNext, reset) begin
-		if (reset = '1') then
-			tstate <= s0;
-			isLast <= '0';
-		elsif getNext = '1' then
-			isLast <= '0';
+
+
+--	process(reset,getNext) 
+--		begin
+--			if reset = '1' then
+--				tstate <= S0;
+--			elsif state = S0 then
+--				tstate <= S1;
+--			elsif state = S1 then
+--				tstate <= S2;
+--			elsif state = S2 then
+--				tstate <= last;
+---			elsif state = last then
+--				tstate <= S0;
+--		end if;
+--	end process;
+	
+--	process(tstate) 
+--	begin
+--		if tstate = S0 then
+--			key <="0110";
+--		elsif tstate = S1 then
+--			key <="0000";
+--		elsif tstate = S2 then
+--			key <="0111";
+--		elsif tstate = last then
+--			key <="0111";
+--		end if;
+--		state<=tstate;
+--	end process;
+
+
+
+
+
+
+
+	process(state) 
+	begin
+	tstate <= s0;
+	isLast <= '0';
 			case state is
 				when s0 =>
-					isLast <= '1';
 					tstate <= s1;
 					key <="0110";
 				when s1 =>
@@ -52,16 +86,19 @@ begin
 					tstate <= last;
 					key <="0000";
 				when last =>
-					tstate <= s0;
-				when others => 
+					isLast <= '1';
 					tstate <= s0;	
 			end case;
-		end if;
 	end process;
 
 
-	process(tstate) begin
-		state <=tstate;
+	process(getNext, reset) 
+	begin
+		if reset = '1' then
+		state <= s0;
+		elsif (getNext= '1' AND getNext'event) then
+			state <=tstate;
+		end if;
 	end process;
 	
 end Behavioral;

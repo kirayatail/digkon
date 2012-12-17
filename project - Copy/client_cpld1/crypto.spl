@@ -1,0 +1,6 @@
+[Inputs]
+=plain[3:0]=
+=key[3:0]=
+[Outputs]
+=enc[3:0]=
+[BiDir]

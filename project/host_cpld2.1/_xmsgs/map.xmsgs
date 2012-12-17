@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="LIT" num="701" delta="new" ><arg fmt="%s" index="1">PAD symbol &quot;lowClk&quot;</arg> has an undefined IOSTANDARD.
+</msg>
+
+<msg type="error" file="MapLib" num="30" delta="new" ><arg fmt="%s" index="1">LOC</arg> constraint <arg fmt="%s" index="2">P22</arg> on <arg fmt="%s" index="3">data&lt;3&gt;</arg> is invalid: <arg fmt="%z" index="4">No such site on the device.</arg> To bypass this error set the environment variable &apos;XIL_MAP_LOCWARN&apos;.
+</msg>
+
+<msg type="error" file="MapLib" num="30" delta="new" ><arg fmt="%s" index="1">LOC</arg> constraint <arg fmt="%s" index="2">P20</arg> on <arg fmt="%s" index="3">data&lt;2&gt;</arg> is invalid: <arg fmt="%z" index="4">No such site on the device.</arg> To bypass this error set the environment variable &apos;XIL_MAP_LOCWARN&apos;.
+</msg>
+
+<msg type="error" file="MapLib" num="30" delta="new" ><arg fmt="%s" index="1">LOC</arg> constraint <arg fmt="%s" index="2">P19</arg> on <arg fmt="%s" index="3">data&lt;1&gt;</arg> is invalid: <arg fmt="%z" index="4">No such site on the device.</arg> To bypass this error set the environment variable &apos;XIL_MAP_LOCWARN&apos;.
+</msg>
+
+<msg type="error" file="MapLib" num="30" delta="new" ><arg fmt="%s" index="1">LOC</arg> constraint <arg fmt="%s" index="2">P13</arg> on <arg fmt="%s" index="3">rcv</arg> is invalid: <arg fmt="%z" index="4">No such site on the device.</arg> To bypass this error set the environment variable &apos;XIL_MAP_LOCWARN&apos;.
+</msg>
+
+<msg type="error" file="MapLib" num="30" delta="new" ><arg fmt="%s" index="1">LOC</arg> constraint <arg fmt="%s" index="2">P39</arg> on <arg fmt="%s" index="3">rst</arg> is invalid: <arg fmt="%z" index="4">No such site on the device.</arg> To bypass this error set the environment variable &apos;XIL_MAP_LOCWARN&apos;.
+</msg>
+
+<msg type="error" file="MapLib" num="30" delta="new" ><arg fmt="%s" index="1">LOC</arg> constraint <arg fmt="%s" index="2">P25</arg> on <arg fmt="%s" index="3">sendDone</arg> is invalid: <arg fmt="%z" index="4">No such site on the device.</arg> To bypass this error set the environment variable &apos;XIL_MAP_LOCWARN&apos;.
+</msg>
+
+<msg type="error" file="MapLib" num="30" delta="new" ><arg fmt="%s" index="1">LOC</arg> constraint <arg fmt="%s" index="2">P6</arg> on <arg fmt="%s" index="3">trig</arg> is invalid: <arg fmt="%z" index="4">No such site on the device.</arg> To bypass this error set the environment variable &apos;XIL_MAP_LOCWARN&apos;.
+</msg>
+
+<msg type="error" file="MapLib" num="30" delta="new" ><arg fmt="%s" index="1">LOC</arg> constraint <arg fmt="%s" index="2">P26</arg> on <arg fmt="%s" index="3">getRand</arg> is invalid: <arg fmt="%z" index="4">No such site on the device.</arg> To bypass this error set the environment variable &apos;XIL_MAP_LOCWARN&apos;.
+</msg>
+
+<msg type="error" file="MapLib" num="30" delta="new" ><arg fmt="%s" index="1">LOC</arg> constraint <arg fmt="%s" index="2">P24</arg> on <arg fmt="%s" index="3">sendEnable</arg> is invalid: <arg fmt="%z" index="4">No such site on the device.</arg> To bypass this error set the environment variable &apos;XIL_MAP_LOCWARN&apos;.
+</msg>
+
+</messages>
+

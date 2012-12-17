@@ -1,0 +1,14 @@
+Rand.sch
+Description: Takes a snapshot of a wild 8-bit counter.
+Size: 16 Macrocells
+
+Input:
+clk - master clock
+rst - Reset signal (clears flip-flop)
+getrand - Makes flipflop read from counter
+
+Output:
+rand(8bit) - the counter value from previous read
+
+Notes:
+The input should be a pulse which spans one rising flank of the clock. Active high.

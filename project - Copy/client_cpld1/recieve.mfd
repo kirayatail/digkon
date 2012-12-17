@@ -1,0 +1,903 @@
+MDF Database:  version 1.0
+MDF_INFO | recieve | XC9572XL-5-PC44
+MACROCELL | 0 | 14 | state_tr<0>
+ATTRIBUTES | 8561472 | 0
+OUTPUTMC | 15 | 2 | 10 | 0 | 0 | 0 | 17 | 2 | 5 | 2 | 15 | 0 | 16 | 2 | 13 | 2 | 17 | 0 | 15 | 0 | 1 | 0 | 2 | 2 | 2 | 2 | 9 | 2 | 12 | 2 | 16
+INPUTS | 2 | nstate_tr<0>  | en
+INPUTMC | 2 | 3 | 14 | 0 | 13
+EQ | 4 | 
+   state_tr<0>.D = nstate_tr<0>;
+   state_tr<0>.CLK = clk;	// GCK
+   !state_tr<0>.AR = reset;	// GSR
+   state_tr<0>.CE = en;
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 1 | 7 | state_tr<1>
+ATTRIBUTES | 8561472 | 0
+OUTPUTMC | 15 | 2 | 10 | 0 | 0 | 0 | 17 | 2 | 5 | 2 | 16 | 0 | 16 | 2 | 13 | 2 | 17 | 0 | 15 | 0 | 1 | 0 | 2 | 2 | 2 | 2 | 9 | 2 | 12 | 2 | 15
+INPUTS | 2 | nstate_tr<1>  | en
+INPUTMC | 2 | 3 | 13 | 0 | 13
+EQ | 4 | 
+   state_tr<1>.D = nstate_tr<1>;
+   state_tr<1>.CLK = clk;	// GCK
+   !state_tr<1>.AR = reset;	// GSR
+   state_tr<1>.CE = en;
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 1 | 6 | state_tr<2>
+ATTRIBUTES | 8561472 | 0
+OUTPUTMC | 15 | 2 | 10 | 0 | 0 | 0 | 17 | 2 | 5 | 2 | 16 | 0 | 16 | 2 | 13 | 2 | 17 | 0 | 15 | 0 | 1 | 0 | 2 | 2 | 2 | 2 | 9 | 2 | 12 | 2 | 15
+INPUTS | 2 | nstate_tr<2>  | en
+INPUTMC | 2 | 3 | 12 | 0 | 13
+EQ | 4 | 
+   state_tr<2>.D = nstate_tr<2>;
+   state_tr<2>.CLK = clk;	// GCK
+   !state_tr<2>.AR = reset;	// GSR
+   state_tr<2>.CE = en;
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 1 | 5 | state_tr<3>
+ATTRIBUTES | 8561472 | 0
+OUTPUTMC | 15 | 2 | 10 | 0 | 0 | 0 | 17 | 2 | 5 | 2 | 15 | 0 | 16 | 2 | 13 | 2 | 17 | 0 | 15 | 0 | 1 | 0 | 2 | 2 | 2 | 2 | 9 | 2 | 12 | 2 | 16
+INPUTS | 2 | nstate_tr<3>  | en
+INPUTMC | 2 | 3 | 11 | 0 | 13
+EQ | 4 | 
+   state_tr<3>.D = nstate_tr<3>;
+   state_tr<3>.CLK = clk;	// GCK
+   !state_tr<3>.AR = reset;	// GSR
+   state_tr<3>.CE = en;
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 1 | 4 | state_tr<4>
+ATTRIBUTES | 8561472 | 0
+OUTPUTMC | 14 | 2 | 9 | 0 | 0 | 0 | 17 | 2 | 5 | 2 | 16 | 0 | 16 | 2 | 13 | 2 | 17 | 0 | 15 | 0 | 1 | 0 | 2 | 2 | 2 | 2 | 12 | 2 | 15
+INPUTS | 2 | nstate_tr<4>  | en
+INPUTMC | 2 | 3 | 10 | 0 | 13
+EQ | 4 | 
+   state_tr<4>.D = nstate_tr<4>;
+   state_tr<4>.CLK = clk;	// GCK
+   !state_tr<4>.AR = reset;	// GSR
+   state_tr<4>.CE = en;
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 1 | 12 | state_re<1>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 19 | 1 | 12 | 2 | 7 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 16 | 2 | 17 | 2 | 14 | 2 | 6 | 2 | 9 | 2 | 11 | 1 | 17 | 2 | 8 | 2 | 0 | 1 | 8 | 2 | 5 | 2 | 15 | 2 | 13 | 2 | 1
+INPUTS | 5 | reset  | state_re<1>  | en  | pause  | nstate_re<1>
+INPUTMC | 4 | 1 | 12 | 0 | 13 | 2 | 10 | 3 | 17
+INPUTP | 1 | 92
+EQ | 4 | 
+   state_re<1>.D = reset & state_re<1> & !en
+	# reset & state_re<1> & pause
+	# en & !pause & nstate_re<1>;
+   state_re<1>.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 11 | state_re<2>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 20 | 1 | 11 | 2 | 7 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 16 | 2 | 17 | 2 | 14 | 2 | 6 | 2 | 9 | 2 | 11 | 1 | 17 | 2 | 8 | 2 | 0 | 1 | 8 | 2 | 5 | 2 | 15 | 2 | 13 | 2 | 1 | 2 | 10
+INPUTS | 5 | reset  | state_re<2>  | en  | pause  | nstate_re<2>
+INPUTMC | 4 | 1 | 11 | 0 | 13 | 2 | 10 | 1 | 14
+INPUTP | 1 | 92
+EQ | 4 | 
+   state_re<2>.D = reset & state_re<2> & !en
+	# reset & state_re<2> & pause
+	# en & !pause & nstate_re<2>;
+   state_re<2>.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 10 | state_re<3>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 20 | 1 | 10 | 2 | 7 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 16 | 2 | 17 | 2 | 14 | 2 | 6 | 2 | 9 | 2 | 11 | 1 | 17 | 2 | 8 | 2 | 0 | 1 | 8 | 2 | 5 | 2 | 15 | 2 | 13 | 2 | 1 | 2 | 10
+INPUTS | 5 | reset  | state_re<3>  | en  | pause  | nstate_re<3>
+INPUTMC | 4 | 1 | 10 | 0 | 13 | 2 | 10 | 3 | 16
+INPUTP | 1 | 92
+EQ | 4 | 
+   state_re<3>.D = reset & state_re<3> & !en
+	# reset & state_re<3> & pause
+	# en & !pause & nstate_re<3>;
+   state_re<3>.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 13 | state_re<0>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 20 | 1 | 13 | 2 | 7 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 16 | 2 | 17 | 2 | 14 | 2 | 6 | 2 | 9 | 2 | 11 | 1 | 17 | 2 | 8 | 2 | 0 | 1 | 8 | 2 | 5 | 2 | 15 | 2 | 13 | 2 | 1 | 2 | 10
+INPUTS | 5 | reset  | state_re<0>  | en  | pause  | nstate_re<0>
+INPUTMC | 4 | 1 | 13 | 0 | 13 | 2 | 10 | 1 | 15
+INPUTP | 1 | 92
+EQ | 4 | 
+   !state_re<0>.D = reset & !state_re<0> & !en
+	# reset & !state_re<0> & pause
+	# en & !pause & !nstate_re<0>;
+   state_re<0>.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 9 | state_re<4>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 20 | 1 | 9 | 2 | 7 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 16 | 2 | 17 | 2 | 14 | 2 | 6 | 2 | 9 | 2 | 11 | 1 | 17 | 2 | 8 | 2 | 0 | 1 | 8 | 2 | 5 | 2 | 15 | 2 | 13 | 2 | 1 | 2 | 10
+INPUTS | 5 | reset  | state_re<4>  | en  | pause  | nstate_re<4>
+INPUTMC | 4 | 1 | 9 | 0 | 13 | 2 | 10 | 3 | 15
+INPUTP | 1 | 92
+EQ | 4 | 
+   state_re<4>.D = reset & state_re<4> & !en
+	# reset & state_re<4> & pause
+	# en & !pause & nstate_re<4>;
+   state_re<4>.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 13 | en
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 10 | 0 | 14 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 4 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9
+INPUTS | 8 | x1/count<0>  | x1/count<1>  | x1/count<2>  | x1/count<3>  | x1/count<4>  | x1/count<5>  | x1/count<6>  | x1/count<7>
+INPUTMC | 8 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5
+EQ | 5 | 
+   en.D = x1/count<0> & x1/count<1> & x1/count<2> & 
+	x1/count<3> & x1/count<4> & x1/count<5> & x1/count<6> & 
+	x1/count<7>;
+   en.CLK = clk;	// GCK
+   !en.AR = reset;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 0 | 12 | x1/count<0>
+ATTRIBUTES | 4363008 | 0
+OUTPUTMC | 9 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5
+INPUTS | 8 | x1/count<0>  | x1/count<1>  | x1/count<2>  | x1/count<3>  | x1/count<4>  | x1/count<5>  | x1/count<6>  | x1/count<7>
+INPUTMC | 8 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5
+EQ | 5 | 
+   !x1/count<0>.T = x1/count<0> & x1/count<1> & x1/count<2> & 
+	x1/count<3> & x1/count<4> & x1/count<5> & x1/count<6> & 
+	x1/count<7>;
+   x1/count<0>.CLK = clk;	// GCK
+   !x1/count<0>.AP = reset;	// GSR
+GLOBALS | 2 | 2 | clk | 1 | reset
+
+MACROCELL | 0 | 11 | x1/count<1>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 8 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5
+INPUTS | 1 | x1/count<0>
+INPUTMC | 1 | 0 | 12
+EQ | 3 | 
+   x1/count<1>.T = x1/count<0>;
+   x1/count<1>.CLK = clk;	// GCK
+   !x1/count<1>.AR = reset;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 0 | 10 | x1/count<2>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 7 | 0 | 13 | 0 | 12 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5
+INPUTS | 2 | x1/count<0>  | x1/count<1>
+INPUTMC | 2 | 0 | 12 | 0 | 11
+EQ | 3 | 
+   x1/count<2>.T = x1/count<0> & x1/count<1>;
+   x1/count<2>.CLK = clk;	// GCK
+   !x1/count<2>.AR = reset;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 0 | 9 | x1/count<3>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 6 | 0 | 13 | 0 | 12 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5
+INPUTS | 3 | x1/count<0>  | x1/count<1>  | x1/count<2>
+INPUTMC | 3 | 0 | 12 | 0 | 11 | 0 | 10
+EQ | 3 | 
+   x1/count<3>.T = x1/count<0> & x1/count<1> & x1/count<2>;
+   x1/count<3>.CLK = clk;	// GCK
+   !x1/count<3>.AR = reset;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 0 | 8 | x1/count<4>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 5 | 0 | 13 | 0 | 12 | 0 | 7 | 0 | 6 | 0 | 5
+INPUTS | 4 | x1/count<0>  | x1/count<1>  | x1/count<2>  | x1/count<3>
+INPUTMC | 4 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9
+EQ | 4 | 
+   x1/count<4>.T = x1/count<0> & x1/count<1> & x1/count<2> & 
+	x1/count<3>;
+   x1/count<4>.CLK = clk;	// GCK
+   !x1/count<4>.AR = reset;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 0 | 7 | x1/count<5>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 4 | 0 | 13 | 0 | 12 | 0 | 6 | 0 | 5
+INPUTS | 5 | x1/count<0>  | x1/count<1>  | x1/count<2>  | x1/count<3>  | x1/count<4>
+INPUTMC | 5 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8
+EQ | 4 | 
+   x1/count<5>.T = x1/count<0> & x1/count<1> & x1/count<2> & 
+	x1/count<3> & x1/count<4>;
+   x1/count<5>.CLK = clk;	// GCK
+   !x1/count<5>.AR = reset;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 0 | 6 | x1/count<6>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 3 | 0 | 13 | 0 | 12 | 0 | 5
+INPUTS | 6 | x1/count<0>  | x1/count<1>  | x1/count<2>  | x1/count<3>  | x1/count<4>  | x1/count<5>
+INPUTMC | 6 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7
+EQ | 4 | 
+   x1/count<6>.T = x1/count<0> & x1/count<1> & x1/count<2> & 
+	x1/count<3> & x1/count<4> & x1/count<5>;
+   x1/count<6>.CLK = clk;	// GCK
+   !x1/count<6>.AR = reset;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 0 | 5 | x1/count<7>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 2 | 0 | 13 | 0 | 12
+INPUTS | 7 | x1/count<0>  | x1/count<1>  | x1/count<2>  | x1/count<3>  | x1/count<4>  | x1/count<5>  | x1/count<6>
+INPUTMC | 7 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6
+EQ | 4 | 
+   x1/count<7>.T = x1/count<0> & x1/count<1> & x1/count<2> & 
+	x1/count<3> & x1/count<4> & x1/count<5> & x1/count<6>;
+   x1/count<7>.CLK = clk;	// GCK
+   !x1/count<7>.AR = reset;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 2 | 7 | transmitter_OBUF
+ATTRIBUTES | 8782770 | 0
+OUTPUTMC | 3 | 0 | 0 | 0 | 1 | 2 | 8
+INPUTS | 8 | transmitter_mux0001/transmitter_mux0001_D2  | pause_and0000/pause_and0000_D2  | reciever  | state_re<1>  | state_re<3>  | state_re<0>  | state_re<4>  | state_re<2>
+INPUTMC | 7 | 0 | 0 | 2 | 1 | 1 | 12 | 1 | 10 | 1 | 13 | 1 | 9 | 1 | 11
+INPUTP | 1 | 38
+EXPORTS | 1 | 2 | 8
+EQ | 10 | 
+   transmitter.D = Gnd;
+   transmitter.CLK = Gnd;
+   transmitter.AP = transmitter_mux0001/transmitter_mux0001_D2 & 
+	!pause_and0000/pause_and0000_D2;
+   transmitter.AR = !transmitter_mux0001/transmitter_mux0001_D2 & 
+	!pause_and0000/pause_and0000_D2;
+    transmitter_OBUF.EXP  =  reciever & !state_re<1> & state_re<3> & 
+	state_re<0> & !state_re<4>
+	# reciever & !state_re<2> & state_re<3> & 
+	state_re<0> & !state_re<4>
+
+MACROCELL | 2 | 10 | pause
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 8 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9 | 2 | 10 | 2 | 9 | 2 | 11
+INPUTS | 11 | state_tr<0>  | pause  | state_tr<1>  | state_tr<2>  | state_tr<3>  | reciever  | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>  | nstate_re<1>/nstate_re<1>_SETF.EXP
+INPUTMC | 10 | 0 | 14 | 2 | 10 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9 | 2 | 9
+INPUTP | 1 | 38
+EXPORTS | 1 | 2 | 11
+IMPORTS | 1 | 2 | 9
+EQ | 11 | 
+   pause = state_tr<0> & pause
+	# !state_tr<1> & pause
+	# state_tr<2> & pause
+	# state_tr<3> & pause
+;Imported pterms FB3_10
+	# !state_tr<4> & pause
+	# !reciever & !state_tr<0> & !state_tr<1> & 
+	!state_tr<2> & !state_tr<3> & !state_tr<4> & state_re<1> & 
+	!state_re<2> & !state_re<3> & !state_re<0> & state_re<4>;
+    pause.EXP  =  !reciever & !state_re<2> & !state_re<3> & 
+	!state_re<0> & state_re<4>
+
+MACROCELL | 2 | 4 | buffert<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 2 | 0 | 16 | 0 | 17
+INPUTS | 6 | reciever  | state_re<1>  | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>
+INPUTMC | 5 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9
+INPUTP | 1 | 38
+EQ | 6 | 
+   buffert<0>.D = Gnd;
+   buffert<0>.CLK = Gnd;
+   buffert<0>.AP = reciever & state_re<1> & state_re<2> & 
+	state_re<3> & !state_re<0> & !state_re<4>;
+   buffert<0>.AR = !reciever & state_re<1> & state_re<2> & 
+	state_re<3> & !state_re<0> & !state_re<4>;
+
+MACROCELL | 2 | 3 | buffert<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 2 | 0 | 2 | 0 | 17
+INPUTS | 6 | reciever  | state_re<1>  | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>
+INPUTMC | 5 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9
+INPUTP | 1 | 38
+EQ | 6 | 
+   buffert<1>.D = Gnd;
+   buffert<1>.CLK = Gnd;
+   buffert<1>.AP = reciever & state_re<1> & state_re<2> & 
+	state_re<3> & state_re<0> & !state_re<4>;
+   buffert<1>.AR = !reciever & state_re<1> & state_re<2> & 
+	state_re<3> & state_re<0> & !state_re<4>;
+
+MACROCELL | 2 | 2 | buffert<2>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 3 | 0 | 1 | 0 | 2 | 2 | 1
+INPUTS | 11 | reciever  | state_re<1>  | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>  | state_tr<0>  | state_tr<1>  | state_tr<2>  | state_tr<3>  | state_tr<4>
+INPUTMC | 10 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9 | 0 | 14 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 4
+INPUTP | 1 | 38
+EXPORTS | 1 | 2 | 1
+EQ | 9 | 
+   buffert<2>.D = Gnd;
+   buffert<2>.CLK = Gnd;
+   buffert<2>.AP = reciever & !state_re<1> & !state_re<2> & 
+	!state_re<3> & !state_re<0> & state_re<4>;
+   buffert<2>.AR = !reciever & !state_re<1> & !state_re<2> & 
+	!state_re<3> & !state_re<0> & state_re<4>;
+    buffert<2>.EXP  =  !reciever & !state_tr<0> & !state_tr<1> & 
+	!state_tr<2> & !state_tr<3> & !state_tr<4> & state_re<1> & 
+	!state_re<2> & !state_re<3> & !state_re<0> & state_re<4>
+
+MACROCELL | 1 | 16 | buffert<3>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 2 | 0 | 1 | 0 | 2
+INPUTS | 6 | reciever  | state_re<1>  | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>
+INPUTMC | 5 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9
+INPUTP | 1 | 38
+EQ | 6 | 
+   buffert<3>.D = Gnd;
+   buffert<3>.CLK = Gnd;
+   buffert<3>.AP = reciever & !state_re<1> & !state_re<2> & 
+	!state_re<3> & state_re<0> & state_re<4>;
+   buffert<3>.AR = !reciever & !state_re<1> & !state_re<2> & 
+	!state_re<3> & state_re<0> & state_re<4>;
+
+MACROCELL | 1 | 15 | nstate_re<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 13
+INPUTS | 2 | nstate_re_mux0001<0>/nstate_re_mux0001<0>_D2  | nstate_re_or0000/nstate_re_or0000_D2
+INPUTMC | 2 | 2 | 14 | 2 | 6
+EQ | 6 | 
+   nstate_re<0>.D = Gnd;
+   nstate_re<0>.CLK = Gnd;
+   nstate_re<0>.AP = nstate_re_mux0001<0>/nstate_re_mux0001<0>_D2 & 
+	!nstate_re_or0000/nstate_re_or0000_D2;
+   nstate_re<0>.AR = !nstate_re_mux0001<0>/nstate_re_mux0001<0>_D2 & 
+	!nstate_re_or0000/nstate_re_or0000_D2;
+
+MACROCELL | 3 | 17 | nstate_re<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 12
+INPUTS | 2 | nstate_re<1>/nstate_re<1>_SETF  | nstate_re<1>/nstate_re<1>_RSTF
+INPUTMC | 2 | 2 | 9 | 2 | 11
+EQ | 4 | 
+   nstate_re<1>.D = Gnd;
+   nstate_re<1>.CLK = Gnd;
+   nstate_re<1>.AP = nstate_re<1>/nstate_re<1>_SETF;
+   nstate_re<1>.AR = nstate_re<1>/nstate_re<1>_RSTF;
+
+MACROCELL | 1 | 14 | nstate_re<2>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 11
+INPUTS | 2 | nstate_re<2>/nstate_re<2>_SETF  | nstate_re_or0000/nstate_re_or0000_D2
+INPUTMC | 2 | 1 | 17 | 2 | 6
+EQ | 5 | 
+   nstate_re<2>.D = Gnd;
+   nstate_re<2>.CLK = Gnd;
+   nstate_re<2>.AP = nstate_re<2>/nstate_re<2>_SETF;
+   nstate_re<2>.AR = !nstate_re_or0000/nstate_re_or0000_D2 & 
+	!nstate_re<2>/nstate_re<2>_SETF;
+
+MACROCELL | 3 | 16 | nstate_re<3>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 10
+INPUTS | 2 | nstate_re<3>/nstate_re<3>_SETF  | nstate_re<3>/nstate_re<3>_RSTF__$INT
+INPUTMC | 2 | 2 | 8 | 2 | 0
+EQ | 4 | 
+   nstate_re<3>.D = Gnd;
+   nstate_re<3>.CLK = Gnd;
+   nstate_re<3>.AP = nstate_re<3>/nstate_re<3>_SETF;
+   nstate_re<3>.AR = !nstate_re<3>/nstate_re<3>_RSTF__$INT;
+
+MACROCELL | 3 | 15 | nstate_re<4>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 9
+INPUTS | 2 | nstate_re<4>/nstate_re<4>_SETF  | nstate_re_or0000/nstate_re_or0000_D2
+INPUTMC | 2 | 1 | 8 | 2 | 6
+EQ | 5 | 
+   nstate_re<4>.D = Gnd;
+   nstate_re<4>.CLK = Gnd;
+   nstate_re<4>.AP = nstate_re<4>/nstate_re<4>_SETF;
+   nstate_re<4>.AR = !nstate_re_or0000/nstate_re_or0000_D2 & 
+	!nstate_re<4>/nstate_re<4>_SETF;
+
+MACROCELL | 3 | 14 | nstate_tr<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 0 | 14
+INPUTS | 2 | nstate_tr_mux0001<0>/nstate_tr_mux0001<0>_D2  | $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854
+INPUTMC | 2 | 2 | 5 | 2 | 16
+EQ | 5 | 
+   nstate_tr<0>.D = Gnd;
+   nstate_tr<0>.CLK = Gnd;
+   nstate_tr<0>.AP = nstate_tr_mux0001<0>/nstate_tr_mux0001<0>_D2;
+   nstate_tr<0>.AR = !nstate_tr_mux0001<0>/nstate_tr_mux0001<0>_D2 & 
+	$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854;
+
+MACROCELL | 3 | 13 | nstate_tr<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 7
+INPUTS | 2 | nstate_tr<1>/nstate_tr<1>_SETF  | $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854
+INPUTMC | 2 | 0 | 16 | 2 | 16
+EQ | 5 | 
+   nstate_tr<1>.D = Gnd;
+   nstate_tr<1>.CLK = Gnd;
+   nstate_tr<1>.AP = nstate_tr<1>/nstate_tr<1>_SETF;
+   nstate_tr<1>.AR = 
+	$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 & !nstate_tr<1>/nstate_tr<1>_SETF;
+
+MACROCELL | 3 | 12 | nstate_tr<2>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 6
+INPUTS | 2 | $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854  | nstate_tr<2>/nstate_tr<2>_RSTF
+INPUTMC | 2 | 2 | 16 | 2 | 13
+EQ | 5 | 
+   nstate_tr<2>.D = Gnd;
+   nstate_tr<2>.CLK = Gnd;
+   nstate_tr<2>.AP = 
+	$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 & !nstate_tr<2>/nstate_tr<2>_RSTF;
+   nstate_tr<2>.AR = nstate_tr<2>/nstate_tr<2>_RSTF;
+
+MACROCELL | 3 | 11 | nstate_tr<3>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 5
+INPUTS | 2 | $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854  | nstate_tr<3>/nstate_tr<3>_RSTF
+INPUTMC | 2 | 2 | 16 | 2 | 17
+EQ | 5 | 
+   nstate_tr<3>.D = Gnd;
+   nstate_tr<3>.CLK = Gnd;
+   nstate_tr<3>.AP = 
+	$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 & !nstate_tr<3>/nstate_tr<3>_RSTF;
+   nstate_tr<3>.AR = nstate_tr<3>/nstate_tr<3>_RSTF;
+
+MACROCELL | 3 | 10 | nstate_tr<4>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 4
+INPUTS | 2 | nstate_tr<4>/nstate_tr<4>_SETF  | $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854
+INPUTMC | 2 | 0 | 15 | 2 | 16
+EQ | 5 | 
+   nstate_tr<4>.D = Gnd;
+   nstate_tr<4>.CLK = Gnd;
+   nstate_tr<4>.AP = nstate_tr<4>/nstate_tr<4>_SETF;
+   nstate_tr<4>.AR = 
+	$OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 & !nstate_tr<4>/nstate_tr<4>_SETF;
+
+MACROCELL | 0 | 0 | transmitter_mux0001/transmitter_mux0001_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 9 | state_tr<3>  | state_tr<4>  | transmitter  | state_tr<2>  | clk  | state_tr<0>  | state_tr<1>  | EXP6_.EXP  | EXP8_.EXP
+INPUTMC | 8 | 1 | 5 | 1 | 4 | 2 | 7 | 1 | 6 | 0 | 14 | 1 | 7 | 0 | 1 | 0 | 17
+INPUTP | 1 | 20
+IMPORTS | 2 | 0 | 1 | 0 | 17
+EQ | 36 | 
+   transmitter_mux0001/transmitter_mux0001_D2 = state_tr<2> & state_tr<4> & transmitter
+	# state_tr<3> & state_tr<4> & transmitter
+	# !clk & state_tr<0> & !state_tr<2> & !state_tr<4>
+	# !clk & state_tr<0> & !state_tr<3> & !state_tr<4>
+	# state_tr<0> & state_tr<1> & state_tr<4> & 
+	transmitter
+;Imported pterms FB1_2
+	# clk & !state_tr<0> & state_tr<1> & !state_tr<2> & 
+	!state_tr<3>
+	# clk & !state_tr<0> & !state_tr<1> & state_tr<3> & 
+	!state_tr<4>
+	# clk & !state_tr<0> & !state_tr<2> & !state_tr<3> & 
+	state_tr<4> & !buffert<2>
+	# !clk & state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & buffert<3>
+	# !state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & !state_tr<4> & transmitter
+;Imported pterms FB1_3
+	# clk & state_tr<0> & state_tr<1> & state_tr<2> & 
+	state_tr<3> & !state_tr<4> & !buffert<1>
+	# clk & state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & state_tr<4> & !buffert<3>
+	# !clk & !state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & state_tr<4> & buffert<2>
+;Imported pterms FB1_18
+	# !clk & state_tr<0> & !state_tr<1> & !state_tr<4>
+	# !clk & state_tr<0> & !state_tr<4> & buffert<1>
+	# clk & !state_tr<0> & state_tr<2> & !state_tr<3> & 
+	!state_tr<4>
+	# clk & !state_tr<0> & !state_tr<2> & state_tr<3> & 
+	!state_tr<4>
+	# clk & !state_tr<0> & state_tr<3> & !state_tr<4> & 
+	!buffert<0>
+;Imported pterms FB1_17
+	# !clk & !state_tr<0> & state_tr<1> & state_tr<2> & 
+	state_tr<3> & !state_tr<4> & buffert<0>;
+
+MACROCELL | 2 | 1 | pause_and0000/pause_and0000_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 2 | 7 | 2 | 0
+INPUTS | 7 | reciever  | state_re<1>  | state_re<4>  | state_re<0>  | state_re<3>  | state_re<2>  | buffert<2>.EXP
+INPUTMC | 6 | 1 | 12 | 1 | 9 | 1 | 13 | 1 | 10 | 1 | 11 | 2 | 2
+INPUTP | 1 | 38
+EXPORTS | 1 | 2 | 0
+IMPORTS | 1 | 2 | 2
+EQ | 12 | 
+   pause_and0000/pause_and0000_D2 = ;Imported pterms FB3_3
+	  !reciever & !state_tr<0> & !state_tr<1> & 
+	!state_tr<2> & !state_tr<3> & !state_tr<4> & state_re<1> & 
+	!state_re<2> & !state_re<3> & !state_re<0> & state_re<4>;
+    pause_and0000/pause_and0000_D2.EXP  =  reciever & state_re<1> & state_re<4>
+	# state_re<1> & state_re<0> & state_re<4>
+	# reciever & !state_re<1> & state_re<3> & 
+	state_re<0>
+	# reciever & !state_re<2> & state_re<3> & 
+	state_re<0>
+	# reciever & state_re<1> & state_re<2> & 
+	!state_re<3> & state_re<0>
+
+MACROCELL | 2 | 14 | nstate_re_mux0001<0>/nstate_re_mux0001<0>_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 1 | 15
+INPUTS | 7 | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>  | reciever  | state_re<1>  | nstate_tr<2>/nstate_tr<2>_RSTF.EXP
+INPUTMC | 6 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9 | 1 | 12 | 2 | 13
+INPUTP | 1 | 38
+IMPORTS | 1 | 2 | 13
+EQ | 15 | 
+   nstate_re_mux0001<0>/nstate_re_mux0001<0>_D2 = !reciever & state_re<1> & !state_re<3> & 
+	!state_re<4>
+	# !reciever & !state_re<1> & state_re<3> & 
+	!state_re<4>
+	# !reciever & !state_re<2> & state_re<3> & 
+	!state_re<4>
+	# !reciever & !state_re<3> & state_re<0> & 
+	!state_re<4>
+	# !state_re<2> & !state_re<3> & !state_re<0> & 
+	state_re<4>
+;Imported pterms FB3_14
+	# !reciever & state_re<2> & !state_re<3> & 
+	!state_re<4>
+	# state_re<1> & state_re<2> & state_re<3> & 
+	!state_re<0> & !state_re<4>;
+
+MACROCELL | 2 | 6 | nstate_re_or0000/nstate_re_or0000_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 1 | 15 | 1 | 14 | 3 | 15
+INPUTS | 6 | state_re<2>  | state_re<4>  | state_re<3>  | state_re<1>  | state_re<0>  | reciever
+INPUTMC | 5 | 1 | 11 | 1 | 9 | 1 | 10 | 1 | 12 | 1 | 13
+INPUTP | 1 | 38
+EQ | 6 | 
+   nstate_re_or0000/nstate_re_or0000_D2 = state_re<2> & state_re<4>
+	# state_re<3> & state_re<4>
+	# reciever & state_re<1> & state_re<4>
+	# state_re<1> & state_re<0> & state_re<4>
+	# !state_re<1> & !state_re<2> & !state_re<3> & 
+	!state_re<0> & !state_re<4>;
+
+MACROCELL | 2 | 9 | nstate_re<1>/nstate_re<1>_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 3 | 17 | 2 | 10
+INPUTS | 13 | reciever  | state_re<1>  | state_re<0>  | state_re<4>  | state_re<2>  | state_re<3>  | state_tr<4>  | pause  | state_tr<0>  | state_tr<1>  | state_tr<2>  | state_tr<3>  | nstate_re<3>/nstate_re<3>_SETF.EXP
+INPUTMC | 12 | 1 | 12 | 1 | 13 | 1 | 9 | 1 | 11 | 1 | 10 | 1 | 4 | 2 | 10 | 0 | 14 | 1 | 7 | 1 | 6 | 1 | 5 | 2 | 8
+INPUTP | 1 | 38
+EXPORTS | 1 | 2 | 10
+IMPORTS | 1 | 2 | 8
+EQ | 14 | 
+   nstate_re<1>/nstate_re<1>_SETF = reciever & !state_re<1> & state_re<2> & 
+	!state_re<4>
+	# reciever & !state_re<1> & state_re<3> & 
+	!state_re<4>
+	# reciever & !state_re<1> & state_re<0> & 
+	!state_re<4>
+;Imported pterms FB3_9
+	# state_re<1> & !state_re<0> & !state_re<4>
+	# !state_re<1> & !state_re<2> & !state_re<3> & 
+	state_re<0> & state_re<4>;
+    nstate_re<1>/nstate_re<1>_SETF.EXP  =  !state_tr<4> & pause
+	# !reciever & !state_tr<0> & !state_tr<1> & 
+	!state_tr<2> & !state_tr<3> & !state_tr<4> & state_re<1> & 
+	!state_re<2> & !state_re<3> & !state_re<0> & state_re<4>
+
+MACROCELL | 2 | 11 | nstate_re<1>/nstate_re<1>_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 17
+INPUTS | 7 | reciever  | state_re<0>  | state_re<4>  | state_re<1>  | state_re<2>  | state_re<3>  | pause.EXP
+INPUTMC | 6 | 1 | 13 | 1 | 9 | 1 | 12 | 1 | 11 | 1 | 10 | 2 | 10
+INPUTP | 1 | 38
+IMPORTS | 1 | 2 | 10
+EQ | 11 | 
+   nstate_re<1>/nstate_re<1>_RSTF = !reciever & state_re<0> & !state_re<4>
+	# state_re<1> & state_re<0> & !state_re<4>
+	# !reciever & !state_re<1> & state_re<2> & 
+	!state_re<4>
+	# !reciever & !state_re<1> & state_re<3> & 
+	!state_re<4>
+	# !state_re<1> & !state_re<2> & !state_re<3> & 
+	!state_re<0> & state_re<4>
+;Imported pterms FB3_11
+	# !reciever & !state_re<2> & !state_re<3> & 
+	!state_re<0> & state_re<4>;
+
+MACROCELL | 1 | 17 | nstate_re<2>/nstate_re<2>_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 1 | 14
+INPUTS | 6 | reciever  | state_re<2>  | state_re<0>  | state_re<4>  | state_re<1>  | state_re<3>
+INPUTMC | 5 | 1 | 11 | 1 | 13 | 1 | 9 | 1 | 12 | 1 | 10
+INPUTP | 1 | 38
+EQ | 8 | 
+   nstate_re<2>/nstate_re<2>_SETF = !reciever & state_re<2> & !state_re<0> & 
+	!state_re<4>
+	# reciever & state_re<1> & !state_re<2> & 
+	state_re<0> & !state_re<4>
+	# reciever & !state_re<1> & state_re<2> & 
+	state_re<0> & !state_re<4>
+	# state_re<1> & state_re<2> & state_re<3> & 
+	!state_re<0> & !state_re<4>;
+
+MACROCELL | 2 | 8 | nstate_re<3>/nstate_re<3>_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 3 | 16 | 2 | 9
+INPUTS | 7 | reciever  | state_re<3>  | state_re<0>  | state_re<4>  | state_re<1>  | state_re<2>  | transmitter_OBUF.EXP
+INPUTMC | 6 | 1 | 10 | 1 | 13 | 1 | 9 | 1 | 12 | 1 | 11 | 2 | 7
+INPUTP | 1 | 38
+EXPORTS | 1 | 2 | 9
+IMPORTS | 1 | 2 | 7
+EQ | 14 | 
+   nstate_re<3>/nstate_re<3>_SETF = !reciever & state_re<3> & !state_re<0> & 
+	!state_re<4>
+	# state_re<1> & state_re<2> & state_re<3> & 
+	!state_re<0> & !state_re<4>
+	# reciever & state_re<1> & state_re<2> & 
+	!state_re<3> & state_re<0> & !state_re<4>
+;Imported pterms FB3_8
+	# reciever & !state_re<1> & state_re<3> & 
+	state_re<0> & !state_re<4>
+	# reciever & !state_re<2> & state_re<3> & 
+	state_re<0> & !state_re<4>;
+    nstate_re<3>/nstate_re<3>_SETF.EXP  =  state_re<1> & !state_re<0> & !state_re<4>
+	# !state_re<1> & !state_re<2> & !state_re<3> & 
+	state_re<0> & state_re<4>
+
+MACROCELL | 2 | 0 | nstate_re<3>/nstate_re<3>_RSTF__$INT
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 16
+INPUTS | 7 | state_re<1>  | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>  | reciever  | pause_and0000/pause_and0000_D2.EXP
+INPUTMC | 6 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9 | 2 | 1
+INPUTP | 1 | 38
+IMPORTS | 1 | 2 | 1
+EQ | 16 | 
+   nstate_re<3>/nstate_re<3>_RSTF__$INT = state_re<2> & state_re<4>
+	# state_re<3> & state_re<4>
+	# !reciever & state_re<3> & !state_re<0>
+	# state_re<1> & state_re<2> & state_re<3> & 
+	!state_re<0>
+	# !state_re<1> & !state_re<2> & !state_re<3> & 
+	!state_re<0> & !state_re<4>
+;Imported pterms FB3_2
+	# reciever & state_re<1> & state_re<4>
+	# state_re<1> & state_re<0> & state_re<4>
+	# reciever & !state_re<1> & state_re<3> & 
+	state_re<0>
+	# reciever & !state_re<2> & state_re<3> & 
+	state_re<0>
+	# reciever & state_re<1> & state_re<2> & 
+	!state_re<3> & state_re<0>;
+
+MACROCELL | 1 | 8 | nstate_re<4>/nstate_re<4>_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 15
+INPUTS | 5 | state_re<1>  | state_re<2>  | state_re<3>  | state_re<4>  | state_re<0>
+INPUTMC | 5 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 13
+EQ | 4 | 
+   nstate_re<4>/nstate_re<4>_SETF = !state_re<1> & !state_re<2> & !state_re<3> & 
+	state_re<4>
+	# state_re<1> & state_re<2> & state_re<3> & 
+	state_re<0> & !state_re<4>;
+
+MACROCELL | 2 | 5 | nstate_tr_mux0001<0>/nstate_tr_mux0001<0>_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 14
+INPUTS | 11 | state_tr<0>  | state_tr<1>  | state_tr<4>  | state_tr<2>  | state_tr<3>  | reciever  | state_re<1>  | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>
+INPUTMC | 10 | 0 | 14 | 1 | 7 | 1 | 4 | 1 | 6 | 1 | 5 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9
+INPUTP | 1 | 38
+EQ | 8 | 
+   nstate_tr_mux0001<0>/nstate_tr_mux0001<0>_D2 = !state_tr<0> & state_tr<1> & !state_tr<4>
+	# !state_tr<0> & state_tr<2> & !state_tr<4>
+	# !state_tr<0> & state_tr<3> & !state_tr<4>
+	# !state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & state_tr<4>
+	# !reciever & !state_tr<0> & !state_tr<4> & 
+	state_re<1> & !state_re<2> & !state_re<3> & !state_re<0> & 
+	state_re<4>;
+
+MACROCELL | 2 | 16 | $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 6 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 3 | 10 | 2 | 17
+INPUTS | 6 | state_tr<1>  | state_tr<4>  | state_tr<2>  | state_tr<0>  | state_tr<3>  | EXP10_.EXP
+INPUTMC | 6 | 1 | 7 | 1 | 4 | 1 | 6 | 0 | 14 | 1 | 5 | 2 | 15
+EXPORTS | 1 | 2 | 17
+IMPORTS | 1 | 2 | 15
+EQ | 17 | 
+   $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854 = state_tr<1> & !state_tr<4>
+	# state_tr<2> & !state_tr<4>
+;Imported pterms FB3_16
+	# state_tr<0> & !state_tr<4>
+	# state_tr<3> & !state_tr<4>
+	# state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3>
+	# !state_tr<0> & !state_tr<2> & !state_tr<3> & 
+	state_tr<4>
+	# !reciever & !state_tr<4> & state_re<1> & 
+	!state_re<2> & !state_re<3> & !state_re<0> & state_re<4>;
+    $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854.EXP  =  state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3>
+	# state_tr<0> & !state_tr<2> & !state_tr<3> & 
+	!state_tr<4>
+	# state_tr<0> & state_tr<1> & state_tr<2> & 
+	state_tr<3> & !state_tr<4>
+
+MACROCELL | 0 | 16 | nstate_tr<1>/nstate_tr<1>_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 3 | 13 | 0 | 17
+INPUTS | 7 | state_tr<0>  | state_tr<1>  | state_tr<4>  | state_tr<2>  | state_tr<3>  | clk  | buffert<0>
+INPUTMC | 6 | 0 | 14 | 1 | 7 | 1 | 4 | 1 | 6 | 1 | 5 | 2 | 4
+INPUTP | 1 | 20
+EXPORTS | 1 | 0 | 17
+EQ | 6 | 
+   nstate_tr<1>/nstate_tr<1>_SETF = state_tr<0> & !state_tr<1> & !state_tr<4>
+	# !state_tr<0> & state_tr<1> & !state_tr<4>
+	# state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3>;
+    nstate_tr<1>/nstate_tr<1>_SETF.EXP  =  !clk & !state_tr<0> & state_tr<1> & state_tr<2> & 
+	state_tr<3> & !state_tr<4> & buffert<0>
+
+MACROCELL | 2 | 13 | nstate_tr<2>/nstate_tr<2>_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 3 | 12 | 2 | 14
+INPUTS | 12 | state_tr<0>  | state_tr<1>  | state_tr<2>  | state_tr<4>  | state_tr<3>  | reciever  | state_re<1>  | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>  | EXP9_.EXP
+INPUTMC | 11 | 0 | 14 | 1 | 7 | 1 | 6 | 1 | 4 | 1 | 5 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9 | 2 | 12
+INPUTP | 1 | 38
+EXPORTS | 1 | 2 | 14
+IMPORTS | 1 | 2 | 12
+EQ | 20 | 
+   nstate_tr<2>/nstate_tr<2>_RSTF = !state_tr<0> & state_tr<1> & !state_tr<2> & 
+	!state_tr<4>
+	# !state_tr<0> & !state_tr<2> & state_tr<3> & 
+	!state_tr<4>
+	# !reciever & !state_tr<0> & !state_tr<2> & 
+	!state_tr<4> & state_re<1> & !state_re<2> & !state_re<3> & 
+	!state_re<0> & state_re<4>
+;Imported pterms FB3_13
+	# state_tr<0> & state_tr<1> & state_tr<2> & 
+	!state_tr<4>
+	# state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3>
+	# state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<4>
+	# !state_tr<0> & !state_tr<2> & !state_tr<3> & 
+	state_tr<4>;
+    nstate_tr<2>/nstate_tr<2>_RSTF.EXP  =  !reciever & state_re<2> & !state_re<3> & 
+	!state_re<4>
+	# state_re<1> & state_re<2> & state_re<3> & 
+	!state_re<0> & !state_re<4>
+
+MACROCELL | 2 | 17 | nstate_tr<3>/nstate_tr<3>_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 11
+INPUTS | 12 | state_tr<0>  | state_tr<1>  | state_tr<3>  | state_tr<4>  | state_tr<2>  | reciever  | state_re<1>  | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>  | $OpTx$nstate_tr_and0000/nstate_tr_and0000_D2_INV$854.EXP
+INPUTMC | 11 | 0 | 14 | 1 | 7 | 1 | 5 | 1 | 4 | 1 | 6 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9 | 2 | 16
+INPUTP | 1 | 38
+IMPORTS | 1 | 2 | 16
+EQ | 18 | 
+   nstate_tr<3>/nstate_tr<3>_RSTF = state_tr<0> & !state_tr<1> & !state_tr<3> & 
+	!state_tr<4>
+	# !state_tr<0> & state_tr<1> & !state_tr<3> & 
+	!state_tr<4>
+	# !state_tr<0> & state_tr<2> & !state_tr<3> & 
+	!state_tr<4>
+	# !state_tr<0> & !state_tr<2> & !state_tr<3> & 
+	state_tr<4>
+	# !reciever & !state_tr<0> & !state_tr<3> & 
+	!state_tr<4> & state_re<1> & !state_re<2> & !state_re<3> & 
+	!state_re<0> & state_re<4>
+;Imported pterms FB3_17
+	# state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3>
+	# state_tr<0> & !state_tr<2> & !state_tr<3> & 
+	!state_tr<4>
+	# state_tr<0> & state_tr<1> & state_tr<2> & 
+	state_tr<3> & !state_tr<4>;
+
+MACROCELL | 0 | 15 | nstate_tr<4>/nstate_tr<4>_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 10
+INPUTS | 5 | state_tr<1>  | state_tr<2>  | state_tr<3>  | state_tr<4>  | state_tr<0>
+INPUTMC | 5 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 4 | 0 | 14
+EQ | 4 | 
+   nstate_tr<4>/nstate_tr<4>_SETF = !state_tr<1> & !state_tr<2> & !state_tr<3> & 
+	state_tr<4>
+	# state_tr<0> & state_tr<1> & state_tr<2> & 
+	state_tr<3> & !state_tr<4>;
+
+MACROCELL | 0 | 1 | EXP6_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 0
+INPUTS | 10 | clk  | state_tr<0>  | state_tr<1>  | state_tr<2>  | state_tr<3>  | state_tr<4>  | buffert<2>  | buffert<3>  | transmitter  | EXP7_.EXP
+INPUTMC | 9 | 0 | 14 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 4 | 2 | 2 | 1 | 16 | 2 | 7 | 0 | 2
+INPUTP | 1 | 20
+EXPORTS | 1 | 0 | 0
+IMPORTS | 1 | 0 | 2
+EQ | 17 | 
+       EXP6_.EXP  =  clk & !state_tr<0> & state_tr<1> & !state_tr<2> & 
+	!state_tr<3>
+	# clk & !state_tr<0> & !state_tr<1> & state_tr<3> & 
+	!state_tr<4>
+	# clk & !state_tr<0> & !state_tr<2> & !state_tr<3> & 
+	state_tr<4> & !buffert<2>
+	# !clk & state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & buffert<3>
+	# !state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & !state_tr<4> & transmitter
+;Imported pterms FB1_3
+	# clk & state_tr<0> & state_tr<1> & state_tr<2> & 
+	state_tr<3> & !state_tr<4> & !buffert<1>
+	# clk & state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & state_tr<4> & !buffert<3>
+	# !clk & !state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & state_tr<4> & buffert<2>
+
+MACROCELL | 0 | 2 | EXP7_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 9 | clk  | state_tr<0>  | state_tr<1>  | state_tr<2>  | state_tr<3>  | state_tr<4>  | buffert<1>  | buffert<3>  | buffert<2>
+INPUTMC | 8 | 0 | 14 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 4 | 2 | 3 | 1 | 16 | 2 | 2
+INPUTP | 1 | 20
+EXPORTS | 1 | 0 | 1
+EQ | 6 | 
+       EXP7_.EXP  =  clk & state_tr<0> & state_tr<1> & state_tr<2> & 
+	state_tr<3> & !state_tr<4> & !buffert<1>
+	# clk & state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & state_tr<4> & !buffert<3>
+	# !clk & !state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3> & state_tr<4> & buffert<2>
+
+MACROCELL | 0 | 17 | EXP8_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 0
+INPUTS | 9 | clk  | state_tr<0>  | state_tr<1>  | state_tr<4>  | buffert<1>  | state_tr<2>  | state_tr<3>  | buffert<0>  | nstate_tr<1>/nstate_tr<1>_SETF.EXP
+INPUTMC | 8 | 0 | 14 | 1 | 7 | 1 | 4 | 2 | 3 | 1 | 6 | 1 | 5 | 2 | 4 | 0 | 16
+INPUTP | 1 | 20
+EXPORTS | 1 | 0 | 0
+IMPORTS | 1 | 0 | 16
+EQ | 11 | 
+       EXP8_.EXP  =  !clk & state_tr<0> & !state_tr<1> & !state_tr<4>
+	# !clk & state_tr<0> & !state_tr<4> & buffert<1>
+	# clk & !state_tr<0> & state_tr<2> & !state_tr<3> & 
+	!state_tr<4>
+	# clk & !state_tr<0> & !state_tr<2> & state_tr<3> & 
+	!state_tr<4>
+	# clk & !state_tr<0> & state_tr<3> & !state_tr<4> & 
+	!buffert<0>
+;Imported pterms FB1_17
+	# !clk & !state_tr<0> & state_tr<1> & state_tr<2> & 
+	state_tr<3> & !state_tr<4> & buffert<0>
+
+MACROCELL | 2 | 12 | EXP9_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 13
+INPUTS | 5 | state_tr<0>  | state_tr<1>  | state_tr<2>  | state_tr<4>  | state_tr<3>
+INPUTMC | 5 | 0 | 14 | 1 | 7 | 1 | 6 | 1 | 4 | 1 | 5
+EXPORTS | 1 | 2 | 13
+EQ | 8 | 
+       EXP9_.EXP  =  state_tr<0> & state_tr<1> & state_tr<2> & 
+	!state_tr<4>
+	# state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3>
+	# state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<4>
+	# !state_tr<0> & !state_tr<2> & !state_tr<3> & 
+	state_tr<4>
+
+MACROCELL | 2 | 15 | EXP10_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 11 | state_tr<0>  | state_tr<4>  | state_tr<3>  | state_tr<1>  | state_tr<2>  | reciever  | state_re<1>  | state_re<2>  | state_re<3>  | state_re<0>  | state_re<4>
+INPUTMC | 10 | 0 | 14 | 1 | 4 | 1 | 5 | 1 | 7 | 1 | 6 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9
+INPUTP | 1 | 38
+EXPORTS | 1 | 2 | 16
+EQ | 8 | 
+       EXP10_.EXP  =  state_tr<0> & !state_tr<4>
+	# state_tr<3> & !state_tr<4>
+	# state_tr<0> & !state_tr<1> & !state_tr<2> & 
+	!state_tr<3>
+	# !state_tr<0> & !state_tr<2> & !state_tr<3> & 
+	state_tr<4>
+	# !reciever & !state_tr<4> & state_re<1> & 
+	!state_re<2> & !state_re<3> & !state_re<0> & state_re<4>
+
+PIN | reciever | 64 | 0 | N/A | 38 | 18 | 2 | 7 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 16 | 2 | 17 | 2 | 14 | 2 | 6 | 2 | 9 | 2 | 11 | 1 | 17 | 2 | 8 | 2 | 0 | 2 | 5 | 2 | 15 | 2 | 13 | 2 | 1 | 2 | 10
+PIN | clk | 4160 | 0 | N/A | 20 | 24 | 0 | 0 | 0 | 1 | 0 | 2 | 0 | 16 | 0 | 17 | 0 | 14 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 4 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5
+PIN | reset | 65600 | 0 | N/A | 92 | 19 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 9 | 0 | 14 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 4 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5
+PIN | transmitter | 536871040 | 0 | N/A | 33

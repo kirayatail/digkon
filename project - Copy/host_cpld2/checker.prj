@@ -1,0 +1,4 @@
+vhdl work "keylookup.vhd"
+verilog work "equals.vf"
+vhdl work "crypto.vhd"
+verilog work "checker.vf"

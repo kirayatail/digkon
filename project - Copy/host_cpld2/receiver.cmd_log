@@ -1,0 +1,2 @@
+vhdtdtfi -lib work receiver.vhd -prj host_cpld2 -o receiver.spl -module receiver -template C:/Xilinx/14.3/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl receiver.spl C:/workspace/digkon/project/host_cpld2/receiver.sym 

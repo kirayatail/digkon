@@ -1,0 +1,39 @@
+Pin Freeze File:  version P.28xd
+
+9572XL44PC XC9572XL-5-PC44
+clk S:PIN5
+data<0> S:PIN37
+data<1> S:PIN40
+data<2> S:PIN44
+data<3> S:PIN2
+lowClk S:PIN6
+rcv S:PIN22
+rst S:PIN39
+sendDone S:PIN4
+trig S:PIN26
+sendEnable S:PIN25
+getRand S:PIN1
+larm S:PIN35
+okLmp S:PIN38
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 XLXI_1/state_FSM_FFd2 getRand_OBUF XLXI_1/nextSig EXP6_
+		
+PARTITION FB1_8 XLXN_61 XLXI_12/state_FSM_FFd5 XLXI_12/state_FSM_FFd4 XLXI_12/state_FSM_FFd3
+		 XLXN_83<2> XLXN_83<1> XLXN_83<0> EXP7_
+		 EXP8_ XLXI_1/state_FSM_FFd3 EXP9_
+PARTITION FB2_1 XLXI_12/state_FSM_FFd9 larm_OBUF XLXI_12/state_FSM_FFd8 XLXI_12/state_FSM_FFd7
+		 XLXI_12/state_FSM_FFd6 XLXI_12/state_FSM_FFd2 XLXI_12/state_FSM_FFd17 okLmp_OBUF
+		 XLXI_12/state_FSM_FFd16 XLXI_12/state_FSM_FFd15 XLXI_12/state_FSM_FFd14 XLXI_12/state_FSM_FFd13
+		 XLXI_12/state_FSM_FFd12 XLXI_12/state_FSM_FFd11 XLXI_12/state_FSM_FFd10 XLXN_83<3>
+		 XLXI_12/state_FSM_FFd19 XLXI_12/state_FSM_FFd18
+
+PARTITION FB4_2 XLXN_5
+PARTITION FB4_4 XLXI_9/timer<5>/XLXI_9/timer<5>_RSTF__$INT XLXI_9/timer<0> XLXI_1/alarm XLXN_84/XLXN_84_RSTF
+		 XLXN_84 XLXI_9/timer<5> XLXI_9/timer<4> XLXI_9/timer<3>
+		 XLXI_9/timer<2> XLXI_9/timer<1> XLXI_1/state_FSM_FFd7 XLXI_1/state_FSM_FFd1
+		 XLXI_1/count<1> XLXI_1/count<0> XLXI_1/state_FSM_FFd4
+

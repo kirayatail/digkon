@@ -1,0 +1,5 @@
+set -tmpdir "Z:/DigKon/project/digkon/project/host_cpld2/xst/projnav.tmp"
+set -xsthdpdir "Z:/DigKon/project/digkon/project/host_cpld2/xst"
+elaborate
+-ifn keylookup.prj
+-ifmt mixed

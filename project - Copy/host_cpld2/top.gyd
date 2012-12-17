@@ -1,0 +1,46 @@
+Pin Freeze File:  version P.28xd
+
+9572XL44PC XC9572XL-5-PC44
+clk S:PIN5
+data<0> S:PIN18
+data<1> S:PIN19
+data<2> S:PIN20
+data<3> S:PIN22
+lowClk S:PIN14
+rcv S:PIN13
+rst S:PIN39
+sendDone S:PIN25
+trig S:PIN6
+chalenge<0> S:PIN33
+chalenge<1> S:PIN34
+chalenge<2> S:PIN9
+chalenge<3> S:PIN8
+getRand S:PIN26
+larm S:PIN4
+lastkey S:PIN2
+okLmp S:PIN3
+sendEnable S:PIN24
+resetChecker S:PIN1
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_2 resetChecker_OBUF$BUF0
+PARTITION FB1_5 lastkey_OBUF okLmp_OBUF EXP6_ larm_OBUF
+		
+PARTITION FB1_15 chalenge_3_OBUF
+PARTITION FB1_17 chalenge_2_OBUF
+
+
+PARTITION FB3_1 EXP7_ EXP8_ XLXI_1/alarm EXP9_
+		 EXP10_
+PARTITION FB3_9 XLXI_13/state_FSM_FFd2 XLXN_110 XLXN_4 XLXI_13/state_FSM_FFd1
+		 EXP11_ XLXI_1/state_FSM_FFd1 EXP12_ resetChecker_OBUF
+		 EXP13_ XLXI_1/state_FSM_FFd2
+PARTITION FB4_1 XLXI_9/timer<0> XLXN_85 XLXI_12/state_FSM_FFd1 XLXI_1/state_FSM_FFd3
+		 getRand_OBUF XLXN_30 XLXI_9/timer<5> XLXI_9/timer<4>
+		 XLXI_9/timer<3> XLXI_9/timer<2> XLXI_9/timer<1> XLXI_12/state_FSM_FFd5
+		 XLXI_12/state_FSM_FFd4 XLXI_12/state_FSM_FFd3 chalenge_0_OBUF chalenge_3_OBUF/chalenge_3_OBUF_RSTF__$INT
+		 chalenge_1_OBUF XLXI_12/state_FSM_FFd2
+

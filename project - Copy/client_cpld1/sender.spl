@@ -1,0 +1,8 @@
+[Inputs]
+sendEnable
+lowClk
+=data[3:0]=
+[Outputs]
+sendDone
+transmitter
+[BiDir]

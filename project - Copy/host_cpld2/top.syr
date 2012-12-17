@@ -1,0 +1,450 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : XC9500XL CPLDs
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Compact
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+Setting FSM Encoding Algorithm to : OPT
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd" in Library work.
+Architecture behavioral of Entity ctrl is up to date.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/lev2puls.vhd" in Library work.
+Architecture behavioral of Entity lev2puls is up to date.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/receiver.vhd" in Library work.
+Architecture behavioral of Entity receiver is up to date.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/timer.vhd" in Library work.
+Architecture behavioral of Entity timer is up to date.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/crypto.vhd" in Library work.
+Architecture behavioral of Entity crypto is up to date.
+Compiling vhdl file "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/keylookup.vhd" in Library work.
+Architecture behavioral of Entity keylookup is up to date.
+Compiling verilog file "equals.vf" in library work
+Compiling verilog file "checker.vf" in library work
+Module <equals> compiled
+Module <equals_MUSER_checker> compiled
+Compiling verilog file "top.vf" in library work
+Module <checker> compiled
+Module <equals_MUSER_top> compiled
+Module <checker_MUSER_top> compiled
+Module <top> compiled
+No errors in compilation
+Analysis of file <"top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top> in library <work>.
+
+Analyzing hierarchy for entity <ctrl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <checker_MUSER_top> in library <work>.
+
+Analyzing hierarchy for entity <timer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <receiver> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <lev2puls> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <keylookup> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <crypto> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <equals_MUSER_top> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top>.
+Module <top> is correct for synthesis.
+ 
+Analyzing Entity <ctrl> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <count> in unit <ctrl> has a constant value of 00 during circuit operation. The register is replaced by logic.
+Entity <ctrl> analyzed. Unit <ctrl> generated.
+
+Analyzing module <checker_MUSER_top> in library <work>.
+Module <checker_MUSER_top> is correct for synthesis.
+ 
+Analyzing Entity <keylookup> in library <work> (Architecture <behavioral>).
+Entity <keylookup> analyzed. Unit <keylookup> generated.
+
+Analyzing Entity <crypto> in library <work> (Architecture <behavioral>).
+Entity <crypto> analyzed. Unit <crypto> generated.
+
+Analyzing module <equals_MUSER_top> in library <work>.
+Module <equals_MUSER_top> is correct for synthesis.
+ 
+Analyzing Entity <timer> in library <work> (Architecture <behavioral>).
+Entity <timer> analyzed. Unit <timer> generated.
+
+Analyzing Entity <receiver> in library <work> (Architecture <behavioral>).
+Entity <receiver> analyzed. Unit <receiver> generated.
+
+Analyzing Entity <lev2puls> in library <work> (Architecture <behavioral>).
+Entity <lev2puls> analyzed. Unit <lev2puls> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ctrl>.
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/ctrl.vhd".
+WARNING:Xst:653 - Signal <nextSig> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <count> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Register <send> equivalent to <checkRst> has been removed
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 9                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | compact                                        |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <checkRst>.
+    Found 1-bit register for signal <timerstart>.
+    Found 1-bit register for signal <okOut>.
+    Found 1-bit register for signal <nextKey>.
+    Found 1-bit register for signal <rcvEnable>.
+    Found 1-bit register for signal <larmOut>.
+    Found 1-bit register for signal <rand>.
+    Found 1-bit register for signal <alarm>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   8 D-type flip-flop(s).
+Unit <ctrl> synthesized.
+
+
+Synthesizing Unit <timer>.
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/timer.vhd".
+    Found 6-bit up counter for signal <timer>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <timer> synthesized.
+
+
+Synthesizing Unit <receiver>.
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/receiver.vhd".
+WARNING:Xst:646 - Signal <parity> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 18                                             |
+    | Transitions        | 31                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 5                                              |
+    | Clock              | lowClk                    (rising_edge)        |
+    | Reset              | state$or0000              (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | compact                                        |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <data>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   4 D-type flip-flop(s).
+Unit <receiver> synthesized.
+
+
+Synthesizing Unit <lev2puls>.
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/lev2puls.vhd".
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | compact                                        |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <pulson>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+Unit <lev2puls> synthesized.
+
+
+Synthesizing Unit <keylookup>.
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/keylookup.vhd".
+    Found 1-bit register for signal <state<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <keylookup> synthesized.
+
+
+Synthesizing Unit <crypto>.
+    Related source file is "//file00.chalmers.se/home/lsofia/DigKon/project/digkon/project/host_cpld2/crypto.vhd".
+    Found 4-bit xor2 for signal <enc>.
+Unit <crypto> synthesized.
+
+
+Synthesizing Unit <equals_MUSER_top>.
+    Related source file is "top.vf".
+Unit <equals_MUSER_top> synthesized.
+
+
+Synthesizing Unit <checker_MUSER_top>.
+    Related source file is "top.vf".
+Unit <checker_MUSER_top> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "top.vf".
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 14
+ 1-bit register                                        : 14
+# Xors                                                 : 1
+ 4-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Optimizing FSM <XLXI_13/state/FSM> on signal <state[1:2]> with compact encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 00
+ s1    | 01
+ s2    | 10
+-------------------
+Optimizing FSM <XLXI_12/state/FSM> on signal <state[1:5]> with compact encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 00000
+ s1    | 10000
+ s2    | 10010
+ s3    | 01000
+ s4    | 10001
+ s5    | 00100
+ s6    | 00010
+ s7    | 10100
+ s8    | 00001
+ s9    | 11100
+ s10   | 11010
+ s11   | 01100
+ s12   | 11001
+ s13   | 01001
+ s14   | 01101
+ s15   | 00101
+ s16   | 11000
+ swait | 01010
+-------------------
+Optimizing FSM <XLXI_1/state/FSM> on signal <state[1:3]> with compact encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 000
+ s1    | 100
+ s2    | 110
+ s3    | 010
+ s4    | 011
+ s5    | 101
+ s6    | 001
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 14
+ Flip-Flops                                            : 14
+# Xors                                                 : 1
+ 4-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <ctrl> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+  implementation constraint: INIT=r	 : state_FSM_FFd3
+
+Optimizing unit <receiver> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+  implementation constraint: INIT=r	 : state_FSM_FFd3
+  implementation constraint: INIT=r	 : state_FSM_FFd4
+  implementation constraint: INIT=r	 : state_FSM_FFd5
+
+Optimizing unit <lev2puls> ...
+  implementation constraint: INIT=r	 : state_FSM_FFd1
+  implementation constraint: INIT=r	 : state_FSM_FFd2
+
+Optimizing unit <keylookup> ...
+  implementation constraint: INIT=r	 : state_0
+
+Optimizing unit <crypto> ...
+
+Optimizing unit <equals_MUSER_top> ...
+
+Optimizing unit <checker_MUSER_top> ...
+
+Optimizing unit <timer> ...
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 211
+#      AND2                        : 66
+#      AND3                        : 14
+#      AND4                        : 3
+#      AND6                        : 1
+#      GND                         : 1
+#      INV                         : 77
+#      OR2                         : 33
+#      OR3                         : 7
+#      XNOR2                       : 4
+#      XOR2                        : 5
+# FlipFlops/Latches                : 30
+#      FDC                         : 18
+#      FDCE                        : 12
+# IO Buffers                       : 20
+#      IBUF                        : 10
+#      OBUF                        : 10
+=========================================================================
+
+
+Total REAL time to Xst completion: 67.00 secs
+Total CPU time to Xst completion: 67.31 secs
+ 
+--> 
+
+Total memory usage is 283412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,4 @@
+AUTO_TS_P2P:FROM:dip<0>:TO:out_signal<0>:1
+AUTO_TS_P2P:FROM:dip<1>:TO:out_signal<1>:1
+AUTO_TS_P2P:FROM:dip<2>:TO:out_signal<2>:1
+AUTO_TS_P2P:FROM:dip<3>:TO:out_signal<3>:1

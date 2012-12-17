@@ -1,0 +1,13 @@
+crypto.vhd
+Description: 8bit xor cipher with 4bit repeating key
+Size:
+
+Input: 
+key(4bit) - The repeating key
+plain(8bit) - input plaintext
+
+Output
+crypt(8bit) - The encoded message
+
+Notes:
+Fully combinatorical, No clocks or synchronization or anything.

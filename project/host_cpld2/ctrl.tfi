@@ -1,0 +1,25 @@
+
+
+
+// Instantiate the module
+ctrl instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .trig(trig), 
+    .timeout(timeout), 
+    .rcvDone(rcvDone), 
+    .sendDone(sendDone), 
+    .checkOK(checkOK), 
+    .lastKey(lastKey), 
+    .rand(rand), 
+    .send(send), 
+    .rcvEnable(rcvEnable), 
+    .timerstart(timerstart), 
+    .nextKey(nextKey), 
+    .checkRst(checkRst), 
+    .larmOut(larmOut), 
+    .status(status), 
+    .okOut(okOut),
+    );
+
+

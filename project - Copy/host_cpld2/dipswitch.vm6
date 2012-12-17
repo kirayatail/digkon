@@ -1,0 +1,169 @@
+NDS Database:  version P.28xd
+
+NDS_INFO | xc9500xl | 9572XL44PC | XC9572XL-5-PC44
+
+DEVICE | 9572XL | 9572XL44PC | 
+
+NETWORK | dipswitch | 0 | 0 | 16391
+
+INPUT_INSTANCE | 0 | 0 | NULL | out_signal_0_OBUF | dipswitch_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | dip<0> | 88 | PI | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | out_signal_0_OBUF | 76 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_0_OBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | OptxMapped | out_signal_0_OBUF$BUF0 | dipswitch_COPY_0_COPY_0 | 2155872256 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out_signal_0_OBUF | 76 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_0_OBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | out_signal_0_OBUF$BUF0 | 77 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | out_signal_0_OBUF$BUF0.Q | out_signal_0_OBUF$BUF0 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | out_signal_0_OBUF$BUF0.SI | out_signal_0_OBUF$BUF0 | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out_signal_0_OBUF | 76 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_0_OBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | out_signal_0_OBUF$BUF0.D1 | 93 | ? | 0 | 4096 | out_signal_0_OBUF$BUF0 | NULL | NULL | out_signal_0_OBUF$BUF0.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | out_signal_0_OBUF$BUF0.D2 | 94 | ? | 0 | 4096 | out_signal_0_OBUF$BUF0 | NULL | NULL | out_signal_0_OBUF$BUF0.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | out_signal_0_OBUF
+
+SRFF_INSTANCE | out_signal_0_OBUF$BUF0.REG | out_signal_0_OBUF$BUF0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | out_signal_0_OBUF$BUF0.D | 92 | ? | 0 | 0 | out_signal_0_OBUF$BUF0 | NULL | NULL | out_signal_0_OBUF$BUF0.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | out_signal_0_OBUF$BUF0.Q | 95 | ? | 0 | 0 | out_signal_0_OBUF$BUF0 | NULL | NULL | out_signal_0_OBUF$BUF0.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | out_signal_1_OBUF | dipswitch_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | dip<1> | 89 | PI | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | out_signal_1_OBUF | 78 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_1_OBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | OptxMapped | out_signal_1_OBUF$BUF0 | dipswitch_COPY_0_COPY_0 | 2155872256 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out_signal_1_OBUF | 78 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_1_OBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | out_signal_1_OBUF$BUF0 | 79 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | out_signal_1_OBUF$BUF0.Q | out_signal_1_OBUF$BUF0 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | out_signal_1_OBUF$BUF0.SI | out_signal_1_OBUF$BUF0 | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out_signal_1_OBUF | 78 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_1_OBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | out_signal_1_OBUF$BUF0.D1 | 97 | ? | 0 | 4096 | out_signal_1_OBUF$BUF0 | NULL | NULL | out_signal_1_OBUF$BUF0.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | out_signal_1_OBUF$BUF0.D2 | 98 | ? | 0 | 4096 | out_signal_1_OBUF$BUF0 | NULL | NULL | out_signal_1_OBUF$BUF0.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | out_signal_1_OBUF
+
+SRFF_INSTANCE | out_signal_1_OBUF$BUF0.REG | out_signal_1_OBUF$BUF0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | out_signal_1_OBUF$BUF0.D | 96 | ? | 0 | 0 | out_signal_1_OBUF$BUF0 | NULL | NULL | out_signal_1_OBUF$BUF0.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | out_signal_1_OBUF$BUF0.Q | 99 | ? | 0 | 0 | out_signal_1_OBUF$BUF0 | NULL | NULL | out_signal_1_OBUF$BUF0.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | out_signal_2_OBUF | dipswitch_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | dip<2> | 90 | PI | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | out_signal_2_OBUF | 80 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_2_OBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | OptxMapped | out_signal_2_OBUF$BUF0 | dipswitch_COPY_0_COPY_0 | 2155872256 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out_signal_2_OBUF | 80 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_2_OBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | out_signal_2_OBUF$BUF0 | 81 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | out_signal_2_OBUF$BUF0.Q | out_signal_2_OBUF$BUF0 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | out_signal_2_OBUF$BUF0.SI | out_signal_2_OBUF$BUF0 | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out_signal_2_OBUF | 80 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_2_OBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | out_signal_2_OBUF$BUF0.D1 | 101 | ? | 0 | 4096 | out_signal_2_OBUF$BUF0 | NULL | NULL | out_signal_2_OBUF$BUF0.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | out_signal_2_OBUF$BUF0.D2 | 102 | ? | 0 | 4096 | out_signal_2_OBUF$BUF0 | NULL | NULL | out_signal_2_OBUF$BUF0.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | out_signal_2_OBUF
+
+SRFF_INSTANCE | out_signal_2_OBUF$BUF0.REG | out_signal_2_OBUF$BUF0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | out_signal_2_OBUF$BUF0.D | 100 | ? | 0 | 0 | out_signal_2_OBUF$BUF0 | NULL | NULL | out_signal_2_OBUF$BUF0.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | out_signal_2_OBUF$BUF0.Q | 103 | ? | 0 | 0 | out_signal_2_OBUF$BUF0 | NULL | NULL | out_signal_2_OBUF$BUF0.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | out_signal_3_OBUF | dipswitch_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | dip<3> | 91 | PI | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | out_signal_3_OBUF | 82 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_3_OBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | OptxMapped | out_signal_3_OBUF$BUF0 | dipswitch_COPY_0_COPY_0 | 2155872256 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out_signal_3_OBUF | 82 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_3_OBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | out_signal_3_OBUF$BUF0 | 83 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | out_signal_3_OBUF$BUF0.Q | out_signal_3_OBUF$BUF0 | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | out_signal_3_OBUF$BUF0.SI | out_signal_3_OBUF$BUF0 | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out_signal_3_OBUF | 82 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal_3_OBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | out_signal_3_OBUF$BUF0.D1 | 105 | ? | 0 | 4096 | out_signal_3_OBUF$BUF0 | NULL | NULL | out_signal_3_OBUF$BUF0.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | out_signal_3_OBUF$BUF0.D2 | 106 | ? | 0 | 4096 | out_signal_3_OBUF$BUF0 | NULL | NULL | out_signal_3_OBUF$BUF0.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | out_signal_3_OBUF
+
+SRFF_INSTANCE | out_signal_3_OBUF$BUF0.REG | out_signal_3_OBUF$BUF0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | out_signal_3_OBUF$BUF0.D | 104 | ? | 0 | 0 | out_signal_3_OBUF$BUF0 | NULL | NULL | out_signal_3_OBUF$BUF0.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | out_signal_3_OBUF$BUF0.Q | 107 | ? | 0 | 0 | out_signal_3_OBUF$BUF0 | NULL | NULL | out_signal_3_OBUF$BUF0.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | out_signal<0> | dipswitch_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | out_signal_0_OBUF$BUF0 | 77 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | out_signal_0_OBUF$BUF0.Q | out_signal_0_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | out_signal<0> | 84 | PO | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal<0> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | out_signal<1> | dipswitch_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | out_signal_1_OBUF$BUF0 | 79 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | out_signal_1_OBUF$BUF0.Q | out_signal_1_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | out_signal<1> | 85 | PO | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal<1> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | out_signal<2> | dipswitch_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | out_signal_2_OBUF$BUF0 | 81 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | out_signal_2_OBUF$BUF0.Q | out_signal_2_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | out_signal<2> | 86 | PO | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal<2> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | out_signal<3> | dipswitch_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | out_signal_3_OBUF$BUF0 | 83 | ? | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | out_signal_3_OBUF$BUF0.Q | out_signal_3_OBUF$BUF0 | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | out_signal<3> | 87 | PO | 0 | 0 | dipswitch_COPY_0_COPY_0 | NULL | NULL | out_signal<3> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | dipswitch_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | NULL | 0 | out_signal_2_OBUF | 1 | NULL | 0 | 1 | 49152
+FBPIN | 5 | NULL | 0 | out_signal_0_OBUF | 1 | NULL | 0 | 2 | 49152
+FBPIN | 6 | NULL | 0 | out_signal_1_OBUF | 1 | NULL | 0 | 3 | 49152
+FBPIN | 8 | NULL | 0 | out_signal_3_OBUF | 1 | NULL | 0 | 4 | 49152
+
+FB_INSTANCE | FOOBAR2_ | dipswitch_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 11 | out_signal_0_OBUF$BUF0 | 1 | NULL | 0 | out_signal<0> | 1 | 40 | 53248
+FBPIN | 14 | out_signal_1_OBUF$BUF0 | 1 | NULL | 0 | out_signal<1> | 1 | 42 | 53248
+FBPIN | 15 | out_signal_2_OBUF$BUF0 | 1 | NULL | 0 | out_signal<2> | 1 | 43 | 49152
+FBPIN | 17 | out_signal_3_OBUF$BUF0 | 1 | NULL | 0 | out_signal<3> | 1 | 44 | 49152
+
+FB_INSTANCE | FOOBAR3_ | dipswitch_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | dipswitch_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | dipswitch_COPY_0_COPY_0 | 0 | 0 | 0
+
+BUSINFO | DIP<3:0> | 4 | 0 | 0 | dip<0> | 3 | dip<1> | 2 | dip<2> | 1 | dip<3> | 0
+BUSINFO | OUT_SIGNAL<3:0> | 4 | 0 | 1 | out_signal<0> | 3 | out_signal<1> | 2 | out_signal<2> | 1 | out_signal<3> | 0
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 2 | dip<1> | 3 | 16 | dip<2> | 1 | 19 | dip<3> | 4 | 20 | dip<0> | 2
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | -1 | 110 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 106 | -1 | -1 | 114 | 108 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+

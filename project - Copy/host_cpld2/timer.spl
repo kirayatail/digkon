@@ -1,0 +1,6 @@
+[Inputs]
+restart
+lowclk
+[Outputs]
+timeout
+[BiDir]

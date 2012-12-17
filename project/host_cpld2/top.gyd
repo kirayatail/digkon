@@ -30,21 +30,21 @@ sendEnable S:PIN24
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 EXP6_ resetChecker_OBUF XLXI_2/XLXN_31<2>/XLXI_2/XLXN_31<2>_SETF XLXI_2/XLXN_31<1>/XLXI_2/XLXN_31<1>_RSTF
+PARTITION FB1_1 XLXI_12/state_FSM_FFd1 resetChecker_OBUF EXP6_ XLXI_12/state_FSM_FFd2
 		 lastkey_OBUF okLmp_OBUF EXP7_ larm_OBUF
-		 XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF $OpTx$FX_SC$16 XLXI_12/state_FSM_FFd5 XLXI_12/state_FSM_FFd4
-		 XLXI_2/XLXN_31<3>/XLXI_2/XLXN_31<3>_RSTF XLXI_12/state_FSM_FFd3 resp_3_OBUF XLXI_12/state_FSM_FFd2
-		 resp_2_OBUF XLXI_12/state_FSM_FFd1
+		 XLXI_12/state_FSM_FFd4 XLXI_12/state_FSM_FFd5 XLXI_14/tstate<2> XLXI_2/XLXN_31<1>
+		 XLXI_12/state_FSM_FFd3 XLXI_2/XLXN_31<2> resp_3_OBUF XLXN_30
+		 resp_2_OBUF $OpTx$FX_DC$16
 PARTITION FB2_2 rcvEnable_OBUF
 PARTITION FB2_5 rcvDone_OBUF
 
-PARTITION FB3_1 EXP8_ nextKey_OBUF XLXI_14/nextSig EXP9_
-		 found_OBUF XLXN_30 XLXI_9/timer<5> XLXI_9/timer<4>
-		 XLXI_9/timer<3> XLXI_9/timer<2> XLXI_14/tstate<2> XLXI_14/count<1>
+PARTITION FB3_1 EXP8_ nextKey_OBUF XLXN_110 EXP9_
+		 found_OBUF XLXI_13/state_FSM_FFd1 XLXI_9/timer<5> XLXI_9/timer<4>
+		 XLXI_9/timer<3> XLXI_9/timer<2> XLXI_14/nextSig XLXI_14/count<1>
 		 XLXI_14/count<0> XLXI_14/tstate<1> XLXI_14/tstate<0> sendEnable_OBUF
 		 EXP10_ XLXI_14/alarm
-PARTITION FB4_4 resp_3_OBUF/resp_3_OBUF_RSTF__$INT getRand_OBUF XLXI_13/state_FSM_FFd2 XLXN_110
-		 XLXI_9/timer<0> XLXI_2/XLXI_12/tstate<0> XLXI_13/state_FSM_FFd1 XLXI_9/timer<1>
-		 XLXI_2/XLXN_31<3> XLXI_2/XLXN_31<2> XLXI_2/XLXN_31<1> resp_0_OBUF
-		 XLXI_2/XLXN_31<0> resp_1_OBUF XLXI_2/XLXI_12/tstate<1>
+PARTITION FB4_5 getRand_OBUF
+PARTITION FB4_9 resp_3_OBUF/resp_3_OBUF_RSTF__$INT XLXI_13/state_FSM_FFd2 XLXI_9/timer<0> XLXI_2/XLXN_31<0>/XLXI_2/XLXN_31<0>_RSTF
+		 XLXI_9/timer<1> XLXI_2/XLXN_31<0> resp_0_OBUF XLXI_2/XLXI_12/state_FSM_FFd2
+		 resp_1_OBUF XLXI_2/XLXI_12/state_FSM_FFd1
 

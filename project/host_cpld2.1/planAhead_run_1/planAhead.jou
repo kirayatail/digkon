@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Thu Dec 13 14:43:34 2012
+# Process ID: 2068
+# Log file: Z:/DigKon/project/digkon/project/host_cpld2.1/planAhead_run_1/planAhead.log
+# Journal file: Z:/DigKon/project/digkon/project/host_cpld2.1/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source Z:/DigKon/project/digkon/project/host_cpld2.1/pa.fromNetlist.tcl

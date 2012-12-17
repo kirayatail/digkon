@@ -1,0 +1,5 @@
+vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\project\host_cpld2.1\keylookup.vhd"
+vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\project\host_cpld2.1\crypto.vhd"
+vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\project\host_cpld2.1\timer.vhd"
+vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\project\host_cpld2.1\receiver.vhd"
+vhdl work "\\file00.chalmers.se\home\lsofia\DigKon\project\digkon\project\host_cpld2.1\ctrl.vhd"
